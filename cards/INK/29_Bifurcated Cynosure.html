@@ -1,6 +1,6 @@
 ﻿<html>
 <head>
-  <title>Jenna Wilder, Timewinder (Conjure)</title>
+  <title>Bifurcated Cynosure</title>
   <link rel="icon" type="image/x-icon" href="/sets/INK-files/icon.png">
   <link rel="stylesheet" href="/resources/mana.css">
   <link rel="stylesheet" href="/resources/header.css">
@@ -170,7 +170,8 @@
 
 	<div class="grid-container" id="grid">
 	</div>
-	
+	<div class="printings" id="other-printings">Other Printings: <a href="/cards/INK/108_Bifurcated Cynosure">INK</a></div>
+		
 	<script>
 		let card_list_arrayified = [];
 		let specialchars = "";
@@ -190,7 +191,7 @@
 
 				card_list_arrayified = card_list.cards;
 
-			await fetch('/cards/INK/4_Jenna Wilder Timewinder Conjure.json')
+			await fetch('/cards/INK/29_Bifurcated Cynosure.json')
 				.then(response => response.json())
 				.then(json => {
 					card = json;

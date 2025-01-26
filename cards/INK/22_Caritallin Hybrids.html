@@ -1,6 +1,6 @@
 ﻿<html>
 <head>
-  <title>Caritallin Hybrids (Conjure)</title>
+  <title>Caritallin Hybrids</title>
   <link rel="icon" type="image/x-icon" href="/sets/INK-files/icon.png">
   <link rel="stylesheet" href="/resources/mana.css">
   <link rel="stylesheet" href="/resources/header.css">
@@ -170,7 +170,8 @@
 
 	<div class="grid-container" id="grid">
 	</div>
-	
+	<div class="printings" id="other-printings">Other Printings: <a href="/cards/INK/82_Caritallin Hybrids">INK</a></div>
+		
 	<script>
 		let card_list_arrayified = [];
 		let specialchars = "";
@@ -190,7 +191,7 @@
 
 				card_list_arrayified = card_list.cards;
 
-			await fetch('/cards/INK/22_Caritallin Hybrids Conjure.json')
+			await fetch('/cards/INK/22_Caritallin Hybrids.json')
 				.then(response => response.json())
 				.then(json => {
 					card = json;

@@ -1360,13 +1360,13 @@
 			}
 		},
 		{
-			"name": "Caritallin Hybrids (Conjure)",
+			"name": "Caritallin Hybrids",
 			"rarity": "special",
 			"mana_cost": "{B}{R}",
 			"type": "Creature — Alien Horror Pirate ",
 			"collector_number": "22",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/22_Caritallin Hybrids (Conjure).png"
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/22_Caritallin Hybrids.png"
 			}
 		},
 		{
@@ -1480,13 +1480,13 @@
 			}
 		},
 		{
-			"name": "Jenna Wilder, Timewinder (Conjure)",
+			"name": "Jenna Wilder, Timewinder",
 			"rarity": "special",
 			"mana_cost": "{1}{U}",
 			"type": "Legendary Creature — Human Wizard ",
 			"collector_number": "4",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/4_Jenna Wilder, Timewinder (Conjure).png"
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/4_Jenna Wilder, Timewinder.png"
 			}
 		},
 		{
@@ -1800,13 +1800,13 @@
 			}
 		},
 		{
-			"name": "Bifurcated Cynosure (Conjure)",
+			"name": "Bifurcated Cynosure",
 			"rarity": "special",
 			"mana_cost": "{5}{B}{G}{U}",
 			"type": "Creature — Elemental Horror ",
 			"collector_number": "29",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/29_Bifurcated Cynosure (Conjure).png"
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/29_Bifurcated Cynosure.png"
 			}
 		},
 		{
