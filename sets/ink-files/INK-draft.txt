@@ -1,0 +1,1890 @@
+﻿[CustomCards]
+	[	{
+			"name": "Jenna Wilder, Timewinder",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{U}",
+			"type": "Legendary Creature — Human Wizard ",
+			"collector_number": "24",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/24_Jenna Wilder, Timewinder.png"
+			}
+		},
+		{
+			"name": "Gletten Grim, Smuggler",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{B}",
+			"type": "Legendary Creature — Vampire Rogue ",
+			"collector_number": "32",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/32_Gletten Grim, Smuggler.png"
+			}
+		},
+		{
+			"name": "Darlay, Fleet Strategist",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{R}",
+			"type": "Legendary Creature — Orc Advisor ",
+			"collector_number": "48",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/48_Darlay, Fleet Strategist.png"
+			}
+		},
+		{
+			"name": "Argent Regam",
+			"rarity": "uncommon",
+			"mana_cost": "{3}{R}{G}{W}",
+			"type": "Legendary Planeswalker — Argent ",
+			"collector_number": "107",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/107_Argent Regam.png"
+			}
+		},
+		{
+			"name": "Verona, Quartermaster",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{W}",
+			"type": "Legendary Creature — Human Soldier ",
+			"collector_number": "15",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/15_Verona, Quartermaster.png"
+			}
+		},
+		{
+			"name": "Adrin, Reckless Ace",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{G}",
+			"type": "Legendary Creature — Human Pilot ",
+			"collector_number": "61",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/61_Adrin, Reckless Ace.png"
+			}
+		},
+		{
+			"name": "Sphinx of Black Quartz",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{U}{U}",
+			"type": "Creature — Sphinx Pirate ",
+			"collector_number": "29",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/29_Sphinx of Black Quartz.png"
+			}
+		},
+		{
+			"name": "Terraformer's Monument",
+			"rarity": "uncommon",
+			"mana_cost": "{4}",
+			"type": "Artifact",
+			"collector_number": "126",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/126_Terraformer's Monument.png"
+			}
+		},
+		{
+			"name": "Ainsi Amplifier",
+			"rarity": "uncommon",
+			"mana_cost": "{4}",
+			"type": "Artifact",
+			"collector_number": "117",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/117_Ainsi Amplifier.png"
+			}
+		},
+		{
+			"name": "Ego Theft",
+			"rarity": "common",
+			"mana_cost": "{2}{R}{R}",
+			"type": "Sorcery",
+			"collector_number": "50",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/50_Ego Theft.png"
+			}
+		},
+		{
+			"name": "World Wanderer",
+			"rarity": "common",
+			"mana_cost": "{G}{U}",
+			"type": "Creature — Human Scout ",
+			"collector_number": "104",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/104_World Wanderer.png"
+			}
+		},
+		{
+			"name": "Othen, Harvester of Stars",
+			"rarity": "uncommon",
+			"mana_cost": "{3}{R}{G}",
+			"type": "Legendary Planeswalker — Othen ",
+			"collector_number": "87",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/87_Othen, Harvester of Stars.png"
+			}
+		},
+		{
+			"name": "Gaudy Dirigible",
+			"rarity": "uncommon",
+			"mana_cost": "{2}",
+			"type": "Artifact — Vehicle ",
+			"collector_number": "121",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/121_Gaudy Dirigible.png"
+			}
+		},
+		{
+			"name": "Ragged Fleet Cartographer",
+			"rarity": "common",
+			"mana_cost": "{2}{U}",
+			"type": "Creature — Human Pirate ",
+			"collector_number": "27",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/27_Ragged Fleet Cartographer.png"
+			}
+		},
+		{
+			"name": "Mishka, Eye of the Eclipse",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{U}{B}",
+			"type": "Legendary Planeswalker — Mishka ",
+			"collector_number": "80",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/80_Mishka, Eye of the Eclipse.png"
+			}
+		},
+		{
+			"name": "Kalemn of Echoing Flesh",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{B}{B}",
+			"type": "Legendary Planeswalker — Kalemn ",
+			"collector_number": "35",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/35_Kalemn of Echoing Flesh.png"
+			}
+		},
+		{
+			"name": "Helene of Echoing Mind",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{G}{U}",
+			"type": "Legendary Planeswalker — Helene ",
+			"collector_number": "103",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/103_Helene of Echoing Mind.png"
+			}
+		},
+		{
+			"name": "Horizon Piercer",
+			"rarity": "common",
+			"mana_cost": "{1}",
+			"type": "Artifact — Vehicle ",
+			"collector_number": "122",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/122_Horizon Piercer.png"
+			}
+		},
+		{
+			"name": "Far-Off Lands",
+			"rarity": "special",
+			"mana_cost": "",
+			"type": "Land",
+			"collector_number": "37",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/37_Far-Off Lands.png"
+			}
+		},
+		{
+			"name": "Chainer's Edict",
+			"rarity": "special",
+			"mana_cost": "{1}{B}",
+			"type": "Sorcery",
+			"collector_number": "9",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/9_Chainer's Edict.png"
+			}
+		},
+		{
+			"name": "Skull Fracture",
+			"rarity": "special",
+			"mana_cost": "{B}",
+			"type": "Sorcery",
+			"collector_number": "13",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/13_Skull Fracture.png"
+			}
+		},
+		{
+			"name": "Dreamer's Skiff",
+			"rarity": "common",
+			"mana_cost": "{R}",
+			"type": "Artifact — Vehicle ",
+			"collector_number": "49",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/49_Dreamer's Skiff.png"
+			}
+		},
+		{
+			"name": "Cloudborne Harbor",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{U}{R}{W}",
+			"type": "Artifact — Vehicle ",
+			"collector_number": "109",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/109_Cloudborne Harbor.png"
+			}
+		},
+		{
+			"name": "Battered Stiltwalker",
+			"rarity": "common",
+			"mana_cost": "{3}{R}",
+			"type": "Artifact Creature — Scout ",
+			"collector_number": "46",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/46_Battered Stiltwalker.png"
+			}
+		},
+		{
+			"name": "Fractured Colossus Suit",
+			"rarity": "common",
+			"mana_cost": "{3}",
+			"type": "Artifact — Vehicle ",
+			"collector_number": "120",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/120_Fractured Colossus Suit.png"
+			}
+		},
+		{
+			"name": "Heartless Scoundrel",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{B}{B}",
+			"type": "Creature — Human Pirate ",
+			"collector_number": "33",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/33_Heartless Scoundrel.png"
+			}
+		},
+		{
+			"name": "Forest",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Basic Land — Forest ",
+			"collector_number": "141",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/141_Forest.png"
+			}
+		},
+		{
+			"name": "Island",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Basic Land — Island ",
+			"collector_number": "138",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/138_Island.png"
+			}
+		},
+		{
+			"name": "Plains",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Basic Land — Plains ",
+			"collector_number": "137",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/137_Plains.png"
+			}
+		},
+		{
+			"name": "Mountain",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Basic Land — Mountain ",
+			"collector_number": "140",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/140_Mountain.png"
+			}
+		},
+		{
+			"name": "Swamp",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Basic Land — Swamp ",
+			"collector_number": "139",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/139_Swamp.png"
+			}
+		},
+		{
+			"name": "Munitions Crafter",
+			"rarity": "common",
+			"mana_cost": "{1}{R}",
+			"type": "Creature — Human Pirate Artificer ",
+			"collector_number": "55",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/55_Munitions Crafter.png"
+			}
+		},
+		{
+			"name": "Part the Heavens",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{W}",
+			"type": "Instant",
+			"collector_number": "7",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/7_Part the Heavens.png"
+			}
+		},
+		{
+			"name": "Hero's Downfall",
+			"rarity": "special",
+			"mana_cost": "{1}{B}{B}",
+			"type": "Instant",
+			"collector_number": "12",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/12_Hero's Downfall.png"
+			}
+		},
+		{
+			"name": "Seer of Ill Ends",
+			"rarity": "common",
+			"mana_cost": "{1}{B}",
+			"type": "Creature — Human Shaman ",
+			"collector_number": "41",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/41_Seer of Ill Ends.png"
+			}
+		},
+		{
+			"name": "Yearning Shrine",
+			"rarity": "uncommon",
+			"mana_cost": "{G}",
+			"type": "Artifact",
+			"collector_number": "75",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/75_Yearning Shrine.png"
+			}
+		},
+		{
+			"name": "Unveil the Cosmos",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{U}",
+			"type": "Instant",
+			"collector_number": "30",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/30_Unveil the Cosmos.png"
+			}
+		},
+		{
+			"name": "Awestruck Wonder",
+			"rarity": "common",
+			"mana_cost": "{5}",
+			"type": "Artifact Creature — Construct ",
+			"collector_number": "118",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/118_Awestruck Wonder.png"
+			}
+		},
+		{
+			"name": "Beyond the Apogee",
+			"rarity": "common",
+			"mana_cost": "{2}{G}",
+			"type": "Sorcery",
+			"collector_number": "64",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/64_Beyond the Apogee.png"
+			}
+		},
+		{
+			"name": "Witness Something New",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{U}{R}",
+			"type": "Instant",
+			"collector_number": "96",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/96_Witness Something New.png"
+			}
+		},
+		{
+			"name": "Regam's Generalists",
+			"rarity": "uncommon",
+			"mana_cost": "{X}{G}{W}",
+			"type": "Creature — Human Scout ",
+			"collector_number": "90",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/90_Regam's Generalists.png"
+			}
+		},
+		{
+			"name": "Hand of the Red Fancies",
+			"rarity": "uncommon",
+			"mana_cost": "{B}{R}",
+			"type": "Creature — Human Pirate ",
+			"collector_number": "83",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/83_Hand of the Red Fancies.png"
+			}
+		},
+		{
+			"name": "Solar Flare",
+			"rarity": "special",
+			"mana_cost": "{R}{G}",
+			"type": "Instant",
+			"collector_number": "25",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/25_Solar Flare.png"
+			}
+		},
+		{
+			"name": "Navigation Portals",
+			"rarity": "common",
+			"mana_cost": "{G}",
+			"type": "Enchantment",
+			"collector_number": "69",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/69_Navigation Portals.png"
+			}
+		},
+		{
+			"name": "Sea Cache",
+			"rarity": "special",
+			"mana_cost": "{1}{U}",
+			"type": "Instant",
+			"collector_number": "6",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/6_Sea Cache.png"
+			}
+		},
+		{
+			"name": "Ragged Fleet Navigator",
+			"rarity": "common",
+			"mana_cost": "{3}{B}",
+			"type": "Creature — Human Pirate ",
+			"collector_number": "38",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/38_Ragged Fleet Navigator.png"
+			}
+		},
+		{
+			"name": "Camouflaged Leech",
+			"rarity": "common",
+			"mana_cost": "{G}",
+			"type": "Creature — Leech ",
+			"collector_number": "65",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/65_Camouflaged Leech.png"
+			}
+		},
+		{
+			"name": "Tune Up",
+			"rarity": "uncommon",
+			"mana_cost": "{3}{W}",
+			"type": "Sorcery",
+			"collector_number": "13",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/13_Tune Up.png"
+			}
+		},
+		{
+			"name": "Outerworld Fauna Tamer",
+			"rarity": "common",
+			"mana_cost": "{3}{G}",
+			"type": "Creature — Human Beast Scout ",
+			"collector_number": "70",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/70_Outerworld Fauna Tamer.png"
+			}
+		},
+		{
+			"name": "Inexorable Pull",
+			"rarity": "common",
+			"mana_cost": "{2}{G}",
+			"type": "Sorcery",
+			"collector_number": "67",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/67_Inexorable Pull.png"
+			}
+		},
+		{
+			"name": "Lotus Sludge",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{B}{G}",
+			"type": "Creature — Ooze ",
+			"collector_number": "97",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/97_Lotus Sludge.png"
+			}
+		},
+		{
+			"name": "Astral Lamprey",
+			"rarity": "common",
+			"mana_cost": "{3}{G}{G}",
+			"type": "Creature — Horror Leviathan ",
+			"collector_number": "63",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/63_Astral Lamprey.png"
+			}
+		},
+		{
+			"name": "Lumbering Flagship",
+			"rarity": "common",
+			"mana_cost": "{2}{R}",
+			"type": "Artifact — Vehicle ",
+			"collector_number": "53",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/53_Lumbering Flagship.png"
+			}
+		},
+		{
+			"name": "Syzygy Operative",
+			"rarity": "uncommon",
+			"mana_cost": "{W}{B}",
+			"type": "Creature — Human Assassin ",
+			"collector_number": "93",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/93_Syzygy Operative.png"
+			}
+		},
+		{
+			"name": "Surface Surfer",
+			"rarity": "common",
+			"mana_cost": "{R}",
+			"type": "Creature — Human Pirate Pilot ",
+			"collector_number": "60",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/60_Surface Surfer.png"
+			}
+		},
+		{
+			"name": "Sky Skiff",
+			"rarity": "special",
+			"mana_cost": "{2}",
+			"type": "Artifact — Vehicle ",
+			"collector_number": "34",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/34_Sky Skiff.png"
+			}
+		},
+		{
+			"name": "Shipping Manifest",
+			"rarity": "uncommon",
+			"mana_cost": "{3}{U}{R}",
+			"type": "Enchantment",
+			"collector_number": "94",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/94_Shipping Manifest.png"
+			}
+		},
+		{
+			"name": "Xenowalker",
+			"rarity": "common",
+			"mana_cost": "{1}",
+			"type": "Artifact Creature — Scout ",
+			"collector_number": "128",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/128_Xenowalker.png"
+			}
+		},
+		{
+			"name": "Shrieking Swarm",
+			"rarity": "common",
+			"mana_cost": "{2}{B}",
+			"type": "Creature — Horror ",
+			"collector_number": "42",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/42_Shrieking Swarm.png"
+			}
+		},
+		{
+			"name": "Prepare for Adventure",
+			"rarity": "common",
+			"mana_cost": "{W}",
+			"type": "Sorcery",
+			"collector_number": "8",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/8_Prepare for Adventure.png"
+			}
+		},
+		{
+			"name": "Seek New Vistas",
+			"rarity": "common",
+			"mana_cost": "{R}",
+			"type": "Enchantment",
+			"collector_number": "59",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/59_Seek New Vistas.png"
+			}
+		},
+		{
+			"name": "Protective Mechanic",
+			"rarity": "common",
+			"mana_cost": "{R}{W}",
+			"type": "Creature — Human Artificer ",
+			"collector_number": "102",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/102_Protective Mechanic.png"
+			}
+		},
+		{
+			"name": "Hintga Diplomat",
+			"rarity": "common",
+			"mana_cost": "{3}{U}",
+			"type": "Creature — Alien Advisor ",
+			"collector_number": "19",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/19_Hintga Diplomat.png"
+			}
+		},
+		{
+			"name": "Hintga Curator",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{R}",
+			"type": "Creature — Alien Advisor ",
+			"collector_number": "51",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/51_Hintga Curator.png"
+			}
+		},
+		{
+			"name": "Aoki, the Ragged Queen",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{U}{B}{R}",
+			"type": "Legendary Creature — Human Horror Pirate ",
+			"collector_number": "106",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/106_Aoki, the Ragged Queen.png"
+			}
+		},
+		{
+			"name": "Ink Sea Scheming",
+			"rarity": "common",
+			"mana_cost": "{B}",
+			"type": "Sorcery",
+			"collector_number": "34",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/34_Ink Sea Scheming.png"
+			}
+		},
+		{
+			"name": "Radiance Complector",
+			"rarity": "common",
+			"mana_cost": "{1}{W}",
+			"type": "Artifact Creature — Human Artificer ",
+			"collector_number": "9",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/9_Radiance Complector.png"
+			}
+		},
+		{
+			"name": "Efficacy Complector",
+			"rarity": "common",
+			"mana_cost": "{U}",
+			"type": "Artifact Creature — Human Artificer ",
+			"collector_number": "17",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/17_Efficacy Complector.png"
+			}
+		},
+		{
+			"name": "Complector Paragon",
+			"rarity": "common",
+			"mana_cost": "{W}{U}",
+			"type": "Artifact Creature — Construct Artificer ",
+			"collector_number": "76",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/76_Complector Paragon.png"
+			}
+		},
+		{
+			"name": "Iteration Complector",
+			"rarity": "uncommon",
+			"mana_cost": "{U}{U}",
+			"type": "Artifact Creature — Human Artificer ",
+			"collector_number": "23",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/23_Iteration Complector.png"
+			}
+		},
+		{
+			"name": "Ascendant Complector",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{W}{W}",
+			"type": "Artifact Creature — Human Artificer ",
+			"collector_number": "1",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/1_Ascendant Complector.png"
+			}
+		},
+		{
+			"name": "Experienced Lookouts",
+			"rarity": "common",
+			"mana_cost": "{G}{W}",
+			"type": "Creature — Human Scout ",
+			"collector_number": "89",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/89_Experienced Lookouts.png"
+			}
+		},
+		{
+			"name": "Survey the Outerworlds",
+			"rarity": "common",
+			"mana_cost": "{2}{G}",
+			"type": "Sorcery",
+			"collector_number": "73",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/73_Survey the Outerworlds.png"
+			}
+		},
+		{
+			"name": "Blessing of the Hundred Suns",
+			"rarity": "common",
+			"mana_cost": "{W}",
+			"type": "Enchantment — Aura ",
+			"collector_number": "2",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/2_Blessing of the Hundred Suns.png"
+			}
+		},
+		{
+			"name": "Hundred Sun Acolytes",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{W}",
+			"type": "Creature — Human Scout Cleric ",
+			"collector_number": "4",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/4_Hundred Sun Acolytes.png"
+			}
+		},
+		{
+			"name": "Syzygy Corsair",
+			"rarity": "common",
+			"mana_cost": "{B}",
+			"type": "Creature — Human Pirate ",
+			"collector_number": "43",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/43_Syzygy Corsair.png"
+			}
+		},
+		{
+			"name": "Ravager of the Eclipse",
+			"rarity": "common",
+			"mana_cost": "{2}{B}",
+			"type": "Creature — Elf Pirate ",
+			"collector_number": "40",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/40_Ravager of the Eclipse.png"
+			}
+		},
+		{
+			"name": "Tithe Collections",
+			"rarity": "common",
+			"mana_cost": "{2}{B}",
+			"type": "Sorcery",
+			"collector_number": "44",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/44_Tithe Collections.png"
+			}
+		},
+		{
+			"name": "Explore New Worlds",
+			"rarity": "common",
+			"mana_cost": "{3}{R}{G}",
+			"type": "Sorcery",
+			"collector_number": "86",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/86_Explore New Worlds.png"
+			}
+		},
+		{
+			"name": "Ink Sea Charter Lines",
+			"rarity": "common",
+			"mana_cost": "{4}",
+			"type": "Artifact",
+			"collector_number": "123",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/123_Ink Sea Charter Lines.png"
+			}
+		},
+		{
+			"name": "Velan Tollkeepers",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{B}{B}",
+			"type": "Creature — Alien Merchant ",
+			"collector_number": "45",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/45_Velan Tollkeepers.png"
+			}
+		},
+		{
+			"name": "Apiary Renewers",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{G}{W}",
+			"type": "Creature — Alien Scout ",
+			"collector_number": "88",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/88_Apiary Renewers.png"
+			}
+		},
+		{
+			"name": "Abstraction Anomaly",
+			"rarity": "uncommon",
+			"mana_cost": "{2}",
+			"type": "Artifact",
+			"collector_number": "116",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/116_Abstraction Anomaly.png"
+			}
+		},
+		{
+			"name": "Manifest",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Creature",
+			"collector_number": "2",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/2_Manifest.png"
+			}
+		},
+		{
+			"name": "Regam's Portalmage",
+			"rarity": "common",
+			"mana_cost": "{3}{W}",
+			"type": "Creature — Human Scout ",
+			"collector_number": "11",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/11_Regam's Portalmage.png"
+			}
+		},
+		{
+			"name": "Pierce the Storm",
+			"rarity": "common",
+			"mana_cost": "{X}{U}",
+			"type": "Instant",
+			"collector_number": "26",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/26_Pierce the Storm.png"
+			}
+		},
+		{
+			"name": "Astral Dreamer",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{R}{G}",
+			"type": "Creature — Human Shaman ",
+			"collector_number": "85",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/85_Astral Dreamer.png"
+			}
+		},
+		{
+			"name": "Ink Sea Diplomacy",
+			"rarity": "common",
+			"mana_cost": "{W}{B}",
+			"type": "Instant",
+			"collector_number": "92",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/92_Ink Sea Diplomacy.png"
+			}
+		},
+		{
+			"name": "Riftway Visions",
+			"rarity": "common",
+			"mana_cost": "{U}{B}",
+			"type": "Instant",
+			"collector_number": "81",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/81_Riftway Visions.png"
+			}
+		},
+		{
+			"name": "Constellation Nullifier",
+			"rarity": "uncommon",
+			"mana_cost": "{W}{B}",
+			"type": "Creature — Human Shaman ",
+			"collector_number": "91",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/91_Constellation Nullifier.png"
+			}
+		},
+		{
+			"name": "Wrendal's Scheming",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{G}",
+			"type": "Enchantment",
+			"collector_number": "74",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/74_Wrendal's Scheming.png"
+			}
+		},
+		{
+			"name": "Wrendal, Reality Obscuri",
+			"rarity": "uncommon",
+			"mana_cost": "{B}{G}",
+			"type": "Legendary Creature — Human Shaman ",
+			"collector_number": "99",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/99_Wrendal, Reality Obscuri.png"
+			}
+		},
+		{
+			"name": "Void Whisperer",
+			"rarity": "common",
+			"mana_cost": "{B}{G}",
+			"type": "Creature — Human Shaman ",
+			"collector_number": "98",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/98_Void Whisperer.png"
+			}
+		},
+		{
+			"name": "Ainsi Channeler",
+			"rarity": "common",
+			"mana_cost": "{1}{G}",
+			"type": "Creature — Alien Shaman ",
+			"collector_number": "62",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/62_Ainsi Channeler.png"
+			}
+		},
+		{
+			"name": "Syzygy Battlemage",
+			"rarity": "common",
+			"mana_cost": "{U}{R}",
+			"type": "Creature — Human Wizard ",
+			"collector_number": "95",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/95_Syzygy Battlemage.png"
+			}
+		},
+		{
+			"name": "Liminal Lurker",
+			"rarity": "uncommon",
+			"mana_cost": "{B}",
+			"type": "Creature — Horror ",
+			"collector_number": "36",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/36_Liminal Lurker.png"
+			}
+		},
+		{
+			"name": "Dwindling Visions",
+			"rarity": "common",
+			"mana_cost": "{2}{U}{U}",
+			"type": "Sorcery",
+			"collector_number": "16",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/16_Dwindling Visions.png"
+			}
+		},
+		{
+			"name": "Rapid Dismantling",
+			"rarity": "common",
+			"mana_cost": "{1}{U}",
+			"type": "Instant",
+			"collector_number": "28",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/28_Rapid Dismantling.png"
+			}
+		},
+		{
+			"name": "Edgewalker Drone",
+			"rarity": "common",
+			"mana_cost": "{2}",
+			"type": "Artifact Creature — Insect ",
+			"collector_number": "119",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/119_Edgewalker Drone.png"
+			}
+		},
+		{
+			"name": "Horizon Cutthroat",
+			"rarity": "common",
+			"mana_cost": "{2}{R}",
+			"type": "Creature — Alien Pirate ",
+			"collector_number": "52",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/52_Horizon Cutthroat.png"
+			}
+		},
+		{
+			"name": "Outerworld Vendor",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{R}{R}",
+			"type": "Creature — Alien Merchant ",
+			"collector_number": "56",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/56_Outerworld Vendor.png"
+			}
+		},
+		{
+			"name": "Ragged Fleet Outfitter",
+			"rarity": "common",
+			"mana_cost": "{3}{B}{B}",
+			"type": "Creature — Elf Pirate Artificer ",
+			"collector_number": "39",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/39_Ragged Fleet Outfitter.png"
+			}
+		},
+		{
+			"name": "Icon of Majesty",
+			"rarity": "common",
+			"mana_cost": "{2}{W}",
+			"type": "Artifact — Vehicle ",
+			"collector_number": "5",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/5_Icon of Majesty.png"
+			}
+		},
+		{
+			"name": "Ink Sea Smuggler",
+			"rarity": "common",
+			"mana_cost": "{1}{U}",
+			"type": "Creature — Human Pirate ",
+			"collector_number": "21",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/21_Ink Sea Smuggler.png"
+			}
+		},
+		{
+			"name": "Scout",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Creature — Scout ",
+			"collector_number": "30",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/30_Scout.png"
+			}
+		},
+		{
+			"name": "Rigging Warden",
+			"rarity": "common",
+			"mana_cost": "{1}{G}",
+			"type": "Creature — Human Scout ",
+			"collector_number": "71",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/71_Rigging Warden.png"
+			}
+		},
+		{
+			"name": "Regam's Navigators",
+			"rarity": "common",
+			"mana_cost": "{1}{W}",
+			"type": "Creature — Human Alien Scout ",
+			"collector_number": "10",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/10_Regam's Navigators.png"
+			}
+		},
+		{
+			"name": "Oddity Collector",
+			"rarity": "common",
+			"mana_cost": "{2}{U}",
+			"type": "Creature — Human Pirate ",
+			"collector_number": "25",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/25_Oddity Collector.png"
+			}
+		},
+		{
+			"name": "Solar Tide Navigator",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{G}",
+			"type": "Creature — Human Scout ",
+			"collector_number": "72",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/72_Solar Tide Navigator.png"
+			}
+		},
+		{
+			"name": "Joyous Wrenchjockey",
+			"rarity": "uncommon",
+			"mana_cost": "{R}{W}",
+			"type": "Creature — Human Pilot ",
+			"collector_number": "101",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/101_Joyous Wrenchjockey.png"
+			}
+		},
+		{
+			"name": "Ostracizer Orb",
+			"rarity": "common",
+			"mana_cost": "{1}{W}",
+			"type": "Artifact",
+			"collector_number": "6",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/6_Ostracizer Orb.png"
+			}
+		},
+		{
+			"name": "Guidance Orrery",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Land",
+			"collector_number": "130",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/130_Guidance Orrery.png"
+			}
+		},
+		{
+			"name": "Shattered Shard Cyclone",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{W}{U}",
+			"type": "Artifact Creature — Elemental ",
+			"collector_number": "78",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/78_Shattered Shard Cyclone.png"
+			}
+		},
+		{
+			"name": "Trusty Crewmate",
+			"rarity": "common",
+			"mana_cost": "{2}{W}",
+			"type": "Creature — Human Scout ",
+			"collector_number": "12",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/12_Trusty Crewmate.png"
+			}
+		},
+		{
+			"name": "Divine Ensign",
+			"rarity": "common",
+			"mana_cost": "{W}",
+			"type": "Creature — Angel Soldier ",
+			"collector_number": "3",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/3_Divine Ensign.png"
+			}
+		},
+		{
+			"name": "Shoal Fleet",
+			"rarity": "common",
+			"mana_cost": "{3}",
+			"type": "Artifact — Vehicle ",
+			"collector_number": "124",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/124_Shoal Fleet.png"
+			}
+		},
+		{
+			"name": "Infested Wreckage",
+			"rarity": "uncommon",
+			"mana_cost": "{3}{G}{G}",
+			"type": "Artifact Creature — Plant Construct ",
+			"collector_number": "68",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/68_Infested Wreckage.png"
+			}
+		},
+		{
+			"name": "Outpost Scrapworker",
+			"rarity": "common",
+			"mana_cost": "{1}{R}",
+			"type": "Creature — Human Artificer ",
+			"collector_number": "57",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/57_Outpost Scrapworker.png"
+			}
+		},
+		{
+			"name": "Nauseating Return",
+			"rarity": "common",
+			"mana_cost": "{1}{B}",
+			"type": "Sorcery",
+			"collector_number": "37",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/37_Nauseating Return.png"
+			}
+		},
+		{
+			"name": "Ragged Fleet Outlaws",
+			"rarity": "uncommon",
+			"mana_cost": "{4}{R}{R}",
+			"type": "Creature — Alien Pirate ",
+			"collector_number": "58",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/58_Ragged Fleet Outlaws.png"
+			}
+		},
+		{
+			"name": "Collector's Vault",
+			"rarity": "special",
+			"mana_cost": "{2}",
+			"type": "Artifact",
+			"collector_number": "32",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/32_Collector's Vault.png"
+			}
+		},
+		{
+			"name": "The Horizon",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "",
+			"collector_number": "1",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/1_The Horizon.png"
+			}
+		},
+		{
+			"name": "Bifurcated Cynosure",
+			"rarity": "uncommon",
+			"mana_cost": "{5}{B}{G}{U}",
+			"type": "Creature — Elemental Horror ",
+			"collector_number": "108",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/108_Bifurcated Cynosure.png"
+			}
+		},
+		{
+			"name": "Traveler's Amulet",
+			"rarity": "special",
+			"mana_cost": "{1}",
+			"type": "Artifact",
+			"collector_number": "35",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/35_Traveler's Amulet.png"
+			}
+		},
+		{
+			"name": "The Last Horizon",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{G}{U}{R}",
+			"type": "Legendary Artifact — Vehicle ",
+			"collector_number": "113",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/113_The Last Horizon.png"
+			}
+		},
+		{
+			"name": "Marauder's Enlistment",
+			"rarity": "special",
+			"mana_cost": "{2}{B}{R}",
+			"type": "Sorcery",
+			"collector_number": "24",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/24_Marauder's Enlistment.png"
+			}
+		},
+		{
+			"name": "The Red Fancies",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{B}{R}",
+			"type": "Legendary Artifact — Vehicle ",
+			"collector_number": "84",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/84_The Red Fancies.png"
+			}
+		},
+		{
+			"name": "Worlds Beyond",
+			"rarity": "uncommon",
+			"mana_cost": "{3}{G}{U}",
+			"type": "Sorcery",
+			"collector_number": "105",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/105_Worlds Beyond.png"
+			}
+		},
+		{
+			"name": "Endure the Singularity",
+			"rarity": "common",
+			"mana_cost": "{1}{B}",
+			"type": "Instant",
+			"collector_number": "31",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/31_Endure the Singularity.png"
+			}
+		},
+		{
+			"name": "Quicken",
+			"rarity": "special",
+			"mana_cost": "{U}",
+			"type": "Instant",
+			"collector_number": "5",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/5_Quicken.png"
+			}
+		},
+		{
+			"name": "Spur",
+			"rarity": "special",
+			"mana_cost": "{G}",
+			"type": "Instant",
+			"collector_number": "21",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/21_Spur.png"
+			}
+		},
+		{
+			"name": "Bloodcurdling Scream",
+			"rarity": "special",
+			"mana_cost": "{X}{B}",
+			"type": "Sorcery",
+			"collector_number": "7",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/7_Bloodcurdling Scream.png"
+			}
+		},
+		{
+			"name": "Cast into Darkness",
+			"rarity": "special",
+			"mana_cost": "{1}{B}",
+			"type": "Enchantment — Aura ",
+			"collector_number": "8",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/8_Cast into Darkness.png"
+			}
+		},
+		{
+			"name": "Black Lotus",
+			"rarity": "special",
+			"mana_cost": "{0}",
+			"type": "Artifact",
+			"collector_number": "31",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/31_Black Lotus.png"
+			}
+		},
+		{
+			"name": "Smelt",
+			"rarity": "special",
+			"mana_cost": "{R}",
+			"type": "Instant",
+			"collector_number": "17",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/17_Smelt.png"
+			}
+		},
+		{
+			"name": "Caritallin Hybrids",
+			"rarity": "common",
+			"mana_cost": "{B}{R}",
+			"type": "Creature — Alien Horror Pirate ",
+			"collector_number": "82",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/82_Caritallin Hybrids.png"
+			}
+		},
+		{
+			"name": "Caritallin Hybrids",
+			"rarity": "special",
+			"mana_cost": "{B}{R}",
+			"type": "Creature — Alien Horror Pirate ",
+			"collector_number": "22",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/22_Caritallin Hybrids.png"
+			}
+		},
+		{
+			"name": "Meteor Strike",
+			"rarity": "common",
+			"mana_cost": "{R}",
+			"type": "Sorcery",
+			"collector_number": "54",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/54_Meteor Strike.png"
+			}
+		},
+		{
+			"name": "Meteor Barrage",
+			"rarity": "special",
+			"mana_cost": "{1}{R}{R}",
+			"type": "Sorcery",
+			"collector_number": "16",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/16_Meteor Barrage.png"
+			}
+		},
+		{
+			"name": "Velour, the Ragged King",
+			"rarity": "uncommon",
+			"mana_cost": "{R}{W}{B}",
+			"type": "Legendary Creature — Human Pirate ",
+			"collector_number": "115",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/115_Velour, the Ragged King.png"
+			}
+		},
+		{
+			"name": "Shrine to the Killing Arts",
+			"rarity": "uncommon",
+			"mana_cost": "{2}",
+			"type": "Artifact",
+			"collector_number": "125",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/125_Shrine to the Killing Arts.png"
+			}
+		},
+		{
+			"name": "Eclipse Life",
+			"rarity": "special",
+			"mana_cost": "{B}{G}",
+			"type": "Instant",
+			"collector_number": "27",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/27_Eclipse Life.png"
+			}
+		},
+		{
+			"name": "Drown in Blood",
+			"rarity": "special",
+			"mana_cost": "{B}{B}",
+			"type": "Instant",
+			"collector_number": "10",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/10_Drown in Blood.png"
+			}
+		},
+		{
+			"name": "Lightning Helix",
+			"rarity": "special",
+			"mana_cost": "{R}{W}",
+			"type": "Instant",
+			"collector_number": "28",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/28_Lightning Helix.png"
+			}
+		},
+		{
+			"name": "Excise Faith",
+			"rarity": "special",
+			"mana_cost": "{W}{B}",
+			"type": "Instant",
+			"collector_number": "26",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/26_Excise Faith.png"
+			}
+		},
+		{
+			"name": "Grisly Indulgence",
+			"rarity": "special",
+			"mana_cost": "{B}{R}",
+			"type": "Instant",
+			"collector_number": "23",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/23_Grisly Indulgence.png"
+			}
+		},
+		{
+			"name": "Isolated",
+			"rarity": "common",
+			"mana_cost": "{1}{U}",
+			"type": "Enchantment — Aura ",
+			"collector_number": "22",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/22_Isolated.png"
+			}
+		},
+		{
+			"name": "Ainsi Awakening",
+			"rarity": "special",
+			"mana_cost": "{G}",
+			"type": "Instant",
+			"collector_number": "18",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/18_Ainsi Awakening.png"
+			}
+		},
+		{
+			"name": "Jenna Wilder, Timewinder",
+			"rarity": "special",
+			"mana_cost": "{1}{U}",
+			"type": "Legendary Creature — Human Wizard ",
+			"collector_number": "4",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/4_Jenna Wilder, Timewinder.png"
+			}
+		},
+		{
+			"name": "Nebula of Empty Gold",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Land",
+			"collector_number": "131",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/131_Nebula of Empty Gold.png"
+			}
+		},
+		{
+			"name": "Plains Island",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Land — Plains Island ",
+			"collector_number": "44",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/44_Plains Island.png"
+			}
+		},
+		{
+			"name": "Plains Swamp",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Land — Plains Swamp ",
+			"collector_number": "45",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/45_Plains Swamp.png"
+			}
+		},
+		{
+			"name": "Mountain Plains",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Land — Mountain Plains ",
+			"collector_number": "43",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/43_Mountain Plains.png"
+			}
+		},
+		{
+			"name": "Forest Plains",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Land — Forest Plains ",
+			"collector_number": "39",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/39_Forest Plains.png"
+			}
+		},
+		{
+			"name": "Island Swamp",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Land — Island Swamp ",
+			"collector_number": "41",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/41_Island Swamp.png"
+			}
+		},
+		{
+			"name": "Island Mountain",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Land — Island Mountain ",
+			"collector_number": "40",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/40_Island Mountain.png"
+			}
+		},
+		{
+			"name": "Forest Island",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Land — Forest Island ",
+			"collector_number": "38",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/38_Forest Island.png"
+			}
+		},
+		{
+			"name": "Swamp Mountain",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Land — Swamp Mountain ",
+			"collector_number": "47",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/47_Swamp Mountain.png"
+			}
+		},
+		{
+			"name": "Swamp Forest",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Land — Swamp Forest ",
+			"collector_number": "46",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/46_Swamp Forest.png"
+			}
+		},
+		{
+			"name": "Mountain Forest",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Land — Mountain Forest ",
+			"collector_number": "42",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/42_Mountain Forest.png"
+			}
+		},
+		{
+			"name": "Shiftscape Canyon",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Land",
+			"collector_number": "132",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/132_Shiftscape Canyon.png"
+			}
+		},
+		{
+			"name": "Shiftscape Cascade",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Land",
+			"collector_number": "133",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/133_Shiftscape Cascade.png"
+			}
+		},
+		{
+			"name": "Shiftscape Crag",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Land",
+			"collector_number": "134",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/134_Shiftscape Crag.png"
+			}
+		},
+		{
+			"name": "Shiftscape Morass",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Land",
+			"collector_number": "136",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/136_Shiftscape Morass.png"
+			}
+		},
+		{
+			"name": "Shiftscape Grove",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Land",
+			"collector_number": "135",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/135_Shiftscape Grove.png"
+			}
+		},
+		{
+			"name": "Explorer's Veil",
+			"rarity": "common",
+			"mana_cost": "{4}{U}",
+			"type": "Instant",
+			"collector_number": "18",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/18_Explorer's Veil.png"
+			}
+		},
+		{
+			"name": "Ilspie of House Yestades",
+			"rarity": "uncommon",
+			"mana_cost": "{3}{U}{U}",
+			"type": "Legendary Creature — Human Wizard ",
+			"collector_number": "20",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/20_Ilspie of House Yestades.png"
+			}
+		},
+		{
+			"name": "Velan Worldsculptor",
+			"rarity": "common",
+			"mana_cost": "{1}{W}",
+			"type": "Creature — Alien Scout ",
+			"collector_number": "14",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/14_Velan Worldsculptor.png"
+			}
+		},
+		{
+			"name": "Ancient Den",
+			"rarity": "special",
+			"mana_cost": "",
+			"type": "Artifact Land",
+			"collector_number": "3",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/3_Ancient Den.png"
+			}
+		},
+		{
+			"name": "Transient's Warframe",
+			"rarity": "common",
+			"mana_cost": "{4}",
+			"type": "Artifact — Equipment ",
+			"collector_number": "127",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/127_Transient's Warframe.png"
+			}
+		},
+		{
+			"name": "Invasive Flora",
+			"rarity": "uncommon",
+			"mana_cost": "{3}{G}{W}{U}",
+			"type": "Enchantment",
+			"collector_number": "112",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/112_Invasive Flora.png"
+			}
+		},
+		{
+			"name": "Plant",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Creature — Plant ",
+			"collector_number": "20",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/20_Plant.png"
+			}
+		},
+		{
+			"name": "Bombing Run",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{R}{W}",
+			"type": "Sorcery",
+			"collector_number": "100",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/100_Bombing Run.png"
+			}
+		},
+		{
+			"name": "Fiery Embrace",
+			"rarity": "special",
+			"mana_cost": "{1}{R}",
+			"type": "Instant",
+			"collector_number": "15",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/15_Fiery Embrace.png"
+			}
+		},
+		{
+			"name": "From Hidden Depths",
+			"rarity": "uncommon",
+			"mana_cost": "{3}{U}{B}",
+			"type": "Sorcery",
+			"collector_number": "79",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/79_From Hidden Depths.png"
+			}
+		},
+		{
+			"name": "Treasure",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Artifact — Treasure ",
+			"collector_number": "36",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/36_Treasure.png"
+			}
+		},
+		{
+			"name": "Grasping Scoundrel",
+			"rarity": "special",
+			"mana_cost": "{B}",
+			"type": "Creature — Human Pirate ",
+			"collector_number": "11",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/11_Grasping Scoundrel.png"
+			}
+		},
+		{
+			"name": "Short Sword",
+			"rarity": "special",
+			"mana_cost": "{1}",
+			"type": "Artifact — Equipment ",
+			"collector_number": "33",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/33_Short Sword.png"
+			}
+		},
+		{
+			"name": "Mimicry Vat",
+			"rarity": "uncommon",
+			"mana_cost": "{W}{U}",
+			"type": "Artifact",
+			"collector_number": "77",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/77_Mimicry Vat.png"
+			}
+		},
+		{
+			"name": "Hunt the Weak",
+			"rarity": "special",
+			"mana_cost": "{3}{G}",
+			"type": "Sorcery",
+			"collector_number": "19",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/19_Hunt the Weak.png"
+			}
+		},
+		{
+			"name": "Bifurcated Cynosure",
+			"rarity": "special",
+			"mana_cost": "{5}{B}{G}{U}",
+			"type": "Creature — Elemental Horror ",
+			"collector_number": "29",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/29_Bifurcated Cynosure.png"
+			}
+		},
+		{
+			"name": "Ink Sea Silencer",
+			"rarity": "uncommon",
+			"mana_cost": "{W}{U}{B}",
+			"type": "Creature — Human Assassin ",
+			"collector_number": "111",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/111_Ink Sea Silencer.png"
+			}
+		},
+		{
+			"name": "Red Fancies Butcher",
+			"rarity": "uncommon",
+			"mana_cost": "{B}{R}{G}",
+			"type": "Creature — Human Pirate ",
+			"collector_number": "114",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/114_Red Fancies Butcher.png"
+			}
+		},
+		{
+			"name": "Command the Ink Sea",
+			"rarity": "uncommon",
+			"mana_cost": "{W}{B}{G}",
+			"type": "Sorcery",
+			"collector_number": "110",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/110_Command the Ink Sea.png"
+			}
+		},
+		{
+			"name": "Galactic Observatory",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Land",
+			"collector_number": "129",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/129_Galactic Observatory_front.png"
+			},
+			"back": {
+				"name": "",
+				"type": "",
+				"image_uris": {
+					"en": "https://HerziQuerzi.github.io/sets/INK-files/img/129_Galactic Observatory_back.png"
+				}
+			}
+		},
+		{
+			"name": "Hunter's Bow",
+			"rarity": "common",
+			"mana_cost": "{1}{G}",
+			"type": "Artifact — Equipment ",
+			"collector_number": "66",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/66_Hunter's Bow.png"
+			}
+		},
+		{
+			"name": "Broadside Skygalleon",
+			"rarity": "uncommon",
+			"mana_cost": "{3}{R}{R}",
+			"type": "Artifact — Vehicle ",
+			"collector_number": "47",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/47_Broadside Skygalleon.png"
+			}
+		},
+		{
+			"name": "Bombard",
+			"rarity": "special",
+			"mana_cost": "{2}{R}",
+			"type": "Instant",
+			"collector_number": "14",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/14_Bombard.png"
+			}
+		},
+		]
+	
