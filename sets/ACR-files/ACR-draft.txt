@@ -1,0 +1,1703 @@
+﻿[CustomCards]
+	[	{
+			"name": "Surrender to Grief",
+			"rarity": "common",
+			"mana_cost": "{1}{W}",
+			"type": "Sorcery",
+			"collector_number": "20",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/20_Surrender to Grief.png"
+			}
+		},
+		{
+			"name": "Swallowed Whole",
+			"rarity": "common",
+			"mana_cost": "{1}{U}",
+			"type": "Instant",
+			"collector_number": "40",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/40_Swallowed Whole.png"
+			}
+		},
+		{
+			"name": "Dark Bargain",
+			"rarity": "common",
+			"mana_cost": "{B}",
+			"type": "Enchantment",
+			"collector_number": "48",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/48_Dark Bargain.png"
+			}
+		},
+		{
+			"name": "Almgrove Ascendant",
+			"rarity": "common",
+			"mana_cost": "{R}",
+			"type": "Creature — Elemental ",
+			"collector_number": "65",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/65_Almgrove Ascendant.png"
+			}
+		},
+		{
+			"name": "Blade of Adira",
+			"rarity": "common",
+			"mana_cost": "{G}",
+			"type": "Creature — Elf Warrior ",
+			"collector_number": "87",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/87_Blade of Adira.png"
+			}
+		},
+		{
+			"name": "Guided Refugee",
+			"rarity": "common",
+			"mana_cost": "{W}",
+			"type": "Creature — Human ",
+			"collector_number": "11",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/11_Guided Refugee.png"
+			}
+		},
+		{
+			"name": "Jara Magehunter",
+			"rarity": "common",
+			"mana_cost": "{1}{U}",
+			"type": "Creature — Human Warrior ",
+			"collector_number": "31",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/31_Jara Magehunter.png"
+			}
+		},
+		{
+			"name": "Fading Lich",
+			"rarity": "common",
+			"mana_cost": "{1}{B}",
+			"type": "Creature — Skeleton ",
+			"collector_number": "50",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/50_Fading Lich.png"
+			}
+		},
+		{
+			"name": "Jara Ritual",
+			"rarity": "common",
+			"mana_cost": "{2}{R}",
+			"type": "Sorcery",
+			"collector_number": "74",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/74_Jara Ritual.png"
+			}
+		},
+		{
+			"name": "Verdant Haze",
+			"rarity": "common",
+			"mana_cost": "{2}{G}",
+			"type": "Sorcery",
+			"collector_number": "104",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/104_Verdant Haze.png"
+			}
+		},
+		{
+			"name": "Disassociate",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{W}",
+			"type": "Enchantment",
+			"collector_number": "7",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/7_Disassociate.png"
+			}
+		},
+		{
+			"name": "Arpechian Kraken",
+			"rarity": "common",
+			"mana_cost": "{3}{U}{U}",
+			"type": "Creature — Kraken ",
+			"collector_number": "24",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/24_Arpechian Kraken.png"
+			}
+		},
+		{
+			"name": "Struggle for Dominance",
+			"rarity": "common",
+			"mana_cost": "{1}{B}",
+			"type": "Instant",
+			"collector_number": "60",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/60_Struggle for Dominance.png"
+			}
+		},
+		{
+			"name": "Almgrove Prodigy",
+			"rarity": "common",
+			"mana_cost": "{1}{R}",
+			"type": "Creature — Human Wizard ",
+			"collector_number": "66",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/66_Almgrove Prodigy.png"
+			}
+		},
+		{
+			"name": "Refuge Tenders",
+			"rarity": "common",
+			"mana_cost": "{2}{G}{G}",
+			"type": "Creature — Human Shaman ",
+			"collector_number": "99",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/99_Refuge Tenders.png"
+			}
+		},
+		{
+			"name": "Adiran Emmigration",
+			"rarity": "common",
+			"mana_cost": "{2}{W}",
+			"type": "Instant",
+			"collector_number": "1",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/1_Adiran Emmigration.png"
+			}
+		},
+		{
+			"name": "Preternatural Insight",
+			"rarity": "common",
+			"mana_cost": "{U}",
+			"type": "Sorcery",
+			"collector_number": "35",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/35_Preternatural Insight.png"
+			}
+		},
+		{
+			"name": "Blades of the Shifting Grave",
+			"rarity": "common",
+			"mana_cost": "{2}{B}",
+			"type": "Creature — Skeleton ",
+			"collector_number": "43",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/43_Blades of the Shifting Grave.png"
+			}
+		},
+		{
+			"name": "Adiran Pyromaniac",
+			"rarity": "common",
+			"mana_cost": "{2}{R}",
+			"type": "Creature — Human Shaman ",
+			"collector_number": "64",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/64_Adiran Pyromaniac.png"
+			}
+		},
+		{
+			"name": "Hold Dear",
+			"rarity": "common",
+			"mana_cost": "{1}{W}",
+			"type": "Instant",
+			"collector_number": "13",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/13_Hold Dear.png"
+			}
+		},
+		{
+			"name": "Jara Elemental",
+			"rarity": "common",
+			"mana_cost": "{2}{U}{U}",
+			"type": "Creature — Elemental ",
+			"collector_number": "30",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/30_Jara Elemental.png"
+			}
+		},
+		{
+			"name": "Conquerer of the Forgotten",
+			"rarity": "common",
+			"mana_cost": "{2}{B}{B}",
+			"type": "Creature — Human Warrior Cleric ",
+			"collector_number": "46",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/46_Conquerer of the Forgotten.png"
+			}
+		},
+		{
+			"name": "Springstep Elemental",
+			"rarity": "common",
+			"mana_cost": "{R}",
+			"type": "Creature — Elemental Archer ",
+			"collector_number": "82",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/82_Springstep Elemental.png"
+			}
+		},
+		{
+			"name": "Adiran Trailblazer",
+			"rarity": "common",
+			"mana_cost": "{2}{G}",
+			"type": "Creature — Human Warrior ",
+			"collector_number": "86",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/86_Adiran Trailblazer.png"
+			}
+		},
+		{
+			"name": "Almgrove Silkblade",
+			"rarity": "common",
+			"mana_cost": "{2}{W}",
+			"type": "Creature — Human Warrior ",
+			"collector_number": "2",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/2_Almgrove Silkblade.png"
+			}
+		},
+		{
+			"name": "Jara Reservoir",
+			"rarity": "common",
+			"mana_cost": "{2}{U}",
+			"type": "Creature — Elemental ",
+			"collector_number": "32",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/32_Jara Reservoir.png"
+			}
+		},
+		{
+			"name": "Boneyard Flock",
+			"rarity": "common",
+			"mana_cost": "{3}{B}",
+			"type": "Sorcery",
+			"collector_number": "44",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/44_Boneyard Flock.png"
+			}
+		},
+		{
+			"name": "Blitz Hound",
+			"rarity": "common",
+			"mana_cost": "{1}{R}",
+			"type": "Creature — Wolf ",
+			"collector_number": "71",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/71_Blitz Hound.png"
+			}
+		},
+		{
+			"name": "Distort Time",
+			"rarity": "common",
+			"mana_cost": "{2}{U}{U}",
+			"type": "Instant",
+			"collector_number": "28",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/28_Distort Time.png"
+			}
+		},
+		{
+			"name": "Dissension Purger",
+			"rarity": "common",
+			"mana_cost": "{2}{B}",
+			"type": "Creature — Human Soldier ",
+			"collector_number": "49",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/49_Dissension Purger.png"
+			}
+		},
+		{
+			"name": "Arpechian Regent",
+			"rarity": "common",
+			"mana_cost": "{2}{R}{R}",
+			"type": "Creature — Dragon ",
+			"collector_number": "67",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/67_Arpechian Regent.png"
+			}
+		},
+		{
+			"name": "Monstrous Viper",
+			"rarity": "common",
+			"mana_cost": "{4}{G}",
+			"type": "Creature — Snake ",
+			"collector_number": "95",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/95_Monstrous Viper.png"
+			}
+		},
+		{
+			"name": "Alpine Guardian",
+			"rarity": "common",
+			"mana_cost": "{3}{W}",
+			"type": "Creature — Beast ",
+			"collector_number": "3",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/3_Alpine Guardian.png"
+			}
+		},
+		{
+			"name": "Wreckage Lurker",
+			"rarity": "common",
+			"mana_cost": "{U}",
+			"type": "Creature — Human Warrior ",
+			"collector_number": "42",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/42_Wreckage Lurker.png"
+			}
+		},
+		{
+			"name": "Repent's Hand",
+			"rarity": "common",
+			"mana_cost": "{4}{B}",
+			"type": "Creature — Human Soldier ",
+			"collector_number": "56",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/56_Repent's Hand.png"
+			}
+		},
+		{
+			"name": "Ghostblade Howler",
+			"rarity": "common",
+			"mana_cost": "{2}{G}",
+			"type": "Creature — Spirit ",
+			"collector_number": "90",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/90_Ghostblade Howler.png"
+			}
+		},
+		{
+			"name": "Lumenscale Rider",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{W}",
+			"type": "Creature — Human Scout ",
+			"collector_number": "14",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/14_Lumenscale Rider.png"
+			}
+		},
+		{
+			"name": "Edge of Adventure",
+			"rarity": "common",
+			"mana_cost": "{1}{U}",
+			"type": "Sorcery",
+			"collector_number": "29",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/29_Edge of Adventure.png"
+			}
+		},
+		{
+			"name": "Herald of Steel",
+			"rarity": "common",
+			"mana_cost": "{B}",
+			"type": "Creature — Human Warrior ",
+			"collector_number": "52",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/52_Herald of Steel.png"
+			}
+		},
+		{
+			"name": "Blistering Blur",
+			"rarity": "common",
+			"mana_cost": "{R}",
+			"type": "Sorcery",
+			"collector_number": "70",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/70_Blistering Blur.png"
+			}
+		},
+		{
+			"name": "New Constellations",
+			"rarity": "common",
+			"mana_cost": "{2}{G}",
+			"type": "Sorcery",
+			"collector_number": "96",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/96_New Constellations.png"
+			}
+		},
+		{
+			"name": "Marrow to Ash",
+			"rarity": "common",
+			"mana_cost": "{1}{B}",
+			"type": "Instant",
+			"collector_number": "53",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/53_Marrow to Ash.png"
+			}
+		},
+		{
+			"name": "Warforged Mastery",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{R}",
+			"type": "Enchantment",
+			"collector_number": "84",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/84_Warforged Mastery.png"
+			}
+		},
+		{
+			"name": "Lichen Elemental",
+			"rarity": "common",
+			"mana_cost": "{4}{G}{G}",
+			"type": "Creature — Plant Elemental ",
+			"collector_number": "94",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/94_Lichen Elemental.png"
+			}
+		},
+		{
+			"name": "Overgrown Tower",
+			"rarity": "common",
+			"mana_cost": "{1}",
+			"type": "Artifact",
+			"collector_number": "144",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/144_Overgrown Tower.png"
+			}
+		},
+		{
+			"name": "Valorous Charge",
+			"rarity": "common",
+			"mana_cost": "{W}",
+			"type": "Instant",
+			"collector_number": "21",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/21_Valorous Charge.png"
+			}
+		},
+		{
+			"name": "Shatterstone Wurm",
+			"rarity": "uncommon",
+			"mana_cost": "{4}{R}{R}",
+			"type": "Creature — Wurm ",
+			"collector_number": "80",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/80_Shatterstone Wurm.png"
+			}
+		},
+		{
+			"name": "Dustcloud Striker",
+			"rarity": "common",
+			"mana_cost": "{1}{W}",
+			"type": "Creature — Human Scout ",
+			"collector_number": "8",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/8_Dustcloud Striker.png"
+			}
+		},
+		{
+			"name": "Usurper of Steel",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{B}",
+			"type": "Creature — Human Rogue ",
+			"collector_number": "61",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/61_Usurper of Steel.png"
+			}
+		},
+		{
+			"name": "Peace in Hesitation",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{W}",
+			"type": "Instant",
+			"collector_number": "17",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/17_Peace in Hesitation.png"
+			}
+		},
+		{
+			"name": "Disdainful Arcanist",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{U}",
+			"type": "Creature — Elf Wizard ",
+			"collector_number": "27",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/27_Disdainful Arcanist.png"
+			}
+		},
+		{
+			"name": "Ashbreath Phoenix",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{R}",
+			"type": "Creature — Phoenix ",
+			"collector_number": "68",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/68_Ashbreath Phoenix.png"
+			}
+		},
+		{
+			"name": "Roving Scrounger",
+			"rarity": "rare",
+			"mana_cost": "{1}{G}",
+			"type": "Creature — Human Scout ",
+			"collector_number": "100",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/100_Roving Scrounger.png"
+			}
+		},
+		{
+			"name": "Alpine Martyr",
+			"rarity": "uncommon",
+			"mana_cost": "{W}",
+			"type": "Creature — Human Soldier ",
+			"collector_number": "4",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/4_Alpine Martyr.png"
+			}
+		},
+		{
+			"name": "Sphinx of the Shifting Truth",
+			"rarity": "rare",
+			"mana_cost": "{3}{U}{U}",
+			"type": "Creature — Sphinx ",
+			"collector_number": "39",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/39_Sphinx of the Shifting Truth.png"
+			}
+		},
+		{
+			"name": "Sanguine Replica",
+			"rarity": "common",
+			"mana_cost": "{1}{R}{R}",
+			"type": "Sorcery",
+			"collector_number": "78",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/78_Sanguine Replica.png"
+			}
+		},
+		{
+			"name": "Blessed Cinders",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{B}{R}",
+			"type": "Creature — Demon ",
+			"collector_number": "112",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/112_Blessed Cinders.png"
+			}
+		},
+		{
+			"name": "Worldrift Channeler",
+			"rarity": "uncommon",
+			"mana_cost": "{R}{G}",
+			"type": "Creature — Elf Druid ",
+			"collector_number": "118",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/118_Worldrift Channeler.png"
+			}
+		},
+		{
+			"name": "Final Omen",
+			"rarity": "rare",
+			"mana_cost": "{B}",
+			"type": "Enchantment",
+			"collector_number": "51",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/51_Final Omen.png"
+			}
+		},
+		{
+			"name": "Horizon Wayfarer",
+			"rarity": "rare",
+			"mana_cost": "{1}{G}",
+			"type": "Creature — Elf Scout ",
+			"collector_number": "91",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/91_Horizon Wayfarer.png"
+			}
+		},
+		{
+			"name": "Iterating Artificer",
+			"rarity": "rare",
+			"mana_cost": "{1}{R}",
+			"type": "Creature — Human Artificer ",
+			"collector_number": "73",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/73_Iterating Artificer.png"
+			}
+		},
+		{
+			"name": "Lilypond Challenger",
+			"rarity": "rare",
+			"mana_cost": "{X}{R}{G}",
+			"type": "Creature — Human Warrior ",
+			"collector_number": "116",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/116_Lilypond Challenger.png"
+			}
+		},
+		{
+			"name": "Abyss Lurker",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{U}{B}",
+			"type": "Creature — Elemental ",
+			"collector_number": "108",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/108_Abyss Lurker.png"
+			}
+		},
+		{
+			"name": "Colossus Tracker",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{G}",
+			"type": "Creature — Human Shaman ",
+			"collector_number": "88",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/88_Colossus Tracker.png"
+			}
+		},
+		{
+			"name": "Adiran Ambassador",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{G}{W}",
+			"type": "Creature — Elf Scout ",
+			"collector_number": "119",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/119_Adiran Ambassador.png"
+			}
+		},
+		{
+			"name": "Tainted Savior",
+			"rarity": "rare",
+			"mana_cost": "{1}{W}{B}",
+			"type": "Creature — Human Cleric ",
+			"collector_number": "124",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/124_Tainted Savior.png"
+			}
+		},
+		{
+			"name": "Repent's Champion",
+			"rarity": "uncommon",
+			"mana_cost": "{R}{W}",
+			"type": "Creature — Human Soldier ",
+			"collector_number": "133",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/133_Repent's Champion.png"
+			}
+		},
+		{
+			"name": "Phoenix of the Burning Chord",
+			"rarity": "rare",
+			"mana_cost": "{1}{R}{R}",
+			"type": "Creature — Phoenix ",
+			"collector_number": "77",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/77_Phoenix of the Burning Chord.png"
+			}
+		},
+		{
+			"name": "Silkfur Hunter",
+			"rarity": "rare",
+			"mana_cost": "{2}{G}",
+			"type": "Creature — Spider ",
+			"collector_number": "103",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/103_Silkfur Hunter.png"
+			}
+		},
+		{
+			"name": "Cadre Hawk",
+			"rarity": "common",
+			"mana_cost": "{1}{W}",
+			"type": "Creature — Bird ",
+			"collector_number": "5",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/5_Cadre Hawk.png"
+			}
+		},
+		{
+			"name": "Headwind Glider",
+			"rarity": "common",
+			"mana_cost": "{W}",
+			"type": "Creature — Human Scout ",
+			"collector_number": "12",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/12_Headwind Glider.png"
+			}
+		},
+		{
+			"name": "Clockwork Spellwork",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{U}",
+			"type": "Enchantment — Aura ",
+			"collector_number": "25",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/25_Clockwork Spellwork.png"
+			}
+		},
+		{
+			"name": "Rahit, Immaculate Architect",
+			"rarity": "mythic",
+			"mana_cost": "{1}{U}{U}",
+			"type": "Legendary Planeswalker — Rahit ",
+			"collector_number": "36",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/36_Rahit, Immaculate Architect.png"
+			}
+		},
+		{
+			"name": "Ceaseless Stalker",
+			"rarity": "rare",
+			"mana_cost": "{1}{B}",
+			"type": "Creature — Human Assassin ",
+			"collector_number": "45",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/45_Ceaseless Stalker.png"
+			}
+		},
+		{
+			"name": "Corrosive Pact",
+			"rarity": "rare",
+			"mana_cost": "{2}{B}{B}",
+			"type": "Enchantment",
+			"collector_number": "47",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/47_Corrosive Pact.png"
+			}
+		},
+		{
+			"name": "Salva Tore",
+			"rarity": "mythic",
+			"mana_cost": "{3}{B}{B}",
+			"type": "Legendary Planeswalker — Salva ",
+			"collector_number": "57",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/57_Salva Tore.png"
+			}
+		},
+		{
+			"name": "Salva Tore's Vexation",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{B}{B}",
+			"type": "Instant",
+			"collector_number": "58",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/58_Salva Tore's Vexation.png"
+			}
+		},
+		{
+			"name": "Whistling Blades",
+			"rarity": "uncommon",
+			"mana_cost": "{3}{B}{B}",
+			"type": "Creature — Horror ",
+			"collector_number": "62",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/62_Whistling Blades.png"
+			}
+		},
+		{
+			"name": "Young Necromancer",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{B}",
+			"type": "Creature — Human Wizard ",
+			"collector_number": "63",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/63_Young Necromancer.png"
+			}
+		},
+		{
+			"name": "Keystone Conjurer",
+			"rarity": "uncommon",
+			"mana_cost": "{G}{G}",
+			"type": "Creature — Human Shaman ",
+			"collector_number": "93",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/93_Keystone Conjurer.png"
+			}
+		},
+		{
+			"name": "Prismatic Leyline",
+			"rarity": "common",
+			"mana_cost": "{G}",
+			"type": "Enchantment — Aura ",
+			"collector_number": "98",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/98_Prismatic Leyline.png"
+			}
+		},
+		{
+			"name": "Thought Blossom",
+			"rarity": "rare",
+			"mana_cost": "{U}{B}",
+			"type": "Instant",
+			"collector_number": "110",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/110_Thought Blossom.png"
+			}
+		},
+		{
+			"name": "Reckless Festivities",
+			"rarity": "rare",
+			"mana_cost": "{1}{B}{R}",
+			"type": "Sorcery",
+			"collector_number": "114",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/114_Reckless Festivities.png"
+			}
+		},
+		{
+			"name": "Ardy, Youthful Geomancer",
+			"rarity": "mythic",
+			"mana_cost": "{R}{G}",
+			"type": "Legendary Planeswalker — Ardy ",
+			"collector_number": "115",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/115_Ardy, Youthful Geomancer.png"
+			}
+		},
+		{
+			"name": "Archive Guardian",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{B}{G}",
+			"type": "Creature — Elemental ",
+			"collector_number": "131",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/131_Archive Guardian.png"
+			}
+		},
+		{
+			"name": "Lodestone Convergence",
+			"rarity": "uncommon",
+			"mana_cost": "{G}{U}",
+			"type": "Enchantment",
+			"collector_number": "137",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/137_Lodestone Convergence.png"
+			}
+		},
+		{
+			"name": "Warded Tome",
+			"rarity": "common",
+			"mana_cost": "{1}",
+			"type": "Artifact",
+			"collector_number": "147",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/147_Warded Tome.png"
+			}
+		},
+		{
+			"name": "Forgotten Pit",
+			"rarity": "uncommon",
+			"mana_cost": "",
+			"type": "Land — Swamp Animus ",
+			"collector_number": "152",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/152_Forgotten Pit.png"
+			}
+		},
+		{
+			"name": "Lumbering Hillock",
+			"rarity": "uncommon",
+			"mana_cost": "",
+			"type": "Land — Forest Animus ",
+			"collector_number": "153",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/153_Lumbering Hillock.png"
+			}
+		},
+		{
+			"name": "Rousing Rubble",
+			"rarity": "uncommon",
+			"mana_cost": "",
+			"type": "Land — Mountain Animus ",
+			"collector_number": "154",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/154_Rousing Rubble.png"
+			}
+		},
+		{
+			"name": "Aerie's Pillar",
+			"rarity": "uncommon",
+			"mana_cost": "",
+			"type": "Land — Island Animus ",
+			"collector_number": "148",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/148_Aerie's Pillar.png"
+			}
+		},
+		{
+			"name": "Bygone Guardian",
+			"rarity": "uncommon",
+			"mana_cost": "",
+			"type": "Land — Plains Animus ",
+			"collector_number": "150",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/150_Bygone Guardian.png"
+			}
+		},
+		{
+			"name": "Skeleton",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Creature — Skeleton ",
+			"collector_number": "2",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/2_Skeleton.png"
+			}
+		},
+		{
+			"name": "Felice, Adira's Salvation",
+			"rarity": "mythic",
+			"mana_cost": "{2}{W}{W}",
+			"type": "Legendary Planeswalker — Felice ",
+			"collector_number": "9",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/9_Felice, Adira's Salvation.png"
+			}
+		},
+		{
+			"name": "Furtive Witch",
+			"rarity": "rare",
+			"mana_cost": "{2}{W}",
+			"type": "Creature — Human Shaman ",
+			"collector_number": "10",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/10_Furtive Witch.png"
+			}
+		},
+		{
+			"name": "Once Shunned",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{W}{W}",
+			"type": "Instant",
+			"collector_number": "15",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/15_Once Shunned.png"
+			}
+		},
+		{
+			"name": "Strayseeker Ranger",
+			"rarity": "rare",
+			"mana_cost": "{2}{W}{W}",
+			"type": "Creature — Human Soldier ",
+			"collector_number": "19",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/19_Strayseeker Ranger.png"
+			}
+		},
+		{
+			"name": "Paragon of Purity",
+			"rarity": "rare",
+			"mana_cost": "{1}{W}",
+			"type": "Creature — Human Soldier ",
+			"collector_number": "16",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/16_Paragon of Purity.png"
+			}
+		},
+		{
+			"name": "Almgrove Ambassador",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{U}",
+			"type": "Creature — Human Noble ",
+			"collector_number": "23",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/23_Almgrove Ambassador.png"
+			}
+		},
+		{
+			"name": "Master of Masks",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Creature — Elf Shapeshifter ",
+			"collector_number": "33",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/33_Master of Masks.png"
+			}
+		},
+		{
+			"name": "Once Denied",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{U}{U}{U}",
+			"type": "Instant",
+			"collector_number": "34",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/34_Once Denied.png"
+			}
+		},
+		{
+			"name": "Recalculation",
+			"rarity": "common",
+			"mana_cost": "{1}{U}",
+			"type": "Instant",
+			"collector_number": "37",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/37_Recalculation.png"
+			}
+		},
+		{
+			"name": "Once Betrayed",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{B}{B}",
+			"type": "Instant",
+			"collector_number": "54",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/54_Once Betrayed.png"
+			}
+		},
+		{
+			"name": "Shroud in Paranoia",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{B}{B}",
+			"type": "Enchantment",
+			"collector_number": "59",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/59_Shroud in Paranoia.png"
+			}
+		},
+		{
+			"name": "Once Scarred",
+			"rarity": "uncommon",
+			"mana_cost": "{R}{R}",
+			"type": "Instant",
+			"collector_number": "75",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/75_Once Scarred.png"
+			}
+		},
+		{
+			"name": "Speaker of the Iris",
+			"rarity": "rare",
+			"mana_cost": "{2}{R}{R}",
+			"type": "Creature — Human Wizard ",
+			"collector_number": "81",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/81_Speaker of the Iris.png"
+			}
+		},
+		{
+			"name": "Adiran Scryers",
+			"rarity": "uncommon",
+			"mana_cost": "{G}",
+			"type": "Creature — Human Shaman ",
+			"collector_number": "85",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/85_Adiran Scryers.png"
+			}
+		},
+		{
+			"name": "Foliage Hunter",
+			"rarity": "common",
+			"mana_cost": "{1}{G}",
+			"type": "Creature — Dryad ",
+			"collector_number": "89",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/89_Foliage Hunter.png"
+			}
+		},
+		{
+			"name": "Once Abandoned",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{G}{G}",
+			"type": "Instant",
+			"collector_number": "97",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/97_Once Abandoned.png"
+			}
+		},
+		{
+			"name": "Seek Refuge",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{G}",
+			"type": "Instant",
+			"collector_number": "102",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/102_Seek Refuge.png"
+			}
+		},
+		{
+			"name": "Buy Time",
+			"rarity": "mythic",
+			"mana_cost": "{2}{U}{B}",
+			"type": "Instant",
+			"collector_number": "109",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/109_Buy Time.png"
+			}
+		},
+		{
+			"name": "Through Worlds",
+			"rarity": "rare",
+			"mana_cost": "{G}{W}",
+			"type": "Instant",
+			"collector_number": "121",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/121_Through Worlds.png"
+			}
+		},
+		{
+			"name": "Aerida, Envious Chronomancer",
+			"rarity": "mythic",
+			"mana_cost": "{1}{U}{R}",
+			"type": "Legendary Planeswalker — Aerida ",
+			"collector_number": "125",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/125_Aerida, Envious Chronomancer.png"
+			}
+		},
+		{
+			"name": "Appeal to the Ancestors",
+			"rarity": "rare",
+			"mana_cost": "{2}{B}{G}",
+			"type": "Sorcery",
+			"collector_number": "130",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/130_Appeal to the Ancestors.png"
+			}
+		},
+		{
+			"name": "Champion of the Red Dawn",
+			"rarity": "rare",
+			"mana_cost": "{R}{W}",
+			"type": "Creature — Human Soldier ",
+			"collector_number": "132",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/132_Champion of the Red Dawn.png"
+			}
+		},
+		{
+			"name": "Conjure Realities",
+			"rarity": "rare",
+			"mana_cost": "{2}{G}{U}",
+			"type": "Sorcery",
+			"collector_number": "135",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/135_Conjure Realities.png"
+			}
+		},
+		{
+			"name": "Repent, Daughter of Fallacy",
+			"rarity": "mythic",
+			"mana_cost": "{1}{R}{W}{B}",
+			"type": "Legendary Creature — Human Knight ",
+			"collector_number": "140",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/140_Repent, Daughter of Fallacy.png"
+			}
+		},
+		{
+			"name": "Fate Charm",
+			"rarity": "uncommon",
+			"mana_cost": "{2}",
+			"type": "Artifact",
+			"collector_number": "141",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/141_Fate Charm.png"
+			}
+		},
+		{
+			"name": "Artist's Vista",
+			"rarity": "uncommon",
+			"mana_cost": "",
+			"type": "Land",
+			"collector_number": "149",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/149_Artist's Vista.png"
+			}
+		},
+		{
+			"name": "Stark Copse",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Land",
+			"collector_number": "155",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/155_Stark Copse.png"
+			}
+		},
+		{
+			"name": "Stark Hinterlands",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Land",
+			"collector_number": "156",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/156_Stark Hinterlands.png"
+			}
+		},
+		{
+			"name": "Stark Horizon",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Land",
+			"collector_number": "157",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/157_Stark Horizon.png"
+			}
+		},
+		{
+			"name": "Stark Stream",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Land",
+			"collector_number": "158",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/158_Stark Stream.png"
+			}
+		},
+		{
+			"name": "Stark Wildfire",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Land",
+			"collector_number": "159",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/159_Stark Wildfire.png"
+			}
+		},
+		{
+			"name": "Plains",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Basic Land — Plains ",
+			"collector_number": "161",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/161_Plains.png"
+			}
+		},
+		{
+			"name": "Island",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Basic Land — Island ",
+			"collector_number": "162",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/162_Island.png"
+			}
+		},
+		{
+			"name": "Swamp",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Basic Land — Swamp ",
+			"collector_number": "163",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/163_Swamp.png"
+			}
+		},
+		{
+			"name": "Mountain",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Basic Land — Mountain ",
+			"collector_number": "164",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/164_Mountain.png"
+			}
+		},
+		{
+			"name": "Forest",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Basic Land — Forest ",
+			"collector_number": "165",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/165_Forest.png"
+			}
+		},
+		{
+			"name": "Giltwork Legacy",
+			"rarity": "uncommon",
+			"mana_cost": "{1}",
+			"type": "Artifact — Equipment ",
+			"collector_number": "142",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/142_Giltwork Legacy.png"
+			}
+		},
+		{
+			"name": "Mechanized Ideal",
+			"rarity": "uncommon",
+			"mana_cost": "{3}",
+			"type": "Artifact Creature — Construct ",
+			"collector_number": "143",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/143_Mechanized Ideal.png"
+			}
+		},
+		{
+			"name": "Seeking Sword",
+			"rarity": "uncommon",
+			"mana_cost": "{2}",
+			"type": "Artifact — Equipment ",
+			"collector_number": "145",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/145_Seeking Sword.png"
+			}
+		},
+		{
+			"name": "Adiran Distractor",
+			"rarity": "mythic",
+			"mana_cost": "{1}{G}{W}{U}",
+			"type": "Creature — Elf Scout ",
+			"collector_number": "138",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/138_Adiran Distractor.png"
+			}
+		},
+		{
+			"name": "Mirrorplate Exemplar",
+			"rarity": "mythic",
+			"mana_cost": "{U}{R}{W}",
+			"type": "Creature — Minotaur Warrior ",
+			"collector_number": "139",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/139_Mirrorplate Exemplar.png"
+			}
+		},
+		{
+			"name": "Channeling Stone",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Land",
+			"collector_number": "151",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/151_Channeling Stone.png"
+			}
+		},
+		{
+			"name": "Verdant Behemoth",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Land — Animus ",
+			"collector_number": "160",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/160_Verdant Behemoth.png"
+			}
+		},
+		{
+			"name": "Autumn Fae",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{R}",
+			"type": "Creature — Faerie ",
+			"collector_number": "69",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/69_Autumn Fae.png"
+			}
+		},
+		{
+			"name": "Scaletongue Mistress",
+			"rarity": "rare",
+			"mana_cost": "{4}{R}{R}",
+			"type": "Creature — Human Shaman ",
+			"collector_number": "79",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/79_Scaletongue Mistress.png"
+			}
+		},
+		{
+			"name": "Paternal Pride",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{R}",
+			"type": "Enchantment — Aura ",
+			"collector_number": "76",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/76_Paternal Pride.png"
+			}
+		},
+		{
+			"name": "Jara Incarnation",
+			"rarity": "rare",
+			"mana_cost": "{5}{G}{G}{G}",
+			"type": "Creature — Elemental ",
+			"collector_number": "92",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/92_Jara Incarnation.png"
+			}
+		},
+		{
+			"name": "Confirm Hypothesis",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{U}",
+			"type": "Instant",
+			"collector_number": "26",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/26_Confirm Hypothesis.png"
+			}
+		},
+		{
+			"name": "Ceaseless Valiant",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{W}{W}",
+			"type": "Creature — Spirit Knight ",
+			"collector_number": "6",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/6_Ceaseless Valiant.png"
+			}
+		},
+		{
+			"name": "Stall Fate",
+			"rarity": "rare",
+			"mana_cost": "{W}{U}",
+			"type": "Instant",
+			"collector_number": "107",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/107_Stall Fate.png"
+			}
+		},
+		{
+			"name": "Spellsword Elite",
+			"rarity": "uncommon",
+			"mana_cost": "{W}{U}",
+			"type": "Creature — Human Soldier ",
+			"collector_number": "106",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/106_Spellsword Elite.png"
+			}
+		},
+		{
+			"name": "Regent of Steel",
+			"rarity": "rare",
+			"mana_cost": "{2}{B}",
+			"type": "Creature — Human Noble ",
+			"collector_number": "55",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/55_Regent of Steel.png"
+			}
+		},
+		{
+			"name": "Almgrove Sentinel",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{U}{R}",
+			"type": "Creature — Human Wizard ",
+			"collector_number": "126",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/126_Almgrove Sentinel.png"
+			}
+		},
+		{
+			"name": "Compulsion's Voice",
+			"rarity": "rare",
+			"mana_cost": "{3}{U}{R}",
+			"type": "Creature — Human Wizard ",
+			"collector_number": "127",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/127_Compulsion's Voice.png"
+			}
+		},
+		{
+			"name": "Sigil of Radiance",
+			"rarity": "rare",
+			"mana_cost": "{1}{W}",
+			"type": "Enchantment",
+			"collector_number": "18",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/18_Sigil of Radiance.png"
+			}
+		},
+		{
+			"name": "Spectrum Archmage",
+			"rarity": "rare",
+			"mana_cost": "{2}{U}{U}",
+			"type": "Creature — Human Wizard ",
+			"collector_number": "38",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/38_Spectrum Archmage.png"
+			}
+		},
+		{
+			"name": "Aether Ascendant",
+			"rarity": "rare",
+			"mana_cost": "{2}{U}",
+			"type": "Creature — Human Wizard ",
+			"collector_number": "22",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/22_Aether Ascendant.png"
+			}
+		},
+		{
+			"name": "Human",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Creature — Human ",
+			"collector_number": "1",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/1_Human.png"
+			}
+		},
+		{
+			"name": "Dragon",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Creature — Dragon ",
+			"collector_number": "3",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/3_Dragon.png"
+			}
+		},
+		{
+			"name": "End of Worlds",
+			"rarity": "mythic",
+			"mana_cost": "{4}{R}{R}{R}{R}",
+			"type": "Sorcery",
+			"collector_number": "72",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/72_End of Worlds.png"
+			}
+		},
+		{
+			"name": "Inspire Actuality",
+			"rarity": "rare",
+			"mana_cost": "{1}{W}{U}",
+			"type": "Instant",
+			"collector_number": "105",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/105_Inspire Actuality.png"
+			}
+		},
+		{
+			"name": "Withering Husk",
+			"rarity": "rare",
+			"mana_cost": "{U}{B}",
+			"type": "Creature — Zombie Wizard ",
+			"collector_number": "111",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/111_Withering Husk.png"
+			}
+		},
+		{
+			"name": "In Tragedy",
+			"rarity": "rare",
+			"mana_cost": "{B}{R}",
+			"type": "Instant",
+			"collector_number": "113",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/113_In Tragedy.png"
+			}
+		},
+		{
+			"name": "Somber Knight",
+			"rarity": "rare",
+			"mana_cost": "{1}{R}{G}",
+			"type": "Creature — Human Knight ",
+			"collector_number": "117",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/117_Somber Knight.png"
+			}
+		},
+		{
+			"name": "Griffon Surveyor",
+			"rarity": "rare",
+			"mana_cost": "{3}{G}{W}",
+			"type": "Creature — Human Scout ",
+			"collector_number": "120",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/120_Griffon Surveyor.png"
+			}
+		},
+		{
+			"name": "Cognitive Fumigator",
+			"rarity": "rare",
+			"mana_cost": "{W}{B}",
+			"type": "Creature — Human Cleric ",
+			"collector_number": "122",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/122_Cognitive Fumigator.png"
+			}
+		},
+		{
+			"name": "Ophidian Oracle",
+			"rarity": "rare",
+			"mana_cost": "{3}{U}{R}",
+			"type": "Creature — Human Shaman ",
+			"collector_number": "128",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/128_Ophidian Oracle.png"
+			}
+		},
+		{
+			"name": "Act of Repentance",
+			"rarity": "rare",
+			"mana_cost": "{1}{B}{G}",
+			"type": "Instant",
+			"collector_number": "129",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/129_Act of Repentance.png"
+			}
+		},
+		{
+			"name": "Wicked Blow",
+			"rarity": "rare",
+			"mana_cost": "{R}{W}",
+			"type": "Instant",
+			"collector_number": "134",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/134_Wicked Blow.png"
+			}
+		},
+		{
+			"name": "Contemplate Obscurity",
+			"rarity": "rare",
+			"mana_cost": "{1}{G}{U}",
+			"type": "Sorcery",
+			"collector_number": "136",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/136_Contemplate Obscurity.png"
+			}
+		},
+		{
+			"name": "Ruins Remembered",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{G}",
+			"type": "Sorcery",
+			"collector_number": "101",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/101_Ruins Remembered.png"
+			}
+		},
+		{
+			"name": "Moonsliver Paragon",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{W}{B}",
+			"type": "Creature — Human Warrior ",
+			"collector_number": "123",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/123_Moonsliver Paragon.png"
+			}
+		},
+		{
+			"name": "Silkfur Hunter",
+			"rarity": "common",
+			"mana_cost": "{2}{G}",
+			"type": "Token Creature — Spider ",
+			"collector_number": "4",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/4_Silkfur Hunter.png"
+			}
+		},
+		{
+			"name": "Veil of Indecision",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{U}",
+			"type": "Instant",
+			"collector_number": "41",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/41_Veil of Indecision.png"
+			}
+		},
+		{
+			"name": "Stream of Thought",
+			"rarity": "common",
+			"mana_cost": "{2}{R}",
+			"type": "Instant",
+			"collector_number": "83",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/83_Stream of Thought.png"
+			}
+		},
+		{
+			"name": "Golem",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Artifact Creature — Elemental ",
+			"collector_number": "5",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/5_Golem.png"
+			}
+		},
+		{
+			"name": "Tutelage Artifice",
+			"rarity": "common",
+			"mana_cost": "{1}",
+			"type": "Artifact Creature",
+			"collector_number": "146",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/146_Tutelage Artifice.png"
+			}
+		},
+		]
+	

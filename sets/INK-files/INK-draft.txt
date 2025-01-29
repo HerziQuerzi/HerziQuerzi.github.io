@@ -350,13 +350,13 @@
 			}
 		},
 		{
-			"name": "Yearning Shrine",
+			"name": "Wandering Shrine",
 			"rarity": "uncommon",
 			"mana_cost": "{G}",
 			"type": "Artifact",
-			"collector_number": "75",
+			"collector_number": "74",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/75_Yearning Shrine.png"
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/74_Wandering Shrine.png"
 			}
 		},
 		{
@@ -902,11 +902,11 @@
 		{
 			"name": "Wrendal's Scheming",
 			"rarity": "uncommon",
-			"mana_cost": "{1}{G}",
+			"mana_cost": "{G}{G}",
 			"type": "Enchantment",
-			"collector_number": "74",
+			"collector_number": "75",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/74_Wrendal's Scheming.png"
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/75_Wrendal's Scheming.png"
 			}
 		},
 		{

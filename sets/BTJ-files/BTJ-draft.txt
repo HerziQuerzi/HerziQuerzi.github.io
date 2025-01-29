@@ -1,0 +1,1593 @@
+﻿[CustomCards]
+	[	{
+			"name": "Azenghul's Soul",
+			"rarity": "common",
+			"mana_cost": "{2}{W}",
+			"type": "Creature — Human Cleric ",
+			"collector_number": "3",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/3_Azenghul's Soul.png"
+			}
+		},
+		{
+			"name": "Abandon Assumptions",
+			"rarity": "mythic",
+			"mana_cost": "{X}{U}",
+			"type": "Instant",
+			"collector_number": "21",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/21_Abandon Assumptions.png"
+			}
+		},
+		{
+			"name": "Branching Thoughts",
+			"rarity": "common",
+			"mana_cost": "{4}{U}{U}",
+			"type": "Sorcery",
+			"collector_number": "24",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/24_Branching Thoughts.png"
+			}
+		},
+		{
+			"name": "False Trails",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{U}",
+			"type": "Enchantment",
+			"collector_number": "33",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/33_False Trails.png"
+			}
+		},
+		{
+			"name": "Azenghul's Flesh",
+			"rarity": "uncommon",
+			"mana_cost": "{B}",
+			"type": "Creature — Human Cleric ",
+			"collector_number": "42",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/42_Azenghul's Flesh.png"
+			}
+		},
+		{
+			"name": "Azenghul's Blood",
+			"rarity": "common",
+			"mana_cost": "{1}{R}",
+			"type": "Creature — Human Cleric ",
+			"collector_number": "61",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/61_Azenghul's Blood.png"
+			}
+		},
+		{
+			"name": "Azenghul, Anguished Lady",
+			"rarity": "mythic",
+			"mana_cost": "{7}{R}{W}{B}",
+			"type": "Legendary Creature — Demon ",
+			"collector_number": "126",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/126_Azenghul, Anguished Lady.png"
+			}
+		},
+		{
+			"name": "From Peace and Purpose",
+			"rarity": "rare",
+			"mana_cost": "{1}{G}{W}{W}{U}",
+			"type": "Enchantment",
+			"collector_number": "130",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/130_From Peace and Purpose.png"
+			}
+		},
+		{
+			"name": "From Lies and Loss",
+			"rarity": "rare",
+			"mana_cost": "{4}{U}{U}{B}{R}",
+			"type": "Instant",
+			"collector_number": "129",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/129_From Lies and Loss.png"
+			}
+		},
+		{
+			"name": "Shadowed Maestro",
+			"rarity": "common",
+			"mana_cost": "{B}",
+			"type": "Creature — Human Cleric ",
+			"collector_number": "57",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/57_Shadowed Maestro.png"
+			}
+		},
+		{
+			"name": "Offer Sacrifice",
+			"rarity": "common",
+			"mana_cost": "{3}{B}",
+			"type": "Instant",
+			"collector_number": "54",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/54_Offer Sacrifice.png"
+			}
+		},
+		{
+			"name": "Servant of Xanigan",
+			"rarity": "common",
+			"mana_cost": "{3}{B}{B}",
+			"type": "Creature — Human Cleric ",
+			"collector_number": "56",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/56_Servant of Xanigan.png"
+			}
+		},
+		{
+			"name": "Blessing of Azenghul",
+			"rarity": "common",
+			"mana_cost": "{2}{B}",
+			"type": "Enchantment",
+			"collector_number": "43",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/43_Blessing of Azenghul.png"
+			}
+		},
+		{
+			"name": "Aide of the Overseers",
+			"rarity": "common",
+			"mana_cost": "{2}{W}",
+			"type": "Creature — Human Cleric ",
+			"collector_number": "2",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/2_Aide of the Overseers.png"
+			}
+		},
+		{
+			"name": "Blade of Worship",
+			"rarity": "common",
+			"mana_cost": "{3}{W}",
+			"type": "Creature — Human Soldier ",
+			"collector_number": "5",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/5_Blade of Worship.png"
+			}
+		},
+		{
+			"name": "Splatter the Heathen",
+			"rarity": "common",
+			"mana_cost": "{2}{R}",
+			"type": "Instant",
+			"collector_number": "75",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/75_Splatter the Heathen.png"
+			}
+		},
+		{
+			"name": "Steelheart Devotee",
+			"rarity": "common",
+			"mana_cost": "{1}{R}",
+			"type": "Creature — Human Cleric ",
+			"collector_number": "77",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/77_Steelheart Devotee.png"
+			}
+		},
+		{
+			"name": "Drown in Blood",
+			"rarity": "uncommon",
+			"mana_cost": "{B}{B}",
+			"type": "Instant",
+			"collector_number": "46",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/46_Drown in Blood.png"
+			}
+		},
+		{
+			"name": "Demon of Curses",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{B}{B}",
+			"type": "Creature — Demon ",
+			"collector_number": "45",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/45_Demon of Curses.png"
+			}
+		},
+		{
+			"name": "Demon of Blessings",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{W}",
+			"type": "Creature — Demon ",
+			"collector_number": "8",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/8_Demon of Blessings.png"
+			}
+		},
+		{
+			"name": "Demon of Potential",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{R}",
+			"type": "Creature — Demon ",
+			"collector_number": "65",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/65_Demon of Potential.png"
+			}
+		},
+		{
+			"name": "Words of Scripture",
+			"rarity": "uncommon",
+			"mana_cost": "{W}{B}",
+			"type": "Instant",
+			"collector_number": "115",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/115_Words of Scripture.png"
+			}
+		},
+		{
+			"name": "Moonlit Adherent",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{B}{R}",
+			"type": "Creature — Human Cleric ",
+			"collector_number": "106",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/106_Moonlit Adherent.png"
+			}
+		},
+		{
+			"name": "Twilight Worshiper",
+			"rarity": "uncommon",
+			"mana_cost": "{R}{W}",
+			"type": "Creature — Human Warrior ",
+			"collector_number": "121",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/121_Twilight Worshiper.png"
+			}
+		},
+		{
+			"name": "Seal of Scripture",
+			"rarity": "common",
+			"mana_cost": "{3}",
+			"type": "Artifact",
+			"collector_number": "142",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/142_Seal of Scripture.png"
+			}
+		},
+		{
+			"name": "Seal of Fervor",
+			"rarity": "common",
+			"mana_cost": "{3}",
+			"type": "Artifact",
+			"collector_number": "137",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/137_Seal of Fervor.png"
+			}
+		},
+		{
+			"name": "Ambition's Promise",
+			"rarity": "rare",
+			"mana_cost": "{B}{B}",
+			"type": "Sorcery",
+			"collector_number": "41",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/41_Ambition's Promise.png"
+			}
+		},
+		{
+			"name": "Bahleze, Study of Grace",
+			"rarity": "rare",
+			"mana_cost": "{3}{W}{W}{B}{B}",
+			"type": "Legendary Creature — Demon ",
+			"collector_number": "114",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/114_Bahleze, Study of Grace.png"
+			}
+		},
+		{
+			"name": "Zamettra's Song",
+			"rarity": "rare",
+			"mana_cost": "{3}{R}{R}",
+			"type": "Instant",
+			"collector_number": "80",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/80_Zamettra's Song.png"
+			}
+		},
+		{
+			"name": "Sulfuric Lighthouse",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Land — Swamp ",
+			"collector_number": "150",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/150_Sulfuric Lighthouse.png"
+			}
+		},
+		{
+			"name": "Zamettra, Study of Fervor",
+			"rarity": "rare",
+			"mana_cost": "{3}{B}{B}{R}{R}",
+			"type": "Legendary Creature — Demon ",
+			"collector_number": "108",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/108_Zamettra, Study of Fervor.png"
+			}
+		},
+		{
+			"name": "Bahleze's Song",
+			"rarity": "rare",
+			"mana_cost": "{3}{W}{W}",
+			"type": "Sorcery",
+			"collector_number": "4",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/4_Bahleze's Song.png"
+			}
+		},
+		{
+			"name": "From Hope and Harm",
+			"rarity": "rare",
+			"mana_cost": "{R}{W}{B}{B}",
+			"type": "Enchantment",
+			"collector_number": "128",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/128_From Hope and Harm.png"
+			}
+		},
+		{
+			"name": "Grasping Souls",
+			"rarity": "mythic",
+			"mana_cost": "{B}",
+			"type": "Enchantment",
+			"collector_number": "51",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/51_Grasping Souls.png"
+			}
+		},
+		{
+			"name": "Xanigan, the Darkened Cloud",
+			"rarity": "mythic",
+			"mana_cost": "{3}{B}{B}",
+			"type": "Legendary Planeswalker — Xanigan ",
+			"collector_number": "60",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/60_Xanigan, the Darkened Cloud.png"
+			}
+		},
+		{
+			"name": "Seal of Secrets",
+			"rarity": "common",
+			"mana_cost": "{3}",
+			"type": "Artifact",
+			"collector_number": "143",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/143_Seal of Secrets.png"
+			}
+		},
+		{
+			"name": "Seal of Time",
+			"rarity": "common",
+			"mana_cost": "{3}",
+			"type": "Artifact",
+			"collector_number": "144",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/144_Seal of Time.png"
+			}
+		},
+		{
+			"name": "Define Destiny",
+			"rarity": "rare",
+			"mana_cost": "{1}{U}",
+			"type": "Instant",
+			"collector_number": "31",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/31_Define Destiny.png"
+			}
+		},
+		{
+			"name": "Maddened Archivist",
+			"rarity": "common",
+			"mana_cost": "{4}{U}",
+			"type": "Creature — Human Wizard ",
+			"collector_number": "37",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/37_Maddened Archivist.png"
+			}
+		},
+		{
+			"name": "Cackling Assistants",
+			"rarity": "common",
+			"mana_cost": "{2}{U}",
+			"type": "Sorcery",
+			"collector_number": "25",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/25_Cackling Assistants.png"
+			}
+		},
+		{
+			"name": "Barten, the Seeking Scholar",
+			"rarity": "mythic",
+			"mana_cost": "{1}{U}{U}",
+			"type": "Legendary Planeswalker — Barten ",
+			"collector_number": "22",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/22_Barten, the Seeking Scholar.png"
+			}
+		},
+		{
+			"name": "Bounded Intellect",
+			"rarity": "rare",
+			"mana_cost": "{2}{U}{U}",
+			"type": "Instant",
+			"collector_number": "23",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/23_Bounded Intellect.png"
+			}
+		},
+		{
+			"name": "Siphon Will",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{U}",
+			"type": "Instant",
+			"collector_number": "39",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/39_Siphon Will.png"
+			}
+		},
+		{
+			"name": "Desperate Infiltration",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{U}",
+			"type": "Enchantment",
+			"collector_number": "32",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/32_Desperate Infiltration.png"
+			}
+		},
+		{
+			"name": "Eternal Echo",
+			"rarity": "common",
+			"mana_cost": "{B}",
+			"type": "Creature — Vampire Cleric ",
+			"collector_number": "48",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/48_Eternal Echo.png"
+			}
+		},
+		{
+			"name": "Soulfeed Vampire",
+			"rarity": "common",
+			"mana_cost": "{3}{B}",
+			"type": "Creature — Vampire ",
+			"collector_number": "59",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/59_Soulfeed Vampire.png"
+			}
+		},
+		{
+			"name": "Ritual Relic",
+			"rarity": "common",
+			"mana_cost": "{1}{B}",
+			"type": "Creature — Zombie ",
+			"collector_number": "55",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/55_Ritual Relic.png"
+			}
+		},
+		{
+			"name": "Futile Desolation",
+			"rarity": "rare",
+			"mana_cost": "{4}{B}{B}{B}",
+			"type": "Instant",
+			"collector_number": "50",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/50_Futile Desolation.png"
+			}
+		},
+		{
+			"name": "Frailty",
+			"rarity": "uncommon",
+			"mana_cost": "{B}",
+			"type": "Instant",
+			"collector_number": "49",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/49_Frailty.png"
+			}
+		},
+		{
+			"name": "Final Wisdom",
+			"rarity": "common",
+			"mana_cost": "{1}{R}",
+			"type": "Instant",
+			"collector_number": "66",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/66_Final Wisdom.png"
+			}
+		},
+		{
+			"name": "Frenzied Vampire",
+			"rarity": "common",
+			"mana_cost": "{2}{R}",
+			"type": "Creature — Vampire ",
+			"collector_number": "69",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/69_Frenzied Vampire.png"
+			}
+		},
+		{
+			"name": "Crackling Nerves",
+			"rarity": "common",
+			"mana_cost": "{1}{R}",
+			"type": "Creature — Horror ",
+			"collector_number": "63",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/63_Crackling Nerves.png"
+			}
+		},
+		{
+			"name": "Marrow to Brimstone",
+			"rarity": "rare",
+			"mana_cost": "{1}{R}",
+			"type": "Instant",
+			"collector_number": "72",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/72_Marrow to Brimstone.png"
+			}
+		},
+		{
+			"name": "Rhyolitic Inquiries",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{R}",
+			"type": "Enchantment",
+			"collector_number": "73",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/73_Rhyolitic Inquiries.png"
+			}
+		},
+		{
+			"name": "Poltic, Deluge of Delusions",
+			"rarity": "mythic",
+			"mana_cost": "{1}{U}{B}{R}",
+			"type": "Legendary Creature — Human Wizard ",
+			"collector_number": "134",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/134_Poltic, Deluge of Delusions.png"
+			}
+		},
+		{
+			"name": "Valter, the Final Breath",
+			"rarity": "rare",
+			"mana_cost": "{1}{U}{B}",
+			"type": "Legendary Creature — Vampire Horror ",
+			"collector_number": "105",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/105_Valter, the Final Breath.png"
+			}
+		},
+		{
+			"name": "Desker, the Final Expulsion",
+			"rarity": "rare",
+			"mana_cost": "{1}{U}{R}",
+			"type": "Legendary Creature — Vampire Horror ",
+			"collector_number": "116",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/116_Desker, the Final Expulsion.png"
+			}
+		},
+		{
+			"name": "Bane of Flesh",
+			"rarity": "uncommon",
+			"mana_cost": "{U}{B}",
+			"type": "Creature — Spirit Knight ",
+			"collector_number": "103",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/103_Bane of Flesh.png"
+			}
+		},
+		{
+			"name": "Face Phantasms",
+			"rarity": "uncommon",
+			"mana_cost": "{U}{R}",
+			"type": "Instant",
+			"collector_number": "117",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/117_Face Phantasms.png"
+			}
+		},
+		{
+			"name": "Shared Madness",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{B}{R}",
+			"type": "Sorcery",
+			"collector_number": "107",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/107_Shared Madness.png"
+			}
+		},
+		{
+			"name": "Abandoned Library",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Land — Island ",
+			"collector_number": "146",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/146_Abandoned Library.png"
+			}
+		},
+		{
+			"name": "Seal of Decay",
+			"rarity": "common",
+			"mana_cost": "{3}",
+			"type": "Artifact",
+			"collector_number": "136",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/136_Seal of Decay.png"
+			}
+		},
+		{
+			"name": "Seal of Growth",
+			"rarity": "common",
+			"mana_cost": "{3}",
+			"type": "Artifact",
+			"collector_number": "139",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/139_Seal of Growth.png"
+			}
+		},
+		{
+			"name": "Curious Drake",
+			"rarity": "common",
+			"mana_cost": "{1}{U}",
+			"type": "Creature — Drake ",
+			"collector_number": "30",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/30_Curious Drake.png"
+			}
+		},
+		{
+			"name": "Orc Alchemist",
+			"rarity": "common",
+			"mana_cost": "{1}{U}",
+			"type": "Creature — Orc Shaman ",
+			"collector_number": "38",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/38_Orc Alchemist.png"
+			}
+		},
+		{
+			"name": "Crystalline Inquiry",
+			"rarity": "common",
+			"mana_cost": "{1}{U}{U}",
+			"type": "Enchantment — Aura ",
+			"collector_number": "28",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/28_Crystalline Inquiry.png"
+			}
+		},
+		{
+			"name": "Tide Wallower",
+			"rarity": "rare",
+			"mana_cost": "{7}{U}{U}{U}",
+			"type": "Creature — Octopus Horror ",
+			"collector_number": "40",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/40_Tide Wallower.png"
+			}
+		},
+		{
+			"name": "Insectile Broodmother",
+			"rarity": "uncommon",
+			"mana_cost": "{5}{U}{U}",
+			"type": "Creature — Insect Horror ",
+			"collector_number": "35",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/35_Insectile Broodmother.png"
+			}
+		},
+		{
+			"name": "Nessos Vanguard",
+			"rarity": "common",
+			"mana_cost": "{2}{B}",
+			"type": "Creature — Centaur Warrior ",
+			"collector_number": "53",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/53_Nessos Vanguard.png"
+			}
+		},
+		{
+			"name": "Bloated Rat",
+			"rarity": "common",
+			"mana_cost": "{B}",
+			"type": "Creature — Rat ",
+			"collector_number": "44",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/44_Bloated Rat.png"
+			}
+		},
+		{
+			"name": "Shambling Leechmother",
+			"rarity": "common",
+			"mana_cost": "{4}{B}{B}",
+			"type": "Creature — Horror ",
+			"collector_number": "58",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/58_Shambling Leechmother.png"
+			}
+		},
+		{
+			"name": "Inkwell Scourge",
+			"rarity": "rare",
+			"mana_cost": "{6}{B}{B}{B}",
+			"type": "Creature — Leviathan Horror ",
+			"collector_number": "52",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/52_Inkwell Scourge.png"
+			}
+		},
+		{
+			"name": "Entangled Rats",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{B}",
+			"type": "Creature — Rat ",
+			"collector_number": "47",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/47_Entangled Rats.png"
+			}
+		},
+		{
+			"name": "Abomination's Advocate",
+			"rarity": "common",
+			"mana_cost": "{3}{G}",
+			"type": "Creature — Orc Warrior ",
+			"collector_number": "81",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/81_Abomination's Advocate.png"
+			}
+		},
+		{
+			"name": "Sickening Incubator",
+			"rarity": "common",
+			"mana_cost": "{2}{G}",
+			"type": "Creature — Elf Shaman ",
+			"collector_number": "96",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/96_Sickening Incubator.png"
+			}
+		},
+		{
+			"name": "Wild Stampede",
+			"rarity": "common",
+			"mana_cost": "{3}{G}{G}",
+			"type": "Instant",
+			"collector_number": "99",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/99_Wild Stampede.png"
+			}
+		},
+		{
+			"name": "Moss Sifter",
+			"rarity": "common",
+			"mana_cost": "{5}{G}{G}",
+			"type": "Creature — Beast Horror ",
+			"collector_number": "93",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/93_Moss Sifter.png"
+			}
+		},
+		{
+			"name": "Endless Predators",
+			"rarity": "mythic",
+			"mana_cost": "{1}{G}",
+			"type": "Enchantment",
+			"collector_number": "84",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/84_Endless Predators.png"
+			}
+		},
+		{
+			"name": "Kalmatar, the Hungering Maw",
+			"rarity": "mythic",
+			"mana_cost": "{5}{G}{G}",
+			"type": "Legendary Planeswalker — Kalmatar ",
+			"collector_number": "90",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/90_Kalmatar, the Hungering Maw.png"
+			}
+		},
+		{
+			"name": "Orc Warchief",
+			"rarity": "rare",
+			"mana_cost": "{2}{G}{G}",
+			"type": "Creature — Orc Warrior ",
+			"collector_number": "95",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/95_Orc Warchief.png"
+			}
+		},
+		{
+			"name": "Cultist of Sakarias",
+			"rarity": "uncommon",
+			"mana_cost": "{B}{G}",
+			"type": "Creature — Elf Shaman ",
+			"collector_number": "118",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/118_Cultist of Sakarias.png"
+			}
+		},
+		{
+			"name": "Nessos Archer",
+			"rarity": "uncommon",
+			"mana_cost": "{G}{G}",
+			"type": "Creature — Centaur Archer ",
+			"collector_number": "94",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/94_Nessos Archer.png"
+			}
+		},
+		{
+			"name": "Might of Sakarias",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{G}",
+			"type": "Enchantment — Aura ",
+			"collector_number": "92",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/92_Might of Sakarias.png"
+			}
+		},
+		{
+			"name": "Sakarias, Murk Trawler",
+			"rarity": "mythic",
+			"mana_cost": "{7}{B}{G}{U}",
+			"type": "Legendary Creature — Kraken Horror ",
+			"collector_number": "135",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/135_Sakarias, Murk Trawler.png"
+			}
+		},
+		{
+			"name": "Taika, Tide's Tale",
+			"rarity": "rare",
+			"mana_cost": "{1}{G}{U}",
+			"type": "Legendary Creature — Naga Shaman ",
+			"collector_number": "125",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/125_Taika, Tide's Tale.png"
+			}
+		},
+		{
+			"name": "Maikki, Mire's Matron",
+			"rarity": "rare",
+			"mana_cost": "{1}{B}{G}",
+			"type": "Legendary Creature — Naga Warrior ",
+			"collector_number": "119",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/119_Maikki, Mire's Matron.png"
+			}
+		},
+		{
+			"name": "From Rot and Ruin",
+			"rarity": "rare",
+			"mana_cost": "{B}{G}{G}{U}",
+			"type": "Enchantment",
+			"collector_number": "131",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/131_From Rot and Ruin.png"
+			}
+		},
+		{
+			"name": "Sporewoven Spider",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{G}{G}",
+			"type": "Creature — Spider ",
+			"collector_number": "98",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/98_Sporewoven Spider.png"
+			}
+		},
+		{
+			"name": "Embrace the Depths",
+			"rarity": "uncommon",
+			"mana_cost": "{3}{G}{U}",
+			"type": "Enchantment",
+			"collector_number": "123",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/123_Embrace the Depths.png"
+			}
+		},
+		{
+			"name": "Plated Lurker",
+			"rarity": "uncommon",
+			"mana_cost": "{U}{B}",
+			"type": "Creature — Orc Warrior ",
+			"collector_number": "104",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/104_Plated Lurker.png"
+			}
+		},
+		{
+			"name": "Corrupted Ruins",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Land — Forest ",
+			"collector_number": "147",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/147_Corrupted Ruins.png"
+			}
+		},
+		{
+			"name": "Seal of Knowledge",
+			"rarity": "common",
+			"mana_cost": "{3}",
+			"type": "Artifact",
+			"collector_number": "141",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/141_Seal of Knowledge.png"
+			}
+		},
+		{
+			"name": "Seal of Wisdom",
+			"rarity": "common",
+			"mana_cost": "{3}",
+			"type": "Artifact",
+			"collector_number": "145",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/145_Seal of Wisdom.png"
+			}
+		},
+		{
+			"name": "Haunting Presence",
+			"rarity": "uncommon",
+			"mana_cost": "{5}{W}",
+			"type": "Enchantment",
+			"collector_number": "11",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/11_Haunting Presence.png"
+			}
+		},
+		{
+			"name": "Soul's Attendant",
+			"rarity": "common",
+			"mana_cost": "{W}",
+			"type": "Creature — Human Cleric ",
+			"collector_number": "17",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/17_Soul's Attendant.png"
+			}
+		},
+		{
+			"name": "Venerated Mystic",
+			"rarity": "common",
+			"mana_cost": "{1}{W}",
+			"type": "Creature — Human Citizen ",
+			"collector_number": "20",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/20_Venerated Mystic.png"
+			}
+		},
+		{
+			"name": "Queller of Whispers",
+			"rarity": "common",
+			"mana_cost": "{1}{W}",
+			"type": "Creature — Human Cleric Soldier ",
+			"collector_number": "15",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/15_Queller of Whispers.png"
+			}
+		},
+		{
+			"name": "Hallowed",
+			"rarity": "rare",
+			"mana_cost": "{1}{W}",
+			"type": "Enchantment",
+			"collector_number": "10",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/10_Hallowed.png"
+			}
+		},
+		{
+			"name": "Gertred, the Quelling Storm",
+			"rarity": "mythic",
+			"mana_cost": "{4}{W}{W}",
+			"type": "Legendary Planeswalker — Gertred ",
+			"collector_number": "9",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/9_Gertred, the Quelling Storm.png"
+			}
+		},
+		{
+			"name": "Upholder of Purity",
+			"rarity": "mythic",
+			"mana_cost": "{6}{W}{W}",
+			"type": "Creature — Angel Soldier ",
+			"collector_number": "18",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/18_Upholder of Purity.png"
+			}
+		},
+		{
+			"name": "Mortal Reckoning",
+			"rarity": "common",
+			"mana_cost": "{3}{W}",
+			"type": "Instant",
+			"collector_number": "14",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/14_Mortal Reckoning.png"
+			}
+		},
+		{
+			"name": "Caibry's Forerunner",
+			"rarity": "uncommon",
+			"mana_cost": "{W}",
+			"type": "Creature — Human Knight ",
+			"collector_number": "6",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/6_Caibry's Forerunner.png"
+			}
+		},
+		{
+			"name": "Might of the Meek",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{W}",
+			"type": "Enchantment — Aura ",
+			"collector_number": "13",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/13_Might of the Meek.png"
+			}
+		},
+		{
+			"name": "Languid Whispers",
+			"rarity": "common",
+			"mana_cost": "{6}{U}",
+			"type": "Creature — Zombie ",
+			"collector_number": "36",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/36_Languid Whispers.png"
+			}
+		},
+		{
+			"name": "Caibry's Scout",
+			"rarity": "common",
+			"mana_cost": "{3}{U}",
+			"type": "Creature — Human Scout ",
+			"collector_number": "26",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/26_Caibry's Scout.png"
+			}
+		},
+		{
+			"name": "Hallowed Steps",
+			"rarity": "common",
+			"mana_cost": "{3}{U}",
+			"type": "Instant",
+			"collector_number": "34",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/34_Hallowed Steps.png"
+			}
+		},
+		{
+			"name": "Channel Reminiscence",
+			"rarity": "common",
+			"mana_cost": "{U}",
+			"type": "Instant",
+			"collector_number": "27",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/27_Channel Reminiscence.png"
+			}
+		},
+		{
+			"name": "Cumulus Scout",
+			"rarity": "uncommon",
+			"mana_cost": "{U}",
+			"type": "Creature — Human Scout ",
+			"collector_number": "29",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/29_Cumulus Scout.png"
+			}
+		},
+		{
+			"name": "Impish Ambush",
+			"rarity": "common",
+			"mana_cost": "{1}{G}",
+			"type": "Instant",
+			"collector_number": "89",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/89_Impish Ambush.png"
+			}
+		},
+		{
+			"name": "Hamlet Purifier",
+			"rarity": "common",
+			"mana_cost": "{2}{G}",
+			"type": "Creature — Human Shaman ",
+			"collector_number": "86",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/86_Hamlet Purifier.png"
+			}
+		},
+		{
+			"name": "Wild Whisper",
+			"rarity": "common",
+			"mana_cost": "{4}{G}",
+			"type": "Creature — Zombie Warrior ",
+			"collector_number": "100",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/100_Wild Whisper.png"
+			}
+		},
+		{
+			"name": "Spectral Hunt",
+			"rarity": "uncommon",
+			"mana_cost": "{3}{G}",
+			"type": "Sorcery",
+			"collector_number": "97",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/97_Spectral Hunt.png"
+			}
+		},
+		{
+			"name": "Caibry's Warden",
+			"rarity": "rare",
+			"mana_cost": "{2}{G}",
+			"type": "Creature — Human Scout ",
+			"collector_number": "82",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/82_Caibry's Warden.png"
+			}
+		},
+		{
+			"name": "Caibry, Deathless Whisper",
+			"rarity": "mythic",
+			"mana_cost": "{G}{W}{U}",
+			"type": "Legendary Creature — Human Knight ",
+			"collector_number": "127",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/127_Caibry, Deathless Whisper.png"
+			}
+		},
+		{
+			"name": "Court of Verdant Vales",
+			"rarity": "rare",
+			"mana_cost": "{2}{G}{W}",
+			"type": "Legendary Creature — Human Noble ",
+			"collector_number": "111",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/111_Court of Verdant Vales.png"
+			}
+		},
+		{
+			"name": "Spare the Day",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{G}{W}",
+			"type": "Instant",
+			"collector_number": "112",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/112_Spare the Day.png"
+			}
+		},
+		{
+			"name": "Lofty Perch",
+			"rarity": "uncommon",
+			"mana_cost": "{W}{U}",
+			"type": "Enchantment — Aura ",
+			"collector_number": "102",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/102_Lofty Perch.png"
+			}
+		},
+		{
+			"name": "Stand Steadfast",
+			"rarity": "uncommon",
+			"mana_cost": "{5}{G}{U}",
+			"type": "Instant",
+			"collector_number": "124",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/124_Stand Steadfast.png"
+			}
+		},
+		{
+			"name": "Frigid Creek",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Land — Plains ",
+			"collector_number": "148",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/148_Frigid Creek.png"
+			}
+		},
+		{
+			"name": "Seal of Honour",
+			"rarity": "common",
+			"mana_cost": "{3}",
+			"type": "Artifact",
+			"collector_number": "140",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/140_Seal of Honour.png"
+			}
+		},
+		{
+			"name": "Seal of Glory",
+			"rarity": "common",
+			"mana_cost": "{3}",
+			"type": "Artifact",
+			"collector_number": "138",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/138_Seal of Glory.png"
+			}
+		},
+		{
+			"name": "Honorbound Champion",
+			"rarity": "common",
+			"mana_cost": "{W}",
+			"type": "Creature — Human Soldier ",
+			"collector_number": "12",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/12_Honorbound Champion.png"
+			}
+		},
+		{
+			"name": "Valiant Challengers",
+			"rarity": "common",
+			"mana_cost": "{2}{W}",
+			"type": "Instant",
+			"collector_number": "19",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/19_Valiant Challengers.png"
+			}
+		},
+		{
+			"name": "Carriage Master",
+			"rarity": "common",
+			"mana_cost": "{4}{W}",
+			"type": "Creature — Dwarf Warrior ",
+			"collector_number": "7",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/7_Carriage Master.png"
+			}
+		},
+		{
+			"name": "Against the Gale",
+			"rarity": "rare",
+			"mana_cost": "{3}{W}",
+			"type": "Instant",
+			"collector_number": "1",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/1_Against the Gale.png"
+			}
+		},
+		{
+			"name": "Reborn Adrift",
+			"rarity": "uncommon",
+			"mana_cost": "{W}",
+			"type": "Instant",
+			"collector_number": "16",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/16_Reborn Adrift.png"
+			}
+		},
+		{
+			"name": "Ironwill Champion",
+			"rarity": "common",
+			"mana_cost": "{1}{R}",
+			"type": "Creature — Dwarf Warrior ",
+			"collector_number": "71",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/71_Ironwill Champion.png"
+			}
+		},
+		{
+			"name": "Fling",
+			"rarity": "common",
+			"mana_cost": "{1}{R}",
+			"type": "Instant",
+			"collector_number": "68",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/68_Fling.png"
+			}
+		},
+		{
+			"name": "Charismatic Challenger",
+			"rarity": "common",
+			"mana_cost": "{3}{R}",
+			"type": "Creature — Human Warrior ",
+			"collector_number": "62",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/62_Charismatic Challenger.png"
+			}
+		},
+		{
+			"name": "Warrior's Condescension",
+			"rarity": "common",
+			"mana_cost": "{2}{R}",
+			"type": "Instant",
+			"collector_number": "79",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/79_Warrior's Condescension.png"
+			}
+		},
+		{
+			"name": "Glory's Guardian",
+			"rarity": "mythic",
+			"mana_cost": "{5}{R}{R}",
+			"type": "Creature — Dragon ",
+			"collector_number": "70",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/70_Glory's Guardian.png"
+			}
+		},
+		{
+			"name": "Siobhan, the Golden Knuckle",
+			"rarity": "mythic",
+			"mana_cost": "{2}{R}{R}",
+			"type": "Legendary Planeswalker — Siobhan ",
+			"collector_number": "74",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/74_Siobhan, the Golden Knuckle.png"
+			}
+		},
+		{
+			"name": "Crucible of Glory",
+			"rarity": "rare",
+			"mana_cost": "{3}{R}{R}",
+			"type": "Instant",
+			"collector_number": "64",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/64_Crucible of Glory.png"
+			}
+		},
+		{
+			"name": "Static Brawler",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{R}",
+			"type": "Creature — Human Wizard ",
+			"collector_number": "76",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/76_Static Brawler.png"
+			}
+		},
+		{
+			"name": "Fires of Arhval",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{R}",
+			"type": "Instant",
+			"collector_number": "67",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/67_Fires of Arhval.png"
+			}
+		},
+		{
+			"name": "Through Struggle",
+			"rarity": "uncommon",
+			"mana_cost": "{R}",
+			"type": "Enchantment",
+			"collector_number": "78",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/78_Through Struggle.png"
+			}
+		},
+		{
+			"name": "Kneebreaker Champion",
+			"rarity": "common",
+			"mana_cost": "{1}{G}",
+			"type": "Creature — Human Warrior ",
+			"collector_number": "91",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/91_Kneebreaker Champion.png"
+			}
+		},
+		{
+			"name": "Hearthkeeper",
+			"rarity": "common",
+			"mana_cost": "{2}{G}",
+			"type": "Creature — Elf Citizen ",
+			"collector_number": "88",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/88_Hearthkeeper.png"
+			}
+		},
+		{
+			"name": "Challenger's Congregation",
+			"rarity": "common",
+			"mana_cost": "{2}{G}",
+			"type": "Sorcery",
+			"collector_number": "83",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/83_Challenger's Congregation.png"
+			}
+		},
+		{
+			"name": "Greenpalm Guide",
+			"rarity": "rare",
+			"mana_cost": "{G}",
+			"type": "Creature — Human Druid ",
+			"collector_number": "85",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/85_Greenpalm Guide.png"
+			}
+		},
+		{
+			"name": "Hamlet Warlord",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{G}",
+			"type": "Creature — Human Warrior ",
+			"collector_number": "87",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/87_Hamlet Warlord.png"
+			}
+		},
+		{
+			"name": "Heilda, Ahrval's Paragon",
+			"rarity": "mythic",
+			"mana_cost": "{R}{G}{W}",
+			"type": "Legendary Creature — Human Warrior ",
+			"collector_number": "133",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/133_Heilda, Ahrval's Paragon.png"
+			}
+		},
+		{
+			"name": "Aelswith, Radiant Valkyrie",
+			"rarity": "rare",
+			"mana_cost": "{5}{R}{W}",
+			"type": "Legendary Creature — Dragon ",
+			"collector_number": "120",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/120_Aelswith, Radiant Valkyrie.png"
+			}
+		},
+		{
+			"name": "Brida, Surging Valkyrie",
+			"rarity": "rare",
+			"mana_cost": "{5}{R}{G}",
+			"type": "Legendary Creature — Dragon ",
+			"collector_number": "109",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/109_Brida, Surging Valkyrie.png"
+			}
+		},
+		{
+			"name": "From Valor and Vanity",
+			"rarity": "rare",
+			"mana_cost": "{R}{R}{G}{W}",
+			"type": "Sorcery",
+			"collector_number": "132",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/132_From Valor and Vanity.png"
+			}
+		},
+		{
+			"name": "Triumphant Aftermath",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{R}{G}",
+			"type": "Enchantment",
+			"collector_number": "110",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/110_Triumphant Aftermath.png"
+			}
+		},
+		{
+			"name": "Worthy Ascendant",
+			"rarity": "uncommon",
+			"mana_cost": "{R}{W}",
+			"type": "Creature — Human Warrior ",
+			"collector_number": "122",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/122_Worthy Ascendant.png"
+			}
+		},
+		{
+			"name": "Warrior's End",
+			"rarity": "uncommon",
+			"mana_cost": "{G}{W}",
+			"type": "Enchantment",
+			"collector_number": "113",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/113_Warrior's End.png"
+			}
+		},
+		{
+			"name": "Heavenly Expanse",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Land — Mountain ",
+			"collector_number": "149",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/149_Heavenly Expanse.png"
+			}
+		},
+		{
+			"name": "Court of Gilded Graves",
+			"rarity": "rare",
+			"mana_cost": "{2}{W}{U}",
+			"type": "Legendary Creature — Spirit Noble ",
+			"collector_number": "101",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/101_Court of Gilded Graves.png"
+			}
+		},
+		{
+			"name": "Island",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Basic Land — Island ",
+			"collector_number": "152",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/152_Island.png"
+			}
+		},
+		{
+			"name": "Swamp",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Basic Land — Swamp ",
+			"collector_number": "153",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/153_Swamp.png"
+			}
+		},
+		{
+			"name": "Mountain",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Basic Land — Mountain ",
+			"collector_number": "154",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/154_Mountain.png"
+			}
+		},
+		{
+			"name": "Forest",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Basic Land — Forest ",
+			"collector_number": "155",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/155_Forest.png"
+			}
+		},
+		{
+			"name": "Warrior",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Creature — Warrior ",
+			"collector_number": "3",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/3_Warrior.png"
+			}
+		},
+		{
+			"name": "Clue",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Artifact — Clue ",
+			"collector_number": "4",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/4_Clue.png"
+			}
+		},
+		{
+			"name": "Homunculus",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Creature — Homunculus ",
+			"collector_number": "1",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/1_Homunculus.png"
+			}
+		},
+		{
+			"name": "Plains",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Basic Land — Plains ",
+			"collector_number": "151",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/151_Plains.png"
+			}
+		},
+		{
+			"name": "Languid Whispers Token",
+			"rarity": "common",
+			"mana_cost": "{6}{U}",
+			"type": "Token Creature — Zombie ",
+			"collector_number": "2",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/2_Languid Whispers Token.png"
+			}
+		},
+		]
+	

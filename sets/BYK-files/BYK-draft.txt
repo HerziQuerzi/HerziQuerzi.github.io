@@ -1,0 +1,2340 @@
+﻿[CustomCards]
+	[	{
+			"name": "Mishka's Conjuring",
+			"rarity": "common",
+			"mana_cost": "{2}{U}",
+			"type": "Sorcery",
+			"collector_number": "49",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/49_Mishka's Conjuring.png"
+			}
+		},
+		{
+			"name": "Blessing of Setar",
+			"rarity": "uncommon",
+			"mana_cost": "{U}{B}{R}",
+			"type": "Enchantment",
+			"collector_number": "174",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/174_Blessing of Setar.png"
+			}
+		},
+		{
+			"name": "Annihilation",
+			"rarity": "uncommon",
+			"mana_cost": "{X}{R}",
+			"type": "Instant",
+			"collector_number": "92",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/92_Annihilation.png"
+			}
+		},
+		{
+			"name": "Drenched in Triumph",
+			"rarity": "common",
+			"mana_cost": "{R}",
+			"type": "Enchantment — Aura ",
+			"collector_number": "96",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/96_Drenched in Triumph.png"
+			}
+		},
+		{
+			"name": "Hadik, Might of Mortals",
+			"rarity": "rare",
+			"mana_cost": "{1}{R}{G}",
+			"type": "Legendary Creature — Human Warrior ",
+			"collector_number": "164",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/164_Hadik, Might of Mortals.png"
+			}
+		},
+		{
+			"name": "Remnant of the Hunt",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{G}",
+			"type": "Creature — Spirit Warrior ",
+			"collector_number": "138",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/138_Remnant of the Hunt.png"
+			}
+		},
+		{
+			"name": "Hollyberry Murder",
+			"rarity": "common",
+			"mana_cost": "{3}{B}",
+			"type": "Creature — Bird ",
+			"collector_number": "67",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/67_Hollyberry Murder.png"
+			}
+		},
+		{
+			"name": "Thriving Shaman",
+			"rarity": "uncommon",
+			"mana_cost": "{3}{G}",
+			"type": "Creature — Human Shaman ",
+			"collector_number": "146",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/146_Thriving Shaman.png"
+			}
+		},
+		{
+			"name": "Ashka's Hunter",
+			"rarity": "common",
+			"mana_cost": "{2}{G}",
+			"type": "Creature — Wolf ",
+			"collector_number": "122",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/122_Ashka's Hunter.png"
+			}
+		},
+		{
+			"name": "Elusive Devout",
+			"rarity": "common",
+			"mana_cost": "{W/B}{U}",
+			"type": "Creature — Illusion Cleric ",
+			"collector_number": "192",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/192_Elusive Devout.png"
+			}
+		},
+		{
+			"name": "Slithering Eyes",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{R}",
+			"type": "Creature — Snake ",
+			"collector_number": "115",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/115_Slithering Eyes.png"
+			}
+		},
+		{
+			"name": "Weeping Lotus",
+			"rarity": "rare",
+			"mana_cost": "{2}",
+			"type": "Artifact",
+			"collector_number": "205",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/205_Weeping Lotus.png"
+			}
+		},
+		{
+			"name": "Fleshscale Serpent",
+			"rarity": "rare",
+			"mana_cost": "{1}{W}",
+			"type": "Creature — Snake ",
+			"collector_number": "14",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/14_Fleshscale Serpent.png"
+			}
+		},
+		{
+			"name": "The Mind Falters",
+			"rarity": "common",
+			"mana_cost": "{B}",
+			"type": "Sorcery — Revelation ",
+			"collector_number": "72",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/72_The Mind Falters.png"
+			}
+		},
+		{
+			"name": "Still-Smoke Hunter",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{B}",
+			"type": "Creature — Human ",
+			"collector_number": "82",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/82_Still-Smoke Hunter.png"
+			}
+		},
+		{
+			"name": "Ashka Ritualist",
+			"rarity": "rare",
+			"mana_cost": "{3}{G}{G}",
+			"type": "Creature — Human Shaman ",
+			"collector_number": "121",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/121_Ashka Ritualist.png"
+			}
+		},
+		{
+			"name": "Swarm of Sporemites",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{G}",
+			"type": "Creature — Fungus ",
+			"collector_number": "145",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/145_Swarm of Sporemites.png"
+			}
+		},
+		{
+			"name": "Perception Pool",
+			"rarity": "rare",
+			"mana_cost": "{4}",
+			"type": "Artifact",
+			"collector_number": "199",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/199_Perception Pool.png"
+			}
+		},
+		{
+			"name": "Gentle Omens",
+			"rarity": "rare",
+			"mana_cost": "{2}{W}{U}",
+			"type": "Instant",
+			"collector_number": "152",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/152_Gentle Omens.png"
+			}
+		},
+		{
+			"name": "Everember Phoenix",
+			"rarity": "rare",
+			"mana_cost": "{1}{R}{R}",
+			"type": "Creature — Phoenix ",
+			"collector_number": "98",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/98_Everember Phoenix.png"
+			}
+		},
+		{
+			"name": "Subdue False Idols",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{W}",
+			"type": "Sorcery — Revelation ",
+			"collector_number": "27",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/27_Subdue False Idols.png"
+			}
+		},
+		{
+			"name": "Overwhelming Guilt",
+			"rarity": "common",
+			"mana_cost": "{1}{B}",
+			"type": "Sorcery",
+			"collector_number": "76",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/76_Overwhelming Guilt.png"
+			}
+		},
+		{
+			"name": "Tempting Realms",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Land",
+			"collector_number": "210",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/210_Tempting Realms.png"
+			}
+		},
+		{
+			"name": "Inviolable Realms",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Land",
+			"collector_number": "208",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/208_Inviolable Realms.png"
+			}
+		},
+		{
+			"name": "Vashi, Twin-Star Paragon",
+			"rarity": "rare",
+			"mana_cost": "{3}{W}",
+			"type": "Legendary Creature — Human Warrior ",
+			"collector_number": "30",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/30_Vashi, Twin-Star Paragon.png"
+			}
+		},
+		{
+			"name": "Wild Realms",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Land",
+			"collector_number": "211",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/211_Wild Realms.png"
+			}
+		},
+		{
+			"name": "Inscrutable Realms",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Land",
+			"collector_number": "207",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/207_Inscrutable Realms.png"
+			}
+		},
+		{
+			"name": "Mortal Deeds",
+			"rarity": "common",
+			"mana_cost": "{2}{G}",
+			"type": "Instant",
+			"collector_number": "135",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/135_Mortal Deeds.png"
+			}
+		},
+		{
+			"name": "Mortal Realms",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Land",
+			"collector_number": "209",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/209_Mortal Realms.png"
+			}
+		},
+		{
+			"name": "Death Kneels Before",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{B}",
+			"type": "Sorcery — Revelation ",
+			"collector_number": "65",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/65_Death Kneels Before.png"
+			}
+		},
+		{
+			"name": "Lotusleaf Blade",
+			"rarity": "common",
+			"mana_cost": "{3}{G}",
+			"type": "Creature — Elf Warrior ",
+			"collector_number": "134",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/134_Lotusleaf Blade.png"
+			}
+		},
+		{
+			"name": "Fauna Tender",
+			"rarity": "common",
+			"mana_cost": "{1}{G}",
+			"type": "Creature — Elf Druid ",
+			"collector_number": "130",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/130_Fauna Tender.png"
+			}
+		},
+		{
+			"name": "Shapen's Cruelty",
+			"rarity": "common",
+			"mana_cost": "{4}{R}",
+			"type": "Sorcery",
+			"collector_number": "112",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/112_Shapen's Cruelty.png"
+			}
+		},
+		{
+			"name": "Shapen, Spiteful Creation",
+			"rarity": "rare",
+			"mana_cost": "{3}{G}{G}",
+			"type": "Legendary Creature — Spirit Horror ",
+			"collector_number": "139",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/139_Shapen, Spiteful Creation.png"
+			}
+		},
+		{
+			"name": "Shapen's Taunts",
+			"rarity": "rare",
+			"mana_cost": "{G}{G}",
+			"type": "Enchantment — Aura ",
+			"collector_number": "140",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/140_Shapen's Taunts.png"
+			}
+		},
+		{
+			"name": "Fields of Worship",
+			"rarity": "uncommon",
+			"mana_cost": "",
+			"type": "Land",
+			"collector_number": "206",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/206_Fields of Worship.png"
+			}
+		},
+		{
+			"name": "Seeker of New Truths",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{G}{W}",
+			"type": "Creature — Elf Druid ",
+			"collector_number": "168",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/168_Seeker of New Truths.png"
+			}
+		},
+		{
+			"name": "Still-Smoke Skirmisher",
+			"rarity": "rare",
+			"mana_cost": "{1}{B}",
+			"type": "Creature — Elf Warrior ",
+			"collector_number": "83",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/83_Still-Smoke Skirmisher.png"
+			}
+		},
+		{
+			"name": "A Sight Too Far",
+			"rarity": "rare",
+			"mana_cost": "{1}{B}",
+			"type": "Sorcery",
+			"collector_number": "81",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/81_A Sight Too Far.png"
+			}
+		},
+		{
+			"name": "Mirror Reality",
+			"rarity": "uncommon",
+			"mana_cost": "{U}{U}",
+			"type": "Sorcery",
+			"collector_number": "48",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/48_Mirror Reality.png"
+			}
+		},
+		{
+			"name": "Solar Hatching",
+			"rarity": "rare",
+			"mana_cost": "{2}{R}{R}",
+			"type": "Sorcery — Revelation ",
+			"collector_number": "116",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/116_Solar Hatching.png"
+			}
+		},
+		{
+			"name": "Time Flows to Its End",
+			"rarity": "common",
+			"mana_cost": "{2}{U}",
+			"type": "Sorcery — Revelation ",
+			"collector_number": "58",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/58_Time Flows to Its End.png"
+			}
+		},
+		{
+			"name": "Sunderer of Veils",
+			"rarity": "uncommon",
+			"mana_cost": "{2}",
+			"type": "Artifact — Equipment ",
+			"collector_number": "202",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/202_Sunderer of Veils.png"
+			}
+		},
+		{
+			"name": "Silver-Dawn Elder",
+			"rarity": "rare",
+			"mana_cost": "{1}{G}",
+			"type": "Creature — Elf Warrior ",
+			"collector_number": "142",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/142_Silver-Dawn Elder.png"
+			}
+		},
+		{
+			"name": "Emberheart Witch",
+			"rarity": "uncommon",
+			"mana_cost": "{R}{G}",
+			"type": "Creature — Human Shaman ",
+			"collector_number": "162",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/162_Emberheart Witch.png"
+			}
+		},
+		{
+			"name": "Blooming Martyr",
+			"rarity": "common",
+			"mana_cost": "{R}",
+			"type": "Creature — Human Warrior ",
+			"collector_number": "93",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/93_Blooming Martyr.png"
+			}
+		},
+		{
+			"name": "Gentle Repose",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{R}",
+			"type": "Sorcery",
+			"collector_number": "101",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/101_Gentle Repose.png"
+			}
+		},
+		{
+			"name": "Angel of the Eclipse",
+			"rarity": "rare",
+			"mana_cost": "{2}{B}{R}",
+			"type": "Creature — Angel ",
+			"collector_number": "158",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/158_Angel of the Eclipse.png"
+			}
+		},
+		{
+			"name": "Moth-Heart Husk",
+			"rarity": "common",
+			"mana_cost": "{2}{B}",
+			"type": "Creature — Human ",
+			"collector_number": "74",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/74_Moth-Heart Husk.png"
+			}
+		},
+		{
+			"name": "Blessing of Roya",
+			"rarity": "uncommon",
+			"mana_cost": "{G}{W}{U}",
+			"type": "Enchantment",
+			"collector_number": "173",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/173_Blessing of Roya.png"
+			}
+		},
+		{
+			"name": "Tandem Glory",
+			"rarity": "uncommon",
+			"mana_cost": "{G}{W}",
+			"type": "Instant",
+			"collector_number": "169",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/169_Tandem Glory.png"
+			}
+		},
+		{
+			"name": "Blessing of Ashka",
+			"rarity": "uncommon",
+			"mana_cost": "{R}{G}{W}",
+			"type": "Enchantment",
+			"collector_number": "171",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/171_Blessing of Ashka.png"
+			}
+		},
+		{
+			"name": "Beyond All Horizons",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{G}",
+			"type": "Sorcery — Revelation ",
+			"collector_number": "124",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/124_Beyond All Horizons.png"
+			}
+		},
+		{
+			"name": "Silver-Dawn Ranger",
+			"rarity": "rare",
+			"mana_cost": "{3}{G}",
+			"type": "Creature — Human Warrior ",
+			"collector_number": "143",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/143_Silver-Dawn Ranger.png"
+			}
+		},
+		{
+			"name": "Brink of Something",
+			"rarity": "rare",
+			"mana_cost": "{4}{B}{B}{B}",
+			"type": "Sorcery",
+			"collector_number": "64",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/64_Brink of Something.png"
+			}
+		},
+		{
+			"name": "Beckon the Pack",
+			"rarity": "rare",
+			"mana_cost": "{G}{G}",
+			"type": "Sorcery",
+			"collector_number": "123",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/123_Beckon the Pack.png"
+			}
+		},
+		{
+			"name": "Heavenly Emergence",
+			"rarity": "common",
+			"mana_cost": "{4}{W}",
+			"type": "Sorcery",
+			"collector_number": "17",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/17_Heavenly Emergence.png"
+			}
+		},
+		{
+			"name": "Bearer of Silk Chains",
+			"rarity": "rare",
+			"mana_cost": "{2}{U}{U}",
+			"type": "Creature — Elf Wizard ",
+			"collector_number": "33",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/33_Bearer of Silk Chains.png"
+			}
+		},
+		{
+			"name": "Elusive Hunter",
+			"rarity": "rare",
+			"mana_cost": "{1}{U}{U}",
+			"type": "Creature — Insect ",
+			"collector_number": "39",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/39_Elusive Hunter.png"
+			}
+		},
+		{
+			"name": "Breach the Lilies",
+			"rarity": "rare",
+			"mana_cost": "{1}{G}",
+			"type": "Instant",
+			"collector_number": "126",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/126_Breach the Lilies.png"
+			}
+		},
+		{
+			"name": "While Blood Still Flows",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{R}",
+			"type": "Sorcery",
+			"collector_number": "119",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/119_While Blood Still Flows.png"
+			}
+		},
+		{
+			"name": "Blessed Piper",
+			"rarity": "rare",
+			"mana_cost": "{3}{G}",
+			"type": "Creature — Human Shaman ",
+			"collector_number": "125",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/125_Blessed Piper.png"
+			}
+		},
+		{
+			"name": "Feral Devout",
+			"rarity": "common",
+			"mana_cost": "{R/W}{G}",
+			"type": "Creature — Rabbit Warrior ",
+			"collector_number": "193",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/193_Feral Devout.png"
+			}
+		},
+		{
+			"name": "Legion Angel",
+			"rarity": "rare",
+			"mana_cost": "{2}{W}{W}",
+			"type": "Creature — Angel Warrior ",
+			"collector_number": "22",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/22_Legion Angel.png"
+			}
+		},
+		{
+			"name": "Shepherd of Lonely Souls",
+			"rarity": "common",
+			"mana_cost": "{4}{G}",
+			"type": "Creature — Human Druid ",
+			"collector_number": "141",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/141_Shepherd of Lonely Souls.png"
+			}
+		},
+		{
+			"name": "Shuck Mortal Coils",
+			"rarity": "rare",
+			"mana_cost": "{1}{G}{W}{U}",
+			"type": "Sorcery — Revelation ",
+			"collector_number": "184",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/184_Shuck Mortal Coils.png"
+			}
+		},
+		{
+			"name": "Understand Desolation",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{B}{B}",
+			"type": "Sorcery",
+			"collector_number": "88",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/88_Understand Desolation.png"
+			}
+		},
+		{
+			"name": "Watch from Above",
+			"rarity": "common",
+			"mana_cost": "{U}",
+			"type": "Sorcery — Revelation ",
+			"collector_number": "60",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/60_Watch from Above.png"
+			}
+		},
+		{
+			"name": "Speaker of Deliverance",
+			"rarity": "rare",
+			"mana_cost": "{W}",
+			"type": "Creature — Human Cleric ",
+			"collector_number": "26",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/26_Speaker of Deliverance.png"
+			}
+		},
+		{
+			"name": "Witness the Divine",
+			"rarity": "rare",
+			"mana_cost": "{3}{W}{W}",
+			"type": "Sorcery — Revelation ",
+			"collector_number": "32",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/32_Witness the Divine.png"
+			}
+		},
+		{
+			"name": "Roya Ritualist",
+			"rarity": "rare",
+			"mana_cost": "{3}{W}{W}",
+			"type": "Creature — Human Shaman ",
+			"collector_number": "25",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/25_Roya Ritualist.png"
+			}
+		},
+		{
+			"name": "Hallowed Moon Sentinel",
+			"rarity": "rare",
+			"mana_cost": "{1}{W}",
+			"type": "Creature — Human Shaman ",
+			"collector_number": "16",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/16_Hallowed Moon Sentinel.png"
+			}
+		},
+		{
+			"name": "Ethereal Runner",
+			"rarity": "common",
+			"mana_cost": "{1}{W}",
+			"type": "Creature — Elf Scout ",
+			"collector_number": "11",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/11_Ethereal Runner.png"
+			}
+		},
+		{
+			"name": "Ichorsap Dryad",
+			"rarity": "common",
+			"mana_cost": "{G}",
+			"type": "Creature — Dryad ",
+			"collector_number": "133",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/133_Ichorsap Dryad.png"
+			}
+		},
+		{
+			"name": "Reclusive Augur",
+			"rarity": "uncommon",
+			"mana_cost": "{B}",
+			"type": "Creature — Human Shaman ",
+			"collector_number": "78",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/78_Reclusive Augur.png"
+			}
+		},
+		{
+			"name": "Hadik's Striker",
+			"rarity": "common",
+			"mana_cost": "{B}",
+			"type": "Creature — Human Warrior ",
+			"collector_number": "66",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/66_Hadik's Striker.png"
+			}
+		},
+		{
+			"name": "A Flawless World",
+			"rarity": "common",
+			"mana_cost": "{1}{W}{U}",
+			"type": "Sorcery — Revelation ",
+			"collector_number": "151",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/151_A Flawless World.png"
+			}
+		},
+		{
+			"name": "Masha Ritualist",
+			"rarity": "rare",
+			"mana_cost": "{3}{R}{R}",
+			"type": "Creature — Human Shaman ",
+			"collector_number": "109",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/109_Masha Ritualist.png"
+			}
+		},
+		{
+			"name": "A Vision Too Vast",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{U}",
+			"type": "Sorcery — Revelation ",
+			"collector_number": "59",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/59_A Vision Too Vast.png"
+			}
+		},
+		{
+			"name": "Harvest Flesh",
+			"rarity": "rare",
+			"mana_cost": "{4}{R}{R}",
+			"type": "Instant",
+			"collector_number": "103",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/103_Harvest Flesh.png"
+			}
+		},
+		{
+			"name": "Drown Amidst the Cosmos",
+			"rarity": "rare",
+			"mana_cost": "{1}{U}",
+			"type": "Sorcery — Revelation ",
+			"collector_number": "38",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/38_Drown Amidst the Cosmos.png"
+			}
+		},
+		{
+			"name": "Ironhide Bellower",
+			"rarity": "rare",
+			"mana_cost": "{2}{R}{R}",
+			"type": "Creature — Beast ",
+			"collector_number": "107",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/107_Ironhide Bellower.png"
+			}
+		},
+		{
+			"name": "Inflicted Ideals",
+			"rarity": "rare",
+			"mana_cost": "{1}{U}{B}{R}",
+			"type": "Enchantment",
+			"collector_number": "180",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/180_Inflicted Ideals.png"
+			}
+		},
+		{
+			"name": "Fortune Dealer",
+			"rarity": "rare",
+			"mana_cost": "{B}{R}{G}",
+			"type": "Creature — Human Shaman ",
+			"collector_number": "178",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/178_Fortune Dealer.png"
+			}
+		},
+		{
+			"name": "Ancestor's Bulwark",
+			"rarity": "common",
+			"mana_cost": "{2}",
+			"type": "Artifact — Equipment ",
+			"collector_number": "197",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/197_Ancestor's Bulwark.png"
+			}
+		},
+		{
+			"name": "Pull from Beyond",
+			"rarity": "common",
+			"mana_cost": "{1}{U}",
+			"type": "Instant",
+			"collector_number": "52",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/52_Pull from Beyond.png"
+			}
+		},
+		{
+			"name": "Faith Burns Brightest",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{R}",
+			"type": "Sorcery",
+			"collector_number": "99",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/99_Faith Burns Brightest.png"
+			}
+		},
+		{
+			"name": "Helar Ritualist",
+			"rarity": "rare",
+			"mana_cost": "{3}{U}{U}",
+			"type": "Creature — Human Shaman ",
+			"collector_number": "47",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/47_Helar Ritualist.png"
+			}
+		},
+		{
+			"name": "Shield of the Unwavering",
+			"rarity": "common",
+			"mana_cost": "{3}",
+			"type": "Artifact — Equipment ",
+			"collector_number": "201",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/201_Shield of the Unwavering.png"
+			}
+		},
+		{
+			"name": "Bind the Mind",
+			"rarity": "uncommon",
+			"mana_cost": "{W}{U}",
+			"type": "Enchantment",
+			"collector_number": "150",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/150_Bind the Mind.png"
+			}
+		},
+		{
+			"name": "Fervent Devout",
+			"rarity": "common",
+			"mana_cost": "{B/G}{R}",
+			"type": "Creature — Human Warrior ",
+			"collector_number": "194",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/194_Fervent Devout.png"
+			}
+		},
+		{
+			"name": "Clarity of Self",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{W}",
+			"type": "Instant",
+			"collector_number": "7",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/7_Clarity of Self.png"
+			}
+		},
+		{
+			"name": "Whims of Fate",
+			"rarity": "rare",
+			"mana_cost": "{3}{U}{B}{R}",
+			"type": "Sorcery",
+			"collector_number": "191",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/191_Whims of Fate.png"
+			}
+		},
+		{
+			"name": "Still-Smoke Stitcher",
+			"rarity": "rare",
+			"mana_cost": "{2}{B}",
+			"type": "Creature — Human Cleric ",
+			"collector_number": "84",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/84_Still-Smoke Stitcher.png"
+			}
+		},
+		{
+			"name": "Feathered Oracle",
+			"rarity": "rare",
+			"mana_cost": "{2}{U}{U}",
+			"type": "Creature — Human Shaman ",
+			"collector_number": "43",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/43_Feathered Oracle.png"
+			}
+		},
+		{
+			"name": "Cruel Heartbeat",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{U}{B}{R}",
+			"type": "Sorcery",
+			"collector_number": "175",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/175_Cruel Heartbeat.png"
+			}
+		},
+		{
+			"name": "Essence Carver",
+			"rarity": "common",
+			"mana_cost": "{2}{R}",
+			"type": "Creature — Human Warrior Cleric ",
+			"collector_number": "97",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/97_Essence Carver.png"
+			}
+		},
+		{
+			"name": "Ill-Fated Seer",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{B}{R}",
+			"type": "Creature — Human Shaman ",
+			"collector_number": "161",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/161_Ill-Fated Seer.png"
+			}
+		},
+		{
+			"name": "From Unbidden Realms",
+			"rarity": "common",
+			"mana_cost": "{G}",
+			"type": "Sorcery — Revelation ",
+			"collector_number": "131",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/131_From Unbidden Realms.png"
+			}
+		},
+		{
+			"name": "Obey",
+			"rarity": "rare",
+			"mana_cost": "{4}{B}{B}",
+			"type": "Sorcery",
+			"collector_number": "75",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/75_Obey.png"
+			}
+		},
+		{
+			"name": "Crystallized Hope",
+			"rarity": "common",
+			"mana_cost": "{1}{W}",
+			"type": "Instant",
+			"collector_number": "8",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/8_Crystallized Hope.png"
+			}
+		},
+		{
+			"name": "Do No Evil",
+			"rarity": "common",
+			"mana_cost": "{W}",
+			"type": "Enchantment — Aura ",
+			"collector_number": "10",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/10_Do No Evil.png"
+			}
+		},
+		{
+			"name": "Song of Shoals",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{G}{W}{U}",
+			"type": "Enchantment — Aura ",
+			"collector_number": "185",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/185_Song of Shoals.png"
+			}
+		},
+		{
+			"name": "Immaculate Choir",
+			"rarity": "common",
+			"mana_cost": "{W}",
+			"type": "Creature — Human Cleric ",
+			"collector_number": "21",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/21_Immaculate Choir.png"
+			}
+		},
+		{
+			"name": "End of All Things",
+			"rarity": "rare",
+			"mana_cost": "{G}{W}{U}",
+			"type": "Instant — Revelation ",
+			"collector_number": "176",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/176_End of All Things.png"
+			}
+		},
+		{
+			"name": "Monokeros Rider",
+			"rarity": "common",
+			"mana_cost": "{3}{U}",
+			"type": "Creature — Elf Scout ",
+			"collector_number": "51",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/51_Monokeros Rider.png"
+			}
+		},
+		{
+			"name": "Mnemonic Wall",
+			"rarity": "common",
+			"mana_cost": "{4}{U}",
+			"type": "Creature — Wall ",
+			"collector_number": "50",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/50_Mnemonic Wall.png"
+			}
+		},
+		{
+			"name": "Piece by Piece",
+			"rarity": "common",
+			"mana_cost": "{2}{B}",
+			"type": "Sorcery",
+			"collector_number": "77",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/77_Piece by Piece.png"
+			}
+		},
+		{
+			"name": "Silver-Dawn Radiant",
+			"rarity": "rare",
+			"mana_cost": "{1}{R}",
+			"type": "Creature — Human Warrior ",
+			"collector_number": "113",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/113_Silver-Dawn Radiant.png"
+			}
+		},
+		{
+			"name": "Settlement Scout",
+			"rarity": "common",
+			"mana_cost": "{1}{R}",
+			"type": "Creature — Human Rogue ",
+			"collector_number": "111",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/111_Settlement Scout.png"
+			}
+		},
+		{
+			"name": "Fall of Masha",
+			"rarity": "uncommon",
+			"mana_cost": "{B}{R}{G}",
+			"type": "Enchantment",
+			"collector_number": "177",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/177_Fall of Masha.png"
+			}
+		},
+		{
+			"name": "Firefish Conjurer",
+			"rarity": "common",
+			"mana_cost": "{2}{R}",
+			"type": "Creature — Elf Shaman ",
+			"collector_number": "100",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/100_Firefish Conjurer.png"
+			}
+		},
+		{
+			"name": "Fade",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{W}",
+			"type": "Instant",
+			"collector_number": "12",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/12_Fade.png"
+			}
+		},
+		{
+			"name": "Walking Remorse",
+			"rarity": "common",
+			"mana_cost": "{3}{B}",
+			"type": "Creature — Elemental ",
+			"collector_number": "89",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/89_Walking Remorse.png"
+			}
+		},
+		{
+			"name": "Ethereal Sneak",
+			"rarity": "common",
+			"mana_cost": "{U}",
+			"type": "Creature — Human Rogue ",
+			"collector_number": "41",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/41_Ethereal Sneak.png"
+			}
+		},
+		{
+			"name": "Still-Smoke Sojourners",
+			"rarity": "rare",
+			"mana_cost": "{1}{W}{U}{B}",
+			"type": "Creature — Human Cleric ",
+			"collector_number": "186",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/186_Still-Smoke Sojourners.png"
+			}
+		},
+		{
+			"name": "Grasp for Understanding",
+			"rarity": "rare",
+			"mana_cost": "{3}{R}",
+			"type": "Instant",
+			"collector_number": "102",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/102_Grasp for Understanding.png"
+			}
+		},
+		{
+			"name": "Shifting Brute",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{R}{G}{W}",
+			"type": "Creature — Beast ",
+			"collector_number": "183",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/183_Shifting Brute.png"
+			}
+		},
+		{
+			"name": "Mourn No More",
+			"rarity": "common",
+			"mana_cost": "{G}{W}",
+			"type": "Sorcery",
+			"collector_number": "167",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/167_Mourn No More.png"
+			}
+		},
+		{
+			"name": "Unravel Prophecy",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{W}{U}{B}",
+			"type": "Instant",
+			"collector_number": "190",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/190_Unravel Prophecy.png"
+			}
+		},
+		{
+			"name": "Heavenly Fire",
+			"rarity": "common",
+			"mana_cost": "{R}",
+			"type": "Creature — Elemental Warrior ",
+			"collector_number": "104",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/104_Heavenly Fire.png"
+			}
+		},
+		{
+			"name": "United Focus",
+			"rarity": "rare",
+			"mana_cost": "{R}{G}{W}",
+			"type": "Enchantment — Aura ",
+			"collector_number": "189",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/189_United Focus.png"
+			}
+		},
+		{
+			"name": "Needless Atrocities",
+			"rarity": "uncommon",
+			"mana_cost": "{U}{B}",
+			"type": "Sorcery",
+			"collector_number": "157",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/157_Needless Atrocities.png"
+			}
+		},
+		{
+			"name": "Gift to Finality",
+			"rarity": "common",
+			"mana_cost": "{1}{G}",
+			"type": "Sorcery",
+			"collector_number": "132",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/132_Gift to Finality.png"
+			}
+		},
+		{
+			"name": "Dawn Without End",
+			"rarity": "rare",
+			"mana_cost": "{2}{R}",
+			"type": "Sorcery",
+			"collector_number": "95",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/95_Dawn Without End.png"
+			}
+		},
+		{
+			"name": "Ashkan Preserver",
+			"rarity": "uncommon",
+			"mana_cost": "{W}",
+			"type": "Creature — Human Cleric ",
+			"collector_number": "4",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/4_Ashkan Preserver.png"
+			}
+		},
+		{
+			"name": "Heavens Held Waiting",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{W}",
+			"type": "Enchantment",
+			"collector_number": "19",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/19_Heavens Held Waiting.png"
+			}
+		},
+		{
+			"name": "Single-Minded Mob",
+			"rarity": "common",
+			"mana_cost": "{1}{R}",
+			"type": "Creature — Human Citizen ",
+			"collector_number": "114",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/114_Single-Minded Mob.png"
+			}
+		},
+		{
+			"name": "Sinewed Wings",
+			"rarity": "rare",
+			"mana_cost": "{2}{U}",
+			"type": "Creature — Horror ",
+			"collector_number": "55",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/55_Sinewed Wings.png"
+			}
+		},
+		{
+			"name": "Setar Ritualist",
+			"rarity": "rare",
+			"mana_cost": "{3}{B}{B}",
+			"type": "Creature — Human Shaman ",
+			"collector_number": "80",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/80_Setar Ritualist.png"
+			}
+		},
+		{
+			"name": "Tahli's Council",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{B}{R}{G}",
+			"type": "Sorcery",
+			"collector_number": "187",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/187_Tahli's Council.png"
+			}
+		},
+		{
+			"name": "Tahli, Twin-Star Seer",
+			"rarity": "rare",
+			"mana_cost": "{1}{B}",
+			"type": "Legendary Creature — Human Shaman ",
+			"collector_number": "85",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/85_Tahli, Twin-Star Seer.png"
+			}
+		},
+		{
+			"name": "Cackling Seer",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{R}",
+			"type": "Creature — Human Warrior Shaman ",
+			"collector_number": "94",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/94_Cackling Seer.png"
+			}
+		},
+		{
+			"name": "Blessing of Helar",
+			"rarity": "uncommon",
+			"mana_cost": "{W}{U}{B}",
+			"type": "Enchantment",
+			"collector_number": "172",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/172_Blessing of Helar.png"
+			}
+		},
+		{
+			"name": "Embrace of Mist",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{U}",
+			"type": "Instant",
+			"collector_number": "40",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/40_Embrace of Mist.png"
+			}
+		},
+		{
+			"name": "Settlement Guardian",
+			"rarity": "uncommon",
+			"mana_cost": "{1}",
+			"type": "Artifact Creature — Construct ",
+			"collector_number": "200",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/200_Settlement Guardian.png"
+			}
+		},
+		{
+			"name": "Pieces of Creation",
+			"rarity": "uncommon",
+			"mana_cost": "{3}{G}",
+			"type": "Enchantment — Aura ",
+			"collector_number": "136",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/136_Pieces of Creation.png"
+			}
+		},
+		{
+			"name": "World Torn Asunder",
+			"rarity": "uncommon",
+			"mana_cost": "{3}{B}",
+			"type": "Sorcery",
+			"collector_number": "91",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/91_World Torn Asunder.png"
+			}
+		},
+		{
+			"name": "Corrupted Soothsayer",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{U}",
+			"type": "Creature — Human Shaman ",
+			"collector_number": "36",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/36_Corrupted Soothsayer.png"
+			}
+		},
+		{
+			"name": "Keep What Was Lost",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{U}{B}",
+			"type": "Instant",
+			"collector_number": "155",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/155_Keep What Was Lost.png"
+			}
+		},
+		{
+			"name": "Still-Smoke Oracle",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{G}",
+			"type": "Creature — Human Shaman ",
+			"collector_number": "144",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/144_Still-Smoke Oracle.png"
+			}
+		},
+		{
+			"name": "Collector of Memories",
+			"rarity": "rare",
+			"mana_cost": "{U}",
+			"type": "Creature — Human Wizard ",
+			"collector_number": "35",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/35_Collector of Memories.png"
+			}
+		},
+		{
+			"name": "Tides of Dust",
+			"rarity": "common",
+			"mana_cost": "{3}{B}",
+			"type": "Sorcery",
+			"collector_number": "86",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/86_Tides of Dust.png"
+			}
+		},
+		{
+			"name": "Stubborn Blademate",
+			"rarity": "rare",
+			"mana_cost": "{1}{R}",
+			"type": "Creature — Human Warrior ",
+			"collector_number": "117",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/117_Stubborn Blademate.png"
+			}
+		},
+		{
+			"name": "Born Anew",
+			"rarity": "rare",
+			"mana_cost": "{4}{W}{W}",
+			"type": "Sorcery — Revelation ",
+			"collector_number": "5",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/5_Born Anew.png"
+			}
+		},
+		{
+			"name": "Become Nothing",
+			"rarity": "common",
+			"mana_cost": "{3}{U}",
+			"type": "Instant",
+			"collector_number": "34",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/34_Become Nothing.png"
+			}
+		},
+		{
+			"name": "Hungering Cult",
+			"rarity": "rare",
+			"mana_cost": "{1}{B}",
+			"type": "Creature — Human Cleric ",
+			"collector_number": "68",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/68_Hungering Cult.png"
+			}
+		},
+		{
+			"name": "Destiny Beyond Measure",
+			"rarity": "rare",
+			"mana_cost": "{6}{G}{G}",
+			"type": "Enchantment",
+			"collector_number": "129",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/129_Destiny Beyond Measure.png"
+			}
+		},
+		{
+			"name": "These Final Moments",
+			"rarity": "rare",
+			"mana_cost": "{2}{R}",
+			"type": "Sorcery — Revelation ",
+			"collector_number": "118",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/118_These Final Moments.png"
+			}
+		},
+		{
+			"name": "Cursory Glance",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{U}",
+			"type": "Instant",
+			"collector_number": "37",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/37_Cursory Glance.png"
+			}
+		},
+		{
+			"name": "Endless Helpless Souls",
+			"rarity": "rare",
+			"mana_cost": "{1}{G}{W}",
+			"type": "Sorcery — Revelation ",
+			"collector_number": "166",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/166_Endless Helpless Souls.png"
+			}
+		},
+		{
+			"name": "Helar's Sanctifier",
+			"rarity": "common",
+			"mana_cost": "{3}{W}",
+			"type": "Creature — Horror ",
+			"collector_number": "20",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/20_Helar's Sanctifier.png"
+			}
+		},
+		{
+			"name": "Upon Fourfold Wings",
+			"rarity": "common",
+			"mana_cost": "{2}{W}",
+			"type": "Sorcery — Revelation ",
+			"collector_number": "29",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/29_Upon Fourfold Wings.png"
+			}
+		},
+		{
+			"name": "Heavens Claim Their Due",
+			"rarity": "common",
+			"mana_cost": "{1}{W}",
+			"type": "Instant — Revelation ",
+			"collector_number": "18",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/18_Heavens Claim Their Due.png"
+			}
+		},
+		{
+			"name": "Tower of Sorrows",
+			"rarity": "common",
+			"mana_cost": "{4}{B}",
+			"type": "Creature — Illusion Wall ",
+			"collector_number": "87",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/87_Tower of Sorrows.png"
+			}
+		},
+		{
+			"name": "Pull Away",
+			"rarity": "rare",
+			"mana_cost": "{1}{W}{W}",
+			"type": "Instant",
+			"collector_number": "24",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/24_Pull Away.png"
+			}
+		},
+		{
+			"name": "Flesh Willing",
+			"rarity": "common",
+			"mana_cost": "{1}{W}",
+			"type": "Instant",
+			"collector_number": "13",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/13_Flesh Willing.png"
+			}
+		},
+		{
+			"name": "Litany of Fallen Blades",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{B}",
+			"type": "Sorcery",
+			"collector_number": "71",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/71_Litany of Fallen Blades.png"
+			}
+		},
+		{
+			"name": "Poisoned Devout",
+			"rarity": "common",
+			"mana_cost": "{U/R}{B}",
+			"type": "Creature — Elf Cleric ",
+			"collector_number": "196",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/196_Poisoned Devout.png"
+			}
+		},
+		{
+			"name": "Give Penance",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{U}",
+			"type": "Enchantment — Aura ",
+			"collector_number": "46",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/46_Give Penance.png"
+			}
+		},
+		{
+			"name": "Gleaming Elf",
+			"rarity": "rare",
+			"mana_cost": "{2}{W}",
+			"type": "Creature — Elf Warrior ",
+			"collector_number": "15",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/15_Gleaming Elf.png"
+			}
+		},
+		{
+			"name": "Skittering Beauty",
+			"rarity": "uncommon",
+			"mana_cost": "{3}{W}{U}",
+			"type": "Creature — Human Insect Horror ",
+			"collector_number": "153",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/153_Skittering Beauty.png"
+			}
+		},
+		{
+			"name": "Helar's Herald",
+			"rarity": "rare",
+			"mana_cost": "{1}{W}{U}{B}",
+			"type": "Creature — Spirit Cleric ",
+			"collector_number": "179",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/179_Helar's Herald.png"
+			}
+		},
+		{
+			"name": "Bearer of Tormented Truths",
+			"rarity": "rare",
+			"mana_cost": "{U}{B}",
+			"type": "Creature — Human ",
+			"collector_number": "154",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/154_Bearer of Tormented Truths.png"
+			}
+		},
+		{
+			"name": "Lustrous Devout",
+			"rarity": "common",
+			"mana_cost": "{G/U}{W}",
+			"type": "Creature — Faerie ",
+			"collector_number": "195",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/195_Lustrous Devout.png"
+			}
+		},
+		{
+			"name": "Canopy Dancer",
+			"rarity": "common",
+			"mana_cost": "{2}{G}",
+			"type": "Creature — Human Warrior Druid ",
+			"collector_number": "127",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/127_Canopy Dancer.png"
+			}
+		},
+		{
+			"name": "Twin-Star Herald",
+			"rarity": "common",
+			"mana_cost": "{W}",
+			"type": "Creature — Human Cleric ",
+			"collector_number": "28",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/28_Twin-Star Herald.png"
+			}
+		},
+		{
+			"name": "Misery Keeps Company",
+			"rarity": "common",
+			"mana_cost": "{B}",
+			"type": "Sorcery — Revelation ",
+			"collector_number": "73",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/73_Misery Keeps Company.png"
+			}
+		},
+		{
+			"name": "Give to Sacred Halls",
+			"rarity": "uncommon",
+			"mana_cost": "{B}{R}",
+			"type": "Instant",
+			"collector_number": "159",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/159_Give to Sacred Halls.png"
+			}
+		},
+		{
+			"name": "Through Shattered Senses",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{U}",
+			"type": "Instant",
+			"collector_number": "57",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/57_Through Shattered Senses.png"
+			}
+		},
+		{
+			"name": "Bringer of Blessed Ends",
+			"rarity": "rare",
+			"mana_cost": "{3}{W}{W}",
+			"type": "Creature — Angel ",
+			"collector_number": "6",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/6_Bringer of Blessed Ends.png"
+			}
+		},
+		{
+			"name": "Fate Takes its Course",
+			"rarity": "rare",
+			"mana_cost": "{6}{U}{U}",
+			"type": "Sorcery",
+			"collector_number": "42",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/42_Fate Takes its Course.png"
+			}
+		},
+		{
+			"name": "Twin-Star Heartweaver",
+			"rarity": "rare",
+			"mana_cost": "{R}{G}{W}",
+			"type": "Creature — Human Shaman ",
+			"collector_number": "188",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/188_Twin-Star Heartweaver.png"
+			}
+		},
+		{
+			"name": "Hadik's Cohort",
+			"rarity": "uncommon",
+			"mana_cost": "{R}{G}",
+			"type": "Creature — Human Warrior ",
+			"collector_number": "165",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/165_Hadik's Cohort.png"
+			}
+		},
+		{
+			"name": "Martial Mastery",
+			"rarity": "common",
+			"mana_cost": "{R}",
+			"type": "Instant",
+			"collector_number": "108",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/108_Martial Mastery.png"
+			}
+		},
+		{
+			"name": "Blinded Necromancer",
+			"rarity": "common",
+			"mana_cost": "{2}{B}",
+			"type": "Creature — Human Cleric ",
+			"collector_number": "63",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/63_Blinded Necromancer.png"
+			}
+		},
+		{
+			"name": "Weeping Whisperer",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{B}",
+			"type": "Creature — Human ",
+			"collector_number": "90",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/90_Weeping Whisperer.png"
+			}
+		},
+		{
+			"name": "Disassociate",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{W}",
+			"type": "Enchantment",
+			"collector_number": "9",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/9_Disassociate.png"
+			}
+		},
+		{
+			"name": "Palesoul Mender",
+			"rarity": "common",
+			"mana_cost": "{2}{W}",
+			"type": "Creature — Human Cleric ",
+			"collector_number": "23",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/23_Palesoul Mender.png"
+			}
+		},
+		{
+			"name": "Infectious Ego",
+			"rarity": "rare",
+			"mana_cost": "{2}{B}{B}",
+			"type": "Creature — Spirit Shaman ",
+			"collector_number": "69",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/69_Infectious Ego.png"
+			}
+		},
+		{
+			"name": "What Little Remains",
+			"rarity": "common",
+			"mana_cost": "{U}",
+			"type": "Enchantment — Aura ",
+			"collector_number": "61",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/61_What Little Remains.png"
+			}
+		},
+		{
+			"name": "Fold Will",
+			"rarity": "rare",
+			"mana_cost": "{X}{U}",
+			"type": "Instant",
+			"collector_number": "44",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/44_Fold Will.png"
+			}
+		},
+		{
+			"name": "Reconstruct",
+			"rarity": "rare",
+			"mana_cost": "{2}{G}",
+			"type": "Instant",
+			"collector_number": "137",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/137_Reconstruct.png"
+			}
+		},
+		{
+			"name": "Lonely Visage",
+			"rarity": "common",
+			"mana_cost": "{1}{U}{B}",
+			"type": "Creature — Spirit Illusion ",
+			"collector_number": "156",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/156_Lonely Visage.png"
+			}
+		},
+		{
+			"name": "Worn to Nothing",
+			"rarity": "common",
+			"mana_cost": "{R}",
+			"type": "Sorcery — Revelation ",
+			"collector_number": "120",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/120_Worn to Nothing.png"
+			}
+		},
+		{
+			"name": "Welcome What Comes",
+			"rarity": "common",
+			"mana_cost": "{1}{G}",
+			"type": "Sorcery — Revelation ",
+			"collector_number": "148",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/148_Welcome What Comes.png"
+			}
+		},
+		{
+			"name": "Grisly Offering",
+			"rarity": "common",
+			"mana_cost": "{B}{R}",
+			"type": "Creature — Human ",
+			"collector_number": "160",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/160_Grisly Offering.png"
+			}
+		},
+		{
+			"name": "From Stars Above",
+			"rarity": "rare",
+			"mana_cost": "{1}{U}",
+			"type": "Sorcery",
+			"collector_number": "45",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/45_From Stars Above.png"
+			}
+		},
+		{
+			"name": "Incandescent Matron",
+			"rarity": "common",
+			"mana_cost": "{3}{R}",
+			"type": "Creature — Human Citizen ",
+			"collector_number": "106",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/106_Incandescent Matron.png"
+			}
+		},
+		{
+			"name": "Succumb to Dreams",
+			"rarity": "rare",
+			"mana_cost": "{1}{U}",
+			"type": "Enchantment",
+			"collector_number": "56",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/56_Succumb to Dreams.png"
+			}
+		},
+		{
+			"name": "Illusory Stag",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{R}",
+			"type": "Creature — Elk Illusion ",
+			"collector_number": "105",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/105_Illusory Stag.png"
+			}
+		},
+		{
+			"name": "Serene Hart",
+			"rarity": "common",
+			"mana_cost": "{2}{U}",
+			"type": "Creature — Elk Illusion ",
+			"collector_number": "54",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/54_Serene Hart.png"
+			}
+		},
+		{
+			"name": "Ravik, Still-Smoke Seer",
+			"rarity": "rare",
+			"mana_cost": "{B}{R}{G}",
+			"type": "Legendary Creature — Human Shaman ",
+			"collector_number": "181",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/181_Ravik, Still-Smoke Seer.png"
+			}
+		},
+		{
+			"name": "Seeker of Communions",
+			"rarity": "common",
+			"mana_cost": "{1}{U}",
+			"type": "Creature — Human Shaman ",
+			"collector_number": "53",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/53_Seeker of Communions.png"
+			}
+		},
+		{
+			"name": "Molten Agitator",
+			"rarity": "rare",
+			"mana_cost": "{2}{R}",
+			"type": "Creature — Elemental ",
+			"collector_number": "110",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/110_Molten Agitator.png"
+			}
+		},
+		{
+			"name": "Abjuration Savant",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{W}",
+			"type": "Creature — Human Cleric ",
+			"collector_number": "3",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/3_Abjuration Savant.png"
+			}
+		},
+		{
+			"name": "Lotus Petal",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Artifact",
+			"collector_number": "22",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/22_Lotus Petal.png"
+			}
+		},
+		{
+			"name": "Angel",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Creature — Angel ",
+			"collector_number": "1",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/1_Angel.png"
+			}
+		},
+		{
+			"name": "Helene, Bound by Might",
+			"rarity": "mythic",
+			"mana_cost": "{2}{G}{U}",
+			"type": "Legendary Planeswalker — Helene ",
+			"collector_number": "170",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/170_Helene, Bound by Might.png"
+			}
+		},
+		{
+			"name": "Stance (Blue)",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Enchantment — Stance ",
+			"collector_number": "4",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/4_Stance (Blue).png"
+			}
+		},
+		{
+			"name": "Stance (Green)",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Enchantment — Stance ",
+			"collector_number": "17",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/17_Stance (Green).png"
+			}
+		},
+		{
+			"name": "Gilded Bloodsworn",
+			"rarity": "common",
+			"mana_cost": "{R}{G}",
+			"type": "Creature — Human Warrior ",
+			"collector_number": "163",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/163_Gilded Bloodsworn.png"
+			}
+		},
+		{
+			"name": "Crooked Growth",
+			"rarity": "common",
+			"mana_cost": "{2}{G}",
+			"type": "Sorcery",
+			"collector_number": "128",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/128_Crooked Growth.png"
+			}
+		},
+		{
+			"name": "Everember Phoenix",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Token Creature — Phoenix ",
+			"collector_number": "12",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/12_Everember Phoenix.png"
+			}
+		},
+		{
+			"name": "Moth-Heart Husk",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Creature — Human ",
+			"collector_number": "7",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/7_Moth-Heart Husk.png"
+			}
+		},
+		{
+			"name": "Hadik, Might of Mortals",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Token Legendary Creature — Human Warrior ",
+			"collector_number": "19",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/19_Hadik, Might of Mortals.png"
+			}
+		},
+		{
+			"name": "Ichorsap Dryad",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Creature — Dryad ",
+			"collector_number": "14",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/14_Ichorsap Dryad.png"
+			}
+		},
+		{
+			"name": "Kalemn, Bound by Violence",
+			"rarity": "mythic",
+			"mana_cost": "{1}{B}{B}",
+			"type": "Legendary Planeswalker — Kalemn ",
+			"collector_number": "70",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/70_Kalemn, Bound by Violence.png"
+			}
+		},
+		{
+			"name": "Visage of Emeria",
+			"rarity": "mythic",
+			"mana_cost": "{2}{W}{W}",
+			"type": "Legendary Planeswalker — Emeria ",
+			"collector_number": "31",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/31_Visage of Emeria.png"
+			}
+		},
+		{
+			"name": "Spirit",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Creature — Spirit ",
+			"collector_number": "8",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/8_Spirit.png"
+			}
+		},
+		{
+			"name": "Illusion (Blue)",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Creature — Illusion ",
+			"collector_number": "3",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/3_Illusion (Blue).png"
+			}
+		},
+		{
+			"name": "Remnant of the Hunt",
+			"rarity": "uncommon",
+			"mana_cost": "",
+			"type": "Token Creature — Spirit Warrior ",
+			"collector_number": "15",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/15_Remnant of the Hunt.png"
+			}
+		},
+		{
+			"name": "Blooming Martyr",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Creature — Human Warrior ",
+			"collector_number": "10",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/10_Blooming Martyr.png"
+			}
+		},
+		{
+			"name": "Blinded Necromancer",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Creature — Human Cleric ",
+			"collector_number": "5",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/5_Blinded Necromancer.png"
+			}
+		},
+		{
+			"name": "Settlement Scout",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Creature — Human Rogue ",
+			"collector_number": "13",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/13_Settlement Scout.png"
+			}
+		},
+		{
+			"name": "World Made Anew",
+			"rarity": "rare",
+			"mana_cost": "{G}",
+			"type": "Sorcery",
+			"collector_number": "149",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/149_World Made Anew.png"
+			}
+		},
+		{
+			"name": "Hollyberry Murder",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Creature — Bird ",
+			"collector_number": "6",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/6_Hollyberry Murder.png"
+			}
+		},
+		{
+			"name": "Ill-Fated Seer",
+			"rarity": "uncommon",
+			"mana_cost": "",
+			"type": "Token Creature — Human Shaman ",
+			"collector_number": "20",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/20_Ill-Fated Seer.png"
+			}
+		},
+		{
+			"name": "Cackling Seer",
+			"rarity": "uncommon",
+			"mana_cost": "",
+			"type": "Token Creature — Human Shaman ",
+			"collector_number": "11",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/11_Cackling Seer.png"
+			}
+		},
+		{
+			"name": "Still-Smoke Hunter",
+			"rarity": "uncommon",
+			"mana_cost": "",
+			"type": "Token Creature — Human Shaman ",
+			"collector_number": "9",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/9_Still-Smoke Hunter.png"
+			}
+		},
+		{
+			"name": "Silver-Dawn Elder",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Token Creature — Elf Warrior ",
+			"collector_number": "16",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/16_Silver-Dawn Elder.png"
+			}
+		},
+		{
+			"name": "Illusion (White)",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Creature — Illusion ",
+			"collector_number": "2",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/2_Illusion (White).png"
+			}
+		},
+		{
+			"name": "Warrior",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Creature — Warrior ",
+			"collector_number": "21",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/21_Warrior.png"
+			}
+		},
+		{
+			"name": "Fortune Dealer",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Token Creature — Human ",
+			"collector_number": "18",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/18_Fortune Dealer.png"
+			}
+		},
+		{
+			"name": "Sacrifice to Setar",
+			"rarity": "mythic",
+			"mana_cost": "{U}{B}{R}",
+			"type": "Creature — Human Shaman ",
+			"collector_number": "182",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/182_Sacrifice to Setar_front.png"
+			},
+			"back": {
+				"name": "",
+				"type": "",
+				"image_uris": {
+					"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/182_Sacrifice to Setar_back.png"
+				}
+			}
+		},
+		{
+			"name": "Reduce to Naught",
+			"rarity": "rare",
+			"mana_cost": "{1}{B}",
+			"type": "Instant",
+			"collector_number": "79",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/79_Reduce to Naught.png"
+			}
+		},
+		{
+			"name": "Unravel Shattered Worlds",
+			"rarity": "common",
+			"mana_cost": "{2}",
+			"type": "Sorcery — Revelation ",
+			"collector_number": "2",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/2_Unravel Shattered Worlds.png"
+			}
+		},
+		{
+			"name": "Weave Etcher",
+			"rarity": "common",
+			"mana_cost": "{2}",
+			"type": "Artifact — Equipment ",
+			"collector_number": "204",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/204_Weave Etcher.png"
+			}
+		},
+		{
+			"name": "Void Hilt",
+			"rarity": "rare",
+			"mana_cost": "{4}",
+			"type": "Artifact — Equipment ",
+			"collector_number": "203",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/203_Void Hilt.png"
+			}
+		},
+		{
+			"name": "Hail of Blades",
+			"rarity": "uncommon",
+			"mana_cost": "{3}",
+			"type": "Artifact — Equipment ",
+			"collector_number": "198",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/198_Hail of Blades.png"
+			}
+		},
+		{
+			"name": "Makshi, Patron of Blades",
+			"rarity": "rare",
+			"mana_cost": "{5}",
+			"type": "Legendary Creature — Horror Warrior ",
+			"collector_number": "1",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/1_Makshi, Patron of Blades.png"
+			}
+		},
+		{
+			"name": "Walker of the Final Path",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{G}",
+			"type": "Creature — Human Warrior ",
+			"collector_number": "147",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/147_Walker of the Final Path.png"
+			}
+		},
+		{
+			"name": "Black Hole Musings",
+			"rarity": "rare",
+			"mana_cost": "{1}{B}{B}",
+			"type": "Sorcery — Revelation ",
+			"collector_number": "62",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/62_Black Hole Musings.png"
+			}
+		},
+		]
+	

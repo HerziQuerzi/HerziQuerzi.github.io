@@ -1,0 +1,1933 @@
+﻿[CustomCards]
+	[	{
+			"name": "Angel of Agony",
+			"rarity": "common",
+			"mana_cost": "{1}{W}{W}{B}",
+			"type": "Creature — Angel ",
+			"collector_number": "122",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/122_Angel of Agony.png"
+			}
+		},
+		{
+			"name": "Angel of Intellect",
+			"rarity": "common",
+			"mana_cost": "{1}{W}{W}{U}",
+			"type": "Creature — Angel ",
+			"collector_number": "116",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/116_Angel of Intellect.png"
+			}
+		},
+		{
+			"name": "Creed of the Abandoned",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{G}{U}{R}",
+			"type": "Sorcery",
+			"collector_number": "128",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/128_Creed of the Abandoned.png"
+			}
+		},
+		{
+			"name": "Creed of the Deceased",
+			"rarity": "uncommon",
+			"mana_cost": "{W}{B}{G}",
+			"type": "Instant",
+			"collector_number": "129",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/129_Creed of the Deceased.png"
+			}
+		},
+		{
+			"name": "Creed of the Desolate",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{U}{R}{W}",
+			"type": "Instant",
+			"collector_number": "130",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/130_Creed of the Desolate.png"
+			}
+		},
+		{
+			"name": "Creed of the Forgotten",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{B}{G}{U}",
+			"type": "Sorcery",
+			"collector_number": "131",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/131_Creed of the Forgotten.png"
+			}
+		},
+		{
+			"name": "Creed of the Suffering",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{R}{W}{B}",
+			"type": "Sorcery",
+			"collector_number": "132",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/132_Creed of the Suffering.png"
+			}
+		},
+		{
+			"name": "Chaos Litany",
+			"rarity": "common",
+			"mana_cost": "{U}{B}{R}",
+			"type": "Sorcery",
+			"collector_number": "127",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/127_Chaos Litany.png"
+			}
+		},
+		{
+			"name": "Final Litany",
+			"rarity": "common",
+			"mana_cost": "{W}{U}{B}",
+			"type": "Sorcery",
+			"collector_number": "138",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/138_Final Litany.png"
+			}
+		},
+		{
+			"name": "Haunting Litany",
+			"rarity": "common",
+			"mana_cost": "{G}{W}{U}",
+			"type": "Instant",
+			"collector_number": "139",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/139_Haunting Litany.png"
+			}
+		},
+		{
+			"name": "Primal Litany",
+			"rarity": "common",
+			"mana_cost": "{B}{R}{G}",
+			"type": "Sorcery",
+			"collector_number": "145",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/145_Primal Litany.png"
+			}
+		},
+		{
+			"name": "Surge Litany",
+			"rarity": "common",
+			"mana_cost": "{R}{G}{W}",
+			"type": "Sorcery",
+			"collector_number": "153",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/153_Surge Litany.png"
+			}
+		},
+		{
+			"name": "Magistrate of the Voidstone",
+			"rarity": "rare",
+			"mana_cost": "{2}{W}",
+			"type": "Creature — Human Wizard ",
+			"collector_number": "10",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/10_Magistrate of the Voidstone.png"
+			}
+		},
+		{
+			"name": "Magistrate of the Meddler",
+			"rarity": "rare",
+			"mana_cost": "{2}{U}",
+			"type": "Creature — Human Wizard ",
+			"collector_number": "33",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/33_Magistrate of the Meddler.png"
+			}
+		},
+		{
+			"name": "Magistrate of the Echoes",
+			"rarity": "rare",
+			"mana_cost": "{2}{B}",
+			"type": "Creature — Human Wizard ",
+			"collector_number": "58",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/58_Magistrate of the Echoes.png"
+			}
+		},
+		{
+			"name": "Magistrate of the Parasite",
+			"rarity": "rare",
+			"mana_cost": "{2}{R}",
+			"type": "Creature — Human Wizard ",
+			"collector_number": "80",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/80_Magistrate of the Parasite.png"
+			}
+		},
+		{
+			"name": "Magistrate of the Awakening",
+			"rarity": "rare",
+			"mana_cost": "{2}{G}",
+			"type": "Creature — Human Wizard ",
+			"collector_number": "105",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/105_Magistrate of the Awakening.png"
+			}
+		},
+		{
+			"name": "Treacherous Murkfiend",
+			"rarity": "common",
+			"mana_cost": "{1}{U}{U}{B}",
+			"type": "Creature — Horror ",
+			"collector_number": "117",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/117_Treacherous Murkfiend.png"
+			}
+		},
+		{
+			"name": "Treacherous Merrow",
+			"rarity": "common",
+			"mana_cost": "{1}{U}{U}{R}",
+			"type": "Creature — Horror ",
+			"collector_number": "123",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/123_Treacherous Merrow.png"
+			}
+		},
+		{
+			"name": "Spectral Haunter",
+			"rarity": "common",
+			"mana_cost": "{1}{G}{G}{U}",
+			"type": "Creature — Spirit ",
+			"collector_number": "126",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/126_Spectral Haunter.png"
+			}
+		},
+		{
+			"name": "Lifeweave Inverter",
+			"rarity": "common",
+			"mana_cost": "{B}{B}{R}",
+			"type": "Creature — Human Wizard ",
+			"collector_number": "118",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/118_Lifeweave Inverter.png"
+			}
+		},
+		{
+			"name": "Lifeweave Invoker",
+			"rarity": "common",
+			"mana_cost": "{B}{B}{G}",
+			"type": "Creature — Human Warrior ",
+			"collector_number": "124",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/124_Lifeweave Invoker.png"
+			}
+		},
+		{
+			"name": "Ashtrail Courser",
+			"rarity": "common",
+			"mana_cost": "{1}{R}{R}{G}",
+			"type": "Creature — Elemental ",
+			"collector_number": "120",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/120_Ashtrail Courser.png"
+			}
+		},
+		{
+			"name": "Ashtrail Charger",
+			"rarity": "common",
+			"mana_cost": "{1}{R}{R}{W}",
+			"type": "Creature — Elemental ",
+			"collector_number": "125",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/125_Ashtrail Charger.png"
+			}
+		},
+		{
+			"name": "Spectral Ordainer",
+			"rarity": "common",
+			"mana_cost": "{1}{G}{G}{W}",
+			"type": "Creature — Spirit ",
+			"collector_number": "121",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/121_Spectral Ordainer.png"
+			}
+		},
+		{
+			"name": "Crystal Days",
+			"rarity": "common",
+			"mana_cost": "{2}{W}",
+			"type": "Instant",
+			"collector_number": "4",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/4_Crystal Days.png"
+			}
+		},
+		{
+			"name": "Essence Channeler",
+			"rarity": "common",
+			"mana_cost": "{2}{W}",
+			"type": "Creature — Spirit Cleric ",
+			"collector_number": "7",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/7_Essence Channeler.png"
+			}
+		},
+		{
+			"name": "Toil",
+			"rarity": "common",
+			"mana_cost": "{W}",
+			"type": "Instant",
+			"collector_number": "21",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/21_Toil.png"
+			}
+		},
+		{
+			"name": "Unassuming Squire",
+			"rarity": "common",
+			"mana_cost": "{W}",
+			"type": "Creature — Human Soldier ",
+			"collector_number": "22",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/22_Unassuming Squire.png"
+			}
+		},
+		{
+			"name": "Imbued Creation",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{G}",
+			"type": "Instant",
+			"collector_number": "100",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/100_Imbued Creation.png"
+			}
+		},
+		{
+			"name": "Wisdom of the Leylines",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{U}",
+			"type": "Instant",
+			"collector_number": "45",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/45_Wisdom of the Leylines.png"
+			}
+		},
+		{
+			"name": "Echoes of Fertility",
+			"rarity": "common",
+			"mana_cost": "{G}{U}{R}",
+			"type": "Sorcery",
+			"collector_number": "135",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/135_Echoes of Fertility.png"
+			}
+		},
+		{
+			"name": "Echoes of Aggression",
+			"rarity": "common",
+			"mana_cost": "{R}{W}{B}",
+			"type": "Instant",
+			"collector_number": "133",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/133_Echoes of Aggression.png"
+			}
+		},
+		{
+			"name": "Echoes of Growth",
+			"rarity": "common",
+			"mana_cost": "{W}{B}{G}",
+			"type": "Instant",
+			"collector_number": "136",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/136_Echoes of Growth.png"
+			}
+		},
+		{
+			"name": "Echoes of Turmoil",
+			"rarity": "common",
+			"mana_cost": "{U}{R}{W}",
+			"type": "Instant",
+			"collector_number": "137",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/137_Echoes of Turmoil.png"
+			}
+		},
+		{
+			"name": "Echoes of Disruption",
+			"rarity": "common",
+			"mana_cost": "{B}{G}{U}",
+			"type": "Instant",
+			"collector_number": "134",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/134_Echoes of Disruption.png"
+			}
+		},
+		{
+			"name": "Clarity of the Tempest",
+			"rarity": "common",
+			"mana_cost": "{1}{U}{U}",
+			"type": "Sorcery",
+			"collector_number": "28",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/28_Clarity of the Tempest.png"
+			}
+		},
+		{
+			"name": "Electrix",
+			"rarity": "common",
+			"mana_cost": "{U}",
+			"type": "Instant",
+			"collector_number": "29",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/29_Electrix.png"
+			}
+		},
+		{
+			"name": "Emptied Vessels",
+			"rarity": "common",
+			"mana_cost": "{2}{U}",
+			"type": "Instant",
+			"collector_number": "30",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/30_Emptied Vessels.png"
+			}
+		},
+		{
+			"name": "Vivid Unmaking",
+			"rarity": "common",
+			"mana_cost": "{1}{U}",
+			"type": "Instant",
+			"collector_number": "43",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/43_Vivid Unmaking.png"
+			}
+		},
+		{
+			"name": "Baleful Raven",
+			"rarity": "common",
+			"mana_cost": "{3}{U}",
+			"type": "Creature — Bird ",
+			"collector_number": "25",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/25_Baleful Raven.png"
+			}
+		},
+		{
+			"name": "Ashtrail Thief",
+			"rarity": "common",
+			"mana_cost": "{2}{B}",
+			"type": "Creature — Human Rogue ",
+			"collector_number": "48",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/48_Ashtrail Thief.png"
+			}
+		},
+		{
+			"name": "Denialism",
+			"rarity": "common",
+			"mana_cost": "{1}{B}{B}",
+			"type": "Sorcery",
+			"collector_number": "53",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/53_Denialism.png"
+			}
+		},
+		{
+			"name": "Fading Soul",
+			"rarity": "common",
+			"mana_cost": "{B}",
+			"type": "Instant",
+			"collector_number": "55",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/55_Fading Soul.png"
+			}
+		},
+		{
+			"name": "Joyless Jester",
+			"rarity": "common",
+			"mana_cost": "{1}{B}",
+			"type": "Creature — Human Rogue ",
+			"collector_number": "57",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/57_Joyless Jester.png"
+			}
+		},
+		{
+			"name": "Marked for the Hunt",
+			"rarity": "common",
+			"mana_cost": "{1}{B}",
+			"type": "Enchantment — Aura ",
+			"collector_number": "59",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/59_Marked for the Hunt.png"
+			}
+		},
+		{
+			"name": "Wall of Solitude",
+			"rarity": "common",
+			"mana_cost": "{1}{B}",
+			"type": "Creature — Wall ",
+			"collector_number": "69",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/69_Wall of Solitude.png"
+			}
+		},
+		{
+			"name": "Spore Dwellers",
+			"rarity": "common",
+			"mana_cost": "{B}",
+			"type": "Creature — Zombie ",
+			"collector_number": "66",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/66_Spore Dwellers.png"
+			}
+		},
+		{
+			"name": "Blind Desecration",
+			"rarity": "common",
+			"mana_cost": "{1}{R}",
+			"type": "Instant",
+			"collector_number": "70",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/70_Blind Desecration.png"
+			}
+		},
+		{
+			"name": "Chaotic Armor",
+			"rarity": "common",
+			"mana_cost": "{1}{R}",
+			"type": "Enchantment — Aura ",
+			"collector_number": "73",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/73_Chaotic Armor.png"
+			}
+		},
+		{
+			"name": "Draconic Blaze",
+			"rarity": "common",
+			"mana_cost": "{2}{R}",
+			"type": "Instant",
+			"collector_number": "77",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/77_Draconic Blaze.png"
+			}
+		},
+		{
+			"name": "Resonate Blade",
+			"rarity": "common",
+			"mana_cost": "{1}{R}",
+			"type": "Creature — Human Warrior ",
+			"collector_number": "83",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/83_Resonate Blade.png"
+			}
+		},
+		{
+			"name": "Shatterthief",
+			"rarity": "common",
+			"mana_cost": "{2}{R}",
+			"type": "Creature — Human Rogue ",
+			"collector_number": "85",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/85_Shatterthief.png"
+			}
+		},
+		{
+			"name": "Stand Defiant",
+			"rarity": "common",
+			"mana_cost": "{R}",
+			"type": "Instant",
+			"collector_number": "87",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/87_Stand Defiant.png"
+			}
+		},
+		{
+			"name": "Bearskin",
+			"rarity": "common",
+			"mana_cost": "{1}{G}",
+			"type": "Enchantment — Aura ",
+			"collector_number": "93",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/93_Bearskin.png"
+			}
+		},
+		{
+			"name": "Burly Brawler",
+			"rarity": "common",
+			"mana_cost": "{4}{G}",
+			"type": "Creature — Human Warrior ",
+			"collector_number": "94",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/94_Burly Brawler.png"
+			}
+		},
+		{
+			"name": "Invoker Shaman",
+			"rarity": "common",
+			"mana_cost": "{1}{G}{G}",
+			"type": "Creature — Human Druid ",
+			"collector_number": "101",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/101_Invoker Shaman.png"
+			}
+		},
+		{
+			"name": "Lands of Plenty",
+			"rarity": "common",
+			"mana_cost": "{G}",
+			"type": "Enchantment — Aura ",
+			"collector_number": "103",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/103_Lands of Plenty.png"
+			}
+		},
+		{
+			"name": "Remnants of the Convent",
+			"rarity": "common",
+			"mana_cost": "{2}{G}",
+			"type": "Creature — Human Warrior ",
+			"collector_number": "108",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/108_Remnants of the Convent.png"
+			}
+		},
+		{
+			"name": "Trynwood Guardian",
+			"rarity": "common",
+			"mana_cost": "{G}",
+			"type": "Creature — Spirit ",
+			"collector_number": "113",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/113_Trynwood Guardian.png"
+			}
+		},
+		{
+			"name": "Trynwood Spirit",
+			"rarity": "common",
+			"mana_cost": "{1}{G}",
+			"type": "Creature — Spirit ",
+			"collector_number": "114",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/114_Trynwood Spirit.png"
+			}
+		},
+		{
+			"name": "Howl of the Pack",
+			"rarity": "common",
+			"mana_cost": "{2}{G}",
+			"type": "Sorcery",
+			"collector_number": "98",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/98_Howl of the Pack.png"
+			}
+		},
+		{
+			"name": "Wolf",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Creature — Wolf ",
+			"collector_number": "6",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/6_Wolf.png"
+			}
+		},
+		{
+			"name": "Soldier",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Creature — Soldier ",
+			"collector_number": "7",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/7_Soldier.png"
+			}
+		},
+		{
+			"name": "Arctic Mine",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Land — Plains Swamp ",
+			"collector_number": "170",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/170_Arctic Mine.png"
+			}
+		},
+		{
+			"name": "Crystal Cavern",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Land — Island Mountain ",
+			"collector_number": "172",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/172_Crystal Cavern.png"
+			}
+		},
+		{
+			"name": "Forgotten Steppe",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Land — Mountain Plains ",
+			"collector_number": "174",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/174_Forgotten Steppe.png"
+			}
+		},
+		{
+			"name": "Nomad's Township",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Land — Swamp Forest ",
+			"collector_number": "175",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/175_Nomad's Township.png"
+			}
+		},
+		{
+			"name": "Shifting Glade",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Land — Forest Island ",
+			"collector_number": "176",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/176_Shifting Glade.png"
+			}
+		},
+		{
+			"name": "Celestial Blessing",
+			"rarity": "common",
+			"mana_cost": "{W}",
+			"type": "Instant",
+			"collector_number": "2",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/2_Celestial Blessing.png"
+			}
+		},
+		{
+			"name": "Resolute Captain",
+			"rarity": "common",
+			"mana_cost": "{1}{W}",
+			"type": "Creature — Human Soldier ",
+			"collector_number": "15",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/15_Resolute Captain.png"
+			}
+		},
+		{
+			"name": "Divine Worshiper",
+			"rarity": "common",
+			"mana_cost": "{1}{W}",
+			"type": "Creature — Human Soldier ",
+			"collector_number": "6",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/6_Divine Worshiper.png"
+			}
+		},
+		{
+			"name": "Final Resistance",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{W}{W}",
+			"type": "Enchantment",
+			"collector_number": "8",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/8_Final Resistance.png"
+			}
+		},
+		{
+			"name": "Seraph's Chosen",
+			"rarity": "common",
+			"mana_cost": "{2}{W}",
+			"type": "Creature — Human Soldier ",
+			"collector_number": "16",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/16_Seraph's Chosen.png"
+			}
+		},
+		{
+			"name": "Runic Guardian",
+			"rarity": "common",
+			"mana_cost": "{2}{U}",
+			"type": "Creature — Spirit ",
+			"collector_number": "40",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/40_Runic Guardian.png"
+			}
+		},
+		{
+			"name": "Widowed Stalker",
+			"rarity": "common",
+			"mana_cost": "{1}{U}",
+			"type": "Creature — Spirit Rogue ",
+			"collector_number": "44",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/44_Widowed Stalker.png"
+			}
+		},
+		{
+			"name": "Riptide Serpent",
+			"rarity": "common",
+			"mana_cost": "{3}{U}{U}",
+			"type": "Creature — Serpent ",
+			"collector_number": "39",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/39_Riptide Serpent.png"
+			}
+		},
+		{
+			"name": "Shadowfire Trickster",
+			"rarity": "common",
+			"mana_cost": "{2}{B}",
+			"type": "Creature — Zombie ",
+			"collector_number": "64",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/64_Shadowfire Trickster.png"
+			}
+		},
+		{
+			"name": "Seraph's Outcast",
+			"rarity": "common",
+			"mana_cost": "{2}{B}",
+			"type": "Creature — Human Soldier ",
+			"collector_number": "63",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/63_Seraph's Outcast.png"
+			}
+		},
+		{
+			"name": "Fearless Barbarian",
+			"rarity": "common",
+			"mana_cost": "{R}",
+			"type": "Creature — Human Barbarian ",
+			"collector_number": "78",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/78_Fearless Barbarian.png"
+			}
+		},
+		{
+			"name": "Withering Guardsman",
+			"rarity": "common",
+			"mana_cost": "{2}{R}",
+			"type": "Creature — Human Warrior ",
+			"collector_number": "92",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/92_Withering Guardsman.png"
+			}
+		},
+		{
+			"name": "Cry of the Phoenix",
+			"rarity": "common",
+			"mana_cost": "{4}{R}{R}",
+			"type": "Sorcery",
+			"collector_number": "76",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/76_Cry of the Phoenix.png"
+			}
+		},
+		{
+			"name": "Phoenix",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Creature — Phoenix ",
+			"collector_number": "5",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/5_Phoenix.png"
+			}
+		},
+		{
+			"name": "Vivid Marsh",
+			"rarity": "uncommon",
+			"mana_cost": "",
+			"type": "Land",
+			"collector_number": "180",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/180_Vivid Marsh.png"
+			}
+		},
+		{
+			"name": "Vivid Grove",
+			"rarity": "uncommon",
+			"mana_cost": "",
+			"type": "Land",
+			"collector_number": "179",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/179_Vivid Grove.png"
+			}
+		},
+		{
+			"name": "Vivid Meadow",
+			"rarity": "uncommon",
+			"mana_cost": "",
+			"type": "Land",
+			"collector_number": "181",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/181_Vivid Meadow.png"
+			}
+		},
+		{
+			"name": "Vivid Crag",
+			"rarity": "uncommon",
+			"mana_cost": "",
+			"type": "Land",
+			"collector_number": "177",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/177_Vivid Crag.png"
+			}
+		},
+		{
+			"name": "Vivid Creek",
+			"rarity": "uncommon",
+			"mana_cost": "",
+			"type": "Land",
+			"collector_number": "178",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/178_Vivid Creek.png"
+			}
+		},
+		{
+			"name": "Envision Reality",
+			"rarity": "uncommon",
+			"mana_cost": "{W/U}{R}",
+			"type": "Instant",
+			"collector_number": "158",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/158_Envision Reality.png"
+			}
+		},
+		{
+			"name": "Glorious Melee",
+			"rarity": "uncommon",
+			"mana_cost": "{R/W}{G}",
+			"type": "Instant",
+			"collector_number": "161",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/161_Glorious Melee.png"
+			}
+		},
+		{
+			"name": "Primal Pox",
+			"rarity": "uncommon",
+			"mana_cost": "{G/W}{B}",
+			"type": "Sorcery",
+			"collector_number": "164",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/164_Primal Pox.png"
+			}
+		},
+		{
+			"name": "Magistrate of Dust",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{B/R}{W}",
+			"type": "Creature — Angel Cleric ",
+			"collector_number": "163",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/163_Magistrate of Dust.png"
+			}
+		},
+		{
+			"name": "Strike from Shadows",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{W/B}{U}",
+			"type": "Enchantment",
+			"collector_number": "166",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/166_Strike from Shadows.png"
+			}
+		},
+		{
+			"name": "Imagined Birth",
+			"rarity": "uncommon",
+			"mana_cost": "{4}{G/U}{W}",
+			"type": "Enchantment",
+			"collector_number": "162",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/162_Imagined Birth.png"
+			}
+		},
+		{
+			"name": "Spirit",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Creature — Spirit ",
+			"collector_number": "2",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/2_Spirit.png"
+			}
+		},
+		{
+			"name": "Giant Gloomwidow",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{U/B}{G}",
+			"type": "Creature — Spider ",
+			"collector_number": "160",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/160_Giant Gloomwidow.png"
+			}
+		},
+		{
+			"name": "Fallen Knight",
+			"rarity": "uncommon",
+			"mana_cost": "{U/R}{B}",
+			"type": "Creature — Human Knight ",
+			"collector_number": "159",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/159_Fallen Knight.png"
+			}
+		},
+		{
+			"name": "Cycle of Furor",
+			"rarity": "uncommon",
+			"mana_cost": "{3}{B/G}{R}",
+			"type": "Enchantment — Aura ",
+			"collector_number": "157",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/157_Cycle of Furor.png"
+			}
+		},
+		{
+			"name": "Strength of Reality",
+			"rarity": "uncommon",
+			"mana_cost": "{R/G}{U}",
+			"type": "Enchantment — Aura ",
+			"collector_number": "165",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/165_Strength of Reality.png"
+			}
+		},
+		{
+			"name": "Murk Lurker",
+			"rarity": "uncommon",
+			"mana_cost": "{U}{B}{R}",
+			"type": "Creature — Horror ",
+			"collector_number": "144",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/144_Murk Lurker.png"
+			}
+		},
+		{
+			"name": "Inspiring Patrician",
+			"rarity": "uncommon",
+			"mana_cost": "{G}{W}{U}",
+			"type": "Creature — Human Soldier ",
+			"collector_number": "141",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/141_Inspiring Patrician.png"
+			}
+		},
+		{
+			"name": "Valkyrie Vanguard",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{R}{G}{W}",
+			"type": "Creature — Angel ",
+			"collector_number": "155",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/155_Valkyrie Vanguard.png"
+			}
+		},
+		{
+			"name": "Wandering Bruiser",
+			"rarity": "uncommon",
+			"mana_cost": "{B}{R}{G}",
+			"type": "Creature — Minotaur ",
+			"collector_number": "156",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/156_Wandering Bruiser.png"
+			}
+		},
+		{
+			"name": "Inhibition Cleric",
+			"rarity": "uncommon",
+			"mana_cost": "{W}{U}{B}",
+			"type": "Creature — Human Cleric ",
+			"collector_number": "140",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/140_Inhibition Cleric.png"
+			}
+		},
+		{
+			"name": "Requiem of Wennex",
+			"rarity": "uncommon",
+			"mana_cost": "{W}",
+			"type": "Creature — Human Knight ",
+			"collector_number": "14",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/14_Requiem of Wennex.png"
+			}
+		},
+		{
+			"name": "Warded Sentinel",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{W}",
+			"type": "Creature — Human Soldier ",
+			"collector_number": "23",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/23_Warded Sentinel.png"
+			}
+		},
+		{
+			"name": "Place of Solace",
+			"rarity": "common",
+			"mana_cost": "{1}{W}",
+			"type": "Instant",
+			"collector_number": "11",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/11_Place of Solace.png"
+			}
+		},
+		{
+			"name": "Guardian's Lament",
+			"rarity": "uncommon",
+			"mana_cost": "{W}",
+			"type": "Enchantment — Aura ",
+			"collector_number": "9",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/9_Guardian's Lament.png"
+			}
+		},
+		{
+			"name": "Divine Decree",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{W}{W}",
+			"type": "Enchantment",
+			"collector_number": "5",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/5_Divine Decree.png"
+			}
+		},
+		{
+			"name": "Tender Caretaker",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{W}",
+			"type": "Creature — Angel ",
+			"collector_number": "20",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/20_Tender Caretaker.png"
+			}
+		},
+		{
+			"name": "Recruitment Policy",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{W}",
+			"type": "Sorcery",
+			"collector_number": "13",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/13_Recruitment Policy.png"
+			}
+		},
+		{
+			"name": "Funeral Preparations",
+			"rarity": "common",
+			"mana_cost": "{1}{U}",
+			"type": "Instant",
+			"collector_number": "31",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/31_Funeral Preparations.png"
+			}
+		},
+		{
+			"name": "Imagined Realms",
+			"rarity": "uncommon",
+			"mana_cost": "{3}{U}",
+			"type": "Sorcery",
+			"collector_number": "32",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/32_Imagined Realms.png"
+			}
+		},
+		{
+			"name": "Memory's Journey",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{U}",
+			"type": "Instant",
+			"collector_number": "34",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/34_Memory's Journey.png"
+			}
+		},
+		{
+			"name": "Revelations",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{U}",
+			"type": "Instant",
+			"collector_number": "38",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/38_Revelations.png"
+			}
+		},
+		{
+			"name": "Crackcaster Mage",
+			"rarity": "rare",
+			"mana_cost": "{1}{R}",
+			"type": "Creature — Human Wizard ",
+			"collector_number": "75",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/75_Crackcaster Mage.png"
+			}
+		},
+		{
+			"name": "Peaceful Insight",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{U}{U}",
+			"type": "Instant",
+			"collector_number": "35",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/35_Peaceful Insight.png"
+			}
+		},
+		{
+			"name": "Caryn, Dismissive Prodigy",
+			"rarity": "rare",
+			"mana_cost": "{3}{U}{U}",
+			"type": "Legendary Creature — Human Wizard ",
+			"collector_number": "26",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/26_Caryn, Dismissive Prodigy.png"
+			}
+		},
+		{
+			"name": "Thoughtjolt Adept",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{U}",
+			"type": "Creature — Human Wizard ",
+			"collector_number": "42",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/42_Thoughtjolt Adept.png"
+			}
+		},
+		{
+			"name": "Tomb Defiler",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{B}",
+			"type": "Creature — Demon ",
+			"collector_number": "67",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/67_Tomb Defiler.png"
+			}
+		},
+		{
+			"name": "Nightshift Ghoul",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{G}",
+			"type": "Creature — Zombie ",
+			"collector_number": "106",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/106_Nightshift Ghoul.png"
+			}
+		},
+		{
+			"name": "Unburial Rites",
+			"rarity": "uncommon",
+			"mana_cost": "{4}{B}",
+			"type": "Sorcery",
+			"collector_number": "68",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/68_Unburial Rites.png"
+			}
+		},
+		{
+			"name": "Parasitic Knowledge",
+			"rarity": "uncommon",
+			"mana_cost": "{B}",
+			"type": "Sorcery",
+			"collector_number": "60",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/60_Parasitic Knowledge.png"
+			}
+		},
+		{
+			"name": "Burning Envy",
+			"rarity": "uncommon",
+			"mana_cost": "{B}{B}",
+			"type": "Enchantment — Aura ",
+			"collector_number": "49",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/49_Burning Envy.png"
+			}
+		},
+		{
+			"name": "Empty the Heavens",
+			"rarity": "rare",
+			"mana_cost": "{2}{B}{B}",
+			"type": "Sorcery",
+			"collector_number": "54",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/54_Empty the Heavens.png"
+			}
+		},
+		{
+			"name": "Armored Ghoul",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{B}",
+			"type": "Creature — Zombie ",
+			"collector_number": "47",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/47_Armored Ghoul.png"
+			}
+		},
+		{
+			"name": "Indomitable Render",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{B}",
+			"type": "Creature — Orc Warrior ",
+			"collector_number": "56",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/56_Indomitable Render.png"
+			}
+		},
+		{
+			"name": "Boiling Ooze",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{R}",
+			"type": "Creature — Ooze ",
+			"collector_number": "71",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/71_Boiling Ooze.png"
+			}
+		},
+		{
+			"name": "Burning Intellect",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{R}",
+			"type": "Instant",
+			"collector_number": "72",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/72_Burning Intellect.png"
+			}
+		},
+		{
+			"name": "Obsidianfist Rager",
+			"rarity": "uncommon",
+			"mana_cost": "{R}{R}",
+			"type": "Creature — Elemental ",
+			"collector_number": "81",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/81_Obsidianfist Rager.png"
+			}
+		},
+		{
+			"name": "Quickening Mask",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{R}",
+			"type": "Enchantment — Aura ",
+			"collector_number": "82",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/82_Quickening Mask.png"
+			}
+		},
+		{
+			"name": "Spirit of Fury",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{R}",
+			"type": "Enchantment — Aura ",
+			"collector_number": "86",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/86_Spirit of Fury.png"
+			}
+		},
+		{
+			"name": "War Scorcher",
+			"rarity": "uncommon",
+			"mana_cost": "{X}{R}",
+			"type": "Creature — Human Wizard ",
+			"collector_number": "91",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/91_War Scorcher.png"
+			}
+		},
+		{
+			"name": "Collapsing Energies",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{R}",
+			"type": "Instant",
+			"collector_number": "74",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/74_Collapsing Energies.png"
+			}
+		},
+		{
+			"name": "Icesnap Breaker",
+			"rarity": "uncommon",
+			"mana_cost": "{G}{G}",
+			"type": "Creature — Human Warrior ",
+			"collector_number": "99",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/99_Icesnap Breaker.png"
+			}
+		},
+		{
+			"name": "Pack Leader",
+			"rarity": "uncommon",
+			"mana_cost": "{3}{G}",
+			"type": "Creature — Elf Warrior ",
+			"collector_number": "107",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/107_Pack Leader.png"
+			}
+		},
+		{
+			"name": "Territorial Predator",
+			"rarity": "rare",
+			"mana_cost": "{1}{G}",
+			"type": "Creature — Cat ",
+			"collector_number": "111",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/111_Territorial Predator.png"
+			}
+		},
+		{
+			"name": "Vestiges of Autumn",
+			"rarity": "common",
+			"mana_cost": "{G}",
+			"type": "Sorcery",
+			"collector_number": "115",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/115_Vestiges of Autumn.png"
+			}
+		},
+		{
+			"name": "Summer Bloom",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{G}",
+			"type": "Sorcery",
+			"collector_number": "109",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/109_Summer Bloom.png"
+			}
+		},
+		{
+			"name": "Corrupted Cemetery",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{G}",
+			"type": "Sorcery",
+			"collector_number": "96",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/96_Corrupted Cemetery.png"
+			}
+		},
+		{
+			"name": "Shuddering Horizons",
+			"rarity": "rare",
+			"mana_cost": "{R}{G}{W}",
+			"type": "Creature — Elemental ",
+			"collector_number": "151",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/151_Shuddering Horizons.png"
+			}
+		},
+		{
+			"name": "Ser Gregore",
+			"rarity": "rare",
+			"mana_cost": "{G}{W}{U}",
+			"type": "Legendary Creature — Spirit Knight ",
+			"collector_number": "150",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/150_Ser Gregore.png"
+			}
+		},
+		{
+			"name": "Ser Fallacy",
+			"rarity": "rare",
+			"mana_cost": "{R}{W}{B}",
+			"type": "Legendary Creature — Human Knight ",
+			"collector_number": "149",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/149_Ser Fallacy.png"
+			}
+		},
+		{
+			"name": "Trench Trawler",
+			"rarity": "rare",
+			"mana_cost": "{2}{B}{G}{U}",
+			"type": "Creature — Human Cleric ",
+			"collector_number": "154",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/154_Trench Trawler.png"
+			}
+		},
+		{
+			"name": "Elemental",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Creature — Elemental ",
+			"collector_number": "4",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/4_Elemental.png"
+			}
+		},
+		{
+			"name": "Kraken",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Creature — Kraken ",
+			"collector_number": "3",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/3_Kraken.png"
+			}
+		},
+		{
+			"name": "The Suffering King",
+			"rarity": "rare",
+			"mana_cost": "{3}{U}{B}{R}",
+			"type": "Legendary Creature — Human Warrior ",
+			"collector_number": "152",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/152_The Suffering King.png"
+			}
+		},
+		{
+			"name": "Rites of Summoning",
+			"rarity": "rare",
+			"mana_cost": "{1}{B}{R}{G}",
+			"type": "Enchantment",
+			"collector_number": "148",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/148_Rites of Summoning.png"
+			}
+		},
+		{
+			"name": "Reflector Adept",
+			"rarity": "rare",
+			"mana_cost": "{2}{U}{R}{W}",
+			"type": "Creature — Human Wizard ",
+			"collector_number": "147",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/147_Reflector Adept.png"
+			}
+		},
+		{
+			"name": "Reality Forger",
+			"rarity": "rare",
+			"mana_cost": "{1}{W}{B}{G}",
+			"type": "Creature — Human Wizard ",
+			"collector_number": "146",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/146_Reality Forger.png"
+			}
+		},
+		{
+			"name": "Judicial Spectre",
+			"rarity": "rare",
+			"mana_cost": "{W}{U}{B}",
+			"type": "Creature — Angel ",
+			"collector_number": "142",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/142_Judicial Spectre.png"
+			}
+		},
+		{
+			"name": "Memories of the Lost",
+			"rarity": "rare",
+			"mana_cost": "{G}{U}{R}",
+			"type": "Enchantment",
+			"collector_number": "143",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/143_Memories of the Lost.png"
+			}
+		},
+		{
+			"name": "Traveler's Gear",
+			"rarity": "common",
+			"mana_cost": "{2}",
+			"type": "Artifact — Equipment ",
+			"collector_number": "169",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/169_Traveler's Gear.png"
+			}
+		},
+		{
+			"name": "Dendropsyche",
+			"rarity": "common",
+			"mana_cost": "{3}",
+			"type": "Artifact",
+			"collector_number": "167",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/167_Dendropsyche.png"
+			}
+		},
+		{
+			"name": "Scales of Time",
+			"rarity": "rare",
+			"mana_cost": "{5}",
+			"type": "Artifact",
+			"collector_number": "168",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/168_Scales of Time.png"
+			}
+		},
+		{
+			"name": "Raziel, Serrian of Histories",
+			"rarity": "mythic",
+			"mana_cost": "{1}{W}{W}",
+			"type": "Legendary Planeswalker — Serrian ",
+			"collector_number": "12",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/12_Raziel, Serrian of Histories.png"
+			}
+		},
+		{
+			"name": "Zachriel, Serrian of Memory",
+			"rarity": "mythic",
+			"mana_cost": "{1}{U}{U}",
+			"type": "Legendary Planeswalker — Serrian ",
+			"collector_number": "46",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/46_Zachriel, Serrian of Memory.png"
+			}
+		},
+		{
+			"name": "Simikiel, Serrian of Vengeance",
+			"rarity": "mythic",
+			"mana_cost": "{1}{B}{B}",
+			"type": "Legendary Planeswalker — Serrian ",
+			"collector_number": "65",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/65_Simikiel, Serrian of Vengeance.png"
+			}
+		},
+		{
+			"name": "Uriel, Serrian of Portent",
+			"rarity": "mythic",
+			"mana_cost": "{1}{R}{R}",
+			"type": "Legendary Planeswalker — Serrian ",
+			"collector_number": "89",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/89_Uriel, Serrian of Portent.png"
+			}
+		},
+		{
+			"name": "Ketiel, Serrian of Consciousness",
+			"rarity": "mythic",
+			"mana_cost": "{1}{G}{G}",
+			"type": "Legendary Planeswalker — Serrian ",
+			"collector_number": "102",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/102_Ketiel, Serrian of Consciousness.png"
+			}
+		},
+		{
+			"name": "Cold Superiority",
+			"rarity": "rare",
+			"mana_cost": "{5}{W}{W}",
+			"type": "Enchantment — Aura ",
+			"collector_number": "3",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/3_Cold Superiority.png"
+			}
+		},
+		{
+			"name": "Sisterblade Corsair",
+			"rarity": "rare",
+			"mana_cost": "{1}{W}",
+			"type": "Creature — Human Soldier ",
+			"collector_number": "17",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/17_Sisterblade Corsair.png"
+			}
+		},
+		{
+			"name": "Slay the Cursed",
+			"rarity": "rare",
+			"mana_cost": "{W}",
+			"type": "Instant",
+			"collector_number": "18",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/18_Slay the Cursed.png"
+			}
+		},
+		{
+			"name": "Spirit Channeler",
+			"rarity": "rare",
+			"mana_cost": "{2}{W}",
+			"type": "Creature — Human Cleric ",
+			"collector_number": "19",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/19_Spirit Channeler.png"
+			}
+		},
+		{
+			"name": "Breath of Eternity",
+			"rarity": "rare",
+			"mana_cost": "{3}{W}{W}{W}",
+			"type": "Sorcery",
+			"collector_number": "1",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/1_Breath of Eternity.png"
+			}
+		},
+		{
+			"name": "Amethyst Spellblade",
+			"rarity": "rare",
+			"mana_cost": "{2}{U}",
+			"type": "Creature — Human Wizard ",
+			"collector_number": "24",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/24_Amethyst Spellblade.png"
+			}
+		},
+		{
+			"name": "Phantasmal Ambush",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{U}{U}",
+			"type": "Instant",
+			"collector_number": "36",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/36_Phantasmal Ambush.png"
+			}
+		},
+		{
+			"name": "Prodigy's Rites",
+			"rarity": "rare",
+			"mana_cost": "{2}{U}{U}",
+			"type": "Enchantment",
+			"collector_number": "37",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/37_Prodigy's Rites.png"
+			}
+		},
+		{
+			"name": "Savage Cunning",
+			"rarity": "rare",
+			"mana_cost": "{U}",
+			"type": "Instant",
+			"collector_number": "41",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/41_Savage Cunning.png"
+			}
+		},
+		{
+			"name": "Claim of Blood",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{B}",
+			"type": "Sorcery",
+			"collector_number": "50",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/50_Claim of Blood.png"
+			}
+		},
+		{
+			"name": "Crag Mourner",
+			"rarity": "rare",
+			"mana_cost": "{B}",
+			"type": "Creature — Human Soldier ",
+			"collector_number": "51",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/51_Crag Mourner.png"
+			}
+		},
+		{
+			"name": "Crag Tyrant",
+			"rarity": "rare",
+			"mana_cost": "{3}{B}{B}",
+			"type": "Creature — Dragon ",
+			"collector_number": "52",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/52_Crag Tyrant.png"
+			}
+		},
+		{
+			"name": "Sanguine Calligrapher",
+			"rarity": "rare",
+			"mana_cost": "{3}{B}{B}",
+			"type": "Creature — Human Cleric ",
+			"collector_number": "61",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/61_Sanguine Calligrapher.png"
+			}
+		},
+		{
+			"name": "Selfish Martyr",
+			"rarity": "rare",
+			"mana_cost": "{1}{B}",
+			"type": "Creature — Human Knight ",
+			"collector_number": "62",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/62_Selfish Martyr.png"
+			}
+		},
+		{
+			"name": "Horizon Toss",
+			"rarity": "rare",
+			"mana_cost": "{X}{R}",
+			"type": "Sorcery",
+			"collector_number": "79",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/79_Horizon Toss.png"
+			}
+		},
+		{
+			"name": "Chaos Tide",
+			"rarity": "rare",
+			"mana_cost": "{2}{U}",
+			"type": "Enchantment",
+			"collector_number": "27",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/27_Chaos Tide.png"
+			}
+		},
+		{
+			"name": "Scour the Horizon",
+			"rarity": "rare",
+			"mana_cost": "{4}{R}{R}",
+			"type": "Sorcery",
+			"collector_number": "84",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/84_Scour the Horizon.png"
+			}
+		},
+		{
+			"name": "Trial by Fire",
+			"rarity": "rare",
+			"mana_cost": "{1}{R}",
+			"type": "Enchantment — Aura ",
+			"collector_number": "88",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/88_Trial by Fire.png"
+			}
+		},
+		{
+			"name": "Wandering Belligerent",
+			"rarity": "rare",
+			"mana_cost": "{1}{R}{R}",
+			"type": "Creature — Human Warrior ",
+			"collector_number": "90",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/90_Wandering Belligerent.png"
+			}
+		},
+		{
+			"name": "Call from the Loam",
+			"rarity": "rare",
+			"mana_cost": "{2}{G}{G}",
+			"type": "Enchantment",
+			"collector_number": "95",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/95_Call from the Loam.png"
+			}
+		},
+		{
+			"name": "Lord of Trynwood",
+			"rarity": "rare",
+			"mana_cost": "{3}{G}{G}",
+			"type": "Creature — Avatar ",
+			"collector_number": "104",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/104_Lord of Trynwood.png"
+			}
+		},
+		{
+			"name": "Surgespeaker Adept",
+			"rarity": "rare",
+			"mana_cost": "{3}{G}{G}",
+			"type": "Creature — Human Druid ",
+			"collector_number": "110",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/110_Surgespeaker Adept.png"
+			}
+		},
+		{
+			"name": "Tranquil Rites",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{G}{G}",
+			"type": "Sorcery",
+			"collector_number": "112",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/112_Tranquil Rites.png"
+			}
+		},
+		{
+			"name": "Genesis Crystal",
+			"rarity": "rare",
+			"mana_cost": "{2}{G}",
+			"type": "Enchantment",
+			"collector_number": "97",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/97_Genesis Crystal.png"
+			}
+		},
+		{
+			"name": "Unholy Confidant",
+			"rarity": "mythic",
+			"mana_cost": "{X}{B}{R}",
+			"type": "Creature — Demon ",
+			"collector_number": "119",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/119_Unholy Confidant.png"
+			}
+		},
+		{
+			"name": "Plains",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Basic Land — Plains ",
+			"collector_number": "182",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/182_Plains.png"
+			}
+		},
+		{
+			"name": "Island",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Basic Land — Island ",
+			"collector_number": "183",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/183_Island.png"
+			}
+		},
+		{
+			"name": "Swamp",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Basic Land — Swamp ",
+			"collector_number": "184",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/184_Swamp.png"
+			}
+		},
+		{
+			"name": "Mountain",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Basic Land — Mountain ",
+			"collector_number": "185",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/185_Mountain.png"
+			}
+		},
+		{
+			"name": "Forest",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Basic Land — Forest ",
+			"collector_number": "186",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/186_Forest.png"
+			}
+		},
+		{
+			"name": "Collapsing Confluence",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Land",
+			"collector_number": "171",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/171_Collapsing Confluence.png"
+			}
+		},
+		{
+			"name": "Fading Horizons",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Land",
+			"collector_number": "173",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/173_Fading Horizons.png"
+			}
+		},
+		{
+			"name": "Soldier",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Creature — Soldier ",
+			"collector_number": "1",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/1_Soldier.png"
+			}
+		},
+		]
+	

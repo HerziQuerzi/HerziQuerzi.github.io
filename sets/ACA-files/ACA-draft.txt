@@ -1,0 +1,1483 @@
+﻿[CustomCards]
+	[	{
+			"name": "Peer Review",
+			"rarity": "common",
+			"mana_cost": "{U}",
+			"type": "Instant",
+			"collector_number": "24",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/24_Peer Review.png"
+			}
+		},
+		{
+			"name": "Fatigue",
+			"rarity": "special",
+			"mana_cost": "{2}",
+			"type": "Sorcery",
+			"collector_number": "141",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/141_Fatigue.png"
+			}
+		},
+		{
+			"name": "Exhausting Failure",
+			"rarity": "common",
+			"mana_cost": "{2}{U}",
+			"type": "Instant",
+			"collector_number": "20",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/20_Exhausting Failure.png"
+			}
+		},
+		{
+			"name": "Professor's Notes",
+			"rarity": "common",
+			"mana_cost": "{B}",
+			"type": "Sorcery",
+			"collector_number": "38",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/38_Professor's Notes.png"
+			}
+		},
+		{
+			"name": "Sleepless Studies",
+			"rarity": "common",
+			"mana_cost": "{1}{U}",
+			"type": "Instant",
+			"collector_number": "28",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/28_Sleepless Studies.png"
+			}
+		},
+		{
+			"name": "Radiant Outburst",
+			"rarity": "common",
+			"mana_cost": "{1}{R}",
+			"type": "Instant",
+			"collector_number": "58",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/58_Radiant Outburst.png"
+			}
+		},
+		{
+			"name": "Whirling Repository",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Land — Academy ",
+			"collector_number": "135",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/135_Whirling Repository.png"
+			}
+		},
+		{
+			"name": "Alchemical Reserve",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Land — Academy ",
+			"collector_number": "128",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/128_Alchemical Reserve.png"
+			}
+		},
+		{
+			"name": "Soaring Observatory",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Land — Academy ",
+			"collector_number": "134",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/134_Soaring Observatory.png"
+			}
+		},
+		{
+			"name": "Glorious Sanctum",
+			"rarity": "uncommon",
+			"mana_cost": "{1}",
+			"type": "Artifact — Study ",
+			"collector_number": "124",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/124_Glorious Sanctum.png"
+			}
+		},
+		{
+			"name": "Calming Sanctum",
+			"rarity": "uncommon",
+			"mana_cost": "{1}",
+			"type": "Artifact — Study ",
+			"collector_number": "118",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/118_Calming Sanctum.png"
+			}
+		},
+		{
+			"name": "Prove Worthy",
+			"rarity": "uncommon",
+			"mana_cost": "{R}{W}{B}",
+			"type": "Instant",
+			"collector_number": "110",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/110_Prove Worthy.png"
+			}
+		},
+		{
+			"name": "Dance of Steel and Song",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{W}{U}",
+			"type": "Enchantment",
+			"collector_number": "76",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/76_Dance of Steel and Song.png"
+			}
+		},
+		{
+			"name": "Patient Herbology",
+			"rarity": "common",
+			"mana_cost": "{1}{G}",
+			"type": "Enchantment",
+			"collector_number": "70",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/70_Patient Herbology.png"
+			}
+		},
+		{
+			"name": "Luminescent Feathrets",
+			"rarity": "uncommon",
+			"mana_cost": "{X}{W}",
+			"type": "Creature — Ferret Bird ",
+			"collector_number": "8",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/8_Luminescent Feathrets.png"
+			}
+		},
+		{
+			"name": "Charcoal Claws",
+			"rarity": "common",
+			"mana_cost": "{R}",
+			"type": "Instant",
+			"collector_number": "48",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/48_Charcoal Claws.png"
+			}
+		},
+		{
+			"name": "Somnambulance",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{B}{B}",
+			"type": "Enchantment",
+			"collector_number": "42",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/42_Somnambulance.png"
+			}
+		},
+		{
+			"name": "Strict Instructor",
+			"rarity": "common",
+			"mana_cost": "{U}",
+			"type": "Creature — Human Wizard Advisor ",
+			"collector_number": "29",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/29_Strict Instructor.png"
+			}
+		},
+		{
+			"name": "Illumination Savant",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{W}{W}",
+			"type": "Creature — Human Wizard Advisor ",
+			"collector_number": "7",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/7_Illumination Savant.png"
+			}
+		},
+		{
+			"name": "Oil the Mind",
+			"rarity": "uncommon",
+			"mana_cost": "{U}{B}",
+			"type": "Instant",
+			"collector_number": "79",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/79_Oil the Mind.png"
+			}
+		},
+		{
+			"name": "Arpechian Bellowers",
+			"rarity": "uncommon",
+			"mana_cost": "{3}{G}{G}",
+			"type": "Creature — Giant Beast ",
+			"collector_number": "62",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/62_Arpechian Bellowers.png"
+			}
+		},
+		{
+			"name": "Stir the Pot",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{B}",
+			"type": "Instant",
+			"collector_number": "44",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/44_Stir the Pot.png"
+			}
+		},
+		{
+			"name": "Cocky Bladesinger",
+			"rarity": "common",
+			"mana_cost": "{1}{R}{W}",
+			"type": "Creature — Human Warrior ",
+			"collector_number": "92",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/92_Cocky Bladesinger.png"
+			}
+		},
+		{
+			"name": "Training Duel",
+			"rarity": "common",
+			"mana_cost": "{2}{G}",
+			"type": "Sorcery",
+			"collector_number": "74",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/74_Training Duel.png"
+			}
+		},
+		{
+			"name": "Scintillating Tome",
+			"rarity": "common",
+			"mana_cost": "{2}",
+			"type": "Artifact",
+			"collector_number": "126",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/126_Scintillating Tome.png"
+			}
+		},
+		{
+			"name": "Bureaucratic Dues",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{W}{B}{G}",
+			"type": "Sorcery",
+			"collector_number": "98",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/98_Bureaucratic Dues.png"
+			}
+		},
+		{
+			"name": "Fencing Tutor",
+			"rarity": "common",
+			"mana_cost": "{2}{W}",
+			"type": "Creature — Human Soldier Advisor ",
+			"collector_number": "6",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/6_Fencing Tutor.png"
+			}
+		},
+		{
+			"name": "Jara Favored",
+			"rarity": "common",
+			"mana_cost": "{1}{B}{G}",
+			"type": "Creature — Human ",
+			"collector_number": "91",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/91_Jara Favored.png"
+			}
+		},
+		{
+			"name": "Cocky Delinquent",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{B}{R}{G}",
+			"type": "Creature — Human Warrior ",
+			"collector_number": "100",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/100_Cocky Delinquent.png"
+			}
+		},
+		{
+			"name": "Demanding Pupil",
+			"rarity": "uncommon",
+			"mana_cost": "{3}{W}{B}",
+			"type": "Creature — Human ",
+			"collector_number": "87",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/87_Demanding Pupil.png"
+			}
+		},
+		{
+			"name": "Endure Ennui",
+			"rarity": "uncommon",
+			"mana_cost": "{3}{U}{U}",
+			"type": "Sorcery",
+			"collector_number": "19",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/19_Endure Ennui.png"
+			}
+		},
+		{
+			"name": "Eager Guide",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{R}{R}",
+			"type": "Creature — Human ",
+			"collector_number": "51",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/51_Eager Guide.png"
+			}
+		},
+		{
+			"name": "Banishing Initiate",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{W}",
+			"type": "Creature — Human Wizard ",
+			"collector_number": "3",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/3_Banishing Initiate.png"
+			}
+		},
+		{
+			"name": "Arpechian Groundskeeper",
+			"rarity": "common",
+			"mana_cost": "{3}",
+			"type": "Artifact Creature — Construct ",
+			"collector_number": "116",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/116_Arpechian Groundskeeper.png"
+			}
+		},
+		{
+			"name": "Combustion Display",
+			"rarity": "common",
+			"mana_cost": "{2}{R}",
+			"type": "Sorcery",
+			"collector_number": "49",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/49_Combustion Display.png"
+			}
+		},
+		{
+			"name": "Academy Assessor",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{W}",
+			"type": "Creature — Human Advisor ",
+			"collector_number": "1",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/1_Academy Assessor.png"
+			}
+		},
+		{
+			"name": "Skyline Climber",
+			"rarity": "common",
+			"mana_cost": "{3}{W}",
+			"type": "Creature — Human Citizen ",
+			"collector_number": "13",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/13_Skyline Climber.png"
+			}
+		},
+		{
+			"name": "Recollection Revelation",
+			"rarity": "common",
+			"mana_cost": "{W}",
+			"type": "Enchantment",
+			"collector_number": "10",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/10_Recollection Revelation.png"
+			}
+		},
+		{
+			"name": "Almgrove Bladesinger",
+			"rarity": "common",
+			"mana_cost": "{R}",
+			"type": "Creature — Human Rogue ",
+			"collector_number": "46",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/46_Almgrove Bladesinger.png"
+			}
+		},
+		{
+			"name": "Almgrove Spellblade",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{U}{R}",
+			"type": "Creature — Human Wizard Warrior ",
+			"collector_number": "88",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/88_Almgrove Spellblade.png"
+			}
+		},
+		{
+			"name": "Wind Savant",
+			"rarity": "common",
+			"mana_cost": "{1}{W}",
+			"type": "Creature — Human Bard ",
+			"collector_number": "15",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/15_Wind Savant.png"
+			}
+		},
+		{
+			"name": "Challenging Pupil",
+			"rarity": "common",
+			"mana_cost": "{1}{R}",
+			"type": "Creature — Human Warrior ",
+			"collector_number": "47",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/47_Challenging Pupil.png"
+			}
+		},
+		{
+			"name": "Silkwrap Brawler",
+			"rarity": "common",
+			"mana_cost": "{2}{B}",
+			"type": "Creature — Human Warrior ",
+			"collector_number": "41",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/41_Silkwrap Brawler.png"
+			}
+		},
+		{
+			"name": "Arpechian Stag",
+			"rarity": "uncommon",
+			"mana_cost": "{4}{R}{G}{W}",
+			"type": "Creature — Elk ",
+			"collector_number": "96",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/96_Arpechian Stag.png"
+			}
+		},
+		{
+			"name": "Lost Through Dreams",
+			"rarity": "common",
+			"mana_cost": "{W}{U}",
+			"type": "Instant",
+			"collector_number": "77",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/77_Lost Through Dreams.png"
+			}
+		},
+		{
+			"name": "Jara Tutelage",
+			"rarity": "common",
+			"mana_cost": "{1}{G}",
+			"type": "Instant",
+			"collector_number": "69",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/69_Jara Tutelage.png"
+			}
+		},
+		{
+			"name": "Sensory Stimulation",
+			"rarity": "common",
+			"mana_cost": "{1}{U}",
+			"type": "Instant",
+			"collector_number": "27",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/27_Sensory Stimulation.png"
+			}
+		},
+		{
+			"name": "Shadowed Apostle",
+			"rarity": "common",
+			"mana_cost": "{1}{B}",
+			"type": "Creature — Human Shaman ",
+			"collector_number": "40",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/40_Shadowed Apostle.png"
+			}
+		},
+		{
+			"name": "Expensive Tutor",
+			"rarity": "common",
+			"mana_cost": "{2}{R}",
+			"type": "Creature — Human Advisor ",
+			"collector_number": "53",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/53_Expensive Tutor.png"
+			}
+		},
+		{
+			"name": "Extracurricular Studies",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{B}{B}",
+			"type": "Enchantment",
+			"collector_number": "31",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/31_Extracurricular Studies.png"
+			}
+		},
+		{
+			"name": "Review Curriculum",
+			"rarity": "common",
+			"mana_cost": "{2}{U}",
+			"type": "Sorcery",
+			"collector_number": "26",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/26_Review Curriculum.png"
+			}
+		},
+		{
+			"name": "Invigorating Shaman",
+			"rarity": "uncommon",
+			"mana_cost": "{R}{G}{W}",
+			"type": "Creature — Human Shaman ",
+			"collector_number": "108",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/108_Invigorating Shaman.png"
+			}
+		},
+		{
+			"name": "Entrancing Melody",
+			"rarity": "common",
+			"mana_cost": "{1}{W}",
+			"type": "Instant",
+			"collector_number": "5",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/5_Entrancing Melody.png"
+			}
+		},
+		{
+			"name": "Arpechian Architect",
+			"rarity": "common",
+			"mana_cost": "{1}{G}",
+			"type": "Creature — Human Advisor ",
+			"collector_number": "61",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/61_Arpechian Architect.png"
+			}
+		},
+		{
+			"name": "Gilded Duo",
+			"rarity": "common",
+			"mana_cost": "{3}{R}",
+			"type": "Creature — Human Wizard Warrior ",
+			"collector_number": "55",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/55_Gilded Duo.png"
+			}
+		},
+		{
+			"name": "Sending Stones",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{W}{W}",
+			"type": "Artifact",
+			"collector_number": "11",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/11_Sending Stones.png"
+			}
+		},
+		{
+			"name": "Endless Inspiration",
+			"rarity": "uncommon",
+			"mana_cost": "{3}{R}{R}",
+			"type": "Enchantment",
+			"collector_number": "52",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/52_Endless Inspiration.png"
+			}
+		},
+		{
+			"name": "Specialized Training Dummy",
+			"rarity": "common",
+			"mana_cost": "{1}",
+			"type": "Artifact Creature — Construct ",
+			"collector_number": "127",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/127_Specialized Training Dummy.png"
+			}
+		},
+		{
+			"name": "Autumnal Resonants",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{B}{R}{G}",
+			"type": "Creature — Elemental Bard ",
+			"collector_number": "97",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/97_Autumnal Resonants.png"
+			}
+		},
+		{
+			"name": "Flightful Fledgling",
+			"rarity": "common",
+			"mana_cost": "{3}{B}",
+			"type": "Creature — Human Warlock ",
+			"collector_number": "32",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/32_Flightful Fledgling.png"
+			}
+		},
+		{
+			"name": "Lightning and Thunder",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{R}",
+			"type": "Instant",
+			"collector_number": "56",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/56_Lightning and Thunder.png"
+			}
+		},
+		{
+			"name": "Growth Neverending",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{G}{U}{R}",
+			"type": "Sorcery",
+			"collector_number": "107",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/107_Growth Neverending.png"
+			}
+		},
+		{
+			"name": "Sing Through Steel",
+			"rarity": "common",
+			"mana_cost": "{R}",
+			"type": "Sorcery",
+			"collector_number": "59",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/59_Sing Through Steel.png"
+			}
+		},
+		{
+			"name": "Prism Mage",
+			"rarity": "common",
+			"mana_cost": "{W}",
+			"type": "Creature — Human Wizard ",
+			"collector_number": "9",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/9_Prism Mage.png"
+			}
+		},
+		{
+			"name": "Wander Arpechia",
+			"rarity": "common",
+			"mana_cost": "{1}{G}",
+			"type": "Sorcery",
+			"collector_number": "75",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/75_Wander Arpechia.png"
+			}
+		},
+		{
+			"name": "Counting Clouds",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{G}{W}{U}",
+			"type": "Instant",
+			"collector_number": "103",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/103_Counting Clouds.png"
+			}
+		},
+		{
+			"name": "Festive Servitor",
+			"rarity": "common",
+			"mana_cost": "{1}",
+			"type": "Artifact Creature — Construct ",
+			"collector_number": "122",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/122_Festive Servitor.png"
+			}
+		},
+		{
+			"name": "Chronotome",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{U}",
+			"type": "Artifact",
+			"collector_number": "16",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/16_Chronotome.png"
+			}
+		},
+		{
+			"name": "Capture Brilliance",
+			"rarity": "uncommon",
+			"mana_cost": "{4}{U}{B}{R}",
+			"type": "Sorcery",
+			"collector_number": "99",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/99_Capture Brilliance.png"
+			}
+		},
+		{
+			"name": "Updraft Dancer",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{R}{W}{B}",
+			"type": "Creature — Human ",
+			"collector_number": "113",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/113_Updraft Dancer.png"
+			}
+		},
+		{
+			"name": "Lift the Tides",
+			"rarity": "common",
+			"mana_cost": "{2}{G}{U}",
+			"type": "Sorcery",
+			"collector_number": "95",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/95_Lift the Tides.png"
+			}
+		},
+		{
+			"name": "Endless Sanctum",
+			"rarity": "uncommon",
+			"mana_cost": "{1}",
+			"type": "Artifact — Study ",
+			"collector_number": "121",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/121_Endless Sanctum.png"
+			}
+		},
+		{
+			"name": "Goliath Tamer",
+			"rarity": "common",
+			"mana_cost": "{2}{G}",
+			"type": "Creature — Human Druid ",
+			"collector_number": "67",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/67_Goliath Tamer.png"
+			}
+		},
+		{
+			"name": "Astrology Sanctum",
+			"rarity": "uncommon",
+			"mana_cost": "{1}",
+			"type": "Artifact — Study ",
+			"collector_number": "117",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/117_Astrology Sanctum.png"
+			}
+		},
+		{
+			"name": "Revelation Sanctum",
+			"rarity": "uncommon",
+			"mana_cost": "{1}",
+			"type": "Artifact — Study ",
+			"collector_number": "125",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/125_Revelation Sanctum.png"
+			}
+		},
+		{
+			"name": "Humble Archivist",
+			"rarity": "common",
+			"mana_cost": "{1}{U}",
+			"type": "Creature — Human Advisor ",
+			"collector_number": "23",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/23_Humble Archivist.png"
+			}
+		},
+		{
+			"name": "Harpstring Ranger",
+			"rarity": "common",
+			"mana_cost": "{2}{G}",
+			"type": "Creature — Human Archer ",
+			"collector_number": "68",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/68_Harpstring Ranger.png"
+			}
+		},
+		{
+			"name": "Irate Retribution",
+			"rarity": "uncommon",
+			"mana_cost": "{X}{B}{B}",
+			"type": "Sorcery",
+			"collector_number": "34",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/34_Irate Retribution.png"
+			}
+		},
+		{
+			"name": "Starfall Instructor",
+			"rarity": "common",
+			"mana_cost": "{B}{R}",
+			"type": "Creature — Human Wizard Advisor ",
+			"collector_number": "81",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/81_Starfall Instructor.png"
+			}
+		},
+		{
+			"name": "Gilded Conductor",
+			"rarity": "uncommon",
+			"mana_cost": "{3}",
+			"type": "Artifact Creature — Construct Bard ",
+			"collector_number": "123",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/123_Gilded Conductor.png"
+			}
+		},
+		{
+			"name": "Daydream",
+			"rarity": "common",
+			"mana_cost": "{1}{R}",
+			"type": "Instant",
+			"collector_number": "50",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/50_Daydream.png"
+			}
+		},
+		{
+			"name": "Tranquil Cultivator",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{G}{W}{U}",
+			"type": "Creature — Human Druid ",
+			"collector_number": "112",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/112_Tranquil Cultivator.png"
+			}
+		},
+		{
+			"name": "Curated Citations",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{U}",
+			"type": "Enchantment",
+			"collector_number": "17",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/17_Curated Citations.png"
+			}
+		},
+		{
+			"name": "Study Sphere",
+			"rarity": "common",
+			"mana_cost": "{1}{W}",
+			"type": "Enchantment",
+			"collector_number": "14",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/14_Study Sphere.png"
+			}
+		},
+		{
+			"name": "Twilight Dancer",
+			"rarity": "common",
+			"mana_cost": "{B}",
+			"type": "Creature — Human ",
+			"collector_number": "45",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/45_Twilight Dancer.png"
+			}
+		},
+		{
+			"name": "Break Their Guard",
+			"rarity": "common",
+			"mana_cost": "{R}{G}",
+			"type": "Sorcery",
+			"collector_number": "83",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/83_Break Their Guard.png"
+			}
+		},
+		{
+			"name": "Finishing Blow",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{R}",
+			"type": "Sorcery",
+			"collector_number": "54",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/54_Finishing Blow.png"
+			}
+		},
+		{
+			"name": "Cluttered Study",
+			"rarity": "common",
+			"mana_cost": "{2}",
+			"type": "Artifact",
+			"collector_number": "119",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/119_Cluttered Study.png"
+			}
+		},
+		{
+			"name": "Friend of Tides",
+			"rarity": "common",
+			"mana_cost": "{2}{U}",
+			"type": "Creature — Human Wizard ",
+			"collector_number": "22",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/22_Friend of Tides.png"
+			}
+		},
+		{
+			"name": "Almgrove Ensemble",
+			"rarity": "common",
+			"mana_cost": "{1}{W}{B}",
+			"type": "Creature — Human Bard Advisor ",
+			"collector_number": "86",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/86_Almgrove Ensemble.png"
+			}
+		},
+		{
+			"name": "Speed Reader",
+			"rarity": "common",
+			"mana_cost": "{1}{R}",
+			"type": "Creature — Human ",
+			"collector_number": "60",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/60_Speed Reader.png"
+			}
+		},
+		{
+			"name": "Weald Wanderer",
+			"rarity": "uncommon",
+			"mana_cost": "{W}{B}{G}",
+			"type": "Creature — Human Druid ",
+			"collector_number": "114",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/114_Weald Wanderer.png"
+			}
+		},
+		{
+			"name": "Thorn Tender",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{G}{W}",
+			"type": "Creature — Human Druid ",
+			"collector_number": "85",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/85_Thorn Tender.png"
+			}
+		},
+		{
+			"name": "Arpechian Conjurer",
+			"rarity": "uncommon",
+			"mana_cost": "{G}{U}",
+			"type": "Creature — Human Druid ",
+			"collector_number": "94",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/94_Arpechian Conjurer.png"
+			}
+		},
+		{
+			"name": "Serene Initiate",
+			"rarity": "uncommon",
+			"mana_cost": "{G}",
+			"type": "Creature — Human Druid ",
+			"collector_number": "72",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/72_Serene Initiate.png"
+			}
+		},
+		{
+			"name": "Bestower of Blooms",
+			"rarity": "common",
+			"mana_cost": "{G}",
+			"type": "Creature — Human Shaman ",
+			"collector_number": "63",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/63_Bestower of Blooms.png"
+			}
+		},
+		{
+			"name": "Rahit, Arcane Tutor",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{U}{U}",
+			"type": "Legendary Planeswalker — Rahit ",
+			"collector_number": "25",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/25_Rahit, Arcane Tutor.png"
+			}
+		},
+		{
+			"name": "Jara Disciplinarian",
+			"rarity": "common",
+			"mana_cost": "{2}{B}",
+			"type": "Creature — Human Advisor ",
+			"collector_number": "35",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/35_Jara Disciplinarian.png"
+			}
+		},
+		{
+			"name": "Coerced Tutelage",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{G}{U}{R}",
+			"type": "Sorcery",
+			"collector_number": "101",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/101_Coerced Tutelage.png"
+			}
+		},
+		{
+			"name": "Confident Amateur",
+			"rarity": "uncommon",
+			"mana_cost": "{B}{G}",
+			"type": "Creature — Elf Bard ",
+			"collector_number": "90",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/90_Confident Amateur.png"
+			}
+		},
+		{
+			"name": "Supernal Icon",
+			"rarity": "common",
+			"mana_cost": "{3}{U}",
+			"type": "Enchantment",
+			"collector_number": "30",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/30_Supernal Icon.png"
+			}
+		},
+		{
+			"name": "Compulsory Studies",
+			"rarity": "common",
+			"mana_cost": "{1}{W}",
+			"type": "Enchantment",
+			"collector_number": "4",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/4_Compulsory Studies.png"
+			}
+		},
+		{
+			"name": "Earthcraft Meditation",
+			"rarity": "uncommon",
+			"mana_cost": "{4}{G}{G}",
+			"type": "Enchantment",
+			"collector_number": "64",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/64_Earthcraft Meditation.png"
+			}
+		},
+		{
+			"name": "Freedom of Life",
+			"rarity": "common",
+			"mana_cost": "{2}{G}",
+			"type": "Sorcery",
+			"collector_number": "65",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/65_Freedom of Life.png"
+			}
+		},
+		{
+			"name": "Lengthy Lecture",
+			"rarity": "common",
+			"mana_cost": "{2}{B}",
+			"type": "Sorcery",
+			"collector_number": "37",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/37_Lengthy Lecture.png"
+			}
+		},
+		{
+			"name": "Glen Hunter",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{G}",
+			"type": "Creature — Human Rogue ",
+			"collector_number": "66",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/66_Glen Hunter.png"
+			}
+		},
+		{
+			"name": "Distract",
+			"rarity": "common",
+			"mana_cost": "{2}{U}",
+			"type": "Instant",
+			"collector_number": "18",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/18_Distract.png"
+			}
+		},
+		{
+			"name": "Dream Keeper",
+			"rarity": "common",
+			"mana_cost": "{U}{B}",
+			"type": "Creature — Human Wizard ",
+			"collector_number": "78",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/78_Dream Keeper.png"
+			}
+		},
+		{
+			"name": "Gild in Grace",
+			"rarity": "common",
+			"mana_cost": "{G}{W}",
+			"type": "Instant",
+			"collector_number": "84",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/84_Gild in Grace.png"
+			}
+		},
+		{
+			"name": "Gentle Lullaby",
+			"rarity": "common",
+			"mana_cost": "{1}{B}",
+			"type": "Instant",
+			"collector_number": "33",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/33_Gentle Lullaby.png"
+			}
+		},
+		{
+			"name": "Distilled Inspiration",
+			"rarity": "common",
+			"mana_cost": "{2}",
+			"type": "Artifact",
+			"collector_number": "120",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/120_Distilled Inspiration.png"
+			}
+		},
+		{
+			"name": "Rigorous Concentration",
+			"rarity": "common",
+			"mana_cost": "{B}",
+			"type": "Instant",
+			"collector_number": "39",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/39_Rigorous Concentration.png"
+			}
+		},
+		{
+			"name": "Professor Adelia",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{B}{G}{U}",
+			"type": "Legendary Creature — Elf Advisor ",
+			"collector_number": "109",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/109_Professor Adelia.png"
+			}
+		},
+		{
+			"name": "Professor's Assistant",
+			"rarity": "uncommon",
+			"mana_cost": "{R}",
+			"type": "Creature — Human Advisor ",
+			"collector_number": "57",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/57_Professor's Assistant.png"
+			}
+		},
+		{
+			"name": "Revisionary Studies",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{W}{U}{B}",
+			"type": "Sorcery",
+			"collector_number": "111",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/111_Revisionary Studies.png"
+			}
+		},
+		{
+			"name": "Rousing Roots",
+			"rarity": "common",
+			"mana_cost": "{3}{G}",
+			"type": "Sorcery",
+			"collector_number": "71",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/71_Rousing Roots.png"
+			}
+		},
+		{
+			"name": "Dayang's Displeasure",
+			"rarity": "uncommon",
+			"mana_cost": "{W}{U}{B}",
+			"type": "Instant",
+			"collector_number": "105",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/105_Dayang's Displeasure.png"
+			}
+		},
+		{
+			"name": "Dayang, Aspiring Muse",
+			"rarity": "uncommon",
+			"mana_cost": "{R}{W}",
+			"type": "Legendary Creature — Human Wizard ",
+			"collector_number": "93",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/93_Dayang, Aspiring Muse.png"
+			}
+		},
+		{
+			"name": "Craft Malice",
+			"rarity": "uncommon",
+			"mana_cost": "{3}{B}{R}",
+			"type": "Sorcery",
+			"collector_number": "80",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/80_Craft Malice.png"
+			}
+		},
+		{
+			"name": "Compose from Dreams",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{U}{B}{R}",
+			"type": "Enchantment",
+			"collector_number": "102",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/102_Compose from Dreams.png"
+			}
+		},
+		{
+			"name": "Esoteric Herbology",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{B}{G}{U}",
+			"type": "Sorcery",
+			"collector_number": "106",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/106_Esoteric Herbology.png"
+			}
+		},
+		{
+			"name": "Yita, Almgrove Prodigy",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{U}{R}{W}",
+			"type": "Legendary Creature — Human Warrior ",
+			"collector_number": "115",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/115_Yita, Almgrove Prodigy.png"
+			}
+		},
+		{
+			"name": "Almgrove Performer",
+			"rarity": "common",
+			"mana_cost": "{1}{W}",
+			"type": "Creature — Human Bard ",
+			"collector_number": "2",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/2_Almgrove Performer.png"
+			}
+		},
+		{
+			"name": "Chaotic Pupil",
+			"rarity": "common",
+			"mana_cost": "{1}{U}{R}",
+			"type": "Creature — Human Wizard ",
+			"collector_number": "89",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/89_Chaotic Pupil.png"
+			}
+		},
+		{
+			"name": "Focused Apprentice",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{U}",
+			"type": "Creature — Human Wizard ",
+			"collector_number": "21",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/21_Focused Apprentice.png"
+			}
+		},
+		{
+			"name": "Senior Warding",
+			"rarity": "common",
+			"mana_cost": "{W}",
+			"type": "Instant",
+			"collector_number": "12",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/12_Senior Warding.png"
+			}
+		},
+		{
+			"name": "Learn Through Error",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{B}",
+			"type": "Enchantment",
+			"collector_number": "36",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/36_Learn Through Error.png"
+			}
+		},
+		{
+			"name": "Studies Past",
+			"rarity": "uncommon",
+			"mana_cost": "{X}{G}{G}",
+			"type": "Sorcery",
+			"collector_number": "73",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/73_Studies Past.png"
+			}
+		},
+		{
+			"name": "Spectacle of Arpechia",
+			"rarity": "common",
+			"mana_cost": "{3}{B}",
+			"type": "Instant",
+			"collector_number": "43",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/43_Spectacle of Arpechia.png"
+			}
+		},
+		{
+			"name": "Flourishing Forest",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Land — Forest ",
+			"collector_number": "129",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/129_Flourishing Forest.png"
+			}
+		},
+		{
+			"name": "Flourishing Island",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Land — Island ",
+			"collector_number": "130",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/130_Flourishing Island.png"
+			}
+		},
+		{
+			"name": "Flourishing Plains",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Land — Plains ",
+			"collector_number": "132",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/132_Flourishing Plains.png"
+			}
+		},
+		{
+			"name": "Flourishing Swamp",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Land — Swamp ",
+			"collector_number": "133",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/133_Flourishing Swamp.png"
+			}
+		},
+		{
+			"name": "Flourishing Mountain",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Land — Mountain ",
+			"collector_number": "131",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/131_Flourishing Mountain.png"
+			}
+		},
+		{
+			"name": "Ardy, Indecisive Pupil",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{R}{G}",
+			"type": "Legendary Planeswalker — Ardy ",
+			"collector_number": "82",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/82_Ardy, Indecisive Pupil.png"
+			}
+		},
+		{
+			"name": "Dayang's Artistry",
+			"rarity": "uncommon",
+			"mana_cost": "{U}{R}{W}",
+			"type": "Enchantment",
+			"collector_number": "104",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/104_Dayang's Artistry.png"
+			}
+		},
+		{
+			"name": "Soldier",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Creature — Soldier ",
+			"collector_number": "3",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/3_Soldier.png"
+			}
+		},
+		{
+			"name": "Elemental",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Creature — Elemental ",
+			"collector_number": "7",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/7_Elemental.png"
+			}
+		},
+		{
+			"name": "Green Elk",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Creature — Elk ",
+			"collector_number": "5",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/5_Green Elk.png"
+			}
+		},
+		{
+			"name": "White Elk",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Creature — Elk ",
+			"collector_number": "1",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/1_White Elk.png"
+			}
+		},
+		{
+			"name": "Red Elk",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Creature — Elk ",
+			"collector_number": "4",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/4_Red Elk.png"
+			}
+		},
+		{
+			"name": "Luminescent Feathrets",
+			"rarity": "uncommon",
+			"mana_cost": "{X}{W}",
+			"type": "Token Creature — Ferret Bird ",
+			"collector_number": "2",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/2_Luminescent Feathrets.png"
+			}
+		},
+		{
+			"name": "Plant Knight",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Creature — Plant Knight ",
+			"collector_number": "6",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/6_Plant Knight.png"
+			}
+		},
+		{
+			"name": "Plains",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Basic Land — Plains ",
+			"collector_number": "136",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/136_Plains.png"
+			}
+		},
+		{
+			"name": "Island",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Basic Land — Island ",
+			"collector_number": "137",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/137_Island.png"
+			}
+		},
+		{
+			"name": "Swamp",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Basic Land — Swamp ",
+			"collector_number": "138",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/138_Swamp.png"
+			}
+		},
+		{
+			"name": "Mountain",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Basic Land — Mountain ",
+			"collector_number": "139",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/139_Mountain.png"
+			}
+		},
+		{
+			"name": "Forest",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Basic Land — Forest ",
+			"collector_number": "140",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/140_Forest.png"
+			}
+		},
+		]
+	

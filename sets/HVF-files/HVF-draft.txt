@@ -1,0 +1,1723 @@
+﻿[CustomCards]
+	[	{
+			"name": "Fate of the Wayward",
+			"rarity": "common",
+			"mana_cost": "{1}{U}",
+			"type": "Enchantment — Aura Persona ",
+			"collector_number": "35",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/35_Fate of the Wayward.png"
+			}
+		},
+		{
+			"name": "Inspiring Journey",
+			"rarity": "common",
+			"mana_cost": "{6}{U}",
+			"type": "Instant",
+			"collector_number": "37",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/37_Inspiring Journey.png"
+			}
+		},
+		{
+			"name": "Steady Reminiscence",
+			"rarity": "common",
+			"mana_cost": "{1}{B}",
+			"type": "Enchantment — Aura ",
+			"collector_number": "65",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/65_Steady Reminiscence.png"
+			}
+		},
+		{
+			"name": "Crinster Innocents",
+			"rarity": "common",
+			"mana_cost": "{1}{R}",
+			"type": "Creature — Human Citizen ",
+			"collector_number": "75",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/75_Crinster Innocents.png"
+			}
+		},
+		{
+			"name": "Nomadic Patriarch",
+			"rarity": "uncommon",
+			"mana_cost": "{B}{G}",
+			"type": "Creature — Elf Citizen ",
+			"collector_number": "129",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/129_Nomadic Patriarch.png"
+			}
+		},
+		{
+			"name": "Crinster Sheepdog",
+			"rarity": "common",
+			"mana_cost": "{1}{G}",
+			"type": "Creature — Hound ",
+			"collector_number": "95",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/95_Crinster Sheepdog.png"
+			}
+		},
+		{
+			"name": "Hunting Hound",
+			"rarity": "common",
+			"mana_cost": "{1}{W}",
+			"type": "Creature — Hound ",
+			"collector_number": "16",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/16_Hunting Hound.png"
+			}
+		},
+		{
+			"name": "Grinning Fox",
+			"rarity": "common",
+			"mana_cost": "{2}{U}{U}",
+			"type": "Creature — Fox ",
+			"collector_number": "36",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/36_Grinning Fox.png"
+			}
+		},
+		{
+			"name": "Fate of the Brave",
+			"rarity": "common",
+			"mana_cost": "{1}{R}",
+			"type": "Enchantment — Aura Persona ",
+			"collector_number": "78",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/78_Fate of the Brave.png"
+			}
+		},
+		{
+			"name": "Fertile Fields",
+			"rarity": "common",
+			"mana_cost": "{2}{G}",
+			"type": "Sorcery",
+			"collector_number": "100",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/100_Fertile Fields.png"
+			}
+		},
+		{
+			"name": "Familial Matriarch",
+			"rarity": "common",
+			"mana_cost": "{2}{G}",
+			"type": "Creature — Human Citizen ",
+			"collector_number": "98",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/98_Familial Matriarch.png"
+			}
+		},
+		{
+			"name": "Crop Warden",
+			"rarity": "common",
+			"mana_cost": "{G}",
+			"type": "Creature — Scarecrow ",
+			"collector_number": "96",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/96_Crop Warden.png"
+			}
+		},
+		{
+			"name": "Scarecrow",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Creature — Scarecrow ",
+			"collector_number": "134",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/134_Scarecrow.png"
+			}
+		},
+		{
+			"name": "Embergourd Scarecrow",
+			"rarity": "uncommon",
+			"mana_cost": "{R}{G}",
+			"type": "Creature — Scarecrow ",
+			"collector_number": "120",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/120_Embergourd Scarecrow.png"
+			}
+		},
+		{
+			"name": "Citizen",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Creature — Citizen ",
+			"collector_number": "5",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/5_Citizen.png"
+			}
+		},
+		{
+			"name": "Cackling Jack",
+			"rarity": "common",
+			"mana_cost": "{2}{R}{R}",
+			"type": "Creature — Scarecrow ",
+			"collector_number": "74",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/74_Cackling Jack.png"
+			}
+		},
+		{
+			"name": "Crinster Stitcher",
+			"rarity": "common",
+			"mana_cost": "{W}",
+			"type": "Creature — Human Cleric ",
+			"collector_number": "7",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/7_Crinster Stitcher.png"
+			}
+		},
+		{
+			"name": "Driven to Distraction",
+			"rarity": "uncommon",
+			"mana_cost": "{W}",
+			"type": "Enchantment — Aura ",
+			"collector_number": "9",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/9_Driven to Distraction.png"
+			}
+		},
+		{
+			"name": "Elder Roc",
+			"rarity": "common",
+			"mana_cost": "{2}{W}{W}",
+			"type": "Creature — Bird ",
+			"collector_number": "10",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/10_Elder Roc.png"
+			}
+		},
+		{
+			"name": "Playful Child",
+			"rarity": "common",
+			"mana_cost": "{W}",
+			"type": "Creature — Human Citizen ",
+			"collector_number": "21",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/21_Playful Child.png"
+			}
+		},
+		{
+			"name": "Ainok Brushwacker",
+			"rarity": "common",
+			"mana_cost": "{1}{W}{W}",
+			"type": "Creature — Hound Soldier ",
+			"collector_number": "1",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/1_Ainok Brushwacker.png"
+			}
+		},
+		{
+			"name": "Ainok Lout",
+			"rarity": "common",
+			"mana_cost": "{R}",
+			"type": "Creature — Hound Warrior ",
+			"collector_number": "70",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/70_Ainok Lout.png"
+			}
+		},
+		{
+			"name": "Ainok Pack",
+			"rarity": "common",
+			"mana_cost": "{1}{W}",
+			"type": "Creature — Hound Scout ",
+			"collector_number": "3",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/3_Ainok Pack.png"
+			}
+		},
+		{
+			"name": "Bauble Collector",
+			"rarity": "common",
+			"mana_cost": "{2}{G}",
+			"type": "Creature — Beast ",
+			"collector_number": "90",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/90_Bauble Collector.png"
+			}
+		},
+		{
+			"name": "Keeper of the Whispers",
+			"rarity": "uncommon",
+			"mana_cost": "{3}{B}{R}",
+			"type": "Creature — Zombie ",
+			"collector_number": "118",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/118_Keeper of the Whispers.png"
+			}
+		},
+		{
+			"name": "Conjuring Minstrel",
+			"rarity": "common",
+			"mana_cost": "{2}{W}",
+			"type": "Creature — Human Wizard ",
+			"collector_number": "6",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/6_Conjuring Minstrel.png"
+			}
+		},
+		{
+			"name": "Fate of the Devout",
+			"rarity": "common",
+			"mana_cost": "{1}{W}",
+			"type": "Enchantment — Aura Persona ",
+			"collector_number": "11",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/11_Fate of the Devout.png"
+			}
+		},
+		{
+			"name": "Hint of Exuberance",
+			"rarity": "common",
+			"mana_cost": "{1}{W}",
+			"type": "Instant",
+			"collector_number": "15",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/15_Hint of Exuberance.png"
+			}
+		},
+		{
+			"name": "Gallant Chevalier",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{G}{W}",
+			"type": "Creature — Horse Knight ",
+			"collector_number": "122",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/122_Gallant Chevalier.png"
+			}
+		},
+		{
+			"name": "Humored Outlaw",
+			"rarity": "common",
+			"mana_cost": "{2}{G}{G}",
+			"type": "Creature — Human Rogue ",
+			"collector_number": "104",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/104_Humored Outlaw.png"
+			}
+		},
+		{
+			"name": "Amateur Pilfering",
+			"rarity": "common",
+			"mana_cost": "{1}{U}",
+			"type": "Sorcery",
+			"collector_number": "23",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/23_Amateur Pilfering.png"
+			}
+		},
+		{
+			"name": "Crinster Ranger",
+			"rarity": "common",
+			"mana_cost": "{5}{G}",
+			"type": "Creature — Human Ranger ",
+			"collector_number": "94",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/94_Crinster Ranger.png"
+			}
+		},
+		{
+			"name": "Siesa Tremund",
+			"rarity": "rare",
+			"mana_cost": "{3}{B}{B}",
+			"type": "Legendary Creature — Gorgon Archer ",
+			"collector_number": "62",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/62_Siesa Tremund.png"
+			}
+		},
+		{
+			"name": "Fate of the Weary",
+			"rarity": "common",
+			"mana_cost": "{1}{B}",
+			"type": "Enchantment — Aura Persona ",
+			"collector_number": "50",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/50_Fate of the Weary.png"
+			}
+		},
+		{
+			"name": "Homestead Watcher",
+			"rarity": "common",
+			"mana_cost": "{3}{G}{G}",
+			"type": "Creature — Gorgon ",
+			"collector_number": "103",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/103_Homestead Watcher.png"
+			}
+		},
+		{
+			"name": "Fate of the Generous",
+			"rarity": "common",
+			"mana_cost": "{1}{G}",
+			"type": "Enchantment — Aura Persona ",
+			"collector_number": "99",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/99_Fate of the Generous.png"
+			}
+		},
+		{
+			"name": "Gorgon's Gaze",
+			"rarity": "common",
+			"mana_cost": "{4}{G}",
+			"type": "Instant",
+			"collector_number": "101",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/101_Gorgon's Gaze.png"
+			}
+		},
+		{
+			"name": "Chef's Apprentice",
+			"rarity": "common",
+			"mana_cost": "{1}{U}",
+			"type": "Creature — Human Wizard ",
+			"collector_number": "29",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/29_Chef's Apprentice.png"
+			}
+		},
+		{
+			"name": "Intoxicate",
+			"rarity": "common",
+			"mana_cost": "{2}{B}",
+			"type": "Instant",
+			"collector_number": "55",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/55_Intoxicate.png"
+			}
+		},
+		{
+			"name": "Reminiscing Youth",
+			"rarity": "common",
+			"mana_cost": "{1}{R}",
+			"type": "Creature — Human Citizen ",
+			"collector_number": "83",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/83_Reminiscing Youth.png"
+			}
+		},
+		{
+			"name": "Bellani Mystic",
+			"rarity": "common",
+			"mana_cost": "{B}",
+			"type": "Creature — Human Shaman ",
+			"collector_number": "46",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/46_Bellani Mystic.png"
+			}
+		},
+		{
+			"name": "Witch's Apprentice",
+			"rarity": "common",
+			"mana_cost": "{U}",
+			"type": "Creature — Elf Shaman ",
+			"collector_number": "43",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/43_Witch's Apprentice.png"
+			}
+		},
+		{
+			"name": "Feed the Eager",
+			"rarity": "common",
+			"mana_cost": "{W}",
+			"type": "Sorcery",
+			"collector_number": "12",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/12_Feed the Eager.png"
+			}
+		},
+		{
+			"name": "Herald of the Hunt",
+			"rarity": "uncommon",
+			"mana_cost": "{R}{W}",
+			"type": "Creature — Human Scout ",
+			"collector_number": "131",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/131_Herald of the Hunt.png"
+			}
+		},
+		{
+			"name": "Traveling Thespians",
+			"rarity": "uncommon",
+			"mana_cost": "{W}{B}",
+			"type": "Creature — Human Citizen ",
+			"collector_number": "125",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/125_Traveling Thespians.png"
+			}
+		},
+		{
+			"name": "Autumnal Astrologer",
+			"rarity": "uncommon",
+			"mana_cost": "{3}{W}{U}",
+			"type": "Creature — Human Advisor ",
+			"collector_number": "112",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/112_Autumnal Astrologer.png"
+			}
+		},
+		{
+			"name": "Mountain",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Basic Land — Mountain ",
+			"collector_number": "170",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/170_Mountain.png"
+			}
+		},
+		{
+			"name": "Island",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Basic Land — Island ",
+			"collector_number": "168",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/168_Island.png"
+			}
+		},
+		{
+			"name": "Forest",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Basic Land — Forest ",
+			"collector_number": "171",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/171_Forest.png"
+			}
+		},
+		{
+			"name": "Spirit",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Creature — Spirit ",
+			"collector_number": "64",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/64_Spirit.png"
+			}
+		},
+		{
+			"name": "Legend of the Generous",
+			"rarity": "rare",
+			"mana_cost": "{2}{G}{G}",
+			"type": "Legendary Enchantment — Aura Persona ",
+			"collector_number": "106",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/106_Legend of the Generous.png"
+			}
+		},
+		{
+			"name": "Legend of the Devout",
+			"rarity": "rare",
+			"mana_cost": "{2}{W}{W}",
+			"type": "Legendary Enchantment — Aura Persona ",
+			"collector_number": "18",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/18_Legend of the Devout.png"
+			}
+		},
+		{
+			"name": "Legend of the Weary",
+			"rarity": "rare",
+			"mana_cost": "{2}{B}{B}",
+			"type": "Legendary Enchantment — Aura Persona ",
+			"collector_number": "56",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/56_Legend of the Weary.png"
+			}
+		},
+		{
+			"name": "Legend of the Wayward",
+			"rarity": "rare",
+			"mana_cost": "{2}{U}{U}",
+			"type": "Legendary Enchantment — Aura Persona ",
+			"collector_number": "38",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/38_Legend of the Wayward.png"
+			}
+		},
+		{
+			"name": "Furtive Witch",
+			"rarity": "rare",
+			"mana_cost": "{2}{W}",
+			"type": "Creature — Human Shaman ",
+			"collector_number": "13",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/13_Furtive Witch.png"
+			}
+		},
+		{
+			"name": "Peel from Reality",
+			"rarity": "common",
+			"mana_cost": "{1}{U}",
+			"type": "Instant",
+			"collector_number": "40",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/40_Peel from Reality.png"
+			}
+		},
+		{
+			"name": "Yuren Lappowen",
+			"rarity": "rare",
+			"mana_cost": "{1}{U}",
+			"type": "Legendary Creature — Human Citizen ",
+			"collector_number": "44",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/44_Yuren Lappowen.png"
+			}
+		},
+		{
+			"name": "Selma Lappowen",
+			"rarity": "rare",
+			"mana_cost": "{1}{R}",
+			"type": "Legendary Creature — Human Citizen ",
+			"collector_number": "85",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/85_Selma Lappowen.png"
+			}
+		},
+		{
+			"name": "Grayce Blaen",
+			"rarity": "rare",
+			"mana_cost": "{2}{G}",
+			"type": "Legendary Creature — Human Citizen ",
+			"collector_number": "102",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/102_Grayce Blaen.png"
+			}
+		},
+		{
+			"name": "Winter's Whelp",
+			"rarity": "common",
+			"mana_cost": "{1}{B}",
+			"type": "Creature — Spirit ",
+			"collector_number": "67",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/67_Winter's Whelp.png"
+			}
+		},
+		{
+			"name": "Maghbri Whisper",
+			"rarity": "common",
+			"mana_cost": "{2}{B}",
+			"type": "Creature — Zombie ",
+			"collector_number": "59",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/59_Maghbri Whisper.png"
+			}
+		},
+		{
+			"name": "Maghbri Hunter",
+			"rarity": "common",
+			"mana_cost": "{2}{R}",
+			"type": "Creature — Human Archer ",
+			"collector_number": "82",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/82_Maghbri Hunter.png"
+			}
+		},
+		{
+			"name": "Legend of the Brave",
+			"rarity": "rare",
+			"mana_cost": "{2}{R}{R}",
+			"type": "Legendary Enchantment — Aura Persona ",
+			"collector_number": "81",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/81_Legend of the Brave.png"
+			}
+		},
+		{
+			"name": "Scrollsnatcher",
+			"rarity": "uncommon",
+			"mana_cost": "{U}{B}",
+			"type": "Creature — Human Rogue ",
+			"collector_number": "116",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/116_Scrollsnatcher.png"
+			}
+		},
+		{
+			"name": "Cybele, Mertle's Apprentice",
+			"rarity": "rare",
+			"mana_cost": "{2}{W}{W}",
+			"type": "Legendary Creature — Human Shaman ",
+			"collector_number": "8",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/8_Cybele, Mertle's Apprentice.png"
+			}
+		},
+		{
+			"name": "Whisper Witch",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{U}{U}",
+			"type": "Creature — Zombie Shaman ",
+			"collector_number": "42",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/42_Whisper Witch.png"
+			}
+		},
+		{
+			"name": "Lumber Camp",
+			"rarity": "uncommon",
+			"mana_cost": "{5}",
+			"type": "Artifact",
+			"collector_number": "142",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/142_Lumber Camp.png"
+			}
+		},
+		{
+			"name": "Ainok Scout",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{G}{U}",
+			"type": "Creature — Hound Scout ",
+			"collector_number": "132",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/132_Ainok Scout.png"
+			}
+		},
+		{
+			"name": "Charm Canary",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{W}",
+			"type": "Creature — Bird ",
+			"collector_number": "4",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/4_Charm Canary.png"
+			}
+		},
+		{
+			"name": "Borderland Garrison",
+			"rarity": "common",
+			"mana_cost": "{2}{R}",
+			"type": "Creature — Hound Soldier ",
+			"collector_number": "73",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/73_Borderland Garrison.png"
+			}
+		},
+		{
+			"name": "Autumn Song",
+			"rarity": "common",
+			"mana_cost": "{1}{R}",
+			"type": "Sorcery",
+			"collector_number": "71",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/71_Autumn Song.png"
+			}
+		},
+		{
+			"name": "Crinster Blacksmith",
+			"rarity": "common",
+			"mana_cost": "{2}{B}{B}",
+			"type": "Creature — Human Citizen ",
+			"collector_number": "48",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/48_Crinster Blacksmith.png"
+			}
+		},
+		{
+			"name": "Lord's Handmaiden",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{W}",
+			"type": "Creature — Human Noble ",
+			"collector_number": "20",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/20_Lord's Handmaiden.png"
+			}
+		},
+		{
+			"name": "Clouded Mind",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{U}",
+			"type": "Instant",
+			"collector_number": "31",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/31_Clouded Mind.png"
+			}
+		},
+		{
+			"name": "Lady's Master-of-Arms",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{W}{W}",
+			"type": "Creature — Human Soldier ",
+			"collector_number": "17",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/17_Lady's Master-of-Arms.png"
+			}
+		},
+		{
+			"name": "Burnished Plate",
+			"rarity": "common",
+			"mana_cost": "{2}",
+			"type": "Artifact — Equipment ",
+			"collector_number": "136",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/136_Burnished Plate.png"
+			}
+		},
+		{
+			"name": "Expedition Map",
+			"rarity": "uncommon",
+			"mana_cost": "{1}",
+			"type": "Artifact",
+			"collector_number": "138",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/138_Expedition Map.png"
+			}
+		},
+		{
+			"name": "Foraging Gear",
+			"rarity": "common",
+			"mana_cost": "{2}",
+			"type": "Artifact — Equipment ",
+			"collector_number": "139",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/139_Foraging Gear.png"
+			}
+		},
+		{
+			"name": "Climber's Gear",
+			"rarity": "common",
+			"mana_cost": "{1}",
+			"type": "Artifact — Equipment ",
+			"collector_number": "137",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/137_Climber's Gear.png"
+			}
+		},
+		{
+			"name": "Tinkering Swarm",
+			"rarity": "mythic",
+			"mana_cost": "{3}",
+			"type": "Artifact Creature — Rat Construct ",
+			"collector_number": "145",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/145_Tinkering Swarm.png"
+			}
+		},
+		{
+			"name": "Tinkering Swarm",
+			"rarity": "common",
+			"mana_cost": "{3}",
+			"type": "Token Artifact Creature — Rat Construct ",
+			"collector_number": "1",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/1_Tinkering Swarm.png"
+			}
+		},
+		{
+			"name": "Marked Coin",
+			"rarity": "common",
+			"mana_cost": "{1}",
+			"type": "Artifact",
+			"collector_number": "143",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/143_Marked Coin.png"
+			}
+		},
+		{
+			"name": "Crinster Falconer",
+			"rarity": "common",
+			"mana_cost": "{4}{U}",
+			"type": "Creature — Human Scout ",
+			"collector_number": "32",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/32_Crinster Falconer.png"
+			}
+		},
+		{
+			"name": "Bird",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Creature — Bird ",
+			"collector_number": "25",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/25_Bird.png"
+			}
+		},
+		{
+			"name": "Frailty",
+			"rarity": "uncommon",
+			"mana_cost": "{B}",
+			"type": "Instant",
+			"collector_number": "52",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/52_Frailty.png"
+			}
+		},
+		{
+			"name": "Fey Grove",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Land",
+			"collector_number": "156",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/156_Fey Grove.png"
+			}
+		},
+		{
+			"name": "Frigid Thicket",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Land",
+			"collector_number": "157",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/157_Frigid Thicket.png"
+			}
+		},
+		{
+			"name": "Soaring Canyon",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Land",
+			"collector_number": "165",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/165_Soaring Canyon.png"
+			}
+		},
+		{
+			"name": "Verdant Bluff",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Land",
+			"collector_number": "166",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/166_Verdant Bluff.png"
+			}
+		},
+		{
+			"name": "Haunted Boughs",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Land",
+			"collector_number": "158",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/158_Haunted Boughs.png"
+			}
+		},
+		{
+			"name": "Ruined Precipice",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Land",
+			"collector_number": "164",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/164_Ruined Precipice.png"
+			}
+		},
+		{
+			"name": "Canyon Creek",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Land",
+			"collector_number": "151",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/151_Canyon Creek.png"
+			}
+		},
+		{
+			"name": "Crystal Grotto",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Land",
+			"collector_number": "153",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/153_Crystal Grotto.png"
+			}
+		},
+		{
+			"name": "Cloud Rock",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Land",
+			"collector_number": "152",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/152_Cloud Rock.png"
+			}
+		},
+		{
+			"name": "Cumulus Horizon",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Land",
+			"collector_number": "154",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/154_Cumulus Horizon.png"
+			}
+		},
+		{
+			"name": "Spirit of Autumn",
+			"rarity": "rare",
+			"mana_cost": "{1}{R}{G}",
+			"type": "Creature — Elemental ",
+			"collector_number": "121",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/121_Spirit of Autumn.png"
+			}
+		},
+		{
+			"name": "Forced Offering",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{B}",
+			"type": "Sorcery",
+			"collector_number": "51",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/51_Forced Offering.png"
+			}
+		},
+		{
+			"name": "Seasoned Packfather",
+			"rarity": "rare",
+			"mana_cost": "{3}{G}{W}",
+			"type": "Creature — Hound Scout ",
+			"collector_number": "123",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/123_Seasoned Packfather.png"
+			}
+		},
+		{
+			"name": "Glacial Buttress",
+			"rarity": "common",
+			"mana_cost": "{3}",
+			"type": "Artifact Creature — Wall ",
+			"collector_number": "140",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/140_Glacial Buttress.png"
+			}
+		},
+		{
+			"name": "Scion of the Wild",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{G}{G}",
+			"type": "Creature — Elemental ",
+			"collector_number": "109",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/109_Scion of the Wild.png"
+			}
+		},
+		{
+			"name": "Ainok Alpha",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{R}",
+			"type": "Creature — Hound Warrior ",
+			"collector_number": "69",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/69_Ainok Alpha.png"
+			}
+		},
+		{
+			"name": "Ainok Caretaker",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{W}",
+			"type": "Creature — Hound Citizen ",
+			"collector_number": "2",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/2_Ainok Caretaker.png"
+			}
+		},
+		{
+			"name": "Loyal Watchdog",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{G}",
+			"type": "Creature — Hound ",
+			"collector_number": "107",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/107_Loyal Watchdog.png"
+			}
+		},
+		{
+			"name": "Ainok Hunter",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{G}",
+			"type": "Creature — Hound Scout ",
+			"collector_number": "89",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/89_Ainok Hunter.png"
+			}
+		},
+		{
+			"name": "Roads Untraveled",
+			"rarity": "uncommon",
+			"mana_cost": "{G}",
+			"type": "Sorcery",
+			"collector_number": "108",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/108_Roads Untraveled.png"
+			}
+		},
+		{
+			"name": "Autumn Moon",
+			"rarity": "uncommon",
+			"mana_cost": "",
+			"type": "Land",
+			"collector_number": "149",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/149_Autumn Moon.png"
+			}
+		},
+		{
+			"name": "Evolving Wilds",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Land",
+			"collector_number": "155",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/155_Evolving Wilds.png"
+			}
+		},
+		{
+			"name": "Herd of Sheep",
+			"rarity": "rare",
+			"mana_cost": "{W}{W}",
+			"type": "Creature — Sheep ",
+			"collector_number": "14",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/14_Herd of Sheep.png"
+			}
+		},
+		{
+			"name": "Moon of the Promised Day",
+			"rarity": "uncommon",
+			"mana_cost": "",
+			"type": "Land — Forest ",
+			"collector_number": "163",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/163_Moon of the Promised Day.png"
+			}
+		},
+		{
+			"name": "Moon of the Lingering Day",
+			"rarity": "uncommon",
+			"mana_cost": "",
+			"type": "Land — Mountain ",
+			"collector_number": "162",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/162_Moon of the Lingering Day.png"
+			}
+		},
+		{
+			"name": "Moon of the Final Dawn",
+			"rarity": "uncommon",
+			"mana_cost": "",
+			"type": "Land — Plains ",
+			"collector_number": "160",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/160_Moon of the Final Dawn.png"
+			}
+		},
+		{
+			"name": "Moon of the Encroaching Night",
+			"rarity": "uncommon",
+			"mana_cost": "",
+			"type": "Land — Swamp ",
+			"collector_number": "159",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/159_Moon of the Encroaching Night.png"
+			}
+		},
+		{
+			"name": "Moon of the Frozen Dusk",
+			"rarity": "uncommon",
+			"mana_cost": "",
+			"type": "Land — Island ",
+			"collector_number": "161",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/161_Moon of the Frozen Dusk.png"
+			}
+		},
+		{
+			"name": "Song of the Harvest",
+			"rarity": "uncommon",
+			"mana_cost": "{3}{G}{G}",
+			"type": "Sorcery",
+			"collector_number": "110",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/110_Song of the Harvest.png"
+			}
+		},
+		{
+			"name": "Midnight Stalking",
+			"rarity": "common",
+			"mana_cost": "{4}{B}",
+			"type": "Sorcery",
+			"collector_number": "60",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/60_Midnight Stalking.png"
+			}
+		},
+		{
+			"name": "Bout of Boredom",
+			"rarity": "common",
+			"mana_cost": "{1}{U}",
+			"type": "Enchantment — Aura ",
+			"collector_number": "26",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/26_Bout of Boredom.png"
+			}
+		},
+		{
+			"name": "Exhausted Farmhand",
+			"rarity": "rare",
+			"mana_cost": "{B}{G}",
+			"type": "Creature — Human Citizen ",
+			"collector_number": "128",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/128_Exhausted Farmhand.png"
+			}
+		},
+		{
+			"name": "Inviting Feast",
+			"rarity": "common",
+			"mana_cost": "{3}{R}{R}",
+			"type": "Sorcery",
+			"collector_number": "79",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/79_Inviting Feast.png"
+			}
+		},
+		{
+			"name": "Charitable Wisdom",
+			"rarity": "mythic",
+			"mana_cost": "{1}{G}",
+			"type": "Sorcery",
+			"collector_number": "92",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/92_Charitable Wisdom.png"
+			}
+		},
+		{
+			"name": "Stormchaser Mage",
+			"rarity": "uncommon",
+			"mana_cost": "{U}{R}",
+			"type": "Creature — Human Wizard ",
+			"collector_number": "126",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/126_Stormchaser Mage.png"
+			}
+		},
+		{
+			"name": "Cornucopia Crescendo",
+			"rarity": "rare",
+			"mana_cost": "{X}{X}{G}{G}",
+			"type": "Sorcery",
+			"collector_number": "93",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/93_Cornucopia Crescendo.png"
+			}
+		},
+		{
+			"name": "Plains",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Basic Land — Plains ",
+			"collector_number": "167",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/167_Plains.png"
+			}
+		},
+		{
+			"name": "Swamp",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Basic Land — Swamp ",
+			"collector_number": "169",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/169_Swamp.png"
+			}
+		},
+		{
+			"name": "Radiant Bonds",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{W}",
+			"type": "Enchantment — Aura ",
+			"collector_number": "22",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/22_Radiant Bonds.png"
+			}
+		},
+		{
+			"name": "Twinfire Dragon",
+			"rarity": "rare",
+			"mana_cost": "{2}{B}{R}",
+			"type": "Creature — Dragon ",
+			"collector_number": "119",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/119_Twinfire Dragon.png"
+			}
+		},
+		{
+			"name": "Braenid Nomad",
+			"rarity": "common",
+			"mana_cost": "{1}{U}{U}",
+			"type": "Creature — Merfolk ",
+			"collector_number": "27",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/27_Braenid Nomad.png"
+			}
+		},
+		{
+			"name": "Depths Stalker",
+			"rarity": "uncommon",
+			"mana_cost": "{U}{U}",
+			"type": "Creature — Merfolk ",
+			"collector_number": "33",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/33_Depths Stalker.png"
+			}
+		},
+		{
+			"name": "Autumnal Watch",
+			"rarity": "uncommon",
+			"mana_cost": "{R}",
+			"type": "Creature — Elf Soldier ",
+			"collector_number": "72",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/72_Autumnal Watch.png"
+			}
+		},
+		{
+			"name": "Eyes of the Maghbri",
+			"rarity": "common",
+			"mana_cost": "{1}{B}{B}",
+			"type": "Creature — Elf Shaman ",
+			"collector_number": "49",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/49_Eyes of the Maghbri.png"
+			}
+		},
+		{
+			"name": "Hound",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Creature — Hound ",
+			"collector_number": "53",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/53_Hound.png"
+			}
+		},
+		{
+			"name": "The Last Hunt",
+			"rarity": "rare",
+			"mana_cost": "{X}{G}",
+			"type": "Sorcery",
+			"collector_number": "105",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/105_The Last Hunt.png"
+			}
+		},
+		{
+			"name": "Beast",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Creature — Beast ",
+			"collector_number": "91",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/91_Beast.png"
+			}
+		},
+		{
+			"name": "Vestiges of Autumn",
+			"rarity": "uncommon",
+			"mana_cost": "{G}",
+			"type": "Sorcery",
+			"collector_number": "111",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/111_Vestiges of Autumn.png"
+			}
+		},
+		{
+			"name": "Ancestral Zweihander",
+			"rarity": "common",
+			"mana_cost": "{1}",
+			"type": "Artifact — Equipment ",
+			"collector_number": "135",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/135_Ancestral Zweihander.png"
+			}
+		},
+		{
+			"name": "Honey Wagon",
+			"rarity": "common",
+			"mana_cost": "{2}",
+			"type": "Artifact — Vehicle ",
+			"collector_number": "141",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/141_Honey Wagon.png"
+			}
+		},
+		{
+			"name": "Rolling Homestead",
+			"rarity": "uncommon",
+			"mana_cost": "{3}",
+			"type": "Artifact — Vehicle ",
+			"collector_number": "144",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/144_Rolling Homestead.png"
+			}
+		},
+		{
+			"name": "Wooden Toys",
+			"rarity": "uncommon",
+			"mana_cost": "{2}",
+			"type": "Artifact — Equipment ",
+			"collector_number": "148",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/148_Wooden Toys.png"
+			}
+		},
+		{
+			"name": "Witch's Abode",
+			"rarity": "common",
+			"mana_cost": "{3}",
+			"type": "Artifact — Vehicle ",
+			"collector_number": "147",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/147_Witch's Abode.png"
+			}
+		},
+		{
+			"name": "Trinkets and Charms",
+			"rarity": "common",
+			"mana_cost": "{R}",
+			"type": "Instant",
+			"collector_number": "87",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/87_Trinkets and Charms.png"
+			}
+		},
+		{
+			"name": "Dance of Fire",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{R}",
+			"type": "Instant",
+			"collector_number": "77",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/77_Dance of Fire.png"
+			}
+		},
+		{
+			"name": "Benign Whisper",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{U}",
+			"type": "Creature — Zombie ",
+			"collector_number": "24",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/24_Benign Whisper.png"
+			}
+		},
+		{
+			"name": "Lady Heiffyd",
+			"rarity": "mythic",
+			"mana_cost": "{1}{W}{U}",
+			"type": "Legendary Planeswalker — Heiffyd ",
+			"collector_number": "114",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/114_Lady Heiffyd.png"
+			}
+		},
+		{
+			"name": "The Witch Queens",
+			"rarity": "mythic",
+			"mana_cost": "{4}{R}{R}",
+			"type": "Legendary Planeswalker — Cerie Kailla ",
+			"collector_number": "88",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/88_The Witch Queens.png"
+			}
+		},
+		{
+			"name": "Beguiling Witch",
+			"rarity": "common",
+			"mana_cost": "{4}{B}",
+			"type": "Creature — Human Shaman ",
+			"collector_number": "45",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/45_Beguiling Witch.png"
+			}
+		},
+		{
+			"name": "Edith Waunt",
+			"rarity": "mythic",
+			"mana_cost": "{G}",
+			"type": "Legendary Planeswalker — Edith ",
+			"collector_number": "97",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/97_Edith Waunt.png"
+			}
+		},
+		{
+			"name": "Legendweaving",
+			"rarity": "mythic",
+			"mana_cost": "{X}{W}{W}",
+			"type": "Instant",
+			"collector_number": "19",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/19_Legendweaving.png"
+			}
+		},
+		{
+			"name": "Touch of Witchcraft",
+			"rarity": "uncommon",
+			"mana_cost": "{R}",
+			"type": "Instant",
+			"collector_number": "86",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/86_Touch of Witchcraft.png"
+			}
+		},
+		{
+			"name": "Advocate of the Hunt",
+			"rarity": "rare",
+			"mana_cost": "{R}{R}",
+			"type": "Creature — Human Warrior ",
+			"collector_number": "68",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/68_Advocate of the Hunt.png"
+			}
+		},
+		{
+			"name": "Rush of Wonder",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{R}",
+			"type": "Instant",
+			"collector_number": "84",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/84_Rush of Wonder.png"
+			}
+		},
+		{
+			"name": "Edge of Adventure",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{U}",
+			"type": "Sorcery",
+			"collector_number": "34",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/34_Edge of Adventure.png"
+			}
+		},
+		{
+			"name": "Lessons Learned",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{B}",
+			"type": "Instant",
+			"collector_number": "57",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/57_Lessons Learned.png"
+			}
+		},
+		{
+			"name": "Incarcerate",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{B}",
+			"type": "Sorcery",
+			"collector_number": "54",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/54_Incarcerate.png"
+			}
+		},
+		{
+			"name": "Crinster Tattooist",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{R}",
+			"type": "Creature — Human Citizen ",
+			"collector_number": "76",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/76_Crinster Tattooist.png"
+			}
+		},
+		{
+			"name": "Rotwood Whisper",
+			"rarity": "uncommon",
+			"mana_cost": "{B}",
+			"type": "Creature — Zombie ",
+			"collector_number": "61",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/61_Rotwood Whisper.png"
+			}
+		},
+		{
+			"name": "Thunder Shrike",
+			"rarity": "uncommon",
+			"mana_cost": "{3}{U}{U}",
+			"type": "Creature — Bird ",
+			"collector_number": "41",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/41_Thunder Shrike.png"
+			}
+		},
+		{
+			"name": "Maghbri Oracle",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{B}",
+			"type": "Creature — Human Shaman ",
+			"collector_number": "58",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/58_Maghbri Oracle.png"
+			}
+		},
+		{
+			"name": "Vibrant Balloon",
+			"rarity": "common",
+			"mana_cost": "{3}",
+			"type": "Artifact — Vehicle ",
+			"collector_number": "146",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/146_Vibrant Balloon.png"
+			}
+		},
+		{
+			"name": "Latent Potential",
+			"rarity": "rare",
+			"mana_cost": "{R}",
+			"type": "Sorcery",
+			"collector_number": "80",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/80_Latent Potential.png"
+			}
+		},
+		{
+			"name": "Trae, Serpent's Grasp",
+			"rarity": "rare",
+			"mana_cost": "{1}{U}{R}",
+			"type": "Legendary Creature — Human Wizard ",
+			"collector_number": "127",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/127_Trae, Serpent's Grasp.png"
+			}
+		},
+		{
+			"name": "Aelinn, Serpent's Voice",
+			"rarity": "rare",
+			"mana_cost": "{R}{W}",
+			"type": "Legendary Creature — Human Wizard ",
+			"collector_number": "130",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/130_Aelinn, Serpent's Voice.png"
+			}
+		},
+		{
+			"name": "Desraen, Serpent's Will",
+			"rarity": "rare",
+			"mana_cost": "{2}{W}{U}",
+			"type": "Legendary Creature — Human Wizard ",
+			"collector_number": "113",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/113_Desraen, Serpent's Will.png"
+			}
+		},
+		{
+			"name": "Blood Harvest",
+			"rarity": "mythic",
+			"mana_cost": "{B}{R}",
+			"type": "Enchantment",
+			"collector_number": "117",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/117_Blood Harvest.png"
+			}
+		},
+		{
+			"name": "Clever Rejoinder",
+			"rarity": "rare",
+			"mana_cost": "{U}",
+			"type": "Instant",
+			"collector_number": "30",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/30_Clever Rejoinder.png"
+			}
+		},
+		{
+			"name": "Reflect on Serenity",
+			"rarity": "rare",
+			"mana_cost": "{2}{W}{B}",
+			"type": "Enchantment",
+			"collector_number": "124",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/124_Reflect on Serenity.png"
+			}
+		},
+		{
+			"name": "Concord of Ravens",
+			"rarity": "rare",
+			"mana_cost": "{U}{B}",
+			"type": "Instant",
+			"collector_number": "115",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/115_Concord of Ravens.png"
+			}
+		},
+		{
+			"name": "Buoyant Thoughts",
+			"rarity": "rare",
+			"mana_cost": "{2}{U}{U}{U}",
+			"type": "Sorcery",
+			"collector_number": "28",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/28_Buoyant Thoughts.png"
+			}
+		},
+		{
+			"name": "Birth of Whispers",
+			"rarity": "mythic",
+			"mana_cost": "{1}{B}{B}{B}",
+			"type": "Enchantment",
+			"collector_number": "47",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/47_Birth of Whispers.png"
+			}
+		},
+		{
+			"name": "Witch of Spring's Promise",
+			"rarity": "rare",
+			"mana_cost": "{1}{G}{U}",
+			"type": "Creature — Human Shaman ",
+			"collector_number": "133",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/133_Witch of Spring's Promise.png"
+			}
+		},
+		{
+			"name": "Small Luxuries",
+			"rarity": "rare",
+			"mana_cost": "{B}",
+			"type": "Instant",
+			"collector_number": "63",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/63_Small Luxuries.png"
+			}
+		},
+		{
+			"name": "Moonlit Hunter",
+			"rarity": "mythic",
+			"mana_cost": "{2}{U}{U}",
+			"type": "Creature — Human Archer ",
+			"collector_number": "39",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/39_Moonlit Hunter.png"
+			}
+		},
+		{
+			"name": "A Whisper's Touch",
+			"rarity": "rare",
+			"mana_cost": "{X}{X}{B}",
+			"type": "Sorcery",
+			"collector_number": "66",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/66_A Whisper's Touch.png"
+			}
+		},
+		{
+			"name": "Blundering Clocktower",
+			"rarity": "mythic",
+			"mana_cost": "",
+			"type": "Land — Animus ",
+			"collector_number": "150",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HVF-files/img/150_Blundering Clocktower.png"
+			}
+		},
+		]
+	

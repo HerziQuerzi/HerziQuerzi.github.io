@@ -1,0 +1,943 @@
+﻿[CustomCards]
+	[	{
+			"name": "Felice's Study",
+			"rarity": "rare",
+			"mana_cost": "{W}{W}",
+			"type": "Enchantment — Study ",
+			"collector_number": "4",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/4_Felice's Study.png"
+			}
+		},
+		{
+			"name": "Aerida's Study",
+			"rarity": "rare",
+			"mana_cost": "{1}{R}{R}",
+			"type": "Enchantment — Study ",
+			"collector_number": "23",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/23_Aerida's Study.png"
+			}
+		},
+		{
+			"name": "Conjure Realities",
+			"rarity": "rare",
+			"mana_cost": "{2}{G}{U}",
+			"type": "Sorcery",
+			"collector_number": "56",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/56_Conjure Realities.png"
+			}
+		},
+		{
+			"name": "Aerida, Envious Chronomancer",
+			"rarity": "mythic",
+			"mana_cost": "{1}{U}{R}",
+			"type": "Legendary Planeswalker — Aerida ",
+			"collector_number": "49",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/49_Aerida, Envious Chronomancer.png"
+			}
+		},
+		{
+			"name": "Felice, Adira's Salvation",
+			"rarity": "mythic",
+			"mana_cost": "{2}{W}{W}",
+			"type": "Legendary Planeswalker — Felice ",
+			"collector_number": "2",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/2_Felice, Adira's Salvation.png"
+			}
+		},
+		{
+			"name": "Plains",
+			"rarity": "special",
+			"mana_cost": "",
+			"type": "Basic Land — Plains ",
+			"collector_number": "89",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/89_Plains.png"
+			}
+		},
+		{
+			"name": "Island",
+			"rarity": "special",
+			"mana_cost": "",
+			"type": "Basic Land — Island ",
+			"collector_number": "87",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/87_Island.png"
+			}
+		},
+		{
+			"name": "Swamp",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Basic Land — Swamp ",
+			"collector_number": "83",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/83_Swamp.png"
+			}
+		},
+		{
+			"name": "Mountain",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Basic Land — Mountain ",
+			"collector_number": "84",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/84_Mountain.png"
+			}
+		},
+		{
+			"name": "Forest",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Basic Land — Forest ",
+			"collector_number": "85",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/85_Forest.png"
+			}
+		},
+		{
+			"name": "Root Dancer",
+			"rarity": "rare",
+			"mana_cost": "{G}",
+			"type": "Creature — Human Shaman ",
+			"collector_number": "35",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/35_Root Dancer.png"
+			}
+		},
+		{
+			"name": "Felice's Defiance",
+			"rarity": "rare",
+			"mana_cost": "{X}{W}{W}",
+			"type": "Instant",
+			"collector_number": "3",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/3_Felice's Defiance.png"
+			}
+		},
+		{
+			"name": "Once Betrayed",
+			"rarity": "rare",
+			"mana_cost": "{2}{B}{B}",
+			"type": "Instant",
+			"collector_number": "20",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/20_Once Betrayed.png"
+			}
+		},
+		{
+			"name": "Once Denied",
+			"rarity": "rare",
+			"mana_cost": "{2}{U}{U}{U}",
+			"type": "Instant",
+			"collector_number": "12",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/12_Once Denied.png"
+			}
+		},
+		{
+			"name": "Once Scarred",
+			"rarity": "rare",
+			"mana_cost": "{R}{R}",
+			"type": "Instant",
+			"collector_number": "28",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/28_Once Scarred.png"
+			}
+		},
+		{
+			"name": "Once Shunned",
+			"rarity": "rare",
+			"mana_cost": "{1}{W}{W}",
+			"type": "Instant",
+			"collector_number": "6",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/6_Once Shunned.png"
+			}
+		},
+		{
+			"name": "Once Abandoned",
+			"rarity": "rare",
+			"mana_cost": "{1}{G}{G}",
+			"type": "Instant",
+			"collector_number": "34",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/34_Once Abandoned.png"
+			}
+		},
+		{
+			"name": "Appeal to the Ancestors",
+			"rarity": "rare",
+			"mana_cost": "{2}{B}{G}",
+			"type": "Sorcery",
+			"collector_number": "53",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/53_Appeal to the Ancestors.png"
+			}
+		},
+		{
+			"name": "Anarchy Storm",
+			"rarity": "rare",
+			"mana_cost": "{2}{R}",
+			"type": "Sorcery",
+			"collector_number": "24",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/24_Anarchy Storm.png"
+			}
+		},
+		{
+			"name": "Collapsing Realities",
+			"rarity": "rare",
+			"mana_cost": "{3}{R}",
+			"type": "Enchantment",
+			"collector_number": "25",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/25_Collapsing Realities.png"
+			}
+		},
+		{
+			"name": "Culminating Salvation",
+			"rarity": "rare",
+			"mana_cost": "{1}{W}{W}",
+			"type": "Sorcery",
+			"collector_number": "1",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/1_Culminating Salvation.png"
+			}
+		},
+		{
+			"name": "Fallacy's Channeler",
+			"rarity": "rare",
+			"mana_cost": "{1}{B}{R}",
+			"type": "Creature — Human Wizard ",
+			"collector_number": "41",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/41_Fallacy's Channeler.png"
+			}
+		},
+		{
+			"name": "Shroud in Paranoia",
+			"rarity": "rare",
+			"mana_cost": "{1}{B}{B}",
+			"type": "Enchantment",
+			"collector_number": "22",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/22_Shroud in Paranoia.png"
+			}
+		},
+		{
+			"name": "Almgrove Ambassador",
+			"rarity": "rare",
+			"mana_cost": "{1}{U}",
+			"type": "Creature — Human Noble ",
+			"collector_number": "9",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/9_Almgrove Ambassador.png"
+			}
+		},
+		{
+			"name": "Fallacy's Sanctifier",
+			"rarity": "rare",
+			"mana_cost": "{1}{W}{B}",
+			"type": "Creature — Human Cleric ",
+			"collector_number": "48",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/48_Fallacy's Sanctifier.png"
+			}
+		},
+		{
+			"name": "Repent, Daughter of Fallacy",
+			"rarity": "rare",
+			"mana_cost": "{1}{R}{W}{B}",
+			"type": "Legendary Creature — Human Knight ",
+			"collector_number": "65",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/65_Repent, Daughter of Fallacy.png"
+			}
+		},
+		{
+			"name": "Paragon of Purity",
+			"rarity": "rare",
+			"mana_cost": "{1}{W}",
+			"type": "Creature — Human Soldier ",
+			"collector_number": "7",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/7_Paragon of Purity.png"
+			}
+		},
+		{
+			"name": "Paradox Rings",
+			"rarity": "rare",
+			"mana_cost": "{0}",
+			"type": "Artifact",
+			"collector_number": "70",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/70_Paradox Rings.png"
+			}
+		},
+		{
+			"name": "Act of Repentance",
+			"rarity": "rare",
+			"mana_cost": "{1}{B}{G}",
+			"type": "Instant",
+			"collector_number": "52",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/52_Act of Repentance.png"
+			}
+		},
+		{
+			"name": "Contemplate Obscurity",
+			"rarity": "rare",
+			"mana_cost": "{1}{G}{U}",
+			"type": "Sorcery",
+			"collector_number": "57",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/57_Contemplate Obscurity.png"
+			}
+		},
+		{
+			"name": "Withering Husk",
+			"rarity": "rare",
+			"mana_cost": "{U}{B}",
+			"type": "Creature — Zombie Wizard ",
+			"collector_number": "40",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/40_Withering Husk.png"
+			}
+		},
+		{
+			"name": "Charming Marauder",
+			"rarity": "rare",
+			"mana_cost": "{1}{R}{G}",
+			"type": "Creature — Human Warrior ",
+			"collector_number": "43",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/43_Charming Marauder.png"
+			}
+		},
+		{
+			"name": "Seeker of Horizons",
+			"rarity": "rare",
+			"mana_cost": "{3}{G}{W}",
+			"type": "Creature — Human Warrior ",
+			"collector_number": "45",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/45_Seeker of Horizons.png"
+			}
+		},
+		{
+			"name": "Cognitive Fumigator",
+			"rarity": "rare",
+			"mana_cost": "{W}{B}",
+			"type": "Creature — Human Cleric ",
+			"collector_number": "47",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/47_Cognitive Fumigator.png"
+			}
+		},
+		{
+			"name": "In Tragedy",
+			"rarity": "rare",
+			"mana_cost": "{B}{R}",
+			"type": "Instant",
+			"collector_number": "42",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/42_In Tragedy.png"
+			}
+		},
+		{
+			"name": "Ophidian Oracle",
+			"rarity": "rare",
+			"mana_cost": "{3}{U}{R}",
+			"type": "Creature — Human Shaman ",
+			"collector_number": "51",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/51_Ophidian Oracle.png"
+			}
+		},
+		{
+			"name": "Inspire Actuality",
+			"rarity": "rare",
+			"mana_cost": "{1}{W}{U}",
+			"type": "Instant",
+			"collector_number": "38",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/38_Inspire Actuality.png"
+			}
+		},
+		{
+			"name": "Consuming Symbiosis",
+			"rarity": "rare",
+			"mana_cost": "{G}",
+			"type": "Instant",
+			"collector_number": "31",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/31_Consuming Symbiosis.png"
+			}
+		},
+		{
+			"name": "Adiran Scryers",
+			"rarity": "rare",
+			"mana_cost": "{G}",
+			"type": "Creature — Human Shaman ",
+			"collector_number": "30",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/30_Adiran Scryers.png"
+			}
+		},
+		{
+			"name": "Algrin's Legacy",
+			"rarity": "rare",
+			"mana_cost": "{3}{B}{B}",
+			"type": "Creature — Horror ",
+			"collector_number": "17",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/17_Algrin's Legacy.png"
+			}
+		},
+		{
+			"name": "Poisoned Tonic",
+			"rarity": "rare",
+			"mana_cost": "{2}",
+			"type": "Artifact",
+			"collector_number": "71",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/71_Poisoned Tonic.png"
+			}
+		},
+		{
+			"name": "Recalculation",
+			"rarity": "rare",
+			"mana_cost": "{1}{U}",
+			"type": "Instant",
+			"collector_number": "13",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/13_Recalculation.png"
+			}
+		},
+		{
+			"name": "Stark Copse",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Land",
+			"collector_number": "76",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/76_Stark Copse.png"
+			}
+		},
+		{
+			"name": "Stark Stream",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Land",
+			"collector_number": "79",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/79_Stark Stream.png"
+			}
+		},
+		{
+			"name": "Stark Hinterlands",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Land",
+			"collector_number": "77",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/77_Stark Hinterlands.png"
+			}
+		},
+		{
+			"name": "Stark Wildfire",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Land",
+			"collector_number": "80",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/80_Stark Wildfire.png"
+			}
+		},
+		{
+			"name": "Stark Horizon",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Land",
+			"collector_number": "78",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/78_Stark Horizon.png"
+			}
+		},
+		{
+			"name": "Master of Masks",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Creature — Elf Shapeshifter ",
+			"collector_number": "11",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/11_Master of Masks.png"
+			}
+		},
+		{
+			"name": "Unbound Horizons",
+			"rarity": "rare",
+			"mana_cost": "{1}{U}",
+			"type": "Instant",
+			"collector_number": "15",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/15_Unbound Horizons.png"
+			}
+		},
+		{
+			"name": "Foliage Hunter",
+			"rarity": "rare",
+			"mana_cost": "{1}{G}",
+			"type": "Creature — Dryad ",
+			"collector_number": "33",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/33_Foliage Hunter.png"
+			}
+		},
+		{
+			"name": "Burgeoning Blooms",
+			"rarity": "rare",
+			"mana_cost": "{X}{G}{U}{R}",
+			"type": "Sorcery",
+			"collector_number": "59",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/59_Burgeoning Blooms.png"
+			}
+		},
+		{
+			"name": "Chance at Redemption",
+			"rarity": "rare",
+			"mana_cost": "{W}{B}{G}",
+			"type": "Instant",
+			"collector_number": "60",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/60_Chance at Redemption.png"
+			}
+		},
+		{
+			"name": "Culminating Wisdom",
+			"rarity": "rare",
+			"mana_cost": "{1}{G}{G}",
+			"type": "Sorcery",
+			"collector_number": "32",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/32_Culminating Wisdom.png"
+			}
+		},
+		{
+			"name": "Culminating Despair",
+			"rarity": "rare",
+			"mana_cost": "{1}{B}{B}",
+			"type": "Sorcery",
+			"collector_number": "18",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/18_Culminating Despair.png"
+			}
+		},
+		{
+			"name": "Culminating Conspiracy",
+			"rarity": "rare",
+			"mana_cost": "{1}{U}{U}",
+			"type": "Sorcery",
+			"collector_number": "10",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/10_Culminating Conspiracy.png"
+			}
+		},
+		{
+			"name": "Culminating Chaos",
+			"rarity": "rare",
+			"mana_cost": "{1}{R}{R}",
+			"type": "Sorcery",
+			"collector_number": "26",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/26_Culminating Chaos.png"
+			}
+		},
+		{
+			"name": "Aerida's Assistant",
+			"rarity": "rare",
+			"mana_cost": "{U}{R}",
+			"type": "Creature — Human Wizard ",
+			"collector_number": "50",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/50_Aerida's Assistant.png"
+			}
+		},
+		{
+			"name": "Speaker of the Iris",
+			"rarity": "rare",
+			"mana_cost": "{2}{R}{R}",
+			"type": "Creature — Human Wizard ",
+			"collector_number": "29",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/29_Speaker of the Iris.png"
+			}
+		},
+		{
+			"name": "Refracted Thoughts",
+			"rarity": "rare",
+			"mana_cost": "{1}{B}",
+			"type": "Instant",
+			"collector_number": "21",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/21_Refracted Thoughts.png"
+			}
+		},
+		{
+			"name": "Fading Dead",
+			"rarity": "rare",
+			"mana_cost": "{2}{B}{B}",
+			"type": "Creature — Zombie ",
+			"collector_number": "19",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/19_Fading Dead.png"
+			}
+		},
+		{
+			"name": "Rubble Tender",
+			"rarity": "rare",
+			"mana_cost": "{4}{R}{G}",
+			"type": "Creature — Elemental ",
+			"collector_number": "44",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/44_Rubble Tender.png"
+			}
+		},
+		{
+			"name": "Mystic of Many Winds",
+			"rarity": "rare",
+			"mana_cost": "{W}{U}{B}",
+			"type": "Creature — Human Wizard ",
+			"collector_number": "64",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/64_Mystic of Many Winds.png"
+			}
+		},
+		{
+			"name": "Artist's Vista",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Land",
+			"collector_number": "74",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/74_Artist's Vista.png"
+			}
+		},
+		{
+			"name": "Over the Horizon",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Land",
+			"collector_number": "75",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/75_Over the Horizon.png"
+			}
+		},
+		{
+			"name": "Spectrum Archmage",
+			"rarity": "rare",
+			"mana_cost": "{2}{U}{U}",
+			"type": "Creature — Human Wizard ",
+			"collector_number": "14",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/14_Spectrum Archmage.png"
+			}
+		},
+		{
+			"name": "Seek Refuge",
+			"rarity": "rare",
+			"mana_cost": "{2}{G}",
+			"type": "Instant",
+			"collector_number": "36",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/36_Seek Refuge.png"
+			}
+		},
+		{
+			"name": "Theurgist of the Depths",
+			"rarity": "rare",
+			"mana_cost": "{2}{B}{G}{U}",
+			"type": "Creature — Merfolk ",
+			"collector_number": "67",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/67_Theurgist of the Depths.png"
+			}
+		},
+		{
+			"name": "Buy Time",
+			"rarity": "rare",
+			"mana_cost": "{2}{U}{B}",
+			"type": "Instant",
+			"collector_number": "39",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/39_Buy Time.png"
+			}
+		},
+		{
+			"name": "Strayseeker Ranger",
+			"rarity": "rare",
+			"mana_cost": "{2}{W}{W}",
+			"type": "Creature — Human Soldier Ranger ",
+			"collector_number": "8",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/8_Strayseeker Ranger.png"
+			}
+		},
+		{
+			"name": "Crystal Wave",
+			"rarity": "rare",
+			"mana_cost": "{U}{B}{R}",
+			"type": "Instant",
+			"collector_number": "61",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/61_Crystal Wave.png"
+			}
+		},
+		{
+			"name": "Starvation",
+			"rarity": "rare",
+			"mana_cost": "{B}{R}{G}",
+			"type": "Sorcery",
+			"collector_number": "66",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/66_Starvation.png"
+			}
+		},
+		{
+			"name": "Fateseeker's Orb",
+			"rarity": "rare",
+			"mana_cost": "{4}",
+			"type": "Artifact",
+			"collector_number": "69",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/69_Fateseeker's Orb.png"
+			}
+		},
+		{
+			"name": "End of Worlds",
+			"rarity": "rare",
+			"mana_cost": "{4}{R}{R}{R}{R}",
+			"type": "Sorcery",
+			"collector_number": "27",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/27_End of Worlds.png"
+			}
+		},
+		{
+			"name": "Equilibrium Paladin",
+			"rarity": "rare",
+			"mana_cost": "{2}{W}{U}",
+			"type": "Creature — Human Wizard Soldier ",
+			"collector_number": "37",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/37_Equilibrium Paladin.png"
+			}
+		},
+		{
+			"name": "Champion of the Red Dawn",
+			"rarity": "rare",
+			"mana_cost": "{R}{W}",
+			"type": "Creature — Human Soldier ",
+			"collector_number": "54",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/54_Champion of the Red Dawn.png"
+			}
+		},
+		{
+			"name": "Mirrorplate Exemplar",
+			"rarity": "rare",
+			"mana_cost": "{U}{R}{W}",
+			"type": "Creature — Minotaur Warrior ",
+			"collector_number": "63",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/63_Mirrorplate Exemplar.png"
+			}
+		},
+		{
+			"name": "Through Worlds",
+			"rarity": "rare",
+			"mana_cost": "{G}{W}",
+			"type": "Instant",
+			"collector_number": "46",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/46_Through Worlds.png"
+			}
+		},
+		{
+			"name": "Litany of Renewal",
+			"rarity": "rare",
+			"mana_cost": "{R}{G}{W}",
+			"type": "Enchantment",
+			"collector_number": "62",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/62_Litany of Renewal.png"
+			}
+		},
+		{
+			"name": "Adiran Distractor",
+			"rarity": "rare",
+			"mana_cost": "{1}{G}{W}{U}",
+			"type": "Creature — Elf Scout ",
+			"collector_number": "58",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/58_Adiran Distractor.png"
+			}
+		},
+		{
+			"name": "Fate Charm",
+			"rarity": "rare",
+			"mana_cost": "{2}",
+			"type": "Artifact",
+			"collector_number": "68",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/68_Fate Charm.png"
+			}
+		},
+		{
+			"name": "Seeking Sword",
+			"rarity": "rare",
+			"mana_cost": "{2}",
+			"type": "Artifact — Equipment ",
+			"collector_number": "73",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/73_Seeking Sword.png"
+			}
+		},
+		{
+			"name": "Wicked Blow",
+			"rarity": "rare",
+			"mana_cost": "{R}{W}",
+			"type": "Instant",
+			"collector_number": "55",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/55_Wicked Blow.png"
+			}
+		},
+		{
+			"name": "Beast",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Creature — Beast ",
+			"collector_number": "3",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/3_Beast.png"
+			}
+		},
+		{
+			"name": "Spirit",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Creature — Spirit ",
+			"collector_number": "2",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/2_Spirit.png"
+			}
+		},
+		{
+			"name": "Human",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Creature — Human ",
+			"collector_number": "1",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/1_Human.png"
+			}
+		},
+		{
+			"name": "Plains",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Basic Land — Plains ",
+			"collector_number": "81",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/81_Plains.png"
+			}
+		},
+		{
+			"name": "Island",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Basic Land — Island ",
+			"collector_number": "82",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/82_Island.png"
+			}
+		},
+		{
+			"name": "Swamp",
+			"rarity": "special",
+			"mana_cost": "",
+			"type": "Basic Land — Swamp ",
+			"collector_number": "90",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/90_Swamp.png"
+			}
+		},
+		{
+			"name": "Mountain",
+			"rarity": "special",
+			"mana_cost": "",
+			"type": "Basic Land — Mountain ",
+			"collector_number": "88",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/88_Mountain.png"
+			}
+		},
+		{
+			"name": "Forest",
+			"rarity": "special",
+			"mana_cost": "",
+			"type": "Basic Land — Forest ",
+			"collector_number": "86",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/86_Forest.png"
+			}
+		},
+		{
+			"name": "Heraldry",
+			"rarity": "rare",
+			"mana_cost": "{W}{W}{W}",
+			"type": "Enchantment",
+			"collector_number": "5",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/5_Heraldry.png"
+			}
+		},
+		{
+			"name": "Adiran Survivors",
+			"rarity": "rare",
+			"mana_cost": "{1}{B}{B}",
+			"type": "Creature — Human Survivor ",
+			"collector_number": "16",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/16_Adiran Survivors.png"
+			}
+		},
+		{
+			"name": "Potion of Inhibition",
+			"rarity": "rare",
+			"mana_cost": "{2}",
+			"type": "Artifact",
+			"collector_number": "72",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/72_Potion of Inhibition.png"
+			}
+		},
+		{
+			"name": "Emblem",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Emblem — Aerida ",
+			"collector_number": "4",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/MAC-files/img/4_Emblem.png"
+			}
+		},
+		]
+	
