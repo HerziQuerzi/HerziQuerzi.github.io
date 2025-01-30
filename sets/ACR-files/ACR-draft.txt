@@ -802,7 +802,7 @@
 		{
 			"name": "Prismatic Leyline",
 			"rarity": "common",
-			"mana_cost": "{G}",
+			"mana_cost": "{1}{G}",
 			"type": "Enchantment — Aura ",
 			"collector_number": "98",
 			"image_uris": {
@@ -822,7 +822,7 @@
 		{
 			"name": "Reckless Festivities",
 			"rarity": "rare",
-			"mana_cost": "{1}{B}{R}",
+			"mana_cost": "{2}{B}{R}",
 			"type": "Sorcery",
 			"collector_number": "114",
 			"image_uris": {
@@ -862,7 +862,7 @@
 		{
 			"name": "Warded Tome",
 			"rarity": "common",
-			"mana_cost": "{1}",
+			"mana_cost": "{2}",
 			"type": "Artifact",
 			"collector_number": "147",
 			"image_uris": {
@@ -1683,7 +1683,7 @@
 			"name": "Golem",
 			"rarity": "common",
 			"mana_cost": "",
-			"type": "Token Artifact Creature — Elemental ",
+			"type": "Token Artifact Creature — Golem ",
 			"collector_number": "5",
 			"image_uris": {
 				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/5_Golem.png"
@@ -1693,7 +1693,7 @@
 			"name": "Tutelage Artifice",
 			"rarity": "common",
 			"mana_cost": "{1}",
-			"type": "Artifact Creature",
+			"type": "Artifact Creature — Construct ",
 			"collector_number": "146",
 			"image_uris": {
 				"en": "https://HerziQuerzi.github.io/sets/ACR-files/img/146_Tutelage Artifice.png"

@@ -2030,43 +2030,43 @@
 			}
 		},
 		{
-			"name": "Everember Phoenix",
+			"name": "Everember Phoenix (Token)",
 			"rarity": "rare",
 			"mana_cost": "",
 			"type": "Token Creature — Phoenix ",
 			"collector_number": "12",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/12_Everember Phoenix.png"
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/12_Everember Phoenix (Token).png"
 			}
 		},
 		{
-			"name": "Moth-Heart Husk",
+			"name": "Moth-Heart Husk (Token)",
 			"rarity": "common",
 			"mana_cost": "",
 			"type": "Token Creature — Human ",
 			"collector_number": "7",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/7_Moth-Heart Husk.png"
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/7_Moth-Heart Husk (Token).png"
 			}
 		},
 		{
-			"name": "Hadik, Might of Mortals",
+			"name": "Hadik, Might of Mortals (Token)",
 			"rarity": "rare",
 			"mana_cost": "",
 			"type": "Token Legendary Creature — Human Warrior ",
 			"collector_number": "19",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/19_Hadik, Might of Mortals.png"
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/19_Hadik, Might of Mortals (Token).png"
 			}
 		},
 		{
-			"name": "Ichorsap Dryad",
+			"name": "Ichorsap Dryad (Token)",
 			"rarity": "common",
 			"mana_cost": "",
 			"type": "Token Creature — Dryad ",
 			"collector_number": "14",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/14_Ichorsap Dryad.png"
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/14_Ichorsap Dryad (Token).png"
 			}
 		},
 		{
@@ -2110,43 +2110,43 @@
 			}
 		},
 		{
-			"name": "Remnant of the Hunt",
+			"name": "Remnant of the Hunt (Token)",
 			"rarity": "uncommon",
 			"mana_cost": "",
 			"type": "Token Creature — Spirit Warrior ",
 			"collector_number": "15",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/15_Remnant of the Hunt.png"
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/15_Remnant of the Hunt (Token).png"
 			}
 		},
 		{
-			"name": "Blooming Martyr",
+			"name": "Blooming Martyr (Token)",
 			"rarity": "common",
 			"mana_cost": "",
 			"type": "Token Creature — Human Warrior ",
 			"collector_number": "10",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/10_Blooming Martyr.png"
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/10_Blooming Martyr (Token).png"
 			}
 		},
 		{
-			"name": "Blinded Necromancer",
+			"name": "Blinded Necromancer (Token)",
 			"rarity": "common",
 			"mana_cost": "",
 			"type": "Token Creature — Human Cleric ",
 			"collector_number": "5",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/5_Blinded Necromancer.png"
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/5_Blinded Necromancer (Token).png"
 			}
 		},
 		{
-			"name": "Settlement Scout",
+			"name": "Settlement Scout (Token)",
 			"rarity": "common",
 			"mana_cost": "",
 			"type": "Token Creature — Human Rogue ",
 			"collector_number": "13",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/13_Settlement Scout.png"
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/13_Settlement Scout (Token).png"
 			}
 		},
 		{
@@ -2160,53 +2160,53 @@
 			}
 		},
 		{
-			"name": "Hollyberry Murder",
+			"name": "Hollyberry Murder (Token)",
 			"rarity": "common",
 			"mana_cost": "",
 			"type": "Token Creature — Bird ",
 			"collector_number": "6",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/6_Hollyberry Murder.png"
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/6_Hollyberry Murder (Token).png"
 			}
 		},
 		{
-			"name": "Ill-Fated Seer",
+			"name": "Ill-Fated Seer (Token)",
 			"rarity": "uncommon",
 			"mana_cost": "",
 			"type": "Token Creature — Human Shaman ",
 			"collector_number": "20",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/20_Ill-Fated Seer.png"
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/20_Ill-Fated Seer (Token).png"
 			}
 		},
 		{
-			"name": "Cackling Seer",
+			"name": "Cackling Seer (Token)",
 			"rarity": "uncommon",
 			"mana_cost": "",
 			"type": "Token Creature — Human Shaman ",
 			"collector_number": "11",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/11_Cackling Seer.png"
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/11_Cackling Seer (Token).png"
 			}
 		},
 		{
-			"name": "Still-Smoke Hunter",
+			"name": "Still-Smoke Hunter (Token)",
 			"rarity": "uncommon",
 			"mana_cost": "",
 			"type": "Token Creature — Human Shaman ",
 			"collector_number": "9",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/9_Still-Smoke Hunter.png"
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/9_Still-Smoke Hunter (Token).png"
 			}
 		},
 		{
-			"name": "Silver-Dawn Elder",
+			"name": "Silver-Dawn Elder (Token)",
 			"rarity": "rare",
 			"mana_cost": "",
 			"type": "Token Creature — Elf Warrior ",
 			"collector_number": "16",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/16_Silver-Dawn Elder.png"
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/16_Silver-Dawn Elder (Token).png"
 			}
 		},
 		{
@@ -2230,13 +2230,13 @@
 			}
 		},
 		{
-			"name": "Fortune Dealer",
+			"name": "Fortune Dealer (Token)",
 			"rarity": "rare",
 			"mana_cost": "",
 			"type": "Token Creature — Human ",
 			"collector_number": "18",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/18_Fortune Dealer.png"
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/18_Fortune Dealer (Token).png"
 			}
 		},
 		{

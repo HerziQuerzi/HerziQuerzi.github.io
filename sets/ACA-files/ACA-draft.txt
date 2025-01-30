@@ -1410,13 +1410,13 @@
 			}
 		},
 		{
-			"name": "Luminescent Feathrets",
+			"name": "Luminescent Feathrets (Token)",
 			"rarity": "uncommon",
 			"mana_cost": "{X}{W}",
 			"type": "Token Creature — Ferret Bird ",
 			"collector_number": "2",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/2_Luminescent Feathrets.png"
+				"en": "https://HerziQuerzi.github.io/sets/ACA-files/img/2_Luminescent Feathrets (Token).png"
 			}
 		},
 		{

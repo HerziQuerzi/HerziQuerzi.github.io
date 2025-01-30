@@ -400,16 +400,6 @@
 			}
 		},
 		{
-			"name": "Barten, the Seeking Scholar",
-			"rarity": "mythic",
-			"mana_cost": "{1}{U}{U}",
-			"type": "Legendary Planeswalker — Barten ",
-			"collector_number": "22",
-			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/22_Barten, the Seeking Scholar.png"
-			}
-		},
-		{
 			"name": "Bounded Intellect",
 			"rarity": "rare",
 			"mana_cost": "{2}{U}{U}",
@@ -1580,13 +1570,23 @@
 			}
 		},
 		{
-			"name": "Languid Whispers Token",
+			"name": "Languid Whispers (Token)",
 			"rarity": "common",
 			"mana_cost": "{6}{U}",
 			"type": "Token Creature — Zombie ",
 			"collector_number": "2",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/2_Languid Whispers Token.png"
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/2_Languid Whispers (Token).png"
+			}
+		},
+		{
+			"name": "Barten, the Seeking Scholar",
+			"rarity": "mythic",
+			"mana_cost": "{1}{U}{U}",
+			"type": "Legendary Planeswalker — Barten ",
+			"collector_number": "22",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BTJ-files/img/22_Barten, the Seeking Scholar.png"
 			}
 		},
 		]

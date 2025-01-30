@@ -1,6 +1,11 @@
 {
 	"gradients":[
 	{
+		"name":"High Quality",
+		"color1":"#81246c",
+		"color2":"#db6ab2"
+	},
+	{
 		"name":"50 Shades of Grey",
 		"color1":"#2c3e50",
 		"color2":"#bdc3c7"
