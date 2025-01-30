@@ -165,6 +165,8 @@
 		<img class="preload-hidden" src="/sets/MMT-files/icon.png" />
 		<img class="preload-hidden" src="/sets/IAH-files/icon.png" />
 		<img class="preload-hidden" src="/sets/CRC-files/icon.png" />
+		<img class="preload-hidden" id="bg" src="/sets/ACR-files/bg.png" />
+		
 		<div class="header">
 		<div class="search-grid">
 			<a href="/"><img class="sg-logo" src="/img/banner.png"></a>
@@ -487,7 +489,7 @@
 		}
 		while (images_loaded.includes(false));
 
-		
+		document.body.style.backgroundImage = 'url(' + document.getElementById("bg").src + ')';
 		loadImages();
 	});
 

@@ -165,6 +165,8 @@
 		<img class="preload-hidden" src="/sets/MMT-files/icon.png" />
 		<img class="preload-hidden" src="/sets/IAH-files/icon.png" />
 		<img class="preload-hidden" src="/sets/CRC-files/icon.png" />
+		<img class="preload-hidden" id="bg" src="/sets/BTJ-files/bg.png" />
+		
 		<div class="header">
 		<div class="search-grid">
 			<a href="/"><img class="sg-logo" src="/img/banner.png"></a>
@@ -418,7 +420,7 @@
 			<div class="container"><img alt="img\er.png" id="" data-flag="@E" onclick="openSidebar('')"></div>
 			<div class="container"><img alt="img\er.png" id="" data-flag="@E" onclick="openSidebar('')"></div>
 			<div class="container"><img alt="sets\BTJ-files\img\1t_Homunculus.png" id="1t" data-flag="@X" onclick="openSidebar('1t')"></div>
-			<div class="container"><img alt="sets\BTJ-files\img\2t_Languid Whispers Token.png" id="2t" data-flag="@X" onclick="openSidebar('2t')"></div>
+			<div class="container"><img alt="sets\BTJ-files\img\2t_Languid Whispers (Token).png" id="2t" data-flag="@X" onclick="openSidebar('2t')"></div>
 			<div class="container"><img alt="sets\BTJ-files\img\3t_Warrior.png" id="3t" data-flag="@X" onclick="openSidebar('3t')"></div>
 			<div class="container"><img alt="sets\BTJ-files\img\4t_Clue.png" id="4t" data-flag="@X" onclick="openSidebar('4t')"></div>
 			<div class="container"><img alt="img\e.png" id="" data-flag="@E" onclick="openSidebar('')"></div>
@@ -466,7 +468,7 @@
 		}
 		while (images_loaded.includes(false));
 
-		
+		document.body.style.backgroundImage = 'url(' + document.getElementById("bg").src + ')';
 		loadImages();
 	});
 
