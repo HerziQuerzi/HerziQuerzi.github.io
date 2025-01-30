@@ -1,0 +1,1453 @@
+﻿[CustomCards]
+	[	{
+			"name": "Dawn Guide",
+			"rarity": "common",
+			"mana_cost": "{W}",
+			"type": "Creature — Human Shaman ",
+			"collector_number": "3",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/3_Dawn Guide.png"
+			}
+		},
+		{
+			"name": "Stern Deputy",
+			"rarity": "common",
+			"mana_cost": "{W}",
+			"type": "Creature — Human Soldier ",
+			"collector_number": "13",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/13_Stern Deputy.png"
+			}
+		},
+		{
+			"name": "Marshal's Sharpshooter",
+			"rarity": "common",
+			"mana_cost": "{1}{W}",
+			"type": "Creature — Human Soldier ",
+			"collector_number": "9",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/9_Marshal's Sharpshooter.png"
+			}
+		},
+		{
+			"name": "St. Musset Wranglers",
+			"rarity": "common",
+			"mana_cost": "{1}{W}",
+			"type": "Creature — Human Citizen ",
+			"collector_number": "12",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/12_St. Musset Wranglers.png"
+			}
+		},
+		{
+			"name": "Trader Family",
+			"rarity": "common",
+			"mana_cost": "{2}{W}",
+			"type": "Creature — Human Citizen ",
+			"collector_number": "14",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/14_Trader Family.png"
+			}
+		},
+		{
+			"name": "Tsimtsuk Trackers",
+			"rarity": "common",
+			"mana_cost": "{2}{W}",
+			"type": "Creature — Human Ranger ",
+			"collector_number": "15",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/15_Tsimtsuk Trackers.png"
+			}
+		},
+		{
+			"name": "Roaming Vigilantes",
+			"rarity": "common",
+			"mana_cost": "{3}{W}",
+			"type": "Creature — Human Soldier Rogue ",
+			"collector_number": "11",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/11_Roaming Vigilantes.png"
+			}
+		},
+		{
+			"name": "Warning Shot",
+			"rarity": "common",
+			"mana_cost": "{W}",
+			"type": "Instant",
+			"collector_number": "16",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/16_Warning Shot.png"
+			}
+		},
+		{
+			"name": "In Your Arms",
+			"rarity": "common",
+			"mana_cost": "{W}",
+			"type": "Sorcery",
+			"collector_number": "8",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/8_In Your Arms.png"
+			}
+		},
+		{
+			"name": "Mist-Veiled Harrier",
+			"rarity": "common",
+			"mana_cost": "{U}",
+			"type": "Creature — Human Citizen ",
+			"collector_number": "30",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/30_Mist-Veiled Harrier.png"
+			}
+		},
+		{
+			"name": "St. Musset Cutpurse",
+			"rarity": "common",
+			"mana_cost": "{1}{U}",
+			"type": "Creature — Human Rogue ",
+			"collector_number": "33",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/33_St. Musset Cutpurse.png"
+			}
+		},
+		{
+			"name": "Alleyway Broker",
+			"rarity": "common",
+			"mana_cost": "{2}{U}",
+			"type": "Creature — Human Citizen ",
+			"collector_number": "21",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/21_Alleyway Broker.png"
+			}
+		},
+		{
+			"name": "Frontier Surveyors",
+			"rarity": "common",
+			"mana_cost": "{3}{U}",
+			"type": "Creature — Human Citizen ",
+			"collector_number": "25",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/25_Frontier Surveyors.png"
+			}
+		},
+		{
+			"name": "Stormbringer",
+			"rarity": "common",
+			"mana_cost": "{3}{U}{U}",
+			"type": "Creature — Human Shaman ",
+			"collector_number": "34",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/34_Stormbringer.png"
+			}
+		},
+		{
+			"name": "Left Shivering",
+			"rarity": "common",
+			"mana_cost": "{2}{U}",
+			"type": "Enchantment — Aura ",
+			"collector_number": "27",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/27_Left Shivering.png"
+			}
+		},
+		{
+			"name": "Tall Tales",
+			"rarity": "common",
+			"mana_cost": "{1}{U}",
+			"type": "Sorcery",
+			"collector_number": "36",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/36_Tall Tales.png"
+			}
+		},
+		{
+			"name": "Harrying Shot",
+			"rarity": "common",
+			"mana_cost": "{U}",
+			"type": "Instant",
+			"collector_number": "26",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/26_Harrying Shot.png"
+			}
+		},
+		{
+			"name": "Cross the Ford",
+			"rarity": "common",
+			"mana_cost": "{1}{G}",
+			"type": "Instant",
+			"collector_number": "75",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/75_Cross the Ford.png"
+			}
+		},
+		{
+			"name": "Take the Odds",
+			"rarity": "common",
+			"mana_cost": "{1}{U}",
+			"type": "Instant",
+			"collector_number": "35",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/35_Take the Odds.png"
+			}
+		},
+		{
+			"name": "Carrion Wagon",
+			"rarity": "common",
+			"mana_cost": "{B}",
+			"type": "Creature — Human Citizen ",
+			"collector_number": "41",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/41_Carrion Wagon.png"
+			}
+		},
+		{
+			"name": "Contracted Gunslinger",
+			"rarity": "common",
+			"mana_cost": "{1}{B}",
+			"type": "Creature — Human Rogue Soldier ",
+			"collector_number": "42",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/42_Contracted Gunslinger.png"
+			}
+		},
+		{
+			"name": "Crooked Lawman",
+			"rarity": "common",
+			"mana_cost": "{1}{B}",
+			"type": "Creature — Human Citizen ",
+			"collector_number": "43",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/43_Crooked Lawman.png"
+			}
+		},
+		{
+			"name": "Jackle's Gang",
+			"rarity": "common",
+			"mana_cost": "{2}{B}",
+			"type": "Creature — Human Rogue ",
+			"collector_number": "49",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/49_Jackle's Gang.png"
+			}
+		},
+		{
+			"name": "Barter for Bullets",
+			"rarity": "common",
+			"mana_cost": "{3}{B}",
+			"type": "Sorcery",
+			"collector_number": "38",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/38_Barter for Bullets.png"
+			}
+		},
+		{
+			"name": "Band of Outlaws",
+			"rarity": "common",
+			"mana_cost": "{4}{B}",
+			"type": "Creature — Human Rogue ",
+			"collector_number": "37",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/37_Band of Outlaws.png"
+			}
+		},
+		{
+			"name": "Face the Noose",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{B}",
+			"type": "Enchantment — Aura ",
+			"collector_number": "45",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/45_Face the Noose.png"
+			}
+		},
+		{
+			"name": "Sins for Sins",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{B}",
+			"type": "Sorcery",
+			"collector_number": "54",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/54_Sins for Sins.png"
+			}
+		},
+		{
+			"name": "Lawman's Posse",
+			"rarity": "common",
+			"mana_cost": "{R}",
+			"type": "Sorcery",
+			"collector_number": "60",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/60_Lawman's Posse.png"
+			}
+		},
+		{
+			"name": "Bounty Contractor",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{R}",
+			"type": "Creature — Human Soldier Rogue ",
+			"collector_number": "55",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/55_Bounty Contractor.png"
+			}
+		},
+		{
+			"name": "Worn Trailblazers",
+			"rarity": "common",
+			"mana_cost": "{1}{R}",
+			"type": "Creature — Human Citizen ",
+			"collector_number": "71",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/71_Worn Trailblazers.png"
+			}
+		},
+		{
+			"name": "St. Musset Courier",
+			"rarity": "common",
+			"mana_cost": "{1}{R}",
+			"type": "Creature — Human Soldier ",
+			"collector_number": "67",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/67_St. Musset Courier.png"
+			}
+		},
+		{
+			"name": "Mountain Path Wildcat",
+			"rarity": "common",
+			"mana_cost": "{2}{R}",
+			"type": "Creature — Cat ",
+			"collector_number": "61",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/61_Mountain Path Wildcat.png"
+			}
+		},
+		{
+			"name": "Getaway Rider",
+			"rarity": "common",
+			"mana_cost": "{3}{R}",
+			"type": "Creature — Human Rogue ",
+			"collector_number": "59",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/59_Getaway Rider.png"
+			}
+		},
+		{
+			"name": "Sudden Altercation",
+			"rarity": "common",
+			"mana_cost": "{4}{R}",
+			"type": "Instant",
+			"collector_number": "68",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/68_Sudden Altercation.png"
+			}
+		},
+		{
+			"name": "Trail of Blood",
+			"rarity": "common",
+			"mana_cost": "{R}",
+			"type": "Instant",
+			"collector_number": "70",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/70_Trail of Blood.png"
+			}
+		},
+		{
+			"name": "Smoking Barrels",
+			"rarity": "common",
+			"mana_cost": "{R}",
+			"type": "Instant",
+			"collector_number": "66",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/66_Smoking Barrels.png"
+			}
+		},
+		{
+			"name": "Foliage Lurker",
+			"rarity": "common",
+			"mana_cost": "{G}",
+			"type": "Creature — Human Scout ",
+			"collector_number": "78",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/78_Foliage Lurker.png"
+			}
+		},
+		{
+			"name": "Prospector Gang",
+			"rarity": "common",
+			"mana_cost": "{1}{G}",
+			"type": "Creature — Human Citizen ",
+			"collector_number": "84",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/84_Prospector Gang.png"
+			}
+		},
+		{
+			"name": "Stoic Builder",
+			"rarity": "common",
+			"mana_cost": "{2}{G}",
+			"type": "Creature — Human ",
+			"collector_number": "87",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/87_Stoic Builder.png"
+			}
+		},
+		{
+			"name": "Curious Canines",
+			"rarity": "common",
+			"mana_cost": "{1}{G}",
+			"type": "Sorcery",
+			"collector_number": "76",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/76_Curious Canines.png"
+			}
+		},
+		{
+			"name": "Tsimtsuk Trapper",
+			"rarity": "common",
+			"mana_cost": "{3}{G}",
+			"type": "Creature — Human Ranger ",
+			"collector_number": "90",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/90_Tsimtsuk Trapper.png"
+			}
+		},
+		{
+			"name": "Territorial Grizzlies",
+			"rarity": "common",
+			"mana_cost": "{3}{G}{G}",
+			"type": "Creature — Bear ",
+			"collector_number": "89",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/89_Territorial Grizzlies.png"
+			}
+		},
+		{
+			"name": "Gunslinger's Glory",
+			"rarity": "common",
+			"mana_cost": "{1}{G}",
+			"type": "Instant",
+			"collector_number": "80",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/80_Gunslinger's Glory.png"
+			}
+		},
+		{
+			"name": "Return to Nature",
+			"rarity": "common",
+			"mana_cost": "{1}{G}",
+			"type": "Instant",
+			"collector_number": "85",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/85_Return to Nature.png"
+			}
+		},
+		{
+			"name": "Young Gun",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{W}",
+			"type": "Creature — Human Soldier ",
+			"collector_number": "18",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/18_Young Gun.png"
+			}
+		},
+		{
+			"name": "WIP",
+			"rarity": "uncommon",
+			"mana_cost": "{W}",
+			"type": "",
+			"collector_number": "17",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/17_WIP.png"
+			}
+		},
+		{
+			"name": "Count of Three",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{W}",
+			"type": "Instant",
+			"collector_number": "1",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/1_Count of Three.png"
+			}
+		},
+		{
+			"name": "Homestead's Finest",
+			"rarity": "uncommon",
+			"mana_cost": "{X}{W}{W}",
+			"type": "Creature — Hound ",
+			"collector_number": "7",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/7_Homestead's Finest.png"
+			}
+		},
+		{
+			"name": "Grim Farmhand",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{W}",
+			"type": "Creature — Human Citizen ",
+			"collector_number": "6",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/6_Grim Farmhand.png"
+			}
+		},
+		{
+			"name": "Railroad Crew",
+			"rarity": "uncommon",
+			"mana_cost": "{3}{W}{W}",
+			"type": "Creature — Human Citizen ",
+			"collector_number": "10",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/10_Railroad Crew.png"
+			}
+		},
+		{
+			"name": "Frontier Homesteader",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{W}{W}",
+			"type": "Creature — Human Scout ",
+			"collector_number": "4",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/4_Frontier Homesteader.png"
+			}
+		},
+		{
+			"name": "Annabelle, the Self-Made Widow",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{U}",
+			"type": "Legendary Creature — Human Rogue ",
+			"collector_number": "22",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/22_Annabelle, the Self-Made Widow.png"
+			}
+		},
+		{
+			"name": "Ap'haro Guidance",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{U}",
+			"type": "Sorcery",
+			"collector_number": "23",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/23_Ap'haro Guidance.png"
+			}
+		},
+		{
+			"name": "Catch the Midnight Express",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{U}",
+			"type": "Instant",
+			"collector_number": "24",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/24_Catch the Midnight Express.png"
+			}
+		},
+		{
+			"name": "Adventurous Daughter",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{U}{U}",
+			"type": "Creature — Human Citizen ",
+			"collector_number": "19",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/19_Adventurous Daughter.png"
+			}
+		},
+		{
+			"name": "A Moment of Nothing",
+			"rarity": "uncommon",
+			"mana_cost": "{5}{U}{U}",
+			"type": "Sorcery",
+			"collector_number": "31",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/31_A Moment of Nothing.png"
+			}
+		},
+		{
+			"name": "New Greetings",
+			"rarity": "uncommon",
+			"mana_cost": "{3}{U}{U}",
+			"type": "Enchantment",
+			"collector_number": "32",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/32_New Greetings.png"
+			}
+		},
+		{
+			"name": "Ol' Danny Damnations",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{B}{B}",
+			"type": "Legendary Creature — Human Rogue ",
+			"collector_number": "51",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/51_Ol' Danny Damnations.png"
+			}
+		},
+		{
+			"name": "Curse the Name",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{B}",
+			"type": "Enchantment — Aura Curse ",
+			"collector_number": "44",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/44_Curse the Name.png"
+			}
+		},
+		{
+			"name": "Not Dead Yet",
+			"rarity": "common",
+			"mana_cost": "{B}",
+			"type": "Sorcery",
+			"collector_number": "50",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/50_Not Dead Yet.png"
+			}
+		},
+		{
+			"name": "Heartless Act",
+			"rarity": "common",
+			"mana_cost": "{1}{B}",
+			"type": "Instant",
+			"collector_number": "47",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/47_Heartless Act.png"
+			}
+		},
+		{
+			"name": "Ill-Met Desperado",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{B}{B}",
+			"type": "Creature — Human Rogue ",
+			"collector_number": "48",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/48_Ill-Met Desperado.png"
+			}
+		},
+		{
+			"name": "Rodeo Roughie",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{R}",
+			"type": "Creature — Human Citizen ",
+			"collector_number": "63",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/63_Rodeo Roughie.png"
+			}
+		},
+		{
+			"name": "Breakaway Carriage",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{R}{R}",
+			"type": "Creature — Human Rogue ",
+			"collector_number": "56",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/56_Breakaway Carriage.png"
+			}
+		},
+		{
+			"name": "Burn What's Left",
+			"rarity": "uncommon",
+			"mana_cost": "{R}{R}",
+			"type": "Instant",
+			"collector_number": "57",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/57_Burn What's Left.png"
+			}
+		},
+		{
+			"name": "Saddle Up",
+			"rarity": "common",
+			"mana_cost": "{1}{R}",
+			"type": "Instant",
+			"collector_number": "65",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/65_Saddle Up.png"
+			}
+		},
+		{
+			"name": "Excavation Crew",
+			"rarity": "common",
+			"mana_cost": "{R}",
+			"type": "Creature — Human Citizen ",
+			"collector_number": "58",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/58_Excavation Crew.png"
+			}
+		},
+		{
+			"name": "Roughstock Rider",
+			"rarity": "uncommon",
+			"mana_cost": "{4}{R}{R}",
+			"type": "Creature — Human Citizen ",
+			"collector_number": "64",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/64_Roughstock Rider.png"
+			}
+		},
+		{
+			"name": "Merry Rest",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{G}",
+			"type": "Sorcery",
+			"collector_number": "83",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/83_Merry Rest.png"
+			}
+		},
+		{
+			"name": "Into the North",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{G}",
+			"type": "Sorcery",
+			"collector_number": "82",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/82_Into the North.png"
+			}
+		},
+		{
+			"name": "Edith, Painted Brawler",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{G}",
+			"type": "Legendary Planeswalker — Edith ",
+			"collector_number": "77",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/77_Edith, Painted Brawler.png"
+			}
+		},
+		{
+			"name": "Tales Passed Down",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{G}{G}",
+			"type": "Enchantment",
+			"collector_number": "88",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/88_Tales Passed Down.png"
+			}
+		},
+		{
+			"name": "Gourd Gatherers",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{G}",
+			"type": "Creature — Human Citizen ",
+			"collector_number": "79",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/79_Gourd Gatherers.png"
+			}
+		},
+		{
+			"name": "Concealed Hunters",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{G}{G}",
+			"type": "Creature — Human Warrior ",
+			"collector_number": "74",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/74_Concealed Hunters.png"
+			}
+		},
+		{
+			"name": "St. Musset Reporters",
+			"rarity": "common",
+			"mana_cost": "{W}{U}",
+			"type": "Creature — Human Citizen ",
+			"collector_number": "93",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/93_St. Musset Reporters.png"
+			}
+		},
+		{
+			"name": "Find the Way Out",
+			"rarity": "common",
+			"mana_cost": "{U}{B}",
+			"type": "Instant",
+			"collector_number": "94",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/94_Find the Way Out.png"
+			}
+		},
+		{
+			"name": "Hellfire Hand",
+			"rarity": "common",
+			"mana_cost": "{B}{R}",
+			"type": "Creature — Human Rogue ",
+			"collector_number": "98",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/98_Hellfire Hand.png"
+			}
+		},
+		{
+			"name": "Emerge from the Dust",
+			"rarity": "common",
+			"mana_cost": "{2}{R}{G}",
+			"type": "Enchantment",
+			"collector_number": "100",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/100_Emerge from the Dust.png"
+			}
+		},
+		{
+			"name": "Hardy Pilgrims",
+			"rarity": "common",
+			"mana_cost": "{1}{G}{W}",
+			"type": "Creature — Human Citizen ",
+			"collector_number": "104",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/104_Hardy Pilgrims.png"
+			}
+		},
+		{
+			"name": "Grace's Deputies",
+			"rarity": "common",
+			"mana_cost": "{W}{B}",
+			"type": "Creature — Human Soldier ",
+			"collector_number": "107",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/107_Grace's Deputies.png"
+			}
+		},
+		{
+			"name": "Tsimtsuk Messenger",
+			"rarity": "common",
+			"mana_cost": "{1}{U}{R}",
+			"type": "Creature — Human Scout ",
+			"collector_number": "111",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/111_Tsimtsuk Messenger.png"
+			}
+		},
+		{
+			"name": "Harried Rancher",
+			"rarity": "common",
+			"mana_cost": "{B}{G}",
+			"type": "Creature — Human Citizen ",
+			"collector_number": "112",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/112_Harried Rancher.png"
+			}
+		},
+		{
+			"name": "Riverway Hunters",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{G}{U}",
+			"type": "Creature — Human Scout ",
+			"collector_number": "120",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/120_Riverway Hunters.png"
+			}
+		},
+		{
+			"name": "Ap'haro Outrider",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{W}{U}",
+			"type": "Creature — Human Scout ",
+			"collector_number": "91",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/91_Ap'haro Outrider.png"
+			}
+		},
+		{
+			"name": "Investment Magnate",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{U}{B}",
+			"type": "Creature — Human Citizen ",
+			"collector_number": "95",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/95_Investment Magnate.png"
+			}
+		},
+		{
+			"name": "Homestead Toymaker",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{R}{G}",
+			"type": "Creature — Human Citizen ",
+			"collector_number": "101",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/101_Homestead Toymaker.png"
+			}
+		},
+		{
+			"name": "Striking Gold",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{R}{G}",
+			"type": "Enchantment",
+			"collector_number": "102",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/102_Striking Gold.png"
+			}
+		},
+		{
+			"name": "Seasoned Pathfinder",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{G}{W}",
+			"type": "Creature — Human Scout ",
+			"collector_number": "105",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/105_Seasoned Pathfinder.png"
+			}
+		},
+		{
+			"name": "Ap'haro Hunter",
+			"rarity": "uncommon",
+			"mana_cost": "{G}{W}",
+			"type": "Creature — Human Warrior ",
+			"collector_number": "103",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/103_Ap'haro Hunter.png"
+			}
+		},
+		{
+			"name": "Darlin' Stranger",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{W}{B}",
+			"type": "Legendary Creature — Human ",
+			"collector_number": "106",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/106_Darlin' Stranger.png"
+			}
+		},
+		{
+			"name": "Pilfering Mortician",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{W}{B}",
+			"type": "Creature — Human Citizen ",
+			"collector_number": "108",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/108_Pilfering Mortician.png"
+			}
+		},
+		{
+			"name": "Opportunistic Sharpshooter",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{U}{R}",
+			"type": "Creature — Human Rogue ",
+			"collector_number": "109",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/109_Opportunistic Sharpshooter.png"
+			}
+		},
+		{
+			"name": "Something Wicked This Way Rides",
+			"rarity": "uncommon",
+			"mana_cost": "{B}{G}",
+			"type": "Sorcery",
+			"collector_number": "113",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/113_Something Wicked This Way Rides.png"
+			}
+		},
+		{
+			"name": "The Wind Howls",
+			"rarity": "uncommon",
+			"mana_cost": "{X}{B}{G}",
+			"type": "Sorcery",
+			"collector_number": "114",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/114_The Wind Howls.png"
+			}
+		},
+		{
+			"name": "Marshal Grace",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{R}{W}",
+			"type": "Legendary Creature — Human Soldier ",
+			"collector_number": "116",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/116_Marshal Grace.png"
+			}
+		},
+		{
+			"name": "St. Musset Outfitter",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{R}{W}",
+			"type": "Creature — Human Citizen ",
+			"collector_number": "117",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/117_St. Musset Outfitter.png"
+			}
+		},
+		{
+			"name": "Old Faces",
+			"rarity": "common",
+			"mana_cost": "{2}{G}{U}",
+			"type": "Sorcery",
+			"collector_number": "119",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/119_Old Faces.png"
+			}
+		},
+		{
+			"name": "Tsimtsuk Village",
+			"rarity": "common",
+			"mana_cost": "{2}",
+			"type": "Artifact — Fortification ",
+			"collector_number": "127",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/127_Tsimtsuk Village.png"
+			}
+		},
+		{
+			"name": "Prospector's Pick",
+			"rarity": "common",
+			"mana_cost": "{1}",
+			"type": "Artifact — Equipment ",
+			"collector_number": "124",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/124_Prospector's Pick.png"
+			}
+		},
+		{
+			"name": "River of Gold",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Land",
+			"collector_number": "135",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/135_River of Gold.png"
+			}
+		},
+		{
+			"name": "Marked Shot",
+			"rarity": "common",
+			"mana_cost": "{1}",
+			"type": "Artifact — Bullet ",
+			"collector_number": "123",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/123_Marked Shot.png"
+			}
+		},
+		{
+			"name": "Wanted Poster",
+			"rarity": "uncommon",
+			"mana_cost": "{1}",
+			"type": "Artifact",
+			"collector_number": "128",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/128_Wanted Poster.png"
+			}
+		},
+		{
+			"name": "Crate of Explosives",
+			"rarity": "uncommon",
+			"mana_cost": "{X}",
+			"type": "Artifact",
+			"collector_number": "121",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/121_Crate of Explosives.png"
+			}
+		},
+		{
+			"name": "Trapper's Lean-to",
+			"rarity": "uncommon",
+			"mana_cost": "{4}",
+			"type": "Artifact",
+			"collector_number": "126",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/126_Trapper's Lean-to.png"
+			}
+		},
+		{
+			"name": "White-Water Canoe",
+			"rarity": "uncommon",
+			"mana_cost": "{2}",
+			"type": "Artifact — Vehicle ",
+			"collector_number": "129",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/129_White-Water Canoe.png"
+			}
+		},
+		{
+			"name": "The Transcontinental",
+			"rarity": "uncommon",
+			"mana_cost": "{6}",
+			"type": "Legendary Artifact — Vehicle ",
+			"collector_number": "125",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/125_The Transcontinental.png"
+			}
+		},
+		{
+			"name": "Express Locomotive",
+			"rarity": "common",
+			"mana_cost": "{3}",
+			"type": "Artifact — Vehicle ",
+			"collector_number": "122",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/122_Express Locomotive.png"
+			}
+		},
+		{
+			"name": "Familiar Trails (Valley)",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Land",
+			"collector_number": "134",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/134_Familiar Trails (Valley).png"
+			}
+		},
+		{
+			"name": "Familiar Trails (Sunset)",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Land",
+			"collector_number": "133",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/133_Familiar Trails (Sunset).png"
+			}
+		},
+		{
+			"name": "Familiar Trails (Ruin)",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Land",
+			"collector_number": "132",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/132_Familiar Trails (Ruin).png"
+			}
+		},
+		{
+			"name": "Familiar Trails (Hearth)",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Land",
+			"collector_number": "131",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/131_Familiar Trails (Hearth).png"
+			}
+		},
+		{
+			"name": "Familiar Trails (Camp)",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Land",
+			"collector_number": "130",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/130_Familiar Trails (Camp).png"
+			}
+		},
+		{
+			"name": "Belligerent Sheriff",
+			"rarity": "common",
+			"mana_cost": "{R}{W}",
+			"type": "Creature — Human Soldier ",
+			"collector_number": "115",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/115_Belligerent Sheriff.png"
+			}
+		},
+		{
+			"name": "Roads Once Known",
+			"rarity": "common",
+			"mana_cost": "{2}{G}",
+			"type": "Sorcery",
+			"collector_number": "86",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/86_Roads Once Known.png"
+			}
+		},
+		{
+			"name": "Past Laid to Rest",
+			"rarity": "common",
+			"mana_cost": "{B}",
+			"type": "Sorcery",
+			"collector_number": "53",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/53_Past Laid to Rest.png"
+			}
+		},
+		{
+			"name": "Robbing the Rail",
+			"rarity": "common",
+			"mana_cost": "{R}",
+			"type": "Enchantment — Deed ",
+			"collector_number": "62",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/62_Robbing the Rail.png"
+			}
+		},
+		{
+			"name": "Frontier Justice",
+			"rarity": "common",
+			"mana_cost": "{1}{W}",
+			"type": "Enchantment — Deed ",
+			"collector_number": "5",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/5_Frontier Justice.png"
+			}
+		},
+		{
+			"name": "Burning St. Musset",
+			"rarity": "common",
+			"mana_cost": "{B}",
+			"type": "Enchantment — Deed ",
+			"collector_number": "40",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/40_Burning St. Musset.png"
+			}
+		},
+		{
+			"name": "Out For Blood",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{B}",
+			"type": "Enchantment",
+			"collector_number": "52",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/52_Out For Blood.png"
+			}
+		},
+		{
+			"name": "Darlin's Vigil",
+			"rarity": "common",
+			"mana_cost": "{1}{W}",
+			"type": "Instant",
+			"collector_number": "2",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/2_Darlin's Vigil.png"
+			}
+		},
+		{
+			"name": "Liar's Riddle",
+			"rarity": "common",
+			"mana_cost": "{1}{U}{U}",
+			"type": "Instant",
+			"collector_number": "28",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/28_Liar's Riddle.png"
+			}
+		},
+		{
+			"name": "Gift of the Asp",
+			"rarity": "common",
+			"mana_cost": "{B}",
+			"type": "Instant",
+			"collector_number": "46",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/46_Gift of the Asp.png"
+			}
+		},
+		{
+			"name": "Wreckage Below",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{R}",
+			"type": "Enchantment",
+			"collector_number": "72",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/72_Wreckage Below.png"
+			}
+		},
+		{
+			"name": "Burying the Hatchet",
+			"rarity": "common",
+			"mana_cost": "{1}{G}",
+			"type": "Enchantment — Deed ",
+			"collector_number": "73",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/73_Burying the Hatchet.png"
+			}
+		},
+		{
+			"name": "Aiding the Self-Made Widow",
+			"rarity": "common",
+			"mana_cost": "{1}{U}",
+			"type": "Enchantment — Deed ",
+			"collector_number": "20",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/20_Aiding the Self-Made Widow.png"
+			}
+		},
+		{
+			"name": "Till Death Do Us Part",
+			"rarity": "uncommon",
+			"mana_cost": "{U}{B}",
+			"type": "Enchantment — Deed ",
+			"collector_number": "96",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/96_Till Death Do Us Part.png"
+			}
+		},
+		{
+			"name": "Soldier",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Creature — Soldier ",
+			"collector_number": "3",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/3_Soldier.png"
+			}
+		},
+		{
+			"name": "Ain't No Saving Grace",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{B}{R}",
+			"type": "Enchantment — Deed ",
+			"collector_number": "97",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/97_Ain't No Saving Grace.png"
+			}
+		},
+		{
+			"name": "Wolf",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Creature — Wolf ",
+			"collector_number": "4",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/4_Wolf.png"
+			}
+		},
+		{
+			"name": "Readying the Ambush",
+			"rarity": "uncommon",
+			"mana_cost": "{U}{R}",
+			"type": "Enchantment — Deed ",
+			"collector_number": "110",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/110_Readying the Ambush.png"
+			}
+		},
+		{
+			"name": "Bullet",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Artifact — Bullet ",
+			"collector_number": "5",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/5_Bullet.png"
+			}
+		},
+		{
+			"name": "Taming the Stallion",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{R}{R}",
+			"type": "Enchantment — Deed ",
+			"collector_number": "69",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/69_Taming the Stallion.png"
+			}
+		},
+		{
+			"name": "Haunt the Woods",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{G}{G}",
+			"type": "Enchantment — Deed ",
+			"collector_number": "81",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/81_Haunt the Woods.png"
+			}
+		},
+		{
+			"name": "Rogue",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Creature — Rogue ",
+			"collector_number": "2",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/2_Rogue.png"
+			}
+		},
+		{
+			"name": "Seek the Skies",
+			"rarity": "uncommon",
+			"mana_cost": "{3}{W}{U}",
+			"type": "Enchantment — Deed ",
+			"collector_number": "92",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/92_Seek the Skies.png"
+			}
+		},
+		{
+			"name": "Mishka, Eye of the Charlatan",
+			"rarity": "uncommon",
+			"mana_cost": "{3}{U}{U}",
+			"type": "Legendary Planeswalker — Mishka ",
+			"collector_number": "29",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/29_Mishka, Eye of the Charlatan.png"
+			}
+		},
+		{
+			"name": "Jackle the Jackal",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{B}{R}",
+			"type": "Legendary Creature — Human Rogue ",
+			"collector_number": "99",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/99_Jackle the Jackal.png"
+			}
+		},
+		{
+			"name": "Leaving It Behind",
+			"rarity": "uncommon",
+			"mana_cost": "{G}{U}",
+			"type": "Enchantment — Deed ",
+			"collector_number": "118",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/118_Leaving It Behind.png"
+			}
+		},
+		{
+			"name": "Break the Law's Back",
+			"rarity": "uncommon",
+			"mana_cost": "{3}{B}{B}",
+			"type": "Enchantment — Deed ",
+			"collector_number": "39",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/39_Break the Law's Back.png"
+			}
+		},
+		{
+			"name": "Hound",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Creature — Hound ",
+			"collector_number": "1",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/1_Hound.png"
+			}
+		},
+		{
+			"name": "Plains",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Basic Land — Plains ",
+			"collector_number": "136",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/136_Plains.png"
+			}
+		},
+		{
+			"name": "Island",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Basic Land — Island ",
+			"collector_number": "137",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/137_Island.png"
+			}
+		},
+		{
+			"name": "Swamp",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Basic Land — Swamp ",
+			"collector_number": "138",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/138_Swamp.png"
+			}
+		},
+		{
+			"name": "Mountain",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Basic Land — Mountain ",
+			"collector_number": "139",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/139_Mountain.png"
+			}
+		},
+		{
+			"name": "Forest",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Basic Land — Forest ",
+			"collector_number": "140",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/140_Forest.png"
+			}
+		},
+		]
+	
