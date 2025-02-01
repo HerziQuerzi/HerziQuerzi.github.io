@@ -2240,23 +2240,6 @@
 			}
 		},
 		{
-			"name": "Sacrifice to Setar",
-			"rarity": "mythic",
-			"mana_cost": "{U}{B}{R}",
-			"type": "Creature — Human Shaman ",
-			"collector_number": "182",
-			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/182_Sacrifice to Setar_front.png"
-			},
-			"back": {
-				"name": "",
-				"type": "",
-				"image_uris": {
-					"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/182_Sacrifice to Setar_back.png"
-				}
-			}
-		},
-		{
 			"name": "Reduce to Naught",
 			"rarity": "rare",
 			"mana_cost": "{1}{B}",
@@ -2334,6 +2317,23 @@
 			"collector_number": "62",
 			"image_uris": {
 				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/62_Black Hole Musings.png"
+			}
+		},
+		{
+			"name": "Sacrifice to Setar",
+			"rarity": "mythic",
+			"mana_cost": "{U}{B}{R}",
+			"type": "Creature — Human Shaman ",
+			"collector_number": "182",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/182_Sacrifice to Setar_front.png"
+			},
+			"back": {
+				"name": "",
+				"type": "",
+				"image_uris": {
+					"en": "https://HerziQuerzi.github.io/sets/BYK-files/img/182_Sacrifice to Setar_back.png"
+				}
 			}
 		},
 		]

@@ -2360,13 +2360,13 @@
 			}
 		},
 		{
-			"name": "Mountain",
+			"name": "Mountain b",
 			"rarity": "common",
 			"mana_cost": "",
 			"type": "Basic Land — Mountain ",
 			"collector_number": "263",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/MMT-files/img/263_Mountain.png"
+				"en": "https://HerziQuerzi.github.io/sets/MMT-files/img/263_Mountain b.png"
 			}
 		},
 		{
@@ -2380,13 +2380,13 @@
 			}
 		},
 		{
-			"name": "Plains",
+			"name": "Plains b",
 			"rarity": "common",
 			"mana_cost": "",
 			"type": "Basic Land — Plains ",
 			"collector_number": "251",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/MMT-files/img/251_Plains.png"
+				"en": "https://HerziQuerzi.github.io/sets/MMT-files/img/251_Plains b.png"
 			}
 		},
 		{
@@ -2400,63 +2400,63 @@
 			}
 		},
 		{
-			"name": "Forest",
+			"name": "Forest c",
 			"rarity": "common",
 			"mana_cost": "",
 			"type": "Basic Land — Forest ",
 			"collector_number": "268",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/MMT-files/img/268_Forest.png"
+				"en": "https://HerziQuerzi.github.io/sets/MMT-files/img/268_Forest c.png"
 			}
 		},
 		{
-			"name": "Plains",
+			"name": "Plains c",
 			"rarity": "common",
 			"mana_cost": "",
 			"type": "Basic Land — Plains ",
 			"collector_number": "252",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/MMT-files/img/252_Plains.png"
+				"en": "https://HerziQuerzi.github.io/sets/MMT-files/img/252_Plains c.png"
 			}
 		},
 		{
-			"name": "Plains",
+			"name": "Plains d",
 			"rarity": "common",
 			"mana_cost": "",
 			"type": "Basic Land — Plains ",
 			"collector_number": "253",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/MMT-files/img/253_Plains.png"
+				"en": "https://HerziQuerzi.github.io/sets/MMT-files/img/253_Plains d.png"
 			}
 		},
 		{
-			"name": "Swamp",
+			"name": "Swamp c",
 			"rarity": "common",
 			"mana_cost": "",
 			"type": "Basic Land — Swamp ",
 			"collector_number": "260",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/MMT-files/img/260_Swamp.png"
+				"en": "https://HerziQuerzi.github.io/sets/MMT-files/img/260_Swamp c.png"
 			}
 		},
 		{
-			"name": "Swamp",
+			"name": "Swamp b",
 			"rarity": "common",
 			"mana_cost": "",
 			"type": "Basic Land — Swamp ",
 			"collector_number": "259",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/MMT-files/img/259_Swamp.png"
+				"en": "https://HerziQuerzi.github.io/sets/MMT-files/img/259_Swamp b.png"
 			}
 		},
 		{
-			"name": "Swamp",
+			"name": "Swamp d",
 			"rarity": "common",
 			"mana_cost": "",
 			"type": "Basic Land — Swamp ",
 			"collector_number": "261",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/MMT-files/img/261_Swamp.png"
+				"en": "https://HerziQuerzi.github.io/sets/MMT-files/img/261_Swamp d.png"
 			}
 		},
 		{
@@ -2500,13 +2500,13 @@
 			}
 		},
 		{
-			"name": "Island",
+			"name": "Island b",
 			"rarity": "common",
 			"mana_cost": "",
 			"type": "Basic Land — Island ",
 			"collector_number": "255",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/MMT-files/img/255_Island.png"
+				"en": "https://HerziQuerzi.github.io/sets/MMT-files/img/255_Island b.png"
 			}
 		},
 		{
@@ -2520,13 +2520,13 @@
 			}
 		},
 		{
-			"name": "Island",
+			"name": "Island d",
 			"rarity": "common",
 			"mana_cost": "",
 			"type": "Basic Land — Island ",
 			"collector_number": "257",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/MMT-files/img/257_Island.png"
+				"en": "https://HerziQuerzi.github.io/sets/MMT-files/img/257_Island d.png"
 			}
 		},
 		{
@@ -2560,23 +2560,23 @@
 			}
 		},
 		{
-			"name": "Forest",
+			"name": "Forest b",
 			"rarity": "common",
 			"mana_cost": "",
 			"type": "Basic Land — Forest ",
 			"collector_number": "267",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/MMT-files/img/267_Forest.png"
+				"en": "https://HerziQuerzi.github.io/sets/MMT-files/img/267_Forest b.png"
 			}
 		},
 		{
-			"name": "Forest",
+			"name": "Forest d",
 			"rarity": "common",
 			"mana_cost": "",
 			"type": "Basic Land — Forest ",
 			"collector_number": "269",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/MMT-files/img/269_Forest.png"
+				"en": "https://HerziQuerzi.github.io/sets/MMT-files/img/269_Forest d.png"
 			}
 		},
 		{
@@ -2630,23 +2630,13 @@
 			}
 		},
 		{
-			"name": "Dessicate",
-			"rarity": "special",
-			"mana_cost": "{B}{G}",
-			"type": "Instant",
-			"collector_number": "270",
-			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/MMT-files/img/270_Dessicate.png"
-			}
-		},
-		{
-			"name": "Island",
+			"name": "Island c",
 			"rarity": "common",
 			"mana_cost": "",
 			"type": "Basic Land — Island ",
 			"collector_number": "256",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/MMT-files/img/256_Island.png"
+				"en": "https://HerziQuerzi.github.io/sets/MMT-files/img/256_Island c.png"
 			}
 		},
 		{
@@ -2670,23 +2660,23 @@
 			}
 		},
 		{
-			"name": "Mountain",
+			"name": "Mountain c",
 			"rarity": "common",
 			"mana_cost": "",
 			"type": "Basic Land — Mountain ",
 			"collector_number": "264",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/MMT-files/img/264_Mountain.png"
+				"en": "https://HerziQuerzi.github.io/sets/MMT-files/img/264_Mountain c.png"
 			}
 		},
 		{
-			"name": "Mountain",
+			"name": "Mountain d",
 			"rarity": "common",
 			"mana_cost": "",
 			"type": "Basic Land — Mountain ",
 			"collector_number": "265",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/MMT-files/img/265_Mountain.png"
+				"en": "https://HerziQuerzi.github.io/sets/MMT-files/img/265_Mountain d.png"
 			}
 		},
 		{

@@ -630,13 +630,13 @@
 			}
 		},
 		{
-			"name": "Soldier",
+			"name": "Soldier b",
 			"rarity": "common",
 			"mana_cost": "",
 			"type": "Token Creature — Soldier ",
 			"collector_number": "7",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/7_Soldier.png"
+				"en": "https://HerziQuerzi.github.io/sets/MMC-files/img/7_Soldier b.png"
 			}
 		},
 		{
