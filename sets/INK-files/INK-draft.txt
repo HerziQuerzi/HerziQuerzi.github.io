@@ -110,13 +110,13 @@
 			}
 		},
 		{
-			"name": "Othen, Harvester of Stars",
+			"name": "Ohtli, Harvester of Stars",
 			"rarity": "uncommon",
 			"mana_cost": "{3}{R}{G}",
 			"type": "Legendary Planeswalker — Othen ",
 			"collector_number": "87",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/87_Othen, Harvester of Stars.png"
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/87_Ohtli, Harvester of Stars.png"
 			}
 		},
 		{
@@ -344,9 +344,9 @@
 			"rarity": "common",
 			"mana_cost": "{1}{B}",
 			"type": "Creature — Human Shaman ",
-			"collector_number": "41",
+			"collector_number": "42",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/41_Seer of Ill Ends.png"
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/42_Seer of Ill Ends.png"
 			}
 		},
 		{
@@ -362,7 +362,7 @@
 		{
 			"name": "Unveil the Cosmos",
 			"rarity": "uncommon",
-			"mana_cost": "{2}{U}",
+			"mana_cost": "{1}{U}{U}",
 			"type": "Instant",
 			"collector_number": "30",
 			"image_uris": {
@@ -394,9 +394,9 @@
 			"rarity": "uncommon",
 			"mana_cost": "{2}{U}{R}",
 			"type": "Instant",
-			"collector_number": "96",
+			"collector_number": "95",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/96_Witness Something New.png"
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/95_Witness Something New.png"
 			}
 		},
 		{
@@ -454,9 +454,9 @@
 			"rarity": "common",
 			"mana_cost": "{3}{B}",
 			"type": "Creature — Human Pirate ",
-			"collector_number": "38",
+			"collector_number": "39",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/38_Ragged Fleet Navigator.png"
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/39_Ragged Fleet Navigator.png"
 			}
 		},
 		{
@@ -530,13 +530,13 @@
 			}
 		},
 		{
-			"name": "Syzygy Operative",
+			"name": "Yestades Operative",
 			"rarity": "uncommon",
 			"mana_cost": "{W}{B}",
 			"type": "Creature — Human Assassin ",
 			"collector_number": "93",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/93_Syzygy Operative.png"
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/93_Yestades Operative.png"
 			}
 		},
 		{
@@ -584,9 +584,9 @@
 			"rarity": "common",
 			"mana_cost": "{2}{B}",
 			"type": "Creature — Horror ",
-			"collector_number": "42",
+			"collector_number": "43",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/42_Shrieking Swarm.png"
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/43_Shrieking Swarm.png"
 			}
 		},
 		{
@@ -750,13 +750,13 @@
 			}
 		},
 		{
-			"name": "Syzygy Corsair",
+			"name": "Outerworld Corsair",
 			"rarity": "common",
 			"mana_cost": "{B}",
 			"type": "Creature — Human Pirate ",
-			"collector_number": "43",
+			"collector_number": "38",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/43_Syzygy Corsair.png"
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/38_Outerworld Corsair.png"
 			}
 		},
 		{
@@ -764,9 +764,9 @@
 			"rarity": "common",
 			"mana_cost": "{2}{B}",
 			"type": "Creature — Elf Pirate ",
-			"collector_number": "40",
+			"collector_number": "41",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/40_Ravager of the Eclipse.png"
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/41_Ravager of the Eclipse.png"
 			}
 		},
 		{
@@ -940,13 +940,13 @@
 			}
 		},
 		{
-			"name": "Syzygy Battlemage",
+			"name": "Yestades Battlemage",
 			"rarity": "common",
 			"mana_cost": "{U}{R}",
 			"type": "Creature — Human Wizard ",
-			"collector_number": "95",
+			"collector_number": "96",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/95_Syzygy Battlemage.png"
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/96_Yestades Battlemage.png"
 			}
 		},
 		{
@@ -1014,9 +1014,9 @@
 			"rarity": "common",
 			"mana_cost": "{3}{B}{B}",
 			"type": "Creature — Elf Pirate Artificer ",
-			"collector_number": "39",
+			"collector_number": "40",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/39_Ragged Fleet Outfitter.png"
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/40_Ragged Fleet Outfitter.png"
 			}
 		},
 		{
