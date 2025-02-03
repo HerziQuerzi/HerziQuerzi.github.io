@@ -113,7 +113,7 @@
 			"name": "Ohtli, Harvester of Stars",
 			"rarity": "uncommon",
 			"mana_cost": "{3}{R}{G}",
-			"type": "Legendary Planeswalker — Othen ",
+			"type": "Legendary Planeswalker — Ohtli ",
 			"collector_number": "87",
 			"image_uris": {
 				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/87_Ohtli, Harvester of Stars.png"
@@ -184,9 +184,9 @@
 			"rarity": "special",
 			"mana_cost": "",
 			"type": "Land",
-			"collector_number": "38",
+			"collector_number": "39",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/38_Far-Off Lands.png"
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/39_Far-Off Lands.png"
 			}
 		},
 		{
@@ -420,13 +420,13 @@
 			}
 		},
 		{
-			"name": "Solar Flare",
+			"name": "Solar Flare (Ohtli)",
 			"rarity": "special",
 			"mana_cost": "{R}{G}",
 			"type": "Instant",
 			"collector_number": "26",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/26_Solar Flare.png"
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/26_Solar Flare (Ohtli).png"
 			}
 		},
 		{
@@ -554,9 +554,9 @@
 			"rarity": "special",
 			"mana_cost": "{2}",
 			"type": "Artifact — Vehicle ",
-			"collector_number": "35",
+			"collector_number": "36",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/35_Sky Skiff.png"
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/36_Sky Skiff.png"
 			}
 		},
 		{
@@ -1044,9 +1044,9 @@
 			"rarity": "common",
 			"mana_cost": "",
 			"type": "Token Creature — Scout ",
-			"collector_number": "31",
+			"collector_number": "32",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/31_Scout.png"
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/32_Scout.png"
 			}
 		},
 		{
@@ -1204,9 +1204,9 @@
 			"rarity": "special",
 			"mana_cost": "{2}",
 			"type": "Artifact",
-			"collector_number": "33",
+			"collector_number": "34",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/33_Collector's Vault.png"
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/34_Collector's Vault.png"
 			}
 		},
 		{
@@ -1234,9 +1234,9 @@
 			"rarity": "special",
 			"mana_cost": "{1}",
 			"type": "Artifact",
-			"collector_number": "36",
+			"collector_number": "37",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/36_Traveler's Amulet.png"
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/37_Traveler's Amulet.png"
 			}
 		},
 		{
@@ -1334,9 +1334,9 @@
 			"rarity": "special",
 			"mana_cost": "{0}",
 			"type": "Artifact",
-			"collector_number": "32",
+			"collector_number": "33",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/32_Black Lotus.png"
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/33_Black Lotus.png"
 			}
 		},
 		{
@@ -1414,9 +1414,9 @@
 			"rarity": "special",
 			"mana_cost": "{B}{G}",
 			"type": "Instant",
-			"collector_number": "28",
+			"collector_number": "29",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/28_Eclipse Life.png"
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/29_Eclipse Life.png"
 			}
 		},
 		{
@@ -1434,9 +1434,9 @@
 			"rarity": "special",
 			"mana_cost": "{R}{W}",
 			"type": "Instant",
-			"collector_number": "29",
+			"collector_number": "30",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/29_Lightning Helix.png"
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/30_Lightning Helix.png"
 			}
 		},
 		{
@@ -1444,9 +1444,9 @@
 			"rarity": "special",
 			"mana_cost": "{W}{B}",
 			"type": "Instant",
-			"collector_number": "27",
+			"collector_number": "28",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/27_Excise Faith.png"
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/28_Excise Faith.png"
 			}
 		},
 		{
@@ -1504,9 +1504,9 @@
 			"rarity": "common",
 			"mana_cost": "",
 			"type": "Token Land — Plains Island ",
-			"collector_number": "45",
+			"collector_number": "46",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/45_Plains Island.png"
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/46_Plains Island.png"
 			}
 		},
 		{
@@ -1514,9 +1514,9 @@
 			"rarity": "common",
 			"mana_cost": "",
 			"type": "Token Land — Plains Swamp ",
-			"collector_number": "46",
+			"collector_number": "47",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/46_Plains Swamp.png"
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/47_Plains Swamp.png"
 			}
 		},
 		{
@@ -1524,9 +1524,9 @@
 			"rarity": "common",
 			"mana_cost": "",
 			"type": "Token Land — Mountain Plains ",
-			"collector_number": "44",
+			"collector_number": "45",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/44_Mountain Plains.png"
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/45_Mountain Plains.png"
 			}
 		},
 		{
@@ -1534,9 +1534,9 @@
 			"rarity": "common",
 			"mana_cost": "",
 			"type": "Token Land — Forest Plains ",
-			"collector_number": "40",
+			"collector_number": "41",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/40_Forest Plains.png"
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/41_Forest Plains.png"
 			}
 		},
 		{
@@ -1544,9 +1544,9 @@
 			"rarity": "common",
 			"mana_cost": "",
 			"type": "Token Land — Island Swamp ",
-			"collector_number": "42",
+			"collector_number": "43",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/42_Island Swamp.png"
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/43_Island Swamp.png"
 			}
 		},
 		{
@@ -1554,9 +1554,9 @@
 			"rarity": "common",
 			"mana_cost": "",
 			"type": "Token Land — Island Mountain ",
-			"collector_number": "41",
+			"collector_number": "42",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/41_Island Mountain.png"
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/42_Island Mountain.png"
 			}
 		},
 		{
@@ -1564,9 +1564,9 @@
 			"rarity": "common",
 			"mana_cost": "",
 			"type": "Token Land — Forest Island ",
-			"collector_number": "39",
+			"collector_number": "40",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/39_Forest Island.png"
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/40_Forest Island.png"
 			}
 		},
 		{
@@ -1574,9 +1574,9 @@
 			"rarity": "common",
 			"mana_cost": "",
 			"type": "Token Land — Swamp Mountain ",
-			"collector_number": "48",
+			"collector_number": "49",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/48_Swamp Mountain.png"
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/49_Swamp Mountain.png"
 			}
 		},
 		{
@@ -1584,9 +1584,9 @@
 			"rarity": "common",
 			"mana_cost": "",
 			"type": "Token Land — Swamp Forest ",
-			"collector_number": "47",
+			"collector_number": "48",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/47_Swamp Forest.png"
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/48_Swamp Forest.png"
 			}
 		},
 		{
@@ -1594,9 +1594,9 @@
 			"rarity": "common",
 			"mana_cost": "",
 			"type": "Token Land — Mountain Forest ",
-			"collector_number": "43",
+			"collector_number": "44",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/43_Mountain Forest.png"
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/44_Mountain Forest.png"
 			}
 		},
 		{
@@ -1754,9 +1754,9 @@
 			"rarity": "common",
 			"mana_cost": "",
 			"type": "Token Artifact — Treasure ",
-			"collector_number": "37",
+			"collector_number": "38",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/37_Treasure.png"
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/38_Treasure.png"
 			}
 		},
 		{
@@ -1774,9 +1774,9 @@
 			"rarity": "special",
 			"mana_cost": "{1}",
 			"type": "Artifact — Equipment ",
-			"collector_number": "34",
+			"collector_number": "35",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/34_Short Sword.png"
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/35_Short Sword.png"
 			}
 		},
 		{
@@ -1804,9 +1804,9 @@
 			"rarity": "special",
 			"mana_cost": "{5}{B}{G}{U}",
 			"type": "Creature — Elemental Horror ",
-			"collector_number": "30",
+			"collector_number": "31",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/30_Bifurcated Cynosure (Conjure).png"
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/31_Bifurcated Cynosure (Conjure).png"
 			}
 		},
 		{
@@ -1894,6 +1894,16 @@
 			"collector_number": "7",
 			"image_uris": {
 				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/7_Unstable Shapeshifter.png"
+			}
+		},
+		{
+			"name": "Solar Flare",
+			"rarity": "special",
+			"mana_cost": "{R}{G}",
+			"type": "Instant",
+			"collector_number": "27",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/INK-files/img/27_Solar Flare.png"
 			}
 		},
 		]
