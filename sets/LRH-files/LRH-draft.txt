@@ -14,9 +14,9 @@
 			"rarity": "common",
 			"mana_cost": "{W}",
 			"type": "Creature — Human Soldier ",
-			"collector_number": "13",
+			"collector_number": "14",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/13_Stern Deputy.png"
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/14_Stern Deputy.png"
 			}
 		},
 		{
@@ -24,9 +24,9 @@
 			"rarity": "common",
 			"mana_cost": "{1}{W}",
 			"type": "Creature — Human Soldier ",
-			"collector_number": "9",
+			"collector_number": "10",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/9_Marshal's Sharpshooter.png"
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/10_Marshal's Sharpshooter.png"
 			}
 		},
 		{
@@ -34,9 +34,9 @@
 			"rarity": "common",
 			"mana_cost": "{1}{W}",
 			"type": "Creature — Human Citizen ",
-			"collector_number": "12",
+			"collector_number": "13",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/12_St. Musset Wranglers.png"
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/13_St. Musset Wranglers.png"
 			}
 		},
 		{
@@ -44,9 +44,9 @@
 			"rarity": "common",
 			"mana_cost": "{2}{W}",
 			"type": "Creature — Human Citizen ",
-			"collector_number": "14",
+			"collector_number": "15",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/14_Trader Family.png"
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/15_Trader Family.png"
 			}
 		},
 		{
@@ -54,9 +54,9 @@
 			"rarity": "common",
 			"mana_cost": "{2}{W}",
 			"type": "Creature — Human Ranger ",
-			"collector_number": "15",
+			"collector_number": "16",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/15_Tsimtsuk Trackers.png"
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/16_Tsimtsuk Trackers.png"
 			}
 		},
 		{
@@ -64,9 +64,9 @@
 			"rarity": "common",
 			"mana_cost": "{3}{W}",
 			"type": "Creature — Human Soldier Rogue ",
-			"collector_number": "11",
+			"collector_number": "12",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/11_Roaming Vigilantes.png"
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/12_Roaming Vigilantes.png"
 			}
 		},
 		{
@@ -74,9 +74,9 @@
 			"rarity": "common",
 			"mana_cost": "{W}",
 			"type": "Instant",
-			"collector_number": "16",
+			"collector_number": "17",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/16_Warning Shot.png"
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/17_Warning Shot.png"
 			}
 		},
 		{
@@ -213,7 +213,7 @@
 			"name": "Crooked Lawman",
 			"rarity": "common",
 			"mana_cost": "{1}{B}",
-			"type": "Creature — Human Citizen ",
+			"type": "Creature — Human Soldier ",
 			"collector_number": "43",
 			"image_uris": {
 				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/43_Crooked Lawman.png"
@@ -300,13 +300,13 @@
 			}
 		},
 		{
-			"name": "St. Musset Courier",
+			"name": "Marshal's Courier",
 			"rarity": "common",
 			"mana_cost": "{1}{R}",
 			"type": "Creature — Human Soldier ",
-			"collector_number": "67",
+			"collector_number": "61",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/67_St. Musset Courier.png"
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/61_Marshal's Courier.png"
 			}
 		},
 		{
@@ -314,9 +314,9 @@
 			"rarity": "common",
 			"mana_cost": "{2}{R}",
 			"type": "Creature — Cat ",
-			"collector_number": "61",
+			"collector_number": "62",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/61_Mountain Path Wildcat.png"
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/62_Mountain Path Wildcat.png"
 			}
 		},
 		{
@@ -354,9 +354,9 @@
 			"rarity": "common",
 			"mana_cost": "{R}",
 			"type": "Instant",
-			"collector_number": "66",
+			"collector_number": "67",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/66_Smoking Barrels.png"
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/67_Smoking Barrels.png"
 			}
 		},
 		{
@@ -450,13 +450,13 @@
 			}
 		},
 		{
-			"name": "WIP",
+			"name": "Marshal's Roundup",
 			"rarity": "uncommon",
-			"mana_cost": "{W}",
-			"type": "",
-			"collector_number": "17",
+			"mana_cost": "{1}{W}{W}",
+			"type": "Instant",
+			"collector_number": "9",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/17_WIP.png"
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/9_Marshal's Roundup.png"
 			}
 		},
 		{
@@ -494,9 +494,9 @@
 			"rarity": "uncommon",
 			"mana_cost": "{3}{W}{W}",
 			"type": "Creature — Human Citizen ",
-			"collector_number": "10",
+			"collector_number": "11",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/10_Railroad Crew.png"
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/11_Railroad Crew.png"
 			}
 		},
 		{
@@ -624,9 +624,9 @@
 			"rarity": "uncommon",
 			"mana_cost": "{1}{R}",
 			"type": "Creature — Human Citizen ",
-			"collector_number": "63",
+			"collector_number": "64",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/63_Rodeo Roughie.png"
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/64_Rodeo Roughie.png"
 			}
 		},
 		{
@@ -654,9 +654,9 @@
 			"rarity": "common",
 			"mana_cost": "{1}{R}",
 			"type": "Instant",
-			"collector_number": "65",
+			"collector_number": "66",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/65_Saddle Up.png"
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/66_Saddle Up.png"
 			}
 		},
 		{
@@ -674,9 +674,9 @@
 			"rarity": "uncommon",
 			"mana_cost": "{4}{R}{R}",
 			"type": "Creature — Human Citizen ",
-			"collector_number": "64",
+			"collector_number": "65",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/64_Roughstock Rider.png"
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/65_Roughstock Rider.png"
 			}
 		},
 		{
@@ -971,12 +971,12 @@
 		},
 		{
 			"name": "Tsimtsuk Village",
-			"rarity": "common",
-			"mana_cost": "{2}",
-			"type": "Artifact — Fortification ",
-			"collector_number": "127",
+			"rarity": "uncommon",
+			"mana_cost": "",
+			"type": "Land",
+			"collector_number": "135",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/127_Tsimtsuk Village.png"
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/135_Tsimtsuk Village.png"
 			}
 		},
 		{
@@ -994,9 +994,9 @@
 			"rarity": "common",
 			"mana_cost": "",
 			"type": "Land",
-			"collector_number": "135",
+			"collector_number": "134",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/135_River of Gold.png"
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/134_River of Gold.png"
 			}
 		},
 		{
@@ -1014,9 +1014,9 @@
 			"rarity": "uncommon",
 			"mana_cost": "{1}",
 			"type": "Artifact",
-			"collector_number": "128",
+			"collector_number": "127",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/128_Wanted Poster.png"
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/127_Wanted Poster.png"
 			}
 		},
 		{
@@ -1041,12 +1041,12 @@
 		},
 		{
 			"name": "White-Water Canoe",
-			"rarity": "uncommon",
+			"rarity": "common",
 			"mana_cost": "{2}",
 			"type": "Artifact — Vehicle ",
-			"collector_number": "129",
+			"collector_number": "128",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/129_White-Water Canoe.png"
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/128_White-Water Canoe.png"
 			}
 		},
 		{
@@ -1074,9 +1074,9 @@
 			"rarity": "rare",
 			"mana_cost": "",
 			"type": "Land",
-			"collector_number": "134",
+			"collector_number": "133",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/134_Familiar Trails (Valley).png"
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/133_Familiar Trails (Valley).png"
 			}
 		},
 		{
@@ -1084,9 +1084,9 @@
 			"rarity": "rare",
 			"mana_cost": "",
 			"type": "Land",
-			"collector_number": "133",
+			"collector_number": "132",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/133_Familiar Trails (Sunset).png"
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/132_Familiar Trails (Sunset).png"
 			}
 		},
 		{
@@ -1094,9 +1094,9 @@
 			"rarity": "rare",
 			"mana_cost": "",
 			"type": "Land",
-			"collector_number": "132",
+			"collector_number": "131",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/132_Familiar Trails (Ruin).png"
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/131_Familiar Trails (Ruin).png"
 			}
 		},
 		{
@@ -1104,9 +1104,9 @@
 			"rarity": "rare",
 			"mana_cost": "",
 			"type": "Land",
-			"collector_number": "131",
+			"collector_number": "130",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/131_Familiar Trails (Hearth).png"
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/130_Familiar Trails (Hearth).png"
 			}
 		},
 		{
@@ -1114,9 +1114,9 @@
 			"rarity": "rare",
 			"mana_cost": "",
 			"type": "Land",
-			"collector_number": "130",
+			"collector_number": "129",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/130_Familiar Trails (Camp).png"
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/129_Familiar Trails (Camp).png"
 			}
 		},
 		{
@@ -1154,9 +1154,9 @@
 			"rarity": "common",
 			"mana_cost": "{R}",
 			"type": "Enchantment — Deed ",
-			"collector_number": "62",
+			"collector_number": "63",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/62_Robbing the Rail.png"
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/63_Robbing the Rail.png"
 			}
 		},
 		{
