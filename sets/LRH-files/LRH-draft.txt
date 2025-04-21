@@ -1303,7 +1303,7 @@
 			"name": "Bullet",
 			"rarity": "common",
 			"mana_cost": "",
-			"type": "Artifact — Bullet ",
+			"type": "Token Artifact — Bullet ",
 			"collector_number": "5",
 			"image_uris": {
 				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/5_Bullet.png"
@@ -1447,6 +1447,16 @@
 			"collector_number": "140",
 			"image_uris": {
 				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/140_Forest.png"
+			}
+		},
+		{
+			"name": "Gold",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Artifact — Gold ",
+			"collector_number": "6",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/LRH-files/img/6_Gold.png"
 			}
 		},
 		]
