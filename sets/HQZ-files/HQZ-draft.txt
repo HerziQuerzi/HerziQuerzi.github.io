@@ -1,0 +1,1889 @@
+﻿[CustomCards]
+	[	{
+			"name": "Lovestruck Heir",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{W}",
+			"type": "Creature — Human ",
+			"collector_number": "11",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/11_Lovestruck Heir.png"
+			}
+		},
+		{
+			"name": "Skyshroud Neophyte",
+			"rarity": "common",
+			"mana_cost": "{G}",
+			"type": "Creature — Elf ",
+			"collector_number": "83",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/83_Skyshroud Neophyte.png"
+			}
+		},
+		{
+			"name": "Magde, Icatian Refugee",
+			"rarity": "uncommon",
+			"mana_cost": "{W}",
+			"type": "Legendary Creature — Human Spellshaper ",
+			"collector_number": "12",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/12_Magde, Icatian Refugee.png"
+			}
+		},
+		{
+			"name": "House of Long Shadows",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Land — Omenpath ",
+			"collector_number": "135",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/135_House of Long Shadows.png"
+			}
+		},
+		{
+			"name": "Plague-Ridden Alley",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Land — Omenpath ",
+			"collector_number": "136",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/136_Plague-Ridden Alley.png"
+			}
+		},
+		{
+			"name": "Achievement Aspirant",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{R}",
+			"type": "Creature — Human ",
+			"collector_number": "55",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/55_Achievement Aspirant.png"
+			}
+		},
+		{
+			"name": "Peace Through Violence",
+			"rarity": "common",
+			"mana_cost": "{1}{R}",
+			"type": "Kindred Sorcery — Soldier Revelation ",
+			"collector_number": "64",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/64_Peace Through Violence.png"
+			}
+		},
+		{
+			"name": "Outcast of Sannuria",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{W}{U}{B}",
+			"type": "Creature — Human Nomad ",
+			"collector_number": "108",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/108_Outcast of Sannuria.png"
+			}
+		},
+		{
+			"name": "Frigid Scrubland",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Land — Omenpath ",
+			"collector_number": "134",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/134_Frigid Scrubland.png"
+			}
+		},
+		{
+			"name": "Plains",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Basic Land — Plains ",
+			"collector_number": "141",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/141_Plains.png"
+			}
+		},
+		{
+			"name": "Mountain",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Basic Land — Mountain ",
+			"collector_number": "147",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/147_Mountain.png"
+			}
+		},
+		{
+			"name": "Island",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Basic Land — Island ",
+			"collector_number": "143",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/143_Island.png"
+			}
+		},
+		{
+			"name": "Swamp",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Basic Land — Swamp ",
+			"collector_number": "145",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/145_Swamp.png"
+			}
+		},
+		{
+			"name": "Forest",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Basic Land — Forest ",
+			"collector_number": "150",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/150_Forest.png"
+			}
+		},
+		{
+			"name": "Haunting Visitations",
+			"rarity": "common",
+			"mana_cost": "{U}",
+			"type": "Enchantment — Aura ",
+			"collector_number": "29",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/29_Haunting Visitations.png"
+			}
+		},
+		{
+			"name": "Biochemical Bloom",
+			"rarity": "common",
+			"mana_cost": "{1}{G}",
+			"type": "Sorcery",
+			"collector_number": "73",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/73_Biochemical Bloom.png"
+			}
+		},
+		{
+			"name": "Scarred Fantassin",
+			"rarity": "common",
+			"mana_cost": "{1}{G}",
+			"type": "Creature — Human Mercenary ",
+			"collector_number": "82",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/82_Scarred Fantassin.png"
+			}
+		},
+		{
+			"name": "Eccentric Biologist",
+			"rarity": "common",
+			"mana_cost": "{2}{G}",
+			"type": "Creature — Human Advisor Citizen ",
+			"collector_number": "76",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/76_Eccentric Biologist.png"
+			}
+		},
+		{
+			"name": "Lafterii Abjurism",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{U}{R}",
+			"type": "Enchantment",
+			"collector_number": "95",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/95_Lafterii Abjurism.png"
+			}
+		},
+		{
+			"name": "Knight of Wennex",
+			"rarity": "common",
+			"mana_cost": "{1}{U}",
+			"type": "Creature — Orc Knight ",
+			"collector_number": "32",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/32_Knight of Wennex.png"
+			}
+		},
+		{
+			"name": "Croaking Crooner",
+			"rarity": "uncommon",
+			"mana_cost": "{R}{G}",
+			"type": "Creature — Frog Bard ",
+			"collector_number": "92",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/92_Croaking Crooner.png"
+			}
+		},
+		{
+			"name": "Soldier",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Creature — Soldier ",
+			"collector_number": "14",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/14_Soldier.png"
+			}
+		},
+		{
+			"name": "Kareki Wanderer",
+			"rarity": "common",
+			"mana_cost": "{W}",
+			"type": "Creature — Human Samurai ",
+			"collector_number": "10",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/10_Kareki Wanderer.png"
+			}
+		},
+		{
+			"name": "Flood Realm Monarch",
+			"rarity": "common",
+			"mana_cost": "{4}{U}",
+			"type": "Creature — Insect ",
+			"collector_number": "26",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/26_Flood Realm Monarch.png"
+			}
+		},
+		{
+			"name": "AOSE Field Biologist",
+			"rarity": "common",
+			"mana_cost": "{1}{B}",
+			"type": "Creature — Human Scout ",
+			"collector_number": "38",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/38_AOSE Field Biologist.png"
+			}
+		},
+		{
+			"name": "Wasteland Vagabond",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{W}{B}",
+			"type": "Creature — Human Nomad ",
+			"collector_number": "94",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/94_Wasteland Vagabond.png"
+			}
+		},
+		{
+			"name": "Gatetown Warden",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{U}",
+			"type": "Creature — Reflection Artificer ",
+			"collector_number": "27",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/27_Gatetown Warden.png"
+			}
+		},
+		{
+			"name": "First of the Horde",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{B}{R}",
+			"type": "Creature — Zombie Scout ",
+			"collector_number": "91",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/91_First of the Horde.png"
+			}
+		},
+		{
+			"name": "Equipment",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Artifact — Equipment ",
+			"collector_number": "22",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/22_Equipment.png"
+			}
+		},
+		{
+			"name": "Zombie Scout",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Creature — Zombie Scout ",
+			"collector_number": "19",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/19_Zombie Scout.png"
+			}
+		},
+		{
+			"name": "Raven Queen's Martyr",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{B}{B}",
+			"type": "Creature — Human Soldier ",
+			"collector_number": "48",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/48_Raven Queen's Martyr.png"
+			}
+		},
+		{
+			"name": "Bracing Crossroads",
+			"rarity": "common",
+			"mana_cost": "{1}{W}",
+			"type": "Sorcery",
+			"collector_number": "6",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/6_Bracing Crossroads.png"
+			}
+		},
+		{
+			"name": "Turbulent Crossroads",
+			"rarity": "common",
+			"mana_cost": "{1}{R}",
+			"type": "Sorcery",
+			"collector_number": "69",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/69_Turbulent Crossroads.png"
+			}
+		},
+		{
+			"name": "Introspective Crossroads",
+			"rarity": "common",
+			"mana_cost": "{1}{U}",
+			"type": "Sorcery",
+			"collector_number": "31",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/31_Introspective Crossroads.png"
+			}
+		},
+		{
+			"name": "Hardened Crossroads",
+			"rarity": "common",
+			"mana_cost": "{1}{G}",
+			"type": "Sorcery",
+			"collector_number": "78",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/78_Hardened Crossroads.png"
+			}
+		},
+		{
+			"name": "Nohrish Soldier",
+			"rarity": "common",
+			"mana_cost": "{W}",
+			"type": "Creature — Human Soldier ",
+			"collector_number": "14",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/14_Nohrish Soldier.png"
+			}
+		},
+		{
+			"name": "Cruel Crossroads",
+			"rarity": "common",
+			"mana_cost": "{1}{B}",
+			"type": "Sorcery",
+			"collector_number": "39",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/39_Cruel Crossroads.png"
+			}
+		},
+		{
+			"name": "Maghbri Votary",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{B}",
+			"type": "Creature — Human ",
+			"collector_number": "43",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/43_Maghbri Votary.png"
+			}
+		},
+		{
+			"name": "Faithful of Abendo",
+			"rarity": "uncommon",
+			"mana_cost": "{R}",
+			"type": "Creature — Human ",
+			"collector_number": "61",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/61_Faithful of Abendo.png"
+			}
+		},
+		{
+			"name": "Angel",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Creature — Angel ",
+			"collector_number": "7",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/7_Angel.png"
+			}
+		},
+		{
+			"name": "Satrapy Guard",
+			"rarity": "common",
+			"mana_cost": "{1}{R}",
+			"type": "Creature — Human Soldier ",
+			"collector_number": "67",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/67_Satrapy Guard.png"
+			}
+		},
+		{
+			"name": "Twyllian Turncoat",
+			"rarity": "common",
+			"mana_cost": "{1}{R}",
+			"type": "Creature — Faerie ",
+			"collector_number": "70",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/70_Twyllian Turncoat.png"
+			}
+		},
+		{
+			"name": "Salt Road Exile",
+			"rarity": "common",
+			"mana_cost": "{1}{B}",
+			"type": "Creature — Human Rogue ",
+			"collector_number": "49",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/49_Salt Road Exile.png"
+			}
+		},
+		{
+			"name": "Young Nekoru",
+			"rarity": "common",
+			"mana_cost": "{U}",
+			"type": "Creature — Cat Dragon ",
+			"collector_number": "37",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/37_Young Nekoru.png"
+			}
+		},
+		{
+			"name": "Emeria Claviger",
+			"rarity": "uncommon",
+			"mana_cost": "{3}{W}{U}",
+			"type": "Creature — Angel ",
+			"collector_number": "89",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/89_Emeria Claviger.png"
+			}
+		},
+		{
+			"name": "Face Down the Odds",
+			"rarity": "common",
+			"mana_cost": "{W}",
+			"type": "Instant",
+			"collector_number": "7",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/7_Face Down the Odds_front.png"
+			},
+			"back": {
+				"name": "",
+				"type": "",
+				"image_uris": {
+					"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/7_Face Down the Odds_back.png"
+				}
+			}
+		},
+		{
+			"name": "Half-Made Man",
+			"rarity": "common",
+			"mana_cost": "{1}{W}",
+			"type": "Enchantment Creature — Human Horror ",
+			"collector_number": "9",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/9_Half-Made Man.png"
+			}
+		},
+		{
+			"name": "Paladin of Norn",
+			"rarity": "common",
+			"mana_cost": "{1}{W}",
+			"type": "Creature — Phyrexian ",
+			"collector_number": "15",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/15_Paladin of Norn.png"
+			}
+		},
+		{
+			"name": "Beloved of Wachet",
+			"rarity": "common",
+			"mana_cost": "{2}{W}",
+			"type": "Creature — Human Noble ",
+			"collector_number": "5",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/5_Beloved of Wachet.png"
+			}
+		},
+		{
+			"name": "Witch's Whisper",
+			"rarity": "common",
+			"mana_cost": "{2}{W}",
+			"type": "Creature — Spirit Shaman ",
+			"collector_number": "20",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/20_Witch's Whisper.png"
+			}
+		},
+		{
+			"name": "Meletis Sophist",
+			"rarity": "common",
+			"mana_cost": "{3}{W}",
+			"type": "Creature — Human Wizard ",
+			"collector_number": "13",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/13_Meletis Sophist.png"
+			}
+		},
+		{
+			"name": "Turning of the Cosmos",
+			"rarity": "common",
+			"mana_cost": "{3}{U}",
+			"type": "Instant",
+			"collector_number": "36",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/36_Turning of the Cosmos.png"
+			}
+		},
+		{
+			"name": "Bleeting Distraction",
+			"rarity": "common",
+			"mana_cost": "{1}{U}",
+			"type": "Instant",
+			"collector_number": "23",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/23_Bleeting Distraction.png"
+			}
+		},
+		{
+			"name": "Arcane Figment",
+			"rarity": "common",
+			"mana_cost": "{4}{U}{U}",
+			"type": "Creature — Elk Illusion ",
+			"collector_number": "22",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/22_Arcane Figment.png"
+			}
+		},
+		{
+			"name": "Silence the Council",
+			"rarity": "common",
+			"mana_cost": "{1}{B}",
+			"type": "Sorcery",
+			"collector_number": "50",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/50_Silence the Council_front.png"
+			},
+			"back": {
+				"name": "",
+				"type": "",
+				"image_uris": {
+					"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/50_Silence the Council_back.png"
+				}
+			}
+		},
+		{
+			"name": "Morgeth's Harvest",
+			"rarity": "common",
+			"mana_cost": "{2}{B}{B}",
+			"type": "Instant",
+			"collector_number": "44",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/44_Morgeth's Harvest.png"
+			}
+		},
+		{
+			"name": "Pervasive Memories",
+			"rarity": "common",
+			"mana_cost": "{B}",
+			"type": "Instant",
+			"collector_number": "47",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/47_Pervasive Memories.png"
+			}
+		},
+		{
+			"name": "Tugae Interloper",
+			"rarity": "common",
+			"mana_cost": "{B}",
+			"type": "Creature — Human Survivor ",
+			"collector_number": "53",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/53_Tugae Interloper.png"
+			}
+		},
+		{
+			"name": "Haunted Breathstealer",
+			"rarity": "common",
+			"mana_cost": "{2}{B}",
+			"type": "Creature — Nightstalker ",
+			"collector_number": "41",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/41_Haunted Breathstealer_front.png"
+			},
+			"back": {
+				"name": "",
+				"type": "",
+				"image_uris": {
+					"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/41_Haunted Breathstealer_back.png"
+				}
+			}
+		},
+		{
+			"name": "Remembering Devka",
+			"rarity": "common",
+			"mana_cost": "{1}{R}",
+			"type": "Instant",
+			"collector_number": "66",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/66_Remembering Devka.png"
+			}
+		},
+		{
+			"name": "Izzet Extractionist",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{R}",
+			"type": "Creature — Human Wizard ",
+			"collector_number": "62",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/62_Izzet Extractionist.png"
+			}
+		},
+		{
+			"name": "Bazaar Smuggler",
+			"rarity": "common",
+			"mana_cost": "{2}{R}",
+			"type": "Creature — Mutant Merchant ",
+			"collector_number": "57",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/57_Bazaar Smuggler.png"
+			}
+		},
+		{
+			"name": "Ragged Fleet Fence",
+			"rarity": "common",
+			"mana_cost": "{3}{R}",
+			"type": "Creature — Human Pirate ",
+			"collector_number": "65",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/65_Ragged Fleet Fence.png"
+			}
+		},
+		{
+			"name": "Bad",
+			"rarity": "common",
+			"mana_cost": "{4}{R}",
+			"type": "Sorcery",
+			"collector_number": "56",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/56_Bad.png"
+			}
+		},
+		{
+			"name": "Splinterfrost",
+			"rarity": "common",
+			"mana_cost": "{1}{G}",
+			"type": "Snow Enchantment — Aura ",
+			"collector_number": "84",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/84_Splinterfrost.png"
+			}
+		},
+		{
+			"name": "Experimental Concoctions",
+			"rarity": "common",
+			"mana_cost": "{1}{G}",
+			"type": "Instant",
+			"collector_number": "77",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/77_Experimental Concoctions.png"
+			}
+		},
+		{
+			"name": "Vengeance of the Dungeon",
+			"rarity": "common",
+			"mana_cost": "{2}{G}",
+			"type": "Instant",
+			"collector_number": "87",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/87_Vengeance of the Dungeon.png"
+			}
+		},
+		{
+			"name": "Tutelary Sentry",
+			"rarity": "common",
+			"mana_cost": "{3}{G}{G}",
+			"type": "Creature — Orc Warrior ",
+			"collector_number": "86",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/86_Tutelary Sentry.png"
+			}
+		},
+		{
+			"name": "Relic of Wachibal",
+			"rarity": "common",
+			"mana_cost": "{6}{G}",
+			"type": "Artifact Creature — Giant ",
+			"collector_number": "81",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/81_Relic of Wachibal.png"
+			}
+		},
+		{
+			"name": "Lunar Latchkey",
+			"rarity": "common",
+			"mana_cost": "{1}",
+			"type": "Artifact — Equipment Key ",
+			"collector_number": "118",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/118_Lunar Latchkey.png"
+			}
+		},
+		{
+			"name": "Wayfarer's Shrine",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Land",
+			"collector_number": "140",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/140_Wayfarer's Shrine.png"
+			}
+		},
+		{
+			"name": "Szengyi Monolith",
+			"rarity": "common",
+			"mana_cost": "{1}",
+			"type": "Artifact",
+			"collector_number": "125",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/125_Szengyi Monolith.png"
+			}
+		},
+		{
+			"name": "Prasiolite Mox",
+			"rarity": "common",
+			"mana_cost": "{0}",
+			"type": "Legendary Artifact",
+			"collector_number": "122",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/122_Prasiolite Mox.png"
+			}
+		},
+		{
+			"name": "Sword of Want and Need",
+			"rarity": "common",
+			"mana_cost": "{3}",
+			"type": "Artifact — Equipment ",
+			"collector_number": "124",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/124_Sword of Want and Need.png"
+			}
+		},
+		{
+			"name": "Spatial Singularity",
+			"rarity": "common",
+			"mana_cost": "{C}",
+			"type": "Instant",
+			"collector_number": "3",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/3_Spatial Singularity.png"
+			}
+		},
+		{
+			"name": "Shard of Singular Fates",
+			"rarity": "uncommon",
+			"mana_cost": "{1}",
+			"type": "Artifact — Equipment ",
+			"collector_number": "123",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/123_Shard of Singular Fates.png"
+			}
+		},
+		{
+			"name": "Headwind Aetherwork",
+			"rarity": "common",
+			"mana_cost": "{1}",
+			"type": "Artifact Creature — Bird ",
+			"collector_number": "115",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/115_Headwind Aetherwork.png"
+			}
+		},
+		{
+			"name": "Yearning Clockwork",
+			"rarity": "uncommon",
+			"mana_cost": "{2}",
+			"type": "Artifact Creature — Construct ",
+			"collector_number": "128",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/128_Yearning Clockwork_front.png"
+			},
+			"back": {
+				"name": "",
+				"type": "",
+				"image_uris": {
+					"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/128_Yearning Clockwork_back.png"
+				}
+			}
+		},
+		{
+			"name": "Mezzio Thespian",
+			"rarity": "common",
+			"mana_cost": "{3}",
+			"type": "Creature — Human Actor ",
+			"collector_number": "1",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/1_Mezzio Thespian.png"
+			}
+		},
+		{
+			"name": "Blackened Heart",
+			"rarity": "common",
+			"mana_cost": "{4}",
+			"type": "Artifact — Equipment Implement ",
+			"collector_number": "111",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/111_Blackened Heart_front.png"
+			},
+			"back": {
+				"name": "",
+				"type": "",
+				"image_uris": {
+					"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/111_Blackened Heart_back.png"
+				}
+			}
+		},
+		{
+			"name": "Aspirant Peak",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Land — Omenpath ",
+			"collector_number": "130",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/130_Aspirant Peak.png"
+			}
+		},
+		{
+			"name": "Streets of Worship",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Land — Omenpath ",
+			"collector_number": "138",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/138_Streets of Worship.png"
+			}
+		},
+		{
+			"name": "Den of Sulfur",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Land — Omenpath ",
+			"collector_number": "131",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/131_Den of Sulfur.png"
+			}
+		},
+		{
+			"name": "Walls of Almgrove",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Land — Omenpath ",
+			"collector_number": "139",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/139_Walls of Almgrove.png"
+			}
+		},
+		{
+			"name": "Above Danawan",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Land — Omenpath ",
+			"collector_number": "129",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/129_Above Danawan.png"
+			}
+		},
+		{
+			"name": "Field of Rot",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Land — Omenpath ",
+			"collector_number": "133",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/133_Field of Rot.png"
+			}
+		},
+		{
+			"name": "Salt Road",
+			"rarity": "rare",
+			"mana_cost": "",
+			"type": "Land — Omenpath ",
+			"collector_number": "137",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/137_Salt Road.png"
+			}
+		},
+		{
+			"name": "Amateur Inventor",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{U}",
+			"type": "Creature — Human ",
+			"collector_number": "21",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/21_Amateur Inventor.png"
+			}
+		},
+		{
+			"name": "Colonial Alchemist",
+			"rarity": "common",
+			"mana_cost": "{2}{U}",
+			"type": "Creature — Human Wizard ",
+			"collector_number": "24",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/24_Colonial Alchemist.png"
+			}
+		},
+		{
+			"name": "Reformed Province",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Land",
+			"collector_number": "26",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/26_Reformed Province.png"
+			}
+		},
+		{
+			"name": "Broadlane Well-to-Do",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{G}",
+			"type": "Creature — Elf Citizen ",
+			"collector_number": "74",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/74_Broadlane Well-to-Do.png"
+			}
+		},
+		{
+			"name": "Sulmina, the Final Age",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Legendary Creature — Demon ",
+			"collector_number": "12",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/12_Sulmina, the Final Age.png"
+			}
+		},
+		{
+			"name": "Specter of Crosis",
+			"rarity": "uncommon",
+			"mana_cost": "{3}{B}{B}",
+			"type": "Creature — Specter ",
+			"collector_number": "52",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/52_Specter of Crosis_front.png"
+			},
+			"back": {
+				"name": "",
+				"type": "",
+				"image_uris": {
+					"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/52_Specter of Crosis_back.png"
+				}
+			}
+		},
+		{
+			"name": "Nephalia Preacher",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{B}",
+			"type": "Creature — Human Horror ",
+			"collector_number": "46",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/46_Nephalia Preacher.png"
+			}
+		},
+		{
+			"name": "Eldrazi Horror",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Creature — Eldrazi Horror ",
+			"collector_number": "1",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/1_Eldrazi Horror.png"
+			}
+		},
+		{
+			"name": "Devka, Mad Memory",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{U}{B}{R}",
+			"type": "Legendary Creature — Nightmare ",
+			"collector_number": "102",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/102_Devka, Mad Memory.png"
+			}
+		},
+		{
+			"name": "Snake-Venom Dealer",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{B}{B}",
+			"type": "Creature — Human Merchant ",
+			"collector_number": "51",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/51_Snake-Venom Dealer.png"
+			}
+		},
+		{
+			"name": "Remember the Good",
+			"rarity": "uncommon",
+			"mana_cost": "{3}{W}{W}",
+			"type": "Enchantment",
+			"collector_number": "16",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/16_Remember the Good.png"
+			}
+		},
+		{
+			"name": "Answered Plea",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{W}{W}",
+			"type": "Enchantment",
+			"collector_number": "4",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/4_Answered Plea.png"
+			}
+		},
+		{
+			"name": "Vanguard of Tzhai",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{W}{W}",
+			"type": "Creature — Human Knight ",
+			"collector_number": "18",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/18_Vanguard of Tzhai.png"
+			}
+		},
+		{
+			"name": "Cruel Guidance",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{R}{R}",
+			"type": "Enchantment",
+			"collector_number": "59",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/59_Cruel Guidance.png"
+			}
+		},
+		{
+			"name": "Calefactor of Seas",
+			"rarity": "uncommon",
+			"mana_cost": "{3}{R}{R}",
+			"type": "Creature — Serpent ",
+			"collector_number": "58",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/58_Calefactor of Seas.png"
+			}
+		},
+		{
+			"name": "Kattalin's Intrigues",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{R}",
+			"type": "Sorcery",
+			"collector_number": "63",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/63_Kattalin's Intrigues_front.png"
+			},
+			"back": {
+				"name": "",
+				"type": "",
+				"image_uris": {
+					"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/63_Kattalin's Intrigues_back.png"
+				}
+			}
+		},
+		{
+			"name": "Night on the Town",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{G}{G}",
+			"type": "Enchantment — Saga ",
+			"collector_number": "79",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/79_Night on the Town_front.png"
+			},
+			"back": {
+				"name": "",
+				"type": "",
+				"image_uris": {
+					"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/79_Night on the Town_back.png"
+				}
+			}
+		},
+		{
+			"name": "Zadyk Contamination",
+			"rarity": "uncommon",
+			"mana_cost": "{4}{G}{G}",
+			"type": "Sorcery",
+			"collector_number": "88",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/88_Zadyk Contamination.png"
+			}
+		},
+		{
+			"name": "Outerworld Witness",
+			"rarity": "uncommon",
+			"mana_cost": "{3}{G}{G}",
+			"type": "Creature — Alien Druid ",
+			"collector_number": "80",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/80_Outerworld Witness.png"
+			}
+		},
+		{
+			"name": "Arcor Carapace",
+			"rarity": "uncommon",
+			"mana_cost": "{G}",
+			"type": "Creature — Insect ",
+			"collector_number": "72",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/72_Arcor Carapace.png"
+			}
+		},
+		{
+			"name": "See It All Again",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{W}{U}{B}{R}{G}",
+			"type": "Sorcery",
+			"collector_number": "109",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/109_See It All Again.png"
+			}
+		},
+		{
+			"name": "Fallow Plateau",
+			"rarity": "uncommon",
+			"mana_cost": "",
+			"type": "Land",
+			"collector_number": "132",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/132_Fallow Plateau.png"
+			}
+		},
+		{
+			"name": "Blooming Bow",
+			"rarity": "common",
+			"mana_cost": "{2}",
+			"type": "Artifact — Equipment ",
+			"collector_number": "112",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/112_Blooming Bow.png"
+			}
+		},
+		{
+			"name": "Ink Sea Sentinel",
+			"rarity": "common",
+			"mana_cost": "{2}",
+			"type": "Artifact Creature — Soldier ",
+			"collector_number": "116",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/116_Ink Sea Sentinel.png"
+			}
+		},
+		{
+			"name": "Awaiting Yhzag",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{U}{R}{W}",
+			"type": "Enchantment",
+			"collector_number": "99",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/99_Awaiting Yhzag.png"
+			}
+		},
+		{
+			"name": "Intrusive Thoughts",
+			"rarity": "uncommon",
+			"mana_cost": "{U}{B}",
+			"type": "Sorcery — Inscription ",
+			"collector_number": "90",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/90_Intrusive Thoughts.png"
+			}
+		},
+		{
+			"name": "Crinster Dame",
+			"rarity": "uncommon",
+			"mana_cost": "{G}{W}",
+			"type": "Creature — Human Citizen Shaman ",
+			"collector_number": "93",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/93_Crinster Dame.png"
+			}
+		},
+		{
+			"name": "Rampant Consumption",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{B}{G}",
+			"type": "Sorcery",
+			"collector_number": "96",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/96_Rampant Consumption.png"
+			}
+		},
+		{
+			"name": "Ashes of the Hundred Suns",
+			"rarity": "uncommon",
+			"mana_cost": "{5}{R}{W}",
+			"type": "Sorcery",
+			"collector_number": "97",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/97_Ashes of the Hundred Suns.png"
+			}
+		},
+		{
+			"name": "Fifth Street Patronage",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{W}",
+			"type": "Enchantment",
+			"collector_number": "8",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/8_Fifth Street Patronage.png"
+			}
+		},
+		{
+			"name": "Heaving Charnel",
+			"rarity": "uncommon",
+			"mana_cost": "{3}{B}{B}{R}{R}{G}{G}",
+			"type": "Creature — Nightmare Maggot ",
+			"collector_number": "106",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/106_Heaving Charnel.png"
+			}
+		},
+		{
+			"name": "Harsh Sanctuary",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{R}{W}{B}",
+			"type": "Enchantment",
+			"collector_number": "105",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/105_Harsh Sanctuary.png"
+			}
+		},
+		{
+			"name": "Cling to Old Dreams",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{G}{W}{U}",
+			"type": "Instant",
+			"collector_number": "101",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/101_Cling to Old Dreams.png"
+			}
+		},
+		{
+			"name": "Graduate of Illusions",
+			"rarity": "uncommon",
+			"mana_cost": "{G}{U}{R}",
+			"type": "Creature — Human Wizard ",
+			"collector_number": "104",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/104_Graduate of Illusions.png"
+			}
+		},
+		{
+			"name": "Master of the Living Art",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{B}{G}{U}",
+			"type": "Creature — Alien ",
+			"collector_number": "107",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/107_Master of the Living Art.png"
+			}
+		},
+		{
+			"name": "Faces of War",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{R}{G}{W}",
+			"type": "Sorcery",
+			"collector_number": "103",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/103_Faces of War.png"
+			}
+		},
+		{
+			"name": "Vitalia Tragedienne",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{G}{U}",
+			"type": "Creature — Shapeshifter Noble ",
+			"collector_number": "98",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/98_Vitalia Tragedienne.png"
+			}
+		},
+		{
+			"name": "A Chance at Quiet",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{W}{B}{G}",
+			"type": "Sorcery",
+			"collector_number": "100",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/100_A Chance at Quiet.png"
+			}
+		},
+		{
+			"name": "Nightmare",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Creature — Nightmare ",
+			"collector_number": "11",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/11_Nightmare.png"
+			}
+		},
+		{
+			"name": "Walking with Ancestors",
+			"rarity": "common",
+			"mana_cost": "{1}{W}",
+			"type": "Enchantment",
+			"collector_number": "19",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/19_Walking with Ancestors.png"
+			}
+		},
+		{
+			"name": "Heartless Exchange",
+			"rarity": "common",
+			"mana_cost": "{1}{U}{U}",
+			"type": "Instant",
+			"collector_number": "30",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/30_Heartless Exchange.png"
+			}
+		},
+		{
+			"name": "Deal with the Devil",
+			"rarity": "common",
+			"mana_cost": "{1}{R}",
+			"type": "Sorcery",
+			"collector_number": "60",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/60_Deal with the Devil_front.png"
+			},
+			"back": {
+				"name": "",
+				"type": "",
+				"image_uris": {
+					"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/60_Deal with the Devil_back.png"
+				}
+			}
+		},
+		{
+			"name": "Sigil Hoarder",
+			"rarity": "common",
+			"mana_cost": "{R}",
+			"type": "Creature — Homunculus ",
+			"collector_number": "68",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/68_Sigil Hoarder.png"
+			}
+		},
+		{
+			"name": "Empower Function",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Enchantment — Function ",
+			"collector_number": "2",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/2_Empower Function.png"
+			}
+		},
+		{
+			"name": "Immortality Function",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Enchantment — Function ",
+			"collector_number": "3",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/3_Immortality Function.png"
+			}
+		},
+		{
+			"name": "Unleash Function",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Enchantment — Function ",
+			"collector_number": "4",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/4_Unleash Function.png"
+			}
+		},
+		{
+			"name": "Sisters of the Flock",
+			"rarity": "common",
+			"mana_cost": "{1}{W}",
+			"type": "Creature — Human ",
+			"collector_number": "17",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/17_Sisters of the Flock.png"
+			}
+		},
+		{
+			"name": "Child of Tezoculpa",
+			"rarity": "uncommon",
+			"mana_cost": "{3}{G}",
+			"type": "Creature — Giant ",
+			"collector_number": "75",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/75_Child of Tezoculpa.png"
+			}
+		},
+		{
+			"name": "Nayando Found",
+			"rarity": "common",
+			"mana_cost": "{2}{B}",
+			"type": "Creature — Human Druid ",
+			"collector_number": "45",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/45_Nayando Found.png"
+			}
+		},
+		{
+			"name": "Guardian of the Wards",
+			"rarity": "common",
+			"mana_cost": "{3}{U}",
+			"type": "Creature — Dwarf Noble ",
+			"collector_number": "28",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/28_Guardian of the Wards.png"
+			}
+		},
+		{
+			"name": "Faithful of Helar",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{U}",
+			"type": "Creature — Human Cultist ",
+			"collector_number": "25",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/25_Faithful of Helar_front.png"
+			},
+			"back": {
+				"name": "",
+				"type": "",
+				"image_uris": {
+					"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/25_Faithful of Helar_back.png"
+				}
+			}
+		},
+		{
+			"name": "Strike the Stage",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{U}",
+			"type": "Sorcery",
+			"collector_number": "34",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/34_Strike the Stage.png"
+			}
+		},
+		{
+			"name": "Teferi's Dismissal",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{U}{U}",
+			"type": "Instant",
+			"collector_number": "35",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/35_Teferi's Dismissal.png"
+			}
+		},
+		{
+			"name": "Whisper of Saebin",
+			"rarity": "common",
+			"mana_cost": "{2}{B}{B}",
+			"type": "Creature — Zombie ",
+			"collector_number": "54",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/54_Whisper of Saebin.png"
+			}
+		},
+		{
+			"name": "Still-Smoke Courser",
+			"rarity": "common",
+			"mana_cost": "{3}{G}",
+			"type": "Creature — Elf ",
+			"collector_number": "85",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/85_Still-Smoke Courser.png"
+			}
+		},
+		{
+			"name": "Child Army",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Creature — Child Army ",
+			"collector_number": "9",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/9_Child Army.png"
+			}
+		},
+		{
+			"name": "Dashing Qith",
+			"rarity": "common",
+			"mana_cost": "{3}{B}{B}",
+			"type": "Creature — Cat ",
+			"collector_number": "40",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/40_Dashing Qith.png"
+			}
+		},
+		{
+			"name": "Survivor",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Creature — Survivor ",
+			"collector_number": "17",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/17_Survivor.png"
+			}
+		},
+		{
+			"name": "Kholon Astrologist",
+			"rarity": "uncommon",
+			"mana_cost": "{2}{B}{B}",
+			"type": "Creature — Human Noble Werewolf ",
+			"collector_number": "42",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/42_Kholon Astrologist_front.png"
+			},
+			"back": {
+				"name": "",
+				"type": "",
+				"image_uris": {
+					"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/42_Kholon Astrologist_back.png"
+				}
+			}
+		},
+		{
+			"name": "Quarry of the Ivory Mask",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{U}",
+			"type": "Creature — Human Citizen ",
+			"collector_number": "33",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/33_Quarry of the Ivory Mask.png"
+			}
+		},
+		{
+			"name": "Vine Street Brute",
+			"rarity": "common",
+			"mana_cost": "{2}{R}",
+			"type": "Creature — Human ",
+			"collector_number": "71",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/71_Vine Street Brute.png"
+			}
+		},
+		{
+			"name": "Citizen",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Creature — Citizen ",
+			"collector_number": "5",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/5_Citizen.png"
+			}
+		},
+		{
+			"name": "Powerstone",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Artifact — Powerstone ",
+			"collector_number": "24",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/24_Powerstone.png"
+			}
+		},
+		{
+			"name": "Idol",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Artifact — Idol ",
+			"collector_number": "23",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/23_Idol.png"
+			}
+		},
+		{
+			"name": "Cultist",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Creature — Cultist ",
+			"collector_number": "10",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/10_Cultist.png"
+			}
+		},
+		{
+			"name": "Devil",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Creature — Devil ",
+			"collector_number": "13",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/13_Devil.png"
+			}
+		},
+		{
+			"name": "Maddening Trinket",
+			"rarity": "common",
+			"mana_cost": "{2}",
+			"type": "Artifact — Equipment Implement ",
+			"collector_number": "119",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/119_Maddening Trinket_front.png"
+			},
+			"back": {
+				"name": "",
+				"type": "",
+				"image_uris": {
+					"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/119_Maddening Trinket_back.png"
+				}
+			}
+		},
+		{
+			"name": "Numinous Workshop",
+			"rarity": "common",
+			"mana_cost": "{1}",
+			"type": "Artifact — Fortification ",
+			"collector_number": "120",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/120_Numinous Workshop.png"
+			}
+		},
+		{
+			"name": "Liar's Tongue",
+			"rarity": "common",
+			"mana_cost": "{3}",
+			"type": "Artifact — Equipment Implement ",
+			"collector_number": "117",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/117_Liar's Tongue_front.png"
+			},
+			"back": {
+				"name": "",
+				"type": "",
+				"image_uris": {
+					"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/117_Liar's Tongue_back.png"
+				}
+			}
+		},
+		{
+			"name": "AOSE Field Biologist",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Creature — Zombie Human Scout  ",
+			"collector_number": "8",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/8_AOSE Field Biologist.png"
+			}
+		},
+		{
+			"name": "Hateful Eye",
+			"rarity": "common",
+			"mana_cost": "{5}",
+			"type": "Artifact — Equipment Implement ",
+			"collector_number": "114",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/114_Hateful Eye_front.png"
+			},
+			"back": {
+				"name": "",
+				"type": "",
+				"image_uris": {
+					"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/114_Hateful Eye_back.png"
+				}
+			}
+		},
+		{
+			"name": "Traitor's Finger",
+			"rarity": "uncommon",
+			"mana_cost": "{1}",
+			"type": "Artifact — Equipment Implement ",
+			"collector_number": "126",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/126_Traitor's Finger_front.png"
+			},
+			"back": {
+				"name": "",
+				"type": "",
+				"image_uris": {
+					"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/126_Traitor's Finger_back.png"
+				}
+			}
+		},
+		{
+			"name": "Crooked Whistle",
+			"rarity": "uncommon",
+			"mana_cost": "{5}",
+			"type": "Artifact — Equipment Implement ",
+			"collector_number": "113",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/113_Crooked Whistle_front.png"
+			},
+			"back": {
+				"name": "",
+				"type": "",
+				"image_uris": {
+					"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/113_Crooked Whistle_back.png"
+				}
+			}
+		},
+		{
+			"name": "Black Tesseract",
+			"rarity": "uncommon",
+			"mana_cost": "{3}",
+			"type": "Artifact — Equipment Implement ",
+			"collector_number": "110",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/110_Black Tesseract_front.png"
+			},
+			"back": {
+				"name": "",
+				"type": "",
+				"image_uris": {
+					"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/110_Black Tesseract_back.png"
+				}
+			}
+		},
+		{
+			"name": "Twisting Puzzlebox",
+			"rarity": "uncommon",
+			"mana_cost": "{3}",
+			"type": "Artifact — Equipment Implement ",
+			"collector_number": "127",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/127_Twisting Puzzlebox_front.png"
+			},
+			"back": {
+				"name": "",
+				"type": "",
+				"image_uris": {
+					"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/127_Twisting Puzzlebox_back.png"
+				}
+			}
+		},
+		{
+			"name": "Corruption Counters",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Reminder",
+			"collector_number": "20",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/20_Corruption Counters.png"
+			}
+		},
+		{
+			"name": "Plains",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Basic Land — Plains ",
+			"collector_number": "142",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/142_Plains.png"
+			}
+		},
+		{
+			"name": "Island",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Basic Land — Island ",
+			"collector_number": "144",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/144_Island.png"
+			}
+		},
+		{
+			"name": "Swamp",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Basic Land — Swamp ",
+			"collector_number": "146",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/146_Swamp.png"
+			}
+		},
+		{
+			"name": "Mountain",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Basic Land — Mountain ",
+			"collector_number": "148",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/148_Mountain.png"
+			}
+		},
+		{
+			"name": "Forest",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Basic Land — Forest ",
+			"collector_number": "149",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/149_Forest.png"
+			}
+		},
+		{
+			"name": "Ser Elviree, Trailblazer",
+			"rarity": "uncommon",
+			"mana_cost": "VVV",
+			"type": "Legendary Creature — Orc Nomad Knight ",
+			"collector_number": "2",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/2_Ser Elviree, Trailblazer.png"
+			}
+		},
+		{
+			"name": "Peerless Porcelain",
+			"rarity": "uncommon",
+			"mana_cost": "{4}",
+			"type": "Artifact Creature — Construct ",
+			"collector_number": "121",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/121_Peerless Porcelain.png"
+			}
+		},
+		{
+			"name": "Weird",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Creature — Weird ",
+			"collector_number": "18",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/18_Weird.png"
+			}
+		},
+		{
+			"name": "Plant",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Creature — Plant ",
+			"collector_number": "16",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/16_Plant.png"
+			}
+		},
+		{
+			"name": "Saproling",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Creature — Saproling ",
+			"collector_number": "15",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/15_Saproling.png"
+			}
+		},
+		{
+			"name": "Thopter",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Artifact Creature — Thopter ",
+			"collector_number": "6",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/6_Thopter.png"
+			}
+		},
+		{
+			"name": "Vial",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Artifact — Vial ",
+			"collector_number": "25",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/25_Vial.png"
+			}
+		},
+		{
+			"name": "Clue",
+			"rarity": "common",
+			"mana_cost": "",
+			"type": "Token Artifact — Clue ",
+			"collector_number": "21",
+			"image_uris": {
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/21_Clue.png"
+			}
+		},
+		]
+	
