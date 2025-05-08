@@ -1651,13 +1651,13 @@
 			}
 		},
 		{
-			"name": "AOSE Field Biologist",
+			"name": "AOSE Field Biologist (Token)",
 			"rarity": "common",
 			"mana_cost": "",
 			"type": "Token Creature — Zombie Human Scout  ",
 			"collector_number": "8",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/8_AOSE Field Biologist.png"
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/8_AOSE Field Biologist (Token).png"
 			}
 		},
 		{
