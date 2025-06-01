@@ -124,9 +124,9 @@
 			"rarity": "common",
 			"mana_cost": "",
 			"type": "Basic Land — Swamp ",
-			"collector_number": "145",
+			"collector_number": "146",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/145_Swamp.png"
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/146_Swamp.png"
 			}
 		},
 		{
@@ -134,9 +134,9 @@
 			"rarity": "common",
 			"mana_cost": "",
 			"type": "Basic Land — Forest ",
-			"collector_number": "150",
+			"collector_number": "149",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/150_Forest.png"
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/149_Forest.png"
 			}
 		},
 		{
@@ -180,13 +180,13 @@
 			}
 		},
 		{
-			"name": "Lafterii Abjurism",
-			"rarity": "uncommon",
-			"mana_cost": "{1}{U}{R}",
-			"type": "Enchantment",
-			"collector_number": "95",
+			"name": "Lafterii Elementalist",
+			"rarity": "common",
+			"mana_cost": "{2}{R}",
+			"type": "Creature — Human Wizard ",
+			"collector_number": "63",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/95_Lafterii Abjurism.png"
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/63_Lafterii Elementalist.png"
 			}
 		},
 		{
@@ -384,9 +384,9 @@
 			"rarity": "uncommon",
 			"mana_cost": "{R}",
 			"type": "Creature — Human ",
-			"collector_number": "61",
+			"collector_number": "60",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/61_Faithful of Abendo.png"
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/60_Faithful of Abendo.png"
 			}
 		},
 		{
@@ -625,19 +625,19 @@
 			"rarity": "uncommon",
 			"mana_cost": "{2}{R}",
 			"type": "Creature — Human Wizard ",
-			"collector_number": "62",
+			"collector_number": "61",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/62_Izzet Extractionist.png"
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/61_Izzet Extractionist.png"
 			}
 		},
 		{
 			"name": "Bazaar Smuggler",
-			"rarity": "common",
-			"mana_cost": "{2}{R}",
+			"rarity": "uncommon",
+			"mana_cost": "{1}{U}{R}",
 			"type": "Creature — Mutant Merchant ",
-			"collector_number": "57",
+			"collector_number": "95",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/57_Bazaar Smuggler.png"
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/95_Bazaar Smuggler.png"
 			}
 		},
 		{
@@ -1046,9 +1046,9 @@
 			"rarity": "uncommon",
 			"mana_cost": "{2}{R}{R}",
 			"type": "Enchantment",
-			"collector_number": "59",
+			"collector_number": "58",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/59_Cruel Guidance.png"
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/58_Cruel Guidance.png"
 			}
 		},
 		{
@@ -1056,9 +1056,9 @@
 			"rarity": "uncommon",
 			"mana_cost": "{3}{R}{R}",
 			"type": "Creature — Serpent ",
-			"collector_number": "58",
+			"collector_number": "57",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/58_Calefactor of Seas.png"
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/57_Calefactor of Seas.png"
 			}
 		},
 		{
@@ -1066,15 +1066,15 @@
 			"rarity": "uncommon",
 			"mana_cost": "{1}{R}",
 			"type": "Sorcery",
-			"collector_number": "63",
+			"collector_number": "62",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/63_Kattalin's Intrigues_front.png"
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/62_Kattalin's Intrigues_front.png"
 			},
 			"back": {
 				"name": "",
 				"type": "",
 				"image_uris": {
-					"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/63_Kattalin's Intrigues_back.png"
+					"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/62_Kattalin's Intrigues_back.png"
 				}
 			}
 		},
@@ -1340,15 +1340,15 @@
 			"rarity": "common",
 			"mana_cost": "{1}{R}",
 			"type": "Sorcery",
-			"collector_number": "60",
+			"collector_number": "59",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/60_Deal with the Devil_front.png"
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/59_Deal with the Devil_front.png"
 			},
 			"back": {
 				"name": "",
 				"type": "",
 				"image_uris": {
-					"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/60_Deal with the Devil_back.png"
+					"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/59_Deal with the Devil_back.png"
 				}
 			}
 		},
@@ -1780,9 +1780,9 @@
 			"rarity": "common",
 			"mana_cost": "",
 			"type": "Basic Land — Swamp ",
-			"collector_number": "146",
+			"collector_number": "145",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/146_Swamp.png"
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/145_Swamp.png"
 			}
 		},
 		{
@@ -1800,9 +1800,9 @@
 			"rarity": "common",
 			"mana_cost": "",
 			"type": "Basic Land — Forest ",
-			"collector_number": "149",
+			"collector_number": "150",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/149_Forest.png"
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/150_Forest.png"
 			}
 		},
 		{
