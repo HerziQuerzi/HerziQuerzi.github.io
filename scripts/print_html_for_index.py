@@ -38,7 +38,7 @@ def generateHTML():
 		max-height: 200px;
 		display: block;
 		margin: auto;
-		padding-bottom: 20px;
+		padding: 20px 0;
 	}
 	select {
 		position: absolute;
@@ -188,7 +188,6 @@ def generateHTML():
 	}
 	.set-icon-name {
 		min-height: 30px;
-		height: 100%;
 	}
 	@media ( max-width: 750px ) {
 		.item-container {
@@ -230,6 +229,7 @@ def generateHTML():
 		'''
 		set_codes = so_json[key]
 		for code in set_codes:
+			set_name = 'MISSING'
 			if not os.path.exists(os.path.join('sets', code + '-files', 'ignore.txt')):
 				with open(os.path.join('lists', 'all-sets.json'), encoding='utf-8-sig') as f:
 					data = json.load(f)
@@ -239,7 +239,7 @@ def generateHTML():
 							break
 
 				html_content += '''<div class="set-icon-container">
-									<a href="''' + code + '''-spoiler"><div class="set-icon"><img src="sets/''' + code + '''-files/icon.png" title="''' + set_name + '''"></img></div>
+									<a href="previews/''' + code + '''"><div class="set-icon"><img src="sets/''' + code + '''-files/icon.png" title="''' + set_name + '''"></img></div>
 									<div class="set-icon-name">''' + set_name + '''</div></a>
 								</div>
 				'''
@@ -258,6 +258,7 @@ def generateHTML():
 			let gradients = [];
 			let card_list_arrayified = [];
 			let specialchars = "";
+			let initial_gradient = true;
 
 			document.addEventListener("DOMContentLoaded", async function () {
 				try {
@@ -306,18 +307,23 @@ def generateHTML():
 				const card_stats = card_list_cleaned[cotd];
 
 				const a = document.createElement("a");
-				let card_name = card_stats.card_name;
-				for (const char of specialchars)
-				{
-					card_name = card_name.replaceAll(char, "");
+
+				const url = new URL('card', window.location.origin);
+				const params = {
+					set: card_stats.set,
+					num: card_stats.number,
+					name: card_stats.card_name
 				}
-				a.href = '/cards/' + card_stats.set + '/' + card_stats.number + '_' + card_name;
+				for (const key in params) {
+					url.searchParams.append(key, params[key]);
+				}
+				a.href = url;
 
 				const img = document.createElement("img");
 				img.id = "cotd";
 
 
-				img.src = '/sets/' + card_stats.set + '-files/img/' + card_stats.number + '_' + card_stats.card_name + (card_stats.shape.includes('double') ? '_front' : '') + '.png';
+				img.src = '/sets/' + card_stats.set + '-files/img/' + card_stats.number + '_' + card_stats.card_name + (card_stats.shape.includes('double') ? '_front' : '') + '.' + card_stats.image_type;
 
 				a.append(img);
 				document.getElementById("cotd-image").append(a);
@@ -378,7 +384,12 @@ def generateHTML():
 			}
 
 			function setGradient() {
-				gradient = document.getElementById("color-select").value;
+				if (!initial_gradient || !localStorage.getItem("gradient"))
+				{
+					localStorage.setItem("gradient", document.getElementById("color-select").value);
+				}
+				
+				gradient = localStorage.getItem("gradient");
 
 				gradTop = "#000000";
 				gradBottom = "#FFFFFF";
@@ -390,7 +401,13 @@ def generateHTML():
 						gradBottom = grad.color2;
 					}
 				}
+				
+				if (initial_gradient)
+				{
+					document.getElementById("color-select").value = gradient;
+				}
 
+				initial_gradient = false;
 				document.body.style.backgroundImage = `linear-gradient(to bottom, ${gradTop}, ${gradBottom})`;
 			}
 
@@ -403,7 +420,9 @@ def generateHTML():
 			}
 
 			function search() {
-				window.location = ("search?search=" + document.getElementById("search").value);
+				const url = new URL('search', window.location.origin);
+				url.searchParams.append('search', document.getElementById("search").value);
+				window.location.href = url;
 			}
 
 			'''
