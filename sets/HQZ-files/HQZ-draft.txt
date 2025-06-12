@@ -124,9 +124,9 @@
 			"rarity": "common",
 			"mana_cost": "",
 			"type": "Basic Land — Swamp ",
-			"collector_number": "146",
+			"collector_number": "145",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/146_Swamp.png"
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/145_Swamp.png"
 			}
 		},
 		{
@@ -142,7 +142,7 @@
 		{
 			"name": "Haunting Visitations",
 			"rarity": "common",
-			"mana_cost": "{U}",
+			"mana_cost": "{1}{U}",
 			"type": "Enchantment — Aura ",
 			"collector_number": "29",
 			"image_uris": {
@@ -1780,9 +1780,9 @@
 			"rarity": "common",
 			"mana_cost": "",
 			"type": "Basic Land — Swamp ",
-			"collector_number": "145",
+			"collector_number": "146",
 			"image_uris": {
-				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/145_Swamp b.png"
+				"en": "https://HerziQuerzi.github.io/sets/HQZ-files/img/146_Swamp b.png"
 			}
 		},
 		{
