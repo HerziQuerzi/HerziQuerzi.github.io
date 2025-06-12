@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="icon" type="image/png" href="/sets/BYK-files/icon.png"/>
+	<link rel="stylesheet" href="/resources/header.css">
+	<title>BYK visual preview</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+			overscroll-behavior: none;
+			background-size: cover;
+			background-attachment: fixed;
+		}
+		.main-content {
+			position: relative;
+			width: 100%;
+			float: left;
+			z-index: 2;
+			justify-items: center;
+		}
+		.sidebar {
+			position: sticky;
+			top: 0;
+			display: none;
+			text-align: center;
+			padding-right: 3%;
+			z-index: 1;
+			justify-items: center;
+		}
+		.sidebar-container {
+			width: 80%;
+			max-width: 375px;
+			position: relative;
+		}
+		.sidebar-h-img {
+			display: none;
+			transform: rotate(90deg);
+			position: absolute;
+			left: 10%;
+			top: 10%;
+			width: 85%;
+		}
+		.sidebar-img {
+			vertical-align: middle;
+			width: 100%;
+		}
+		.close-btn {
+			background: url('/img/close.png') no-repeat;
+			background-size: contain;
+			background-position: center;
+			width: 10%;
+			height: 10%;
+			border: none;
+			cursor: pointer;
+			position: absolute;
+			right: 4%;
+		}
+		.close-btn:hover {
+			background: url('/img/close-hover.png') no-repeat;
+			background-size: contain;
+			background-position: center;
+		}
+		.grid-container {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+			gap: 2px;
+			padding-left: 5%;
+			padding-right: 5%;
+			padding-bottom: 1%;
+			justify-items: center;
+			max-width: 1200px;
+		}
+		.grid-container img {
+			width: 100%;
+			height: auto;
+			display: block;
+			visibility: hidden;
+			cursor: pointer;
+		}
+		.banner {
+			width: 100%;
+			height: auto;
+			padding-top: 20px;
+			padding-bottom: 50px;
+		}
+		.logo {
+			display: block;
+			margin: auto;
+			max-width: 30%;
+			max-height: 320px;
+		}
+		.container {
+			position: relative;
+			width: 100%;
+		}
+		.container img {
+			width: 100%;
+			height: auto;
+		}
+		.flip-btn {
+			background: url('/img/flip.png') no-repeat;
+			background-size: contain;
+			background-position: center;
+			width: 15%;
+			height: 11%;
+			cursor: pointer;
+			border: none;
+			position: absolute;
+			left: 50%;
+			top: 48%;
+			transform: translate(-50%, -50%);
+			opacity: 0.5;
+		}
+		.flip-btn:hover {
+			background: url('/img/flip-hover.png') no-repeat;
+			background-size: contain;
+			background-position: center;
+		}
+		.icon-bar {
+			display: grid;
+			grid-template-columns: repeat(10, 3fr 2fr) 3fr;
+			gap: 1px;
+			padding-left: 5%;
+			padding-right: 5%;
+			padding-top: 2%;
+			padding-bottom: 1%;
+			justify-items: center;
+			align-items: center;
+		}
+		.icon-bar .icon img {
+			width: 90%;
+			max-width: 80px;
+			height: auto;
+			display: block;
+			padding: 5%;
+			margin: auto;
+			text-align: center;
+		}
+		.icon-bar .dot img {
+			width: 50%;
+			max-width: 65px;
+			height: auto;
+			display: block;
+			margin: auto;
+			text-align: center;
+		}
+		.preload-hidden {
+			display: none;
+		}
+		/* This is here to enable the stickiness in a Float environment. I don't know why it works but it does */
+		.footer {
+			clear: both;
+		}
+	</style>
+</head>
+<body>
+	<img class="preload-hidden" src="/img/dot.png" />
+	<img class="preload-hidden" src="/sets/BYK-files/logo.png" />
+	<img class="preload-hidden" src="/sets/HQZ-files/icon.png" />
+		<img class="preload-hidden" src="/sets/LRH-files/icon.png" />
+		<img class="preload-hidden" src="/sets/INK-files/icon.png" />
+		<img class="preload-hidden" src="/sets/ACA-files/icon.png" />
+		<img class="preload-hidden" src="/sets/BYK-files/icon.png" />
+		<img class="preload-hidden" src="/sets/BTJ-files/icon.png" />
+		<img class="preload-hidden" src="/sets/ACR-files/icon.png" />
+		<img class="preload-hidden" src="/sets/HVF-files/icon.png" />
+		<img class="preload-hidden" src="/sets/MAC-files/icon.png" />
+		<img class="preload-hidden" src="/sets/CAC-files/icon.png" />
+		<img class="preload-hidden" src="/sets/PFP-files/icon.png" />
+		<img class="preload-hidden" src="/sets/TWR-files/icon.png" />
+		<img class="preload-hidden" src="/sets/MMC-files/icon.png" />
+		<img class="preload-hidden" src="/sets/MMT-files/icon.png" />
+		<img class="preload-hidden" src="/sets/IAH-files/icon.png" />
+		<img class="preload-hidden" src="/sets/CRC-files/icon.png" />
+		<img class="preload-hidden" id="bg" src="/sets/BYK-files/bg.png" />
+		
+		<div class="header">
+		<div class="search-grid">
+			<a href="/"><img class="sg-logo" src="/img/banner.png"></a>
+			<img class="sg-icon" src="/img/search.png">
+			<input type="text" inputmode="search" placeholder="Search ..." name="search" id="search" spellcheck="false" autocomplete="off" autocorrect="off" spellcheck="false">
+			<a href="/all-sets"><img src="/img/sets.png" class="sg-icon">Sets</a>
+			<a href="/deckbuilder"><img src="/img/deck.png" class="sg-icon">Deckbuilder</a>
+			<a onclick="randomCard()"><img src="/img/random.png" class="sg-icon">Random</a>
+		</div>
+	</div>
+
+	<div class="icon-bar">
+			<div class="icon"><a href="HQZ"><img src="/sets/HQZ-files/icon.png"></img></a></div>
+		 <div class="dot"><img src="/img/dot.png"></img></div>
+		<div class="icon"><a href="LRH"><img src="/sets/LRH-files/icon.png"></img></a></div>
+		 <div class="dot"><img src="/img/dot.png"></img></div>
+		<div class="icon"><a href="INK"><img src="/sets/INK-files/icon.png"></img></a></div>
+		 <div class="dot"><img src="/img/dot.png"></img></div>
+		<div class="icon"><a href="ACA"><img src="/sets/ACA-files/icon.png"></img></a></div>
+		 <div class="dot"><img src="/img/dot.png"></img></div>
+		<div class="icon"><a href="BYK"><img src="/sets/BYK-files/icon.png"></img></a></div>
+		 <div class="dot"><img src="/img/dot.png"></img></div>
+		<div class="icon"><a href="BTJ"><img src="/sets/BTJ-files/icon.png"></img></a></div>
+		 <div class="dot"><img src="/img/dot.png"></img></div>
+		<div class="icon"><a href="ACR"><img src="/sets/ACR-files/icon.png"></img></a></div>
+		 <div class="dot"><img src="/img/dot.png"></img></div>
+		<div class="icon"><a href="HVF"><img src="/sets/HVF-files/icon.png"></img></a></div>
+		 <div class="dot"><img src="/img/dot.png"></img></div>
+		<div class="icon"><a href="MAC"><img src="/sets/MAC-files/icon.png"></img></a></div>
+		 <div class="dot"><img src="/img/dot.png"></img></div>
+		<div class="icon"><a href="CAC"><img src="/sets/CAC-files/icon.png"></img></a></div>
+		 <div class="dot"><img src="/img/dot.png"></img></div>
+		<div class="icon"><a href="PFP"><img src="/sets/PFP-files/icon.png"></img></a></div>
+		<div class="icon"><a href="TWR"><img src="/sets/TWR-files/icon.png"></img></a></div>
+		 <div class="dot"><img src="/img/dot.png"></img></div>
+		<div class="icon"><a href="MMC"><img src="/sets/MMC-files/icon.png"></img></a></div>
+		 <div class="dot"><img src="/img/dot.png"></img></div>
+		<div class="icon"><a href="MMT"><img src="/sets/MMT-files/icon.png"></img></a></div>
+		 <div class="dot"><img src="/img/dot.png"></img></div>
+		<div class="icon"><a href="IAH"><img src="/sets/IAH-files/icon.png"></img></a></div>
+		 <div class="dot"><img src="/img/dot.png"></img></div>
+		<div class="icon"><a href="CRC"><img src="/sets/CRC-files/icon.png"></img></a></div>
+
+		</div>
+		<div class="banner">
+		<img class="logo" src="/sets/BYK-files/logo.png">
+		</div>
+		<div class="main-content" id="main-content">
+			<div class="grid-container">
+				<div class="container"><img alt="/sets\BYK-files\img\31_Visage of Emeria.png" id="31_Visage of Emeria" data-flag="@X" onclick="openSidebar('31_Visage of Emeria',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\33_Bearer of Silk Chains.png" id="33_Bearer of Silk Chains" data-flag="@X" onclick="openSidebar('33_Bearer of Silk Chains',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\70_Kalemn, Bound by Violence.png" id="70_Kalemn, Bound by Violence" data-flag="@X" onclick="openSidebar('70_Kalemn, Bound by Violence',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\95_Dawn Without End.png" id="95_Dawn Without End" data-flag="@X" onclick="openSidebar('95_Dawn Without End',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\121_Ashka Ritualist.png" id="121_Ashka Ritualist" data-flag="@X" onclick="openSidebar('121_Ashka Ritualist',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\5_Born Anew.png" id="5_Born Anew" data-flag="@X" onclick="openSidebar('5_Born Anew',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\35_Collector of Memories.png" id="35_Collector of Memories" data-flag="@X" onclick="openSidebar('35_Collector of Memories',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\62_Black Hole Musings.png" id="62_Black Hole Musings" data-flag="@X" onclick="openSidebar('62_Black Hole Musings',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\98_Everember Phoenix.png" id="98_Everember Phoenix" data-flag="@X" onclick="openSidebar('98_Everember Phoenix',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\123_Beckon the Pack.png" id="123_Beckon the Pack" data-flag="@X" onclick="openSidebar('123_Beckon the Pack',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\6_Bringer of Blessed Ends.png" id="6_Bringer of Blessed Ends" data-flag="@X" onclick="openSidebar('6_Bringer of Blessed Ends',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\38_Drown Amidst the Cosmos.png" id="38_Drown Amidst the Cosmos" data-flag="@X" onclick="openSidebar('38_Drown Amidst the Cosmos',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\64_Brink of Something.png" id="64_Brink of Something" data-flag="@X" onclick="openSidebar('64_Brink of Something',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\102_Grasp for Understanding.png" id="102_Grasp for Understanding" data-flag="@X" onclick="openSidebar('102_Grasp for Understanding',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\125_Blessed Piper.png" id="125_Blessed Piper" data-flag="@X" onclick="openSidebar('125_Blessed Piper',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\14_Fleshscale Serpent.png" id="14_Fleshscale Serpent" data-flag="@X" onclick="openSidebar('14_Fleshscale Serpent',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\39_Elusive Hunter.png" id="39_Elusive Hunter" data-flag="@X" onclick="openSidebar('39_Elusive Hunter',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\68_Hungering Cult.png" id="68_Hungering Cult" data-flag="@X" onclick="openSidebar('68_Hungering Cult',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\103_Harvest Flesh.png" id="103_Harvest Flesh" data-flag="@X" onclick="openSidebar('103_Harvest Flesh',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\126_Breach the Lilies.png" id="126_Breach the Lilies" data-flag="@X" onclick="openSidebar('126_Breach the Lilies',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\15_Gleaming Elf.png" id="15_Gleaming Elf" data-flag="@X" onclick="openSidebar('15_Gleaming Elf',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\42_Fate Takes its Course.png" id="42_Fate Takes its Course" data-flag="@X" onclick="openSidebar('42_Fate Takes its Course',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\69_Infectious Ego.png" id="69_Infectious Ego" data-flag="@X" onclick="openSidebar('69_Infectious Ego',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\107_Ironhide Bellower.png" id="107_Ironhide Bellower" data-flag="@X" onclick="openSidebar('107_Ironhide Bellower',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\129_Destiny Beyond Measure.png" id="129_Destiny Beyond Measure" data-flag="@X" onclick="openSidebar('129_Destiny Beyond Measure',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\16_Hallowed Moon Sentinel.png" id="16_Hallowed Moon Sentinel" data-flag="@X" onclick="openSidebar('16_Hallowed Moon Sentinel',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\43_Feathered Oracle.png" id="43_Feathered Oracle" data-flag="@X" onclick="openSidebar('43_Feathered Oracle',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\75_Obey.png" id="75_Obey" data-flag="@X" onclick="openSidebar('75_Obey',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\109_Masha Ritualist.png" id="109_Masha Ritualist" data-flag="@X" onclick="openSidebar('109_Masha Ritualist',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\137_Reconstruct.png" id="137_Reconstruct" data-flag="@X" onclick="openSidebar('137_Reconstruct',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\22_Legion Angel.png" id="22_Legion Angel" data-flag="@X" onclick="openSidebar('22_Legion Angel',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\44_Fold Will.png" id="44_Fold Will" data-flag="@X" onclick="openSidebar('44_Fold Will',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\79_Reduce to Naught.png" id="79_Reduce to Naught" data-flag="@X" onclick="openSidebar('79_Reduce to Naught',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\110_Molten Agitator.png" id="110_Molten Agitator" data-flag="@X" onclick="openSidebar('110_Molten Agitator',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\139_Shapen, Spiteful Creation.png" id="139_Shapen, Spiteful Creation" data-flag="@X" onclick="openSidebar('139_Shapen, Spiteful Creation',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\24_Pull Away.png" id="24_Pull Away" data-flag="@X" onclick="openSidebar('24_Pull Away',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\45_From Stars Above.png" id="45_From Stars Above" data-flag="@X" onclick="openSidebar('45_From Stars Above',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\80_Setar Ritualist.png" id="80_Setar Ritualist" data-flag="@X" onclick="openSidebar('80_Setar Ritualist',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\113_Silver-Dawn Radiant.png" id="113_Silver-Dawn Radiant" data-flag="@X" onclick="openSidebar('113_Silver-Dawn Radiant',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\140_Shapen's Taunts.png" id="140_Shapens Taunts" data-flag="@X" onclick="openSidebar('140_Shapens Taunts',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\25_Roya Ritualist.png" id="25_Roya Ritualist" data-flag="@X" onclick="openSidebar('25_Roya Ritualist',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\47_Helar Ritualist.png" id="47_Helar Ritualist" data-flag="@X" onclick="openSidebar('47_Helar Ritualist',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\81_A Sight Too Far.png" id="81_A Sight Too Far" data-flag="@X" onclick="openSidebar('81_A Sight Too Far',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\116_Solar Hatching.png" id="116_Solar Hatching" data-flag="@X" onclick="openSidebar('116_Solar Hatching',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\142_Silver-Dawn Elder.png" id="142_Silver-Dawn Elder" data-flag="@X" onclick="openSidebar('142_Silver-Dawn Elder',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\26_Speaker of Deliverance.png" id="26_Speaker of Deliverance" data-flag="@X" onclick="openSidebar('26_Speaker of Deliverance',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\55_Sinewed Wings.png" id="55_Sinewed Wings" data-flag="@X" onclick="openSidebar('55_Sinewed Wings',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\83_Still-Smoke Skirmisher.png" id="83_Still-Smoke Skirmisher" data-flag="@X" onclick="openSidebar('83_Still-Smoke Skirmisher',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\117_Stubborn Blademate.png" id="117_Stubborn Blademate" data-flag="@X" onclick="openSidebar('117_Stubborn Blademate',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\143_Silver-Dawn Ranger.png" id="143_Silver-Dawn Ranger" data-flag="@X" onclick="openSidebar('143_Silver-Dawn Ranger',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\30_Vashi, Twin-Star Paragon.png" id="30_Vashi, Twin-Star Paragon" data-flag="@X" onclick="openSidebar('30_Vashi, Twin-Star Paragon',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\56_Succumb to Dreams.png" id="56_Succumb to Dreams" data-flag="@X" onclick="openSidebar('56_Succumb to Dreams',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\84_Still-Smoke Stitcher.png" id="84_Still-Smoke Stitcher" data-flag="@X" onclick="openSidebar('84_Still-Smoke Stitcher',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\118_These Final Moments.png" id="118_These Final Moments" data-flag="@X" onclick="openSidebar('118_These Final Moments',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\149_World Made Anew.png" id="149_World Made Anew" data-flag="@X" onclick="openSidebar('149_World Made Anew',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\32_Witness the Divine.png" id="32_Witness the Divine" data-flag="@X" onclick="openSidebar('32_Witness the Divine',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\36_Corrupted Soothsayer.png" id="36_Corrupted Soothsayer" data-flag="@X" onclick="openSidebar('36_Corrupted Soothsayer',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\85_Tahli, Twin-Star Seer.png" id="85_Tahli, Twin-Star Seer" data-flag="@X" onclick="openSidebar('85_Tahli, Twin-Star Seer',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\92_Annihilation.png" id="92_Annihilation" data-flag="@X" onclick="openSidebar('92_Annihilation',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\124_Beyond All Horizons.png" id="124_Beyond All Horizons" data-flag="@X" onclick="openSidebar('124_Beyond All Horizons',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\3_Abjuration Savant.png" id="3_Abjuration Savant" data-flag="@X" onclick="openSidebar('3_Abjuration Savant',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\37_Cursory Glance.png" id="37_Cursory Glance" data-flag="@X" onclick="openSidebar('37_Cursory Glance',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\65_Death Kneels Before.png" id="65_Death Kneels Before" data-flag="@X" onclick="openSidebar('65_Death Kneels Before',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\94_Cackling Seer.png" id="94_Cackling Seer" data-flag="@X" onclick="openSidebar('94_Cackling Seer',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\136_Pieces of Creation.png" id="136_Pieces of Creation" data-flag="@X" onclick="openSidebar('136_Pieces of Creation',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\4_Ashkan Preserver.png" id="4_Ashkan Preserver" data-flag="@X" onclick="openSidebar('4_Ashkan Preserver',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\40_Embrace of Mist.png" id="40_Embrace of Mist" data-flag="@X" onclick="openSidebar('40_Embrace of Mist',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\71_Litany of Fallen Blades.png" id="71_Litany of Fallen Blades" data-flag="@X" onclick="openSidebar('71_Litany of Fallen Blades',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\99_Faith Burns Brightest.png" id="99_Faith Burns Brightest" data-flag="@X" onclick="openSidebar('99_Faith Burns Brightest',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\138_Remnant of the Hunt.png" id="138_Remnant of the Hunt" data-flag="@X" onclick="openSidebar('138_Remnant of the Hunt',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\7_Clarity of Self.png" id="7_Clarity of Self" data-flag="@X" onclick="openSidebar('7_Clarity of Self',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\46_Give Penance.png" id="46_Give Penance" data-flag="@X" onclick="openSidebar('46_Give Penance',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\78_Reclusive Augur.png" id="78_Reclusive Augur" data-flag="@X" onclick="openSidebar('78_Reclusive Augur',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\101_Gentle Repose.png" id="101_Gentle Repose" data-flag="@X" onclick="openSidebar('101_Gentle Repose',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\144_Still-Smoke Oracle.png" id="144_Still-Smoke Oracle" data-flag="@X" onclick="openSidebar('144_Still-Smoke Oracle',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\9_Disassociate.png" id="9_Disassociate" data-flag="@X" onclick="openSidebar('9_Disassociate',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\48_Mirror Reality.png" id="48_Mirror Reality" data-flag="@X" onclick="openSidebar('48_Mirror Reality',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\82_Still-Smoke Hunter.png" id="82_Still-Smoke Hunter" data-flag="@X" onclick="openSidebar('82_Still-Smoke Hunter',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\105_Illusory Stag.png" id="105_Illusory Stag" data-flag="@X" onclick="openSidebar('105_Illusory Stag',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\145_Swarm of Sporemites.png" id="145_Swarm of Sporemites" data-flag="@X" onclick="openSidebar('145_Swarm of Sporemites',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\12_Fade.png" id="12_Fade" data-flag="@X" onclick="openSidebar('12_Fade',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\57_Through Shattered Senses.png" id="57_Through Shattered Senses" data-flag="@X" onclick="openSidebar('57_Through Shattered Senses',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\88_Understand Desolation.png" id="88_Understand Desolation" data-flag="@X" onclick="openSidebar('88_Understand Desolation',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\115_Slithering Eyes.png" id="115_Slithering Eyes" data-flag="@X" onclick="openSidebar('115_Slithering Eyes',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\146_Thriving Shaman.png" id="146_Thriving Shaman" data-flag="@X" onclick="openSidebar('146_Thriving Shaman',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\19_Heavens Held Waiting.png" id="19_Heavens Held Waiting" data-flag="@X" onclick="openSidebar('19_Heavens Held Waiting',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\59_A Vision Too Vast.png" id="59_A Vision Too Vast" data-flag="@X" onclick="openSidebar('59_A Vision Too Vast',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\90_Weeping Whisperer.png" id="90_Weeping Whisperer" data-flag="@X" onclick="openSidebar('90_Weeping Whisperer',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\119_While Blood Still Flows.png" id="119_While Blood Still Flows" data-flag="@X" onclick="openSidebar('119_While Blood Still Flows',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\147_Walker of the Final Path.png" id="147_Walker of the Final Path" data-flag="@X" onclick="openSidebar('147_Walker of the Final Path',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\27_Subdue False Idols.png" id="27_Subdue False Idols" data-flag="@X" onclick="openSidebar('27_Subdue False Idols',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\34_Become Nothing.png" id="34_Become Nothing" data-flag="@X" onclick="openSidebar('34_Become Nothing',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\91_World Torn Asunder.png" id="91_World Torn Asunder" data-flag="@X" onclick="openSidebar('91_World Torn Asunder',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\93_Blooming Martyr.png" id="93_Blooming Martyr" data-flag="@X" onclick="openSidebar('93_Blooming Martyr',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\122_Ashka's Hunter.png" id="122_Ashkas Hunter" data-flag="@X" onclick="openSidebar('122_Ashkas Hunter',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\8_Crystallized Hope.png" id="8_Crystallized Hope" data-flag="@X" onclick="openSidebar('8_Crystallized Hope',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\41_Ethereal Sneak.png" id="41_Ethereal Sneak" data-flag="@X" onclick="openSidebar('41_Ethereal Sneak',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\63_Blinded Necromancer.png" id="63_Blinded Necromancer" data-flag="@X" onclick="openSidebar('63_Blinded Necromancer',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\96_Drenched in Triumph.png" id="96_Drenched in Triumph" data-flag="@X" onclick="openSidebar('96_Drenched in Triumph',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\127_Canopy Dancer.png" id="127_Canopy Dancer" data-flag="@X" onclick="openSidebar('127_Canopy Dancer',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\10_Do No Evil.png" id="10_Do No Evil" data-flag="@X" onclick="openSidebar('10_Do No Evil',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\49_Mishka's Conjuring.png" id="49_Mishkas Conjuring" data-flag="@X" onclick="openSidebar('49_Mishkas Conjuring',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\66_Hadik's Striker.png" id="66_Hadiks Striker" data-flag="@X" onclick="openSidebar('66_Hadiks Striker',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\97_Essence Carver.png" id="97_Essence Carver" data-flag="@X" onclick="openSidebar('97_Essence Carver',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\128_Crooked Growth.png" id="128_Crooked Growth" data-flag="@X" onclick="openSidebar('128_Crooked Growth',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\11_Ethereal Runner.png" id="11_Ethereal Runner" data-flag="@X" onclick="openSidebar('11_Ethereal Runner',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\50_Mnemonic Wall.png" id="50_Mnemonic Wall" data-flag="@X" onclick="openSidebar('50_Mnemonic Wall',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\67_Hollyberry Murder.png" id="67_Hollyberry Murder" data-flag="@X" onclick="openSidebar('67_Hollyberry Murder',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\100_Firefish Conjurer.png" id="100_Firefish Conjurer" data-flag="@X" onclick="openSidebar('100_Firefish Conjurer',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\130_Fauna Tender.png" id="130_Fauna Tender" data-flag="@X" onclick="openSidebar('130_Fauna Tender',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\13_Flesh Willing.png" id="13_Flesh Willing" data-flag="@X" onclick="openSidebar('13_Flesh Willing',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\51_Monokeros Rider.png" id="51_Monokeros Rider" data-flag="@X" onclick="openSidebar('51_Monokeros Rider',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\72_The Mind Falters.png" id="72_The Mind Falters" data-flag="@X" onclick="openSidebar('72_The Mind Falters',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\104_Heavenly Fire.png" id="104_Heavenly Fire" data-flag="@X" onclick="openSidebar('104_Heavenly Fire',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\131_From Unbidden Realms.png" id="131_From Unbidden Realms" data-flag="@X" onclick="openSidebar('131_From Unbidden Realms',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\17_Heavenly Emergence.png" id="17_Heavenly Emergence" data-flag="@X" onclick="openSidebar('17_Heavenly Emergence',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\52_Pull from Beyond.png" id="52_Pull from Beyond" data-flag="@X" onclick="openSidebar('52_Pull from Beyond',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\73_Misery Keeps Company.png" id="73_Misery Keeps Company" data-flag="@X" onclick="openSidebar('73_Misery Keeps Company',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\106_Incandescent Matron.png" id="106_Incandescent Matron" data-flag="@X" onclick="openSidebar('106_Incandescent Matron',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\132_Gift to Finality.png" id="132_Gift to Finality" data-flag="@X" onclick="openSidebar('132_Gift to Finality',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\18_Heavens Claim Their Due.png" id="18_Heavens Claim Their Due" data-flag="@X" onclick="openSidebar('18_Heavens Claim Their Due',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\53_Seeker of Communions.png" id="53_Seeker of Communions" data-flag="@X" onclick="openSidebar('53_Seeker of Communions',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\74_Moth-Heart Husk.png" id="74_Moth-Heart Husk" data-flag="@X" onclick="openSidebar('74_Moth-Heart Husk',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\108_Martial Mastery.png" id="108_Martial Mastery" data-flag="@X" onclick="openSidebar('108_Martial Mastery',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\133_Ichorsap Dryad.png" id="133_Ichorsap Dryad" data-flag="@X" onclick="openSidebar('133_Ichorsap Dryad',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\20_Helar's Sanctifier.png" id="20_Helars Sanctifier" data-flag="@X" onclick="openSidebar('20_Helars Sanctifier',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\54_Serene Hart.png" id="54_Serene Hart" data-flag="@X" onclick="openSidebar('54_Serene Hart',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\76_Overwhelming Guilt.png" id="76_Overwhelming Guilt" data-flag="@X" onclick="openSidebar('76_Overwhelming Guilt',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\111_Settlement Scout.png" id="111_Settlement Scout" data-flag="@X" onclick="openSidebar('111_Settlement Scout',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\134_Lotusleaf Blade.png" id="134_Lotusleaf Blade" data-flag="@X" onclick="openSidebar('134_Lotusleaf Blade',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\21_Immaculate Choir.png" id="21_Immaculate Choir" data-flag="@X" onclick="openSidebar('21_Immaculate Choir',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\58_Time Flows to Its End.png" id="58_Time Flows to Its End" data-flag="@X" onclick="openSidebar('58_Time Flows to Its End',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\77_Piece by Piece.png" id="77_Piece by Piece" data-flag="@X" onclick="openSidebar('77_Piece by Piece',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\112_Shapen's Cruelty.png" id="112_Shapens Cruelty" data-flag="@X" onclick="openSidebar('112_Shapens Cruelty',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\135_Mortal Deeds.png" id="135_Mortal Deeds" data-flag="@X" onclick="openSidebar('135_Mortal Deeds',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\23_Palesoul Mender.png" id="23_Palesoul Mender" data-flag="@X" onclick="openSidebar('23_Palesoul Mender',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\60_Watch from Above.png" id="60_Watch from Above" data-flag="@X" onclick="openSidebar('60_Watch from Above',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\86_Tides of Dust.png" id="86_Tides of Dust" data-flag="@X" onclick="openSidebar('86_Tides of Dust',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\114_Single-Minded Mob.png" id="114_Single-Minded Mob" data-flag="@X" onclick="openSidebar('114_Single-Minded Mob',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\141_Shepherd of Lonely Souls.png" id="141_Shepherd of Lonely Souls" data-flag="@X" onclick="openSidebar('141_Shepherd of Lonely Souls',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\28_Twin-Star Herald.png" id="28_Twin-Star Herald" data-flag="@X" onclick="openSidebar('28_Twin-Star Herald',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\61_What Little Remains.png" id="61_What Little Remains" data-flag="@X" onclick="openSidebar('61_What Little Remains',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\87_Tower of Sorrows.png" id="87_Tower of Sorrows" data-flag="@X" onclick="openSidebar('87_Tower of Sorrows',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\120_Worn to Nothing.png" id="120_Worn to Nothing" data-flag="@X" onclick="openSidebar('120_Worn to Nothing',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\148_Welcome What Comes.png" id="148_Welcome What Comes" data-flag="@X" onclick="openSidebar('148_Welcome What Comes',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\29_Upon Fourfold Wings.png" id="29_Upon Fourfold Wings" data-flag="@X" onclick="openSidebar('29_Upon Fourfold Wings',false)"></div>
+			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\89_Walking Remorse.png" id="89_Walking Remorse" data-flag="@X" onclick="openSidebar('89_Walking Remorse',false)"></div>
+			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+<div id="gold" class="anchor"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\152_Gentle Omens.png" id="152_Gentle Omens" data-flag="@X" onclick="openSidebar('152_Gentle Omens',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\154_Bearer of Tormented Truths.png" id="154_Bearer of Tormented Truths" data-flag="@X" onclick="openSidebar('154_Bearer of Tormented Truths',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\158_Angel of the Eclipse.png" id="158_Angel of the Eclipse" data-flag="@X" onclick="openSidebar('158_Angel of the Eclipse',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\164_Hadik, Might of Mortals.png" id="164_Hadik, Might of Mortals" data-flag="@X" onclick="openSidebar('164_Hadik, Might of Mortals',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\166_Endless Helpless Souls.png" id="166_Endless Helpless Souls" data-flag="@X" onclick="openSidebar('166_Endless Helpless Souls',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\150_Bind the Mind.png" id="150_Bind the Mind" data-flag="@X" onclick="openSidebar('150_Bind the Mind',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\155_Keep What Was Lost.png" id="155_Keep What Was Lost" data-flag="@X" onclick="openSidebar('155_Keep What Was Lost',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\159_Give to Sacred Halls.png" id="159_Give to Sacred Halls" data-flag="@X" onclick="openSidebar('159_Give to Sacred Halls',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\162_Emberheart Witch.png" id="162_Emberheart Witch" data-flag="@X" onclick="openSidebar('162_Emberheart Witch',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\168_Seeker of New Truths.png" id="168_Seeker of New Truths" data-flag="@X" onclick="openSidebar('168_Seeker of New Truths',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\153_Skittering Beauty.png" id="153_Skittering Beauty" data-flag="@X" onclick="openSidebar('153_Skittering Beauty',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\157_Needless Atrocities.png" id="157_Needless Atrocities" data-flag="@X" onclick="openSidebar('157_Needless Atrocities',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\161_Ill-Fated Seer.png" id="161_Ill-Fated Seer" data-flag="@X" onclick="openSidebar('161_Ill-Fated Seer',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\165_Hadik's Cohort.png" id="165_Hadiks Cohort" data-flag="@X" onclick="openSidebar('165_Hadiks Cohort',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\169_Tandem Glory.png" id="169_Tandem Glory" data-flag="@X" onclick="openSidebar('169_Tandem Glory',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\151_A Flawless World.png" id="151_A Flawless World" data-flag="@X" onclick="openSidebar('151_A Flawless World',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\156_Lonely Visage.png" id="156_Lonely Visage" data-flag="@X" onclick="openSidebar('156_Lonely Visage',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\160_Grisly Offering.png" id="160_Grisly Offering" data-flag="@X" onclick="openSidebar('160_Grisly Offering',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\163_Gilded Bloodsworn.png" id="163_Gilded Bloodsworn" data-flag="@X" onclick="openSidebar('163_Gilded Bloodsworn',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\167_Mourn No More.png" id="167_Mourn No More" data-flag="@X" onclick="openSidebar('167_Mourn No More',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\170_Helene, Bound by Might.png" id="170_Helene, Bound by Might" data-flag="@X" onclick="openSidebar('170_Helene, Bound by Might',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\179_Helar's Herald.png" id="179_Helars Herald" data-flag="@X" onclick="openSidebar('179_Helars Herald',false)"></div>
+			<div class="container"><img data-alt_src="/sets\BYK-files\img\182_Sacrifice to Setar_back.png" alt="/sets\BYK-files\img\182_Sacrifice to Setar_front.png" id="182_Sacrifice to Setar" data-flag="@XD" onclick="openSidebar('182_Sacrifice to Setar',false)"><button class="flip-btn" onclick="imgFlip('182_Sacrifice to Setar')"></button></div>
+			<div class="container"><img alt="/sets\BYK-files\img\178_Fortune Dealer.png" id="178_Fortune Dealer" data-flag="@X" onclick="openSidebar('178_Fortune Dealer',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\188_Twin-Star Heartweaver.png" id="188_Twin-Star Heartweaver" data-flag="@X" onclick="openSidebar('188_Twin-Star Heartweaver',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\176_End of All Things.png" id="176_End of All Things" data-flag="@X" onclick="openSidebar('176_End of All Things',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\186_Still-Smoke Sojourners.png" id="186_Still-Smoke Sojourners" data-flag="@X" onclick="openSidebar('186_Still-Smoke Sojourners',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\180_Inflicted Ideals.png" id="180_Inflicted Ideals" data-flag="@X" onclick="openSidebar('180_Inflicted Ideals',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\181_Ravik, Still-Smoke Seer.png" id="181_Ravik, Still-Smoke Seer" data-flag="@X" onclick="openSidebar('181_Ravik, Still-Smoke Seer',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\189_United Focus.png" id="189_United Focus" data-flag="@X" onclick="openSidebar('189_United Focus',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\184_Shuck Mortal Coils.png" id="184_Shuck Mortal Coils" data-flag="@X" onclick="openSidebar('184_Shuck Mortal Coils',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\172_Blessing of Helar.png" id="172_Blessing of Helar" data-flag="@X" onclick="openSidebar('172_Blessing of Helar',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\191_Whims of Fate.png" id="191_Whims of Fate" data-flag="@X" onclick="openSidebar('191_Whims of Fate',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\177_Fall of Masha.png" id="177_Fall of Masha" data-flag="@X" onclick="openSidebar('177_Fall of Masha',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\171_Blessing of Ashka.png" id="171_Blessing of Ashka" data-flag="@X" onclick="openSidebar('171_Blessing of Ashka',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\173_Blessing of Roya.png" id="173_Blessing of Roya" data-flag="@X" onclick="openSidebar('173_Blessing of Roya',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\190_Unravel Prophecy.png" id="190_Unravel Prophecy" data-flag="@X" onclick="openSidebar('190_Unravel Prophecy',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\174_Blessing of Setar.png" id="174_Blessing of Setar" data-flag="@X" onclick="openSidebar('174_Blessing of Setar',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\187_Tahli's Council.png" id="187_Tahlis Council" data-flag="@X" onclick="openSidebar('187_Tahlis Council',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\183_Shifting Brute.png" id="183_Shifting Brute" data-flag="@X" onclick="openSidebar('183_Shifting Brute',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\185_Song of Shoals.png" id="185_Song of Shoals" data-flag="@X" onclick="openSidebar('185_Song of Shoals',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\192_Elusive Devout.png" id="192_Elusive Devout" data-flag="@X" onclick="openSidebar('192_Elusive Devout',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\175_Cruel Heartbeat.png" id="175_Cruel Heartbeat" data-flag="@X" onclick="openSidebar('175_Cruel Heartbeat',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\194_Fervent Devout.png" id="194_Fervent Devout" data-flag="@X" onclick="openSidebar('194_Fervent Devout',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\193_Feral Devout.png" id="193_Feral Devout" data-flag="@X" onclick="openSidebar('193_Feral Devout',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\195_Lustrous Devout.png" id="195_Lustrous Devout" data-flag="@X" onclick="openSidebar('195_Lustrous Devout',false)"></div>
+			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\196_Poisoned Devout.png" id="196_Poisoned Devout" data-flag="@X" onclick="openSidebar('196_Poisoned Devout',false)"></div>
+			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+<div id="colorless" class="anchor"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\1_Makshi, Patron of Blades.png" id="1_Makshi, Patron of Blades" data-flag="@X" onclick="openSidebar('1_Makshi, Patron of Blades',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\199_Perception Pool.png" id="199_Perception Pool" data-flag="@X" onclick="openSidebar('199_Perception Pool',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\203_Void Hilt.png" id="203_Void Hilt" data-flag="@X" onclick="openSidebar('203_Void Hilt',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\205_Weeping Lotus.png" id="205_Weeping Lotus" data-flag="@X" onclick="openSidebar('205_Weeping Lotus',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\198_Hail of Blades.png" id="198_Hail of Blades" data-flag="@X" onclick="openSidebar('198_Hail of Blades',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\200_Settlement Guardian.png" id="200_Settlement Guardian" data-flag="@X" onclick="openSidebar('200_Settlement Guardian',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\202_Sunderer of Veils.png" id="202_Sunderer of Veils" data-flag="@X" onclick="openSidebar('202_Sunderer of Veils',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\2_Unravel Shattered Worlds.png" id="2_Unravel Shattered Worlds" data-flag="@X" onclick="openSidebar('2_Unravel Shattered Worlds',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\197_Ancestor's Bulwark.png" id="197_Ancestors Bulwark" data-flag="@X" onclick="openSidebar('197_Ancestors Bulwark',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\201_Shield of the Unwavering.png" id="201_Shield of the Unwavering" data-flag="@X" onclick="openSidebar('201_Shield of the Unwavering',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\204_Weave Etcher.png" id="204_Weave Etcher" data-flag="@X" onclick="openSidebar('204_Weave Etcher',false)"></div>
+			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\206_Fields of Worship.png" id="206_Fields of Worship" data-flag="@X" onclick="openSidebar('206_Fields of Worship',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\207_Inscrutable Realms.png" id="207_Inscrutable Realms" data-flag="@X" onclick="openSidebar('207_Inscrutable Realms',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\208_Inviolable Realms.png" id="208_Inviolable Realms" data-flag="@X" onclick="openSidebar('208_Inviolable Realms',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\209_Mortal Realms.png" id="209_Mortal Realms" data-flag="@X" onclick="openSidebar('209_Mortal Realms',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\210_Tempting Realms.png" id="210_Tempting Realms" data-flag="@X" onclick="openSidebar('210_Tempting Realms',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\211_Wild Realms.png" id="211_Wild Realms" data-flag="@X" onclick="openSidebar('211_Wild Realms',false)"></div>
+			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+<div id="token" class="anchor"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\22t_Lotus Petal.png" id="22t_Lotus Petal" data-flag="@X" onclick="openSidebar('22t_Lotus Petal',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\12t_Everember Phoenix (Token).png" id="12t_Everember Phoenix (Token)" data-flag="@X" onclick="openSidebar('12t_Everember Phoenix (Token)',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\16t_Silver-Dawn Elder (Token).png" id="16t_Silver-Dawn Elder (Token)" data-flag="@X" onclick="openSidebar('16t_Silver-Dawn Elder (Token)',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\9t_Still-Smoke Hunter (Token).png" id="9t_Still-Smoke Hunter (Token)" data-flag="@X" onclick="openSidebar('9t_Still-Smoke Hunter (Token)',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\11t_Cackling Seer (Token).png" id="11t_Cackling Seer (Token)" data-flag="@X" onclick="openSidebar('11t_Cackling Seer (Token)',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\15t_Remnant of the Hunt (Token).png" id="15t_Remnant of the Hunt (Token)" data-flag="@X" onclick="openSidebar('15t_Remnant of the Hunt (Token)',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\1t_Angel.png" id="1t_Angel" data-flag="@X" onclick="openSidebar('1t_Angel',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\2t_Illusion (White).png" id="2t_Illusion (White)" data-flag="@X" onclick="openSidebar('2t_Illusion (White)',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\3t_Illusion (Blue).png" id="3t_Illusion (Blue)" data-flag="@X" onclick="openSidebar('3t_Illusion (Blue)',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\4t_Stance (Blue).png" id="4t_Stance (Blue)" data-flag="@X" onclick="openSidebar('4t_Stance (Blue)',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\5t_Blinded Necromancer (Token).png" id="5t_Blinded Necromancer (Token)" data-flag="@X" onclick="openSidebar('5t_Blinded Necromancer (Token)',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\6t_Hollyberry Murder (Token).png" id="6t_Hollyberry Murder (Token)" data-flag="@X" onclick="openSidebar('6t_Hollyberry Murder (Token)',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\7t_Moth-Heart Husk (Token).png" id="7t_Moth-Heart Husk (Token)" data-flag="@X" onclick="openSidebar('7t_Moth-Heart Husk (Token)',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\8t_Spirit.png" id="8t_Spirit" data-flag="@X" onclick="openSidebar('8t_Spirit',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\10t_Blooming Martyr (Token).png" id="10t_Blooming Martyr (Token)" data-flag="@X" onclick="openSidebar('10t_Blooming Martyr (Token)',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\13t_Settlement Scout (Token).png" id="13t_Settlement Scout (Token)" data-flag="@X" onclick="openSidebar('13t_Settlement Scout (Token)',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\14t_Ichorsap Dryad (Token).png" id="14t_Ichorsap Dryad (Token)" data-flag="@X" onclick="openSidebar('14t_Ichorsap Dryad (Token)',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\17t_Stance (Green).png" id="17t_Stance (Green)" data-flag="@X" onclick="openSidebar('17t_Stance (Green)',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\19t_Hadik, Might of Mortals (Token).png" id="19t_Hadik, Might of Mortals (Token)" data-flag="@X" onclick="openSidebar('19t_Hadik, Might of Mortals (Token)',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\20t_Ill-Fated Seer (Token).png" id="20t_Ill-Fated Seer (Token)" data-flag="@X" onclick="openSidebar('20t_Ill-Fated Seer (Token)',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\21t_Warrior.png" id="21t_Warrior" data-flag="@X" onclick="openSidebar('21t_Warrior',false)"></div>
+			<div class="container"><img alt="/sets\BYK-files\img\18t_Fortune Dealer (Token).png" id="18t_Fortune Dealer (Token)" data-flag="@X" onclick="openSidebar('18t_Fortune Dealer (Token)',false)"></div>
+			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+	</div>
+</div>
+	<div class="sidebar" id="sidebar">
+		<div class="sidebar-container">
+			<img id="sidebar_img" class="sidebar-img" src="/img/er.png">
+			<img id="sidebar_h_img" class="sidebar-h-img">
+			<button class="flip-btn" id="sidebar-flip-btn" onclick="imgFlip('sidebar_img')"></button>
+		</div>
+		<button class="close-btn" onclick="closeSidebar()"></button>
+	</div>
+	<div class="footer"></div>
+
+	<script>
+	const delay = ms => new Promise(res => setTimeout(res, ms));
+		let specialchars = "";
+
+	document.addEventListener('DOMContentLoaded', async function() {
+		await fetch('/lists/all-cards.json')
+					.then(response => response.json())
+					.then(json => {
+						card_list = json;
+				}).catch(error => console.error('Error:', error));
+
+				await fetch('/resources/replacechars.txt')
+					.then(response => response.text())
+					.then(text => {
+						specialchars = text; 
+				}).catch(error => console.error('Error:', error));
+
+				card_list_arrayified = card_list.cards;
+
+		preloadImgs = document.getElementsByClassName('preload-hidden');
+		
+		let images_loaded = [];
+
+		do {
+			await delay(100);
+			images_loaded = []
+			for (const img of preloadImgs)
+			{
+				images_loaded.push(isImageOk(img));
+			}
+		}
+		while (images_loaded.includes(false));
+
+		document.body.style.backgroundImage = 'url(' + document.getElementById("bg").src + ')';
+		loadImages();
+	});
+
+	function isImageOk(img) {
+		if (!img.complete || img.naturalWidth == 0) {
+			return false;
+		}
+
+		return true;
+	}
+
+	function loadImages() {
+		const images = document.querySelectorAll('.grid-container img');
+
+		images.forEach(img => {
+			const flag = img.getAttribute('data-flag');
+
+			if (flag === '@N') {
+				img.src = '/img/card_back.png';
+				img.removeAttribute("onclick");
+				img.style.cursor = 'default';
+			}
+			else
+			{
+				img.src = img.alt;
+
+				if (flag === '@E') {
+					img.removeAttribute("onclick");
+					img.style.cursor = 'default';
+				}
+			}
+
+			img.style.visibility = 'visible';
+		});
+	}
+
+	window.addEventListener('resize', function(event) {
+		setSidebarTop();
+	}, true);
+
+	function setSidebarTop() {
+		let vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+		let sh = document.getElementById('sidebar').offsetHeight;
+		let height = 100 * ((vh - sh) / 2) / vh;
+		document.getElementById('sidebar').style.top = height + '%';
+	}
+
+	let horizontal = false;
+
+	function imgFlip(num) {
+		tmp = document.getElementById(num).src;
+		console.log(num);
+		document.getElementById(num).src = document.getElementById(num).dataset.alt_src;
+		document.getElementById(num).dataset.alt_src = tmp;
+
+		if (num == 'sidebar_img')
+		{
+			const rotated_img = document.getElementById('sidebar_h_img');
+			const sidebar_img = document.getElementById('sidebar_img');
+
+			if (horizontal && rotated_img.style.display == 'none')
+			{
+				rotated_img.style.display = "block";
+				sidebar_img.style.filter = "blur(2px) brightness(0.7)";
+			}
+			else
+			{
+				rotated_img.style.display = "none";
+				sidebar_img.style.filter = "";
+			}
+		}
+	}
+
+	function openSidebar(id, h = false) {
+		horizontal = h;
+		scroll_pct = window.scrollY / document.documentElement.scrollHeight;
+		
+		document.getElementById('sidebar').style.display = 'grid';
+
+		const rotated_img = document.getElementById('sidebar_h_img');
+		const sidebar_img = document.getElementById('sidebar_img');
+
+		sidebar_img.src = document.getElementById(id).src;
+		rotated_img.src = document.getElementById(id).src.replace("_back", "_front");
+
+		if (horizontal && !sidebar_img.src.includes("_back"))
+		{
+			rotated_img.style.display = "block";
+			sidebar_img.style.filter = "blur(2px) brightness(0.7)";
+		}
+		else
+		{
+			rotated_img.style.display = "none";
+			sidebar_img.style.filter = "";
+		}
+
+		if (document.getElementById(id).dataset.alt_src)
+		{
+			document.getElementById('sidebar_img').dataset.alt_src = document.getElementById(id).dataset.alt_src;
+			document.getElementById('sidebar-flip-btn').style.display = 'block';
+		}
+		else
+		{
+			delete document.getElementById('sidebar_img').dataset.alt_src;
+			document.getElementById('sidebar-flip-btn').style.display = 'none';
+		}
+		document.getElementById('main-content').style.width = '60%';
+		
+		scroll_pos = scroll_pct * document.documentElement.scrollHeight;
+		window.scrollTo(window.scrollX, scroll_pos);
+		setSidebarTop();
+	}
+
+	function closeSidebar() {
+		scroll_pct = window.scrollY / document.documentElement.scrollHeight;
+
+		document.getElementById('sidebar').style.display = 'none';
+		document.getElementById('main-content').style.width = '100%';
+		
+
+		scroll_pos = scroll_pct * document.documentElement.scrollHeight;
+		window.scrollTo(window.scrollX, scroll_pos);
+	}
+
+	document.getElementById("search").addEventListener("keypress", function(event) {
+		if (event.key === "Enter") {
+			event.preventDefault();
+			search();
+		}
+	});
+
+	function search() {
+		const url = new URL('search', window.location.origin);
+		url.searchParams.append('search', document.getElementById("search").value);
+		window.location.href = url;
+	}
+
+		function randomCard() {
+				let i = Math.floor(Math.random() * (card_list_arrayified.length + 1));
+				let random_card = card_list_arrayified[i];
+
+				const url = new URL('card', window.location.origin);
+				const params = {
+					set: random_card.set,
+					num: random_card.number,
+					name: random_card.card_name
+				}
+				for (const key in params) {
+					url.searchParams.append(key, params[key]);
+				}
+
+				window.location.href = url;
+			}
+	</script>
+</body>
+</html>

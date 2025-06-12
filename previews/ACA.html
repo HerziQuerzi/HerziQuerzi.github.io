@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="icon" type="image/png" href="/sets/ACA-files/icon.png"/>
+	<link rel="stylesheet" href="/resources/header.css">
+	<title>ACA visual preview</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+			overscroll-behavior: none;
+			background-size: cover;
+			background-attachment: fixed;
+		}
+		.main-content {
+			position: relative;
+			width: 100%;
+			float: left;
+			z-index: 2;
+			justify-items: center;
+		}
+		.sidebar {
+			position: sticky;
+			top: 0;
+			display: none;
+			text-align: center;
+			padding-right: 3%;
+			z-index: 1;
+			justify-items: center;
+		}
+		.sidebar-container {
+			width: 80%;
+			max-width: 375px;
+			position: relative;
+		}
+		.sidebar-h-img {
+			display: none;
+			transform: rotate(90deg);
+			position: absolute;
+			left: 10%;
+			top: 10%;
+			width: 85%;
+		}
+		.sidebar-img {
+			vertical-align: middle;
+			width: 100%;
+		}
+		.close-btn {
+			background: url('/img/close.png') no-repeat;
+			background-size: contain;
+			background-position: center;
+			width: 10%;
+			height: 10%;
+			border: none;
+			cursor: pointer;
+			position: absolute;
+			right: 4%;
+		}
+		.close-btn:hover {
+			background: url('/img/close-hover.png') no-repeat;
+			background-size: contain;
+			background-position: center;
+		}
+		.grid-container {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+			gap: 2px;
+			padding-left: 5%;
+			padding-right: 5%;
+			padding-bottom: 1%;
+			justify-items: center;
+			max-width: 1200px;
+		}
+		.grid-container img {
+			width: 100%;
+			height: auto;
+			display: block;
+			visibility: hidden;
+			cursor: pointer;
+		}
+		.banner {
+			width: 100%;
+			height: auto;
+			padding-top: 20px;
+			padding-bottom: 50px;
+		}
+		.logo {
+			display: block;
+			margin: auto;
+			max-width: 30%;
+			max-height: 320px;
+		}
+		.container {
+			position: relative;
+			width: 100%;
+		}
+		.container img {
+			width: 100%;
+			height: auto;
+		}
+		.flip-btn {
+			background: url('/img/flip.png') no-repeat;
+			background-size: contain;
+			background-position: center;
+			width: 15%;
+			height: 11%;
+			cursor: pointer;
+			border: none;
+			position: absolute;
+			left: 50%;
+			top: 48%;
+			transform: translate(-50%, -50%);
+			opacity: 0.5;
+		}
+		.flip-btn:hover {
+			background: url('/img/flip-hover.png') no-repeat;
+			background-size: contain;
+			background-position: center;
+		}
+		.icon-bar {
+			display: grid;
+			grid-template-columns: repeat(10, 3fr 2fr) 3fr;
+			gap: 1px;
+			padding-left: 5%;
+			padding-right: 5%;
+			padding-top: 2%;
+			padding-bottom: 1%;
+			justify-items: center;
+			align-items: center;
+		}
+		.icon-bar .icon img {
+			width: 90%;
+			max-width: 80px;
+			height: auto;
+			display: block;
+			padding: 5%;
+			margin: auto;
+			text-align: center;
+		}
+		.icon-bar .dot img {
+			width: 50%;
+			max-width: 65px;
+			height: auto;
+			display: block;
+			margin: auto;
+			text-align: center;
+		}
+		.preload-hidden {
+			display: none;
+		}
+		/* This is here to enable the stickiness in a Float environment. I don't know why it works but it does */
+		.footer {
+			clear: both;
+		}
+	</style>
+</head>
+<body>
+	<img class="preload-hidden" src="/img/dot.png" />
+	<img class="preload-hidden" src="/sets/ACA-files/logo.png" />
+	<img class="preload-hidden" src="/sets/HQZ-files/icon.png" />
+		<img class="preload-hidden" src="/sets/LRH-files/icon.png" />
+		<img class="preload-hidden" src="/sets/INK-files/icon.png" />
+		<img class="preload-hidden" src="/sets/ACA-files/icon.png" />
+		<img class="preload-hidden" src="/sets/BYK-files/icon.png" />
+		<img class="preload-hidden" src="/sets/BTJ-files/icon.png" />
+		<img class="preload-hidden" src="/sets/ACR-files/icon.png" />
+		<img class="preload-hidden" src="/sets/HVF-files/icon.png" />
+		<img class="preload-hidden" src="/sets/MAC-files/icon.png" />
+		<img class="preload-hidden" src="/sets/CAC-files/icon.png" />
+		<img class="preload-hidden" src="/sets/PFP-files/icon.png" />
+		<img class="preload-hidden" src="/sets/TWR-files/icon.png" />
+		<img class="preload-hidden" src="/sets/MMC-files/icon.png" />
+		<img class="preload-hidden" src="/sets/MMT-files/icon.png" />
+		<img class="preload-hidden" src="/sets/IAH-files/icon.png" />
+		<img class="preload-hidden" src="/sets/CRC-files/icon.png" />
+		<img class="preload-hidden" id="bg" src="/sets/ACA-files/bg.png" />
+		
+		<div class="header">
+		<div class="search-grid">
+			<a href="/"><img class="sg-logo" src="/img/banner.png"></a>
+			<img class="sg-icon" src="/img/search.png">
+			<input type="text" inputmode="search" placeholder="Search ..." name="search" id="search" spellcheck="false" autocomplete="off" autocorrect="off" spellcheck="false">
+			<a href="/all-sets"><img src="/img/sets.png" class="sg-icon">Sets</a>
+			<a href="/deckbuilder"><img src="/img/deck.png" class="sg-icon">Deckbuilder</a>
+			<a onclick="randomCard()"><img src="/img/random.png" class="sg-icon">Random</a>
+		</div>
+	</div>
+
+	<div class="icon-bar">
+			<div class="icon"><a href="HQZ"><img src="/sets/HQZ-files/icon.png"></img></a></div>
+		 <div class="dot"><img src="/img/dot.png"></img></div>
+		<div class="icon"><a href="LRH"><img src="/sets/LRH-files/icon.png"></img></a></div>
+		 <div class="dot"><img src="/img/dot.png"></img></div>
+		<div class="icon"><a href="INK"><img src="/sets/INK-files/icon.png"></img></a></div>
+		 <div class="dot"><img src="/img/dot.png"></img></div>
+		<div class="icon"><a href="ACA"><img src="/sets/ACA-files/icon.png"></img></a></div>
+		 <div class="dot"><img src="/img/dot.png"></img></div>
+		<div class="icon"><a href="BYK"><img src="/sets/BYK-files/icon.png"></img></a></div>
+		 <div class="dot"><img src="/img/dot.png"></img></div>
+		<div class="icon"><a href="BTJ"><img src="/sets/BTJ-files/icon.png"></img></a></div>
+		 <div class="dot"><img src="/img/dot.png"></img></div>
+		<div class="icon"><a href="ACR"><img src="/sets/ACR-files/icon.png"></img></a></div>
+		 <div class="dot"><img src="/img/dot.png"></img></div>
+		<div class="icon"><a href="HVF"><img src="/sets/HVF-files/icon.png"></img></a></div>
+		 <div class="dot"><img src="/img/dot.png"></img></div>
+		<div class="icon"><a href="MAC"><img src="/sets/MAC-files/icon.png"></img></a></div>
+		 <div class="dot"><img src="/img/dot.png"></img></div>
+		<div class="icon"><a href="CAC"><img src="/sets/CAC-files/icon.png"></img></a></div>
+		 <div class="dot"><img src="/img/dot.png"></img></div>
+		<div class="icon"><a href="PFP"><img src="/sets/PFP-files/icon.png"></img></a></div>
+		<div class="icon"><a href="TWR"><img src="/sets/TWR-files/icon.png"></img></a></div>
+		 <div class="dot"><img src="/img/dot.png"></img></div>
+		<div class="icon"><a href="MMC"><img src="/sets/MMC-files/icon.png"></img></a></div>
+		 <div class="dot"><img src="/img/dot.png"></img></div>
+		<div class="icon"><a href="MMT"><img src="/sets/MMT-files/icon.png"></img></a></div>
+		 <div class="dot"><img src="/img/dot.png"></img></div>
+		<div class="icon"><a href="IAH"><img src="/sets/IAH-files/icon.png"></img></a></div>
+		 <div class="dot"><img src="/img/dot.png"></img></div>
+		<div class="icon"><a href="CRC"><img src="/sets/CRC-files/icon.png"></img></a></div>
+
+		</div>
+		<div class="banner">
+		<img class="logo" src="/sets/ACA-files/logo.png">
+		</div>
+		<div class="main-content" id="main-content">
+			<div class="grid-container">
+				<div class="container"><img alt="/sets\ACA-files\img\1_Academy Assessor.png" id="1_Academy Assessor" data-flag="@X" onclick="openSidebar('1_Academy Assessor',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\16_Chronotome.png" id="16_Chronotome" data-flag="@X" onclick="openSidebar('16_Chronotome',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\31_Extracurricular Studies.png" id="31_Extracurricular Studies" data-flag="@X" onclick="openSidebar('31_Extracurricular Studies',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\51_Eager Guide.png" id="51_Eager Guide" data-flag="@X" onclick="openSidebar('51_Eager Guide',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\62_Arpechian Bellowers.png" id="62_Arpechian Bellowers" data-flag="@X" onclick="openSidebar('62_Arpechian Bellowers',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\3_Banishing Initiate.png" id="3_Banishing Initiate" data-flag="@X" onclick="openSidebar('3_Banishing Initiate',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\17_Curated Citations.png" id="17_Curated Citations" data-flag="@X" onclick="openSidebar('17_Curated Citations',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\34_Irate Retribution.png" id="34_Irate Retribution" data-flag="@X" onclick="openSidebar('34_Irate Retribution',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\52_Endless Inspiration.png" id="52_Endless Inspiration" data-flag="@X" onclick="openSidebar('52_Endless Inspiration',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\64_Earthcraft Meditation.png" id="64_Earthcraft Meditation" data-flag="@X" onclick="openSidebar('64_Earthcraft Meditation',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\7_Illumination Savant.png" id="7_Illumination Savant" data-flag="@X" onclick="openSidebar('7_Illumination Savant',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\19_Endure Ennui.png" id="19_Endure Ennui" data-flag="@X" onclick="openSidebar('19_Endure Ennui',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\36_Learn Through Error.png" id="36_Learn Through Error" data-flag="@X" onclick="openSidebar('36_Learn Through Error',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\54_Finishing Blow.png" id="54_Finishing Blow" data-flag="@X" onclick="openSidebar('54_Finishing Blow',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\66_Glen Hunter.png" id="66_Glen Hunter" data-flag="@X" onclick="openSidebar('66_Glen Hunter',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\8_Luminescent Feathrets.png" id="8_Luminescent Feathrets" data-flag="@X" onclick="openSidebar('8_Luminescent Feathrets',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\21_Focused Apprentice.png" id="21_Focused Apprentice" data-flag="@X" onclick="openSidebar('21_Focused Apprentice',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\42_Somnambulance.png" id="42_Somnambulance" data-flag="@X" onclick="openSidebar('42_Somnambulance',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\56_Lightning and Thunder.png" id="56_Lightning and Thunder" data-flag="@X" onclick="openSidebar('56_Lightning and Thunder',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\72_Serene Initiate.png" id="72_Serene Initiate" data-flag="@X" onclick="openSidebar('72_Serene Initiate',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\11_Sending Stones.png" id="11_Sending Stones" data-flag="@X" onclick="openSidebar('11_Sending Stones',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\25_Rahit, Arcane Tutor.png" id="25_Rahit, Arcane Tutor" data-flag="@X" onclick="openSidebar('25_Rahit, Arcane Tutor',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\44_Stir the Pot.png" id="44_Stir the Pot" data-flag="@X" onclick="openSidebar('44_Stir the Pot',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\57_Professor's Assistant.png" id="57_Professors Assistant" data-flag="@X" onclick="openSidebar('57_Professors Assistant',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\73_Studies Past.png" id="73_Studies Past" data-flag="@X" onclick="openSidebar('73_Studies Past',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\2_Almgrove Performer.png" id="2_Almgrove Performer" data-flag="@X" onclick="openSidebar('2_Almgrove Performer',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\18_Distract.png" id="18_Distract" data-flag="@X" onclick="openSidebar('18_Distract',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\32_Flightful Fledgling.png" id="32_Flightful Fledgling" data-flag="@X" onclick="openSidebar('32_Flightful Fledgling',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\46_Almgrove Bladesinger.png" id="46_Almgrove Bladesinger" data-flag="@X" onclick="openSidebar('46_Almgrove Bladesinger',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\61_Arpechian Architect.png" id="61_Arpechian Architect" data-flag="@X" onclick="openSidebar('61_Arpechian Architect',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\4_Compulsory Studies.png" id="4_Compulsory Studies" data-flag="@X" onclick="openSidebar('4_Compulsory Studies',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\20_Exhausting Failure.png" id="20_Exhausting Failure" data-flag="@X" onclick="openSidebar('20_Exhausting Failure',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\33_Gentle Lullaby.png" id="33_Gentle Lullaby" data-flag="@X" onclick="openSidebar('33_Gentle Lullaby',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\47_Challenging Pupil.png" id="47_Challenging Pupil" data-flag="@X" onclick="openSidebar('47_Challenging Pupil',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\63_Bestower of Blooms.png" id="63_Bestower of Blooms" data-flag="@X" onclick="openSidebar('63_Bestower of Blooms',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\5_Entrancing Melody.png" id="5_Entrancing Melody" data-flag="@X" onclick="openSidebar('5_Entrancing Melody',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\22_Friend of Tides.png" id="22_Friend of Tides" data-flag="@X" onclick="openSidebar('22_Friend of Tides',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\35_Jara Disciplinarian.png" id="35_Jara Disciplinarian" data-flag="@X" onclick="openSidebar('35_Jara Disciplinarian',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\48_Charcoal Claws.png" id="48_Charcoal Claws" data-flag="@X" onclick="openSidebar('48_Charcoal Claws',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\65_Freedom of Life.png" id="65_Freedom of Life" data-flag="@X" onclick="openSidebar('65_Freedom of Life',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\6_Fencing Tutor.png" id="6_Fencing Tutor" data-flag="@X" onclick="openSidebar('6_Fencing Tutor',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\23_Humble Archivist.png" id="23_Humble Archivist" data-flag="@X" onclick="openSidebar('23_Humble Archivist',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\37_Lengthy Lecture.png" id="37_Lengthy Lecture" data-flag="@X" onclick="openSidebar('37_Lengthy Lecture',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\49_Combustion Display.png" id="49_Combustion Display" data-flag="@X" onclick="openSidebar('49_Combustion Display',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\67_Goliath Tamer.png" id="67_Goliath Tamer" data-flag="@X" onclick="openSidebar('67_Goliath Tamer',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\9_Prism Mage.png" id="9_Prism Mage" data-flag="@X" onclick="openSidebar('9_Prism Mage',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\24_Peer Review.png" id="24_Peer Review" data-flag="@X" onclick="openSidebar('24_Peer Review',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\38_Professor's Notes.png" id="38_Professors Notes" data-flag="@X" onclick="openSidebar('38_Professors Notes',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\50_Daydream.png" id="50_Daydream" data-flag="@X" onclick="openSidebar('50_Daydream',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\68_Harpstring Ranger.png" id="68_Harpstring Ranger" data-flag="@X" onclick="openSidebar('68_Harpstring Ranger',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\10_Recollection Revelation.png" id="10_Recollection Revelation" data-flag="@X" onclick="openSidebar('10_Recollection Revelation',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\26_Review Curriculum.png" id="26_Review Curriculum" data-flag="@X" onclick="openSidebar('26_Review Curriculum',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\39_Rigorous Concentration.png" id="39_Rigorous Concentration" data-flag="@X" onclick="openSidebar('39_Rigorous Concentration',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\53_Expensive Tutor.png" id="53_Expensive Tutor" data-flag="@X" onclick="openSidebar('53_Expensive Tutor',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\69_Jara Tutelage.png" id="69_Jara Tutelage" data-flag="@X" onclick="openSidebar('69_Jara Tutelage',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\12_Senior Warding.png" id="12_Senior Warding" data-flag="@X" onclick="openSidebar('12_Senior Warding',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\27_Sensory Stimulation.png" id="27_Sensory Stimulation" data-flag="@X" onclick="openSidebar('27_Sensory Stimulation',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\40_Shadowed Apostle.png" id="40_Shadowed Apostle" data-flag="@X" onclick="openSidebar('40_Shadowed Apostle',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\55_Gilded Duo.png" id="55_Gilded Duo" data-flag="@X" onclick="openSidebar('55_Gilded Duo',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\70_Patient Herbology.png" id="70_Patient Herbology" data-flag="@X" onclick="openSidebar('70_Patient Herbology',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\13_Skyline Climber.png" id="13_Skyline Climber" data-flag="@X" onclick="openSidebar('13_Skyline Climber',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\28_Sleepless Studies.png" id="28_Sleepless Studies" data-flag="@X" onclick="openSidebar('28_Sleepless Studies',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\41_Silkwrap Brawler.png" id="41_Silkwrap Brawler" data-flag="@X" onclick="openSidebar('41_Silkwrap Brawler',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\58_Radiant Outburst.png" id="58_Radiant Outburst" data-flag="@X" onclick="openSidebar('58_Radiant Outburst',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\71_Rousing Roots.png" id="71_Rousing Roots" data-flag="@X" onclick="openSidebar('71_Rousing Roots',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\14_Study Sphere.png" id="14_Study Sphere" data-flag="@X" onclick="openSidebar('14_Study Sphere',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\29_Strict Instructor.png" id="29_Strict Instructor" data-flag="@X" onclick="openSidebar('29_Strict Instructor',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\43_Spectacle of Arpechia.png" id="43_Spectacle of Arpechia" data-flag="@X" onclick="openSidebar('43_Spectacle of Arpechia',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\59_Sing Through Steel.png" id="59_Sing Through Steel" data-flag="@X" onclick="openSidebar('59_Sing Through Steel',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\74_Training Duel.png" id="74_Training Duel" data-flag="@X" onclick="openSidebar('74_Training Duel',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\15_Wind Savant.png" id="15_Wind Savant" data-flag="@X" onclick="openSidebar('15_Wind Savant',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\30_Supernal Icon.png" id="30_Supernal Icon" data-flag="@X" onclick="openSidebar('30_Supernal Icon',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\45_Twilight Dancer.png" id="45_Twilight Dancer" data-flag="@X" onclick="openSidebar('45_Twilight Dancer',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\60_Speed Reader.png" id="60_Speed Reader" data-flag="@X" onclick="openSidebar('60_Speed Reader',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\75_Wander Arpechia.png" id="75_Wander Arpechia" data-flag="@X" onclick="openSidebar('75_Wander Arpechia',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+<div id="gold" class="anchor"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\76_Dance of Steel and Song.png" id="76_Dance of Steel and Song" data-flag="@X" onclick="openSidebar('76_Dance of Steel and Song',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\79_Oil the Mind.png" id="79_Oil the Mind" data-flag="@X" onclick="openSidebar('79_Oil the Mind',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\80_Craft Malice.png" id="80_Craft Malice" data-flag="@X" onclick="openSidebar('80_Craft Malice',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\82_Ardy, Indecisive Pupil.png" id="82_Ardy, Indecisive Pupil" data-flag="@X" onclick="openSidebar('82_Ardy, Indecisive Pupil',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\85_Thorn Tender.png" id="85_Thorn Tender" data-flag="@X" onclick="openSidebar('85_Thorn Tender',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\77_Lost Through Dreams.png" id="77_Lost Through Dreams" data-flag="@X" onclick="openSidebar('77_Lost Through Dreams',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\78_Dream Keeper.png" id="78_Dream Keeper" data-flag="@X" onclick="openSidebar('78_Dream Keeper',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\81_Starfall Instructor.png" id="81_Starfall Instructor" data-flag="@X" onclick="openSidebar('81_Starfall Instructor',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\83_Break Their Guard.png" id="83_Break Their Guard" data-flag="@X" onclick="openSidebar('83_Break Their Guard',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\84_Gild in Grace.png" id="84_Gild in Grace" data-flag="@X" onclick="openSidebar('84_Gild in Grace',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\87_Demanding Pupil.png" id="87_Demanding Pupil" data-flag="@X" onclick="openSidebar('87_Demanding Pupil',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\88_Almgrove Spellblade.png" id="88_Almgrove Spellblade" data-flag="@X" onclick="openSidebar('88_Almgrove Spellblade',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\90_Confident Amateur.png" id="90_Confident Amateur" data-flag="@X" onclick="openSidebar('90_Confident Amateur',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\93_Dayang, Aspiring Muse.png" id="93_Dayang, Aspiring Muse" data-flag="@X" onclick="openSidebar('93_Dayang, Aspiring Muse',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\94_Arpechian Conjurer.png" id="94_Arpechian Conjurer" data-flag="@X" onclick="openSidebar('94_Arpechian Conjurer',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\86_Almgrove Ensemble.png" id="86_Almgrove Ensemble" data-flag="@X" onclick="openSidebar('86_Almgrove Ensemble',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\89_Chaotic Pupil.png" id="89_Chaotic Pupil" data-flag="@X" onclick="openSidebar('89_Chaotic Pupil',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\91_Jara Favored.png" id="91_Jara Favored" data-flag="@X" onclick="openSidebar('91_Jara Favored',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\92_Cocky Bladesinger.png" id="92_Cocky Bladesinger" data-flag="@X" onclick="openSidebar('92_Cocky Bladesinger',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\95_Lift the Tides.png" id="95_Lift the Tides" data-flag="@X" onclick="openSidebar('95_Lift the Tides',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\105_Dayang's Displeasure.png" id="105_Dayangs Displeasure" data-flag="@X" onclick="openSidebar('105_Dayangs Displeasure',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\99_Capture Brilliance.png" id="99_Capture Brilliance" data-flag="@X" onclick="openSidebar('99_Capture Brilliance',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\97_Autumnal Resonants.png" id="97_Autumnal Resonants" data-flag="@X" onclick="openSidebar('97_Autumnal Resonants',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\96_Arpechian Stag.png" id="96_Arpechian Stag" data-flag="@X" onclick="openSidebar('96_Arpechian Stag',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\103_Counting Clouds.png" id="103_Counting Clouds" data-flag="@X" onclick="openSidebar('103_Counting Clouds',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\111_Revisionary Studies.png" id="111_Revisionary Studies" data-flag="@X" onclick="openSidebar('111_Revisionary Studies',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\102_Compose from Dreams.png" id="102_Compose from Dreams" data-flag="@X" onclick="openSidebar('102_Compose from Dreams',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\100_Cocky Delinquent.png" id="100_Cocky Delinquent" data-flag="@X" onclick="openSidebar('100_Cocky Delinquent',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\108_Invigorating Shaman.png" id="108_Invigorating Shaman" data-flag="@X" onclick="openSidebar('108_Invigorating Shaman',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\112_Tranquil Cultivator.png" id="112_Tranquil Cultivator" data-flag="@X" onclick="openSidebar('112_Tranquil Cultivator',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\110_Prove Worthy.png" id="110_Prove Worthy" data-flag="@X" onclick="openSidebar('110_Prove Worthy',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\101_Coerced Tutelage.png" id="101_Coerced Tutelage" data-flag="@X" onclick="openSidebar('101_Coerced Tutelage',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\98_Bureaucratic Dues.png" id="98_Bureaucratic Dues" data-flag="@X" onclick="openSidebar('98_Bureaucratic Dues',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\104_Dayang's Artistry.png" id="104_Dayangs Artistry" data-flag="@X" onclick="openSidebar('104_Dayangs Artistry',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\106_Esoteric Herbology.png" id="106_Esoteric Herbology" data-flag="@X" onclick="openSidebar('106_Esoteric Herbology',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\113_Updraft Dancer.png" id="113_Updraft Dancer" data-flag="@X" onclick="openSidebar('113_Updraft Dancer',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\107_Growth Neverending.png" id="107_Growth Neverending" data-flag="@X" onclick="openSidebar('107_Growth Neverending',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\114_Weald Wanderer.png" id="114_Weald Wanderer" data-flag="@X" onclick="openSidebar('114_Weald Wanderer',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\115_Yita, Almgrove Prodigy.png" id="115_Yita, Almgrove Prodigy" data-flag="@X" onclick="openSidebar('115_Yita, Almgrove Prodigy',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\109_Professor Adelia.png" id="109_Professor Adelia" data-flag="@X" onclick="openSidebar('109_Professor Adelia',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+<div id="colorless" class="anchor"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\117_Astrology Sanctum.png" id="117_Astrology Sanctum" data-flag="@X" onclick="openSidebar('117_Astrology Sanctum',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\118_Calming Sanctum.png" id="118_Calming Sanctum" data-flag="@X" onclick="openSidebar('118_Calming Sanctum',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\121_Endless Sanctum.png" id="121_Endless Sanctum" data-flag="@X" onclick="openSidebar('121_Endless Sanctum',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\123_Gilded Conductor.png" id="123_Gilded Conductor" data-flag="@X" onclick="openSidebar('123_Gilded Conductor',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\124_Glorious Sanctum.png" id="124_Glorious Sanctum" data-flag="@X" onclick="openSidebar('124_Glorious Sanctum',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\125_Revelation Sanctum.png" id="125_Revelation Sanctum" data-flag="@X" onclick="openSidebar('125_Revelation Sanctum',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\116_Arpechian Groundskeeper.png" id="116_Arpechian Groundskeeper" data-flag="@X" onclick="openSidebar('116_Arpechian Groundskeeper',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\119_Cluttered Study.png" id="119_Cluttered Study" data-flag="@X" onclick="openSidebar('119_Cluttered Study',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\120_Distilled Inspiration.png" id="120_Distilled Inspiration" data-flag="@X" onclick="openSidebar('120_Distilled Inspiration',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\122_Festive Servitor.png" id="122_Festive Servitor" data-flag="@X" onclick="openSidebar('122_Festive Servitor',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\126_Scintillating Tome.png" id="126_Scintillating Tome" data-flag="@X" onclick="openSidebar('126_Scintillating Tome',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\127_Specialized Training Dummy.png" id="127_Specialized Training Dummy" data-flag="@X" onclick="openSidebar('127_Specialized Training Dummy',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\141_Fatigue.png" id="141_Fatigue" data-flag="@X" onclick="openSidebar('141_Fatigue',false)"></div>
+			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+<div id="land" class="anchor"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\132_Flourishing Plains.png" id="132_Flourishing Plains" data-flag="@X" onclick="openSidebar('132_Flourishing Plains',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\130_Flourishing Island.png" id="130_Flourishing Island" data-flag="@X" onclick="openSidebar('130_Flourishing Island',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\133_Flourishing Swamp.png" id="133_Flourishing Swamp" data-flag="@X" onclick="openSidebar('133_Flourishing Swamp',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\131_Flourishing Mountain.png" id="131_Flourishing Mountain" data-flag="@X" onclick="openSidebar('131_Flourishing Mountain',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\129_Flourishing Forest.png" id="129_Flourishing Forest" data-flag="@X" onclick="openSidebar('129_Flourishing Forest',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\128_Alchemical Reserve.png" id="128_Alchemical Reserve" data-flag="@X" onclick="openSidebar('128_Alchemical Reserve',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\134_Soaring Observatory.png" id="134_Soaring Observatory" data-flag="@X" onclick="openSidebar('134_Soaring Observatory',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\135_Whirling Repository.png" id="135_Whirling Repository" data-flag="@X" onclick="openSidebar('135_Whirling Repository',false)"></div>
+			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\136_Plains.png" id="136_Plains" data-flag="@X" onclick="openSidebar('136_Plains',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\137_Island.png" id="137_Island" data-flag="@X" onclick="openSidebar('137_Island',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\138_Swamp.png" id="138_Swamp" data-flag="@X" onclick="openSidebar('138_Swamp',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\139_Mountain.png" id="139_Mountain" data-flag="@X" onclick="openSidebar('139_Mountain',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\140_Forest.png" id="140_Forest" data-flag="@X" onclick="openSidebar('140_Forest',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+<div id="token" class="anchor"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\2t_Luminescent Feathrets (Token).png" id="2t_Luminescent Feathrets (Token)" data-flag="@X" onclick="openSidebar('2t_Luminescent Feathrets (Token)',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\1t_White Elk.png" id="1t_White Elk" data-flag="@X" onclick="openSidebar('1t_White Elk',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\3t_Soldier.png" id="3t_Soldier" data-flag="@X" onclick="openSidebar('3t_Soldier',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\4t_Red Elk.png" id="4t_Red Elk" data-flag="@X" onclick="openSidebar('4t_Red Elk',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\5t_Green Elk.png" id="5t_Green Elk" data-flag="@X" onclick="openSidebar('5t_Green Elk',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\6t_Plant Knight.png" id="6t_Plant Knight" data-flag="@X" onclick="openSidebar('6t_Plant Knight',false)"></div>
+			<div class="container"><img alt="/sets\ACA-files\img\7t_Elemental.png" id="7t_Elemental" data-flag="@X" onclick="openSidebar('7t_Elemental',false)"></div>
+			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+	</div>
+</div>
+	<div class="sidebar" id="sidebar">
+		<div class="sidebar-container">
+			<img id="sidebar_img" class="sidebar-img" src="/img/er.png">
+			<img id="sidebar_h_img" class="sidebar-h-img">
+			<button class="flip-btn" id="sidebar-flip-btn" onclick="imgFlip('sidebar_img')"></button>
+		</div>
+		<button class="close-btn" onclick="closeSidebar()"></button>
+	</div>
+	<div class="footer"></div>
+
+	<script>
+	const delay = ms => new Promise(res => setTimeout(res, ms));
+		let specialchars = "";
+
+	document.addEventListener('DOMContentLoaded', async function() {
+		await fetch('/lists/all-cards.json')
+					.then(response => response.json())
+					.then(json => {
+						card_list = json;
+				}).catch(error => console.error('Error:', error));
+
+				await fetch('/resources/replacechars.txt')
+					.then(response => response.text())
+					.then(text => {
+						specialchars = text; 
+				}).catch(error => console.error('Error:', error));
+
+				card_list_arrayified = card_list.cards;
+
+		preloadImgs = document.getElementsByClassName('preload-hidden');
+		
+		let images_loaded = [];
+
+		do {
+			await delay(100);
+			images_loaded = []
+			for (const img of preloadImgs)
+			{
+				images_loaded.push(isImageOk(img));
+			}
+		}
+		while (images_loaded.includes(false));
+
+		document.body.style.backgroundImage = 'url(' + document.getElementById("bg").src + ')';
+		loadImages();
+	});
+
+	function isImageOk(img) {
+		if (!img.complete || img.naturalWidth == 0) {
+			return false;
+		}
+
+		return true;
+	}
+
+	function loadImages() {
+		const images = document.querySelectorAll('.grid-container img');
+
+		images.forEach(img => {
+			const flag = img.getAttribute('data-flag');
+
+			if (flag === '@N') {
+				img.src = '/img/card_back.png';
+				img.removeAttribute("onclick");
+				img.style.cursor = 'default';
+			}
+			else
+			{
+				img.src = img.alt;
+
+				if (flag === '@E') {
+					img.removeAttribute("onclick");
+					img.style.cursor = 'default';
+				}
+			}
+
+			img.style.visibility = 'visible';
+		});
+	}
+
+	window.addEventListener('resize', function(event) {
+		setSidebarTop();
+	}, true);
+
+	function setSidebarTop() {
+		let vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+		let sh = document.getElementById('sidebar').offsetHeight;
+		let height = 100 * ((vh - sh) / 2) / vh;
+		document.getElementById('sidebar').style.top = height + '%';
+	}
+
+	let horizontal = false;
+
+	function imgFlip(num) {
+		tmp = document.getElementById(num).src;
+		console.log(num);
+		document.getElementById(num).src = document.getElementById(num).dataset.alt_src;
+		document.getElementById(num).dataset.alt_src = tmp;
+
+		if (num == 'sidebar_img')
+		{
+			const rotated_img = document.getElementById('sidebar_h_img');
+			const sidebar_img = document.getElementById('sidebar_img');
+
+			if (horizontal && rotated_img.style.display == 'none')
+			{
+				rotated_img.style.display = "block";
+				sidebar_img.style.filter = "blur(2px) brightness(0.7)";
+			}
+			else
+			{
+				rotated_img.style.display = "none";
+				sidebar_img.style.filter = "";
+			}
+		}
+	}
+
+	function openSidebar(id, h = false) {
+		horizontal = h;
+		scroll_pct = window.scrollY / document.documentElement.scrollHeight;
+		
+		document.getElementById('sidebar').style.display = 'grid';
+
+		const rotated_img = document.getElementById('sidebar_h_img');
+		const sidebar_img = document.getElementById('sidebar_img');
+
+		sidebar_img.src = document.getElementById(id).src;
+		rotated_img.src = document.getElementById(id).src.replace("_back", "_front");
+
+		if (horizontal && !sidebar_img.src.includes("_back"))
+		{
+			rotated_img.style.display = "block";
+			sidebar_img.style.filter = "blur(2px) brightness(0.7)";
+		}
+		else
+		{
+			rotated_img.style.display = "none";
+			sidebar_img.style.filter = "";
+		}
+
+		if (document.getElementById(id).dataset.alt_src)
+		{
+			document.getElementById('sidebar_img').dataset.alt_src = document.getElementById(id).dataset.alt_src;
+			document.getElementById('sidebar-flip-btn').style.display = 'block';
+		}
+		else
+		{
+			delete document.getElementById('sidebar_img').dataset.alt_src;
+			document.getElementById('sidebar-flip-btn').style.display = 'none';
+		}
+		document.getElementById('main-content').style.width = '60%';
+		
+		scroll_pos = scroll_pct * document.documentElement.scrollHeight;
+		window.scrollTo(window.scrollX, scroll_pos);
+		setSidebarTop();
+	}
+
+	function closeSidebar() {
+		scroll_pct = window.scrollY / document.documentElement.scrollHeight;
+
+		document.getElementById('sidebar').style.display = 'none';
+		document.getElementById('main-content').style.width = '100%';
+		
+
+		scroll_pos = scroll_pct * document.documentElement.scrollHeight;
+		window.scrollTo(window.scrollX, scroll_pos);
+	}
+
+	document.getElementById("search").addEventListener("keypress", function(event) {
+		if (event.key === "Enter") {
+			event.preventDefault();
+			search();
+		}
+	});
+
+	function search() {
+		const url = new URL('search', window.location.origin);
+		url.searchParams.append('search', document.getElementById("search").value);
+		window.location.href = url;
+	}
+
+		function randomCard() {
+				let i = Math.floor(Math.random() * (card_list_arrayified.length + 1));
+				let random_card = card_list_arrayified[i];
+
+				const url = new URL('card', window.location.origin);
+				const params = {
+					set: random_card.set,
+					num: random_card.number,
+					name: random_card.card_name
+				}
+				for (const key in params) {
+					url.searchParams.append(key, params[key]);
+				}
+
+				window.location.href = url;
+			}
+	</script>
+</body>
+</html>
