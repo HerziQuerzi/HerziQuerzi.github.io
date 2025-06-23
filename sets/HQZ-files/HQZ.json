@@ -59,7 +59,7 @@
             "number": 135,
             "color_identity": "UBR",
             "cost": "",
-            "rules_text": "{T}: Add {C}.",
+            "rules_text": "{T}: Add {C}.\n[i](Cast a copy of this land\u2019s Tale once from the battlefield.)[/i]",
             "pt": "",
             "special_text": "",
             "shape": "adventure",
@@ -69,7 +69,7 @@
             "color2": "",
             "type2": "Sorcery \u2014 Tale",
             "cost2": "{1}",
-            "rules_text2": "This Tale\u2019s source gains \u201c{T}: Add {U}, {B} or {R}.\u201d",
+            "rules_text2": "Sacrifice a land. This Tale\u2019s source gains \u201c{T}: Add {U}{B}, {B}{R}, or {U}{R}.\u201d",
             "pt2": "",
             "special_text2": "",
             "loyalty2": "",
@@ -83,7 +83,7 @@
             "number": 136,
             "color_identity": "WUB",
             "cost": "",
-            "rules_text": "{T}: Add {C}.",
+            "rules_text": "{T}: Add {C}.\n[i](Cast a copy of this land\u2019s Tale once from the battlefield.)[/i]",
             "pt": "",
             "special_text": "",
             "shape": "adventure",
@@ -93,7 +93,7 @@
             "color2": "",
             "type2": "Sorcery \u2014 Tale",
             "cost2": "{1}",
-            "rules_text2": "This Tale\u2019s source gains \u201c{T}: Add {W}, {U}, or {B}.\u201d",
+            "rules_text2": "Sacrifice a land. This Tale\u2019s source gains \u201c{T}: Add {W}{U}, {U}{B}, or {W}{B}.\u201d",
             "pt2": "",
             "special_text2": "",
             "loyalty2": "",
@@ -155,7 +155,7 @@
             "number": 134,
             "color_identity": "WUR",
             "cost": "",
-            "rules_text": "{T}: Add {C}.",
+            "rules_text": "{T}: Add {C}.\n[i](Cast a copy of this land\u2019s Tale once from the battlefield.)[/i]",
             "pt": "",
             "special_text": "",
             "shape": "adventure",
@@ -165,7 +165,7 @@
             "color2": "",
             "type2": "Sorcery \u2014 Tale",
             "cost2": "{1}",
-            "rules_text2": "This Tale\u2019s source gains \u201c{T}: Add {U}, {R}, or {W}.\u201d",
+            "rules_text2": "Sacrifice a land. This Tale\u2019s source gains \u201c{T}: Add {U}{R}, {R}{W}, or {W}{U}.\u201d",
             "pt2": "",
             "special_text2": "",
             "loyalty2": "",
@@ -1321,7 +1321,7 @@
             "pt2": "2/2",
             "special_text2": "",
             "loyalty2": "",
-            "notes": "!check test!replacetoken Sulmina;1"
+            "notes": "!check test"
         },
         {
             "card_name": "Mezzio Thespian",
@@ -1361,7 +1361,7 @@
             "pt2": "3/2",
             "special_text2": "",
             "loyalty2": "",
-            "notes": "!replacetoken Sulmina;1"
+            "notes": "!replacetoken Sulmina;1\n!replacetoken Devil;1"
         },
         {
             "card_name": "Aspirant Peak",
@@ -1371,7 +1371,7 @@
             "number": 130,
             "color_identity": "WRG",
             "cost": "",
-            "rules_text": "{T}: Add {C}.",
+            "rules_text": "{T}: Add {C}.\n[i](Cast a copy of this land\u2019s Tale once from the battlefield.)[/i]",
             "pt": "",
             "special_text": "",
             "shape": "adventure",
@@ -1381,7 +1381,7 @@
             "color2": "",
             "type2": "Sorcery \u2014 Tale",
             "cost2": "{1}",
-            "rules_text2": "This Tale\u2019s source gains \u201c{T}: Add {R}, {G}, or {W}.\u201d",
+            "rules_text2": "Sacrifice a land. This Tale\u2019s source gains \u201c{T}: Add {R}{G}, {G}{W}, or {R}{W}.\u201d",
             "pt2": "",
             "special_text2": "",
             "loyalty2": "",
@@ -1395,7 +1395,7 @@
             "number": 138,
             "color_identity": "WBR",
             "cost": "",
-            "rules_text": "{T}: Add {C}.",
+            "rules_text": "{T}: Add {C}.\n[i](Cast a copy of this land\u2019s Tale once from the battlefield.)[/i]",
             "pt": "",
             "special_text": "",
             "shape": "adventure",
@@ -1405,7 +1405,7 @@
             "color2": "",
             "type2": "Sorcery \u2014 Tale",
             "cost2": "{1}",
-            "rules_text2": "This Tale\u2019s source gains \u201c{T}: Add {R}, {W}, or {B}.\u201d",
+            "rules_text2": "Sacrifice a land. This Tale\u2019s source gains \u201c{T}: Add {R}{W}, {W}{B}, or {B}{R}.\u201d",
             "pt2": "",
             "special_text2": "",
             "loyalty2": "",
@@ -1419,7 +1419,7 @@
             "number": 131,
             "color_identity": "BRG",
             "cost": "",
-            "rules_text": "{T}: Add {C}.",
+            "rules_text": "{T}: Add {C}.\n[i](Cast a copy of this land\u2019s Tale once from the battlefield.)[/i]",
             "pt": "",
             "special_text": "",
             "shape": "adventure",
@@ -1429,7 +1429,7 @@
             "color2": "",
             "type2": "Sorcery \u2014 Tale",
             "cost2": "{1}",
-            "rules_text2": "This Tale\u2019s source gains \u201c{T}: Add {B}, {R}, or {G}.\u201d",
+            "rules_text2": "Sacrifice a land. This Tale\u2019s source gains \u201c{T}: Add {B}{R}, {R}{G}, or {B}{G}.\u201d",
             "pt2": "",
             "special_text2": "",
             "loyalty2": "",
@@ -1443,7 +1443,7 @@
             "number": 139,
             "color_identity": "WUG",
             "cost": "",
-            "rules_text": "{T}: Add {C}.",
+            "rules_text": "{T}: Add {C}.\n[i](Cast a copy of this land\u2019s Tale once from the battlefield.)[/i]",
             "pt": "",
             "special_text": "",
             "shape": "adventure",
@@ -1453,7 +1453,7 @@
             "color2": "",
             "type2": "Sorcery \u2014 Tale",
             "cost2": "{1}",
-            "rules_text2": "This Tale\u2019s source gains \u201c{T}: Add {G}, {W}, or {U}.\u201d",
+            "rules_text2": "Sacrifice a land. This Tale\u2019s source gains \u201c{T}: Add {G}{W}, {W}{U}, or {G}{U}.\u201d",
             "pt2": "",
             "special_text2": "",
             "loyalty2": "",
@@ -1467,7 +1467,7 @@
             "number": 129,
             "color_identity": "URG",
             "cost": "",
-            "rules_text": "{T}: Add {C}.",
+            "rules_text": "{T}: Add {C}.\n[i](Cast a copy of this land\u2019s Tale once from the battlefield.)[/i]",
             "pt": "",
             "special_text": "",
             "shape": "adventure",
@@ -1477,7 +1477,7 @@
             "color2": "",
             "type2": "Sorcery \u2014 Tale",
             "cost2": "{1}",
-            "rules_text2": "This Tale\u2019s source gains \u201c{T}: Add {G}, {U}, or {R}.\u201d",
+            "rules_text2": "Sacrifice a land. This Tale\u2019s source gains \u201c{T}: Add {G}{U}, {U}{R}, or {R}{G}.\u201d",
             "pt2": "",
             "special_text2": "",
             "loyalty2": "",
@@ -1491,7 +1491,7 @@
             "number": 133,
             "color_identity": "UBG",
             "cost": "",
-            "rules_text": "{T}: Add {C}.",
+            "rules_text": "{T}: Add {C}.\n[i](Cast a copy of this land\u2019s Tale once from the battlefield.)[/i]",
             "pt": "",
             "special_text": "",
             "shape": "adventure",
@@ -1501,7 +1501,7 @@
             "color2": "",
             "type2": "Sorcery \u2014 Tale",
             "cost2": "{1}",
-            "rules_text2": "This Tale\u2019s source gains \u201c{T}: Add {B}, {G}, or {U}.\u201d",
+            "rules_text2": "Sacrifice a land. This Tale\u2019s source gains \u201c{T}: Add {B}{G}, {G}{U}, or {U}{B}.\u201d",
             "pt2": "",
             "special_text2": "",
             "loyalty2": "",
@@ -1515,7 +1515,7 @@
             "number": 137,
             "color_identity": "WBG",
             "cost": "",
-            "rules_text": "{T}: Add {C}.",
+            "rules_text": "{T}: Add {C}.\n[i](Cast a copy of this land\u2019s Tale once from the battlefield.)[/i]",
             "pt": "",
             "special_text": "",
             "shape": "adventure",
@@ -1525,7 +1525,7 @@
             "color2": "",
             "type2": "Sorcery \u2014 Tale",
             "cost2": "{1}",
-            "rules_text2": "This Tale\u2019s source gains \u201c{T}: Add {W}, {B}, or {G}.\u201d",
+            "rules_text2": "Sacrifice a land. This Tale\u2019s source gains \u201c{T}: Add {W}{B}, {B}{G}, or {G}{W}.\u201d",
             "pt2": "",
             "special_text2": "",
             "loyalty2": "",
@@ -2641,7 +2641,7 @@
             "shape": "token",
             "set": "HQZ",
             "loyalty": "",
-            "notes": ""
+            "notes": "!tokentag Devil"
         },
         {
             "card_name": "Maddening Trinket",
@@ -2665,7 +2665,7 @@
             "pt2": "3/2",
             "special_text2": "",
             "loyalty2": "",
-            "notes": "!replacetoken Sulmina;1"
+            "notes": "!replacetoken Sulmina;1\n!replacetoken Devil;1"
         },
         {
             "card_name": "Numinous Workshop",
@@ -2705,7 +2705,7 @@
             "pt2": "3/2",
             "special_text2": "",
             "loyalty2": "",
-            "notes": "!replacetoken Sulmina;1"
+            "notes": "!replacetoken Sulmina;1\n!replacetoken Devil;1"
         },
         {
             "card_name": "AOSE Field Biologist (Token)",
@@ -2745,7 +2745,7 @@
             "pt2": "3/2",
             "special_text2": "",
             "loyalty2": "",
-            "notes": "!replacetoken Sulmina;1"
+            "notes": "!replacetoken Sulmina;1\n!replacetoken Devil;1"
         },
         {
             "card_name": "Traitor's Finger",
@@ -2769,7 +2769,7 @@
             "pt2": "3/2",
             "special_text2": "",
             "loyalty2": "",
-            "notes": "!replacetoken Sulmina;1"
+            "notes": "!replacetoken Sulmina;1\n!replacetoken Devil;1"
         },
         {
             "card_name": "Crooked Whistle",
@@ -2793,7 +2793,7 @@
             "pt2": "3/2",
             "special_text2": "",
             "loyalty2": "",
-            "notes": "!replacetoken Sulmina;1"
+            "notes": "!replacetoken Sulmina;1\n!replacetoken Devil;1"
         },
         {
             "card_name": "Black Tesseract",
@@ -2817,7 +2817,7 @@
             "pt2": "3/2",
             "special_text2": "",
             "loyalty2": "",
-            "notes": "!replacetoken Sulmina;1"
+            "notes": "!replacetoken Sulmina;1\n!replacetoken Devil;1"
         },
         {
             "card_name": "Twisting Puzzlebox",
@@ -2841,7 +2841,7 @@
             "pt2": "3/2",
             "special_text2": "",
             "loyalty2": "",
-            "notes": "!replacetoken Sulmina;1"
+            "notes": "!replacetoken Sulmina;1\n!replacetoken Devil;1"
         },
         {
             "card_name": "Corruption Counters",
