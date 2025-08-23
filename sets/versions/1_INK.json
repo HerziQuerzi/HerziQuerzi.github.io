@@ -1,7 +1,7 @@
 ﻿{
     "name": "Across the Ink Sea",
     "formats": "standard, modern, legacy",
-    "trimmed": "y",
+    "trimmed": "n",
     "cards": [
         {
             "card_name": "Jenna Wilder, Timewinder",
@@ -17,7 +17,7 @@
             "shape": "normal",
             "set": "INK",
             "loyalty": "",
-            "notes": "!replacetoken Wilder;conjure:1;\n\nWhen Jenna Wilder enters or is turned face up, you may conjure three cards named Jenna Wilder, Timewinder and shuffle them into your library. \nWhenever you cast another spell that shares a name with Jenna Wilder, draw two cards."
+            "notes": "!replacetoken Wilder;conjure:1;\n\nWhen Jenna Wilder enters or is turned face up, you may conjure three cards named Jenna Wilder, Timewinder and shuffle them into your library. \nWhenever you cast another spell that shares a name with Jenna Wilder, draw two cards.\n\n!guest (ricky)"
         },
         {
             "card_name": "Gletten Grim, Smuggler",
@@ -65,7 +65,7 @@
             "shape": "planeswalker",
             "set": "INK",
             "loyalty": "5",
-            "notes": "!replacetoken Horizon;1\n\n!mechanichorizon"
+            "notes": "!replacetoken Horizon;1\n\n!plotregam"
         },
         {
             "card_name": "Verona, Quartermaster",
@@ -161,7 +161,7 @@
             "shape": "normal",
             "set": "INK",
             "loyalty": "",
-            "notes": "!rework new name to match art upgrade [DONE]\n\n!marotext"
+            "notes": "!rework new name to match art upgrade [DONE]\n\n!marotext\n\n!guest (para)"
         },
         {
             "card_name": "World Wanderer",
@@ -209,7 +209,7 @@
             "shape": "normal",
             "set": "INK",
             "loyalty": "",
-            "notes": ""
+            "notes": "!guest (draco)"
         },
         {
             "card_name": "Ragged Fleet Cartographer",
@@ -257,7 +257,7 @@
             "shape": "planeswalker",
             "set": "INK",
             "loyalty": "3",
-            "notes": "!plotmishka"
+            "notes": "!plotkalemn"
         },
         {
             "card_name": "Helene of Echoing Mind",
@@ -273,7 +273,7 @@
             "shape": "planeswalker",
             "set": "INK",
             "loyalty": "4",
-            "notes": "conjure issue\n\n!replacetoken Quicken;conjure:1;\n!replacetoken Spur;conjure:1;\n\n!plotmishka"
+            "notes": "conjure issue\n\n!replacetoken Quicken;conjure:1;\n!replacetoken Spur;conjure:1;\n\n!plothelene"
         },
         {
             "card_name": "Horizon Piercer",
@@ -321,7 +321,7 @@
             "shape": "token",
             "set": "INK",
             "loyalty": "",
-            "notes": ""
+            "notes": "!plotkalemn"
         },
         {
             "card_name": "Skull Fracture",
@@ -337,7 +337,7 @@
             "shape": "token",
             "set": "INK",
             "loyalty": "",
-            "notes": ""
+            "notes": "!plotkalemn"
         },
         {
             "card_name": "Dreamer's Skiff",
@@ -577,7 +577,7 @@
             "shape": "normal",
             "set": "INK",
             "loyalty": "",
-            "notes": ""
+            "notes": "!guest (ricky)"
         },
         {
             "card_name": "Unveil the Cosmos",
@@ -769,7 +769,7 @@
             "shape": "normal",
             "set": "INK",
             "loyalty": "",
-            "notes": "!rework herzi standard just doesnt have a pure reanimate [DONE]"
+            "notes": "!rework herzi standard just doesnt have a pure reanimate [DONE]\n\n!plotmishka"
         },
         {
             "card_name": "Outerworld Fauna Tamer",
@@ -865,7 +865,7 @@
             "shape": "normal",
             "set": "INK",
             "loyalty": "",
-            "notes": ""
+            "notes": "!archetypewb"
         },
         {
             "card_name": "Surface Surfer",
@@ -961,7 +961,7 @@
             "shape": "normal",
             "set": "INK",
             "loyalty": "",
-            "notes": ""
+            "notes": "!plotregam"
         },
         {
             "card_name": "Seek New Vistas",
@@ -993,7 +993,7 @@
             "shape": "normal",
             "set": "INK",
             "loyalty": "",
-            "notes": "!archetyperw"
+            "notes": ""
         },
         {
             "card_name": "Hintga Diplomat",
@@ -1409,7 +1409,7 @@
             "shape": "normal",
             "set": "INK",
             "loyalty": "",
-            "notes": "https://www.artstation.com/artwork/9mJe8O\n\n!archetypewb"
+            "notes": "https://www.artstation.com/artwork/9mJe8O\n\n!guest (viola)"
         },
         {
             "card_name": "Riftway Visions",
@@ -1441,7 +1441,7 @@
             "shape": "normal",
             "set": "INK",
             "loyalty": "",
-            "notes": "https://www.artstation.com/artwork/OoNX9y\n\n!rework only affect permanents that entered this turn [DONE]"
+            "notes": "https://www.artstation.com/artwork/OoNX9y\n\n!rework only affect permanents that entered this turn [DONE]\n\n!guest (draco)"
         },
         {
             "card_name": "Wrendal's Scheming",
@@ -1681,7 +1681,7 @@
             "shape": "token",
             "set": "INK",
             "loyalty": "",
-            "notes": "https://www.artstation.com/artwork/VdgZwZ\n\n!tokentag Scout"
+            "notes": "https://www.artstation.com/artwork/VdgZwZ\n\n!tokentag Scout\n\n!plotregam"
         },
         {
             "card_name": "Rigging Warden",
@@ -1713,7 +1713,7 @@
             "shape": "normal",
             "set": "INK",
             "loyalty": "",
-            "notes": "https://www.artstation.com/artwork/RXJ2E\n\n!archetypegw"
+            "notes": "https://www.artstation.com/artwork/RXJ2E"
         },
         {
             "card_name": "Oddity Collector",
@@ -1761,7 +1761,7 @@
             "shape": "normal",
             "set": "INK",
             "loyalty": "",
-            "notes": "https://www.artstation.com/artwork/EL32dN"
+            "notes": "https://www.artstation.com/artwork/EL32dN\n\n!archetyperw"
         },
         {
             "card_name": "Ostracizer Orb",
@@ -1873,7 +1873,7 @@
             "shape": "normal",
             "set": "INK",
             "loyalty": "",
-            "notes": "https://www.artstation.com/artwork/X1wYkl"
+            "notes": "https://www.artstation.com/artwork/X1wYkl\n\n!mechanichorizon"
         },
         {
             "card_name": "Outpost Scrapworker",
@@ -1889,7 +1889,7 @@
             "shape": "normal",
             "set": "INK",
             "loyalty": "",
-            "notes": "https://www.artstation.com/artwork/8edeBQ"
+            "notes": "https://www.artstation.com/artwork/8edeBQ\n\n!plotmishka"
         },
         {
             "card_name": "Nauseating Return",
@@ -1969,7 +1969,7 @@
             "shape": "normal",
             "set": "INK",
             "loyalty": "",
-            "notes": "https://www.artstation.com/artwork/9m0ZWy\n\n!replacetoken Cynosure;conjure:2;\n\n!maroname"
+            "notes": "https://www.artstation.com/artwork/9m0ZWy\n\n!replacetoken Cynosure;conjure:2;\n\n!maroname\n\n!guest (scribbl)"
         },
         {
             "card_name": "Traveler's Amulet",
@@ -2001,7 +2001,7 @@
             "shape": "normal",
             "set": "INK",
             "loyalty": "",
-            "notes": ""
+            "notes": "!archetypegold"
         },
         {
             "card_name": "Marauder's Enlistment",
@@ -2081,7 +2081,7 @@
             "shape": "token",
             "set": "INK",
             "loyalty": "",
-            "notes": ""
+            "notes": "!plothelene"
         },
         {
             "card_name": "Spur",
@@ -2209,7 +2209,7 @@
             "shape": "normal",
             "set": "INK",
             "loyalty": "",
-            "notes": "conjure issue\n\n!replacetoken Rain of Light;conjure:1;\n!replacetoken Rain of Light;conjure:X;\n\n!rework change name to match new better art [DONE]\n\n!marotext"
+            "notes": "conjure issue\n\n!replacetoken Rain of Light;conjure:1;\n!replacetoken Rain of Light;conjure:X;\n\n!rework change name to match new better art [DONE]\n\n!marotext\n\n!guest (scribbl)"
         },
         {
             "card_name": "Rain of Light",
@@ -2417,7 +2417,7 @@
             "shape": "token",
             "set": "INK",
             "loyalty": "",
-            "notes": ""
+            "notes": "!booster"
         },
         {
             "card_name": "Plains Swamp",
@@ -2577,7 +2577,7 @@
             "shape": "normal",
             "set": "INK",
             "loyalty": "",
-            "notes": "!boosters"
+            "notes": ""
         },
         {
             "card_name": "Shiftscape Cascade",
@@ -2689,7 +2689,7 @@
             "shape": "normal",
             "set": "INK",
             "loyalty": "",
-            "notes": ""
+            "notes": "!archetypegw"
         },
         {
             "card_name": "Ancient Den",
@@ -2737,7 +2737,7 @@
             "shape": "normal",
             "set": "INK",
             "loyalty": "",
-            "notes": ""
+            "notes": "!guest (beens)"
         },
         {
             "card_name": "Plant",
@@ -2865,7 +2865,7 @@
             "shape": "normal",
             "set": "INK",
             "loyalty": "",
-            "notes": "!maroname"
+            "notes": "!maroname\n\n!guest (para?)"
         },
         {
             "card_name": "Hunt the Weak",
@@ -2913,7 +2913,7 @@
             "shape": "normal",
             "set": "INK",
             "loyalty": "",
-            "notes": "!marotext"
+            "notes": "!marotext\n\n!guest (viola)"
         },
         {
             "card_name": "Red Fancies Butcher",
@@ -2969,7 +2969,7 @@
             "pt2": "5/5",
             "special_text2": "",
             "loyalty2": "",
-            "notes": "!archetypegold"
+            "notes": ""
         },
         {
             "card_name": "Hunter's Bow",

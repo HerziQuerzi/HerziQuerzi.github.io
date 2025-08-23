@@ -682,7 +682,7 @@
 		{
 			"name": "Speaker of Deliverance",
 			"rarity": "rare",
-			"mana_cost": "{W}",
+			"mana_cost": "{1}{W}",
 			"type": "Creature — Human Cleric ",
 			"collector_number": "26",
 			"image_uris": {
