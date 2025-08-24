@@ -34,14 +34,15 @@ def generateFile(code):
 	[
 	'''
 
-	for card in set_data['cards']:
+	for x in range(len(set_data['cards'])):
+		card = set_data['cards'][x]
 		# clean hybrids
 		h_pattern = r'\{([A-Z0-9])([A-Z])\}'
 		h_replace = r'{\1/\2}'
 
 		for slot in structure:
 			slot_name = slot['name']
-			if slot_name == 'wildcard' and not filtered(card, filters) and not 'Basic' in card['type'] and not 'token' in card['shape']:
+			if slot_name in [ 'wildcard', 'foil' ] and not filtered(card, filters) and not 'Basic' in card['type'] and not 'token' in card['shape']:
 				booster[slot_name].append(card)
 			elif not slot['custom']:
 				if ((card['rarity'] == 'mythic' and slot_name == 'rare') or card['rarity'] == slot_name) and not filtered(card, filters) and not 'Basic' in card['type'] and not 'token' in card['shape']:
@@ -75,14 +76,16 @@ def generateFile(code):
 			draft_string += '''		"image_uris": {
 				"en": "https://''' + github_path + '''/sets/''' + code + '''-files/img/''' + str(card['number']) + '''_''' + card['card_name'] + '''.''' + set_data['image_type'] + '''"
 			}
-		},
+		}''' + (''',''' if x != len(set_data['cards']) - 1 else '''''') + '''
 	'''
 
 	draft_string += ''']
 
 '''
 	
+	p1p1 = []
 	for slot in structure:
+		slot_list = []
 		draft_string += '''[''' + slot['name'] + '''(''' + str(slot['count']) + ''')]
 '''
 		for c in booster[slot['name']]:
@@ -127,6 +130,9 @@ def generateFile(code):
 			if count > 0:
 				draft_string += '''	''' + str(count) + ''' ''' + c['card_name'] + '''
 '''
+		for x in range(slot['count']):
+			p1p1.append(slot_list)
 
-	with open(os.path.join('sets', code + '-files', code + '-draft.txt'), 'w') as f:
+	with open(os.path.join('sets', code + '-files', code + '-draft.txt'), 'w', encoding='utf-8-sig') as f:
 		f.write(draft_string)
+

@@ -17,13 +17,6 @@ file type: *.txt|*.txt|*.*|*.*
 
 option field:
 	type: choice
-	name: export images
-	choice: yes
-	choice: no
-	description: Export images
-
-option field:
-	type: choice
 	name: image type
 	choice: png
 	choice: jpg
@@ -56,6 +49,21 @@ option field:
 	type: text
 	name: v mana replacement
 	description: The replacement mana symbol icon for Mainframe Mana
+
+option field:
+	type: choice
+	name: export description
+	choice: no
+	choice: yes
+	description: Export set description as splash page
+
+option field:
+	type: choice
+	name: unpreviewed card image
+	choice: card back
+	choice: empty
+	description: What should display on the preview gallery for unpreviewed cards
+
 script:
 	fix_tm := replace@(match:"™", replace:"TM")
 	remove_quotes := replace@(match:"\"", replace:"")
@@ -227,13 +235,17 @@ script:
 		else base_ci
 	}
 
+	##Grab special_text if it's not empty, otherwise grab rule_text
+	full_text := { if card.special_text != "" then card.special_text else card.rule_text }
+	full_text2 := { if card.special_text_2 != "" then card.special_text_2 else card.rule_text_2 }
+
 	##Shape function to deal with all the non-standard shapes
 	get_shape := {
 		if card.shape == "emblem"
 		or card.shape == "counter"
 		or card.shape == "rulestip"
 		or card.shape == "checklist"
-		or contains (card.notes, match:"!token")
+		or contains (card.notes, match:"!token") and not contains (card.notes, match:"!tokens")
 			then "token"
 		else card.shape
 	}
@@ -249,26 +261,28 @@ script:
 			"{q}number{q}: {sanitize(card_number())}",
 			"{q}color_identity{q}: {q}{get_color_identity()}{q}",
 			"{q}cost{q}: {q}{mana_cost_replacement_css(card.casting_cost)}{q}",
-			"{q}rules_text{q}: {q}{format_textbox(card.rule_text)}{q}",
+			"{q}rules_text{q}: {q}{format_textbox(full_text())}{q}",
 			"{q}flavor_text{q}: {q}{format_textbox(card.flavor_text)}{q}",
 			"{q}pt{q}: {q}{sanitize(card.pt)}{q}",
 			"{q}special_text{q}: {q}{format_textbox(card.special_text)}{q}",
 			"{q}shape{q}: {q}{get_shape()}{q}",
 			"{q}set{q}: {q}{adj_setcode()}{q}",
 			"{q}loyalty{q}: {q}{sanitize(card.loyalty)}{q}",
-			"{q}artist{q}: {q}{sanitize(card.illustrator)}{q}"
+			"{q}artist{q}: {q}{sanitize(card.illustrator)}{q}",
+			"{q}alias{q}: {q}{sanitize(card.alias)}{q}"
 		]
 		if is_double_card(card.shape) then strings := strings + [
 			"{q}card_name2{q}: {q}{card_name_2()}{q}",
 			"{q}color2{q}: {q}{card_color_2()}{q}",
 			"{q}type2{q}: {q}{sanitize(card.type_2)}{q}",
 			"{q}cost2{q}: {q}{mana_cost_replacement_css(card.casting_cost_2)}{q}",
-			"{q}rules_text2{q}: {q}{format_textbox(card.rule_text_2)}{q}",
+			"{q}rules_text2{q}: {q}{format_textbox(full_text2())}{q}",
 			"{q}flavor_text2{q}: {q}{format_textbox(card.flavor_text_2)}{q}",
 			"{q}pt2{q}: {q}{sanitize(sanitize(card.pt_2))}{q}",
 			"{q}special_text2{q}: {q}{format_textbox(card.special_text_2)}{q}",
 			"{q}loyalty2{q}: {q}{sanitize(card.loyalty_2)}{q}",
-			"{q}artist2{q}: {q}{sanitize(card.illustrator_2)}{q}"
+			"{q}artist2{q}: {q}{sanitize(card.illustrator_2)}{q}",
+			"{q}alias2{q}: {q}{sanitize(card.alias_2)}{q}"
 		]
 		strings := strings + [
 			"{q}notes{q}: {q}{sanitize(card.notes)}{q}"
@@ -295,12 +309,16 @@ script:
 		"{q}trimmed{q}: {q}n{q}",
 		"{q}image_type{q}: {q}{options.image_type}{q}",
 		"{q}draft_structure{q}: {q}{options.draft_structure}{q}",
+		"{q}unpreviewed{q}: {q}{options.unpreviewed_card_image}{q}",
 		"{q}cards{q}: [{write_cards()}]"
 	]
 	write_text_file(file: adj_setcode() + ".json", "\{" + join(main_keys) + "}")
 
 	write_image_file({symbol_variation(symbol: set.symbol, variation: options.symbol_rarity)}(), file: "icon.png", width: 512, height: 512)
 	write_image_file({symbol_variation(symbol: set.symbol, variation: options.symbol_rarity)}(), file: "logo.png", width: 320, height: 320)
-	
-	write_images := if options.export_images == "yes" then write_all_images() else ""
+
+	if options.export_description == "yes"
+		then write_text_file(file: "splash.md", set.description)
+
+	write_all_images()
 	"This file doesn't contain anything. Exported files can be found in the name-files folder with the same name you saved as."

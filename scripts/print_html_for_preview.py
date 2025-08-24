@@ -1,6 +1,7 @@
 import os
 import sys
 import json
+import markdown
 
 #F = Fungustober's notes
 
@@ -9,8 +10,9 @@ def generateHTML(setCode):
 		so_json = json.load(j)
 
 	with open(os.path.join('sets', setCode + '-files', setCode + '.json'), encoding='utf-8-sig') as j:
-		tmp = json.load(j)
-		set_image_type = 'png' if 'image_type' not in tmp else tmp['image_type']
+		set_js = json.load(j)
+		set_image_type = 'png' if 'image_type' not in set_js else set_js['image_type']
+		set_name = '' if 'name' not in set_js else set_js['name']
 
 	codes = []
 	for key in so_json:
@@ -23,9 +25,14 @@ def generateHTML(setCode):
 	set_img_dir = os.path.join('sets', setCode + '-files', 'img')
 	#F: get rid of the Byte Order Mark character that shouldn't be there
 	#F: and grab all of the files in the image directory
-	previewed = [file[:-4].replace(u'\ufeff', '') for file in os.listdir(set_img_dir)]
+	card_image_names = [file[:-4].replace(u'\ufeff', '')[file.index('_')+1:] for file in os.listdir(set_img_dir)]
 
-	#F: lists/SET-list.json, defined in list_to_list.py, get rid of the BOM character that shouldn't be there
+	previewed_path = os.path.join('sets', setCode + '-files', 'previewed.txt')
+	if os.path.isfile(previewed_path):
+		with open(previewed_path, encoding='utf-8-sig') as f:
+			previewed = f.read().split('\n')
+
+	#F: lists/SET-list.json, defined in list_to_list.py
 	with open(os.path.join('lists', setCode + '-list.json'), encoding='utf-8-sig') as f:
 		cards = json.load(f)
 
@@ -49,6 +56,10 @@ def generateHTML(setCode):
 	<link rel="stylesheet" href="/resources/header.css">
 	<title>''' + setCode + ''' visual preview</title>
 	<style>
+		@font-face {
+			font-family: Beleren;
+			src: url('/resources/beleren.ttf');
+		}
 		body {
 			font-family: Arial, sans-serif;
 			margin: 0;
@@ -126,7 +137,7 @@ def generateHTML(setCode):
 		.banner {
 			width: 100%;
 			height: auto;
-			padding-top: 20px;
+			padding-top: 80px;
 			padding-bottom: 50px;
 		}
 		.logo {
@@ -162,36 +173,49 @@ def generateHTML(setCode):
 			background-size: contain;
 			background-position: center;
 		}
-		.icon-bar {
-			display: grid;
-			grid-template-columns: repeat(''' + str(header_length - 1) + ''', 3fr 2fr) 3fr;
-			gap: 1px;
-			padding-left: 5%;
-			padding-right: 5%;
-			padding-top: 2%;
-			padding-bottom: 1%;
-			justify-items: center;
+		.dropdown {
+			background: rgba(23, 23, 23, 0.8);
+			border-radius: 8px;
+			position: absolute;
+			left: 10%;
+			width: fit-content;
+			margin: 20px 0;
+			padding: 5px 0;
+			display: flex;
+			flex-direction: column;
+			z-index: 3;
+		}
+		.dropdown .set-bar {
+			font-family: Beleren;
+			font-size: 20px;
+			text-decoration: none;
+			color: #e3e3e3;
+			display: flex;
+			gap: 10px;
 			align-items: center;
+			padding: 0 12px;
+			margin: 5px;
 		}
-		.icon-bar .icon img {
-			width: 90%;
-			max-width: 80px;
-			height: auto;
-			display: block;
-			padding: 5%;
-			margin: auto;
-			text-align: center;
+		.dropdown .set-bar:hover {
+			background: rgba(163, 163, 163, 0.5);
+			color: #f3f3f3;
 		}
-		.icon-bar .dot img {
-			width: 50%;
-			max-width: 65px;
-			height: auto;
-			display: block;
-			margin: auto;
-			text-align: center;
+		.dropdown .set-bar img {
+			width: 32px;
+		}
+		.dropdown .inactive {
+			height: 0px;
+			overflow: hidden;
+			margin: 0px 5px;
 		}
 		.preload-hidden {
 			display: none;
+		}
+		.addenda-container {
+			text-align: center;
+			width: fit-content;
+			max-width: 1200px;
+			padding: 0 5%;
 		}
 		/* This is here to enable the stickiness in a Float environment. I don't know why it works but it does */
 		.footer {
@@ -210,7 +234,7 @@ def generateHTML(setCode):
 
 	if os.path.exists(os.path.join('sets', setCode + '-files', 'bg.png')):
 		html_content +='''<img class="preload-hidden" id="bg" src="/sets/''' + setCode + '''-files/bg.png" />
-		
+
 		'''
 
 	#F: goes to resources/snippets/header.txt and gets a header, inserting it after everything so far
@@ -220,10 +244,22 @@ def generateHTML(setCode):
 
 	html_content += '''
 
-	<div class="icon-bar">
+	<div class="dropdown" onmouseenter="rolldown()" onmouseleave="rollup()">
 	'''
 	
 	count = 0
+	html_content += f'''
+		<a class="set-bar" href="{setCode}"><img src="/sets/{setCode}-files/icon.png">{set_name}</a>
+	'''
+	for code in codes:
+		if code == setCode:
+			continue
+		with open(os.path.join('sets', code + '-files', code + '.json'), encoding='utf-8-sig') as j:
+			js = json.load(j)
+		html_content += f'''
+		<a class="set-bar inactive" href="{code}"><img src="/sets/{code}-files/icon.png">{js['name']}</a>
+	'''
+	'''
 	for code in codes:
 		prev_path = os.path.join('sets', setCode + '-files', 'prev_icon.png')
 		if count != 0:
@@ -232,6 +268,7 @@ def generateHTML(setCode):
 		count += 1
 		if count == header_length:
 			count = 0
+	'''
 
 	html_content += '''
 		</div>
@@ -245,7 +282,27 @@ def generateHTML(setCode):
 	# Loop over each image and create an img tag for each one
 	for card in cards:
 		if 'a->' in card:
-			html_content += f'<div id="{card[3:]}" class="anchor"></div>\n'
+			html_content += f'				<div id="{card[3:]}" class="anchor"></div>\n'
+			continue
+		if 'l->' in card:
+			html_content += f'''			</div>
+			<div class="banner">
+					<img id="{card[3:]}-logo" class="logo" src="/sets/{card[3:]}-files/logo.png">
+			</div>
+			<div class="grid-container">
+'''
+			continue
+		if 'h->' in card:
+			with open(os.path.join('sets', setCode + '-files', card[3:]), encoding='utf-8-sig') as f:
+				addenda = f.read()
+			if card[-3:] == '.md':
+				addenda = markdown.markdown(addenda)
+			html_content += f'''			</div>
+			<div class="addenda-container">
+				{addenda}
+			</div>
+			<div class="grid-container">
+'''
 			continue
 		#F: originally, in list_to_list.py, the card names were all stitched with a number and a _ (or a number and t_ if it's a token)
 		#F: Since list_to_list.py was retrofitted by me to make the master_list output into a .json file, that process must be done here instead
@@ -274,50 +331,42 @@ def generateHTML(setCode):
 		card_name_cleaned = card_name.replace('\'','')
 
 		# used for DFCs only
+		card_code = setCode if 'set' not in card else card['set']
 		dfc_front_path = card_name + '_front'
 		dfc_back_path = card_name + '_back'
-		dfc_front_img_path = os.path.join('sets', setCode + '-files', 'img', dfc_front_path + '.' + image_type)
-		dfc_back_img_path = os.path.join('sets', setCode + '-files', 'img', dfc_back_path + '.' + image_type)
-		
+		dfc_front_img_path = os.path.join('sets', card_code + '-files', 'img', dfc_front_path + '.' + image_type)
+		dfc_back_img_path = os.path.join('sets', card_code + '-files', 'img', dfc_back_path + '.' + image_type)
+
 		#F: these flags are used in later parts of the code, including the HTML.
 		#F: if the flag is @N, then only the card back is displayed
 		#F: if the flag is @E, then the ability to click it is removed (since it's just a blank image for positioning)
 		#F: if the flag is @X or @XD, nothing happens
 		flag = '@N'
-		if card_name in previewed:
+		if 'previewed' not in locals() or card['card_name'] in previewed:
 			flag = '@X'
-		if dfc_front_path in previewed:
-			flag = '@XD'
+			if card['card_name'] + '_front' in card_image_names:
+				flag = '@XD'
 
 		if card_name == 'e' or card_name == 'er':
 			image_dir = 'img'
 			flag = '@E'
 		else:
 			#F: /sets/SET-files/img/
-			image_dir = os.path.join('sets', setCode + '-files', 'img')
-		
+			image_dir = os.path.join('sets', card_code + '-files', 'img')
+
 		#F: /sets/SET-files/img/NUMBER(t?)_NAME.png
 		image_path = os.path.join(image_dir, card_name + '.' + image_type)
 		rotated = str('shape' in card and 'spli' in card['shape']).lower()
-		
+
 		#F: if the flag is @XD, add something to html_content to get the front and back images, otherwise add something else
 		if flag == '@XD':
-			html_content += f'			<div class="container"><img data-alt_src="/{dfc_back_img_path}" alt="/{dfc_front_img_path}" id="{card_name_cleaned}" data-flag="{flag}" onclick="openSidebar(\'{card_name_cleaned}\',{rotated})"><button class="flip-btn" onclick="imgFlip(\'{card_name_cleaned}\')"></button></div>\n'
+			html_content += f'				<div class="container"><img data-alt_src="/{dfc_back_img_path}" alt="/{dfc_front_img_path}" id="{card_name_cleaned}" data-flag="{flag}" onclick="openSidebar(\'{card_name_cleaned}\',{rotated})"><button class="flip-btn" onclick="imgFlip(\'{card_name_cleaned}\')"></button></div>\n'
 		else:
-			html_content += f'			<div class="container"><img alt="/{image_path}" id="{card_name_cleaned}" data-flag="{flag}" onclick="openSidebar(\'{card_name_cleaned}\',{rotated})"></div>\n'
+			html_content += f'				<div class="container"><img alt="/{image_path}" id="{card_name_cleaned}" data-flag="{flag}" onclick="openSidebar(\'{card_name_cleaned}\',{rotated})"></div>\n'
 
 	# Closing the div and the rest of the HTML
-	html_content += '''	</div>\n'''
-
-	#F: find /sets/SET-files/addenda/SET-addendum.html
-	#F: then add each line of that file to the next bit of html_content
-	add_path = os.path.join('sets', setCode + '-files', 'addenda', setCode + '-addendum.html')
-	if os.path.isfile(add_path):
-		with open(add_path) as f:
-			for line in f:
-				html_content += line
-	
-	html_content += '''</div>
+	html_content += '''	</div>
+	</div>
 	<div class="sidebar" id="sidebar">
 		<div class="sidebar-container">
 			<img id="sidebar_img" class="sidebar-img" src="/img/er.png">
@@ -344,7 +393,7 @@ def generateHTML(setCode):
 
 	html_content += '''
 		preloadImgs = document.getElementsByClassName('preload-hidden');
-		
+
 		let images_loaded = [];
 
 		do {
@@ -442,7 +491,7 @@ def generateHTML(setCode):
 	function openSidebar(id, h = false) {
 		horizontal = h;
 		scroll_pct = window.scrollY / document.documentElement.scrollHeight;
-		
+
 		document.getElementById('sidebar').style.display = 'grid';
 
 		const rotated_img = document.getElementById('sidebar_h_img');
@@ -473,7 +522,7 @@ def generateHTML(setCode):
 			document.getElementById('sidebar-flip-btn').style.display = 'none';
 		}
 		document.getElementById('main-content').style.width = '60%';
-		
+
 		scroll_pos = scroll_pct * document.documentElement.scrollHeight;
 		window.scrollTo(window.scrollX, scroll_pos);
 		setSidebarTop();
@@ -484,10 +533,28 @@ def generateHTML(setCode):
 
 		document.getElementById('sidebar').style.display = 'none';
 		document.getElementById('main-content').style.width = '100%';
-		
+
 
 		scroll_pos = scroll_pct * document.documentElement.scrollHeight;
 		window.scrollTo(window.scrollX, scroll_pos);
+	}
+
+	function rolldown() {
+		var sets = document.querySelectorAll('.inactive');
+		for(const set of sets)
+		{
+			set.style.height = "auto";
+			set.style.margin = "5px";
+		}
+	}
+
+	function rollup() {
+		var sets = document.querySelectorAll('.inactive');
+		for(const set of sets)
+		{
+			set.style.height = "0px";
+			set.style.margin = "0px 5px";
+		}
 	}
 
 	document.getElementById("search").addEventListener("keypress", function(event) {
