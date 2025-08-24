@@ -5,6 +5,10 @@
 	<link rel="stylesheet" href="/resources/header.css">
 	<title>TWR visual preview</title>
 	<style>
+		@font-face {
+			font-family: Beleren;
+			src: url('/resources/beleren.ttf');
+		}
 		body {
 			font-family: Arial, sans-serif;
 			margin: 0;
@@ -82,7 +86,7 @@
 		.banner {
 			width: 100%;
 			height: auto;
-			padding-top: 20px;
+			padding-top: 80px;
 			padding-bottom: 50px;
 		}
 		.logo {
@@ -118,36 +122,49 @@
 			background-size: contain;
 			background-position: center;
 		}
-		.icon-bar {
-			display: grid;
-			grid-template-columns: repeat(10, 3fr 2fr) 3fr;
-			gap: 1px;
-			padding-left: 5%;
-			padding-right: 5%;
-			padding-top: 2%;
-			padding-bottom: 1%;
-			justify-items: center;
+		.dropdown {
+			background: rgba(23, 23, 23, 0.8);
+			border-radius: 8px;
+			position: absolute;
+			left: 10%;
+			width: fit-content;
+			margin: 20px 0;
+			padding: 5px 0;
+			display: flex;
+			flex-direction: column;
+			z-index: 3;
+		}
+		.dropdown .set-bar {
+			font-family: Beleren;
+			font-size: 20px;
+			text-decoration: none;
+			color: #e3e3e3;
+			display: flex;
+			gap: 10px;
 			align-items: center;
+			padding: 0 12px;
+			margin: 5px;
 		}
-		.icon-bar .icon img {
-			width: 90%;
-			max-width: 80px;
-			height: auto;
-			display: block;
-			padding: 5%;
-			margin: auto;
-			text-align: center;
+		.dropdown .set-bar:hover {
+			background: rgba(163, 163, 163, 0.5);
+			color: #f3f3f3;
 		}
-		.icon-bar .dot img {
-			width: 50%;
-			max-width: 65px;
-			height: auto;
-			display: block;
-			margin: auto;
-			text-align: center;
+		.dropdown .set-bar img {
+			width: 32px;
+		}
+		.dropdown .inactive {
+			height: 0px;
+			overflow: hidden;
+			margin: 0px 5px;
 		}
 		.preload-hidden {
 			display: none;
+		}
+		.addenda-container {
+			text-align: center;
+			width: fit-content;
+			max-width: 1200px;
+			padding: 0 5%;
 		}
 		/* This is here to enable the stickiness in a Float environment. I don't know why it works but it does */
 		.footer {
@@ -185,361 +202,363 @@
 		</div>
 	</div>
 
-	<div class="icon-bar">
-			<div class="icon"><a href="HQZ"><img src="/sets/HQZ-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="LRH"><img src="/sets/LRH-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="INK"><img src="/sets/INK-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="ACA"><img src="/sets/ACA-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="BYK"><img src="/sets/BYK-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="BTJ"><img src="/sets/BTJ-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="ACR"><img src="/sets/ACR-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="HVF"><img src="/sets/HVF-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="MAC"><img src="/sets/MAC-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="CAC"><img src="/sets/CAC-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="PFP"><img src="/sets/PFP-files/icon.png"></img></a></div>
-		<div class="icon"><a href="TWR"><img src="/sets/TWR-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="MMC"><img src="/sets/MMC-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="MMT"><img src="/sets/MMT-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="IAH"><img src="/sets/IAH-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="CRC"><img src="/sets/CRC-files/icon.png"></img></a></div>
-
+	<div class="dropdown" onmouseenter="rolldown()" onmouseleave="rollup()">
+	
+		<a class="set-bar" href="TWR"><img src="/sets/TWR-files/icon.png">A Tourney at Whiterun</a>
+	
+		<a class="set-bar inactive" href="HQZ"><img src="/sets/HQZ-files/icon.png">Hunting Quiet Horizons</a>
+	
+		<a class="set-bar inactive" href="LRH"><img src="/sets/LRH-files/icon.png">The Long Road Home</a>
+	
+		<a class="set-bar inactive" href="INK"><img src="/sets/INK-files/icon.png">Across the Ink Sea</a>
+	
+		<a class="set-bar inactive" href="ACA"><img src="/sets/ACA-files/icon.png">Arcanum Academia</a>
+	
+		<a class="set-bar inactive" href="BYK"><img src="/sets/BYK-files/icon.png">Beyond Our Ken</a>
+	
+		<a class="set-bar inactive" href="BTJ"><img src="/sets/BTJ-files/icon.png">Barten’s Journal</a>
+	
+		<a class="set-bar inactive" href="ACR"><img src="/sets/ACR-files/icon.png">Arcanum: Reforged</a>
+	
+		<a class="set-bar inactive" href="HVF"><img src="/sets/HVF-files/icon.png">Harvest Festival</a>
+	
+		<a class="set-bar inactive" href="MAC"><img src="/sets/MAC-files/icon.png">Memorium Arcanum</a>
+	
+		<a class="set-bar inactive" href="CAC"><img src="/sets/CAC-files/icon.png">Carpe Arcanum</a>
+	
+		<a class="set-bar inactive" href="PFP"><img src="/sets/PFP-files/icon.png">Plagues of Fretport</a>
+	
+		<a class="set-bar inactive" href="MMC"><img src="/sets/MMC-files/icon.png">Memory’s Collapse</a>
+	
+		<a class="set-bar inactive" href="MMT"><img src="/sets/MMT-files/icon.png">Memory’s Tyranny</a>
+	
+		<a class="set-bar inactive" href="IAH"><img src="/sets/IAH-files/icon.png">Intrigue</a>
+	
+		<a class="set-bar inactive" href="CRC"><img src="/sets/CRC-files/icon.png">Cretio Created</a>
+	
 		</div>
 		<div class="banner">
 		<img class="logo" src="/sets/TWR-files/logo.png">
 		</div>
 		<div class="main-content" id="main-content">
 			<div class="grid-container">
-				<div class="container"><img alt="/sets\TWR-files\img\22_Portent of the Long Winter.png" id="22_Portent of the Long Winter" data-flag="@X" onclick="openSidebar('22_Portent of the Long Winter',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\54_Flash of Inspiration.png" id="54_Flash of Inspiration" data-flag="@X" onclick="openSidebar('54_Flash of Inspiration',false)"></div>
-			<div class="container"><img data-alt_src="/sets\TWR-files\img\84_Death's Door_back.png" alt="/sets\TWR-files\img\84_Death's Door_front.png" id="84_Deaths Door" data-flag="@XD" onclick="openSidebar('84_Deaths Door',false)"><button class="flip-btn" onclick="imgFlip('84_Deaths Door')"></button></div>
-			<div class="container"><img alt="/sets\TWR-files\img\125_Inspirational Copse.png" id="125_Inspirational Copse" data-flag="@X" onclick="openSidebar('125_Inspirational Copse',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\153_Crossroad Bard.png" id="153_Crossroad Bard" data-flag="@X" onclick="openSidebar('153_Crossroad Bard',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\30_Tearful Reunion.png" id="30_Tearful Reunion" data-flag="@X" onclick="openSidebar('30_Tearful Reunion',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\65_Pilgrim's Muse.png" id="65_Pilgrims Muse" data-flag="@X" onclick="openSidebar('65_Pilgrims Muse',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\96_Mutual Destruction.png" id="96_Mutual Destruction" data-flag="@X" onclick="openSidebar('96_Mutual Destruction',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\133_Red Pelt Hart.png" id="133_Red Pelt Hart" data-flag="@X" onclick="openSidebar('133_Red Pelt Hart',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\161_Green Pelt Hart.png" id="161_Green Pelt Hart" data-flag="@X" onclick="openSidebar('161_Green Pelt Hart',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\9_Deflecting Strike.png" id="9_Deflecting Strike" data-flag="@X" onclick="openSidebar('9_Deflecting Strike',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\55_Helene, Steel of the Exiled.png" id="55_Helene, Steel of the Exiled" data-flag="@X" onclick="openSidebar('55_Helene, Steel of the Exiled',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\76_Batwing Initiate.png" id="76_Batwing Initiate" data-flag="@X" onclick="openSidebar('76_Batwing Initiate',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\113_Arrogant Fencer.png" id="113_Arrogant Fencer" data-flag="@X" onclick="openSidebar('113_Arrogant Fencer',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\148_Batterbrow Brigand.png" id="148_Batterbrow Brigand" data-flag="@X" onclick="openSidebar('148_Batterbrow Brigand',false)"></div>
-			<div class="container"><img data-alt_src="/sets\TWR-files\img\13_Hasty Intervention_back.png" alt="/sets\TWR-files\img\13_Hasty Intervention_front.png" id="13_Hasty Intervention" data-flag="@XD" onclick="openSidebar('13_Hasty Intervention',false)"><button class="flip-btn" onclick="imgFlip('13_Hasty Intervention')"></button></div>
-			<div class="container"><img alt="/sets\TWR-files\img\62_Misleading Doubts.png" id="62_Misleading Doubts" data-flag="@X" onclick="openSidebar('62_Misleading Doubts',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\80_Cauldish Schemes.png" id="80_Cauldish Schemes" data-flag="@X" onclick="openSidebar('80_Cauldish Schemes',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\116_Cauldish Arrogant.png" id="116_Cauldish Arrogant" data-flag="@X" onclick="openSidebar('116_Cauldish Arrogant',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\157_Declan, Wayward Squire.png" id="157_Declan, Wayward Squire" data-flag="@X" onclick="openSidebar('157_Declan, Wayward Squire',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\17_Lord Jared, the Griffin Knight.png" id="17_Lord Jared, the Griffin Knight" data-flag="@X" onclick="openSidebar('17_Lord Jared, the Griffin Knight',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\63_Moment of Tranquility.png" id="63_Moment of Tranquility" data-flag="@X" onclick="openSidebar('63_Moment of Tranquility',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\95_Mismatched Bandit.png" id="95_Mismatched Bandit" data-flag="@X" onclick="openSidebar('95_Mismatched Bandit',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\129_Noble's Hedonism.png" id="129_Nobles Hedonism" data-flag="@X" onclick="openSidebar('129_Nobles Hedonism',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\160_Grand Tourney.png" id="160_Grand Tourney" data-flag="@X" onclick="openSidebar('160_Grand Tourney',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\24_Proposer of Peace.png" id="24_Proposer of Peace" data-flag="@X" onclick="openSidebar('24_Proposer of Peace',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\64_Perish in Harmony.png" id="64_Perish in Harmony" data-flag="@X" onclick="openSidebar('64_Perish in Harmony',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\100_Seal the Tomb.png" id="100_Seal the Tomb" data-flag="@X" onclick="openSidebar('100_Seal the Tomb',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\134_Restless Hedonist.png" id="134_Restless Hedonist" data-flag="@X" onclick="openSidebar('134_Restless Hedonist',false)"></div>
-			<div class="container"><img data-alt_src="/sets\TWR-files\img\163_Hermit's Travels_back.png" alt="/sets\TWR-files\img\163_Hermit's Travels_front.png" id="163_Hermits Travels" data-flag="@XD" onclick="openSidebar('163_Hermits Travels',false)"><button class="flip-btn" onclick="imgFlip('163_Hermits Travels')"></button></div>
-			<div class="container"><img data-alt_src="/sets\TWR-files\img\25_Publicly Disgraced_back.png" alt="/sets\TWR-files\img\25_Publicly Disgraced_front.png" id="25_Publicly Disgraced" data-flag="@XD" onclick="openSidebar('25_Publicly Disgraced',false)"><button class="flip-btn" onclick="imgFlip('25_Publicly Disgraced')"></button></div>
-			<div class="container"><img alt="/sets\TWR-files\img\71_Take For Ransom.png" id="71_Take For Ransom" data-flag="@X" onclick="openSidebar('71_Take For Ransom',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\102_Ser Joffrey, Plague of Nines.png" id="102_Ser Joffrey, Plague of Nines" data-flag="@X" onclick="openSidebar('102_Ser Joffrey, Plague of Nines',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\142_Thailen, Heir to Daeland.png" id="142_Thailen, Heir to Daeland" data-flag="@X" onclick="openSidebar('142_Thailen, Heir to Daeland',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\181_Unburied Relics.png" id="181_Unburied Relics" data-flag="@X" onclick="openSidebar('181_Unburied Relics',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\33_Trapped in the Tower.png" id="33_Trapped in the Tower" data-flag="@X" onclick="openSidebar('33_Trapped in the Tower',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\73_Territorial Drake.png" id="73_Territorial Drake" data-flag="@X" onclick="openSidebar('73_Territorial Drake',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\110_Wildborn Lancer.png" id="110_Wildborn Lancer" data-flag="@X" onclick="openSidebar('110_Wildborn Lancer',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\143_Thailen's Reprisal.png" id="143_Thailens Reprisal" data-flag="@X" onclick="openSidebar('143_Thailens Reprisal',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\183_Weald Sentry.png" id="183_Weald Sentry" data-flag="@X" onclick="openSidebar('183_Weald Sentry',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\4_Captain of the Militia.png" id="4_Captain of the Militia" data-flag="@X" onclick="openSidebar('4_Captain of the Militia',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\39_Across the Bay.png" id="39_Across the Bay" data-flag="@X" onclick="openSidebar('39_Across the Bay',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\77_Bearer of Fables.png" id="77_Bearer of Fables" data-flag="@X" onclick="openSidebar('77_Bearer of Fables',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\117_Coward's Compulsion.png" id="117_Cowards Compulsion" data-flag="@X" onclick="openSidebar('117_Cowards Compulsion',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\150_Catch Unawares.png" id="150_Catch Unawares" data-flag="@X" onclick="openSidebar('150_Catch Unawares',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\5_Cauldish Banneret.png" id="5_Cauldish Banneret" data-flag="@X" onclick="openSidebar('5_Cauldish Banneret',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\47_Deft Goldsnatch.png" id="47_Deft Goldsnatch" data-flag="@X" onclick="openSidebar('47_Deft Goldsnatch',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\83_Coven Adherent.png" id="83_Coven Adherent" data-flag="@X" onclick="openSidebar('83_Coven Adherent',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\119_Desperate Reconnoiterer.png" id="119_Desperate Reconnoiterer" data-flag="@X" onclick="openSidebar('119_Desperate Reconnoiterer',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\154_Crossways Inn.png" id="154_Crossways Inn" data-flag="@X" onclick="openSidebar('154_Crossways Inn',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\6_Confident Cavalier.png" id="6_Confident Cavalier" data-flag="@X" onclick="openSidebar('6_Confident Cavalier',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\57_Hypersomnia.png" id="57_Hypersomnia" data-flag="@X" onclick="openSidebar('57_Hypersomnia',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\89_Forgo the Past.png" id="89_Forgo the Past" data-flag="@X" onclick="openSidebar('89_Forgo the Past',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\120_Earnest Labourer.png" id="120_Earnest Labourer" data-flag="@X" onclick="openSidebar('120_Earnest Labourer',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\155_Daelish Arbalest.png" id="155_Daelish Arbalest" data-flag="@X" onclick="openSidebar('155_Daelish Arbalest',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\10_Gilded Champion.png" id="10_Gilded Champion" data-flag="@X" onclick="openSidebar('10_Gilded Champion',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\58_Knight of the Staff.png" id="58_Knight of the Staff" data-flag="@X" onclick="openSidebar('58_Knight of the Staff',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\90_Hand of the Exiled.png" id="90_Hand of the Exiled" data-flag="@X" onclick="openSidebar('90_Hand of the Exiled',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\122_Fall of the Axe.png" id="122_Fall of the Axe" data-flag="@X" onclick="openSidebar('122_Fall of the Axe',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\156_Daelish Horticulturist.png" id="156_Daelish Horticulturist" data-flag="@X" onclick="openSidebar('156_Daelish Horticulturist',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\12_Grouchy Warden.png" id="12_Grouchy Warden" data-flag="@X" onclick="openSidebar('12_Grouchy Warden',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\59_Measured Contemplation.png" id="59_Measured Contemplation" data-flag="@X" onclick="openSidebar('59_Measured Contemplation',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\93_Knight of the Raven.png" id="93_Knight of the Raven" data-flag="@X" onclick="openSidebar('93_Knight of the Raven',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\126_Knight of the Hawk.png" id="126_Knight of the Hawk" data-flag="@X" onclick="openSidebar('126_Knight of the Hawk',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\158_Escort Recruiter.png" id="158_Escort Recruiter" data-flag="@X" onclick="openSidebar('158_Escort Recruiter',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\16_Knight of the Stag.png" id="16_Knight of the Stag" data-flag="@X" onclick="openSidebar('16_Knight of the Stag',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\61_Messenger's Haste.png" id="61_Messengers Haste" data-flag="@X" onclick="openSidebar('61_Messengers Haste',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\97_Old Grudges.png" id="97_Old Grudges" data-flag="@X" onclick="openSidebar('97_Old Grudges',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\127_Maddened Elk.png" id="127_Maddened Elk" data-flag="@X" onclick="openSidebar('127_Maddened Elk',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\167_Knight of the Verdigris.png" id="167_Knight of the Verdigris" data-flag="@X" onclick="openSidebar('167_Knight of the Verdigris',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\20_Morning Mists.png" id="20_Morning Mists" data-flag="@X" onclick="openSidebar('20_Morning Mists',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\67_Rapscallion Duo.png" id="67_Rapscallion Duo" data-flag="@X" onclick="openSidebar('67_Rapscallion Duo',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\99_Reverence Seeker.png" id="99_Reverence Seeker" data-flag="@X" onclick="openSidebar('99_Reverence Seeker',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\130_Painful Reminiscence.png" id="130_Painful Reminiscence" data-flag="@X" onclick="openSidebar('130_Painful Reminiscence',false)"></div>
-			<div class="container"><img data-alt_src="/sets\TWR-files\img\168_Lone Heroics_back.png" alt="/sets\TWR-files\img\168_Lone Heroics_front.png" id="168_Lone Heroics" data-flag="@XD" onclick="openSidebar('168_Lone Heroics',false)"><button class="flip-btn" onclick="imgFlip('168_Lone Heroics')"></button></div>
-			<div class="container"><img alt="/sets\TWR-files\img\23_Price of Power.png" id="23_Price of Power" data-flag="@X" onclick="openSidebar('23_Price of Power',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\68_Sails of Commerce.png" id="68_Sails of Commerce" data-flag="@X" onclick="openSidebar('68_Sails of Commerce',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\103_Shrouded Cackler.png" id="103_Shrouded Cackler" data-flag="@X" onclick="openSidebar('103_Shrouded Cackler',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\131_Pursued Paranoia.png" id="131_Pursued Paranoia" data-flag="@X" onclick="openSidebar('131_Pursued Paranoia',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\170_Peace of the Glade.png" id="170_Peace of the Glade" data-flag="@X" onclick="openSidebar('170_Peace of the Glade',false)"></div>
-			<div class="container"><img data-alt_src="/sets\TWR-files\img\26_Sage's Foresight_back.png" alt="/sets\TWR-files\img\26_Sage's Foresight_front.png" id="26_Sages Foresight" data-flag="@XD" onclick="openSidebar('26_Sages Foresight',false)"><button class="flip-btn" onclick="imgFlip('26_Sages Foresight')"></button></div>
-			<div class="container"><img alt="/sets\TWR-files\img\69_Social Graces.png" id="69_Social Graces" data-flag="@X" onclick="openSidebar('69_Social Graces',false)"></div>
-			<div class="container"><img data-alt_src="/sets\TWR-files\img\106_Twilight Raid_back.png" alt="/sets\TWR-files\img\106_Twilight Raid_front.png" id="106_Twilight Raid" data-flag="@XD" onclick="openSidebar('106_Twilight Raid',false)"><button class="flip-btn" onclick="imgFlip('106_Twilight Raid')"></button></div>
-			<div class="container"><img data-alt_src="/sets\TWR-files\img\139_Surge of Duty_back.png" alt="/sets\TWR-files\img\139_Surge of Duty_front.png" id="139_Surge of Duty" data-flag="@XD" onclick="openSidebar('139_Surge of Duty',false)"><button class="flip-btn" onclick="imgFlip('139_Surge of Duty')"></button></div>
-			<div class="container"><img alt="/sets\TWR-files\img\175_Silverwork Champion.png" id="175_Silverwork Champion" data-flag="@X" onclick="openSidebar('175_Silverwork Champion',false)"></div>
-			<div class="container"><img data-alt_src="/sets\TWR-files\img\27_Seek Glory_back.png" alt="/sets\TWR-files\img\27_Seek Glory_front.png" id="27_Seek Glory" data-flag="@XD" onclick="openSidebar('27_Seek Glory',false)"><button class="flip-btn" onclick="imgFlip('27_Seek Glory')"></button></div>
-			<div class="container"><img alt="/sets\TWR-files\img\70_Sunken Ambitions.png" id="70_Sunken Ambitions" data-flag="@X" onclick="openSidebar('70_Sunken Ambitions',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\107_Under Cover of Dark.png" id="107_Under Cover of Dark" data-flag="@X" onclick="openSidebar('107_Under Cover of Dark',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\140_Tactical Deployment.png" id="140_Tactical Deployment" data-flag="@X" onclick="openSidebar('140_Tactical Deployment',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\176_Splitshaft Deadeye.png" id="176_Splitshaft Deadeye" data-flag="@X" onclick="openSidebar('176_Splitshaft Deadeye',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\34_Venerated Knight.png" id="34_Venerated Knight" data-flag="@X" onclick="openSidebar('34_Venerated Knight',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\72_Talks in Hidden Hollows.png" id="72_Talks in Hidden Hollows" data-flag="@X" onclick="openSidebar('72_Talks in Hidden Hollows',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\108_Weaken Defenses.png" id="108_Weaken Defenses" data-flag="@X" onclick="openSidebar('108_Weaken Defenses',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\144_Trusted Comrade.png" id="144_Trusted Comrade" data-flag="@X" onclick="openSidebar('144_Trusted Comrade',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\180_Tranquil Endeavors.png" id="180_Tranquil Endeavors" data-flag="@X" onclick="openSidebar('180_Tranquil Endeavors',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\1_Arcor Windfall.png" id="1_Arcor Windfall" data-flag="@X" onclick="openSidebar('1_Arcor Windfall',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\40_Ambitious Dreams.png" id="40_Ambitious Dreams" data-flag="@X" onclick="openSidebar('40_Ambitious Dreams',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\75_Battlement Prowler.png" id="75_Battlement Prowler" data-flag="@X" onclick="openSidebar('75_Battlement Prowler',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\111_Amongst the Flames.png" id="111_Amongst the Flames" data-flag="@X" onclick="openSidebar('111_Amongst the Flames',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\149_Beneath the Lilies.png" id="149_Beneath the Lilies" data-flag="@X" onclick="openSidebar('149_Beneath the Lilies',false)"></div>
-			<div class="container"><img data-alt_src="/sets\TWR-files\img\2_Arrogant Training_back.png" alt="/sets\TWR-files\img\2_Arrogant Training_front.png" id="2_Arrogant Training" data-flag="@XD" onclick="openSidebar('2_Arrogant Training',false)"><button class="flip-btn" onclick="imgFlip('2_Arrogant Training')"></button></div>
-			<div class="container"><img alt="/sets\TWR-files\img\41_Arrive Unseen.png" id="41_Arrive Unseen" data-flag="@X" onclick="openSidebar('41_Arrive Unseen',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\78_Cauldish Cavalier.png" id="78_Cauldish Cavalier" data-flag="@X" onclick="openSidebar('78_Cauldish Cavalier',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\112_Ardent Charge.png" id="112_Ardent Charge" data-flag="@X" onclick="openSidebar('112_Ardent Charge',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\151_Commoners' Favored.png" id="151_Commoners Favored" data-flag="@X" onclick="openSidebar('151_Commoners Favored',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\3_Attended Knight.png" id="3_Attended Knight" data-flag="@X" onclick="openSidebar('3_Attended Knight',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\42_Captain of the Exiled.png" id="42_Captain of the Exiled" data-flag="@X" onclick="openSidebar('42_Captain of the Exiled',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\79_Cauldish Hookblade.png" id="79_Cauldish Hookblade" data-flag="@X" onclick="openSidebar('79_Cauldish Hookblade',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\114_Bloodied Twinblade.png" id="114_Bloodied Twinblade" data-flag="@X" onclick="openSidebar('114_Bloodied Twinblade',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\152_Conniving Brigand.png" id="152_Conniving Brigand" data-flag="@X" onclick="openSidebar('152_Conniving Brigand',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\7_Daelish Archer.png" id="7_Daelish Archer" data-flag="@X" onclick="openSidebar('7_Daelish Archer',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\43_Cauldish Informant.png" id="43_Cauldish Informant" data-flag="@X" onclick="openSidebar('43_Cauldish Informant',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\81_Change of Fortunes.png" id="81_Change of Fortunes" data-flag="@X" onclick="openSidebar('81_Change of Fortunes',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\115_Caravan Merchant.png" id="115_Caravan Merchant" data-flag="@X" onclick="openSidebar('115_Caravan Merchant',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\159_Fen Guide.png" id="159_Fen Guide" data-flag="@X" onclick="openSidebar('159_Fen Guide',false)"></div>
-			<div class="container"><img data-alt_src="/sets\TWR-files\img\8_Dance of Grace_back.png" alt="/sets\TWR-files\img\8_Dance of Grace_front.png" id="8_Dance of Grace" data-flag="@XD" onclick="openSidebar('8_Dance of Grace',false)"><button class="flip-btn" onclick="imgFlip('8_Dance of Grace')"></button></div>
-			<div class="container"><img alt="/sets\TWR-files\img\44_Civilized Debate.png" id="44_Civilized Debate" data-flag="@X" onclick="openSidebar('44_Civilized Debate',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\82_Commoners' Justice.png" id="82_Commoners Justice" data-flag="@X" onclick="openSidebar('82_Commoners Justice',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\118_Daelish Hopeful.png" id="118_Daelish Hopeful" data-flag="@X" onclick="openSidebar('118_Daelish Hopeful',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\162_Hedge Knight.png" id="162_Hedge Knight" data-flag="@X" onclick="openSidebar('162_Hedge Knight',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\11_Grizzled Captain.png" id="11_Grizzled Captain" data-flag="@X" onclick="openSidebar('11_Grizzled Captain',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\45_Curiosity.png" id="45_Curiosity" data-flag="@X" onclick="openSidebar('45_Curiosity',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\85_Decorated Duelist.png" id="85_Decorated Duelist" data-flag="@X" onclick="openSidebar('85_Decorated Duelist',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\121_Empty the Barracks.png" id="121_Empty the Barracks" data-flag="@X" onclick="openSidebar('121_Empty the Barracks',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\164_Horizon Militant.png" id="164_Horizon Militant" data-flag="@X" onclick="openSidebar('164_Horizon Militant',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\14_Ill-Advised Tactics.png" id="14_Ill-Advised Tactics" data-flag="@X" onclick="openSidebar('14_Ill-Advised Tactics',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\46_Daelish Messenger.png" id="46_Daelish Messenger" data-flag="@X" onclick="openSidebar('46_Daelish Messenger',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\86_Duress.png" id="86_Duress" data-flag="@X" onclick="openSidebar('86_Duress',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\123_Feathered Dancer.png" id="123_Feathered Dancer" data-flag="@X" onclick="openSidebar('123_Feathered Dancer',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\165_Host of Nature.png" id="165_Host of Nature" data-flag="@X" onclick="openSidebar('165_Host of Nature',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\15_Knight.png" id="15_Knight" data-flag="@X" onclick="openSidebar('15_Knight',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\48_Dissolve.png" id="48_Dissolve" data-flag="@X" onclick="openSidebar('48_Dissolve',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\87_Ferris's Crewmate.png" id="87_Ferriss Crewmate" data-flag="@X" onclick="openSidebar('87_Ferriss Crewmate',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\124_Hound of Glory.png" id="124_Hound of Glory" data-flag="@X" onclick="openSidebar('124_Hound of Glory',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\166_Inner Dogmatism.png" id="166_Inner Dogmatism" data-flag="@X" onclick="openSidebar('166_Inner Dogmatism',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\18_Lord's Griffin.png" id="18_Lords Griffin" data-flag="@X" onclick="openSidebar('18_Lords Griffin',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\49_Distracting Handmaiden.png" id="49_Distracting Handmaiden" data-flag="@X" onclick="openSidebar('49_Distracting Handmaiden',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\88_Forbidden Knowledge.png" id="88_Forbidden Knowledge" data-flag="@X" onclick="openSidebar('88_Forbidden Knowledge',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\128_Melting Point.png" id="128_Melting Point" data-flag="@X" onclick="openSidebar('128_Melting Point',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\169_Minor Melee.png" id="169_Minor Melee" data-flag="@X" onclick="openSidebar('169_Minor Melee',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\19_Mercenary Lancer.png" id="19_Mercenary Lancer" data-flag="@X" onclick="openSidebar('19_Mercenary Lancer',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\50_Drake Youngling.png" id="50_Drake Youngling" data-flag="@X" onclick="openSidebar('50_Drake Youngling',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\91_Harrowing Knight.png" id="91_Harrowing Knight" data-flag="@X" onclick="openSidebar('91_Harrowing Knight',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\132_Rally the Volunteers.png" id="132_Rally the Volunteers" data-flag="@X" onclick="openSidebar('132_Rally the Volunteers',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\171_Ranger's Guile.png" id="171_Rangers Guile" data-flag="@X" onclick="openSidebar('171_Rangers Guile',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\21_Pacifism.png" id="21_Pacifism" data-flag="@X" onclick="openSidebar('21_Pacifism',false)"></div>
-			<div class="container"><img data-alt_src="/sets\TWR-files\img\51_Drunken Night_back.png" alt="/sets\TWR-files\img\51_Drunken Night_front.png" id="51_Drunken Night" data-flag="@XD" onclick="openSidebar('51_Drunken Night',false)"><button class="flip-btn" onclick="imgFlip('51_Drunken Night')"></button></div>
-			<div class="container"><img alt="/sets\TWR-files\img\92_Inexperienced Martyr.png" id="92_Inexperienced Martyr" data-flag="@X" onclick="openSidebar('92_Inexperienced Martyr',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\135_Shatter.png" id="135_Shatter" data-flag="@X" onclick="openSidebar('135_Shatter',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\172_Roads Twice Traveled.png" id="172_Roads Twice Traveled" data-flag="@X" onclick="openSidebar('172_Roads Twice Traveled',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\28_Soldier.png" id="28_Soldier" data-flag="@X" onclick="openSidebar('28_Soldier',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\52_Exile's Vanguard.png" id="52_Exiles Vanguard" data-flag="@X" onclick="openSidebar('52_Exiles Vanguard',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\94_Mercenary Coercer.png" id="94_Mercenary Coercer" data-flag="@X" onclick="openSidebar('94_Mercenary Coercer',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\137_Spur to Action.png" id="137_Spur to Action" data-flag="@X" onclick="openSidebar('137_Spur to Action',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\173_Satisfied Gleaner.png" id="173_Satisfied Gleaner" data-flag="@X" onclick="openSidebar('173_Satisfied Gleaner',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\29_Steward's Tithe.png" id="29_Stewards Tithe" data-flag="@X" onclick="openSidebar('29_Stewards Tithe',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\53_Fall of Whiterun Harbor.png" id="53_Fall of Whiterun Harbor" data-flag="@X" onclick="openSidebar('53_Fall of Whiterun Harbor',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\98_Punish the Bold.png" id="98_Punish the Bold" data-flag="@X" onclick="openSidebar('98_Punish the Bold',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\138_Steel-Art Exemplar.png" id="138_Steel-Art Exemplar" data-flag="@X" onclick="openSidebar('138_Steel-Art Exemplar',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\174_Scarred Brawler.png" id="174_Scarred Brawler" data-flag="@X" onclick="openSidebar('174_Scarred Brawler',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\31_Thailen's Guard.png" id="31_Thailens Guard" data-flag="@X" onclick="openSidebar('31_Thailens Guard',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\56_Hoff's Scout.png" id="56_Hoffs Scout" data-flag="@X" onclick="openSidebar('56_Hoffs Scout',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\101_Secluded Wildborn.png" id="101_Secluded Wildborn" data-flag="@X" onclick="openSidebar('101_Secluded Wildborn',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\141_Tectonic Wound.png" id="141_Tectonic Wound" data-flag="@X" onclick="openSidebar('141_Tectonic Wound',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\177_Stoneskin Brawler.png" id="177_Stoneskin Brawler" data-flag="@X" onclick="openSidebar('177_Stoneskin Brawler',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\32_Tightrope Acrobat.png" id="32_Tightrope Acrobat" data-flag="@X" onclick="openSidebar('32_Tightrope Acrobat',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\60_Merchant's Bane.png" id="60_Merchants Bane" data-flag="@X" onclick="openSidebar('60_Merchants Bane',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\104_Three Blade Boon.png" id="104_Three Blade Boon" data-flag="@X" onclick="openSidebar('104_Three Blade Boon',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\145_Untested Commander.png" id="145_Untested Commander" data-flag="@X" onclick="openSidebar('145_Untested Commander',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\178_Sturdy Belligerent.png" id="178_Sturdy Belligerent" data-flag="@X" onclick="openSidebar('178_Sturdy Belligerent',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\35_Visserine's Royal Guard.png" id="35_Visserines Royal Guard" data-flag="@X" onclick="openSidebar('35_Visserines Royal Guard',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\66_Rafter Stalker.png" id="66_Rafter Stalker" data-flag="@X" onclick="openSidebar('66_Rafter Stalker',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\105_Trystasp Coating.png" id="105_Trystasp Coating" data-flag="@X" onclick="openSidebar('105_Trystasp Coating',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\146_Visiting Dignitary.png" id="146_Visiting Dignitary" data-flag="@X" onclick="openSidebar('146_Visiting Dignitary',false)"></div>
-			<div class="container"><img data-alt_src="/sets\TWR-files\img\179_Till the Fields_back.png" alt="/sets\TWR-files\img\179_Till the Fields_front.png" id="179_Till the Fields" data-flag="@XD" onclick="openSidebar('179_Till the Fields',false)"><button class="flip-btn" onclick="imgFlip('179_Till the Fields')"></button></div>
-			<div class="container"><img alt="/sets\TWR-files\img\36_Waifish Squire.png" id="36_Waifish Squire" data-flag="@X" onclick="openSidebar('36_Waifish Squire',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\74_Voyage's End.png" id="74_Voyages End" data-flag="@X" onclick="openSidebar('74_Voyages End',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\109_Weaver of Tales.png" id="109_Weaver of Tales" data-flag="@X" onclick="openSidebar('109_Weaver of Tales',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\147_Wandering Goliath.png" id="147_Wandering Goliath" data-flag="@X" onclick="openSidebar('147_Wandering Goliath',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\182_Voyaging Devout.png" id="182_Voyaging Devout" data-flag="@X" onclick="openSidebar('182_Voyaging Devout',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\37_Weary Steward.png" id="37_Weary Steward" data-flag="@X" onclick="openSidebar('37_Weary Steward',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\38_Whiterun Ordainer.png" id="38_Whiterun Ordainer" data-flag="@X" onclick="openSidebar('38_Whiterun Ordainer',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-<div id="gold" class="anchor"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\190_Frayed Nerves.png" id="190_Frayed Nerves" data-flag="@X" onclick="openSidebar('190_Frayed Nerves',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\189_Ferris, the Sapphire Storm.png" id="189_Ferris, the Sapphire Storm" data-flag="@X" onclick="openSidebar('189_Ferris, the Sapphire Storm',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\200_Wildborn Swindler.png" id="200_Wildborn Swindler" data-flag="@X" onclick="openSidebar('200_Wildborn Swindler',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\198_Sera of Coppercove.png" id="198_Sera of Coppercove" data-flag="@X" onclick="openSidebar('198_Sera of Coppercove',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\196_Ready the Jousts.png" id="196_Ready the Jousts" data-flag="@X" onclick="openSidebar('196_Ready the Jousts',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\201_Yvette, the Golden Gull.png" id="201_Yvette, the Golden Gull" data-flag="@X" onclick="openSidebar('201_Yvette, the Golden Gull',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\214_Merciless Exiled.png" id="214_Merciless Exiled" data-flag="@X" onclick="openSidebar('214_Merciless Exiled',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\194_Lady Genvieve of Caulder.png" id="194_Lady Genvieve of Caulder" data-flag="@X" onclick="openSidebar('194_Lady Genvieve of Caulder',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\226_Tenacious Guide.png" id="226_Tenacious Guide" data-flag="@X" onclick="openSidebar('226_Tenacious Guide',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\184_Declare, the Mother Bear.png" id="184_Declare, the Mother Bear" data-flag="@X" onclick="openSidebar('184_Declare, the Mother Bear',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\231_Youthful Savior.png" id="231_Youthful Savior" data-flag="@X" onclick="openSidebar('231_Youthful Savior',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\229_Withering Agony.png" id="229_Withering Agony" data-flag="@X" onclick="openSidebar('229_Withering Agony',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\216_Opportunistic Raiders.png" id="216_Opportunistic Raiders" data-flag="@X" onclick="openSidebar('216_Opportunistic Raiders',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\219_Reckless Cultivator.png" id="219_Reckless Cultivator" data-flag="@X" onclick="openSidebar('219_Reckless Cultivator',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\208_Generous Offer.png" id="208_Generous Offer" data-flag="@X" onclick="openSidebar('208_Generous Offer',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\209_Gild-Cloak Strider.png" id="209_Gild-Cloak Strider" data-flag="@X" onclick="openSidebar('209_Gild-Cloak Strider',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\205_Exiled Warband.png" id="205_Exiled Warband" data-flag="@X" onclick="openSidebar('205_Exiled Warband',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\224_Sway the Naive.png" id="224_Sway the Naive" data-flag="@X" onclick="openSidebar('224_Sway the Naive',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\186_Elk.png" id="186_Elk" data-flag="@X" onclick="openSidebar('186_Elk',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\227_Travel Companions.png" id="227_Travel Companions" data-flag="@X" onclick="openSidebar('227_Travel Companions',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\222_Royal Summons.png" id="222_Royal Summons" data-flag="@X" onclick="openSidebar('222_Royal Summons',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\213_Left for Carrion.png" id="213_Left for Carrion" data-flag="@X" onclick="openSidebar('213_Left for Carrion',false)"></div>
-			<div class="container"><img data-alt_src="/sets\TWR-files\img\230_Youthful Dreams_back.png" alt="/sets\TWR-files\img\230_Youthful Dreams_front.png" id="230_Youthful Dreams" data-flag="@XD" onclick="openSidebar('230_Youthful Dreams',false)"><button class="flip-btn" onclick="imgFlip('230_Youthful Dreams')"></button></div>
-			<div class="container"><img alt="/sets\TWR-files\img\207_Farmer's Repose.png" id="207_Farmers Repose" data-flag="@X" onclick="openSidebar('207_Farmers Repose',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\185_Duke Gerard Hoff.png" id="185_Duke Gerard Hoff" data-flag="@X" onclick="openSidebar('185_Duke Gerard Hoff',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\191_Harmonized Intellect.png" id="191_Harmonized Intellect" data-flag="@X" onclick="openSidebar('191_Harmonized Intellect',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\199_Slayer of the Famed.png" id="199_Slayer of the Famed" data-flag="@X" onclick="openSidebar('199_Slayer of the Famed',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\188_Femourri Archer.png" id="188_Femourri Archer" data-flag="@X" onclick="openSidebar('188_Femourri Archer',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\187_Ellis, Caravan Captain.png" id="187_Ellis, Caravan Captain" data-flag="@X" onclick="openSidebar('187_Ellis, Caravan Captain',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\203_Bend the Knee.png" id="203_Bend the Knee" data-flag="@X" onclick="openSidebar('203_Bend the Knee',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\192_Insurgent Ballads.png" id="192_Insurgent Ballads" data-flag="@X" onclick="openSidebar('192_Insurgent Ballads',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\197_Ser Malcomn.png" id="197_Ser Malcomn" data-flag="@X" onclick="openSidebar('197_Ser Malcomn',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\195_Lord Dalehorn the Iron-Handed.png" id="195_Lord Dalehorn the Iron-Handed" data-flag="@X" onclick="openSidebar('195_Lord Dalehorn the Iron-Handed',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\228_Wayfaring Ordealist.png" id="228_Wayfaring Ordealist" data-flag="@X" onclick="openSidebar('228_Wayfaring Ordealist',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\218_Plunge Through the Heart.png" id="218_Plunge Through the Heart" data-flag="@X" onclick="openSidebar('218_Plunge Through the Heart',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\193_King Visserine of Daeland.png" id="193_King Visserine of Daeland" data-flag="@X" onclick="openSidebar('193_King Visserine of Daeland',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\221_Requiem of the Fallen.png" id="221_Requiem of the Fallen" data-flag="@X" onclick="openSidebar('221_Requiem of the Fallen',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\225_Swift Deployment.png" id="225_Swift Deployment" data-flag="@X" onclick="openSidebar('225_Swift Deployment',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\210_Highborn Meditant.png" id="210_Highborn Meditant" data-flag="@X" onclick="openSidebar('210_Highborn Meditant',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\217_Plated Valiant.png" id="217_Plated Valiant" data-flag="@X" onclick="openSidebar('217_Plated Valiant',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\202_Absence of the Unmaker.png" id="202_Absence of the Unmaker" data-flag="@X" onclick="openSidebar('202_Absence of the Unmaker',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\206_Fables of the Bold.png" id="206_Fables of the Bold" data-flag="@X" onclick="openSidebar('206_Fables of the Bold',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\204_Cauldish Warmonger.png" id="204_Cauldish Warmonger" data-flag="@X" onclick="openSidebar('204_Cauldish Warmonger',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\211_Hooded Inquirers.png" id="211_Hooded Inquirers" data-flag="@X" onclick="openSidebar('211_Hooded Inquirers',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\223_Scraps of Memory.png" id="223_Scraps of Memory" data-flag="@X" onclick="openSidebar('223_Scraps of Memory',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\220_Reflect Upon the Past.png" id="220_Reflect Upon the Past" data-flag="@X" onclick="openSidebar('220_Reflect Upon the Past',false)"></div>
-			<div class="container"><img data-alt_src="/sets\TWR-files\img\215_Moment of Glory_back.png" alt="/sets\TWR-files\img\215_Moment of Glory_front.png" id="215_Moment of Glory" data-flag="@XD" onclick="openSidebar('215_Moment of Glory',false)"><button class="flip-btn" onclick="imgFlip('215_Moment of Glory')"></button></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\212_Imperious Falconer.png" id="212_Imperious Falconer" data-flag="@X" onclick="openSidebar('212_Imperious Falconer',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-<div id="colorless" class="anchor"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\232_Ambition's Crown.png" id="232_Ambitions Crown" data-flag="@X" onclick="openSidebar('232_Ambitions Crown',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\234_Cloak of the Exiled.png" id="234_Cloak of the Exiled" data-flag="@X" onclick="openSidebar('234_Cloak of the Exiled',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\239_Sunpiercing Bow.png" id="239_Sunpiercing Bow" data-flag="@X" onclick="openSidebar('239_Sunpiercing Bow',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\235_Dead Man's Armor.png" id="235_Dead Mans Armor" data-flag="@X" onclick="openSidebar('235_Dead Mans Armor',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\233_Ancestral Zweihander.png" id="233_Ancestral Zweihander" data-flag="@X" onclick="openSidebar('233_Ancestral Zweihander',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\236_Iron Signet.png" id="236_Iron Signet" data-flag="@X" onclick="openSidebar('236_Iron Signet',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\237_Jailer's Manacles.png" id="237_Jailers Manacles" data-flag="@X" onclick="openSidebar('237_Jailers Manacles',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\238_A Lady's Favor.png" id="238_A Ladys Favor" data-flag="@X" onclick="openSidebar('238_A Ladys Favor',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\240_Thief's Harness.png" id="240_Thiefs Harness" data-flag="@X" onclick="openSidebar('240_Thiefs Harness',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\241_Vial of Arcor.png" id="241_Vial of Arcor" data-flag="@X" onclick="openSidebar('241_Vial of Arcor',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-<div id="land" class="anchor"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\242_Bustling Docks.png" id="242_Bustling Docks" data-flag="@X" onclick="openSidebar('242_Bustling Docks',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\248_Interlocked Waterways.png" id="248_Interlocked Waterways" data-flag="@X" onclick="openSidebar('248_Interlocked Waterways',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\251_Shadowed Slums.png" id="251_Shadowed Slums" data-flag="@X" onclick="openSidebar('251_Shadowed Slums',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\244_Derelict Amphitheatre.png" id="244_Derelict Amphitheatre" data-flag="@X" onclick="openSidebar('244_Derelict Amphitheatre',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\249_Isolated Cloister.png" id="249_Isolated Cloister" data-flag="@X" onclick="openSidebar('249_Isolated Cloister',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\250_Port Town.png" id="250_Port Town" data-flag="@X" onclick="openSidebar('250_Port Town',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\243_Choked Estuary.png" id="243_Choked Estuary" data-flag="@X" onclick="openSidebar('243_Choked Estuary',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\245_Foreboding Ruins.png" id="245_Foreboding Ruins" data-flag="@X" onclick="openSidebar('245_Foreboding Ruins',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\247_Game Trail.png" id="247_Game Trail" data-flag="@X" onclick="openSidebar('247_Game Trail',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\246_Fortified Village.png" id="246_Fortified Village" data-flag="@X" onclick="openSidebar('246_Fortified Village',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\252_Whiterun Gates.png" id="252_Whiterun Gates" data-flag="@X" onclick="openSidebar('252_Whiterun Gates',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\253_Whiterun Harbor.png" id="253_Whiterun Harbor" data-flag="@X" onclick="openSidebar('253_Whiterun Harbor',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\254_Plains.png" id="254_Plains" data-flag="@X" onclick="openSidebar('254_Plains',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\255_Island.png" id="255_Island" data-flag="@X" onclick="openSidebar('255_Island',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\256_Swamp.png" id="256_Swamp" data-flag="@X" onclick="openSidebar('256_Swamp',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\257_Mountain.png" id="257_Mountain" data-flag="@X" onclick="openSidebar('257_Mountain',false)"></div>
-			<div class="container"><img alt="/sets\TWR-files\img\258_Forest.png" id="258_Forest" data-flag="@X" onclick="openSidebar('258_Forest',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+					<div class="container"><img alt="/sets\TWR-files\img\22_Portent of the Long Winter.png" id="22_Portent of the Long Winter" data-flag="@X" onclick="openSidebar('22_Portent of the Long Winter',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\54_Flash of Inspiration.png" id="54_Flash of Inspiration" data-flag="@X" onclick="openSidebar('54_Flash of Inspiration',false)"></div>
+				<div class="container"><img data-alt_src="/sets\TWR-files\img\84_Death's Door_back.png" alt="/sets\TWR-files\img\84_Death's Door_front.png" id="84_Deaths Door" data-flag="@XD" onclick="openSidebar('84_Deaths Door',false)"><button class="flip-btn" onclick="imgFlip('84_Deaths Door')"></button></div>
+				<div class="container"><img alt="/sets\TWR-files\img\125_Inspirational Copse.png" id="125_Inspirational Copse" data-flag="@X" onclick="openSidebar('125_Inspirational Copse',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\153_Crossroad Bard.png" id="153_Crossroad Bard" data-flag="@X" onclick="openSidebar('153_Crossroad Bard',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\30_Tearful Reunion.png" id="30_Tearful Reunion" data-flag="@X" onclick="openSidebar('30_Tearful Reunion',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\65_Pilgrim's Muse.png" id="65_Pilgrims Muse" data-flag="@X" onclick="openSidebar('65_Pilgrims Muse',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\96_Mutual Destruction.png" id="96_Mutual Destruction" data-flag="@X" onclick="openSidebar('96_Mutual Destruction',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\133_Red Pelt Hart.png" id="133_Red Pelt Hart" data-flag="@X" onclick="openSidebar('133_Red Pelt Hart',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\161_Green Pelt Hart.png" id="161_Green Pelt Hart" data-flag="@X" onclick="openSidebar('161_Green Pelt Hart',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\9_Deflecting Strike.png" id="9_Deflecting Strike" data-flag="@X" onclick="openSidebar('9_Deflecting Strike',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\55_Helene, Steel of the Exiled.png" id="55_Helene, Steel of the Exiled" data-flag="@X" onclick="openSidebar('55_Helene, Steel of the Exiled',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\76_Batwing Initiate.png" id="76_Batwing Initiate" data-flag="@X" onclick="openSidebar('76_Batwing Initiate',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\113_Arrogant Fencer.png" id="113_Arrogant Fencer" data-flag="@X" onclick="openSidebar('113_Arrogant Fencer',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\148_Batterbrow Brigand.png" id="148_Batterbrow Brigand" data-flag="@X" onclick="openSidebar('148_Batterbrow Brigand',false)"></div>
+				<div class="container"><img data-alt_src="/sets\TWR-files\img\13_Hasty Intervention_back.png" alt="/sets\TWR-files\img\13_Hasty Intervention_front.png" id="13_Hasty Intervention" data-flag="@XD" onclick="openSidebar('13_Hasty Intervention',false)"><button class="flip-btn" onclick="imgFlip('13_Hasty Intervention')"></button></div>
+				<div class="container"><img alt="/sets\TWR-files\img\62_Misleading Doubts.png" id="62_Misleading Doubts" data-flag="@X" onclick="openSidebar('62_Misleading Doubts',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\80_Cauldish Schemes.png" id="80_Cauldish Schemes" data-flag="@X" onclick="openSidebar('80_Cauldish Schemes',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\116_Cauldish Arrogant.png" id="116_Cauldish Arrogant" data-flag="@X" onclick="openSidebar('116_Cauldish Arrogant',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\157_Declan, Wayward Squire.png" id="157_Declan, Wayward Squire" data-flag="@X" onclick="openSidebar('157_Declan, Wayward Squire',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\17_Lord Jared, the Griffin Knight.png" id="17_Lord Jared, the Griffin Knight" data-flag="@X" onclick="openSidebar('17_Lord Jared, the Griffin Knight',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\63_Moment of Tranquility.png" id="63_Moment of Tranquility" data-flag="@X" onclick="openSidebar('63_Moment of Tranquility',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\95_Mismatched Bandit.png" id="95_Mismatched Bandit" data-flag="@X" onclick="openSidebar('95_Mismatched Bandit',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\129_Noble's Hedonism.png" id="129_Nobles Hedonism" data-flag="@X" onclick="openSidebar('129_Nobles Hedonism',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\160_Grand Tourney.png" id="160_Grand Tourney" data-flag="@X" onclick="openSidebar('160_Grand Tourney',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\24_Proposer of Peace.png" id="24_Proposer of Peace" data-flag="@X" onclick="openSidebar('24_Proposer of Peace',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\64_Perish in Harmony.png" id="64_Perish in Harmony" data-flag="@X" onclick="openSidebar('64_Perish in Harmony',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\100_Seal the Tomb.png" id="100_Seal the Tomb" data-flag="@X" onclick="openSidebar('100_Seal the Tomb',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\134_Restless Hedonist.png" id="134_Restless Hedonist" data-flag="@X" onclick="openSidebar('134_Restless Hedonist',false)"></div>
+				<div class="container"><img data-alt_src="/sets\TWR-files\img\163_Hermit's Travels_back.png" alt="/sets\TWR-files\img\163_Hermit's Travels_front.png" id="163_Hermits Travels" data-flag="@XD" onclick="openSidebar('163_Hermits Travels',false)"><button class="flip-btn" onclick="imgFlip('163_Hermits Travels')"></button></div>
+				<div class="container"><img data-alt_src="/sets\TWR-files\img\25_Publicly Disgraced_back.png" alt="/sets\TWR-files\img\25_Publicly Disgraced_front.png" id="25_Publicly Disgraced" data-flag="@XD" onclick="openSidebar('25_Publicly Disgraced',false)"><button class="flip-btn" onclick="imgFlip('25_Publicly Disgraced')"></button></div>
+				<div class="container"><img alt="/sets\TWR-files\img\71_Take For Ransom.png" id="71_Take For Ransom" data-flag="@X" onclick="openSidebar('71_Take For Ransom',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\102_Ser Joffrey, Plague of Nines.png" id="102_Ser Joffrey, Plague of Nines" data-flag="@X" onclick="openSidebar('102_Ser Joffrey, Plague of Nines',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\142_Thailen, Heir to Daeland.png" id="142_Thailen, Heir to Daeland" data-flag="@X" onclick="openSidebar('142_Thailen, Heir to Daeland',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\181_Unburied Relics.png" id="181_Unburied Relics" data-flag="@X" onclick="openSidebar('181_Unburied Relics',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\33_Trapped in the Tower.png" id="33_Trapped in the Tower" data-flag="@X" onclick="openSidebar('33_Trapped in the Tower',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\73_Territorial Drake.png" id="73_Territorial Drake" data-flag="@X" onclick="openSidebar('73_Territorial Drake',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\110_Wildborn Lancer.png" id="110_Wildborn Lancer" data-flag="@X" onclick="openSidebar('110_Wildborn Lancer',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\143_Thailen's Reprisal.png" id="143_Thailens Reprisal" data-flag="@X" onclick="openSidebar('143_Thailens Reprisal',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\183_Weald Sentry.png" id="183_Weald Sentry" data-flag="@X" onclick="openSidebar('183_Weald Sentry',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\4_Captain of the Militia.png" id="4_Captain of the Militia" data-flag="@X" onclick="openSidebar('4_Captain of the Militia',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\39_Across the Bay.png" id="39_Across the Bay" data-flag="@X" onclick="openSidebar('39_Across the Bay',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\77_Bearer of Fables.png" id="77_Bearer of Fables" data-flag="@X" onclick="openSidebar('77_Bearer of Fables',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\117_Coward's Compulsion.png" id="117_Cowards Compulsion" data-flag="@X" onclick="openSidebar('117_Cowards Compulsion',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\150_Catch Unawares.png" id="150_Catch Unawares" data-flag="@X" onclick="openSidebar('150_Catch Unawares',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\5_Cauldish Banneret.png" id="5_Cauldish Banneret" data-flag="@X" onclick="openSidebar('5_Cauldish Banneret',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\47_Deft Goldsnatch.png" id="47_Deft Goldsnatch" data-flag="@X" onclick="openSidebar('47_Deft Goldsnatch',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\83_Coven Adherent.png" id="83_Coven Adherent" data-flag="@X" onclick="openSidebar('83_Coven Adherent',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\119_Desperate Reconnoiterer.png" id="119_Desperate Reconnoiterer" data-flag="@X" onclick="openSidebar('119_Desperate Reconnoiterer',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\154_Crossways Inn.png" id="154_Crossways Inn" data-flag="@X" onclick="openSidebar('154_Crossways Inn',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\6_Confident Cavalier.png" id="6_Confident Cavalier" data-flag="@X" onclick="openSidebar('6_Confident Cavalier',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\57_Hypersomnia.png" id="57_Hypersomnia" data-flag="@X" onclick="openSidebar('57_Hypersomnia',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\89_Forgo the Past.png" id="89_Forgo the Past" data-flag="@X" onclick="openSidebar('89_Forgo the Past',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\120_Earnest Labourer.png" id="120_Earnest Labourer" data-flag="@X" onclick="openSidebar('120_Earnest Labourer',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\155_Daelish Arbalest.png" id="155_Daelish Arbalest" data-flag="@X" onclick="openSidebar('155_Daelish Arbalest',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\10_Gilded Champion.png" id="10_Gilded Champion" data-flag="@X" onclick="openSidebar('10_Gilded Champion',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\58_Knight of the Staff.png" id="58_Knight of the Staff" data-flag="@X" onclick="openSidebar('58_Knight of the Staff',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\90_Hand of the Exiled.png" id="90_Hand of the Exiled" data-flag="@X" onclick="openSidebar('90_Hand of the Exiled',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\122_Fall of the Axe.png" id="122_Fall of the Axe" data-flag="@X" onclick="openSidebar('122_Fall of the Axe',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\156_Daelish Horticulturist.png" id="156_Daelish Horticulturist" data-flag="@X" onclick="openSidebar('156_Daelish Horticulturist',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\12_Grouchy Warden.png" id="12_Grouchy Warden" data-flag="@X" onclick="openSidebar('12_Grouchy Warden',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\59_Measured Contemplation.png" id="59_Measured Contemplation" data-flag="@X" onclick="openSidebar('59_Measured Contemplation',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\93_Knight of the Raven.png" id="93_Knight of the Raven" data-flag="@X" onclick="openSidebar('93_Knight of the Raven',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\126_Knight of the Hawk.png" id="126_Knight of the Hawk" data-flag="@X" onclick="openSidebar('126_Knight of the Hawk',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\158_Escort Recruiter.png" id="158_Escort Recruiter" data-flag="@X" onclick="openSidebar('158_Escort Recruiter',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\16_Knight of the Stag.png" id="16_Knight of the Stag" data-flag="@X" onclick="openSidebar('16_Knight of the Stag',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\61_Messenger's Haste.png" id="61_Messengers Haste" data-flag="@X" onclick="openSidebar('61_Messengers Haste',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\97_Old Grudges.png" id="97_Old Grudges" data-flag="@X" onclick="openSidebar('97_Old Grudges',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\127_Maddened Elk.png" id="127_Maddened Elk" data-flag="@X" onclick="openSidebar('127_Maddened Elk',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\167_Knight of the Verdigris.png" id="167_Knight of the Verdigris" data-flag="@X" onclick="openSidebar('167_Knight of the Verdigris',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\20_Morning Mists.png" id="20_Morning Mists" data-flag="@X" onclick="openSidebar('20_Morning Mists',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\67_Rapscallion Duo.png" id="67_Rapscallion Duo" data-flag="@X" onclick="openSidebar('67_Rapscallion Duo',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\99_Reverence Seeker.png" id="99_Reverence Seeker" data-flag="@X" onclick="openSidebar('99_Reverence Seeker',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\130_Painful Reminiscence.png" id="130_Painful Reminiscence" data-flag="@X" onclick="openSidebar('130_Painful Reminiscence',false)"></div>
+				<div class="container"><img data-alt_src="/sets\TWR-files\img\168_Lone Heroics_back.png" alt="/sets\TWR-files\img\168_Lone Heroics_front.png" id="168_Lone Heroics" data-flag="@XD" onclick="openSidebar('168_Lone Heroics',false)"><button class="flip-btn" onclick="imgFlip('168_Lone Heroics')"></button></div>
+				<div class="container"><img alt="/sets\TWR-files\img\23_Price of Power.png" id="23_Price of Power" data-flag="@X" onclick="openSidebar('23_Price of Power',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\68_Sails of Commerce.png" id="68_Sails of Commerce" data-flag="@X" onclick="openSidebar('68_Sails of Commerce',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\103_Shrouded Cackler.png" id="103_Shrouded Cackler" data-flag="@X" onclick="openSidebar('103_Shrouded Cackler',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\131_Pursued Paranoia.png" id="131_Pursued Paranoia" data-flag="@X" onclick="openSidebar('131_Pursued Paranoia',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\170_Peace of the Glade.png" id="170_Peace of the Glade" data-flag="@X" onclick="openSidebar('170_Peace of the Glade',false)"></div>
+				<div class="container"><img data-alt_src="/sets\TWR-files\img\26_Sage's Foresight_back.png" alt="/sets\TWR-files\img\26_Sage's Foresight_front.png" id="26_Sages Foresight" data-flag="@XD" onclick="openSidebar('26_Sages Foresight',false)"><button class="flip-btn" onclick="imgFlip('26_Sages Foresight')"></button></div>
+				<div class="container"><img alt="/sets\TWR-files\img\69_Social Graces.png" id="69_Social Graces" data-flag="@X" onclick="openSidebar('69_Social Graces',false)"></div>
+				<div class="container"><img data-alt_src="/sets\TWR-files\img\106_Twilight Raid_back.png" alt="/sets\TWR-files\img\106_Twilight Raid_front.png" id="106_Twilight Raid" data-flag="@XD" onclick="openSidebar('106_Twilight Raid',false)"><button class="flip-btn" onclick="imgFlip('106_Twilight Raid')"></button></div>
+				<div class="container"><img data-alt_src="/sets\TWR-files\img\139_Surge of Duty_back.png" alt="/sets\TWR-files\img\139_Surge of Duty_front.png" id="139_Surge of Duty" data-flag="@XD" onclick="openSidebar('139_Surge of Duty',false)"><button class="flip-btn" onclick="imgFlip('139_Surge of Duty')"></button></div>
+				<div class="container"><img alt="/sets\TWR-files\img\175_Silverwork Champion.png" id="175_Silverwork Champion" data-flag="@X" onclick="openSidebar('175_Silverwork Champion',false)"></div>
+				<div class="container"><img data-alt_src="/sets\TWR-files\img\27_Seek Glory_back.png" alt="/sets\TWR-files\img\27_Seek Glory_front.png" id="27_Seek Glory" data-flag="@XD" onclick="openSidebar('27_Seek Glory',false)"><button class="flip-btn" onclick="imgFlip('27_Seek Glory')"></button></div>
+				<div class="container"><img alt="/sets\TWR-files\img\70_Sunken Ambitions.png" id="70_Sunken Ambitions" data-flag="@X" onclick="openSidebar('70_Sunken Ambitions',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\107_Under Cover of Dark.png" id="107_Under Cover of Dark" data-flag="@X" onclick="openSidebar('107_Under Cover of Dark',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\140_Tactical Deployment.png" id="140_Tactical Deployment" data-flag="@X" onclick="openSidebar('140_Tactical Deployment',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\176_Splitshaft Deadeye.png" id="176_Splitshaft Deadeye" data-flag="@X" onclick="openSidebar('176_Splitshaft Deadeye',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\34_Venerated Knight.png" id="34_Venerated Knight" data-flag="@X" onclick="openSidebar('34_Venerated Knight',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\72_Talks in Hidden Hollows.png" id="72_Talks in Hidden Hollows" data-flag="@X" onclick="openSidebar('72_Talks in Hidden Hollows',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\108_Weaken Defenses.png" id="108_Weaken Defenses" data-flag="@X" onclick="openSidebar('108_Weaken Defenses',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\144_Trusted Comrade.png" id="144_Trusted Comrade" data-flag="@X" onclick="openSidebar('144_Trusted Comrade',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\180_Tranquil Endeavors.png" id="180_Tranquil Endeavors" data-flag="@X" onclick="openSidebar('180_Tranquil Endeavors',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\1_Arcor Windfall.png" id="1_Arcor Windfall" data-flag="@X" onclick="openSidebar('1_Arcor Windfall',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\40_Ambitious Dreams.png" id="40_Ambitious Dreams" data-flag="@X" onclick="openSidebar('40_Ambitious Dreams',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\75_Battlement Prowler.png" id="75_Battlement Prowler" data-flag="@X" onclick="openSidebar('75_Battlement Prowler',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\111_Amongst the Flames.png" id="111_Amongst the Flames" data-flag="@X" onclick="openSidebar('111_Amongst the Flames',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\149_Beneath the Lilies.png" id="149_Beneath the Lilies" data-flag="@X" onclick="openSidebar('149_Beneath the Lilies',false)"></div>
+				<div class="container"><img data-alt_src="/sets\TWR-files\img\2_Arrogant Training_back.png" alt="/sets\TWR-files\img\2_Arrogant Training_front.png" id="2_Arrogant Training" data-flag="@XD" onclick="openSidebar('2_Arrogant Training',false)"><button class="flip-btn" onclick="imgFlip('2_Arrogant Training')"></button></div>
+				<div class="container"><img alt="/sets\TWR-files\img\41_Arrive Unseen.png" id="41_Arrive Unseen" data-flag="@X" onclick="openSidebar('41_Arrive Unseen',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\78_Cauldish Cavalier.png" id="78_Cauldish Cavalier" data-flag="@X" onclick="openSidebar('78_Cauldish Cavalier',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\112_Ardent Charge.png" id="112_Ardent Charge" data-flag="@X" onclick="openSidebar('112_Ardent Charge',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\151_Commoners' Favored.png" id="151_Commoners Favored" data-flag="@X" onclick="openSidebar('151_Commoners Favored',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\3_Attended Knight.png" id="3_Attended Knight" data-flag="@X" onclick="openSidebar('3_Attended Knight',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\42_Captain of the Exiled.png" id="42_Captain of the Exiled" data-flag="@X" onclick="openSidebar('42_Captain of the Exiled',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\79_Cauldish Hookblade.png" id="79_Cauldish Hookblade" data-flag="@X" onclick="openSidebar('79_Cauldish Hookblade',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\114_Bloodied Twinblade.png" id="114_Bloodied Twinblade" data-flag="@X" onclick="openSidebar('114_Bloodied Twinblade',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\152_Conniving Brigand.png" id="152_Conniving Brigand" data-flag="@X" onclick="openSidebar('152_Conniving Brigand',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\7_Daelish Archer.png" id="7_Daelish Archer" data-flag="@X" onclick="openSidebar('7_Daelish Archer',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\43_Cauldish Informant.png" id="43_Cauldish Informant" data-flag="@X" onclick="openSidebar('43_Cauldish Informant',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\81_Change of Fortunes.png" id="81_Change of Fortunes" data-flag="@X" onclick="openSidebar('81_Change of Fortunes',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\115_Caravan Merchant.png" id="115_Caravan Merchant" data-flag="@X" onclick="openSidebar('115_Caravan Merchant',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\159_Fen Guide.png" id="159_Fen Guide" data-flag="@X" onclick="openSidebar('159_Fen Guide',false)"></div>
+				<div class="container"><img data-alt_src="/sets\TWR-files\img\8_Dance of Grace_back.png" alt="/sets\TWR-files\img\8_Dance of Grace_front.png" id="8_Dance of Grace" data-flag="@XD" onclick="openSidebar('8_Dance of Grace',false)"><button class="flip-btn" onclick="imgFlip('8_Dance of Grace')"></button></div>
+				<div class="container"><img alt="/sets\TWR-files\img\44_Civilized Debate.png" id="44_Civilized Debate" data-flag="@X" onclick="openSidebar('44_Civilized Debate',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\82_Commoners' Justice.png" id="82_Commoners Justice" data-flag="@X" onclick="openSidebar('82_Commoners Justice',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\118_Daelish Hopeful.png" id="118_Daelish Hopeful" data-flag="@X" onclick="openSidebar('118_Daelish Hopeful',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\162_Hedge Knight.png" id="162_Hedge Knight" data-flag="@X" onclick="openSidebar('162_Hedge Knight',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\11_Grizzled Captain.png" id="11_Grizzled Captain" data-flag="@X" onclick="openSidebar('11_Grizzled Captain',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\45_Curiosity.png" id="45_Curiosity" data-flag="@X" onclick="openSidebar('45_Curiosity',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\85_Decorated Duelist.png" id="85_Decorated Duelist" data-flag="@X" onclick="openSidebar('85_Decorated Duelist',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\121_Empty the Barracks.png" id="121_Empty the Barracks" data-flag="@X" onclick="openSidebar('121_Empty the Barracks',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\164_Horizon Militant.png" id="164_Horizon Militant" data-flag="@X" onclick="openSidebar('164_Horizon Militant',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\14_Ill-Advised Tactics.png" id="14_Ill-Advised Tactics" data-flag="@X" onclick="openSidebar('14_Ill-Advised Tactics',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\46_Daelish Messenger.png" id="46_Daelish Messenger" data-flag="@X" onclick="openSidebar('46_Daelish Messenger',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\86_Duress.png" id="86_Duress" data-flag="@X" onclick="openSidebar('86_Duress',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\123_Feathered Dancer.png" id="123_Feathered Dancer" data-flag="@X" onclick="openSidebar('123_Feathered Dancer',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\165_Host of Nature.png" id="165_Host of Nature" data-flag="@X" onclick="openSidebar('165_Host of Nature',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\15_Knight.png" id="15_Knight" data-flag="@X" onclick="openSidebar('15_Knight',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\48_Dissolve.png" id="48_Dissolve" data-flag="@X" onclick="openSidebar('48_Dissolve',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\87_Ferris's Crewmate.png" id="87_Ferriss Crewmate" data-flag="@X" onclick="openSidebar('87_Ferriss Crewmate',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\124_Hound of Glory.png" id="124_Hound of Glory" data-flag="@X" onclick="openSidebar('124_Hound of Glory',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\166_Inner Dogmatism.png" id="166_Inner Dogmatism" data-flag="@X" onclick="openSidebar('166_Inner Dogmatism',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\18_Lord's Griffin.png" id="18_Lords Griffin" data-flag="@X" onclick="openSidebar('18_Lords Griffin',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\49_Distracting Handmaiden.png" id="49_Distracting Handmaiden" data-flag="@X" onclick="openSidebar('49_Distracting Handmaiden',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\88_Forbidden Knowledge.png" id="88_Forbidden Knowledge" data-flag="@X" onclick="openSidebar('88_Forbidden Knowledge',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\128_Melting Point.png" id="128_Melting Point" data-flag="@X" onclick="openSidebar('128_Melting Point',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\169_Minor Melee.png" id="169_Minor Melee" data-flag="@X" onclick="openSidebar('169_Minor Melee',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\19_Mercenary Lancer.png" id="19_Mercenary Lancer" data-flag="@X" onclick="openSidebar('19_Mercenary Lancer',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\50_Drake Youngling.png" id="50_Drake Youngling" data-flag="@X" onclick="openSidebar('50_Drake Youngling',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\91_Harrowing Knight.png" id="91_Harrowing Knight" data-flag="@X" onclick="openSidebar('91_Harrowing Knight',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\132_Rally the Volunteers.png" id="132_Rally the Volunteers" data-flag="@X" onclick="openSidebar('132_Rally the Volunteers',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\171_Ranger's Guile.png" id="171_Rangers Guile" data-flag="@X" onclick="openSidebar('171_Rangers Guile',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\21_Pacifism.png" id="21_Pacifism" data-flag="@X" onclick="openSidebar('21_Pacifism',false)"></div>
+				<div class="container"><img data-alt_src="/sets\TWR-files\img\51_Drunken Night_back.png" alt="/sets\TWR-files\img\51_Drunken Night_front.png" id="51_Drunken Night" data-flag="@XD" onclick="openSidebar('51_Drunken Night',false)"><button class="flip-btn" onclick="imgFlip('51_Drunken Night')"></button></div>
+				<div class="container"><img alt="/sets\TWR-files\img\92_Inexperienced Martyr.png" id="92_Inexperienced Martyr" data-flag="@X" onclick="openSidebar('92_Inexperienced Martyr',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\135_Shatter.png" id="135_Shatter" data-flag="@X" onclick="openSidebar('135_Shatter',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\172_Roads Twice Traveled.png" id="172_Roads Twice Traveled" data-flag="@X" onclick="openSidebar('172_Roads Twice Traveled',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\28_Soldier.png" id="28_Soldier" data-flag="@X" onclick="openSidebar('28_Soldier',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\52_Exile's Vanguard.png" id="52_Exiles Vanguard" data-flag="@X" onclick="openSidebar('52_Exiles Vanguard',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\94_Mercenary Coercer.png" id="94_Mercenary Coercer" data-flag="@X" onclick="openSidebar('94_Mercenary Coercer',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\137_Spur to Action.png" id="137_Spur to Action" data-flag="@X" onclick="openSidebar('137_Spur to Action',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\173_Satisfied Gleaner.png" id="173_Satisfied Gleaner" data-flag="@X" onclick="openSidebar('173_Satisfied Gleaner',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\29_Steward's Tithe.png" id="29_Stewards Tithe" data-flag="@X" onclick="openSidebar('29_Stewards Tithe',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\53_Fall of Whiterun Harbor.png" id="53_Fall of Whiterun Harbor" data-flag="@X" onclick="openSidebar('53_Fall of Whiterun Harbor',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\98_Punish the Bold.png" id="98_Punish the Bold" data-flag="@X" onclick="openSidebar('98_Punish the Bold',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\138_Steel-Art Exemplar.png" id="138_Steel-Art Exemplar" data-flag="@X" onclick="openSidebar('138_Steel-Art Exemplar',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\174_Scarred Brawler.png" id="174_Scarred Brawler" data-flag="@X" onclick="openSidebar('174_Scarred Brawler',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\31_Thailen's Guard.png" id="31_Thailens Guard" data-flag="@X" onclick="openSidebar('31_Thailens Guard',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\56_Hoff's Scout.png" id="56_Hoffs Scout" data-flag="@X" onclick="openSidebar('56_Hoffs Scout',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\101_Secluded Wildborn.png" id="101_Secluded Wildborn" data-flag="@X" onclick="openSidebar('101_Secluded Wildborn',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\141_Tectonic Wound.png" id="141_Tectonic Wound" data-flag="@X" onclick="openSidebar('141_Tectonic Wound',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\177_Stoneskin Brawler.png" id="177_Stoneskin Brawler" data-flag="@X" onclick="openSidebar('177_Stoneskin Brawler',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\32_Tightrope Acrobat.png" id="32_Tightrope Acrobat" data-flag="@X" onclick="openSidebar('32_Tightrope Acrobat',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\60_Merchant's Bane.png" id="60_Merchants Bane" data-flag="@X" onclick="openSidebar('60_Merchants Bane',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\104_Three Blade Boon.png" id="104_Three Blade Boon" data-flag="@X" onclick="openSidebar('104_Three Blade Boon',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\145_Untested Commander.png" id="145_Untested Commander" data-flag="@X" onclick="openSidebar('145_Untested Commander',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\178_Sturdy Belligerent.png" id="178_Sturdy Belligerent" data-flag="@X" onclick="openSidebar('178_Sturdy Belligerent',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\35_Visserine's Royal Guard.png" id="35_Visserines Royal Guard" data-flag="@X" onclick="openSidebar('35_Visserines Royal Guard',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\66_Rafter Stalker.png" id="66_Rafter Stalker" data-flag="@X" onclick="openSidebar('66_Rafter Stalker',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\105_Trystasp Coating.png" id="105_Trystasp Coating" data-flag="@X" onclick="openSidebar('105_Trystasp Coating',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\146_Visiting Dignitary.png" id="146_Visiting Dignitary" data-flag="@X" onclick="openSidebar('146_Visiting Dignitary',false)"></div>
+				<div class="container"><img data-alt_src="/sets\TWR-files\img\179_Till the Fields_back.png" alt="/sets\TWR-files\img\179_Till the Fields_front.png" id="179_Till the Fields" data-flag="@XD" onclick="openSidebar('179_Till the Fields',false)"><button class="flip-btn" onclick="imgFlip('179_Till the Fields')"></button></div>
+				<div class="container"><img alt="/sets\TWR-files\img\36_Waifish Squire.png" id="36_Waifish Squire" data-flag="@X" onclick="openSidebar('36_Waifish Squire',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\74_Voyage's End.png" id="74_Voyages End" data-flag="@X" onclick="openSidebar('74_Voyages End',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\109_Weaver of Tales.png" id="109_Weaver of Tales" data-flag="@X" onclick="openSidebar('109_Weaver of Tales',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\147_Wandering Goliath.png" id="147_Wandering Goliath" data-flag="@X" onclick="openSidebar('147_Wandering Goliath',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\182_Voyaging Devout.png" id="182_Voyaging Devout" data-flag="@X" onclick="openSidebar('182_Voyaging Devout',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\37_Weary Steward.png" id="37_Weary Steward" data-flag="@X" onclick="openSidebar('37_Weary Steward',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\38_Whiterun Ordainer.png" id="38_Whiterun Ordainer" data-flag="@X" onclick="openSidebar('38_Whiterun Ordainer',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div id="gold" class="anchor"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\190_Frayed Nerves.png" id="190_Frayed Nerves" data-flag="@X" onclick="openSidebar('190_Frayed Nerves',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\189_Ferris, the Sapphire Storm.png" id="189_Ferris, the Sapphire Storm" data-flag="@X" onclick="openSidebar('189_Ferris, the Sapphire Storm',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\200_Wildborn Swindler.png" id="200_Wildborn Swindler" data-flag="@X" onclick="openSidebar('200_Wildborn Swindler',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\198_Sera of Coppercove.png" id="198_Sera of Coppercove" data-flag="@X" onclick="openSidebar('198_Sera of Coppercove',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\196_Ready the Jousts.png" id="196_Ready the Jousts" data-flag="@X" onclick="openSidebar('196_Ready the Jousts',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\201_Yvette, the Golden Gull.png" id="201_Yvette, the Golden Gull" data-flag="@X" onclick="openSidebar('201_Yvette, the Golden Gull',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\214_Merciless Exiled.png" id="214_Merciless Exiled" data-flag="@X" onclick="openSidebar('214_Merciless Exiled',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\194_Lady Genvieve of Caulder.png" id="194_Lady Genvieve of Caulder" data-flag="@X" onclick="openSidebar('194_Lady Genvieve of Caulder',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\226_Tenacious Guide.png" id="226_Tenacious Guide" data-flag="@X" onclick="openSidebar('226_Tenacious Guide',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\184_Declare, the Mother Bear.png" id="184_Declare, the Mother Bear" data-flag="@X" onclick="openSidebar('184_Declare, the Mother Bear',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\231_Youthful Savior.png" id="231_Youthful Savior" data-flag="@X" onclick="openSidebar('231_Youthful Savior',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\229_Withering Agony.png" id="229_Withering Agony" data-flag="@X" onclick="openSidebar('229_Withering Agony',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\216_Opportunistic Raiders.png" id="216_Opportunistic Raiders" data-flag="@X" onclick="openSidebar('216_Opportunistic Raiders',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\219_Reckless Cultivator.png" id="219_Reckless Cultivator" data-flag="@X" onclick="openSidebar('219_Reckless Cultivator',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\208_Generous Offer.png" id="208_Generous Offer" data-flag="@X" onclick="openSidebar('208_Generous Offer',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\209_Gild-Cloak Strider.png" id="209_Gild-Cloak Strider" data-flag="@X" onclick="openSidebar('209_Gild-Cloak Strider',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\205_Exiled Warband.png" id="205_Exiled Warband" data-flag="@X" onclick="openSidebar('205_Exiled Warband',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\224_Sway the Naive.png" id="224_Sway the Naive" data-flag="@X" onclick="openSidebar('224_Sway the Naive',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\186_Elk.png" id="186_Elk" data-flag="@X" onclick="openSidebar('186_Elk',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\227_Travel Companions.png" id="227_Travel Companions" data-flag="@X" onclick="openSidebar('227_Travel Companions',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\222_Royal Summons.png" id="222_Royal Summons" data-flag="@X" onclick="openSidebar('222_Royal Summons',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\213_Left for Carrion.png" id="213_Left for Carrion" data-flag="@X" onclick="openSidebar('213_Left for Carrion',false)"></div>
+				<div class="container"><img data-alt_src="/sets\TWR-files\img\230_Youthful Dreams_back.png" alt="/sets\TWR-files\img\230_Youthful Dreams_front.png" id="230_Youthful Dreams" data-flag="@XD" onclick="openSidebar('230_Youthful Dreams',false)"><button class="flip-btn" onclick="imgFlip('230_Youthful Dreams')"></button></div>
+				<div class="container"><img alt="/sets\TWR-files\img\207_Farmer's Repose.png" id="207_Farmers Repose" data-flag="@X" onclick="openSidebar('207_Farmers Repose',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\185_Duke Gerard Hoff.png" id="185_Duke Gerard Hoff" data-flag="@X" onclick="openSidebar('185_Duke Gerard Hoff',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\191_Harmonized Intellect.png" id="191_Harmonized Intellect" data-flag="@X" onclick="openSidebar('191_Harmonized Intellect',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\199_Slayer of the Famed.png" id="199_Slayer of the Famed" data-flag="@X" onclick="openSidebar('199_Slayer of the Famed',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\188_Femourri Archer.png" id="188_Femourri Archer" data-flag="@X" onclick="openSidebar('188_Femourri Archer',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\187_Ellis, Caravan Captain.png" id="187_Ellis, Caravan Captain" data-flag="@X" onclick="openSidebar('187_Ellis, Caravan Captain',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\203_Bend the Knee.png" id="203_Bend the Knee" data-flag="@X" onclick="openSidebar('203_Bend the Knee',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\192_Insurgent Ballads.png" id="192_Insurgent Ballads" data-flag="@X" onclick="openSidebar('192_Insurgent Ballads',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\197_Ser Malcomn.png" id="197_Ser Malcomn" data-flag="@X" onclick="openSidebar('197_Ser Malcomn',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\195_Lord Dalehorn the Iron-Handed.png" id="195_Lord Dalehorn the Iron-Handed" data-flag="@X" onclick="openSidebar('195_Lord Dalehorn the Iron-Handed',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\228_Wayfaring Ordealist.png" id="228_Wayfaring Ordealist" data-flag="@X" onclick="openSidebar('228_Wayfaring Ordealist',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\218_Plunge Through the Heart.png" id="218_Plunge Through the Heart" data-flag="@X" onclick="openSidebar('218_Plunge Through the Heart',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\193_King Visserine of Daeland.png" id="193_King Visserine of Daeland" data-flag="@X" onclick="openSidebar('193_King Visserine of Daeland',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\221_Requiem of the Fallen.png" id="221_Requiem of the Fallen" data-flag="@X" onclick="openSidebar('221_Requiem of the Fallen',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\225_Swift Deployment.png" id="225_Swift Deployment" data-flag="@X" onclick="openSidebar('225_Swift Deployment',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\210_Highborn Meditant.png" id="210_Highborn Meditant" data-flag="@X" onclick="openSidebar('210_Highborn Meditant',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\217_Plated Valiant.png" id="217_Plated Valiant" data-flag="@X" onclick="openSidebar('217_Plated Valiant',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\202_Absence of the Unmaker.png" id="202_Absence of the Unmaker" data-flag="@X" onclick="openSidebar('202_Absence of the Unmaker',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\206_Fables of the Bold.png" id="206_Fables of the Bold" data-flag="@X" onclick="openSidebar('206_Fables of the Bold',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\204_Cauldish Warmonger.png" id="204_Cauldish Warmonger" data-flag="@X" onclick="openSidebar('204_Cauldish Warmonger',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\211_Hooded Inquirers.png" id="211_Hooded Inquirers" data-flag="@X" onclick="openSidebar('211_Hooded Inquirers',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\223_Scraps of Memory.png" id="223_Scraps of Memory" data-flag="@X" onclick="openSidebar('223_Scraps of Memory',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\220_Reflect Upon the Past.png" id="220_Reflect Upon the Past" data-flag="@X" onclick="openSidebar('220_Reflect Upon the Past',false)"></div>
+				<div class="container"><img data-alt_src="/sets\TWR-files\img\215_Moment of Glory_back.png" alt="/sets\TWR-files\img\215_Moment of Glory_front.png" id="215_Moment of Glory" data-flag="@XD" onclick="openSidebar('215_Moment of Glory',false)"><button class="flip-btn" onclick="imgFlip('215_Moment of Glory')"></button></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\212_Imperious Falconer.png" id="212_Imperious Falconer" data-flag="@X" onclick="openSidebar('212_Imperious Falconer',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div id="colorless" class="anchor"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\232_Ambition's Crown.png" id="232_Ambitions Crown" data-flag="@X" onclick="openSidebar('232_Ambitions Crown',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\234_Cloak of the Exiled.png" id="234_Cloak of the Exiled" data-flag="@X" onclick="openSidebar('234_Cloak of the Exiled',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\239_Sunpiercing Bow.png" id="239_Sunpiercing Bow" data-flag="@X" onclick="openSidebar('239_Sunpiercing Bow',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\235_Dead Man's Armor.png" id="235_Dead Mans Armor" data-flag="@X" onclick="openSidebar('235_Dead Mans Armor',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\233_Ancestral Zweihander.png" id="233_Ancestral Zweihander" data-flag="@X" onclick="openSidebar('233_Ancestral Zweihander',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\236_Iron Signet.png" id="236_Iron Signet" data-flag="@X" onclick="openSidebar('236_Iron Signet',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\237_Jailer's Manacles.png" id="237_Jailers Manacles" data-flag="@X" onclick="openSidebar('237_Jailers Manacles',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\238_A Lady's Favor.png" id="238_A Ladys Favor" data-flag="@X" onclick="openSidebar('238_A Ladys Favor',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\240_Thief's Harness.png" id="240_Thiefs Harness" data-flag="@X" onclick="openSidebar('240_Thiefs Harness',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\241_Vial of Arcor.png" id="241_Vial of Arcor" data-flag="@X" onclick="openSidebar('241_Vial of Arcor',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div id="land" class="anchor"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\242_Bustling Docks.png" id="242_Bustling Docks" data-flag="@X" onclick="openSidebar('242_Bustling Docks',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\248_Interlocked Waterways.png" id="248_Interlocked Waterways" data-flag="@X" onclick="openSidebar('248_Interlocked Waterways',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\251_Shadowed Slums.png" id="251_Shadowed Slums" data-flag="@X" onclick="openSidebar('251_Shadowed Slums',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\244_Derelict Amphitheatre.png" id="244_Derelict Amphitheatre" data-flag="@X" onclick="openSidebar('244_Derelict Amphitheatre',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\249_Isolated Cloister.png" id="249_Isolated Cloister" data-flag="@X" onclick="openSidebar('249_Isolated Cloister',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\250_Port Town.png" id="250_Port Town" data-flag="@X" onclick="openSidebar('250_Port Town',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\243_Choked Estuary.png" id="243_Choked Estuary" data-flag="@X" onclick="openSidebar('243_Choked Estuary',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\245_Foreboding Ruins.png" id="245_Foreboding Ruins" data-flag="@X" onclick="openSidebar('245_Foreboding Ruins',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\247_Game Trail.png" id="247_Game Trail" data-flag="@X" onclick="openSidebar('247_Game Trail',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\246_Fortified Village.png" id="246_Fortified Village" data-flag="@X" onclick="openSidebar('246_Fortified Village',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\252_Whiterun Gates.png" id="252_Whiterun Gates" data-flag="@X" onclick="openSidebar('252_Whiterun Gates',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\253_Whiterun Harbor.png" id="253_Whiterun Harbor" data-flag="@X" onclick="openSidebar('253_Whiterun Harbor',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\254_Plains.png" id="254_Plains" data-flag="@X" onclick="openSidebar('254_Plains',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\255_Island.png" id="255_Island" data-flag="@X" onclick="openSidebar('255_Island',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\256_Swamp.png" id="256_Swamp" data-flag="@X" onclick="openSidebar('256_Swamp',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\257_Mountain.png" id="257_Mountain" data-flag="@X" onclick="openSidebar('257_Mountain',false)"></div>
+				<div class="container"><img alt="/sets\TWR-files\img\258_Forest.png" id="258_Forest" data-flag="@X" onclick="openSidebar('258_Forest',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
 	</div>
-</div>
+	</div>
 	<div class="sidebar" id="sidebar">
 		<div class="sidebar-container">
 			<img id="sidebar_img" class="sidebar-img" src="/img/er.png">
@@ -570,7 +589,7 @@
 				card_list_arrayified = card_list.cards;
 
 		preloadImgs = document.getElementsByClassName('preload-hidden');
-		
+
 		let images_loaded = [];
 
 		do {
@@ -660,7 +679,7 @@
 	function openSidebar(id, h = false) {
 		horizontal = h;
 		scroll_pct = window.scrollY / document.documentElement.scrollHeight;
-		
+
 		document.getElementById('sidebar').style.display = 'grid';
 
 		const rotated_img = document.getElementById('sidebar_h_img');
@@ -691,7 +710,7 @@
 			document.getElementById('sidebar-flip-btn').style.display = 'none';
 		}
 		document.getElementById('main-content').style.width = '60%';
-		
+
 		scroll_pos = scroll_pct * document.documentElement.scrollHeight;
 		window.scrollTo(window.scrollX, scroll_pos);
 		setSidebarTop();
@@ -702,10 +721,28 @@
 
 		document.getElementById('sidebar').style.display = 'none';
 		document.getElementById('main-content').style.width = '100%';
-		
+
 
 		scroll_pos = scroll_pct * document.documentElement.scrollHeight;
 		window.scrollTo(window.scrollX, scroll_pos);
+	}
+
+	function rolldown() {
+		var sets = document.querySelectorAll('.inactive');
+		for(const set of sets)
+		{
+			set.style.height = "auto";
+			set.style.margin = "5px";
+		}
+	}
+
+	function rollup() {
+		var sets = document.querySelectorAll('.inactive');
+		for(const set of sets)
+		{
+			set.style.height = "0px";
+			set.style.margin = "0px 5px";
+		}
 	}
 
 	document.getElementById("search").addEventListener("keypress", function(event) {

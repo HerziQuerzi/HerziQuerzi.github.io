@@ -5,6 +5,10 @@
 	<link rel="stylesheet" href="/resources/header.css">
 	<title>CRC visual preview</title>
 	<style>
+		@font-face {
+			font-family: Beleren;
+			src: url('/resources/beleren.ttf');
+		}
 		body {
 			font-family: Arial, sans-serif;
 			margin: 0;
@@ -82,7 +86,7 @@
 		.banner {
 			width: 100%;
 			height: auto;
-			padding-top: 20px;
+			padding-top: 80px;
 			padding-bottom: 50px;
 		}
 		.logo {
@@ -118,36 +122,49 @@
 			background-size: contain;
 			background-position: center;
 		}
-		.icon-bar {
-			display: grid;
-			grid-template-columns: repeat(10, 3fr 2fr) 3fr;
-			gap: 1px;
-			padding-left: 5%;
-			padding-right: 5%;
-			padding-top: 2%;
-			padding-bottom: 1%;
-			justify-items: center;
+		.dropdown {
+			background: rgba(23, 23, 23, 0.8);
+			border-radius: 8px;
+			position: absolute;
+			left: 10%;
+			width: fit-content;
+			margin: 20px 0;
+			padding: 5px 0;
+			display: flex;
+			flex-direction: column;
+			z-index: 3;
+		}
+		.dropdown .set-bar {
+			font-family: Beleren;
+			font-size: 20px;
+			text-decoration: none;
+			color: #e3e3e3;
+			display: flex;
+			gap: 10px;
 			align-items: center;
+			padding: 0 12px;
+			margin: 5px;
 		}
-		.icon-bar .icon img {
-			width: 90%;
-			max-width: 80px;
-			height: auto;
-			display: block;
-			padding: 5%;
-			margin: auto;
-			text-align: center;
+		.dropdown .set-bar:hover {
+			background: rgba(163, 163, 163, 0.5);
+			color: #f3f3f3;
 		}
-		.icon-bar .dot img {
-			width: 50%;
-			max-width: 65px;
-			height: auto;
-			display: block;
-			margin: auto;
-			text-align: center;
+		.dropdown .set-bar img {
+			width: 32px;
+		}
+		.dropdown .inactive {
+			height: 0px;
+			overflow: hidden;
+			margin: 0px 5px;
 		}
 		.preload-hidden {
 			display: none;
+		}
+		.addenda-container {
+			text-align: center;
+			width: fit-content;
+			max-width: 1200px;
+			padding: 0 5%;
 		}
 		/* This is here to enable the stickiness in a Float environment. I don't know why it works but it does */
 		.footer {
@@ -185,271 +202,273 @@
 		</div>
 	</div>
 
-	<div class="icon-bar">
-			<div class="icon"><a href="HQZ"><img src="/sets/HQZ-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="LRH"><img src="/sets/LRH-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="INK"><img src="/sets/INK-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="ACA"><img src="/sets/ACA-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="BYK"><img src="/sets/BYK-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="BTJ"><img src="/sets/BTJ-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="ACR"><img src="/sets/ACR-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="HVF"><img src="/sets/HVF-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="MAC"><img src="/sets/MAC-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="CAC"><img src="/sets/CAC-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="PFP"><img src="/sets/PFP-files/icon.png"></img></a></div>
-		<div class="icon"><a href="TWR"><img src="/sets/TWR-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="MMC"><img src="/sets/MMC-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="MMT"><img src="/sets/MMT-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="IAH"><img src="/sets/IAH-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="CRC"><img src="/sets/CRC-files/icon.png"></img></a></div>
-
+	<div class="dropdown" onmouseenter="rolldown()" onmouseleave="rollup()">
+	
+		<a class="set-bar" href="CRC"><img src="/sets/CRC-files/icon.png">Cretio Created</a>
+	
+		<a class="set-bar inactive" href="HQZ"><img src="/sets/HQZ-files/icon.png">Hunting Quiet Horizons</a>
+	
+		<a class="set-bar inactive" href="LRH"><img src="/sets/LRH-files/icon.png">The Long Road Home</a>
+	
+		<a class="set-bar inactive" href="INK"><img src="/sets/INK-files/icon.png">Across the Ink Sea</a>
+	
+		<a class="set-bar inactive" href="ACA"><img src="/sets/ACA-files/icon.png">Arcanum Academia</a>
+	
+		<a class="set-bar inactive" href="BYK"><img src="/sets/BYK-files/icon.png">Beyond Our Ken</a>
+	
+		<a class="set-bar inactive" href="BTJ"><img src="/sets/BTJ-files/icon.png">Barten’s Journal</a>
+	
+		<a class="set-bar inactive" href="ACR"><img src="/sets/ACR-files/icon.png">Arcanum: Reforged</a>
+	
+		<a class="set-bar inactive" href="HVF"><img src="/sets/HVF-files/icon.png">Harvest Festival</a>
+	
+		<a class="set-bar inactive" href="MAC"><img src="/sets/MAC-files/icon.png">Memorium Arcanum</a>
+	
+		<a class="set-bar inactive" href="CAC"><img src="/sets/CAC-files/icon.png">Carpe Arcanum</a>
+	
+		<a class="set-bar inactive" href="PFP"><img src="/sets/PFP-files/icon.png">Plagues of Fretport</a>
+	
+		<a class="set-bar inactive" href="TWR"><img src="/sets/TWR-files/icon.png">A Tourney at Whiterun</a>
+	
+		<a class="set-bar inactive" href="MMC"><img src="/sets/MMC-files/icon.png">Memory’s Collapse</a>
+	
+		<a class="set-bar inactive" href="MMT"><img src="/sets/MMT-files/icon.png">Memory’s Tyranny</a>
+	
+		<a class="set-bar inactive" href="IAH"><img src="/sets/IAH-files/icon.png">Intrigue</a>
+	
 		</div>
 		<div class="banner">
 		<img class="logo" src="/sets/CRC-files/logo.png">
 		</div>
 		<div class="main-content" id="main-content">
 			<div class="grid-container">
-				<div class="container"><img alt="/sets\CRC-files\img\28_Terenal, Lord of Angels.png" id="28_Terenal, Lord of Angels" data-flag="@X" onclick="openSidebar('28_Terenal, Lord of Angels',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\32_Crinturin, the Ancient.png" id="32_Crinturin, the Ancient" data-flag="@X" onclick="openSidebar('32_Crinturin, the Ancient',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\61_Axidern, the Reborn.png" id="61_Axidern, the Reborn" data-flag="@X" onclick="openSidebar('61_Axidern, the Reborn',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\115_Volcanic Mage.png" id="115_Volcanic Mage" data-flag="@X" onclick="openSidebar('115_Volcanic Mage',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\142_Sreanis, Spider Queen.png" id="142_Sreanis, Spider Queen" data-flag="@X" onclick="openSidebar('142_Sreanis, Spider Queen',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\4_Brave the Dark.png" id="4_Brave the Dark" data-flag="@X" onclick="openSidebar('4_Brave the Dark',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\54_Seer's Glass.png" id="54_Seers Glass" data-flag="@X" onclick="openSidebar('54_Seers Glass',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\73_Imbued Remains.png" id="73_Imbued Remains" data-flag="@X" onclick="openSidebar('73_Imbued Remains',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\90_Absorb Pain.png" id="90_Absorb Pain" data-flag="@X" onclick="openSidebar('90_Absorb Pain',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\146_Verdalian Chantress.png" id="146_Verdalian Chantress" data-flag="@X" onclick="openSidebar('146_Verdalian Chantress',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\5_Commander of the Heavens.png" id="5_Commander of the Heavens" data-flag="@X" onclick="openSidebar('5_Commander of the Heavens',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\30_Ambitious Student.png" id="30_Ambitious Student" data-flag="@X" onclick="openSidebar('30_Ambitious Student',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\60_Aen Blackripper.png" id="60_Aen Blackripper" data-flag="@X" onclick="openSidebar('60_Aen Blackripper',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\93_Burning Radiance.png" id="93_Burning Radiance" data-flag="@X" onclick="openSidebar('93_Burning Radiance',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\119_Breeding Titan.png" id="119_Breeding Titan" data-flag="@X" onclick="openSidebar('119_Breeding Titan',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\12_Enduring Peace.png" id="12_Enduring Peace" data-flag="@X" onclick="openSidebar('12_Enduring Peace',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\35_Down the Depths.png" id="35_Down the Depths" data-flag="@X" onclick="openSidebar('35_Down the Depths',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\67_Enduring Sorrow.png" id="67_Enduring Sorrow" data-flag="@X" onclick="openSidebar('67_Enduring Sorrow',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\105_Forge-Belly Dragon.png" id="105_Forge-Belly Dragon" data-flag="@X" onclick="openSidebar('105_Forge-Belly Dragon',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\124_Enhanced Growth.png" id="124_Enhanced Growth" data-flag="@X" onclick="openSidebar('124_Enhanced Growth',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\22_Return to Form.png" id="22_Return to Form" data-flag="@X" onclick="openSidebar('22_Return to Form',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\40_Guidance from Creation.png" id="40_Guidance from Creation" data-flag="@X" onclick="openSidebar('40_Guidance from Creation',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\70_Gradis, Tyrant.png" id="70_Gradis, Tyrant" data-flag="@X" onclick="openSidebar('70_Gradis, Tyrant',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\113_Verintip the Enraged.png" id="113_Verintip the Enraged" data-flag="@X" onclick="openSidebar('113_Verintip the Enraged',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\126_Fuel Creation.png" id="126_Fuel Creation" data-flag="@X" onclick="openSidebar('126_Fuel Creation',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\25_Sentinel of Daerik.png" id="25_Sentinel of Daerik" data-flag="@X" onclick="openSidebar('25_Sentinel of Daerik',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\55_Selective Education.png" id="55_Selective Education" data-flag="@X" onclick="openSidebar('55_Selective Education',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\82_Spiralling Sickness.png" id="82_Spiralling Sickness" data-flag="@X" onclick="openSidebar('82_Spiralling Sickness',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\114_Volcanic Forces.png" id="114_Volcanic Forces" data-flag="@X" onclick="openSidebar('114_Volcanic Forces',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\134_Purified Spider.png" id="134_Purified Spider" data-flag="@X" onclick="openSidebar('134_Purified Spider',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\1_Angelic Herald.png" id="1_Angelic Herald" data-flag="@X" onclick="openSidebar('1_Angelic Herald',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\56_Selena Blackburn.png" id="56_Selena Blackburn" data-flag="@X" onclick="openSidebar('56_Selena Blackburn',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\85_Thirst for Life.png" id="85_Thirst for Life" data-flag="@X" onclick="openSidebar('85_Thirst for Life',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\92_Bright Spark.png" id="92_Bright Spark" data-flag="@X" onclick="openSidebar('92_Bright Spark',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\136_Roaring Behemoth.png" id="136_Roaring Behemoth" data-flag="@X" onclick="openSidebar('136_Roaring Behemoth',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\2_Angelic Knight.png" id="2_Angelic Knight" data-flag="@X" onclick="openSidebar('2_Angelic Knight',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\31_Blasphemous Creation.png" id="31_Blasphemous Creation" data-flag="@X" onclick="openSidebar('31_Blasphemous Creation',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\63_Birth from Death.png" id="63_Birth from Death" data-flag="@X" onclick="openSidebar('63_Birth from Death',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\94_Carved Stone.png" id="94_Carved Stone" data-flag="@X" onclick="openSidebar('94_Carved Stone',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\121_Climbing Vines.png" id="121_Climbing Vines" data-flag="@X" onclick="openSidebar('121_Climbing Vines',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\3_Blinding Rays.png" id="3_Blinding Rays" data-flag="@X" onclick="openSidebar('3_Blinding Rays',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\36_Enlightening Radiance.png" id="36_Enlightening Radiance" data-flag="@X" onclick="openSidebar('36_Enlightening Radiance',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\64_Blackout.png" id="64_Blackout" data-flag="@X" onclick="openSidebar('64_Blackout',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\95_Chain of Sparks.png" id="95_Chain of Sparks" data-flag="@X" onclick="openSidebar('95_Chain of Sparks',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\123_Cycle of Creation.png" id="123_Cycle of Creation" data-flag="@X" onclick="openSidebar('123_Cycle of Creation',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\6_Cycle of Life.png" id="6_Cycle of Life" data-flag="@X" onclick="openSidebar('6_Cycle of Life',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\37_Excess Energy.png" id="37_Excess Energy" data-flag="@X" onclick="openSidebar('37_Excess Energy',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\66_Cycle of Death.png" id="66_Cycle of Death" data-flag="@X" onclick="openSidebar('66_Cycle of Death',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\97_Cloak of Flames.png" id="97_Cloak of Flames" data-flag="@X" onclick="openSidebar('97_Cloak of Flames',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\130_Magical Growth.png" id="130_Magical Growth" data-flag="@X" onclick="openSidebar('130_Magical Growth',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\14_Healing Radiance.png" id="14_Healing Radiance" data-flag="@X" onclick="openSidebar('14_Healing Radiance',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\39_Greedy Mage.png" id="39_Greedy Mage" data-flag="@X" onclick="openSidebar('39_Greedy Mage',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\69_Gradis Recruiter.png" id="69_Gradis Recruiter" data-flag="@X" onclick="openSidebar('69_Gradis Recruiter',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\98_Cremate the Dead.png" id="98_Cremate the Dead" data-flag="@X" onclick="openSidebar('98_Cremate the Dead',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\133_Plated Behemoth.png" id="133_Plated Behemoth" data-flag="@X" onclick="openSidebar('133_Plated Behemoth',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\20_Rejected.png" id="20_Rejected" data-flag="@X" onclick="openSidebar('20_Rejected',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\41_Guided Artifice.png" id="41_Guided Artifice" data-flag="@X" onclick="openSidebar('41_Guided Artifice',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\72_Grotesque Plaguebearer.png" id="72_Grotesque Plaguebearer" data-flag="@X" onclick="openSidebar('72_Grotesque Plaguebearer',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\100_Cycle of Rage.png" id="100_Cycle of Rage" data-flag="@X" onclick="openSidebar('100_Cycle of Rage',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\135_Ring of Growth.png" id="135_Ring of Growth" data-flag="@X" onclick="openSidebar('135_Ring of Growth',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\21_Return to Existence.png" id="21_Return to Existence" data-flag="@X" onclick="openSidebar('21_Return to Existence',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\47_Insignificant.png" id="47_Insignificant" data-flag="@X" onclick="openSidebar('47_Insignificant',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\76_Recruit from Death.png" id="76_Recruit from Death" data-flag="@X" onclick="openSidebar('76_Recruit from Death',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\104_Flaming Descent.png" id="104_Flaming Descent" data-flag="@X" onclick="openSidebar('104_Flaming Descent',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\137_Serrated Moss.png" id="137_Serrated Moss" data-flag="@X" onclick="openSidebar('137_Serrated Moss',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\23_Rising Hope.png" id="23_Rising Hope" data-flag="@X" onclick="openSidebar('23_Rising Hope',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\48_Molding Worlds.png" id="48_Molding Worlds" data-flag="@X" onclick="openSidebar('48_Molding Worlds',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\84_Starving Trin.png" id="84_Starving Trin" data-flag="@X" onclick="openSidebar('84_Starving Trin',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\112_Stoke the Hearts.png" id="112_Stoke the Hearts" data-flag="@X" onclick="openSidebar('112_Stoke the Hearts',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\145_Unbearable Attraction.png" id="145_Unbearable Attraction" data-flag="@X" onclick="openSidebar('145_Unbearable Attraction',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\7_Daerik Militia.png" id="7_Daerik Militia" data-flag="@X" onclick="openSidebar('7_Daerik Militia',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\51_Rainstorm.png" id="51_Rainstorm" data-flag="@X" onclick="openSidebar('51_Rainstorm',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\89_Willful Control.png" id="89_Willful Control" data-flag="@X" onclick="openSidebar('89_Willful Control',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\91_Avalanche Giant.png" id="91_Avalanche Giant" data-flag="@X" onclick="openSidebar('91_Avalanche Giant',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\148_Verdant Spider.png" id="148_Verdant Spider" data-flag="@X" onclick="openSidebar('148_Verdant Spider',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\8_Darting Swordsman.png" id="8_Darting Swordsman" data-flag="@X" onclick="openSidebar('8_Darting Swordsman',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\33_Cycle of Lies.png" id="33_Cycle of Lies" data-flag="@X" onclick="openSidebar('33_Cycle of Lies',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\62_Banished Mage.png" id="62_Banished Mage" data-flag="@X" onclick="openSidebar('62_Banished Mage',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\96_Channel Creation.png" id="96_Channel Creation" data-flag="@X" onclick="openSidebar('96_Channel Creation',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\120_Clawed Hunter.png" id="120_Clawed Hunter" data-flag="@X" onclick="openSidebar('120_Clawed Hunter',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\9_Disallowed.png" id="9_Disallowed" data-flag="@X" onclick="openSidebar('9_Disallowed',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\34_Dampening Mage.png" id="34_Dampening Mage" data-flag="@X" onclick="openSidebar('34_Dampening Mage',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\65_Crippled Angel.png" id="65_Crippled Angel" data-flag="@X" onclick="openSidebar('65_Crippled Angel',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\99_Crumble to Dust.png" id="99_Crumble to Dust" data-flag="@X" onclick="openSidebar('99_Crumble to Dust',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\122_Collapse.png" id="122_Collapse" data-flag="@X" onclick="openSidebar('122_Collapse',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\10_Disciple of Angels.png" id="10_Disciple of Angels" data-flag="@X" onclick="openSidebar('10_Disciple of Angels',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\38_Fake Blame.png" id="38_Fake Blame" data-flag="@X" onclick="openSidebar('38_Fake Blame',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\68_Festering Mists.png" id="68_Festering Mists" data-flag="@X" onclick="openSidebar('68_Festering Mists',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\101_Earth Negation.png" id="101_Earth Negation" data-flag="@X" onclick="openSidebar('101_Earth Negation',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\125_Feeding Radiance.png" id="125_Feeding Radiance" data-flag="@X" onclick="openSidebar('125_Feeding Radiance',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\11_Eccentric Wisp.png" id="11_Eccentric Wisp" data-flag="@X" onclick="openSidebar('11_Eccentric Wisp',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\42_Hatchling of Crinturin.png" id="42_Hatchling of Crinturin" data-flag="@X" onclick="openSidebar('42_Hatchling of Crinturin',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\71_Gradis's Guard.png" id="71_Gradiss Guard" data-flag="@X" onclick="openSidebar('71_Gradiss Guard',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\102_Flame Worshiper.png" id="102_Flame Worshiper" data-flag="@X" onclick="openSidebar('102_Flame Worshiper',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\127_Guardian of Verdalia.png" id="127_Guardian of Verdalia" data-flag="@X" onclick="openSidebar('127_Guardian of Verdalia',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\13_Guard of Terenal.png" id="13_Guard of Terenal" data-flag="@X" onclick="openSidebar('13_Guard of Terenal',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\43_Hijacked Mana.png" id="43_Hijacked Mana" data-flag="@X" onclick="openSidebar('43_Hijacked Mana',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\74_Mind Spore.png" id="74_Mind Spore" data-flag="@X" onclick="openSidebar('74_Mind Spore',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\103_Flame's Lust.png" id="103_Flames Lust" data-flag="@X" onclick="openSidebar('103_Flames Lust',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\128_Hungering Tree.png" id="128_Hungering Tree" data-flag="@X" onclick="openSidebar('128_Hungering Tree',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\15_Healing Soul.png" id="15_Healing Soul" data-flag="@X" onclick="openSidebar('15_Healing Soul',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\44_Hopeful Apprentice.png" id="44_Hopeful Apprentice" data-flag="@X" onclick="openSidebar('44_Hopeful Apprentice',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\75_Oozing Trin.png" id="75_Oozing Trin" data-flag="@X" onclick="openSidebar('75_Oozing Trin',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\106_Heated Creation.png" id="106_Heated Creation" data-flag="@X" onclick="openSidebar('106_Heated Creation',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\129_Hunting Cub.png" id="129_Hunting Cub" data-flag="@X" onclick="openSidebar('129_Hunting Cub',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\16_Heavenly Magus.png" id="16_Heavenly Magus" data-flag="@X" onclick="openSidebar('16_Heavenly Magus',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\45_Hungry Whale.png" id="45_Hungry Whale" data-flag="@X" onclick="openSidebar('45_Hungry Whale',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\77_Return to Life.png" id="77_Return to Life" data-flag="@X" onclick="openSidebar('77_Return to Life',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\107_Molten Veins.png" id="107_Molten Veins" data-flag="@X" onclick="openSidebar('107_Molten Veins',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\131_Natural Purification.png" id="131_Natural Purification" data-flag="@X" onclick="openSidebar('131_Natural Purification',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\17_Imbued Life.png" id="17_Imbued Life" data-flag="@X" onclick="openSidebar('17_Imbued Life',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\46_Imagine.png" id="46_Imagine" data-flag="@X" onclick="openSidebar('46_Imagine',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\78_Rotting Mage.png" id="78_Rotting Mage" data-flag="@X" onclick="openSidebar('78_Rotting Mage',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\108_Nightly Slayer.png" id="108_Nightly Slayer" data-flag="@X" onclick="openSidebar('108_Nightly Slayer',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\132_New Growth.png" id="132_New Growth" data-flag="@X" onclick="openSidebar('132_New Growth',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\18_Lethargic Watcher.png" id="18_Lethargic Watcher" data-flag="@X" onclick="openSidebar('18_Lethargic Watcher',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\49_Ocean Dragon.png" id="49_Ocean Dragon" data-flag="@X" onclick="openSidebar('49_Ocean Dragon',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\79_Sadistic Torment.png" id="79_Sadistic Torment" data-flag="@X" onclick="openSidebar('79_Sadistic Torment',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\109_Rageful Mage.png" id="109_Rageful Mage" data-flag="@X" onclick="openSidebar('109_Rageful Mage',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\138_Singer of Creation.png" id="138_Singer of Creation" data-flag="@X" onclick="openSidebar('138_Singer of Creation',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\19_Pure World.png" id="19_Pure World" data-flag="@X" onclick="openSidebar('19_Pure World',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\50_Pull from Creation.png" id="50_Pull from Creation" data-flag="@X" onclick="openSidebar('50_Pull from Creation',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\80_Sickening Radiance.png" id="80_Sickening Radiance" data-flag="@X" onclick="openSidebar('80_Sickening Radiance',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\110_Reunion with Fire.png" id="110_Reunion with Fire" data-flag="@X" onclick="openSidebar('110_Reunion with Fire',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\139_Sorrowful Elf.png" id="139_Sorrowful Elf" data-flag="@X" onclick="openSidebar('139_Sorrowful Elf',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\24_Savior of Daerik.png" id="24_Savior of Daerik" data-flag="@X" onclick="openSidebar('24_Savior of Daerik',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\52_Sederin Sneak.png" id="52_Sederin Sneak" data-flag="@X" onclick="openSidebar('52_Sederin Sneak',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\81_Soaring Trin.png" id="81_Soaring Trin" data-flag="@X" onclick="openSidebar('81_Soaring Trin',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\111_Staggering Rocks.png" id="111_Staggering Rocks" data-flag="@X" onclick="openSidebar('111_Staggering Rocks',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\140_Spiderling.png" id="140_Spiderling" data-flag="@X" onclick="openSidebar('140_Spiderling',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\26_Spring Guard.png" id="26_Spring Guard" data-flag="@X" onclick="openSidebar('26_Spring Guard',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\53_Sederin Traveler.png" id="53_Sederin Traveler" data-flag="@X" onclick="openSidebar('53_Sederin Traveler',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\83_Spreading Disease.png" id="83_Spreading Disease" data-flag="@X" onclick="openSidebar('83_Spreading Disease',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\116_Volcanic Warrior.png" id="116_Volcanic Warrior" data-flag="@X" onclick="openSidebar('116_Volcanic Warrior',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\141_Spirit Caller.png" id="141_Spirit Caller" data-flag="@X" onclick="openSidebar('141_Spirit Caller',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\27_Sudden Peace.png" id="27_Sudden Peace" data-flag="@X" onclick="openSidebar('27_Sudden Peace',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\57_Sent Away.png" id="57_Sent Away" data-flag="@X" onclick="openSidebar('57_Sent Away',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\86_Trin Hatchling.png" id="86_Trin Hatchling" data-flag="@X" onclick="openSidebar('86_Trin Hatchling',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\117_Warren Fire.png" id="117_Warren Fire" data-flag="@X" onclick="openSidebar('117_Warren Fire',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\143_Sync with Nature.png" id="143_Sync with Nature" data-flag="@X" onclick="openSidebar('143_Sync with Nature',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\29_Wall of Belief.png" id="29_Wall of Belief" data-flag="@X" onclick="openSidebar('29_Wall of Belief',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\58_Timely Meddling.png" id="58_Timely Meddling" data-flag="@X" onclick="openSidebar('58_Timely Meddling',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\87_Trin Sulker.png" id="87_Trin Sulker" data-flag="@X" onclick="openSidebar('87_Trin Sulker',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\118_Wisp of Lightning.png" id="118_Wisp of Lightning" data-flag="@X" onclick="openSidebar('118_Wisp of Lightning',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\144_Twist Anew.png" id="144_Twist Anew" data-flag="@X" onclick="openSidebar('144_Twist Anew',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\59_Unformed.png" id="59_Unformed" data-flag="@X" onclick="openSidebar('59_Unformed',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\88_Vitality Debt.png" id="88_Vitality Debt" data-flag="@X" onclick="openSidebar('88_Vitality Debt',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\147_Verdalian Scout.png" id="147_Verdalian Scout" data-flag="@X" onclick="openSidebar('147_Verdalian Scout',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-<div id="gold" class="anchor"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\149_Destructive Forces.png" id="149_Destructive Forces" data-flag="@X" onclick="openSidebar('149_Destructive Forces',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\155_Valifax, the Created.png" id="155_Valifax, the Created" data-flag="@X" onclick="openSidebar('155_Valifax, the Created',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\150_Domineering Spirit.png" id="150_Domineering Spirit" data-flag="@X" onclick="openSidebar('150_Domineering Spirit',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\152_Fog of Fire.png" id="152_Fog of Fire" data-flag="@X" onclick="openSidebar('152_Fog of Fire',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\151_Fake Growth.png" id="151_Fake Growth" data-flag="@X" onclick="openSidebar('151_Fake Growth',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\153_Herald of the Guardian.png" id="153_Herald of the Guardian" data-flag="@X" onclick="openSidebar('153_Herald of the Guardian',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\154_Slumbering Guardian.png" id="154_Slumbering Guardian" data-flag="@X" onclick="openSidebar('154_Slumbering Guardian',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-<div id="colorless" class="anchor"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\161_Scythe of Plague.png" id="161_Scythe of Plague" data-flag="@X" onclick="openSidebar('161_Scythe of Plague',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\157_Bow of Light.png" id="157_Bow of Light" data-flag="@X" onclick="openSidebar('157_Bow of Light',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\160_Portal Carver.png" id="160_Portal Carver" data-flag="@X" onclick="openSidebar('160_Portal Carver',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\163_Staff of Creation.png" id="163_Staff of Creation" data-flag="@X" onclick="openSidebar('163_Staff of Creation',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\164_Sword of Flames.png" id="164_Sword of Flames" data-flag="@X" onclick="openSidebar('164_Sword of Flames',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\166_Whip of Obedience.png" id="166_Whip of Obedience" data-flag="@X" onclick="openSidebar('166_Whip of Obedience',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\156_Bountiful Feast.png" id="156_Bountiful Feast" data-flag="@X" onclick="openSidebar('156_Bountiful Feast',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\158_Creation Chalice.png" id="158_Creation Chalice" data-flag="@X" onclick="openSidebar('158_Creation Chalice',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\159_Fireworks.png" id="159_Fireworks" data-flag="@X" onclick="openSidebar('159_Fireworks',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\162_Spellcrusher.png" id="162_Spellcrusher" data-flag="@X" onclick="openSidebar('162_Spellcrusher',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\165_Titannic Artifice.png" id="165_Titannic Artifice" data-flag="@X" onclick="openSidebar('165_Titannic Artifice',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\168_Daerik.png" id="168_Daerik" data-flag="@X" onclick="openSidebar('168_Daerik',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\170_House of Sederin.png" id="170_House of Sederin" data-flag="@X" onclick="openSidebar('170_House of Sederin',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\172_Trin Breeding Pool.png" id="172_Trin Breeding Pool" data-flag="@X" onclick="openSidebar('172_Trin Breeding Pool',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\171_Hyund.png" id="171_Hyund" data-flag="@X" onclick="openSidebar('171_Hyund',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\173_Verdalia.png" id="173_Verdalia" data-flag="@X" onclick="openSidebar('173_Verdalia',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\167_Center of Cretio.png" id="167_Center of Cretio" data-flag="@X" onclick="openSidebar('167_Center of Cretio',false)"></div>
-			<div class="container"><img alt="/sets\CRC-files\img\169_Edge of Creation.png" id="169_Edge of Creation" data-flag="@X" onclick="openSidebar('169_Edge of Creation',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+					<div class="container"><img alt="/sets\CRC-files\img\28_Terenal, Lord of Angels.png" id="28_Terenal, Lord of Angels" data-flag="@X" onclick="openSidebar('28_Terenal, Lord of Angels',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\32_Crinturin, the Ancient.png" id="32_Crinturin, the Ancient" data-flag="@X" onclick="openSidebar('32_Crinturin, the Ancient',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\61_Axidern, the Reborn.png" id="61_Axidern, the Reborn" data-flag="@X" onclick="openSidebar('61_Axidern, the Reborn',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\115_Volcanic Mage.png" id="115_Volcanic Mage" data-flag="@X" onclick="openSidebar('115_Volcanic Mage',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\142_Sreanis, Spider Queen.png" id="142_Sreanis, Spider Queen" data-flag="@X" onclick="openSidebar('142_Sreanis, Spider Queen',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\4_Brave the Dark.png" id="4_Brave the Dark" data-flag="@X" onclick="openSidebar('4_Brave the Dark',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\54_Seer's Glass.png" id="54_Seers Glass" data-flag="@X" onclick="openSidebar('54_Seers Glass',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\73_Imbued Remains.png" id="73_Imbued Remains" data-flag="@X" onclick="openSidebar('73_Imbued Remains',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\90_Absorb Pain.png" id="90_Absorb Pain" data-flag="@X" onclick="openSidebar('90_Absorb Pain',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\146_Verdalian Chantress.png" id="146_Verdalian Chantress" data-flag="@X" onclick="openSidebar('146_Verdalian Chantress',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\5_Commander of the Heavens.png" id="5_Commander of the Heavens" data-flag="@X" onclick="openSidebar('5_Commander of the Heavens',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\30_Ambitious Student.png" id="30_Ambitious Student" data-flag="@X" onclick="openSidebar('30_Ambitious Student',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\60_Aen Blackripper.png" id="60_Aen Blackripper" data-flag="@X" onclick="openSidebar('60_Aen Blackripper',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\93_Burning Radiance.png" id="93_Burning Radiance" data-flag="@X" onclick="openSidebar('93_Burning Radiance',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\119_Breeding Titan.png" id="119_Breeding Titan" data-flag="@X" onclick="openSidebar('119_Breeding Titan',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\12_Enduring Peace.png" id="12_Enduring Peace" data-flag="@X" onclick="openSidebar('12_Enduring Peace',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\35_Down the Depths.png" id="35_Down the Depths" data-flag="@X" onclick="openSidebar('35_Down the Depths',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\67_Enduring Sorrow.png" id="67_Enduring Sorrow" data-flag="@X" onclick="openSidebar('67_Enduring Sorrow',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\105_Forge-Belly Dragon.png" id="105_Forge-Belly Dragon" data-flag="@X" onclick="openSidebar('105_Forge-Belly Dragon',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\124_Enhanced Growth.png" id="124_Enhanced Growth" data-flag="@X" onclick="openSidebar('124_Enhanced Growth',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\22_Return to Form.png" id="22_Return to Form" data-flag="@X" onclick="openSidebar('22_Return to Form',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\40_Guidance from Creation.png" id="40_Guidance from Creation" data-flag="@X" onclick="openSidebar('40_Guidance from Creation',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\70_Gradis, Tyrant.png" id="70_Gradis, Tyrant" data-flag="@X" onclick="openSidebar('70_Gradis, Tyrant',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\113_Verintip the Enraged.png" id="113_Verintip the Enraged" data-flag="@X" onclick="openSidebar('113_Verintip the Enraged',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\126_Fuel Creation.png" id="126_Fuel Creation" data-flag="@X" onclick="openSidebar('126_Fuel Creation',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\25_Sentinel of Daerik.png" id="25_Sentinel of Daerik" data-flag="@X" onclick="openSidebar('25_Sentinel of Daerik',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\55_Selective Education.png" id="55_Selective Education" data-flag="@X" onclick="openSidebar('55_Selective Education',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\82_Spiralling Sickness.png" id="82_Spiralling Sickness" data-flag="@X" onclick="openSidebar('82_Spiralling Sickness',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\114_Volcanic Forces.png" id="114_Volcanic Forces" data-flag="@X" onclick="openSidebar('114_Volcanic Forces',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\134_Purified Spider.png" id="134_Purified Spider" data-flag="@X" onclick="openSidebar('134_Purified Spider',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\1_Angelic Herald.png" id="1_Angelic Herald" data-flag="@X" onclick="openSidebar('1_Angelic Herald',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\56_Selena Blackburn.png" id="56_Selena Blackburn" data-flag="@X" onclick="openSidebar('56_Selena Blackburn',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\85_Thirst for Life.png" id="85_Thirst for Life" data-flag="@X" onclick="openSidebar('85_Thirst for Life',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\92_Bright Spark.png" id="92_Bright Spark" data-flag="@X" onclick="openSidebar('92_Bright Spark',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\136_Roaring Behemoth.png" id="136_Roaring Behemoth" data-flag="@X" onclick="openSidebar('136_Roaring Behemoth',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\2_Angelic Knight.png" id="2_Angelic Knight" data-flag="@X" onclick="openSidebar('2_Angelic Knight',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\31_Blasphemous Creation.png" id="31_Blasphemous Creation" data-flag="@X" onclick="openSidebar('31_Blasphemous Creation',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\63_Birth from Death.png" id="63_Birth from Death" data-flag="@X" onclick="openSidebar('63_Birth from Death',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\94_Carved Stone.png" id="94_Carved Stone" data-flag="@X" onclick="openSidebar('94_Carved Stone',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\121_Climbing Vines.png" id="121_Climbing Vines" data-flag="@X" onclick="openSidebar('121_Climbing Vines',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\3_Blinding Rays.png" id="3_Blinding Rays" data-flag="@X" onclick="openSidebar('3_Blinding Rays',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\36_Enlightening Radiance.png" id="36_Enlightening Radiance" data-flag="@X" onclick="openSidebar('36_Enlightening Radiance',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\64_Blackout.png" id="64_Blackout" data-flag="@X" onclick="openSidebar('64_Blackout',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\95_Chain of Sparks.png" id="95_Chain of Sparks" data-flag="@X" onclick="openSidebar('95_Chain of Sparks',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\123_Cycle of Creation.png" id="123_Cycle of Creation" data-flag="@X" onclick="openSidebar('123_Cycle of Creation',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\6_Cycle of Life.png" id="6_Cycle of Life" data-flag="@X" onclick="openSidebar('6_Cycle of Life',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\37_Excess Energy.png" id="37_Excess Energy" data-flag="@X" onclick="openSidebar('37_Excess Energy',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\66_Cycle of Death.png" id="66_Cycle of Death" data-flag="@X" onclick="openSidebar('66_Cycle of Death',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\97_Cloak of Flames.png" id="97_Cloak of Flames" data-flag="@X" onclick="openSidebar('97_Cloak of Flames',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\130_Magical Growth.png" id="130_Magical Growth" data-flag="@X" onclick="openSidebar('130_Magical Growth',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\14_Healing Radiance.png" id="14_Healing Radiance" data-flag="@X" onclick="openSidebar('14_Healing Radiance',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\39_Greedy Mage.png" id="39_Greedy Mage" data-flag="@X" onclick="openSidebar('39_Greedy Mage',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\69_Gradis Recruiter.png" id="69_Gradis Recruiter" data-flag="@X" onclick="openSidebar('69_Gradis Recruiter',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\98_Cremate the Dead.png" id="98_Cremate the Dead" data-flag="@X" onclick="openSidebar('98_Cremate the Dead',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\133_Plated Behemoth.png" id="133_Plated Behemoth" data-flag="@X" onclick="openSidebar('133_Plated Behemoth',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\20_Rejected.png" id="20_Rejected" data-flag="@X" onclick="openSidebar('20_Rejected',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\41_Guided Artifice.png" id="41_Guided Artifice" data-flag="@X" onclick="openSidebar('41_Guided Artifice',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\72_Grotesque Plaguebearer.png" id="72_Grotesque Plaguebearer" data-flag="@X" onclick="openSidebar('72_Grotesque Plaguebearer',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\100_Cycle of Rage.png" id="100_Cycle of Rage" data-flag="@X" onclick="openSidebar('100_Cycle of Rage',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\135_Ring of Growth.png" id="135_Ring of Growth" data-flag="@X" onclick="openSidebar('135_Ring of Growth',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\21_Return to Existence.png" id="21_Return to Existence" data-flag="@X" onclick="openSidebar('21_Return to Existence',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\47_Insignificant.png" id="47_Insignificant" data-flag="@X" onclick="openSidebar('47_Insignificant',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\76_Recruit from Death.png" id="76_Recruit from Death" data-flag="@X" onclick="openSidebar('76_Recruit from Death',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\104_Flaming Descent.png" id="104_Flaming Descent" data-flag="@X" onclick="openSidebar('104_Flaming Descent',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\137_Serrated Moss.png" id="137_Serrated Moss" data-flag="@X" onclick="openSidebar('137_Serrated Moss',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\23_Rising Hope.png" id="23_Rising Hope" data-flag="@X" onclick="openSidebar('23_Rising Hope',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\48_Molding Worlds.png" id="48_Molding Worlds" data-flag="@X" onclick="openSidebar('48_Molding Worlds',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\84_Starving Trin.png" id="84_Starving Trin" data-flag="@X" onclick="openSidebar('84_Starving Trin',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\112_Stoke the Hearts.png" id="112_Stoke the Hearts" data-flag="@X" onclick="openSidebar('112_Stoke the Hearts',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\145_Unbearable Attraction.png" id="145_Unbearable Attraction" data-flag="@X" onclick="openSidebar('145_Unbearable Attraction',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\7_Daerik Militia.png" id="7_Daerik Militia" data-flag="@X" onclick="openSidebar('7_Daerik Militia',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\51_Rainstorm.png" id="51_Rainstorm" data-flag="@X" onclick="openSidebar('51_Rainstorm',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\89_Willful Control.png" id="89_Willful Control" data-flag="@X" onclick="openSidebar('89_Willful Control',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\91_Avalanche Giant.png" id="91_Avalanche Giant" data-flag="@X" onclick="openSidebar('91_Avalanche Giant',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\148_Verdant Spider.png" id="148_Verdant Spider" data-flag="@X" onclick="openSidebar('148_Verdant Spider',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\8_Darting Swordsman.png" id="8_Darting Swordsman" data-flag="@X" onclick="openSidebar('8_Darting Swordsman',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\33_Cycle of Lies.png" id="33_Cycle of Lies" data-flag="@X" onclick="openSidebar('33_Cycle of Lies',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\62_Banished Mage.png" id="62_Banished Mage" data-flag="@X" onclick="openSidebar('62_Banished Mage',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\96_Channel Creation.png" id="96_Channel Creation" data-flag="@X" onclick="openSidebar('96_Channel Creation',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\120_Clawed Hunter.png" id="120_Clawed Hunter" data-flag="@X" onclick="openSidebar('120_Clawed Hunter',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\9_Disallowed.png" id="9_Disallowed" data-flag="@X" onclick="openSidebar('9_Disallowed',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\34_Dampening Mage.png" id="34_Dampening Mage" data-flag="@X" onclick="openSidebar('34_Dampening Mage',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\65_Crippled Angel.png" id="65_Crippled Angel" data-flag="@X" onclick="openSidebar('65_Crippled Angel',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\99_Crumble to Dust.png" id="99_Crumble to Dust" data-flag="@X" onclick="openSidebar('99_Crumble to Dust',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\122_Collapse.png" id="122_Collapse" data-flag="@X" onclick="openSidebar('122_Collapse',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\10_Disciple of Angels.png" id="10_Disciple of Angels" data-flag="@X" onclick="openSidebar('10_Disciple of Angels',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\38_Fake Blame.png" id="38_Fake Blame" data-flag="@X" onclick="openSidebar('38_Fake Blame',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\68_Festering Mists.png" id="68_Festering Mists" data-flag="@X" onclick="openSidebar('68_Festering Mists',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\101_Earth Negation.png" id="101_Earth Negation" data-flag="@X" onclick="openSidebar('101_Earth Negation',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\125_Feeding Radiance.png" id="125_Feeding Radiance" data-flag="@X" onclick="openSidebar('125_Feeding Radiance',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\11_Eccentric Wisp.png" id="11_Eccentric Wisp" data-flag="@X" onclick="openSidebar('11_Eccentric Wisp',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\42_Hatchling of Crinturin.png" id="42_Hatchling of Crinturin" data-flag="@X" onclick="openSidebar('42_Hatchling of Crinturin',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\71_Gradis's Guard.png" id="71_Gradiss Guard" data-flag="@X" onclick="openSidebar('71_Gradiss Guard',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\102_Flame Worshiper.png" id="102_Flame Worshiper" data-flag="@X" onclick="openSidebar('102_Flame Worshiper',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\127_Guardian of Verdalia.png" id="127_Guardian of Verdalia" data-flag="@X" onclick="openSidebar('127_Guardian of Verdalia',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\13_Guard of Terenal.png" id="13_Guard of Terenal" data-flag="@X" onclick="openSidebar('13_Guard of Terenal',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\43_Hijacked Mana.png" id="43_Hijacked Mana" data-flag="@X" onclick="openSidebar('43_Hijacked Mana',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\74_Mind Spore.png" id="74_Mind Spore" data-flag="@X" onclick="openSidebar('74_Mind Spore',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\103_Flame's Lust.png" id="103_Flames Lust" data-flag="@X" onclick="openSidebar('103_Flames Lust',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\128_Hungering Tree.png" id="128_Hungering Tree" data-flag="@X" onclick="openSidebar('128_Hungering Tree',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\15_Healing Soul.png" id="15_Healing Soul" data-flag="@X" onclick="openSidebar('15_Healing Soul',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\44_Hopeful Apprentice.png" id="44_Hopeful Apprentice" data-flag="@X" onclick="openSidebar('44_Hopeful Apprentice',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\75_Oozing Trin.png" id="75_Oozing Trin" data-flag="@X" onclick="openSidebar('75_Oozing Trin',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\106_Heated Creation.png" id="106_Heated Creation" data-flag="@X" onclick="openSidebar('106_Heated Creation',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\129_Hunting Cub.png" id="129_Hunting Cub" data-flag="@X" onclick="openSidebar('129_Hunting Cub',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\16_Heavenly Magus.png" id="16_Heavenly Magus" data-flag="@X" onclick="openSidebar('16_Heavenly Magus',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\45_Hungry Whale.png" id="45_Hungry Whale" data-flag="@X" onclick="openSidebar('45_Hungry Whale',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\77_Return to Life.png" id="77_Return to Life" data-flag="@X" onclick="openSidebar('77_Return to Life',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\107_Molten Veins.png" id="107_Molten Veins" data-flag="@X" onclick="openSidebar('107_Molten Veins',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\131_Natural Purification.png" id="131_Natural Purification" data-flag="@X" onclick="openSidebar('131_Natural Purification',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\17_Imbued Life.png" id="17_Imbued Life" data-flag="@X" onclick="openSidebar('17_Imbued Life',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\46_Imagine.png" id="46_Imagine" data-flag="@X" onclick="openSidebar('46_Imagine',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\78_Rotting Mage.png" id="78_Rotting Mage" data-flag="@X" onclick="openSidebar('78_Rotting Mage',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\108_Nightly Slayer.png" id="108_Nightly Slayer" data-flag="@X" onclick="openSidebar('108_Nightly Slayer',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\132_New Growth.png" id="132_New Growth" data-flag="@X" onclick="openSidebar('132_New Growth',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\18_Lethargic Watcher.png" id="18_Lethargic Watcher" data-flag="@X" onclick="openSidebar('18_Lethargic Watcher',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\49_Ocean Dragon.png" id="49_Ocean Dragon" data-flag="@X" onclick="openSidebar('49_Ocean Dragon',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\79_Sadistic Torment.png" id="79_Sadistic Torment" data-flag="@X" onclick="openSidebar('79_Sadistic Torment',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\109_Rageful Mage.png" id="109_Rageful Mage" data-flag="@X" onclick="openSidebar('109_Rageful Mage',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\138_Singer of Creation.png" id="138_Singer of Creation" data-flag="@X" onclick="openSidebar('138_Singer of Creation',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\19_Pure World.png" id="19_Pure World" data-flag="@X" onclick="openSidebar('19_Pure World',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\50_Pull from Creation.png" id="50_Pull from Creation" data-flag="@X" onclick="openSidebar('50_Pull from Creation',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\80_Sickening Radiance.png" id="80_Sickening Radiance" data-flag="@X" onclick="openSidebar('80_Sickening Radiance',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\110_Reunion with Fire.png" id="110_Reunion with Fire" data-flag="@X" onclick="openSidebar('110_Reunion with Fire',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\139_Sorrowful Elf.png" id="139_Sorrowful Elf" data-flag="@X" onclick="openSidebar('139_Sorrowful Elf',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\24_Savior of Daerik.png" id="24_Savior of Daerik" data-flag="@X" onclick="openSidebar('24_Savior of Daerik',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\52_Sederin Sneak.png" id="52_Sederin Sneak" data-flag="@X" onclick="openSidebar('52_Sederin Sneak',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\81_Soaring Trin.png" id="81_Soaring Trin" data-flag="@X" onclick="openSidebar('81_Soaring Trin',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\111_Staggering Rocks.png" id="111_Staggering Rocks" data-flag="@X" onclick="openSidebar('111_Staggering Rocks',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\140_Spiderling.png" id="140_Spiderling" data-flag="@X" onclick="openSidebar('140_Spiderling',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\26_Spring Guard.png" id="26_Spring Guard" data-flag="@X" onclick="openSidebar('26_Spring Guard',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\53_Sederin Traveler.png" id="53_Sederin Traveler" data-flag="@X" onclick="openSidebar('53_Sederin Traveler',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\83_Spreading Disease.png" id="83_Spreading Disease" data-flag="@X" onclick="openSidebar('83_Spreading Disease',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\116_Volcanic Warrior.png" id="116_Volcanic Warrior" data-flag="@X" onclick="openSidebar('116_Volcanic Warrior',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\141_Spirit Caller.png" id="141_Spirit Caller" data-flag="@X" onclick="openSidebar('141_Spirit Caller',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\27_Sudden Peace.png" id="27_Sudden Peace" data-flag="@X" onclick="openSidebar('27_Sudden Peace',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\57_Sent Away.png" id="57_Sent Away" data-flag="@X" onclick="openSidebar('57_Sent Away',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\86_Trin Hatchling.png" id="86_Trin Hatchling" data-flag="@X" onclick="openSidebar('86_Trin Hatchling',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\117_Warren Fire.png" id="117_Warren Fire" data-flag="@X" onclick="openSidebar('117_Warren Fire',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\143_Sync with Nature.png" id="143_Sync with Nature" data-flag="@X" onclick="openSidebar('143_Sync with Nature',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\29_Wall of Belief.png" id="29_Wall of Belief" data-flag="@X" onclick="openSidebar('29_Wall of Belief',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\58_Timely Meddling.png" id="58_Timely Meddling" data-flag="@X" onclick="openSidebar('58_Timely Meddling',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\87_Trin Sulker.png" id="87_Trin Sulker" data-flag="@X" onclick="openSidebar('87_Trin Sulker',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\118_Wisp of Lightning.png" id="118_Wisp of Lightning" data-flag="@X" onclick="openSidebar('118_Wisp of Lightning',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\144_Twist Anew.png" id="144_Twist Anew" data-flag="@X" onclick="openSidebar('144_Twist Anew',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\59_Unformed.png" id="59_Unformed" data-flag="@X" onclick="openSidebar('59_Unformed',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\88_Vitality Debt.png" id="88_Vitality Debt" data-flag="@X" onclick="openSidebar('88_Vitality Debt',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\147_Verdalian Scout.png" id="147_Verdalian Scout" data-flag="@X" onclick="openSidebar('147_Verdalian Scout',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div id="gold" class="anchor"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\149_Destructive Forces.png" id="149_Destructive Forces" data-flag="@X" onclick="openSidebar('149_Destructive Forces',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\155_Valifax, the Created.png" id="155_Valifax, the Created" data-flag="@X" onclick="openSidebar('155_Valifax, the Created',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\150_Domineering Spirit.png" id="150_Domineering Spirit" data-flag="@X" onclick="openSidebar('150_Domineering Spirit',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\152_Fog of Fire.png" id="152_Fog of Fire" data-flag="@X" onclick="openSidebar('152_Fog of Fire',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\151_Fake Growth.png" id="151_Fake Growth" data-flag="@X" onclick="openSidebar('151_Fake Growth',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\153_Herald of the Guardian.png" id="153_Herald of the Guardian" data-flag="@X" onclick="openSidebar('153_Herald of the Guardian',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\154_Slumbering Guardian.png" id="154_Slumbering Guardian" data-flag="@X" onclick="openSidebar('154_Slumbering Guardian',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div id="colorless" class="anchor"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\161_Scythe of Plague.png" id="161_Scythe of Plague" data-flag="@X" onclick="openSidebar('161_Scythe of Plague',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\157_Bow of Light.png" id="157_Bow of Light" data-flag="@X" onclick="openSidebar('157_Bow of Light',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\160_Portal Carver.png" id="160_Portal Carver" data-flag="@X" onclick="openSidebar('160_Portal Carver',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\163_Staff of Creation.png" id="163_Staff of Creation" data-flag="@X" onclick="openSidebar('163_Staff of Creation',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\164_Sword of Flames.png" id="164_Sword of Flames" data-flag="@X" onclick="openSidebar('164_Sword of Flames',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\166_Whip of Obedience.png" id="166_Whip of Obedience" data-flag="@X" onclick="openSidebar('166_Whip of Obedience',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\156_Bountiful Feast.png" id="156_Bountiful Feast" data-flag="@X" onclick="openSidebar('156_Bountiful Feast',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\158_Creation Chalice.png" id="158_Creation Chalice" data-flag="@X" onclick="openSidebar('158_Creation Chalice',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\159_Fireworks.png" id="159_Fireworks" data-flag="@X" onclick="openSidebar('159_Fireworks',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\162_Spellcrusher.png" id="162_Spellcrusher" data-flag="@X" onclick="openSidebar('162_Spellcrusher',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\165_Titannic Artifice.png" id="165_Titannic Artifice" data-flag="@X" onclick="openSidebar('165_Titannic Artifice',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\168_Daerik.png" id="168_Daerik" data-flag="@X" onclick="openSidebar('168_Daerik',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\170_House of Sederin.png" id="170_House of Sederin" data-flag="@X" onclick="openSidebar('170_House of Sederin',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\172_Trin Breeding Pool.png" id="172_Trin Breeding Pool" data-flag="@X" onclick="openSidebar('172_Trin Breeding Pool',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\171_Hyund.png" id="171_Hyund" data-flag="@X" onclick="openSidebar('171_Hyund',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\173_Verdalia.png" id="173_Verdalia" data-flag="@X" onclick="openSidebar('173_Verdalia',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\167_Center of Cretio.png" id="167_Center of Cretio" data-flag="@X" onclick="openSidebar('167_Center of Cretio',false)"></div>
+				<div class="container"><img alt="/sets\CRC-files\img\169_Edge of Creation.png" id="169_Edge of Creation" data-flag="@X" onclick="openSidebar('169_Edge of Creation',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
 	</div>
-</div>
+	</div>
 	<div class="sidebar" id="sidebar">
 		<div class="sidebar-container">
 			<img id="sidebar_img" class="sidebar-img" src="/img/er.png">
@@ -480,7 +499,7 @@
 				card_list_arrayified = card_list.cards;
 
 		preloadImgs = document.getElementsByClassName('preload-hidden');
-		
+
 		let images_loaded = [];
 
 		do {
@@ -570,7 +589,7 @@
 	function openSidebar(id, h = false) {
 		horizontal = h;
 		scroll_pct = window.scrollY / document.documentElement.scrollHeight;
-		
+
 		document.getElementById('sidebar').style.display = 'grid';
 
 		const rotated_img = document.getElementById('sidebar_h_img');
@@ -601,7 +620,7 @@
 			document.getElementById('sidebar-flip-btn').style.display = 'none';
 		}
 		document.getElementById('main-content').style.width = '60%';
-		
+
 		scroll_pos = scroll_pct * document.documentElement.scrollHeight;
 		window.scrollTo(window.scrollX, scroll_pos);
 		setSidebarTop();
@@ -612,10 +631,28 @@
 
 		document.getElementById('sidebar').style.display = 'none';
 		document.getElementById('main-content').style.width = '100%';
-		
+
 
 		scroll_pos = scroll_pct * document.documentElement.scrollHeight;
 		window.scrollTo(window.scrollX, scroll_pos);
+	}
+
+	function rolldown() {
+		var sets = document.querySelectorAll('.inactive');
+		for(const set of sets)
+		{
+			set.style.height = "auto";
+			set.style.margin = "5px";
+		}
+	}
+
+	function rollup() {
+		var sets = document.querySelectorAll('.inactive');
+		for(const set of sets)
+		{
+			set.style.height = "0px";
+			set.style.margin = "0px 5px";
+		}
 	}
 
 	document.getElementById("search").addEventListener("keypress", function(event) {

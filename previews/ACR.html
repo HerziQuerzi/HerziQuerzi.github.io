@@ -5,6 +5,10 @@
 	<link rel="stylesheet" href="/resources/header.css">
 	<title>ACR visual preview</title>
 	<style>
+		@font-face {
+			font-family: Beleren;
+			src: url('/resources/beleren.ttf');
+		}
 		body {
 			font-family: Arial, sans-serif;
 			margin: 0;
@@ -82,7 +86,7 @@
 		.banner {
 			width: 100%;
 			height: auto;
-			padding-top: 20px;
+			padding-top: 80px;
 			padding-bottom: 50px;
 		}
 		.logo {
@@ -118,36 +122,49 @@
 			background-size: contain;
 			background-position: center;
 		}
-		.icon-bar {
-			display: grid;
-			grid-template-columns: repeat(10, 3fr 2fr) 3fr;
-			gap: 1px;
-			padding-left: 5%;
-			padding-right: 5%;
-			padding-top: 2%;
-			padding-bottom: 1%;
-			justify-items: center;
+		.dropdown {
+			background: rgba(23, 23, 23, 0.8);
+			border-radius: 8px;
+			position: absolute;
+			left: 10%;
+			width: fit-content;
+			margin: 20px 0;
+			padding: 5px 0;
+			display: flex;
+			flex-direction: column;
+			z-index: 3;
+		}
+		.dropdown .set-bar {
+			font-family: Beleren;
+			font-size: 20px;
+			text-decoration: none;
+			color: #e3e3e3;
+			display: flex;
+			gap: 10px;
 			align-items: center;
+			padding: 0 12px;
+			margin: 5px;
 		}
-		.icon-bar .icon img {
-			width: 90%;
-			max-width: 80px;
-			height: auto;
-			display: block;
-			padding: 5%;
-			margin: auto;
-			text-align: center;
+		.dropdown .set-bar:hover {
+			background: rgba(163, 163, 163, 0.5);
+			color: #f3f3f3;
 		}
-		.icon-bar .dot img {
-			width: 50%;
-			max-width: 65px;
-			height: auto;
-			display: block;
-			margin: auto;
-			text-align: center;
+		.dropdown .set-bar img {
+			width: 32px;
+		}
+		.dropdown .inactive {
+			height: 0px;
+			overflow: hidden;
+			margin: 0px 5px;
 		}
 		.preload-hidden {
 			display: none;
+		}
+		.addenda-container {
+			text-align: center;
+			width: fit-content;
+			max-width: 1200px;
+			padding: 0 5%;
 		}
 		/* This is here to enable the stickiness in a Float environment. I don't know why it works but it does */
 		.footer {
@@ -175,7 +192,7 @@
 		<img class="preload-hidden" src="/sets/IAH-files/icon.png" />
 		<img class="preload-hidden" src="/sets/CRC-files/icon.png" />
 		<img class="preload-hidden" id="bg" src="/sets/ACR-files/bg.png" />
-		
+
 		<div class="header">
 		<div class="search-grid">
 			<a href="/"><img class="sg-logo" src="/img/banner.png"></a>
@@ -187,276 +204,278 @@
 		</div>
 	</div>
 
-	<div class="icon-bar">
-			<div class="icon"><a href="HQZ"><img src="/sets/HQZ-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="LRH"><img src="/sets/LRH-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="INK"><img src="/sets/INK-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="ACA"><img src="/sets/ACA-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="BYK"><img src="/sets/BYK-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="BTJ"><img src="/sets/BTJ-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="ACR"><img src="/sets/ACR-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="HVF"><img src="/sets/HVF-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="MAC"><img src="/sets/MAC-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="CAC"><img src="/sets/CAC-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="PFP"><img src="/sets/PFP-files/icon.png"></img></a></div>
-		<div class="icon"><a href="TWR"><img src="/sets/TWR-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="MMC"><img src="/sets/MMC-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="MMT"><img src="/sets/MMT-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="IAH"><img src="/sets/IAH-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="CRC"><img src="/sets/CRC-files/icon.png"></img></a></div>
-
+	<div class="dropdown" onmouseenter="rolldown()" onmouseleave="rollup()">
+	
+		<a class="set-bar" href="ACR"><img src="/sets/ACR-files/icon.png">Arcanum: Reforged</a>
+	
+		<a class="set-bar inactive" href="HQZ"><img src="/sets/HQZ-files/icon.png">Hunting Quiet Horizons</a>
+	
+		<a class="set-bar inactive" href="LRH"><img src="/sets/LRH-files/icon.png">The Long Road Home</a>
+	
+		<a class="set-bar inactive" href="INK"><img src="/sets/INK-files/icon.png">Across the Ink Sea</a>
+	
+		<a class="set-bar inactive" href="ACA"><img src="/sets/ACA-files/icon.png">Arcanum Academia</a>
+	
+		<a class="set-bar inactive" href="BYK"><img src="/sets/BYK-files/icon.png">Beyond Our Ken</a>
+	
+		<a class="set-bar inactive" href="BTJ"><img src="/sets/BTJ-files/icon.png">Barten’s Journal</a>
+	
+		<a class="set-bar inactive" href="HVF"><img src="/sets/HVF-files/icon.png">Harvest Festival</a>
+	
+		<a class="set-bar inactive" href="MAC"><img src="/sets/MAC-files/icon.png">Memorium Arcanum</a>
+	
+		<a class="set-bar inactive" href="CAC"><img src="/sets/CAC-files/icon.png">Carpe Arcanum</a>
+	
+		<a class="set-bar inactive" href="PFP"><img src="/sets/PFP-files/icon.png">Plagues of Fretport</a>
+	
+		<a class="set-bar inactive" href="TWR"><img src="/sets/TWR-files/icon.png">A Tourney at Whiterun</a>
+	
+		<a class="set-bar inactive" href="MMC"><img src="/sets/MMC-files/icon.png">Memory’s Collapse</a>
+	
+		<a class="set-bar inactive" href="MMT"><img src="/sets/MMT-files/icon.png">Memory’s Tyranny</a>
+	
+		<a class="set-bar inactive" href="IAH"><img src="/sets/IAH-files/icon.png">Intrigue</a>
+	
+		<a class="set-bar inactive" href="CRC"><img src="/sets/CRC-files/icon.png">Cretio Created</a>
+	
 		</div>
 		<div class="banner">
 		<img class="logo" src="/sets/ACR-files/logo.png">
 		</div>
 		<div class="main-content" id="main-content">
 			<div class="grid-container">
-				<div class="container"><img alt="/sets\ACR-files\img\9_Felice, Adira's Salvation.png" id="9_Felice, Adiras Salvation" data-flag="@X" onclick="openSidebar('9_Felice, Adiras Salvation',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\36_Rahit, Immaculate Architect.png" id="36_Rahit, Immaculate Architect" data-flag="@X" onclick="openSidebar('36_Rahit, Immaculate Architect',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\57_Salva Tore.png" id="57_Salva Tore" data-flag="@X" onclick="openSidebar('57_Salva Tore',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\72_End of Worlds.png" id="72_End of Worlds" data-flag="@X" onclick="openSidebar('72_End of Worlds',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\91_Horizon Wayfarer.png" id="91_Horizon Wayfarer" data-flag="@X" onclick="openSidebar('91_Horizon Wayfarer',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\10_Furtive Witch.png" id="10_Furtive Witch" data-flag="@X" onclick="openSidebar('10_Furtive Witch',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\22_Aether Ascendant.png" id="22_Aether Ascendant" data-flag="@X" onclick="openSidebar('22_Aether Ascendant',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\45_Ceaseless Stalker.png" id="45_Ceaseless Stalker" data-flag="@X" onclick="openSidebar('45_Ceaseless Stalker',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\73_Iterating Artificer.png" id="73_Iterating Artificer" data-flag="@X" onclick="openSidebar('73_Iterating Artificer',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\92_Jara Incarnation.png" id="92_Jara Incarnation" data-flag="@X" onclick="openSidebar('92_Jara Incarnation',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\16_Paragon of Purity.png" id="16_Paragon of Purity" data-flag="@X" onclick="openSidebar('16_Paragon of Purity',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\33_Master of Masks.png" id="33_Master of Masks" data-flag="@X" onclick="openSidebar('33_Master of Masks',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\47_Corrosive Pact.png" id="47_Corrosive Pact" data-flag="@X" onclick="openSidebar('47_Corrosive Pact',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\77_Phoenix of the Burning Chord.png" id="77_Phoenix of the Burning Chord" data-flag="@X" onclick="openSidebar('77_Phoenix of the Burning Chord',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\100_Roving Scrounger.png" id="100_Roving Scrounger" data-flag="@X" onclick="openSidebar('100_Roving Scrounger',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\18_Sigil of Radiance.png" id="18_Sigil of Radiance" data-flag="@X" onclick="openSidebar('18_Sigil of Radiance',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\38_Spectrum Archmage.png" id="38_Spectrum Archmage" data-flag="@X" onclick="openSidebar('38_Spectrum Archmage',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\51_Final Omen.png" id="51_Final Omen" data-flag="@X" onclick="openSidebar('51_Final Omen',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\79_Scaletongue Mistress.png" id="79_Scaletongue Mistress" data-flag="@X" onclick="openSidebar('79_Scaletongue Mistress',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\103_Silkfur Hunter.png" id="103_Silkfur Hunter" data-flag="@X" onclick="openSidebar('103_Silkfur Hunter',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\19_Strayseeker Ranger.png" id="19_Strayseeker Ranger" data-flag="@X" onclick="openSidebar('19_Strayseeker Ranger',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\39_Sphinx of the Shifting Truth.png" id="39_Sphinx of the Shifting Truth" data-flag="@X" onclick="openSidebar('39_Sphinx of the Shifting Truth',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\55_Regent of Steel.png" id="55_Regent of Steel" data-flag="@X" onclick="openSidebar('55_Regent of Steel',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\81_Speaker of the Iris.png" id="81_Speaker of the Iris" data-flag="@X" onclick="openSidebar('81_Speaker of the Iris',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\85_Adiran Scryers.png" id="85_Adiran Scryers" data-flag="@X" onclick="openSidebar('85_Adiran Scryers',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\4_Alpine Martyr.png" id="4_Alpine Martyr" data-flag="@X" onclick="openSidebar('4_Alpine Martyr',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\23_Almgrove Ambassador.png" id="23_Almgrove Ambassador" data-flag="@X" onclick="openSidebar('23_Almgrove Ambassador',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\54_Once Betrayed.png" id="54_Once Betrayed" data-flag="@X" onclick="openSidebar('54_Once Betrayed',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\68_Ashbreath Phoenix.png" id="68_Ashbreath Phoenix" data-flag="@X" onclick="openSidebar('68_Ashbreath Phoenix',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\88_Colossus Tracker.png" id="88_Colossus Tracker" data-flag="@X" onclick="openSidebar('88_Colossus Tracker',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\6_Ceaseless Valiant.png" id="6_Ceaseless Valiant" data-flag="@X" onclick="openSidebar('6_Ceaseless Valiant',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\25_Clockwork Spellwork.png" id="25_Clockwork Spellwork" data-flag="@X" onclick="openSidebar('25_Clockwork Spellwork',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\58_Salva Tore's Vexation.png" id="58_Salva Tores Vexation" data-flag="@X" onclick="openSidebar('58_Salva Tores Vexation',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\69_Autumn Fae.png" id="69_Autumn Fae" data-flag="@X" onclick="openSidebar('69_Autumn Fae',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\93_Keystone Conjurer.png" id="93_Keystone Conjurer" data-flag="@X" onclick="openSidebar('93_Keystone Conjurer',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\7_Disassociate.png" id="7_Disassociate" data-flag="@X" onclick="openSidebar('7_Disassociate',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\26_Confirm Hypothesis.png" id="26_Confirm Hypothesis" data-flag="@X" onclick="openSidebar('26_Confirm Hypothesis',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\59_Shroud in Paranoia.png" id="59_Shroud in Paranoia" data-flag="@X" onclick="openSidebar('59_Shroud in Paranoia',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\75_Once Scarred.png" id="75_Once Scarred" data-flag="@X" onclick="openSidebar('75_Once Scarred',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\97_Once Abandoned.png" id="97_Once Abandoned" data-flag="@X" onclick="openSidebar('97_Once Abandoned',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\14_Lumenscale Rider.png" id="14_Lumenscale Rider" data-flag="@X" onclick="openSidebar('14_Lumenscale Rider',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\27_Disdainful Arcanist.png" id="27_Disdainful Arcanist" data-flag="@X" onclick="openSidebar('27_Disdainful Arcanist',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\61_Usurper of Steel.png" id="61_Usurper of Steel" data-flag="@X" onclick="openSidebar('61_Usurper of Steel',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\76_Paternal Pride.png" id="76_Paternal Pride" data-flag="@X" onclick="openSidebar('76_Paternal Pride',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\101_Ruins Remembered.png" id="101_Ruins Remembered" data-flag="@X" onclick="openSidebar('101_Ruins Remembered',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\15_Once Shunned.png" id="15_Once Shunned" data-flag="@X" onclick="openSidebar('15_Once Shunned',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\34_Once Denied.png" id="34_Once Denied" data-flag="@X" onclick="openSidebar('34_Once Denied',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\62_Whistling Blades.png" id="62_Whistling Blades" data-flag="@X" onclick="openSidebar('62_Whistling Blades',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\80_Shatterstone Wurm.png" id="80_Shatterstone Wurm" data-flag="@X" onclick="openSidebar('80_Shatterstone Wurm',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\102_Seek Refuge.png" id="102_Seek Refuge" data-flag="@X" onclick="openSidebar('102_Seek Refuge',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\17_Peace in Hesitation.png" id="17_Peace in Hesitation" data-flag="@X" onclick="openSidebar('17_Peace in Hesitation',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\41_Veil of Indecision.png" id="41_Veil of Indecision" data-flag="@X" onclick="openSidebar('41_Veil of Indecision',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\63_Young Necromancer.png" id="63_Young Necromancer" data-flag="@X" onclick="openSidebar('63_Young Necromancer',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\84_Warforged Mastery.png" id="84_Warforged Mastery" data-flag="@X" onclick="openSidebar('84_Warforged Mastery',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\86_Adiran Trailblazer.png" id="86_Adiran Trailblazer" data-flag="@X" onclick="openSidebar('86_Adiran Trailblazer',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\1_Adiran Emmigration.png" id="1_Adiran Emmigration" data-flag="@X" onclick="openSidebar('1_Adiran Emmigration',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\24_Arpechian Kraken.png" id="24_Arpechian Kraken" data-flag="@X" onclick="openSidebar('24_Arpechian Kraken',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\43_Blades of the Shifting Grave.png" id="43_Blades of the Shifting Grave" data-flag="@X" onclick="openSidebar('43_Blades of the Shifting Grave',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\64_Adiran Pyromaniac.png" id="64_Adiran Pyromaniac" data-flag="@X" onclick="openSidebar('64_Adiran Pyromaniac',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\87_Blade of Adira.png" id="87_Blade of Adira" data-flag="@X" onclick="openSidebar('87_Blade of Adira',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\2_Almgrove Silkblade.png" id="2_Almgrove Silkblade" data-flag="@X" onclick="openSidebar('2_Almgrove Silkblade',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\28_Distort Time.png" id="28_Distort Time" data-flag="@X" onclick="openSidebar('28_Distort Time',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\44_Boneyard Flock.png" id="44_Boneyard Flock" data-flag="@X" onclick="openSidebar('44_Boneyard Flock',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\65_Almgrove Ascendant.png" id="65_Almgrove Ascendant" data-flag="@X" onclick="openSidebar('65_Almgrove Ascendant',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\89_Foliage Hunter.png" id="89_Foliage Hunter" data-flag="@X" onclick="openSidebar('89_Foliage Hunter',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\3_Alpine Guardian.png" id="3_Alpine Guardian" data-flag="@X" onclick="openSidebar('3_Alpine Guardian',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\29_Edge of Adventure.png" id="29_Edge of Adventure" data-flag="@X" onclick="openSidebar('29_Edge of Adventure',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\46_Conquerer of the Forgotten.png" id="46_Conquerer of the Forgotten" data-flag="@X" onclick="openSidebar('46_Conquerer of the Forgotten',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\66_Almgrove Prodigy.png" id="66_Almgrove Prodigy" data-flag="@X" onclick="openSidebar('66_Almgrove Prodigy',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\90_Ghostblade Howler.png" id="90_Ghostblade Howler" data-flag="@X" onclick="openSidebar('90_Ghostblade Howler',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\5_Cadre Hawk.png" id="5_Cadre Hawk" data-flag="@X" onclick="openSidebar('5_Cadre Hawk',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\30_Jara Elemental.png" id="30_Jara Elemental" data-flag="@X" onclick="openSidebar('30_Jara Elemental',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\48_Dark Bargain.png" id="48_Dark Bargain" data-flag="@X" onclick="openSidebar('48_Dark Bargain',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\67_Arpechian Regent.png" id="67_Arpechian Regent" data-flag="@X" onclick="openSidebar('67_Arpechian Regent',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\94_Lichen Elemental.png" id="94_Lichen Elemental" data-flag="@X" onclick="openSidebar('94_Lichen Elemental',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\8_Dustcloud Striker.png" id="8_Dustcloud Striker" data-flag="@X" onclick="openSidebar('8_Dustcloud Striker',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\31_Jara Magehunter.png" id="31_Jara Magehunter" data-flag="@X" onclick="openSidebar('31_Jara Magehunter',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\49_Dissension Purger.png" id="49_Dissension Purger" data-flag="@X" onclick="openSidebar('49_Dissension Purger',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\70_Blistering Blur.png" id="70_Blistering Blur" data-flag="@X" onclick="openSidebar('70_Blistering Blur',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\95_Monstrous Viper.png" id="95_Monstrous Viper" data-flag="@X" onclick="openSidebar('95_Monstrous Viper',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\11_Guided Refugee.png" id="11_Guided Refugee" data-flag="@X" onclick="openSidebar('11_Guided Refugee',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\32_Jara Reservoir.png" id="32_Jara Reservoir" data-flag="@X" onclick="openSidebar('32_Jara Reservoir',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\50_Fading Lich.png" id="50_Fading Lich" data-flag="@X" onclick="openSidebar('50_Fading Lich',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\71_Blitz Hound.png" id="71_Blitz Hound" data-flag="@X" onclick="openSidebar('71_Blitz Hound',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\96_New Constellations.png" id="96_New Constellations" data-flag="@X" onclick="openSidebar('96_New Constellations',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\12_Headwind Glider.png" id="12_Headwind Glider" data-flag="@X" onclick="openSidebar('12_Headwind Glider',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\35_Preternatural Insight.png" id="35_Preternatural Insight" data-flag="@X" onclick="openSidebar('35_Preternatural Insight',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\52_Herald of Steel.png" id="52_Herald of Steel" data-flag="@X" onclick="openSidebar('52_Herald of Steel',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\74_Jara Ritual.png" id="74_Jara Ritual" data-flag="@X" onclick="openSidebar('74_Jara Ritual',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\98_Prismatic Leyline.png" id="98_Prismatic Leyline" data-flag="@X" onclick="openSidebar('98_Prismatic Leyline',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\13_Hold Dear.png" id="13_Hold Dear" data-flag="@X" onclick="openSidebar('13_Hold Dear',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\37_Recalculation.png" id="37_Recalculation" data-flag="@X" onclick="openSidebar('37_Recalculation',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\53_Marrow to Ash.png" id="53_Marrow to Ash" data-flag="@X" onclick="openSidebar('53_Marrow to Ash',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\78_Sanguine Replica.png" id="78_Sanguine Replica" data-flag="@X" onclick="openSidebar('78_Sanguine Replica',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\99_Refuge Tenders.png" id="99_Refuge Tenders" data-flag="@X" onclick="openSidebar('99_Refuge Tenders',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\20_Surrender to Grief.png" id="20_Surrender to Grief" data-flag="@X" onclick="openSidebar('20_Surrender to Grief',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\40_Swallowed Whole.png" id="40_Swallowed Whole" data-flag="@X" onclick="openSidebar('40_Swallowed Whole',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\56_Repent's Hand.png" id="56_Repents Hand" data-flag="@X" onclick="openSidebar('56_Repents Hand',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\82_Springstep Elemental.png" id="82_Springstep Elemental" data-flag="@X" onclick="openSidebar('82_Springstep Elemental',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\104_Verdant Haze.png" id="104_Verdant Haze" data-flag="@X" onclick="openSidebar('104_Verdant Haze',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\21_Valorous Charge.png" id="21_Valorous Charge" data-flag="@X" onclick="openSidebar('21_Valorous Charge',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\42_Wreckage Lurker.png" id="42_Wreckage Lurker" data-flag="@X" onclick="openSidebar('42_Wreckage Lurker',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\60_Struggle for Dominance.png" id="60_Struggle for Dominance" data-flag="@X" onclick="openSidebar('60_Struggle for Dominance',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\83_Stream of Thought.png" id="83_Stream of Thought" data-flag="@X" onclick="openSidebar('83_Stream of Thought',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-<div id="gold" class="anchor"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\105_Inspire Actuality.png" id="105_Inspire Actuality" data-flag="@X" onclick="openSidebar('105_Inspire Actuality',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\109_Buy Time.png" id="109_Buy Time" data-flag="@X" onclick="openSidebar('109_Buy Time',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\113_In Tragedy.png" id="113_In Tragedy" data-flag="@X" onclick="openSidebar('113_In Tragedy',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\115_Ardy, Youthful Geomancer.png" id="115_Ardy, Youthful Geomancer" data-flag="@X" onclick="openSidebar('115_Ardy, Youthful Geomancer',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\120_Griffon Surveyor.png" id="120_Griffon Surveyor" data-flag="@X" onclick="openSidebar('120_Griffon Surveyor',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\107_Stall Fate.png" id="107_Stall Fate" data-flag="@X" onclick="openSidebar('107_Stall Fate',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\110_Thought Blossom.png" id="110_Thought Blossom" data-flag="@X" onclick="openSidebar('110_Thought Blossom',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\114_Reckless Festivities.png" id="114_Reckless Festivities" data-flag="@X" onclick="openSidebar('114_Reckless Festivities',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\116_Lilypond Challenger.png" id="116_Lilypond Challenger" data-flag="@X" onclick="openSidebar('116_Lilypond Challenger',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\121_Through Worlds.png" id="121_Through Worlds" data-flag="@X" onclick="openSidebar('121_Through Worlds',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\106_Spellsword Elite.png" id="106_Spellsword Elite" data-flag="@X" onclick="openSidebar('106_Spellsword Elite',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\111_Withering Husk.png" id="111_Withering Husk" data-flag="@X" onclick="openSidebar('111_Withering Husk',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\112_Blessed Cinders.png" id="112_Blessed Cinders" data-flag="@X" onclick="openSidebar('112_Blessed Cinders',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\117_Somber Knight.png" id="117_Somber Knight" data-flag="@X" onclick="openSidebar('117_Somber Knight',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\119_Adiran Ambassador.png" id="119_Adiran Ambassador" data-flag="@X" onclick="openSidebar('119_Adiran Ambassador',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\108_Abyss Lurker.png" id="108_Abyss Lurker" data-flag="@X" onclick="openSidebar('108_Abyss Lurker',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\118_Worldrift Channeler.png" id="118_Worldrift Channeler" data-flag="@X" onclick="openSidebar('118_Worldrift Channeler',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\122_Cognitive Fumigator.png" id="122_Cognitive Fumigator" data-flag="@X" onclick="openSidebar('122_Cognitive Fumigator',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\125_Aerida, Envious Chronomancer.png" id="125_Aerida, Envious Chronomancer" data-flag="@X" onclick="openSidebar('125_Aerida, Envious Chronomancer',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\129_Act of Repentance.png" id="129_Act of Repentance" data-flag="@X" onclick="openSidebar('129_Act of Repentance',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\132_Champion of the Red Dawn.png" id="132_Champion of the Red Dawn" data-flag="@X" onclick="openSidebar('132_Champion of the Red Dawn',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\135_Conjure Realities.png" id="135_Conjure Realities" data-flag="@X" onclick="openSidebar('135_Conjure Realities',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\124_Tainted Savior.png" id="124_Tainted Savior" data-flag="@X" onclick="openSidebar('124_Tainted Savior',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\127_Compulsion's Voice.png" id="127_Compulsions Voice" data-flag="@X" onclick="openSidebar('127_Compulsions Voice',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\130_Appeal to the Ancestors.png" id="130_Appeal to the Ancestors" data-flag="@X" onclick="openSidebar('130_Appeal to the Ancestors',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\134_Wicked Blow.png" id="134_Wicked Blow" data-flag="@X" onclick="openSidebar('134_Wicked Blow',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\136_Contemplate Obscurity.png" id="136_Contemplate Obscurity" data-flag="@X" onclick="openSidebar('136_Contemplate Obscurity',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\123_Moonsliver Paragon.png" id="123_Moonsliver Paragon" data-flag="@X" onclick="openSidebar('123_Moonsliver Paragon',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\128_Ophidian Oracle.png" id="128_Ophidian Oracle" data-flag="@X" onclick="openSidebar('128_Ophidian Oracle',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\131_Archive Guardian.png" id="131_Archive Guardian" data-flag="@X" onclick="openSidebar('131_Archive Guardian',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\133_Repent's Champion.png" id="133_Repents Champion" data-flag="@X" onclick="openSidebar('133_Repents Champion',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\137_Lodestone Convergence.png" id="137_Lodestone Convergence" data-flag="@X" onclick="openSidebar('137_Lodestone Convergence',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\126_Almgrove Sentinel.png" id="126_Almgrove Sentinel" data-flag="@X" onclick="openSidebar('126_Almgrove Sentinel',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\138_Adiran Distractor.png" id="138_Adiran Distractor" data-flag="@X" onclick="openSidebar('138_Adiran Distractor',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\139_Mirrorplate Exemplar.png" id="139_Mirrorplate Exemplar" data-flag="@X" onclick="openSidebar('139_Mirrorplate Exemplar',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\140_Repent, Daughter of Fallacy.png" id="140_Repent, Daughter of Fallacy" data-flag="@X" onclick="openSidebar('140_Repent, Daughter of Fallacy',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-<div id="colorless" class="anchor"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\141_Fate Charm.png" id="141_Fate Charm" data-flag="@X" onclick="openSidebar('141_Fate Charm',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\142_Giltwork Legacy.png" id="142_Giltwork Legacy" data-flag="@X" onclick="openSidebar('142_Giltwork Legacy',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\143_Mechanized Ideal.png" id="143_Mechanized Ideal" data-flag="@X" onclick="openSidebar('143_Mechanized Ideal',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\145_Seeking Sword.png" id="145_Seeking Sword" data-flag="@X" onclick="openSidebar('145_Seeking Sword',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\144_Overgrown Tower.png" id="144_Overgrown Tower" data-flag="@X" onclick="openSidebar('144_Overgrown Tower',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\146_Tutelage Artifice.png" id="146_Tutelage Artifice" data-flag="@X" onclick="openSidebar('146_Tutelage Artifice',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\147_Warded Tome.png" id="147_Warded Tome" data-flag="@X" onclick="openSidebar('147_Warded Tome',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-<div id="land" class="anchor"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\150_Bygone Guardian.png" id="150_Bygone Guardian" data-flag="@X" onclick="openSidebar('150_Bygone Guardian',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\148_Aerie's Pillar.png" id="148_Aeries Pillar" data-flag="@X" onclick="openSidebar('148_Aeries Pillar',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\152_Forgotten Pit.png" id="152_Forgotten Pit" data-flag="@X" onclick="openSidebar('152_Forgotten Pit',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\154_Rousing Rubble.png" id="154_Rousing Rubble" data-flag="@X" onclick="openSidebar('154_Rousing Rubble',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\153_Lumbering Hillock.png" id="153_Lumbering Hillock" data-flag="@X" onclick="openSidebar('153_Lumbering Hillock',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\157_Stark Horizon.png" id="157_Stark Horizon" data-flag="@X" onclick="openSidebar('157_Stark Horizon',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\158_Stark Stream.png" id="158_Stark Stream" data-flag="@X" onclick="openSidebar('158_Stark Stream',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\156_Stark Hinterlands.png" id="156_Stark Hinterlands" data-flag="@X" onclick="openSidebar('156_Stark Hinterlands',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\159_Stark Wildfire.png" id="159_Stark Wildfire" data-flag="@X" onclick="openSidebar('159_Stark Wildfire',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\155_Stark Copse.png" id="155_Stark Copse" data-flag="@X" onclick="openSidebar('155_Stark Copse',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\151_Channeling Stone.png" id="151_Channeling Stone" data-flag="@X" onclick="openSidebar('151_Channeling Stone',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\149_Artist's Vista.png" id="149_Artists Vista" data-flag="@X" onclick="openSidebar('149_Artists Vista',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\160_Verdant Behemoth.png" id="160_Verdant Behemoth" data-flag="@X" onclick="openSidebar('160_Verdant Behemoth',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\161_Plains.png" id="161_Plains" data-flag="@X" onclick="openSidebar('161_Plains',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\162_Island.png" id="162_Island" data-flag="@X" onclick="openSidebar('162_Island',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\163_Swamp.png" id="163_Swamp" data-flag="@X" onclick="openSidebar('163_Swamp',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\164_Mountain.png" id="164_Mountain" data-flag="@X" onclick="openSidebar('164_Mountain',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\165_Forest.png" id="165_Forest" data-flag="@X" onclick="openSidebar('165_Forest',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-<div id="token" class="anchor"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\5t_Golem.png" id="5t_Golem" data-flag="@X" onclick="openSidebar('5t_Golem',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\1t_Human.png" id="1t_Human" data-flag="@X" onclick="openSidebar('1t_Human',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\2t_Skeleton.png" id="2t_Skeleton" data-flag="@X" onclick="openSidebar('2t_Skeleton',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\3t_Dragon.png" id="3t_Dragon" data-flag="@X" onclick="openSidebar('3t_Dragon',false)"></div>
-			<div class="container"><img alt="/sets\ACR-files\img\4t_Silkfur Hunter.png" id="4t_Silkfur Hunter" data-flag="@X" onclick="openSidebar('4t_Silkfur Hunter',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+					<div class="container"><img alt="/sets\ACR-files\img\9_Felice, Adira's Salvation.png" id="9_Felice, Adiras Salvation" data-flag="@X" onclick="openSidebar('9_Felice, Adiras Salvation',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\36_Rahit, Immaculate Architect.png" id="36_Rahit, Immaculate Architect" data-flag="@X" onclick="openSidebar('36_Rahit, Immaculate Architect',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\57_Salva Tore.png" id="57_Salva Tore" data-flag="@X" onclick="openSidebar('57_Salva Tore',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\72_End of Worlds.png" id="72_End of Worlds" data-flag="@X" onclick="openSidebar('72_End of Worlds',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\91_Horizon Wayfarer.png" id="91_Horizon Wayfarer" data-flag="@X" onclick="openSidebar('91_Horizon Wayfarer',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\10_Furtive Witch.png" id="10_Furtive Witch" data-flag="@X" onclick="openSidebar('10_Furtive Witch',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\22_Aether Ascendant.png" id="22_Aether Ascendant" data-flag="@X" onclick="openSidebar('22_Aether Ascendant',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\45_Ceaseless Stalker.png" id="45_Ceaseless Stalker" data-flag="@X" onclick="openSidebar('45_Ceaseless Stalker',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\73_Iterating Artificer.png" id="73_Iterating Artificer" data-flag="@X" onclick="openSidebar('73_Iterating Artificer',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\92_Jara Incarnation.png" id="92_Jara Incarnation" data-flag="@X" onclick="openSidebar('92_Jara Incarnation',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\16_Paragon of Purity.png" id="16_Paragon of Purity" data-flag="@X" onclick="openSidebar('16_Paragon of Purity',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\33_Master of Masks.png" id="33_Master of Masks" data-flag="@X" onclick="openSidebar('33_Master of Masks',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\47_Corrosive Pact.png" id="47_Corrosive Pact" data-flag="@X" onclick="openSidebar('47_Corrosive Pact',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\77_Phoenix of the Burning Chord.png" id="77_Phoenix of the Burning Chord" data-flag="@X" onclick="openSidebar('77_Phoenix of the Burning Chord',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\100_Roving Scrounger.png" id="100_Roving Scrounger" data-flag="@X" onclick="openSidebar('100_Roving Scrounger',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\18_Sigil of Radiance.png" id="18_Sigil of Radiance" data-flag="@X" onclick="openSidebar('18_Sigil of Radiance',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\38_Spectrum Archmage.png" id="38_Spectrum Archmage" data-flag="@X" onclick="openSidebar('38_Spectrum Archmage',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\51_Final Omen.png" id="51_Final Omen" data-flag="@X" onclick="openSidebar('51_Final Omen',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\79_Scaletongue Mistress.png" id="79_Scaletongue Mistress" data-flag="@X" onclick="openSidebar('79_Scaletongue Mistress',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\103_Silkfur Hunter.png" id="103_Silkfur Hunter" data-flag="@X" onclick="openSidebar('103_Silkfur Hunter',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\19_Strayseeker Ranger.png" id="19_Strayseeker Ranger" data-flag="@X" onclick="openSidebar('19_Strayseeker Ranger',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\39_Sphinx of the Shifting Truth.png" id="39_Sphinx of the Shifting Truth" data-flag="@X" onclick="openSidebar('39_Sphinx of the Shifting Truth',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\55_Regent of Steel.png" id="55_Regent of Steel" data-flag="@X" onclick="openSidebar('55_Regent of Steel',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\81_Speaker of the Iris.png" id="81_Speaker of the Iris" data-flag="@X" onclick="openSidebar('81_Speaker of the Iris',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\85_Adiran Scryers.png" id="85_Adiran Scryers" data-flag="@X" onclick="openSidebar('85_Adiran Scryers',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\4_Alpine Martyr.png" id="4_Alpine Martyr" data-flag="@X" onclick="openSidebar('4_Alpine Martyr',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\23_Almgrove Ambassador.png" id="23_Almgrove Ambassador" data-flag="@X" onclick="openSidebar('23_Almgrove Ambassador',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\54_Once Betrayed.png" id="54_Once Betrayed" data-flag="@X" onclick="openSidebar('54_Once Betrayed',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\68_Ashbreath Phoenix.png" id="68_Ashbreath Phoenix" data-flag="@X" onclick="openSidebar('68_Ashbreath Phoenix',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\88_Colossus Tracker.png" id="88_Colossus Tracker" data-flag="@X" onclick="openSidebar('88_Colossus Tracker',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\6_Ceaseless Valiant.png" id="6_Ceaseless Valiant" data-flag="@X" onclick="openSidebar('6_Ceaseless Valiant',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\25_Clockwork Spellwork.png" id="25_Clockwork Spellwork" data-flag="@X" onclick="openSidebar('25_Clockwork Spellwork',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\58_Salva Tore's Vexation.png" id="58_Salva Tores Vexation" data-flag="@X" onclick="openSidebar('58_Salva Tores Vexation',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\69_Autumn Fae.png" id="69_Autumn Fae" data-flag="@X" onclick="openSidebar('69_Autumn Fae',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\93_Keystone Conjurer.png" id="93_Keystone Conjurer" data-flag="@X" onclick="openSidebar('93_Keystone Conjurer',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\7_Disassociate.png" id="7_Disassociate" data-flag="@X" onclick="openSidebar('7_Disassociate',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\26_Confirm Hypothesis.png" id="26_Confirm Hypothesis" data-flag="@X" onclick="openSidebar('26_Confirm Hypothesis',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\59_Shroud in Paranoia.png" id="59_Shroud in Paranoia" data-flag="@X" onclick="openSidebar('59_Shroud in Paranoia',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\75_Once Scarred.png" id="75_Once Scarred" data-flag="@X" onclick="openSidebar('75_Once Scarred',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\97_Once Abandoned.png" id="97_Once Abandoned" data-flag="@X" onclick="openSidebar('97_Once Abandoned',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\14_Lumenscale Rider.png" id="14_Lumenscale Rider" data-flag="@X" onclick="openSidebar('14_Lumenscale Rider',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\27_Disdainful Arcanist.png" id="27_Disdainful Arcanist" data-flag="@X" onclick="openSidebar('27_Disdainful Arcanist',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\61_Usurper of Steel.png" id="61_Usurper of Steel" data-flag="@X" onclick="openSidebar('61_Usurper of Steel',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\76_Paternal Pride.png" id="76_Paternal Pride" data-flag="@X" onclick="openSidebar('76_Paternal Pride',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\101_Ruins Remembered.png" id="101_Ruins Remembered" data-flag="@X" onclick="openSidebar('101_Ruins Remembered',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\15_Once Shunned.png" id="15_Once Shunned" data-flag="@X" onclick="openSidebar('15_Once Shunned',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\34_Once Denied.png" id="34_Once Denied" data-flag="@X" onclick="openSidebar('34_Once Denied',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\62_Whistling Blades.png" id="62_Whistling Blades" data-flag="@X" onclick="openSidebar('62_Whistling Blades',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\80_Shatterstone Wurm.png" id="80_Shatterstone Wurm" data-flag="@X" onclick="openSidebar('80_Shatterstone Wurm',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\102_Seek Refuge.png" id="102_Seek Refuge" data-flag="@X" onclick="openSidebar('102_Seek Refuge',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\17_Peace in Hesitation.png" id="17_Peace in Hesitation" data-flag="@X" onclick="openSidebar('17_Peace in Hesitation',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\41_Veil of Indecision.png" id="41_Veil of Indecision" data-flag="@X" onclick="openSidebar('41_Veil of Indecision',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\63_Young Necromancer.png" id="63_Young Necromancer" data-flag="@X" onclick="openSidebar('63_Young Necromancer',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\84_Warforged Mastery.png" id="84_Warforged Mastery" data-flag="@X" onclick="openSidebar('84_Warforged Mastery',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\86_Adiran Trailblazer.png" id="86_Adiran Trailblazer" data-flag="@X" onclick="openSidebar('86_Adiran Trailblazer',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\1_Adiran Emmigration.png" id="1_Adiran Emmigration" data-flag="@X" onclick="openSidebar('1_Adiran Emmigration',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\24_Arpechian Kraken.png" id="24_Arpechian Kraken" data-flag="@X" onclick="openSidebar('24_Arpechian Kraken',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\43_Blades of the Shifting Grave.png" id="43_Blades of the Shifting Grave" data-flag="@X" onclick="openSidebar('43_Blades of the Shifting Grave',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\64_Adiran Pyromaniac.png" id="64_Adiran Pyromaniac" data-flag="@X" onclick="openSidebar('64_Adiran Pyromaniac',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\87_Blade of Adira.png" id="87_Blade of Adira" data-flag="@X" onclick="openSidebar('87_Blade of Adira',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\2_Almgrove Silkblade.png" id="2_Almgrove Silkblade" data-flag="@X" onclick="openSidebar('2_Almgrove Silkblade',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\28_Distort Time.png" id="28_Distort Time" data-flag="@X" onclick="openSidebar('28_Distort Time',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\44_Boneyard Flock.png" id="44_Boneyard Flock" data-flag="@X" onclick="openSidebar('44_Boneyard Flock',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\65_Almgrove Ascendant.png" id="65_Almgrove Ascendant" data-flag="@X" onclick="openSidebar('65_Almgrove Ascendant',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\89_Foliage Hunter.png" id="89_Foliage Hunter" data-flag="@X" onclick="openSidebar('89_Foliage Hunter',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\3_Alpine Guardian.png" id="3_Alpine Guardian" data-flag="@X" onclick="openSidebar('3_Alpine Guardian',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\29_Edge of Adventure.png" id="29_Edge of Adventure" data-flag="@X" onclick="openSidebar('29_Edge of Adventure',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\46_Conquerer of the Forgotten.png" id="46_Conquerer of the Forgotten" data-flag="@X" onclick="openSidebar('46_Conquerer of the Forgotten',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\66_Almgrove Prodigy.png" id="66_Almgrove Prodigy" data-flag="@X" onclick="openSidebar('66_Almgrove Prodigy',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\90_Ghostblade Howler.png" id="90_Ghostblade Howler" data-flag="@X" onclick="openSidebar('90_Ghostblade Howler',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\5_Cadre Hawk.png" id="5_Cadre Hawk" data-flag="@X" onclick="openSidebar('5_Cadre Hawk',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\30_Jara Elemental.png" id="30_Jara Elemental" data-flag="@X" onclick="openSidebar('30_Jara Elemental',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\48_Dark Bargain.png" id="48_Dark Bargain" data-flag="@X" onclick="openSidebar('48_Dark Bargain',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\67_Arpechian Regent.png" id="67_Arpechian Regent" data-flag="@X" onclick="openSidebar('67_Arpechian Regent',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\94_Lichen Elemental.png" id="94_Lichen Elemental" data-flag="@X" onclick="openSidebar('94_Lichen Elemental',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\8_Dustcloud Striker.png" id="8_Dustcloud Striker" data-flag="@X" onclick="openSidebar('8_Dustcloud Striker',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\31_Jara Magehunter.png" id="31_Jara Magehunter" data-flag="@X" onclick="openSidebar('31_Jara Magehunter',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\49_Dissension Purger.png" id="49_Dissension Purger" data-flag="@X" onclick="openSidebar('49_Dissension Purger',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\70_Blistering Blur.png" id="70_Blistering Blur" data-flag="@X" onclick="openSidebar('70_Blistering Blur',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\95_Monstrous Viper.png" id="95_Monstrous Viper" data-flag="@X" onclick="openSidebar('95_Monstrous Viper',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\11_Guided Refugee.png" id="11_Guided Refugee" data-flag="@X" onclick="openSidebar('11_Guided Refugee',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\32_Jara Reservoir.png" id="32_Jara Reservoir" data-flag="@X" onclick="openSidebar('32_Jara Reservoir',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\50_Fading Lich.png" id="50_Fading Lich" data-flag="@X" onclick="openSidebar('50_Fading Lich',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\71_Blitz Hound.png" id="71_Blitz Hound" data-flag="@X" onclick="openSidebar('71_Blitz Hound',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\96_New Constellations.png" id="96_New Constellations" data-flag="@X" onclick="openSidebar('96_New Constellations',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\12_Headwind Glider.png" id="12_Headwind Glider" data-flag="@X" onclick="openSidebar('12_Headwind Glider',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\35_Preternatural Insight.png" id="35_Preternatural Insight" data-flag="@X" onclick="openSidebar('35_Preternatural Insight',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\52_Herald of Steel.png" id="52_Herald of Steel" data-flag="@X" onclick="openSidebar('52_Herald of Steel',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\74_Jara Ritual.png" id="74_Jara Ritual" data-flag="@X" onclick="openSidebar('74_Jara Ritual',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\98_Prismatic Leyline.png" id="98_Prismatic Leyline" data-flag="@X" onclick="openSidebar('98_Prismatic Leyline',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\13_Hold Dear.png" id="13_Hold Dear" data-flag="@X" onclick="openSidebar('13_Hold Dear',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\37_Recalculation.png" id="37_Recalculation" data-flag="@X" onclick="openSidebar('37_Recalculation',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\53_Marrow to Ash.png" id="53_Marrow to Ash" data-flag="@X" onclick="openSidebar('53_Marrow to Ash',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\78_Sanguine Replica.png" id="78_Sanguine Replica" data-flag="@X" onclick="openSidebar('78_Sanguine Replica',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\99_Refuge Tenders.png" id="99_Refuge Tenders" data-flag="@X" onclick="openSidebar('99_Refuge Tenders',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\20_Surrender to Grief.png" id="20_Surrender to Grief" data-flag="@X" onclick="openSidebar('20_Surrender to Grief',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\40_Swallowed Whole.png" id="40_Swallowed Whole" data-flag="@X" onclick="openSidebar('40_Swallowed Whole',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\56_Repent's Hand.png" id="56_Repents Hand" data-flag="@X" onclick="openSidebar('56_Repents Hand',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\82_Springstep Elemental.png" id="82_Springstep Elemental" data-flag="@X" onclick="openSidebar('82_Springstep Elemental',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\104_Verdant Haze.png" id="104_Verdant Haze" data-flag="@X" onclick="openSidebar('104_Verdant Haze',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\21_Valorous Charge.png" id="21_Valorous Charge" data-flag="@X" onclick="openSidebar('21_Valorous Charge',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\42_Wreckage Lurker.png" id="42_Wreckage Lurker" data-flag="@X" onclick="openSidebar('42_Wreckage Lurker',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\60_Struggle for Dominance.png" id="60_Struggle for Dominance" data-flag="@X" onclick="openSidebar('60_Struggle for Dominance',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\83_Stream of Thought.png" id="83_Stream of Thought" data-flag="@X" onclick="openSidebar('83_Stream of Thought',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div id="gold" class="anchor"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\105_Inspire Actuality.png" id="105_Inspire Actuality" data-flag="@X" onclick="openSidebar('105_Inspire Actuality',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\109_Buy Time.png" id="109_Buy Time" data-flag="@X" onclick="openSidebar('109_Buy Time',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\113_In Tragedy.png" id="113_In Tragedy" data-flag="@X" onclick="openSidebar('113_In Tragedy',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\115_Ardy, Youthful Geomancer.png" id="115_Ardy, Youthful Geomancer" data-flag="@X" onclick="openSidebar('115_Ardy, Youthful Geomancer',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\120_Griffon Surveyor.png" id="120_Griffon Surveyor" data-flag="@X" onclick="openSidebar('120_Griffon Surveyor',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\107_Stall Fate.png" id="107_Stall Fate" data-flag="@X" onclick="openSidebar('107_Stall Fate',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\110_Thought Blossom.png" id="110_Thought Blossom" data-flag="@X" onclick="openSidebar('110_Thought Blossom',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\114_Reckless Festivities.png" id="114_Reckless Festivities" data-flag="@X" onclick="openSidebar('114_Reckless Festivities',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\116_Lilypond Challenger.png" id="116_Lilypond Challenger" data-flag="@X" onclick="openSidebar('116_Lilypond Challenger',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\121_Through Worlds.png" id="121_Through Worlds" data-flag="@X" onclick="openSidebar('121_Through Worlds',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\106_Spellsword Elite.png" id="106_Spellsword Elite" data-flag="@X" onclick="openSidebar('106_Spellsword Elite',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\111_Withering Husk.png" id="111_Withering Husk" data-flag="@X" onclick="openSidebar('111_Withering Husk',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\112_Blessed Cinders.png" id="112_Blessed Cinders" data-flag="@X" onclick="openSidebar('112_Blessed Cinders',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\117_Somber Knight.png" id="117_Somber Knight" data-flag="@X" onclick="openSidebar('117_Somber Knight',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\119_Adiran Ambassador.png" id="119_Adiran Ambassador" data-flag="@X" onclick="openSidebar('119_Adiran Ambassador',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\108_Abyss Lurker.png" id="108_Abyss Lurker" data-flag="@X" onclick="openSidebar('108_Abyss Lurker',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\118_Worldrift Channeler.png" id="118_Worldrift Channeler" data-flag="@X" onclick="openSidebar('118_Worldrift Channeler',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\122_Cognitive Fumigator.png" id="122_Cognitive Fumigator" data-flag="@X" onclick="openSidebar('122_Cognitive Fumigator',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\125_Aerida, Envious Chronomancer.png" id="125_Aerida, Envious Chronomancer" data-flag="@X" onclick="openSidebar('125_Aerida, Envious Chronomancer',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\129_Act of Repentance.png" id="129_Act of Repentance" data-flag="@X" onclick="openSidebar('129_Act of Repentance',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\132_Champion of the Red Dawn.png" id="132_Champion of the Red Dawn" data-flag="@X" onclick="openSidebar('132_Champion of the Red Dawn',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\135_Conjure Realities.png" id="135_Conjure Realities" data-flag="@X" onclick="openSidebar('135_Conjure Realities',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\124_Tainted Savior.png" id="124_Tainted Savior" data-flag="@X" onclick="openSidebar('124_Tainted Savior',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\127_Compulsion's Voice.png" id="127_Compulsions Voice" data-flag="@X" onclick="openSidebar('127_Compulsions Voice',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\130_Appeal to the Ancestors.png" id="130_Appeal to the Ancestors" data-flag="@X" onclick="openSidebar('130_Appeal to the Ancestors',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\134_Wicked Blow.png" id="134_Wicked Blow" data-flag="@X" onclick="openSidebar('134_Wicked Blow',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\136_Contemplate Obscurity.png" id="136_Contemplate Obscurity" data-flag="@X" onclick="openSidebar('136_Contemplate Obscurity',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\123_Moonsliver Paragon.png" id="123_Moonsliver Paragon" data-flag="@X" onclick="openSidebar('123_Moonsliver Paragon',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\128_Ophidian Oracle.png" id="128_Ophidian Oracle" data-flag="@X" onclick="openSidebar('128_Ophidian Oracle',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\131_Archive Guardian.png" id="131_Archive Guardian" data-flag="@X" onclick="openSidebar('131_Archive Guardian',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\133_Repent's Champion.png" id="133_Repents Champion" data-flag="@X" onclick="openSidebar('133_Repents Champion',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\137_Lodestone Convergence.png" id="137_Lodestone Convergence" data-flag="@X" onclick="openSidebar('137_Lodestone Convergence',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\126_Almgrove Sentinel.png" id="126_Almgrove Sentinel" data-flag="@X" onclick="openSidebar('126_Almgrove Sentinel',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\138_Adiran Distractor.png" id="138_Adiran Distractor" data-flag="@X" onclick="openSidebar('138_Adiran Distractor',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\139_Mirrorplate Exemplar.png" id="139_Mirrorplate Exemplar" data-flag="@X" onclick="openSidebar('139_Mirrorplate Exemplar',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\140_Repent, Daughter of Fallacy.png" id="140_Repent, Daughter of Fallacy" data-flag="@X" onclick="openSidebar('140_Repent, Daughter of Fallacy',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div id="colorless" class="anchor"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\141_Fate Charm.png" id="141_Fate Charm" data-flag="@X" onclick="openSidebar('141_Fate Charm',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\142_Giltwork Legacy.png" id="142_Giltwork Legacy" data-flag="@X" onclick="openSidebar('142_Giltwork Legacy',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\143_Mechanized Ideal.png" id="143_Mechanized Ideal" data-flag="@X" onclick="openSidebar('143_Mechanized Ideal',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\145_Seeking Sword.png" id="145_Seeking Sword" data-flag="@X" onclick="openSidebar('145_Seeking Sword',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\144_Overgrown Tower.png" id="144_Overgrown Tower" data-flag="@X" onclick="openSidebar('144_Overgrown Tower',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\146_Tutelage Artifice.png" id="146_Tutelage Artifice" data-flag="@X" onclick="openSidebar('146_Tutelage Artifice',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\147_Warded Tome.png" id="147_Warded Tome" data-flag="@X" onclick="openSidebar('147_Warded Tome',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div id="land" class="anchor"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\150_Bygone Guardian.png" id="150_Bygone Guardian" data-flag="@X" onclick="openSidebar('150_Bygone Guardian',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\148_Aerie's Pillar.png" id="148_Aeries Pillar" data-flag="@X" onclick="openSidebar('148_Aeries Pillar',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\152_Forgotten Pit.png" id="152_Forgotten Pit" data-flag="@X" onclick="openSidebar('152_Forgotten Pit',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\154_Rousing Rubble.png" id="154_Rousing Rubble" data-flag="@X" onclick="openSidebar('154_Rousing Rubble',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\153_Lumbering Hillock.png" id="153_Lumbering Hillock" data-flag="@X" onclick="openSidebar('153_Lumbering Hillock',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\157_Stark Horizon.png" id="157_Stark Horizon" data-flag="@X" onclick="openSidebar('157_Stark Horizon',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\158_Stark Stream.png" id="158_Stark Stream" data-flag="@X" onclick="openSidebar('158_Stark Stream',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\156_Stark Hinterlands.png" id="156_Stark Hinterlands" data-flag="@X" onclick="openSidebar('156_Stark Hinterlands',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\159_Stark Wildfire.png" id="159_Stark Wildfire" data-flag="@X" onclick="openSidebar('159_Stark Wildfire',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\155_Stark Copse.png" id="155_Stark Copse" data-flag="@X" onclick="openSidebar('155_Stark Copse',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\151_Channeling Stone.png" id="151_Channeling Stone" data-flag="@X" onclick="openSidebar('151_Channeling Stone',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\149_Artist's Vista.png" id="149_Artists Vista" data-flag="@X" onclick="openSidebar('149_Artists Vista',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\160_Verdant Behemoth.png" id="160_Verdant Behemoth" data-flag="@X" onclick="openSidebar('160_Verdant Behemoth',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\161_Plains.png" id="161_Plains" data-flag="@X" onclick="openSidebar('161_Plains',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\162_Island.png" id="162_Island" data-flag="@X" onclick="openSidebar('162_Island',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\163_Swamp.png" id="163_Swamp" data-flag="@X" onclick="openSidebar('163_Swamp',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\164_Mountain.png" id="164_Mountain" data-flag="@X" onclick="openSidebar('164_Mountain',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\165_Forest.png" id="165_Forest" data-flag="@X" onclick="openSidebar('165_Forest',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div id="token" class="anchor"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\5t_Golem.png" id="5t_Golem" data-flag="@X" onclick="openSidebar('5t_Golem',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\1t_Human.png" id="1t_Human" data-flag="@X" onclick="openSidebar('1t_Human',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\2t_Skeleton.png" id="2t_Skeleton" data-flag="@X" onclick="openSidebar('2t_Skeleton',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\3t_Dragon.png" id="3t_Dragon" data-flag="@X" onclick="openSidebar('3t_Dragon',false)"></div>
+				<div class="container"><img alt="/sets\ACR-files\img\4t_Silkfur Hunter.png" id="4t_Silkfur Hunter" data-flag="@X" onclick="openSidebar('4t_Silkfur Hunter',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
 	</div>
-</div>
+	</div>
 	<div class="sidebar" id="sidebar">
 		<div class="sidebar-container">
 			<img id="sidebar_img" class="sidebar-img" src="/img/er.png">
@@ -487,7 +506,7 @@
 				card_list_arrayified = card_list.cards;
 
 		preloadImgs = document.getElementsByClassName('preload-hidden');
-		
+
 		let images_loaded = [];
 
 		do {
@@ -577,7 +596,7 @@
 	function openSidebar(id, h = false) {
 		horizontal = h;
 		scroll_pct = window.scrollY / document.documentElement.scrollHeight;
-		
+
 		document.getElementById('sidebar').style.display = 'grid';
 
 		const rotated_img = document.getElementById('sidebar_h_img');
@@ -608,7 +627,7 @@
 			document.getElementById('sidebar-flip-btn').style.display = 'none';
 		}
 		document.getElementById('main-content').style.width = '60%';
-		
+
 		scroll_pos = scroll_pct * document.documentElement.scrollHeight;
 		window.scrollTo(window.scrollX, scroll_pos);
 		setSidebarTop();
@@ -619,10 +638,28 @@
 
 		document.getElementById('sidebar').style.display = 'none';
 		document.getElementById('main-content').style.width = '100%';
-		
+
 
 		scroll_pos = scroll_pct * document.documentElement.scrollHeight;
 		window.scrollTo(window.scrollX, scroll_pos);
+	}
+
+	function rolldown() {
+		var sets = document.querySelectorAll('.inactive');
+		for(const set of sets)
+		{
+			set.style.height = "auto";
+			set.style.margin = "5px";
+		}
+	}
+
+	function rollup() {
+		var sets = document.querySelectorAll('.inactive');
+		for(const set of sets)
+		{
+			set.style.height = "0px";
+			set.style.margin = "0px 5px";
+		}
 	}
 
 	document.getElementById("search").addEventListener("keypress", function(event) {

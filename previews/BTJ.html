@@ -5,6 +5,10 @@
 	<link rel="stylesheet" href="/resources/header.css">
 	<title>BTJ visual preview</title>
 	<style>
+		@font-face {
+			font-family: Beleren;
+			src: url('/resources/beleren.ttf');
+		}
 		body {
 			font-family: Arial, sans-serif;
 			margin: 0;
@@ -82,7 +86,7 @@
 		.banner {
 			width: 100%;
 			height: auto;
-			padding-top: 20px;
+			padding-top: 80px;
 			padding-bottom: 50px;
 		}
 		.logo {
@@ -118,36 +122,49 @@
 			background-size: contain;
 			background-position: center;
 		}
-		.icon-bar {
-			display: grid;
-			grid-template-columns: repeat(10, 3fr 2fr) 3fr;
-			gap: 1px;
-			padding-left: 5%;
-			padding-right: 5%;
-			padding-top: 2%;
-			padding-bottom: 1%;
-			justify-items: center;
+		.dropdown {
+			background: rgba(23, 23, 23, 0.8);
+			border-radius: 8px;
+			position: absolute;
+			left: 10%;
+			width: fit-content;
+			margin: 20px 0;
+			padding: 5px 0;
+			display: flex;
+			flex-direction: column;
+			z-index: 3;
+		}
+		.dropdown .set-bar {
+			font-family: Beleren;
+			font-size: 20px;
+			text-decoration: none;
+			color: #e3e3e3;
+			display: flex;
+			gap: 10px;
 			align-items: center;
+			padding: 0 12px;
+			margin: 5px;
 		}
-		.icon-bar .icon img {
-			width: 90%;
-			max-width: 80px;
-			height: auto;
-			display: block;
-			padding: 5%;
-			margin: auto;
-			text-align: center;
+		.dropdown .set-bar:hover {
+			background: rgba(163, 163, 163, 0.5);
+			color: #f3f3f3;
 		}
-		.icon-bar .dot img {
-			width: 50%;
-			max-width: 65px;
-			height: auto;
-			display: block;
-			margin: auto;
-			text-align: center;
+		.dropdown .set-bar img {
+			width: 32px;
+		}
+		.dropdown .inactive {
+			height: 0px;
+			overflow: hidden;
+			margin: 0px 5px;
 		}
 		.preload-hidden {
 			display: none;
+		}
+		.addenda-container {
+			text-align: center;
+			width: fit-content;
+			max-width: 1200px;
+			padding: 0 5%;
 		}
 		/* This is here to enable the stickiness in a Float environment. I don't know why it works but it does */
 		.footer {
@@ -175,7 +192,7 @@
 		<img class="preload-hidden" src="/sets/IAH-files/icon.png" />
 		<img class="preload-hidden" src="/sets/CRC-files/icon.png" />
 		<img class="preload-hidden" id="bg" src="/sets/BTJ-files/bg.png" />
-		
+
 		<div class="header">
 		<div class="search-grid">
 			<a href="/"><img class="sg-logo" src="/img/banner.png"></a>
@@ -187,266 +204,268 @@
 		</div>
 	</div>
 
-	<div class="icon-bar">
-			<div class="icon"><a href="HQZ"><img src="/sets/HQZ-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="LRH"><img src="/sets/LRH-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="INK"><img src="/sets/INK-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="ACA"><img src="/sets/ACA-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="BYK"><img src="/sets/BYK-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="BTJ"><img src="/sets/BTJ-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="ACR"><img src="/sets/ACR-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="HVF"><img src="/sets/HVF-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="MAC"><img src="/sets/MAC-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="CAC"><img src="/sets/CAC-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="PFP"><img src="/sets/PFP-files/icon.png"></img></a></div>
-		<div class="icon"><a href="TWR"><img src="/sets/TWR-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="MMC"><img src="/sets/MMC-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="MMT"><img src="/sets/MMT-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="IAH"><img src="/sets/IAH-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="CRC"><img src="/sets/CRC-files/icon.png"></img></a></div>
-
+	<div class="dropdown" onmouseenter="rolldown()" onmouseleave="rollup()">
+	
+		<a class="set-bar" href="BTJ"><img src="/sets/BTJ-files/icon.png">Barten’s Journal</a>
+	
+		<a class="set-bar inactive" href="HQZ"><img src="/sets/HQZ-files/icon.png">Hunting Quiet Horizons</a>
+	
+		<a class="set-bar inactive" href="LRH"><img src="/sets/LRH-files/icon.png">The Long Road Home</a>
+	
+		<a class="set-bar inactive" href="INK"><img src="/sets/INK-files/icon.png">Across the Ink Sea</a>
+	
+		<a class="set-bar inactive" href="ACA"><img src="/sets/ACA-files/icon.png">Arcanum Academia</a>
+	
+		<a class="set-bar inactive" href="BYK"><img src="/sets/BYK-files/icon.png">Beyond Our Ken</a>
+	
+		<a class="set-bar inactive" href="ACR"><img src="/sets/ACR-files/icon.png">Arcanum: Reforged</a>
+	
+		<a class="set-bar inactive" href="HVF"><img src="/sets/HVF-files/icon.png">Harvest Festival</a>
+	
+		<a class="set-bar inactive" href="MAC"><img src="/sets/MAC-files/icon.png">Memorium Arcanum</a>
+	
+		<a class="set-bar inactive" href="CAC"><img src="/sets/CAC-files/icon.png">Carpe Arcanum</a>
+	
+		<a class="set-bar inactive" href="PFP"><img src="/sets/PFP-files/icon.png">Plagues of Fretport</a>
+	
+		<a class="set-bar inactive" href="TWR"><img src="/sets/TWR-files/icon.png">A Tourney at Whiterun</a>
+	
+		<a class="set-bar inactive" href="MMC"><img src="/sets/MMC-files/icon.png">Memory’s Collapse</a>
+	
+		<a class="set-bar inactive" href="MMT"><img src="/sets/MMT-files/icon.png">Memory’s Tyranny</a>
+	
+		<a class="set-bar inactive" href="IAH"><img src="/sets/IAH-files/icon.png">Intrigue</a>
+	
+		<a class="set-bar inactive" href="CRC"><img src="/sets/CRC-files/icon.png">Cretio Created</a>
+	
 		</div>
 		<div class="banner">
 		<img class="logo" src="/sets/BTJ-files/logo.png">
 		</div>
 		<div class="main-content" id="main-content">
 			<div class="grid-container">
-				<div class="container"><img alt="/sets\BTJ-files\img\9_Gertred, the Quelling Storm.png" id="9_Gertred, the Quelling Storm" data-flag="@X" onclick="openSidebar('9_Gertred, the Quelling Storm',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\21_Abandon Assumptions.png" id="21_Abandon Assumptions" data-flag="@X" onclick="openSidebar('21_Abandon Assumptions',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\51_Grasping Souls.png" id="51_Grasping Souls" data-flag="@X" onclick="openSidebar('51_Grasping Souls',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\70_Glory's Guardian.png" id="70_Glorys Guardian" data-flag="@X" onclick="openSidebar('70_Glorys Guardian',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\84_Endless Predators.png" id="84_Endless Predators" data-flag="@X" onclick="openSidebar('84_Endless Predators',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\18_Upholder of Purity.png" id="18_Upholder of Purity" data-flag="@X" onclick="openSidebar('18_Upholder of Purity',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\22_Barten, the Seeking Scholar.png" id="22_Barten, the Seeking Scholar" data-flag="@X" onclick="openSidebar('22_Barten, the Seeking Scholar',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\60_Xanigan, the Darkened Cloud.png" id="60_Xanigan, the Darkened Cloud" data-flag="@X" onclick="openSidebar('60_Xanigan, the Darkened Cloud',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\74_Siobhan, the Golden Knuckle.png" id="74_Siobhan, the Golden Knuckle" data-flag="@X" onclick="openSidebar('74_Siobhan, the Golden Knuckle',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\90_Kalmatar, the Hungering Maw.png" id="90_Kalmatar, the Hungering Maw" data-flag="@X" onclick="openSidebar('90_Kalmatar, the Hungering Maw',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\1_Against the Gale.png" id="1_Against the Gale" data-flag="@X" onclick="openSidebar('1_Against the Gale',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\23_Bounded Intellect.png" id="23_Bounded Intellect" data-flag="@X" onclick="openSidebar('23_Bounded Intellect',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\41_Ambition's Promise.png" id="41_Ambitions Promise" data-flag="@X" onclick="openSidebar('41_Ambitions Promise',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\64_Crucible of Glory.png" id="64_Crucible of Glory" data-flag="@X" onclick="openSidebar('64_Crucible of Glory',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\82_Caibry's Warden.png" id="82_Caibrys Warden" data-flag="@X" onclick="openSidebar('82_Caibrys Warden',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\4_Bahleze's Song.png" id="4_Bahlezes Song" data-flag="@X" onclick="openSidebar('4_Bahlezes Song',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\31_Define Destiny.png" id="31_Define Destiny" data-flag="@X" onclick="openSidebar('31_Define Destiny',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\50_Futile Desolation.png" id="50_Futile Desolation" data-flag="@X" onclick="openSidebar('50_Futile Desolation',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\72_Marrow to Brimstone.png" id="72_Marrow to Brimstone" data-flag="@X" onclick="openSidebar('72_Marrow to Brimstone',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\85_Greenpalm Guide.png" id="85_Greenpalm Guide" data-flag="@X" onclick="openSidebar('85_Greenpalm Guide',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\10_Hallowed.png" id="10_Hallowed" data-flag="@X" onclick="openSidebar('10_Hallowed',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\40_Tide Wallower.png" id="40_Tide Wallower" data-flag="@X" onclick="openSidebar('40_Tide Wallower',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\52_Inkwell Scourge.png" id="52_Inkwell Scourge" data-flag="@X" onclick="openSidebar('52_Inkwell Scourge',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\80_Zamettra's Song.png" id="80_Zamettras Song" data-flag="@X" onclick="openSidebar('80_Zamettras Song',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\95_Orc Warchief.png" id="95_Orc Warchief" data-flag="@X" onclick="openSidebar('95_Orc Warchief',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\6_Caibry's Forerunner.png" id="6_Caibrys Forerunner" data-flag="@X" onclick="openSidebar('6_Caibrys Forerunner',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\29_Cumulus Scout.png" id="29_Cumulus Scout" data-flag="@X" onclick="openSidebar('29_Cumulus Scout',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\42_Azenghul's Flesh.png" id="42_Azenghuls Flesh" data-flag="@X" onclick="openSidebar('42_Azenghuls Flesh',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\65_Demon of Potential.png" id="65_Demon of Potential" data-flag="@X" onclick="openSidebar('65_Demon of Potential',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\87_Hamlet Warlord.png" id="87_Hamlet Warlord" data-flag="@X" onclick="openSidebar('87_Hamlet Warlord',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\8_Demon of Blessings.png" id="8_Demon of Blessings" data-flag="@X" onclick="openSidebar('8_Demon of Blessings',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\32_Desperate Infiltration.png" id="32_Desperate Infiltration" data-flag="@X" onclick="openSidebar('32_Desperate Infiltration',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\45_Demon of Curses.png" id="45_Demon of Curses" data-flag="@X" onclick="openSidebar('45_Demon of Curses',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\67_Fires of Arhval.png" id="67_Fires of Arhval" data-flag="@X" onclick="openSidebar('67_Fires of Arhval',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\92_Might of Sakarias.png" id="92_Might of Sakarias" data-flag="@X" onclick="openSidebar('92_Might of Sakarias',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\11_Haunting Presence.png" id="11_Haunting Presence" data-flag="@X" onclick="openSidebar('11_Haunting Presence',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\33_False Trails.png" id="33_False Trails" data-flag="@X" onclick="openSidebar('33_False Trails',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\46_Drown in Blood.png" id="46_Drown in Blood" data-flag="@X" onclick="openSidebar('46_Drown in Blood',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\73_Rhyolitic Inquiries.png" id="73_Rhyolitic Inquiries" data-flag="@X" onclick="openSidebar('73_Rhyolitic Inquiries',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\94_Nessos Archer.png" id="94_Nessos Archer" data-flag="@X" onclick="openSidebar('94_Nessos Archer',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\13_Might of the Meek.png" id="13_Might of the Meek" data-flag="@X" onclick="openSidebar('13_Might of the Meek',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\35_Insectile Broodmother.png" id="35_Insectile Broodmother" data-flag="@X" onclick="openSidebar('35_Insectile Broodmother',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\47_Entangled Rats.png" id="47_Entangled Rats" data-flag="@X" onclick="openSidebar('47_Entangled Rats',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\76_Static Brawler.png" id="76_Static Brawler" data-flag="@X" onclick="openSidebar('76_Static Brawler',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\97_Spectral Hunt.png" id="97_Spectral Hunt" data-flag="@X" onclick="openSidebar('97_Spectral Hunt',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\16_Reborn Adrift.png" id="16_Reborn Adrift" data-flag="@X" onclick="openSidebar('16_Reborn Adrift',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\39_Siphon Will.png" id="39_Siphon Will" data-flag="@X" onclick="openSidebar('39_Siphon Will',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\49_Frailty.png" id="49_Frailty" data-flag="@X" onclick="openSidebar('49_Frailty',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\78_Through Struggle.png" id="78_Through Struggle" data-flag="@X" onclick="openSidebar('78_Through Struggle',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\98_Sporewoven Spider.png" id="98_Sporewoven Spider" data-flag="@X" onclick="openSidebar('98_Sporewoven Spider',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\2_Aide of the Overseers.png" id="2_Aide of the Overseers" data-flag="@X" onclick="openSidebar('2_Aide of the Overseers',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\24_Branching Thoughts.png" id="24_Branching Thoughts" data-flag="@X" onclick="openSidebar('24_Branching Thoughts',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\43_Blessing of Azenghul.png" id="43_Blessing of Azenghul" data-flag="@X" onclick="openSidebar('43_Blessing of Azenghul',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\61_Azenghul's Blood.png" id="61_Azenghuls Blood" data-flag="@X" onclick="openSidebar('61_Azenghuls Blood',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\81_Abomination's Advocate.png" id="81_Abominations Advocate" data-flag="@X" onclick="openSidebar('81_Abominations Advocate',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\3_Azenghul's Soul.png" id="3_Azenghuls Soul" data-flag="@X" onclick="openSidebar('3_Azenghuls Soul',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\25_Cackling Assistants.png" id="25_Cackling Assistants" data-flag="@X" onclick="openSidebar('25_Cackling Assistants',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\44_Bloated Rat.png" id="44_Bloated Rat" data-flag="@X" onclick="openSidebar('44_Bloated Rat',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\62_Charismatic Challenger.png" id="62_Charismatic Challenger" data-flag="@X" onclick="openSidebar('62_Charismatic Challenger',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\83_Challenger's Congregation.png" id="83_Challengers Congregation" data-flag="@X" onclick="openSidebar('83_Challengers Congregation',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\5_Blade of Worship.png" id="5_Blade of Worship" data-flag="@X" onclick="openSidebar('5_Blade of Worship',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\26_Caibry's Scout.png" id="26_Caibrys Scout" data-flag="@X" onclick="openSidebar('26_Caibrys Scout',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\48_Eternal Echo.png" id="48_Eternal Echo" data-flag="@X" onclick="openSidebar('48_Eternal Echo',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\63_Crackling Nerves.png" id="63_Crackling Nerves" data-flag="@X" onclick="openSidebar('63_Crackling Nerves',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\86_Hamlet Purifier.png" id="86_Hamlet Purifier" data-flag="@X" onclick="openSidebar('86_Hamlet Purifier',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\7_Carriage Master.png" id="7_Carriage Master" data-flag="@X" onclick="openSidebar('7_Carriage Master',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\27_Channel Reminiscence.png" id="27_Channel Reminiscence" data-flag="@X" onclick="openSidebar('27_Channel Reminiscence',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\53_Nessos Vanguard.png" id="53_Nessos Vanguard" data-flag="@X" onclick="openSidebar('53_Nessos Vanguard',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\66_Final Wisdom.png" id="66_Final Wisdom" data-flag="@X" onclick="openSidebar('66_Final Wisdom',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\88_Hearthkeeper.png" id="88_Hearthkeeper" data-flag="@X" onclick="openSidebar('88_Hearthkeeper',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\12_Honorbound Champion.png" id="12_Honorbound Champion" data-flag="@X" onclick="openSidebar('12_Honorbound Champion',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\28_Crystalline Inquiry.png" id="28_Crystalline Inquiry" data-flag="@X" onclick="openSidebar('28_Crystalline Inquiry',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\54_Offer Sacrifice.png" id="54_Offer Sacrifice" data-flag="@X" onclick="openSidebar('54_Offer Sacrifice',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\68_Fling.png" id="68_Fling" data-flag="@X" onclick="openSidebar('68_Fling',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\89_Impish Ambush.png" id="89_Impish Ambush" data-flag="@X" onclick="openSidebar('89_Impish Ambush',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\14_Mortal Reckoning.png" id="14_Mortal Reckoning" data-flag="@X" onclick="openSidebar('14_Mortal Reckoning',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\30_Curious Drake.png" id="30_Curious Drake" data-flag="@X" onclick="openSidebar('30_Curious Drake',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\55_Ritual Relic.png" id="55_Ritual Relic" data-flag="@X" onclick="openSidebar('55_Ritual Relic',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\69_Frenzied Vampire.png" id="69_Frenzied Vampire" data-flag="@X" onclick="openSidebar('69_Frenzied Vampire',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\91_Kneebreaker Champion.png" id="91_Kneebreaker Champion" data-flag="@X" onclick="openSidebar('91_Kneebreaker Champion',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\15_Queller of Whispers.png" id="15_Queller of Whispers" data-flag="@X" onclick="openSidebar('15_Queller of Whispers',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\34_Hallowed Steps.png" id="34_Hallowed Steps" data-flag="@X" onclick="openSidebar('34_Hallowed Steps',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\56_Servant of Xanigan.png" id="56_Servant of Xanigan" data-flag="@X" onclick="openSidebar('56_Servant of Xanigan',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\71_Ironwill Champion.png" id="71_Ironwill Champion" data-flag="@X" onclick="openSidebar('71_Ironwill Champion',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\93_Moss Sifter.png" id="93_Moss Sifter" data-flag="@X" onclick="openSidebar('93_Moss Sifter',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\17_Soul's Attendant.png" id="17_Souls Attendant" data-flag="@X" onclick="openSidebar('17_Souls Attendant',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\36_Languid Whispers.png" id="36_Languid Whispers" data-flag="@X" onclick="openSidebar('36_Languid Whispers',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\57_Shadowed Maestro.png" id="57_Shadowed Maestro" data-flag="@X" onclick="openSidebar('57_Shadowed Maestro',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\75_Splatter the Heathen.png" id="75_Splatter the Heathen" data-flag="@X" onclick="openSidebar('75_Splatter the Heathen',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\96_Sickening Incubator.png" id="96_Sickening Incubator" data-flag="@X" onclick="openSidebar('96_Sickening Incubator',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\19_Valiant Challengers.png" id="19_Valiant Challengers" data-flag="@X" onclick="openSidebar('19_Valiant Challengers',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\37_Maddened Archivist.png" id="37_Maddened Archivist" data-flag="@X" onclick="openSidebar('37_Maddened Archivist',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\58_Shambling Leechmother.png" id="58_Shambling Leechmother" data-flag="@X" onclick="openSidebar('58_Shambling Leechmother',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\77_Steelheart Devotee.png" id="77_Steelheart Devotee" data-flag="@X" onclick="openSidebar('77_Steelheart Devotee',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\99_Wild Stampede.png" id="99_Wild Stampede" data-flag="@X" onclick="openSidebar('99_Wild Stampede',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\20_Venerated Mystic.png" id="20_Venerated Mystic" data-flag="@X" onclick="openSidebar('20_Venerated Mystic',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\38_Orc Alchemist.png" id="38_Orc Alchemist" data-flag="@X" onclick="openSidebar('38_Orc Alchemist',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\59_Soulfeed Vampire.png" id="59_Soulfeed Vampire" data-flag="@X" onclick="openSidebar('59_Soulfeed Vampire',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\79_Warrior's Condescension.png" id="79_Warriors Condescension" data-flag="@X" onclick="openSidebar('79_Warriors Condescension',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\100_Wild Whisper.png" id="100_Wild Whisper" data-flag="@X" onclick="openSidebar('100_Wild Whisper',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-<div id="gold" class="anchor"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\101_Court of Gilded Graves.png" id="101_Court of Gilded Graves" data-flag="@X" onclick="openSidebar('101_Court of Gilded Graves',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\105_Valter, the Final Breath.png" id="105_Valter, the Final Breath" data-flag="@X" onclick="openSidebar('105_Valter, the Final Breath',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\108_Zamettra, Study of Fervor.png" id="108_Zamettra, Study of Fervor" data-flag="@X" onclick="openSidebar('108_Zamettra, Study of Fervor',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\109_Brida, Surging Valkyrie.png" id="109_Brida, Surging Valkyrie" data-flag="@X" onclick="openSidebar('109_Brida, Surging Valkyrie',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\111_Court of Verdant Vales.png" id="111_Court of Verdant Vales" data-flag="@X" onclick="openSidebar('111_Court of Verdant Vales',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\102_Lofty Perch.png" id="102_Lofty Perch" data-flag="@X" onclick="openSidebar('102_Lofty Perch',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\103_Bane of Flesh.png" id="103_Bane of Flesh" data-flag="@X" onclick="openSidebar('103_Bane of Flesh',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\106_Moonlit Adherent.png" id="106_Moonlit Adherent" data-flag="@X" onclick="openSidebar('106_Moonlit Adherent',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\110_Triumphant Aftermath.png" id="110_Triumphant Aftermath" data-flag="@X" onclick="openSidebar('110_Triumphant Aftermath',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\112_Spare the Day.png" id="112_Spare the Day" data-flag="@X" onclick="openSidebar('112_Spare the Day',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\104_Plated Lurker.png" id="104_Plated Lurker" data-flag="@X" onclick="openSidebar('104_Plated Lurker',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\107_Shared Madness.png" id="107_Shared Madness" data-flag="@X" onclick="openSidebar('107_Shared Madness',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\113_Warrior's End.png" id="113_Warriors End" data-flag="@X" onclick="openSidebar('113_Warriors End',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\114_Bahleze, Study of Grace.png" id="114_Bahleze, Study of Grace" data-flag="@X" onclick="openSidebar('114_Bahleze, Study of Grace',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\116_Desker, the Final Expulsion.png" id="116_Desker, the Final Expulsion" data-flag="@X" onclick="openSidebar('116_Desker, the Final Expulsion',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\119_Maikki, Mire's Matron.png" id="119_Maikki, Mires Matron" data-flag="@X" onclick="openSidebar('119_Maikki, Mires Matron',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\120_Aelswith, Radiant Valkyrie.png" id="120_Aelswith, Radiant Valkyrie" data-flag="@X" onclick="openSidebar('120_Aelswith, Radiant Valkyrie',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\125_Taika, Tide's Tale.png" id="125_Taika, Tides Tale" data-flag="@X" onclick="openSidebar('125_Taika, Tides Tale',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\115_Words of Scripture.png" id="115_Words of Scripture" data-flag="@X" onclick="openSidebar('115_Words of Scripture',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\117_Face Phantasms.png" id="117_Face Phantasms" data-flag="@X" onclick="openSidebar('117_Face Phantasms',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\118_Cultist of Sakarias.png" id="118_Cultist of Sakarias" data-flag="@X" onclick="openSidebar('118_Cultist of Sakarias',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\121_Twilight Worshiper.png" id="121_Twilight Worshiper" data-flag="@X" onclick="openSidebar('121_Twilight Worshiper',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\123_Embrace the Depths.png" id="123_Embrace the Depths" data-flag="@X" onclick="openSidebar('123_Embrace the Depths',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\122_Worthy Ascendant.png" id="122_Worthy Ascendant" data-flag="@X" onclick="openSidebar('122_Worthy Ascendant',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\124_Stand Steadfast.png" id="124_Stand Steadfast" data-flag="@X" onclick="openSidebar('124_Stand Steadfast',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\134_Poltic, Deluge of Delusions.png" id="134_Poltic, Deluge of Delusions" data-flag="@X" onclick="openSidebar('134_Poltic, Deluge of Delusions',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\133_Heilda, Ahrval's Paragon.png" id="133_Heilda, Ahrvals Paragon" data-flag="@X" onclick="openSidebar('133_Heilda, Ahrvals Paragon',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\127_Caibry, Deathless Whisper.png" id="127_Caibry, Deathless Whisper" data-flag="@X" onclick="openSidebar('127_Caibry, Deathless Whisper',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\129_From Lies and Loss.png" id="129_From Lies and Loss" data-flag="@X" onclick="openSidebar('129_From Lies and Loss',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\132_From Valor and Vanity.png" id="132_From Valor and Vanity" data-flag="@X" onclick="openSidebar('132_From Valor and Vanity',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\130_From Peace and Purpose.png" id="130_From Peace and Purpose" data-flag="@X" onclick="openSidebar('130_From Peace and Purpose',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\126_Azenghul, Anguished Lady.png" id="126_Azenghul, Anguished Lady" data-flag="@X" onclick="openSidebar('126_Azenghul, Anguished Lady',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\135_Sakarias, Murk Trawler.png" id="135_Sakarias, Murk Trawler" data-flag="@X" onclick="openSidebar('135_Sakarias, Murk Trawler',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\128_From Hope and Harm.png" id="128_From Hope and Harm" data-flag="@X" onclick="openSidebar('128_From Hope and Harm',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\131_From Rot and Ruin.png" id="131_From Rot and Ruin" data-flag="@X" onclick="openSidebar('131_From Rot and Ruin',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-<div id="colorless" class="anchor"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\136_Seal of Decay.png" id="136_Seal of Decay" data-flag="@X" onclick="openSidebar('136_Seal of Decay',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\137_Seal of Fervor.png" id="137_Seal of Fervor" data-flag="@X" onclick="openSidebar('137_Seal of Fervor',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\138_Seal of Glory.png" id="138_Seal of Glory" data-flag="@X" onclick="openSidebar('138_Seal of Glory',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\139_Seal of Growth.png" id="139_Seal of Growth" data-flag="@X" onclick="openSidebar('139_Seal of Growth',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\140_Seal of Honour.png" id="140_Seal of Honour" data-flag="@X" onclick="openSidebar('140_Seal of Honour',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\141_Seal of Knowledge.png" id="141_Seal of Knowledge" data-flag="@X" onclick="openSidebar('141_Seal of Knowledge',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\142_Seal of Scripture.png" id="142_Seal of Scripture" data-flag="@X" onclick="openSidebar('142_Seal of Scripture',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\143_Seal of Secrets.png" id="143_Seal of Secrets" data-flag="@X" onclick="openSidebar('143_Seal of Secrets',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\144_Seal of Time.png" id="144_Seal of Time" data-flag="@X" onclick="openSidebar('144_Seal of Time',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\145_Seal of Wisdom.png" id="145_Seal of Wisdom" data-flag="@X" onclick="openSidebar('145_Seal of Wisdom',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\146_Abandoned Library.png" id="146_Abandoned Library" data-flag="@X" onclick="openSidebar('146_Abandoned Library',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\147_Corrupted Ruins.png" id="147_Corrupted Ruins" data-flag="@X" onclick="openSidebar('147_Corrupted Ruins',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\148_Frigid Creek.png" id="148_Frigid Creek" data-flag="@X" onclick="openSidebar('148_Frigid Creek',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\149_Heavenly Expanse.png" id="149_Heavenly Expanse" data-flag="@X" onclick="openSidebar('149_Heavenly Expanse',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\150_Sulfuric Lighthouse.png" id="150_Sulfuric Lighthouse" data-flag="@X" onclick="openSidebar('150_Sulfuric Lighthouse',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\152_Island.png" id="152_Island" data-flag="@X" onclick="openSidebar('152_Island',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\153_Swamp.png" id="153_Swamp" data-flag="@X" onclick="openSidebar('153_Swamp',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\154_Mountain.png" id="154_Mountain" data-flag="@X" onclick="openSidebar('154_Mountain',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\155_Forest.png" id="155_Forest" data-flag="@X" onclick="openSidebar('155_Forest',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\151_Plains.png" id="151_Plains" data-flag="@X" onclick="openSidebar('151_Plains',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-<div id="token" class="anchor"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\4t_Clue.png" id="4t_Clue" data-flag="@X" onclick="openSidebar('4t_Clue',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\1t_Homunculus.png" id="1t_Homunculus" data-flag="@X" onclick="openSidebar('1t_Homunculus',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\2t_Languid Whispers (Token).png" id="2t_Languid Whispers (Token)" data-flag="@X" onclick="openSidebar('2t_Languid Whispers (Token)',false)"></div>
-			<div class="container"><img alt="/sets\BTJ-files\img\3t_Warrior.png" id="3t_Warrior" data-flag="@X" onclick="openSidebar('3t_Warrior',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+					<div class="container"><img alt="/sets\BTJ-files\img\9_Gertred, the Quelling Storm.png" id="9_Gertred, the Quelling Storm" data-flag="@X" onclick="openSidebar('9_Gertred, the Quelling Storm',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\21_Abandon Assumptions.png" id="21_Abandon Assumptions" data-flag="@X" onclick="openSidebar('21_Abandon Assumptions',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\51_Grasping Souls.png" id="51_Grasping Souls" data-flag="@X" onclick="openSidebar('51_Grasping Souls',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\70_Glory's Guardian.png" id="70_Glorys Guardian" data-flag="@X" onclick="openSidebar('70_Glorys Guardian',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\84_Endless Predators.png" id="84_Endless Predators" data-flag="@X" onclick="openSidebar('84_Endless Predators',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\18_Upholder of Purity.png" id="18_Upholder of Purity" data-flag="@X" onclick="openSidebar('18_Upholder of Purity',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\22_Barten, the Seeking Scholar.png" id="22_Barten, the Seeking Scholar" data-flag="@X" onclick="openSidebar('22_Barten, the Seeking Scholar',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\60_Xanigan, the Darkened Cloud.png" id="60_Xanigan, the Darkened Cloud" data-flag="@X" onclick="openSidebar('60_Xanigan, the Darkened Cloud',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\74_Siobhan, the Golden Knuckle.png" id="74_Siobhan, the Golden Knuckle" data-flag="@X" onclick="openSidebar('74_Siobhan, the Golden Knuckle',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\90_Kalmatar, the Hungering Maw.png" id="90_Kalmatar, the Hungering Maw" data-flag="@X" onclick="openSidebar('90_Kalmatar, the Hungering Maw',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\1_Against the Gale.png" id="1_Against the Gale" data-flag="@X" onclick="openSidebar('1_Against the Gale',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\23_Bounded Intellect.png" id="23_Bounded Intellect" data-flag="@X" onclick="openSidebar('23_Bounded Intellect',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\41_Ambition's Promise.png" id="41_Ambitions Promise" data-flag="@X" onclick="openSidebar('41_Ambitions Promise',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\64_Crucible of Glory.png" id="64_Crucible of Glory" data-flag="@X" onclick="openSidebar('64_Crucible of Glory',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\82_Caibry's Warden.png" id="82_Caibrys Warden" data-flag="@X" onclick="openSidebar('82_Caibrys Warden',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\4_Bahleze's Song.png" id="4_Bahlezes Song" data-flag="@X" onclick="openSidebar('4_Bahlezes Song',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\31_Define Destiny.png" id="31_Define Destiny" data-flag="@X" onclick="openSidebar('31_Define Destiny',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\50_Futile Desolation.png" id="50_Futile Desolation" data-flag="@X" onclick="openSidebar('50_Futile Desolation',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\72_Marrow to Brimstone.png" id="72_Marrow to Brimstone" data-flag="@X" onclick="openSidebar('72_Marrow to Brimstone',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\85_Greenpalm Guide.png" id="85_Greenpalm Guide" data-flag="@X" onclick="openSidebar('85_Greenpalm Guide',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\10_Hallowed.png" id="10_Hallowed" data-flag="@X" onclick="openSidebar('10_Hallowed',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\40_Tide Wallower.png" id="40_Tide Wallower" data-flag="@X" onclick="openSidebar('40_Tide Wallower',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\52_Inkwell Scourge.png" id="52_Inkwell Scourge" data-flag="@X" onclick="openSidebar('52_Inkwell Scourge',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\80_Zamettra's Song.png" id="80_Zamettras Song" data-flag="@X" onclick="openSidebar('80_Zamettras Song',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\95_Orc Warchief.png" id="95_Orc Warchief" data-flag="@X" onclick="openSidebar('95_Orc Warchief',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\6_Caibry's Forerunner.png" id="6_Caibrys Forerunner" data-flag="@X" onclick="openSidebar('6_Caibrys Forerunner',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\29_Cumulus Scout.png" id="29_Cumulus Scout" data-flag="@X" onclick="openSidebar('29_Cumulus Scout',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\42_Azenghul's Flesh.png" id="42_Azenghuls Flesh" data-flag="@X" onclick="openSidebar('42_Azenghuls Flesh',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\65_Demon of Potential.png" id="65_Demon of Potential" data-flag="@X" onclick="openSidebar('65_Demon of Potential',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\87_Hamlet Warlord.png" id="87_Hamlet Warlord" data-flag="@X" onclick="openSidebar('87_Hamlet Warlord',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\8_Demon of Blessings.png" id="8_Demon of Blessings" data-flag="@X" onclick="openSidebar('8_Demon of Blessings',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\32_Desperate Infiltration.png" id="32_Desperate Infiltration" data-flag="@X" onclick="openSidebar('32_Desperate Infiltration',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\45_Demon of Curses.png" id="45_Demon of Curses" data-flag="@X" onclick="openSidebar('45_Demon of Curses',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\67_Fires of Arhval.png" id="67_Fires of Arhval" data-flag="@X" onclick="openSidebar('67_Fires of Arhval',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\92_Might of Sakarias.png" id="92_Might of Sakarias" data-flag="@X" onclick="openSidebar('92_Might of Sakarias',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\11_Haunting Presence.png" id="11_Haunting Presence" data-flag="@X" onclick="openSidebar('11_Haunting Presence',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\33_False Trails.png" id="33_False Trails" data-flag="@X" onclick="openSidebar('33_False Trails',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\46_Drown in Blood.png" id="46_Drown in Blood" data-flag="@X" onclick="openSidebar('46_Drown in Blood',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\73_Rhyolitic Inquiries.png" id="73_Rhyolitic Inquiries" data-flag="@X" onclick="openSidebar('73_Rhyolitic Inquiries',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\94_Nessos Archer.png" id="94_Nessos Archer" data-flag="@X" onclick="openSidebar('94_Nessos Archer',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\13_Might of the Meek.png" id="13_Might of the Meek" data-flag="@X" onclick="openSidebar('13_Might of the Meek',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\35_Insectile Broodmother.png" id="35_Insectile Broodmother" data-flag="@X" onclick="openSidebar('35_Insectile Broodmother',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\47_Entangled Rats.png" id="47_Entangled Rats" data-flag="@X" onclick="openSidebar('47_Entangled Rats',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\76_Static Brawler.png" id="76_Static Brawler" data-flag="@X" onclick="openSidebar('76_Static Brawler',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\97_Spectral Hunt.png" id="97_Spectral Hunt" data-flag="@X" onclick="openSidebar('97_Spectral Hunt',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\16_Reborn Adrift.png" id="16_Reborn Adrift" data-flag="@X" onclick="openSidebar('16_Reborn Adrift',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\39_Siphon Will.png" id="39_Siphon Will" data-flag="@X" onclick="openSidebar('39_Siphon Will',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\49_Frailty.png" id="49_Frailty" data-flag="@X" onclick="openSidebar('49_Frailty',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\78_Through Struggle.png" id="78_Through Struggle" data-flag="@X" onclick="openSidebar('78_Through Struggle',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\98_Sporewoven Spider.png" id="98_Sporewoven Spider" data-flag="@X" onclick="openSidebar('98_Sporewoven Spider',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\2_Aide of the Overseers.png" id="2_Aide of the Overseers" data-flag="@X" onclick="openSidebar('2_Aide of the Overseers',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\24_Branching Thoughts.png" id="24_Branching Thoughts" data-flag="@X" onclick="openSidebar('24_Branching Thoughts',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\43_Blessing of Azenghul.png" id="43_Blessing of Azenghul" data-flag="@X" onclick="openSidebar('43_Blessing of Azenghul',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\61_Azenghul's Blood.png" id="61_Azenghuls Blood" data-flag="@X" onclick="openSidebar('61_Azenghuls Blood',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\81_Abomination's Advocate.png" id="81_Abominations Advocate" data-flag="@X" onclick="openSidebar('81_Abominations Advocate',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\3_Azenghul's Soul.png" id="3_Azenghuls Soul" data-flag="@X" onclick="openSidebar('3_Azenghuls Soul',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\25_Cackling Assistants.png" id="25_Cackling Assistants" data-flag="@X" onclick="openSidebar('25_Cackling Assistants',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\44_Bloated Rat.png" id="44_Bloated Rat" data-flag="@X" onclick="openSidebar('44_Bloated Rat',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\62_Charismatic Challenger.png" id="62_Charismatic Challenger" data-flag="@X" onclick="openSidebar('62_Charismatic Challenger',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\83_Challenger's Congregation.png" id="83_Challengers Congregation" data-flag="@X" onclick="openSidebar('83_Challengers Congregation',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\5_Blade of Worship.png" id="5_Blade of Worship" data-flag="@X" onclick="openSidebar('5_Blade of Worship',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\26_Caibry's Scout.png" id="26_Caibrys Scout" data-flag="@X" onclick="openSidebar('26_Caibrys Scout',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\48_Eternal Echo.png" id="48_Eternal Echo" data-flag="@X" onclick="openSidebar('48_Eternal Echo',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\63_Crackling Nerves.png" id="63_Crackling Nerves" data-flag="@X" onclick="openSidebar('63_Crackling Nerves',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\86_Hamlet Purifier.png" id="86_Hamlet Purifier" data-flag="@X" onclick="openSidebar('86_Hamlet Purifier',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\7_Carriage Master.png" id="7_Carriage Master" data-flag="@X" onclick="openSidebar('7_Carriage Master',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\27_Channel Reminiscence.png" id="27_Channel Reminiscence" data-flag="@X" onclick="openSidebar('27_Channel Reminiscence',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\53_Nessos Vanguard.png" id="53_Nessos Vanguard" data-flag="@X" onclick="openSidebar('53_Nessos Vanguard',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\66_Final Wisdom.png" id="66_Final Wisdom" data-flag="@X" onclick="openSidebar('66_Final Wisdom',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\88_Hearthkeeper.png" id="88_Hearthkeeper" data-flag="@X" onclick="openSidebar('88_Hearthkeeper',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\12_Honorbound Champion.png" id="12_Honorbound Champion" data-flag="@X" onclick="openSidebar('12_Honorbound Champion',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\28_Crystalline Inquiry.png" id="28_Crystalline Inquiry" data-flag="@X" onclick="openSidebar('28_Crystalline Inquiry',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\54_Offer Sacrifice.png" id="54_Offer Sacrifice" data-flag="@X" onclick="openSidebar('54_Offer Sacrifice',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\68_Fling.png" id="68_Fling" data-flag="@X" onclick="openSidebar('68_Fling',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\89_Impish Ambush.png" id="89_Impish Ambush" data-flag="@X" onclick="openSidebar('89_Impish Ambush',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\14_Mortal Reckoning.png" id="14_Mortal Reckoning" data-flag="@X" onclick="openSidebar('14_Mortal Reckoning',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\30_Curious Drake.png" id="30_Curious Drake" data-flag="@X" onclick="openSidebar('30_Curious Drake',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\55_Ritual Relic.png" id="55_Ritual Relic" data-flag="@X" onclick="openSidebar('55_Ritual Relic',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\69_Frenzied Vampire.png" id="69_Frenzied Vampire" data-flag="@X" onclick="openSidebar('69_Frenzied Vampire',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\91_Kneebreaker Champion.png" id="91_Kneebreaker Champion" data-flag="@X" onclick="openSidebar('91_Kneebreaker Champion',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\15_Queller of Whispers.png" id="15_Queller of Whispers" data-flag="@X" onclick="openSidebar('15_Queller of Whispers',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\34_Hallowed Steps.png" id="34_Hallowed Steps" data-flag="@X" onclick="openSidebar('34_Hallowed Steps',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\56_Servant of Xanigan.png" id="56_Servant of Xanigan" data-flag="@X" onclick="openSidebar('56_Servant of Xanigan',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\71_Ironwill Champion.png" id="71_Ironwill Champion" data-flag="@X" onclick="openSidebar('71_Ironwill Champion',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\93_Moss Sifter.png" id="93_Moss Sifter" data-flag="@X" onclick="openSidebar('93_Moss Sifter',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\17_Soul's Attendant.png" id="17_Souls Attendant" data-flag="@X" onclick="openSidebar('17_Souls Attendant',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\36_Languid Whispers.png" id="36_Languid Whispers" data-flag="@X" onclick="openSidebar('36_Languid Whispers',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\57_Shadowed Maestro.png" id="57_Shadowed Maestro" data-flag="@X" onclick="openSidebar('57_Shadowed Maestro',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\75_Splatter the Heathen.png" id="75_Splatter the Heathen" data-flag="@X" onclick="openSidebar('75_Splatter the Heathen',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\96_Sickening Incubator.png" id="96_Sickening Incubator" data-flag="@X" onclick="openSidebar('96_Sickening Incubator',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\19_Valiant Challengers.png" id="19_Valiant Challengers" data-flag="@X" onclick="openSidebar('19_Valiant Challengers',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\37_Maddened Archivist.png" id="37_Maddened Archivist" data-flag="@X" onclick="openSidebar('37_Maddened Archivist',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\58_Shambling Leechmother.png" id="58_Shambling Leechmother" data-flag="@X" onclick="openSidebar('58_Shambling Leechmother',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\77_Steelheart Devotee.png" id="77_Steelheart Devotee" data-flag="@X" onclick="openSidebar('77_Steelheart Devotee',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\99_Wild Stampede.png" id="99_Wild Stampede" data-flag="@X" onclick="openSidebar('99_Wild Stampede',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\20_Venerated Mystic.png" id="20_Venerated Mystic" data-flag="@X" onclick="openSidebar('20_Venerated Mystic',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\38_Orc Alchemist.png" id="38_Orc Alchemist" data-flag="@X" onclick="openSidebar('38_Orc Alchemist',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\59_Soulfeed Vampire.png" id="59_Soulfeed Vampire" data-flag="@X" onclick="openSidebar('59_Soulfeed Vampire',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\79_Warrior's Condescension.png" id="79_Warriors Condescension" data-flag="@X" onclick="openSidebar('79_Warriors Condescension',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\100_Wild Whisper.png" id="100_Wild Whisper" data-flag="@X" onclick="openSidebar('100_Wild Whisper',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div id="gold" class="anchor"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\101_Court of Gilded Graves.png" id="101_Court of Gilded Graves" data-flag="@X" onclick="openSidebar('101_Court of Gilded Graves',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\105_Valter, the Final Breath.png" id="105_Valter, the Final Breath" data-flag="@X" onclick="openSidebar('105_Valter, the Final Breath',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\108_Zamettra, Study of Fervor.png" id="108_Zamettra, Study of Fervor" data-flag="@X" onclick="openSidebar('108_Zamettra, Study of Fervor',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\109_Brida, Surging Valkyrie.png" id="109_Brida, Surging Valkyrie" data-flag="@X" onclick="openSidebar('109_Brida, Surging Valkyrie',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\111_Court of Verdant Vales.png" id="111_Court of Verdant Vales" data-flag="@X" onclick="openSidebar('111_Court of Verdant Vales',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\102_Lofty Perch.png" id="102_Lofty Perch" data-flag="@X" onclick="openSidebar('102_Lofty Perch',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\103_Bane of Flesh.png" id="103_Bane of Flesh" data-flag="@X" onclick="openSidebar('103_Bane of Flesh',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\106_Moonlit Adherent.png" id="106_Moonlit Adherent" data-flag="@X" onclick="openSidebar('106_Moonlit Adherent',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\110_Triumphant Aftermath.png" id="110_Triumphant Aftermath" data-flag="@X" onclick="openSidebar('110_Triumphant Aftermath',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\112_Spare the Day.png" id="112_Spare the Day" data-flag="@X" onclick="openSidebar('112_Spare the Day',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\104_Plated Lurker.png" id="104_Plated Lurker" data-flag="@X" onclick="openSidebar('104_Plated Lurker',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\107_Shared Madness.png" id="107_Shared Madness" data-flag="@X" onclick="openSidebar('107_Shared Madness',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\113_Warrior's End.png" id="113_Warriors End" data-flag="@X" onclick="openSidebar('113_Warriors End',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\114_Bahleze, Study of Grace.png" id="114_Bahleze, Study of Grace" data-flag="@X" onclick="openSidebar('114_Bahleze, Study of Grace',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\116_Desker, the Final Expulsion.png" id="116_Desker, the Final Expulsion" data-flag="@X" onclick="openSidebar('116_Desker, the Final Expulsion',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\119_Maikki, Mire's Matron.png" id="119_Maikki, Mires Matron" data-flag="@X" onclick="openSidebar('119_Maikki, Mires Matron',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\120_Aelswith, Radiant Valkyrie.png" id="120_Aelswith, Radiant Valkyrie" data-flag="@X" onclick="openSidebar('120_Aelswith, Radiant Valkyrie',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\125_Taika, Tide's Tale.png" id="125_Taika, Tides Tale" data-flag="@X" onclick="openSidebar('125_Taika, Tides Tale',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\115_Words of Scripture.png" id="115_Words of Scripture" data-flag="@X" onclick="openSidebar('115_Words of Scripture',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\117_Face Phantasms.png" id="117_Face Phantasms" data-flag="@X" onclick="openSidebar('117_Face Phantasms',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\118_Cultist of Sakarias.png" id="118_Cultist of Sakarias" data-flag="@X" onclick="openSidebar('118_Cultist of Sakarias',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\121_Twilight Worshiper.png" id="121_Twilight Worshiper" data-flag="@X" onclick="openSidebar('121_Twilight Worshiper',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\123_Embrace the Depths.png" id="123_Embrace the Depths" data-flag="@X" onclick="openSidebar('123_Embrace the Depths',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\122_Worthy Ascendant.png" id="122_Worthy Ascendant" data-flag="@X" onclick="openSidebar('122_Worthy Ascendant',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\124_Stand Steadfast.png" id="124_Stand Steadfast" data-flag="@X" onclick="openSidebar('124_Stand Steadfast',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\134_Poltic, Deluge of Delusions.png" id="134_Poltic, Deluge of Delusions" data-flag="@X" onclick="openSidebar('134_Poltic, Deluge of Delusions',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\133_Heilda, Ahrval's Paragon.png" id="133_Heilda, Ahrvals Paragon" data-flag="@X" onclick="openSidebar('133_Heilda, Ahrvals Paragon',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\127_Caibry, Deathless Whisper.png" id="127_Caibry, Deathless Whisper" data-flag="@X" onclick="openSidebar('127_Caibry, Deathless Whisper',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\129_From Lies and Loss.png" id="129_From Lies and Loss" data-flag="@X" onclick="openSidebar('129_From Lies and Loss',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\132_From Valor and Vanity.png" id="132_From Valor and Vanity" data-flag="@X" onclick="openSidebar('132_From Valor and Vanity',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\130_From Peace and Purpose.png" id="130_From Peace and Purpose" data-flag="@X" onclick="openSidebar('130_From Peace and Purpose',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\126_Azenghul, Anguished Lady.png" id="126_Azenghul, Anguished Lady" data-flag="@X" onclick="openSidebar('126_Azenghul, Anguished Lady',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\135_Sakarias, Murk Trawler.png" id="135_Sakarias, Murk Trawler" data-flag="@X" onclick="openSidebar('135_Sakarias, Murk Trawler',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\128_From Hope and Harm.png" id="128_From Hope and Harm" data-flag="@X" onclick="openSidebar('128_From Hope and Harm',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\131_From Rot and Ruin.png" id="131_From Rot and Ruin" data-flag="@X" onclick="openSidebar('131_From Rot and Ruin',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div id="colorless" class="anchor"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\136_Seal of Decay.png" id="136_Seal of Decay" data-flag="@X" onclick="openSidebar('136_Seal of Decay',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\137_Seal of Fervor.png" id="137_Seal of Fervor" data-flag="@X" onclick="openSidebar('137_Seal of Fervor',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\138_Seal of Glory.png" id="138_Seal of Glory" data-flag="@X" onclick="openSidebar('138_Seal of Glory',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\139_Seal of Growth.png" id="139_Seal of Growth" data-flag="@X" onclick="openSidebar('139_Seal of Growth',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\140_Seal of Honour.png" id="140_Seal of Honour" data-flag="@X" onclick="openSidebar('140_Seal of Honour',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\141_Seal of Knowledge.png" id="141_Seal of Knowledge" data-flag="@X" onclick="openSidebar('141_Seal of Knowledge',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\142_Seal of Scripture.png" id="142_Seal of Scripture" data-flag="@X" onclick="openSidebar('142_Seal of Scripture',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\143_Seal of Secrets.png" id="143_Seal of Secrets" data-flag="@X" onclick="openSidebar('143_Seal of Secrets',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\144_Seal of Time.png" id="144_Seal of Time" data-flag="@X" onclick="openSidebar('144_Seal of Time',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\145_Seal of Wisdom.png" id="145_Seal of Wisdom" data-flag="@X" onclick="openSidebar('145_Seal of Wisdom',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\146_Abandoned Library.png" id="146_Abandoned Library" data-flag="@X" onclick="openSidebar('146_Abandoned Library',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\147_Corrupted Ruins.png" id="147_Corrupted Ruins" data-flag="@X" onclick="openSidebar('147_Corrupted Ruins',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\148_Frigid Creek.png" id="148_Frigid Creek" data-flag="@X" onclick="openSidebar('148_Frigid Creek',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\149_Heavenly Expanse.png" id="149_Heavenly Expanse" data-flag="@X" onclick="openSidebar('149_Heavenly Expanse',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\150_Sulfuric Lighthouse.png" id="150_Sulfuric Lighthouse" data-flag="@X" onclick="openSidebar('150_Sulfuric Lighthouse',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\152_Island.png" id="152_Island" data-flag="@X" onclick="openSidebar('152_Island',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\153_Swamp.png" id="153_Swamp" data-flag="@X" onclick="openSidebar('153_Swamp',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\154_Mountain.png" id="154_Mountain" data-flag="@X" onclick="openSidebar('154_Mountain',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\155_Forest.png" id="155_Forest" data-flag="@X" onclick="openSidebar('155_Forest',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\151_Plains.png" id="151_Plains" data-flag="@X" onclick="openSidebar('151_Plains',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div id="token" class="anchor"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\4t_Clue.png" id="4t_Clue" data-flag="@X" onclick="openSidebar('4t_Clue',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\1t_Homunculus.png" id="1t_Homunculus" data-flag="@X" onclick="openSidebar('1t_Homunculus',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\2t_Languid Whispers (Token).png" id="2t_Languid Whispers (Token)" data-flag="@X" onclick="openSidebar('2t_Languid Whispers (Token)',false)"></div>
+				<div class="container"><img alt="/sets\BTJ-files\img\3t_Warrior.png" id="3t_Warrior" data-flag="@X" onclick="openSidebar('3t_Warrior',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
 	</div>
-</div>
+	</div>
 	<div class="sidebar" id="sidebar">
 		<div class="sidebar-container">
 			<img id="sidebar_img" class="sidebar-img" src="/img/er.png">
@@ -477,7 +496,7 @@
 				card_list_arrayified = card_list.cards;
 
 		preloadImgs = document.getElementsByClassName('preload-hidden');
-		
+
 		let images_loaded = [];
 
 		do {
@@ -567,7 +586,7 @@
 	function openSidebar(id, h = false) {
 		horizontal = h;
 		scroll_pct = window.scrollY / document.documentElement.scrollHeight;
-		
+
 		document.getElementById('sidebar').style.display = 'grid';
 
 		const rotated_img = document.getElementById('sidebar_h_img');
@@ -598,7 +617,7 @@
 			document.getElementById('sidebar-flip-btn').style.display = 'none';
 		}
 		document.getElementById('main-content').style.width = '60%';
-		
+
 		scroll_pos = scroll_pct * document.documentElement.scrollHeight;
 		window.scrollTo(window.scrollX, scroll_pos);
 		setSidebarTop();
@@ -609,10 +628,28 @@
 
 		document.getElementById('sidebar').style.display = 'none';
 		document.getElementById('main-content').style.width = '100%';
-		
+
 
 		scroll_pos = scroll_pct * document.documentElement.scrollHeight;
 		window.scrollTo(window.scrollX, scroll_pos);
+	}
+
+	function rolldown() {
+		var sets = document.querySelectorAll('.inactive');
+		for(const set of sets)
+		{
+			set.style.height = "auto";
+			set.style.margin = "5px";
+		}
+	}
+
+	function rollup() {
+		var sets = document.querySelectorAll('.inactive');
+		for(const set of sets)
+		{
+			set.style.height = "0px";
+			set.style.margin = "0px 5px";
+		}
 	}
 
 	document.getElementById("search").addEventListener("keypress", function(event) {

@@ -5,6 +5,10 @@
 	<link rel="stylesheet" href="/resources/header.css">
 	<title>MAC visual preview</title>
 	<style>
+		@font-face {
+			font-family: Beleren;
+			src: url('/resources/beleren.ttf');
+		}
 		body {
 			font-family: Arial, sans-serif;
 			margin: 0;
@@ -82,7 +86,7 @@
 		.banner {
 			width: 100%;
 			height: auto;
-			padding-top: 20px;
+			padding-top: 80px;
 			padding-bottom: 50px;
 		}
 		.logo {
@@ -118,36 +122,49 @@
 			background-size: contain;
 			background-position: center;
 		}
-		.icon-bar {
-			display: grid;
-			grid-template-columns: repeat(10, 3fr 2fr) 3fr;
-			gap: 1px;
-			padding-left: 5%;
-			padding-right: 5%;
-			padding-top: 2%;
-			padding-bottom: 1%;
-			justify-items: center;
+		.dropdown {
+			background: rgba(23, 23, 23, 0.8);
+			border-radius: 8px;
+			position: absolute;
+			left: 10%;
+			width: fit-content;
+			margin: 20px 0;
+			padding: 5px 0;
+			display: flex;
+			flex-direction: column;
+			z-index: 3;
+		}
+		.dropdown .set-bar {
+			font-family: Beleren;
+			font-size: 20px;
+			text-decoration: none;
+			color: #e3e3e3;
+			display: flex;
+			gap: 10px;
 			align-items: center;
+			padding: 0 12px;
+			margin: 5px;
 		}
-		.icon-bar .icon img {
-			width: 90%;
-			max-width: 80px;
-			height: auto;
-			display: block;
-			padding: 5%;
-			margin: auto;
-			text-align: center;
+		.dropdown .set-bar:hover {
+			background: rgba(163, 163, 163, 0.5);
+			color: #f3f3f3;
 		}
-		.icon-bar .dot img {
-			width: 50%;
-			max-width: 65px;
-			height: auto;
-			display: block;
-			margin: auto;
-			text-align: center;
+		.dropdown .set-bar img {
+			width: 32px;
+		}
+		.dropdown .inactive {
+			height: 0px;
+			overflow: hidden;
+			margin: 0px 5px;
 		}
 		.preload-hidden {
 			display: none;
+		}
+		.addenda-container {
+			text-align: center;
+			width: fit-content;
+			max-width: 1200px;
+			padding: 0 5%;
 		}
 		/* This is here to enable the stickiness in a Float environment. I don't know why it works but it does */
 		.footer {
@@ -185,206 +202,208 @@
 		</div>
 	</div>
 
-	<div class="icon-bar">
-			<div class="icon"><a href="HQZ"><img src="/sets/HQZ-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="LRH"><img src="/sets/LRH-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="INK"><img src="/sets/INK-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="ACA"><img src="/sets/ACA-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="BYK"><img src="/sets/BYK-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="BTJ"><img src="/sets/BTJ-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="ACR"><img src="/sets/ACR-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="HVF"><img src="/sets/HVF-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="MAC"><img src="/sets/MAC-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="CAC"><img src="/sets/CAC-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="PFP"><img src="/sets/PFP-files/icon.png"></img></a></div>
-		<div class="icon"><a href="TWR"><img src="/sets/TWR-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="MMC"><img src="/sets/MMC-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="MMT"><img src="/sets/MMT-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="IAH"><img src="/sets/IAH-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="CRC"><img src="/sets/CRC-files/icon.png"></img></a></div>
-
+	<div class="dropdown" onmouseenter="rolldown()" onmouseleave="rollup()">
+	
+		<a class="set-bar" href="MAC"><img src="/sets/MAC-files/icon.png">Memorium Arcanum</a>
+	
+		<a class="set-bar inactive" href="HQZ"><img src="/sets/HQZ-files/icon.png">Hunting Quiet Horizons</a>
+	
+		<a class="set-bar inactive" href="LRH"><img src="/sets/LRH-files/icon.png">The Long Road Home</a>
+	
+		<a class="set-bar inactive" href="INK"><img src="/sets/INK-files/icon.png">Across the Ink Sea</a>
+	
+		<a class="set-bar inactive" href="ACA"><img src="/sets/ACA-files/icon.png">Arcanum Academia</a>
+	
+		<a class="set-bar inactive" href="BYK"><img src="/sets/BYK-files/icon.png">Beyond Our Ken</a>
+	
+		<a class="set-bar inactive" href="BTJ"><img src="/sets/BTJ-files/icon.png">Barten’s Journal</a>
+	
+		<a class="set-bar inactive" href="ACR"><img src="/sets/ACR-files/icon.png">Arcanum: Reforged</a>
+	
+		<a class="set-bar inactive" href="HVF"><img src="/sets/HVF-files/icon.png">Harvest Festival</a>
+	
+		<a class="set-bar inactive" href="CAC"><img src="/sets/CAC-files/icon.png">Carpe Arcanum</a>
+	
+		<a class="set-bar inactive" href="PFP"><img src="/sets/PFP-files/icon.png">Plagues of Fretport</a>
+	
+		<a class="set-bar inactive" href="TWR"><img src="/sets/TWR-files/icon.png">A Tourney at Whiterun</a>
+	
+		<a class="set-bar inactive" href="MMC"><img src="/sets/MMC-files/icon.png">Memory’s Collapse</a>
+	
+		<a class="set-bar inactive" href="MMT"><img src="/sets/MMT-files/icon.png">Memory’s Tyranny</a>
+	
+		<a class="set-bar inactive" href="IAH"><img src="/sets/IAH-files/icon.png">Intrigue</a>
+	
+		<a class="set-bar inactive" href="CRC"><img src="/sets/CRC-files/icon.png">Cretio Created</a>
+	
 		</div>
 		<div class="banner">
 		<img class="logo" src="/sets/MAC-files/logo.png">
 		</div>
 		<div class="main-content" id="main-content">
 			<div class="grid-container">
-				<div class="container"><img alt="/sets\MAC-files\img\2_Felice, Adira's Salvation.png" id="2_Felice, Adiras Salvation" data-flag="@X" onclick="openSidebar('2_Felice, Adiras Salvation',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\9_Almgrove Ambassador.png" id="9_Almgrove Ambassador" data-flag="@X" onclick="openSidebar('9_Almgrove Ambassador',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\16_Adiran Survivors.png" id="16_Adiran Survivors" data-flag="@X" onclick="openSidebar('16_Adiran Survivors',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\23_Aerida's Study.png" id="23_Aeridas Study" data-flag="@X" onclick="openSidebar('23_Aeridas Study',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\30_Adiran Scryers.png" id="30_Adiran Scryers" data-flag="@X" onclick="openSidebar('30_Adiran Scryers',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\1_Culminating Salvation.png" id="1_Culminating Salvation" data-flag="@X" onclick="openSidebar('1_Culminating Salvation',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\10_Culminating Conspiracy.png" id="10_Culminating Conspiracy" data-flag="@X" onclick="openSidebar('10_Culminating Conspiracy',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\17_Algrin's Legacy.png" id="17_Algrins Legacy" data-flag="@X" onclick="openSidebar('17_Algrins Legacy',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\24_Anarchy Storm.png" id="24_Anarchy Storm" data-flag="@X" onclick="openSidebar('24_Anarchy Storm',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\31_Consuming Symbiosis.png" id="31_Consuming Symbiosis" data-flag="@X" onclick="openSidebar('31_Consuming Symbiosis',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\3_Felice's Defiance.png" id="3_Felices Defiance" data-flag="@X" onclick="openSidebar('3_Felices Defiance',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\11_Master of Masks.png" id="11_Master of Masks" data-flag="@X" onclick="openSidebar('11_Master of Masks',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\18_Culminating Despair.png" id="18_Culminating Despair" data-flag="@X" onclick="openSidebar('18_Culminating Despair',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\25_Collapsing Realities.png" id="25_Collapsing Realities" data-flag="@X" onclick="openSidebar('25_Collapsing Realities',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\32_Culminating Wisdom.png" id="32_Culminating Wisdom" data-flag="@X" onclick="openSidebar('32_Culminating Wisdom',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\4_Felice's Study.png" id="4_Felices Study" data-flag="@X" onclick="openSidebar('4_Felices Study',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\12_Once Denied.png" id="12_Once Denied" data-flag="@X" onclick="openSidebar('12_Once Denied',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\19_Fading Dead.png" id="19_Fading Dead" data-flag="@X" onclick="openSidebar('19_Fading Dead',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\26_Culminating Chaos.png" id="26_Culminating Chaos" data-flag="@X" onclick="openSidebar('26_Culminating Chaos',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\33_Foliage Hunter.png" id="33_Foliage Hunter" data-flag="@X" onclick="openSidebar('33_Foliage Hunter',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\5_Heraldry.png" id="5_Heraldry" data-flag="@X" onclick="openSidebar('5_Heraldry',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\13_Recalculation.png" id="13_Recalculation" data-flag="@X" onclick="openSidebar('13_Recalculation',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\20_Once Betrayed.png" id="20_Once Betrayed" data-flag="@X" onclick="openSidebar('20_Once Betrayed',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\27_End of Worlds.png" id="27_End of Worlds" data-flag="@X" onclick="openSidebar('27_End of Worlds',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\34_Once Abandoned.png" id="34_Once Abandoned" data-flag="@X" onclick="openSidebar('34_Once Abandoned',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\6_Once Shunned.png" id="6_Once Shunned" data-flag="@X" onclick="openSidebar('6_Once Shunned',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\14_Spectrum Archmage.png" id="14_Spectrum Archmage" data-flag="@X" onclick="openSidebar('14_Spectrum Archmage',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\21_Refracted Thoughts.png" id="21_Refracted Thoughts" data-flag="@X" onclick="openSidebar('21_Refracted Thoughts',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\28_Once Scarred.png" id="28_Once Scarred" data-flag="@X" onclick="openSidebar('28_Once Scarred',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\35_Root Dancer.png" id="35_Root Dancer" data-flag="@X" onclick="openSidebar('35_Root Dancer',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\7_Paragon of Purity.png" id="7_Paragon of Purity" data-flag="@X" onclick="openSidebar('7_Paragon of Purity',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\15_Unbound Horizons.png" id="15_Unbound Horizons" data-flag="@X" onclick="openSidebar('15_Unbound Horizons',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\22_Shroud in Paranoia.png" id="22_Shroud in Paranoia" data-flag="@X" onclick="openSidebar('22_Shroud in Paranoia',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\29_Speaker of the Iris.png" id="29_Speaker of the Iris" data-flag="@X" onclick="openSidebar('29_Speaker of the Iris',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\36_Seek Refuge.png" id="36_Seek Refuge" data-flag="@X" onclick="openSidebar('36_Seek Refuge',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\8_Strayseeker Ranger.png" id="8_Strayseeker Ranger" data-flag="@X" onclick="openSidebar('8_Strayseeker Ranger',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-<div id="gold" class="anchor"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\37_Equilibrium Paladin.png" id="37_Equilibrium Paladin" data-flag="@X" onclick="openSidebar('37_Equilibrium Paladin',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\39_Buy Time.png" id="39_Buy Time" data-flag="@X" onclick="openSidebar('39_Buy Time',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\41_Fallacy's Channeler.png" id="41_Fallacys Channeler" data-flag="@X" onclick="openSidebar('41_Fallacys Channeler',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\43_Charming Marauder.png" id="43_Charming Marauder" data-flag="@X" onclick="openSidebar('43_Charming Marauder',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\45_Seeker of Horizons.png" id="45_Seeker of Horizons" data-flag="@X" onclick="openSidebar('45_Seeker of Horizons',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\38_Inspire Actuality.png" id="38_Inspire Actuality" data-flag="@X" onclick="openSidebar('38_Inspire Actuality',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\40_Withering Husk.png" id="40_Withering Husk" data-flag="@X" onclick="openSidebar('40_Withering Husk',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\42_In Tragedy.png" id="42_In Tragedy" data-flag="@X" onclick="openSidebar('42_In Tragedy',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\44_Rubble Tender.png" id="44_Rubble Tender" data-flag="@X" onclick="openSidebar('44_Rubble Tender',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\46_Through Worlds.png" id="46_Through Worlds" data-flag="@X" onclick="openSidebar('46_Through Worlds',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\47_Cognitive Fumigator.png" id="47_Cognitive Fumigator" data-flag="@X" onclick="openSidebar('47_Cognitive Fumigator',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\49_Aerida, Envious Chronomancer.png" id="49_Aerida, Envious Chronomancer" data-flag="@X" onclick="openSidebar('49_Aerida, Envious Chronomancer',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\52_Act of Repentance.png" id="52_Act of Repentance" data-flag="@X" onclick="openSidebar('52_Act of Repentance',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\54_Champion of the Red Dawn.png" id="54_Champion of the Red Dawn" data-flag="@X" onclick="openSidebar('54_Champion of the Red Dawn',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\56_Conjure Realities.png" id="56_Conjure Realities" data-flag="@X" onclick="openSidebar('56_Conjure Realities',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\48_Fallacy's Sanctifier.png" id="48_Fallacys Sanctifier" data-flag="@X" onclick="openSidebar('48_Fallacys Sanctifier',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\50_Aerida's Assistant.png" id="50_Aeridas Assistant" data-flag="@X" onclick="openSidebar('50_Aeridas Assistant',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\53_Appeal to the Ancestors.png" id="53_Appeal to the Ancestors" data-flag="@X" onclick="openSidebar('53_Appeal to the Ancestors',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\55_Wicked Blow.png" id="55_Wicked Blow" data-flag="@X" onclick="openSidebar('55_Wicked Blow',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\57_Contemplate Obscurity.png" id="57_Contemplate Obscurity" data-flag="@X" onclick="openSidebar('57_Contemplate Obscurity',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\51_Ophidian Oracle.png" id="51_Ophidian Oracle" data-flag="@X" onclick="openSidebar('51_Ophidian Oracle',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\64_Mystic of Many Winds.png" id="64_Mystic of Many Winds" data-flag="@X" onclick="openSidebar('64_Mystic of Many Winds',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\61_Crystal Wave.png" id="61_Crystal Wave" data-flag="@X" onclick="openSidebar('61_Crystal Wave',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\66_Starvation.png" id="66_Starvation" data-flag="@X" onclick="openSidebar('66_Starvation',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\62_Litany of Renewal.png" id="62_Litany of Renewal" data-flag="@X" onclick="openSidebar('62_Litany of Renewal',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\58_Adiran Distractor.png" id="58_Adiran Distractor" data-flag="@X" onclick="openSidebar('58_Adiran Distractor',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\65_Repent, Daughter of Fallacy.png" id="65_Repent, Daughter of Fallacy" data-flag="@X" onclick="openSidebar('65_Repent, Daughter of Fallacy',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\59_Burgeoning Blooms.png" id="59_Burgeoning Blooms" data-flag="@X" onclick="openSidebar('59_Burgeoning Blooms',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\60_Chance at Redemption.png" id="60_Chance at Redemption" data-flag="@X" onclick="openSidebar('60_Chance at Redemption',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\63_Mirrorplate Exemplar.png" id="63_Mirrorplate Exemplar" data-flag="@X" onclick="openSidebar('63_Mirrorplate Exemplar',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\67_Theurgist of the Depths.png" id="67_Theurgist of the Depths" data-flag="@X" onclick="openSidebar('67_Theurgist of the Depths',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-<div id="colorless" class="anchor"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\68_Fate Charm.png" id="68_Fate Charm" data-flag="@X" onclick="openSidebar('68_Fate Charm',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\69_Fateseeker's Orb.png" id="69_Fateseekers Orb" data-flag="@X" onclick="openSidebar('69_Fateseekers Orb',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\70_Paradox Rings.png" id="70_Paradox Rings" data-flag="@X" onclick="openSidebar('70_Paradox Rings',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\71_Poisoned Tonic.png" id="71_Poisoned Tonic" data-flag="@X" onclick="openSidebar('71_Poisoned Tonic',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\72_Potion of Inhibition.png" id="72_Potion of Inhibition" data-flag="@X" onclick="openSidebar('72_Potion of Inhibition',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\73_Seeking Sword.png" id="73_Seeking Sword" data-flag="@X" onclick="openSidebar('73_Seeking Sword',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-<div id="land" class="anchor"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\78_Stark Horizon.png" id="78_Stark Horizon" data-flag="@X" onclick="openSidebar('78_Stark Horizon',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\79_Stark Stream.png" id="79_Stark Stream" data-flag="@X" onclick="openSidebar('79_Stark Stream',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\77_Stark Hinterlands.png" id="77_Stark Hinterlands" data-flag="@X" onclick="openSidebar('77_Stark Hinterlands',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\80_Stark Wildfire.png" id="80_Stark Wildfire" data-flag="@X" onclick="openSidebar('80_Stark Wildfire',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\76_Stark Copse.png" id="76_Stark Copse" data-flag="@X" onclick="openSidebar('76_Stark Copse',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\74_Artist's Vista.png" id="74_Artists Vista" data-flag="@X" onclick="openSidebar('74_Artists Vista',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\75_Over the Horizon.png" id="75_Over the Horizon" data-flag="@X" onclick="openSidebar('75_Over the Horizon',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\89_Plains.png" id="89_Plains" data-flag="@X" onclick="openSidebar('89_Plains',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\87_Island.png" id="87_Island" data-flag="@X" onclick="openSidebar('87_Island',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\83_Swamp.png" id="83_Swamp" data-flag="@X" onclick="openSidebar('83_Swamp',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\84_Mountain.png" id="84_Mountain" data-flag="@X" onclick="openSidebar('84_Mountain',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\85_Forest.png" id="85_Forest" data-flag="@X" onclick="openSidebar('85_Forest',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\81_Plains.png" id="81_Plains" data-flag="@X" onclick="openSidebar('81_Plains',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\82_Island.png" id="82_Island" data-flag="@X" onclick="openSidebar('82_Island',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\90_Swamp.png" id="90_Swamp" data-flag="@X" onclick="openSidebar('90_Swamp',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\88_Mountain.png" id="88_Mountain" data-flag="@X" onclick="openSidebar('88_Mountain',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\86_Forest.png" id="86_Forest" data-flag="@X" onclick="openSidebar('86_Forest',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-<div id="token" class="anchor"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\4t_Emblem.png" id="4t_Emblem" data-flag="@N" onclick="openSidebar('4t_Emblem',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\1t_Human.png" id="1t_Human" data-flag="@X" onclick="openSidebar('1t_Human',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\2t_Spirit.png" id="2t_Spirit" data-flag="@X" onclick="openSidebar('2t_Spirit',false)"></div>
-			<div class="container"><img alt="/sets\MAC-files\img\3t_Beast.png" id="3t_Beast" data-flag="@X" onclick="openSidebar('3t_Beast',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+					<div class="container"><img alt="/sets\MAC-files\img\2_Felice, Adira's Salvation.png" id="2_Felice, Adiras Salvation" data-flag="@X" onclick="openSidebar('2_Felice, Adiras Salvation',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\9_Almgrove Ambassador.png" id="9_Almgrove Ambassador" data-flag="@X" onclick="openSidebar('9_Almgrove Ambassador',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\16_Adiran Survivors.png" id="16_Adiran Survivors" data-flag="@X" onclick="openSidebar('16_Adiran Survivors',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\23_Aerida's Study.png" id="23_Aeridas Study" data-flag="@X" onclick="openSidebar('23_Aeridas Study',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\30_Adiran Scryers.png" id="30_Adiran Scryers" data-flag="@X" onclick="openSidebar('30_Adiran Scryers',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\1_Culminating Salvation.png" id="1_Culminating Salvation" data-flag="@X" onclick="openSidebar('1_Culminating Salvation',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\10_Culminating Conspiracy.png" id="10_Culminating Conspiracy" data-flag="@X" onclick="openSidebar('10_Culminating Conspiracy',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\17_Algrin's Legacy.png" id="17_Algrins Legacy" data-flag="@X" onclick="openSidebar('17_Algrins Legacy',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\24_Anarchy Storm.png" id="24_Anarchy Storm" data-flag="@X" onclick="openSidebar('24_Anarchy Storm',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\31_Consuming Symbiosis.png" id="31_Consuming Symbiosis" data-flag="@X" onclick="openSidebar('31_Consuming Symbiosis',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\3_Felice's Defiance.png" id="3_Felices Defiance" data-flag="@X" onclick="openSidebar('3_Felices Defiance',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\11_Master of Masks.png" id="11_Master of Masks" data-flag="@X" onclick="openSidebar('11_Master of Masks',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\18_Culminating Despair.png" id="18_Culminating Despair" data-flag="@X" onclick="openSidebar('18_Culminating Despair',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\25_Collapsing Realities.png" id="25_Collapsing Realities" data-flag="@X" onclick="openSidebar('25_Collapsing Realities',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\32_Culminating Wisdom.png" id="32_Culminating Wisdom" data-flag="@X" onclick="openSidebar('32_Culminating Wisdom',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\4_Felice's Study.png" id="4_Felices Study" data-flag="@X" onclick="openSidebar('4_Felices Study',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\12_Once Denied.png" id="12_Once Denied" data-flag="@X" onclick="openSidebar('12_Once Denied',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\19_Fading Dead.png" id="19_Fading Dead" data-flag="@X" onclick="openSidebar('19_Fading Dead',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\26_Culminating Chaos.png" id="26_Culminating Chaos" data-flag="@X" onclick="openSidebar('26_Culminating Chaos',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\33_Foliage Hunter.png" id="33_Foliage Hunter" data-flag="@X" onclick="openSidebar('33_Foliage Hunter',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\5_Heraldry.png" id="5_Heraldry" data-flag="@X" onclick="openSidebar('5_Heraldry',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\13_Recalculation.png" id="13_Recalculation" data-flag="@X" onclick="openSidebar('13_Recalculation',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\20_Once Betrayed.png" id="20_Once Betrayed" data-flag="@X" onclick="openSidebar('20_Once Betrayed',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\27_End of Worlds.png" id="27_End of Worlds" data-flag="@X" onclick="openSidebar('27_End of Worlds',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\34_Once Abandoned.png" id="34_Once Abandoned" data-flag="@X" onclick="openSidebar('34_Once Abandoned',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\6_Once Shunned.png" id="6_Once Shunned" data-flag="@X" onclick="openSidebar('6_Once Shunned',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\14_Spectrum Archmage.png" id="14_Spectrum Archmage" data-flag="@X" onclick="openSidebar('14_Spectrum Archmage',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\21_Refracted Thoughts.png" id="21_Refracted Thoughts" data-flag="@X" onclick="openSidebar('21_Refracted Thoughts',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\28_Once Scarred.png" id="28_Once Scarred" data-flag="@X" onclick="openSidebar('28_Once Scarred',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\35_Root Dancer.png" id="35_Root Dancer" data-flag="@X" onclick="openSidebar('35_Root Dancer',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\7_Paragon of Purity.png" id="7_Paragon of Purity" data-flag="@X" onclick="openSidebar('7_Paragon of Purity',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\15_Unbound Horizons.png" id="15_Unbound Horizons" data-flag="@X" onclick="openSidebar('15_Unbound Horizons',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\22_Shroud in Paranoia.png" id="22_Shroud in Paranoia" data-flag="@X" onclick="openSidebar('22_Shroud in Paranoia',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\29_Speaker of the Iris.png" id="29_Speaker of the Iris" data-flag="@X" onclick="openSidebar('29_Speaker of the Iris',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\36_Seek Refuge.png" id="36_Seek Refuge" data-flag="@X" onclick="openSidebar('36_Seek Refuge',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\8_Strayseeker Ranger.png" id="8_Strayseeker Ranger" data-flag="@X" onclick="openSidebar('8_Strayseeker Ranger',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div id="gold" class="anchor"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\37_Equilibrium Paladin.png" id="37_Equilibrium Paladin" data-flag="@X" onclick="openSidebar('37_Equilibrium Paladin',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\39_Buy Time.png" id="39_Buy Time" data-flag="@X" onclick="openSidebar('39_Buy Time',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\41_Fallacy's Channeler.png" id="41_Fallacys Channeler" data-flag="@X" onclick="openSidebar('41_Fallacys Channeler',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\43_Charming Marauder.png" id="43_Charming Marauder" data-flag="@X" onclick="openSidebar('43_Charming Marauder',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\45_Seeker of Horizons.png" id="45_Seeker of Horizons" data-flag="@X" onclick="openSidebar('45_Seeker of Horizons',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\38_Inspire Actuality.png" id="38_Inspire Actuality" data-flag="@X" onclick="openSidebar('38_Inspire Actuality',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\40_Withering Husk.png" id="40_Withering Husk" data-flag="@X" onclick="openSidebar('40_Withering Husk',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\42_In Tragedy.png" id="42_In Tragedy" data-flag="@X" onclick="openSidebar('42_In Tragedy',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\44_Rubble Tender.png" id="44_Rubble Tender" data-flag="@X" onclick="openSidebar('44_Rubble Tender',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\46_Through Worlds.png" id="46_Through Worlds" data-flag="@X" onclick="openSidebar('46_Through Worlds',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\47_Cognitive Fumigator.png" id="47_Cognitive Fumigator" data-flag="@X" onclick="openSidebar('47_Cognitive Fumigator',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\49_Aerida, Envious Chronomancer.png" id="49_Aerida, Envious Chronomancer" data-flag="@X" onclick="openSidebar('49_Aerida, Envious Chronomancer',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\52_Act of Repentance.png" id="52_Act of Repentance" data-flag="@X" onclick="openSidebar('52_Act of Repentance',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\54_Champion of the Red Dawn.png" id="54_Champion of the Red Dawn" data-flag="@X" onclick="openSidebar('54_Champion of the Red Dawn',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\56_Conjure Realities.png" id="56_Conjure Realities" data-flag="@X" onclick="openSidebar('56_Conjure Realities',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\48_Fallacy's Sanctifier.png" id="48_Fallacys Sanctifier" data-flag="@X" onclick="openSidebar('48_Fallacys Sanctifier',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\50_Aerida's Assistant.png" id="50_Aeridas Assistant" data-flag="@X" onclick="openSidebar('50_Aeridas Assistant',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\53_Appeal to the Ancestors.png" id="53_Appeal to the Ancestors" data-flag="@X" onclick="openSidebar('53_Appeal to the Ancestors',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\55_Wicked Blow.png" id="55_Wicked Blow" data-flag="@X" onclick="openSidebar('55_Wicked Blow',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\57_Contemplate Obscurity.png" id="57_Contemplate Obscurity" data-flag="@X" onclick="openSidebar('57_Contemplate Obscurity',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\51_Ophidian Oracle.png" id="51_Ophidian Oracle" data-flag="@X" onclick="openSidebar('51_Ophidian Oracle',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\64_Mystic of Many Winds.png" id="64_Mystic of Many Winds" data-flag="@X" onclick="openSidebar('64_Mystic of Many Winds',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\61_Crystal Wave.png" id="61_Crystal Wave" data-flag="@X" onclick="openSidebar('61_Crystal Wave',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\66_Starvation.png" id="66_Starvation" data-flag="@X" onclick="openSidebar('66_Starvation',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\62_Litany of Renewal.png" id="62_Litany of Renewal" data-flag="@X" onclick="openSidebar('62_Litany of Renewal',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\58_Adiran Distractor.png" id="58_Adiran Distractor" data-flag="@X" onclick="openSidebar('58_Adiran Distractor',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\65_Repent, Daughter of Fallacy.png" id="65_Repent, Daughter of Fallacy" data-flag="@X" onclick="openSidebar('65_Repent, Daughter of Fallacy',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\59_Burgeoning Blooms.png" id="59_Burgeoning Blooms" data-flag="@X" onclick="openSidebar('59_Burgeoning Blooms',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\60_Chance at Redemption.png" id="60_Chance at Redemption" data-flag="@X" onclick="openSidebar('60_Chance at Redemption',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\63_Mirrorplate Exemplar.png" id="63_Mirrorplate Exemplar" data-flag="@X" onclick="openSidebar('63_Mirrorplate Exemplar',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\67_Theurgist of the Depths.png" id="67_Theurgist of the Depths" data-flag="@X" onclick="openSidebar('67_Theurgist of the Depths',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div id="colorless" class="anchor"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\68_Fate Charm.png" id="68_Fate Charm" data-flag="@X" onclick="openSidebar('68_Fate Charm',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\69_Fateseeker's Orb.png" id="69_Fateseekers Orb" data-flag="@X" onclick="openSidebar('69_Fateseekers Orb',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\70_Paradox Rings.png" id="70_Paradox Rings" data-flag="@X" onclick="openSidebar('70_Paradox Rings',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\71_Poisoned Tonic.png" id="71_Poisoned Tonic" data-flag="@X" onclick="openSidebar('71_Poisoned Tonic',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\72_Potion of Inhibition.png" id="72_Potion of Inhibition" data-flag="@X" onclick="openSidebar('72_Potion of Inhibition',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\73_Seeking Sword.png" id="73_Seeking Sword" data-flag="@X" onclick="openSidebar('73_Seeking Sword',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div id="land" class="anchor"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\78_Stark Horizon.png" id="78_Stark Horizon" data-flag="@X" onclick="openSidebar('78_Stark Horizon',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\79_Stark Stream.png" id="79_Stark Stream" data-flag="@X" onclick="openSidebar('79_Stark Stream',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\77_Stark Hinterlands.png" id="77_Stark Hinterlands" data-flag="@X" onclick="openSidebar('77_Stark Hinterlands',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\80_Stark Wildfire.png" id="80_Stark Wildfire" data-flag="@X" onclick="openSidebar('80_Stark Wildfire',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\76_Stark Copse.png" id="76_Stark Copse" data-flag="@X" onclick="openSidebar('76_Stark Copse',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\74_Artist's Vista.png" id="74_Artists Vista" data-flag="@X" onclick="openSidebar('74_Artists Vista',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\75_Over the Horizon.png" id="75_Over the Horizon" data-flag="@X" onclick="openSidebar('75_Over the Horizon',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\89_Plains.png" id="89_Plains" data-flag="@X" onclick="openSidebar('89_Plains',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\87_Island.png" id="87_Island" data-flag="@X" onclick="openSidebar('87_Island',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\83_Swamp.png" id="83_Swamp" data-flag="@X" onclick="openSidebar('83_Swamp',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\84_Mountain.png" id="84_Mountain" data-flag="@X" onclick="openSidebar('84_Mountain',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\85_Forest.png" id="85_Forest" data-flag="@X" onclick="openSidebar('85_Forest',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\81_Plains.png" id="81_Plains" data-flag="@X" onclick="openSidebar('81_Plains',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\82_Island.png" id="82_Island" data-flag="@X" onclick="openSidebar('82_Island',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\90_Swamp.png" id="90_Swamp" data-flag="@X" onclick="openSidebar('90_Swamp',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\88_Mountain.png" id="88_Mountain" data-flag="@X" onclick="openSidebar('88_Mountain',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\86_Forest.png" id="86_Forest" data-flag="@X" onclick="openSidebar('86_Forest',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div id="token" class="anchor"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\4t_Emblem.png" id="4t_Emblem" data-flag="@X" onclick="openSidebar('4t_Emblem',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\1t_Human.png" id="1t_Human" data-flag="@X" onclick="openSidebar('1t_Human',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\2t_Spirit.png" id="2t_Spirit" data-flag="@X" onclick="openSidebar('2t_Spirit',false)"></div>
+				<div class="container"><img alt="/sets\MAC-files\img\3t_Beast.png" id="3t_Beast" data-flag="@X" onclick="openSidebar('3t_Beast',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
 	</div>
-</div>
+	</div>
 	<div class="sidebar" id="sidebar">
 		<div class="sidebar-container">
 			<img id="sidebar_img" class="sidebar-img" src="/img/er.png">
@@ -415,7 +434,7 @@
 				card_list_arrayified = card_list.cards;
 
 		preloadImgs = document.getElementsByClassName('preload-hidden');
-		
+
 		let images_loaded = [];
 
 		do {
@@ -505,7 +524,7 @@
 	function openSidebar(id, h = false) {
 		horizontal = h;
 		scroll_pct = window.scrollY / document.documentElement.scrollHeight;
-		
+
 		document.getElementById('sidebar').style.display = 'grid';
 
 		const rotated_img = document.getElementById('sidebar_h_img');
@@ -536,7 +555,7 @@
 			document.getElementById('sidebar-flip-btn').style.display = 'none';
 		}
 		document.getElementById('main-content').style.width = '60%';
-		
+
 		scroll_pos = scroll_pct * document.documentElement.scrollHeight;
 		window.scrollTo(window.scrollX, scroll_pos);
 		setSidebarTop();
@@ -547,10 +566,28 @@
 
 		document.getElementById('sidebar').style.display = 'none';
 		document.getElementById('main-content').style.width = '100%';
-		
+
 
 		scroll_pos = scroll_pct * document.documentElement.scrollHeight;
 		window.scrollTo(window.scrollX, scroll_pos);
+	}
+
+	function rolldown() {
+		var sets = document.querySelectorAll('.inactive');
+		for(const set of sets)
+		{
+			set.style.height = "auto";
+			set.style.margin = "5px";
+		}
+	}
+
+	function rollup() {
+		var sets = document.querySelectorAll('.inactive');
+		for(const set of sets)
+		{
+			set.style.height = "0px";
+			set.style.margin = "0px 5px";
+		}
 	}
 
 	document.getElementById("search").addEventListener("keypress", function(event) {

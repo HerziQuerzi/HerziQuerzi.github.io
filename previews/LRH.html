@@ -5,6 +5,10 @@
 	<link rel="stylesheet" href="/resources/header.css">
 	<title>LRH visual preview</title>
 	<style>
+		@font-face {
+			font-family: Beleren;
+			src: url('/resources/beleren.ttf');
+		}
 		body {
 			font-family: Arial, sans-serif;
 			margin: 0;
@@ -82,7 +86,7 @@
 		.banner {
 			width: 100%;
 			height: auto;
-			padding-top: 20px;
+			padding-top: 80px;
 			padding-bottom: 50px;
 		}
 		.logo {
@@ -118,36 +122,49 @@
 			background-size: contain;
 			background-position: center;
 		}
-		.icon-bar {
-			display: grid;
-			grid-template-columns: repeat(10, 3fr 2fr) 3fr;
-			gap: 1px;
-			padding-left: 5%;
-			padding-right: 5%;
-			padding-top: 2%;
-			padding-bottom: 1%;
-			justify-items: center;
+		.dropdown {
+			background: rgba(23, 23, 23, 0.8);
+			border-radius: 8px;
+			position: absolute;
+			left: 10%;
+			width: fit-content;
+			margin: 20px 0;
+			padding: 5px 0;
+			display: flex;
+			flex-direction: column;
+			z-index: 3;
+		}
+		.dropdown .set-bar {
+			font-family: Beleren;
+			font-size: 20px;
+			text-decoration: none;
+			color: #e3e3e3;
+			display: flex;
+			gap: 10px;
 			align-items: center;
+			padding: 0 12px;
+			margin: 5px;
 		}
-		.icon-bar .icon img {
-			width: 90%;
-			max-width: 80px;
-			height: auto;
-			display: block;
-			padding: 5%;
-			margin: auto;
-			text-align: center;
+		.dropdown .set-bar:hover {
+			background: rgba(163, 163, 163, 0.5);
+			color: #f3f3f3;
 		}
-		.icon-bar .dot img {
-			width: 50%;
-			max-width: 65px;
-			height: auto;
-			display: block;
-			margin: auto;
-			text-align: center;
+		.dropdown .set-bar img {
+			width: 32px;
+		}
+		.dropdown .inactive {
+			height: 0px;
+			overflow: hidden;
+			margin: 0px 5px;
 		}
 		.preload-hidden {
 			display: none;
+		}
+		.addenda-container {
+			text-align: center;
+			width: fit-content;
+			max-width: 1200px;
+			padding: 0 5%;
 		}
 		/* This is here to enable the stickiness in a Float environment. I don't know why it works but it does */
 		.footer {
@@ -175,7 +192,7 @@
 		<img class="preload-hidden" src="/sets/IAH-files/icon.png" />
 		<img class="preload-hidden" src="/sets/CRC-files/icon.png" />
 		<img class="preload-hidden" id="bg" src="/sets/LRH-files/bg.png" />
-		
+
 		<div class="header">
 		<div class="search-grid">
 			<a href="/"><img class="sg-logo" src="/img/banner.png"></a>
@@ -187,236 +204,238 @@
 		</div>
 	</div>
 
-	<div class="icon-bar">
-			<div class="icon"><a href="HQZ"><img src="/sets/HQZ-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="LRH"><img src="/sets/LRH-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="INK"><img src="/sets/INK-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="ACA"><img src="/sets/ACA-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="BYK"><img src="/sets/BYK-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="BTJ"><img src="/sets/BTJ-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="ACR"><img src="/sets/ACR-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="HVF"><img src="/sets/HVF-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="MAC"><img src="/sets/MAC-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="CAC"><img src="/sets/CAC-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="PFP"><img src="/sets/PFP-files/icon.png"></img></a></div>
-		<div class="icon"><a href="TWR"><img src="/sets/TWR-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="MMC"><img src="/sets/MMC-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="MMT"><img src="/sets/MMT-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="IAH"><img src="/sets/IAH-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="CRC"><img src="/sets/CRC-files/icon.png"></img></a></div>
-
+	<div class="dropdown" onmouseenter="rolldown()" onmouseleave="rollup()">
+	
+		<a class="set-bar" href="LRH"><img src="/sets/LRH-files/icon.png">The Long Road Home</a>
+	
+		<a class="set-bar inactive" href="HQZ"><img src="/sets/HQZ-files/icon.png">Hunting Quiet Horizons</a>
+	
+		<a class="set-bar inactive" href="INK"><img src="/sets/INK-files/icon.png">Across the Ink Sea</a>
+	
+		<a class="set-bar inactive" href="ACA"><img src="/sets/ACA-files/icon.png">Arcanum Academia</a>
+	
+		<a class="set-bar inactive" href="BYK"><img src="/sets/BYK-files/icon.png">Beyond Our Ken</a>
+	
+		<a class="set-bar inactive" href="BTJ"><img src="/sets/BTJ-files/icon.png">Barten’s Journal</a>
+	
+		<a class="set-bar inactive" href="ACR"><img src="/sets/ACR-files/icon.png">Arcanum: Reforged</a>
+	
+		<a class="set-bar inactive" href="HVF"><img src="/sets/HVF-files/icon.png">Harvest Festival</a>
+	
+		<a class="set-bar inactive" href="MAC"><img src="/sets/MAC-files/icon.png">Memorium Arcanum</a>
+	
+		<a class="set-bar inactive" href="CAC"><img src="/sets/CAC-files/icon.png">Carpe Arcanum</a>
+	
+		<a class="set-bar inactive" href="PFP"><img src="/sets/PFP-files/icon.png">Plagues of Fretport</a>
+	
+		<a class="set-bar inactive" href="TWR"><img src="/sets/TWR-files/icon.png">A Tourney at Whiterun</a>
+	
+		<a class="set-bar inactive" href="MMC"><img src="/sets/MMC-files/icon.png">Memory’s Collapse</a>
+	
+		<a class="set-bar inactive" href="MMT"><img src="/sets/MMT-files/icon.png">Memory’s Tyranny</a>
+	
+		<a class="set-bar inactive" href="IAH"><img src="/sets/IAH-files/icon.png">Intrigue</a>
+	
+		<a class="set-bar inactive" href="CRC"><img src="/sets/CRC-files/icon.png">Cretio Created</a>
+	
 		</div>
 		<div class="banner">
 		<img class="logo" src="/sets/LRH-files/logo.png">
 		</div>
 		<div class="main-content" id="main-content">
 			<div class="grid-container">
-				<div class="container"><img alt="/sets\LRH-files\img\1_Count of Three.png" id="1_Count of Three" data-flag="@X" onclick="openSidebar('1_Count of Three',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\19_Adventurous Daughter.png" id="19_Adventurous Daughter" data-flag="@X" onclick="openSidebar('19_Adventurous Daughter',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\39_Break the Law's Back.png" id="39_Break the Laws Back" data-flag="@X" onclick="openSidebar('39_Break the Laws Back',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\55_Bounty Contractor.png" id="55_Bounty Contractor" data-flag="@X" onclick="openSidebar('55_Bounty Contractor',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\74_Concealed Hunters.png" id="74_Concealed Hunters" data-flag="@X" onclick="openSidebar('74_Concealed Hunters',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\4_Frontier Homesteader.png" id="4_Frontier Homesteader" data-flag="@X" onclick="openSidebar('4_Frontier Homesteader',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\22_Annabelle, the Self-Made Widow.png" id="22_Annabelle, the Self-Made Widow" data-flag="@X" onclick="openSidebar('22_Annabelle, the Self-Made Widow',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\44_Curse the Name.png" id="44_Curse the Name" data-flag="@X" onclick="openSidebar('44_Curse the Name',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\56_Breakaway Carriage.png" id="56_Breakaway Carriage" data-flag="@X" onclick="openSidebar('56_Breakaway Carriage',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\77_Edith, Painted Brawler.png" id="77_Edith, Painted Brawler" data-flag="@X" onclick="openSidebar('77_Edith, Painted Brawler',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\6_Grim Farmhand.png" id="6_Grim Farmhand" data-flag="@X" onclick="openSidebar('6_Grim Farmhand',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\23_Ap'haro Guidance.png" id="23_Apharo Guidance" data-flag="@X" onclick="openSidebar('23_Apharo Guidance',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\45_Face the Noose.png" id="45_Face the Noose" data-flag="@X" onclick="openSidebar('45_Face the Noose',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\57_Burn What's Left.png" id="57_Burn Whats Left" data-flag="@X" onclick="openSidebar('57_Burn Whats Left',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\79_Gourd Gatherers.png" id="79_Gourd Gatherers" data-flag="@X" onclick="openSidebar('79_Gourd Gatherers',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\7_Homestead's Finest.png" id="7_Homesteads Finest" data-flag="@X" onclick="openSidebar('7_Homesteads Finest',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\24_Catch the Midnight Express.png" id="24_Catch the Midnight Express" data-flag="@X" onclick="openSidebar('24_Catch the Midnight Express',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\48_Ill-Met Desperado.png" id="48_Ill-Met Desperado" data-flag="@X" onclick="openSidebar('48_Ill-Met Desperado',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\64_Rodeo Roughie.png" id="64_Rodeo Roughie" data-flag="@X" onclick="openSidebar('64_Rodeo Roughie',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\81_Haunt the Woods.png" id="81_Haunt the Woods" data-flag="@X" onclick="openSidebar('81_Haunt the Woods',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\9_Marshal's Roundup.png" id="9_Marshals Roundup" data-flag="@X" onclick="openSidebar('9_Marshals Roundup',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\29_Mishka, Eye of the Charlatan.png" id="29_Mishka, Eye of the Charlatan" data-flag="@X" onclick="openSidebar('29_Mishka, Eye of the Charlatan',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\51_Ol' Danny Damnations.png" id="51_Ol Danny Damnations" data-flag="@X" onclick="openSidebar('51_Ol Danny Damnations',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\65_Roughstock Rider.png" id="65_Roughstock Rider" data-flag="@X" onclick="openSidebar('65_Roughstock Rider',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\82_Into the North.png" id="82_Into the North" data-flag="@X" onclick="openSidebar('82_Into the North',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\11_Railroad Crew.png" id="11_Railroad Crew" data-flag="@X" onclick="openSidebar('11_Railroad Crew',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\31_A Moment of Nothing.png" id="31_A Moment of Nothing" data-flag="@X" onclick="openSidebar('31_A Moment of Nothing',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\52_Out For Blood.png" id="52_Out For Blood" data-flag="@X" onclick="openSidebar('52_Out For Blood',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\69_Taming the Stallion.png" id="69_Taming the Stallion" data-flag="@X" onclick="openSidebar('69_Taming the Stallion',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\83_Merry Rest.png" id="83_Merry Rest" data-flag="@X" onclick="openSidebar('83_Merry Rest',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\18_Young Gun.png" id="18_Young Gun" data-flag="@X" onclick="openSidebar('18_Young Gun',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\32_New Greetings.png" id="32_New Greetings" data-flag="@X" onclick="openSidebar('32_New Greetings',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\54_Sins for Sins.png" id="54_Sins for Sins" data-flag="@X" onclick="openSidebar('54_Sins for Sins',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\72_Wreckage Below.png" id="72_Wreckage Below" data-flag="@X" onclick="openSidebar('72_Wreckage Below',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\88_Tales Passed Down.png" id="88_Tales Passed Down" data-flag="@X" onclick="openSidebar('88_Tales Passed Down',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\2_Darlin's Vigil.png" id="2_Darlins Vigil" data-flag="@X" onclick="openSidebar('2_Darlins Vigil',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\20_Aiding the Self-Made Widow.png" id="20_Aiding the Self-Made Widow" data-flag="@X" onclick="openSidebar('20_Aiding the Self-Made Widow',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\37_Band of Outlaws.png" id="37_Band of Outlaws" data-flag="@X" onclick="openSidebar('37_Band of Outlaws',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\58_Excavation Crew.png" id="58_Excavation Crew" data-flag="@X" onclick="openSidebar('58_Excavation Crew',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\73_Burying the Hatchet.png" id="73_Burying the Hatchet" data-flag="@X" onclick="openSidebar('73_Burying the Hatchet',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\3_Dawn Guide.png" id="3_Dawn Guide" data-flag="@X" onclick="openSidebar('3_Dawn Guide',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\21_Alleyway Broker.png" id="21_Alleyway Broker" data-flag="@X" onclick="openSidebar('21_Alleyway Broker',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\38_Barter for Bullets.png" id="38_Barter for Bullets" data-flag="@X" onclick="openSidebar('38_Barter for Bullets',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\59_Getaway Rider.png" id="59_Getaway Rider" data-flag="@X" onclick="openSidebar('59_Getaway Rider',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\75_Cross the Ford.png" id="75_Cross the Ford" data-flag="@X" onclick="openSidebar('75_Cross the Ford',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\5_Frontier Justice.png" id="5_Frontier Justice" data-flag="@X" onclick="openSidebar('5_Frontier Justice',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\25_Frontier Surveyors.png" id="25_Frontier Surveyors" data-flag="@X" onclick="openSidebar('25_Frontier Surveyors',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\40_Burning St. Musset.png" id="40_Burning St. Musset" data-flag="@X" onclick="openSidebar('40_Burning St. Musset',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\60_Lawman's Posse.png" id="60_Lawmans Posse" data-flag="@X" onclick="openSidebar('60_Lawmans Posse',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\76_Curious Canines.png" id="76_Curious Canines" data-flag="@X" onclick="openSidebar('76_Curious Canines',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\8_In Your Arms.png" id="8_In Your Arms" data-flag="@X" onclick="openSidebar('8_In Your Arms',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\26_Harrying Shot.png" id="26_Harrying Shot" data-flag="@X" onclick="openSidebar('26_Harrying Shot',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\41_Carrion Wagon.png" id="41_Carrion Wagon" data-flag="@X" onclick="openSidebar('41_Carrion Wagon',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\61_Marshal's Courier.png" id="61_Marshals Courier" data-flag="@X" onclick="openSidebar('61_Marshals Courier',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\78_Foliage Lurker.png" id="78_Foliage Lurker" data-flag="@X" onclick="openSidebar('78_Foliage Lurker',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\10_Marshal's Sharpshooter.png" id="10_Marshals Sharpshooter" data-flag="@X" onclick="openSidebar('10_Marshals Sharpshooter',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\27_Left Shivering.png" id="27_Left Shivering" data-flag="@X" onclick="openSidebar('27_Left Shivering',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\42_Contracted Gunslinger.png" id="42_Contracted Gunslinger" data-flag="@X" onclick="openSidebar('42_Contracted Gunslinger',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\62_Mountain Path Wildcat.png" id="62_Mountain Path Wildcat" data-flag="@X" onclick="openSidebar('62_Mountain Path Wildcat',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\80_Gunslinger's Glory.png" id="80_Gunslingers Glory" data-flag="@X" onclick="openSidebar('80_Gunslingers Glory',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\12_Roaming Vigilantes.png" id="12_Roaming Vigilantes" data-flag="@X" onclick="openSidebar('12_Roaming Vigilantes',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\28_Liar's Riddle.png" id="28_Liars Riddle" data-flag="@X" onclick="openSidebar('28_Liars Riddle',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\43_Crooked Lawman.png" id="43_Crooked Lawman" data-flag="@X" onclick="openSidebar('43_Crooked Lawman',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\63_Robbing the Rail.png" id="63_Robbing the Rail" data-flag="@X" onclick="openSidebar('63_Robbing the Rail',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\84_Prospector Gang.png" id="84_Prospector Gang" data-flag="@X" onclick="openSidebar('84_Prospector Gang',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\13_St. Musset Wranglers.png" id="13_St. Musset Wranglers" data-flag="@X" onclick="openSidebar('13_St. Musset Wranglers',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\30_Mist-Veiled Harrier.png" id="30_Mist-Veiled Harrier" data-flag="@X" onclick="openSidebar('30_Mist-Veiled Harrier',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\46_Gift of the Asp.png" id="46_Gift of the Asp" data-flag="@X" onclick="openSidebar('46_Gift of the Asp',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\66_Saddle Up.png" id="66_Saddle Up" data-flag="@X" onclick="openSidebar('66_Saddle Up',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\85_Return to Nature.png" id="85_Return to Nature" data-flag="@X" onclick="openSidebar('85_Return to Nature',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\14_Stern Deputy.png" id="14_Stern Deputy" data-flag="@X" onclick="openSidebar('14_Stern Deputy',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\33_St. Musset Cutpurse.png" id="33_St. Musset Cutpurse" data-flag="@X" onclick="openSidebar('33_St. Musset Cutpurse',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\47_Heartless Act.png" id="47_Heartless Act" data-flag="@X" onclick="openSidebar('47_Heartless Act',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\67_Smoking Barrels.png" id="67_Smoking Barrels" data-flag="@X" onclick="openSidebar('67_Smoking Barrels',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\86_Roads Once Known.png" id="86_Roads Once Known" data-flag="@X" onclick="openSidebar('86_Roads Once Known',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\15_Trader Family.png" id="15_Trader Family" data-flag="@X" onclick="openSidebar('15_Trader Family',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\34_Stormbringer.png" id="34_Stormbringer" data-flag="@X" onclick="openSidebar('34_Stormbringer',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\49_Jackle's Gang.png" id="49_Jackles Gang" data-flag="@X" onclick="openSidebar('49_Jackles Gang',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\68_Sudden Altercation.png" id="68_Sudden Altercation" data-flag="@X" onclick="openSidebar('68_Sudden Altercation',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\87_Stoic Builder.png" id="87_Stoic Builder" data-flag="@X" onclick="openSidebar('87_Stoic Builder',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\16_Tsimtsuk Trackers.png" id="16_Tsimtsuk Trackers" data-flag="@X" onclick="openSidebar('16_Tsimtsuk Trackers',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\35_Take the Odds.png" id="35_Take the Odds" data-flag="@X" onclick="openSidebar('35_Take the Odds',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\50_Not Dead Yet.png" id="50_Not Dead Yet" data-flag="@X" onclick="openSidebar('50_Not Dead Yet',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\70_Trail of Blood.png" id="70_Trail of Blood" data-flag="@X" onclick="openSidebar('70_Trail of Blood',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\89_Territorial Grizzlies.png" id="89_Territorial Grizzlies" data-flag="@X" onclick="openSidebar('89_Territorial Grizzlies',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\17_Warning Shot.png" id="17_Warning Shot" data-flag="@X" onclick="openSidebar('17_Warning Shot',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\36_Tall Tales.png" id="36_Tall Tales" data-flag="@X" onclick="openSidebar('36_Tall Tales',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\53_Past Laid to Rest.png" id="53_Past Laid to Rest" data-flag="@X" onclick="openSidebar('53_Past Laid to Rest',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\71_Worn Trailblazers.png" id="71_Worn Trailblazers" data-flag="@X" onclick="openSidebar('71_Worn Trailblazers',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\90_Tsimtsuk Trapper.png" id="90_Tsimtsuk Trapper" data-flag="@X" onclick="openSidebar('90_Tsimtsuk Trapper',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-<div id="gold" class="anchor"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\91_Ap'haro Outrider.png" id="91_Apharo Outrider" data-flag="@X" onclick="openSidebar('91_Apharo Outrider',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\95_Investment Magnate.png" id="95_Investment Magnate" data-flag="@X" onclick="openSidebar('95_Investment Magnate',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\97_Ain't No Saving Grace.png" id="97_Aint No Saving Grace" data-flag="@X" onclick="openSidebar('97_Aint No Saving Grace',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\101_Homestead Toymaker.png" id="101_Homestead Toymaker" data-flag="@X" onclick="openSidebar('101_Homestead Toymaker',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\103_Ap'haro Hunter.png" id="103_Apharo Hunter" data-flag="@X" onclick="openSidebar('103_Apharo Hunter',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\92_Seek the Skies.png" id="92_Seek the Skies" data-flag="@X" onclick="openSidebar('92_Seek the Skies',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\96_Till Death Do Us Part.png" id="96_Till Death Do Us Part" data-flag="@X" onclick="openSidebar('96_Till Death Do Us Part',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\99_Jackle the Jackal.png" id="99_Jackle the Jackal" data-flag="@X" onclick="openSidebar('99_Jackle the Jackal',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\102_Striking Gold.png" id="102_Striking Gold" data-flag="@X" onclick="openSidebar('102_Striking Gold',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\105_Seasoned Pathfinder.png" id="105_Seasoned Pathfinder" data-flag="@X" onclick="openSidebar('105_Seasoned Pathfinder',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\93_St. Musset Reporters.png" id="93_St. Musset Reporters" data-flag="@X" onclick="openSidebar('93_St. Musset Reporters',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\94_Find the Way Out.png" id="94_Find the Way Out" data-flag="@X" onclick="openSidebar('94_Find the Way Out',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\98_Hellfire Hand.png" id="98_Hellfire Hand" data-flag="@X" onclick="openSidebar('98_Hellfire Hand',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\100_Emerge from the Dust.png" id="100_Emerge from the Dust" data-flag="@X" onclick="openSidebar('100_Emerge from the Dust',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\104_Hardy Pilgrims.png" id="104_Hardy Pilgrims" data-flag="@X" onclick="openSidebar('104_Hardy Pilgrims',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\106_Darlin' Stranger.png" id="106_Darlin Stranger" data-flag="@X" onclick="openSidebar('106_Darlin Stranger',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\109_Opportunistic Sharpshooter.png" id="109_Opportunistic Sharpshooter" data-flag="@X" onclick="openSidebar('109_Opportunistic Sharpshooter',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\113_Something Wicked This Way Rides.png" id="113_Something Wicked This Way Rides" data-flag="@X" onclick="openSidebar('113_Something Wicked This Way Rides',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\116_Marshal Grace.png" id="116_Marshal Grace" data-flag="@X" onclick="openSidebar('116_Marshal Grace',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\118_Leaving It Behind.png" id="118_Leaving It Behind" data-flag="@X" onclick="openSidebar('118_Leaving It Behind',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\108_Pilfering Mortician.png" id="108_Pilfering Mortician" data-flag="@X" onclick="openSidebar('108_Pilfering Mortician',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\110_Readying the Ambush.png" id="110_Readying the Ambush" data-flag="@X" onclick="openSidebar('110_Readying the Ambush',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\114_The Wind Howls.png" id="114_The Wind Howls" data-flag="@X" onclick="openSidebar('114_The Wind Howls',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\117_St. Musset Outfitter.png" id="117_St. Musset Outfitter" data-flag="@X" onclick="openSidebar('117_St. Musset Outfitter',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\120_Riverway Hunters.png" id="120_Riverway Hunters" data-flag="@X" onclick="openSidebar('120_Riverway Hunters',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\107_Grace's Deputies.png" id="107_Graces Deputies" data-flag="@X" onclick="openSidebar('107_Graces Deputies',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\111_Tsimtsuk Messenger.png" id="111_Tsimtsuk Messenger" data-flag="@X" onclick="openSidebar('111_Tsimtsuk Messenger',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\112_Harried Rancher.png" id="112_Harried Rancher" data-flag="@X" onclick="openSidebar('112_Harried Rancher',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\115_Belligerent Sheriff.png" id="115_Belligerent Sheriff" data-flag="@X" onclick="openSidebar('115_Belligerent Sheriff',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\119_Old Faces.png" id="119_Old Faces" data-flag="@X" onclick="openSidebar('119_Old Faces',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-<div id="colorless" class="anchor"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\121_Crate of Explosives.png" id="121_Crate of Explosives" data-flag="@X" onclick="openSidebar('121_Crate of Explosives',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\125_The Transcontinental.png" id="125_The Transcontinental" data-flag="@X" onclick="openSidebar('125_The Transcontinental',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\126_Trapper's Lean-to.png" id="126_Trappers Lean-to" data-flag="@X" onclick="openSidebar('126_Trappers Lean-to',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\127_Wanted Poster.png" id="127_Wanted Poster" data-flag="@X" onclick="openSidebar('127_Wanted Poster',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\122_Express Locomotive.png" id="122_Express Locomotive" data-flag="@X" onclick="openSidebar('122_Express Locomotive',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\123_Marked Shot.png" id="123_Marked Shot" data-flag="@X" onclick="openSidebar('123_Marked Shot',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\124_Prospector's Pick.png" id="124_Prospectors Pick" data-flag="@X" onclick="openSidebar('124_Prospectors Pick',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\128_White-Water Canoe.png" id="128_White-Water Canoe" data-flag="@X" onclick="openSidebar('128_White-Water Canoe',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\129_Familiar Trails (Camp).png" id="129_Familiar Trails (Camp)" data-flag="@X" onclick="openSidebar('129_Familiar Trails (Camp)',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\130_Familiar Trails (Hearth).png" id="130_Familiar Trails (Hearth)" data-flag="@X" onclick="openSidebar('130_Familiar Trails (Hearth)',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\131_Familiar Trails (Ruin).png" id="131_Familiar Trails (Ruin)" data-flag="@X" onclick="openSidebar('131_Familiar Trails (Ruin)',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\132_Familiar Trails (Sunset).png" id="132_Familiar Trails (Sunset)" data-flag="@X" onclick="openSidebar('132_Familiar Trails (Sunset)',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\133_Familiar Trails (Valley).png" id="133_Familiar Trails (Valley)" data-flag="@X" onclick="openSidebar('133_Familiar Trails (Valley)',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\135_Tsimtsuk Village.png" id="135_Tsimtsuk Village" data-flag="@X" onclick="openSidebar('135_Tsimtsuk Village',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\134_River of Gold.png" id="134_River of Gold" data-flag="@X" onclick="openSidebar('134_River of Gold',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\136_Plains.png" id="136_Plains" data-flag="@X" onclick="openSidebar('136_Plains',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\137_Island.png" id="137_Island" data-flag="@X" onclick="openSidebar('137_Island',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\138_Swamp.png" id="138_Swamp" data-flag="@X" onclick="openSidebar('138_Swamp',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\139_Mountain.png" id="139_Mountain" data-flag="@X" onclick="openSidebar('139_Mountain',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\140_Forest.png" id="140_Forest" data-flag="@X" onclick="openSidebar('140_Forest',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-<div id="token" class="anchor"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\5t_Bullet.png" id="5t_Bullet" data-flag="@X" onclick="openSidebar('5t_Bullet',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\6t_Gold.png" id="6t_Gold" data-flag="@X" onclick="openSidebar('6t_Gold',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\1t_Hound.png" id="1t_Hound" data-flag="@X" onclick="openSidebar('1t_Hound',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\2t_Rogue.png" id="2t_Rogue" data-flag="@X" onclick="openSidebar('2t_Rogue',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\3t_Soldier.png" id="3t_Soldier" data-flag="@X" onclick="openSidebar('3t_Soldier',false)"></div>
-			<div class="container"><img alt="/sets\LRH-files\img\4t_Wolf.png" id="4t_Wolf" data-flag="@X" onclick="openSidebar('4t_Wolf',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+					<div class="container"><img alt="/sets\LRH-files\img\1_Count of Three.png" id="1_Count of Three" data-flag="@X" onclick="openSidebar('1_Count of Three',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\19_Adventurous Daughter.png" id="19_Adventurous Daughter" data-flag="@X" onclick="openSidebar('19_Adventurous Daughter',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\39_Break the Law's Back.png" id="39_Break the Laws Back" data-flag="@X" onclick="openSidebar('39_Break the Laws Back',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\55_Bounty Contractor.png" id="55_Bounty Contractor" data-flag="@X" onclick="openSidebar('55_Bounty Contractor',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\74_Concealed Hunters.png" id="74_Concealed Hunters" data-flag="@X" onclick="openSidebar('74_Concealed Hunters',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\4_Frontier Homesteader.png" id="4_Frontier Homesteader" data-flag="@X" onclick="openSidebar('4_Frontier Homesteader',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\22_Annabelle, the Self-Made Widow.png" id="22_Annabelle, the Self-Made Widow" data-flag="@X" onclick="openSidebar('22_Annabelle, the Self-Made Widow',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\44_Curse the Name.png" id="44_Curse the Name" data-flag="@X" onclick="openSidebar('44_Curse the Name',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\56_Breakaway Carriage.png" id="56_Breakaway Carriage" data-flag="@X" onclick="openSidebar('56_Breakaway Carriage',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\77_Edith, Painted Brawler.png" id="77_Edith, Painted Brawler" data-flag="@X" onclick="openSidebar('77_Edith, Painted Brawler',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\6_Grim Farmhand.png" id="6_Grim Farmhand" data-flag="@X" onclick="openSidebar('6_Grim Farmhand',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\23_Ap'haro Guidance.png" id="23_Apharo Guidance" data-flag="@X" onclick="openSidebar('23_Apharo Guidance',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\45_Face the Noose.png" id="45_Face the Noose" data-flag="@X" onclick="openSidebar('45_Face the Noose',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\57_Burn What's Left.png" id="57_Burn Whats Left" data-flag="@X" onclick="openSidebar('57_Burn Whats Left',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\79_Gourd Gatherers.png" id="79_Gourd Gatherers" data-flag="@X" onclick="openSidebar('79_Gourd Gatherers',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\7_Homestead's Finest.png" id="7_Homesteads Finest" data-flag="@X" onclick="openSidebar('7_Homesteads Finest',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\24_Catch the Midnight Express.png" id="24_Catch the Midnight Express" data-flag="@X" onclick="openSidebar('24_Catch the Midnight Express',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\48_Ill-Met Desperado.png" id="48_Ill-Met Desperado" data-flag="@X" onclick="openSidebar('48_Ill-Met Desperado',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\64_Rodeo Roughie.png" id="64_Rodeo Roughie" data-flag="@X" onclick="openSidebar('64_Rodeo Roughie',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\81_Haunt the Woods.png" id="81_Haunt the Woods" data-flag="@X" onclick="openSidebar('81_Haunt the Woods',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\9_Marshal's Roundup.png" id="9_Marshals Roundup" data-flag="@X" onclick="openSidebar('9_Marshals Roundup',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\29_Mishka, Eye of the Charlatan.png" id="29_Mishka, Eye of the Charlatan" data-flag="@X" onclick="openSidebar('29_Mishka, Eye of the Charlatan',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\51_Ol' Danny Damnations.png" id="51_Ol Danny Damnations" data-flag="@X" onclick="openSidebar('51_Ol Danny Damnations',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\65_Roughstock Rider.png" id="65_Roughstock Rider" data-flag="@X" onclick="openSidebar('65_Roughstock Rider',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\82_Into the North.png" id="82_Into the North" data-flag="@X" onclick="openSidebar('82_Into the North',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\11_Railroad Crew.png" id="11_Railroad Crew" data-flag="@X" onclick="openSidebar('11_Railroad Crew',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\31_A Moment of Nothing.png" id="31_A Moment of Nothing" data-flag="@X" onclick="openSidebar('31_A Moment of Nothing',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\52_Out For Blood.png" id="52_Out For Blood" data-flag="@X" onclick="openSidebar('52_Out For Blood',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\69_Taming the Stallion.png" id="69_Taming the Stallion" data-flag="@X" onclick="openSidebar('69_Taming the Stallion',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\83_Merry Rest.png" id="83_Merry Rest" data-flag="@X" onclick="openSidebar('83_Merry Rest',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\18_Young Gun.png" id="18_Young Gun" data-flag="@X" onclick="openSidebar('18_Young Gun',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\32_New Greetings.png" id="32_New Greetings" data-flag="@X" onclick="openSidebar('32_New Greetings',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\54_Sins for Sins.png" id="54_Sins for Sins" data-flag="@X" onclick="openSidebar('54_Sins for Sins',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\72_Wreckage Below.png" id="72_Wreckage Below" data-flag="@X" onclick="openSidebar('72_Wreckage Below',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\88_Tales Passed Down.png" id="88_Tales Passed Down" data-flag="@X" onclick="openSidebar('88_Tales Passed Down',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\2_Darlin's Vigil.png" id="2_Darlins Vigil" data-flag="@X" onclick="openSidebar('2_Darlins Vigil',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\20_Aiding the Self-Made Widow.png" id="20_Aiding the Self-Made Widow" data-flag="@X" onclick="openSidebar('20_Aiding the Self-Made Widow',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\37_Band of Outlaws.png" id="37_Band of Outlaws" data-flag="@X" onclick="openSidebar('37_Band of Outlaws',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\58_Excavation Crew.png" id="58_Excavation Crew" data-flag="@X" onclick="openSidebar('58_Excavation Crew',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\73_Burying the Hatchet.png" id="73_Burying the Hatchet" data-flag="@X" onclick="openSidebar('73_Burying the Hatchet',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\3_Dawn Guide.png" id="3_Dawn Guide" data-flag="@X" onclick="openSidebar('3_Dawn Guide',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\21_Alleyway Broker.png" id="21_Alleyway Broker" data-flag="@X" onclick="openSidebar('21_Alleyway Broker',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\38_Barter for Bullets.png" id="38_Barter for Bullets" data-flag="@X" onclick="openSidebar('38_Barter for Bullets',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\59_Getaway Rider.png" id="59_Getaway Rider" data-flag="@X" onclick="openSidebar('59_Getaway Rider',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\75_Cross the Ford.png" id="75_Cross the Ford" data-flag="@X" onclick="openSidebar('75_Cross the Ford',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\5_Frontier Justice.png" id="5_Frontier Justice" data-flag="@X" onclick="openSidebar('5_Frontier Justice',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\25_Frontier Surveyors.png" id="25_Frontier Surveyors" data-flag="@X" onclick="openSidebar('25_Frontier Surveyors',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\40_Burning St. Musset.png" id="40_Burning St. Musset" data-flag="@X" onclick="openSidebar('40_Burning St. Musset',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\60_Lawman's Posse.png" id="60_Lawmans Posse" data-flag="@X" onclick="openSidebar('60_Lawmans Posse',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\76_Curious Canines.png" id="76_Curious Canines" data-flag="@X" onclick="openSidebar('76_Curious Canines',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\8_In Your Arms.png" id="8_In Your Arms" data-flag="@X" onclick="openSidebar('8_In Your Arms',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\26_Harrying Shot.png" id="26_Harrying Shot" data-flag="@X" onclick="openSidebar('26_Harrying Shot',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\41_Carrion Wagon.png" id="41_Carrion Wagon" data-flag="@X" onclick="openSidebar('41_Carrion Wagon',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\61_Marshal's Courier.png" id="61_Marshals Courier" data-flag="@X" onclick="openSidebar('61_Marshals Courier',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\78_Foliage Lurker.png" id="78_Foliage Lurker" data-flag="@X" onclick="openSidebar('78_Foliage Lurker',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\10_Marshal's Sharpshooter.png" id="10_Marshals Sharpshooter" data-flag="@X" onclick="openSidebar('10_Marshals Sharpshooter',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\27_Left Shivering.png" id="27_Left Shivering" data-flag="@X" onclick="openSidebar('27_Left Shivering',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\42_Contracted Gunslinger.png" id="42_Contracted Gunslinger" data-flag="@X" onclick="openSidebar('42_Contracted Gunslinger',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\62_Mountain Path Wildcat.png" id="62_Mountain Path Wildcat" data-flag="@X" onclick="openSidebar('62_Mountain Path Wildcat',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\80_Gunslinger's Glory.png" id="80_Gunslingers Glory" data-flag="@X" onclick="openSidebar('80_Gunslingers Glory',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\12_Roaming Vigilantes.png" id="12_Roaming Vigilantes" data-flag="@X" onclick="openSidebar('12_Roaming Vigilantes',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\28_Liar's Riddle.png" id="28_Liars Riddle" data-flag="@X" onclick="openSidebar('28_Liars Riddle',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\43_Crooked Lawman.png" id="43_Crooked Lawman" data-flag="@X" onclick="openSidebar('43_Crooked Lawman',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\63_Robbing the Rail.png" id="63_Robbing the Rail" data-flag="@X" onclick="openSidebar('63_Robbing the Rail',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\84_Prospector Gang.png" id="84_Prospector Gang" data-flag="@X" onclick="openSidebar('84_Prospector Gang',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\13_St. Musset Wranglers.png" id="13_St. Musset Wranglers" data-flag="@X" onclick="openSidebar('13_St. Musset Wranglers',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\30_Mist-Veiled Harrier.png" id="30_Mist-Veiled Harrier" data-flag="@X" onclick="openSidebar('30_Mist-Veiled Harrier',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\46_Gift of the Asp.png" id="46_Gift of the Asp" data-flag="@X" onclick="openSidebar('46_Gift of the Asp',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\66_Saddle Up.png" id="66_Saddle Up" data-flag="@X" onclick="openSidebar('66_Saddle Up',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\85_Return to Nature.png" id="85_Return to Nature" data-flag="@X" onclick="openSidebar('85_Return to Nature',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\14_Stern Deputy.png" id="14_Stern Deputy" data-flag="@X" onclick="openSidebar('14_Stern Deputy',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\33_St. Musset Cutpurse.png" id="33_St. Musset Cutpurse" data-flag="@X" onclick="openSidebar('33_St. Musset Cutpurse',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\47_Heartless Act.png" id="47_Heartless Act" data-flag="@X" onclick="openSidebar('47_Heartless Act',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\67_Smoking Barrels.png" id="67_Smoking Barrels" data-flag="@X" onclick="openSidebar('67_Smoking Barrels',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\86_Roads Once Known.png" id="86_Roads Once Known" data-flag="@X" onclick="openSidebar('86_Roads Once Known',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\15_Trader Family.png" id="15_Trader Family" data-flag="@X" onclick="openSidebar('15_Trader Family',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\34_Stormbringer.png" id="34_Stormbringer" data-flag="@X" onclick="openSidebar('34_Stormbringer',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\49_Jackle's Gang.png" id="49_Jackles Gang" data-flag="@X" onclick="openSidebar('49_Jackles Gang',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\68_Sudden Altercation.png" id="68_Sudden Altercation" data-flag="@X" onclick="openSidebar('68_Sudden Altercation',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\87_Stoic Builder.png" id="87_Stoic Builder" data-flag="@X" onclick="openSidebar('87_Stoic Builder',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\16_Tsimtsuk Trackers.png" id="16_Tsimtsuk Trackers" data-flag="@X" onclick="openSidebar('16_Tsimtsuk Trackers',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\35_Take the Odds.png" id="35_Take the Odds" data-flag="@X" onclick="openSidebar('35_Take the Odds',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\50_Not Dead Yet.png" id="50_Not Dead Yet" data-flag="@X" onclick="openSidebar('50_Not Dead Yet',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\70_Trail of Blood.png" id="70_Trail of Blood" data-flag="@X" onclick="openSidebar('70_Trail of Blood',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\89_Territorial Grizzlies.png" id="89_Territorial Grizzlies" data-flag="@X" onclick="openSidebar('89_Territorial Grizzlies',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\17_Warning Shot.png" id="17_Warning Shot" data-flag="@X" onclick="openSidebar('17_Warning Shot',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\36_Tall Tales.png" id="36_Tall Tales" data-flag="@X" onclick="openSidebar('36_Tall Tales',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\53_Past Laid to Rest.png" id="53_Past Laid to Rest" data-flag="@X" onclick="openSidebar('53_Past Laid to Rest',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\71_Worn Trailblazers.png" id="71_Worn Trailblazers" data-flag="@X" onclick="openSidebar('71_Worn Trailblazers',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\90_Tsimtsuk Trapper.png" id="90_Tsimtsuk Trapper" data-flag="@X" onclick="openSidebar('90_Tsimtsuk Trapper',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div id="gold" class="anchor"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\91_Ap'haro Outrider.png" id="91_Apharo Outrider" data-flag="@X" onclick="openSidebar('91_Apharo Outrider',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\95_Investment Magnate.png" id="95_Investment Magnate" data-flag="@X" onclick="openSidebar('95_Investment Magnate',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\97_Ain't No Saving Grace.png" id="97_Aint No Saving Grace" data-flag="@X" onclick="openSidebar('97_Aint No Saving Grace',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\101_Homestead Toymaker.png" id="101_Homestead Toymaker" data-flag="@X" onclick="openSidebar('101_Homestead Toymaker',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\103_Ap'haro Hunter.png" id="103_Apharo Hunter" data-flag="@X" onclick="openSidebar('103_Apharo Hunter',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\92_Seek the Skies.png" id="92_Seek the Skies" data-flag="@X" onclick="openSidebar('92_Seek the Skies',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\96_Till Death Do Us Part.png" id="96_Till Death Do Us Part" data-flag="@X" onclick="openSidebar('96_Till Death Do Us Part',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\99_Jackle the Jackal.png" id="99_Jackle the Jackal" data-flag="@X" onclick="openSidebar('99_Jackle the Jackal',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\102_Striking Gold.png" id="102_Striking Gold" data-flag="@X" onclick="openSidebar('102_Striking Gold',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\105_Seasoned Pathfinder.png" id="105_Seasoned Pathfinder" data-flag="@X" onclick="openSidebar('105_Seasoned Pathfinder',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\93_St. Musset Reporters.png" id="93_St. Musset Reporters" data-flag="@X" onclick="openSidebar('93_St. Musset Reporters',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\94_Find the Way Out.png" id="94_Find the Way Out" data-flag="@X" onclick="openSidebar('94_Find the Way Out',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\98_Hellfire Hand.png" id="98_Hellfire Hand" data-flag="@X" onclick="openSidebar('98_Hellfire Hand',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\100_Emerge from the Dust.png" id="100_Emerge from the Dust" data-flag="@X" onclick="openSidebar('100_Emerge from the Dust',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\104_Hardy Pilgrims.png" id="104_Hardy Pilgrims" data-flag="@X" onclick="openSidebar('104_Hardy Pilgrims',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\106_Darlin' Stranger.png" id="106_Darlin Stranger" data-flag="@X" onclick="openSidebar('106_Darlin Stranger',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\109_Opportunistic Sharpshooter.png" id="109_Opportunistic Sharpshooter" data-flag="@X" onclick="openSidebar('109_Opportunistic Sharpshooter',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\113_Something Wicked This Way Rides.png" id="113_Something Wicked This Way Rides" data-flag="@X" onclick="openSidebar('113_Something Wicked This Way Rides',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\116_Marshal Grace.png" id="116_Marshal Grace" data-flag="@X" onclick="openSidebar('116_Marshal Grace',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\118_Leaving It Behind.png" id="118_Leaving It Behind" data-flag="@X" onclick="openSidebar('118_Leaving It Behind',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\108_Pilfering Mortician.png" id="108_Pilfering Mortician" data-flag="@X" onclick="openSidebar('108_Pilfering Mortician',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\110_Readying the Ambush.png" id="110_Readying the Ambush" data-flag="@X" onclick="openSidebar('110_Readying the Ambush',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\114_The Wind Howls.png" id="114_The Wind Howls" data-flag="@X" onclick="openSidebar('114_The Wind Howls',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\117_St. Musset Outfitter.png" id="117_St. Musset Outfitter" data-flag="@X" onclick="openSidebar('117_St. Musset Outfitter',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\120_Riverway Hunters.png" id="120_Riverway Hunters" data-flag="@X" onclick="openSidebar('120_Riverway Hunters',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\107_Grace's Deputies.png" id="107_Graces Deputies" data-flag="@X" onclick="openSidebar('107_Graces Deputies',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\111_Tsimtsuk Messenger.png" id="111_Tsimtsuk Messenger" data-flag="@X" onclick="openSidebar('111_Tsimtsuk Messenger',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\112_Harried Rancher.png" id="112_Harried Rancher" data-flag="@X" onclick="openSidebar('112_Harried Rancher',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\115_Belligerent Sheriff.png" id="115_Belligerent Sheriff" data-flag="@X" onclick="openSidebar('115_Belligerent Sheriff',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\119_Old Faces.png" id="119_Old Faces" data-flag="@X" onclick="openSidebar('119_Old Faces',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div id="colorless" class="anchor"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\121_Crate of Explosives.png" id="121_Crate of Explosives" data-flag="@X" onclick="openSidebar('121_Crate of Explosives',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\125_The Transcontinental.png" id="125_The Transcontinental" data-flag="@X" onclick="openSidebar('125_The Transcontinental',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\126_Trapper's Lean-to.png" id="126_Trappers Lean-to" data-flag="@X" onclick="openSidebar('126_Trappers Lean-to',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\127_Wanted Poster.png" id="127_Wanted Poster" data-flag="@X" onclick="openSidebar('127_Wanted Poster',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\122_Express Locomotive.png" id="122_Express Locomotive" data-flag="@X" onclick="openSidebar('122_Express Locomotive',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\123_Marked Shot.png" id="123_Marked Shot" data-flag="@X" onclick="openSidebar('123_Marked Shot',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\124_Prospector's Pick.png" id="124_Prospectors Pick" data-flag="@X" onclick="openSidebar('124_Prospectors Pick',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\128_White-Water Canoe.png" id="128_White-Water Canoe" data-flag="@X" onclick="openSidebar('128_White-Water Canoe',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\129_Familiar Trails (Camp).png" id="129_Familiar Trails (Camp)" data-flag="@X" onclick="openSidebar('129_Familiar Trails (Camp)',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\130_Familiar Trails (Hearth).png" id="130_Familiar Trails (Hearth)" data-flag="@X" onclick="openSidebar('130_Familiar Trails (Hearth)',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\131_Familiar Trails (Ruin).png" id="131_Familiar Trails (Ruin)" data-flag="@X" onclick="openSidebar('131_Familiar Trails (Ruin)',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\132_Familiar Trails (Sunset).png" id="132_Familiar Trails (Sunset)" data-flag="@X" onclick="openSidebar('132_Familiar Trails (Sunset)',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\133_Familiar Trails (Valley).png" id="133_Familiar Trails (Valley)" data-flag="@X" onclick="openSidebar('133_Familiar Trails (Valley)',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\135_Tsimtsuk Village.png" id="135_Tsimtsuk Village" data-flag="@X" onclick="openSidebar('135_Tsimtsuk Village',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\134_River of Gold.png" id="134_River of Gold" data-flag="@X" onclick="openSidebar('134_River of Gold',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\136_Plains.png" id="136_Plains" data-flag="@X" onclick="openSidebar('136_Plains',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\137_Island.png" id="137_Island" data-flag="@X" onclick="openSidebar('137_Island',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\138_Swamp.png" id="138_Swamp" data-flag="@X" onclick="openSidebar('138_Swamp',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\139_Mountain.png" id="139_Mountain" data-flag="@X" onclick="openSidebar('139_Mountain',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\140_Forest.png" id="140_Forest" data-flag="@X" onclick="openSidebar('140_Forest',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div id="token" class="anchor"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\5t_Bullet.png" id="5t_Bullet" data-flag="@X" onclick="openSidebar('5t_Bullet',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\6t_Gold.png" id="6t_Gold" data-flag="@X" onclick="openSidebar('6t_Gold',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\1t_Hound.png" id="1t_Hound" data-flag="@X" onclick="openSidebar('1t_Hound',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\2t_Rogue.png" id="2t_Rogue" data-flag="@X" onclick="openSidebar('2t_Rogue',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\3t_Soldier.png" id="3t_Soldier" data-flag="@X" onclick="openSidebar('3t_Soldier',false)"></div>
+				<div class="container"><img alt="/sets\LRH-files\img\4t_Wolf.png" id="4t_Wolf" data-flag="@X" onclick="openSidebar('4t_Wolf',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
 	</div>
-</div>
+	</div>
 	<div class="sidebar" id="sidebar">
 		<div class="sidebar-container">
 			<img id="sidebar_img" class="sidebar-img" src="/img/er.png">
@@ -447,7 +466,7 @@
 				card_list_arrayified = card_list.cards;
 
 		preloadImgs = document.getElementsByClassName('preload-hidden');
-		
+
 		let images_loaded = [];
 
 		do {
@@ -537,7 +556,7 @@
 	function openSidebar(id, h = false) {
 		horizontal = h;
 		scroll_pct = window.scrollY / document.documentElement.scrollHeight;
-		
+
 		document.getElementById('sidebar').style.display = 'grid';
 
 		const rotated_img = document.getElementById('sidebar_h_img');
@@ -568,7 +587,7 @@
 			document.getElementById('sidebar-flip-btn').style.display = 'none';
 		}
 		document.getElementById('main-content').style.width = '60%';
-		
+
 		scroll_pos = scroll_pct * document.documentElement.scrollHeight;
 		window.scrollTo(window.scrollX, scroll_pos);
 		setSidebarTop();
@@ -579,10 +598,28 @@
 
 		document.getElementById('sidebar').style.display = 'none';
 		document.getElementById('main-content').style.width = '100%';
-		
+
 
 		scroll_pos = scroll_pct * document.documentElement.scrollHeight;
 		window.scrollTo(window.scrollX, scroll_pos);
+	}
+
+	function rolldown() {
+		var sets = document.querySelectorAll('.inactive');
+		for(const set of sets)
+		{
+			set.style.height = "auto";
+			set.style.margin = "5px";
+		}
+	}
+
+	function rollup() {
+		var sets = document.querySelectorAll('.inactive');
+		for(const set of sets)
+		{
+			set.style.height = "0px";
+			set.style.margin = "0px 5px";
+		}
 	}
 
 	document.getElementById("search").addEventListener("keypress", function(event) {

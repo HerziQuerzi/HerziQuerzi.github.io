@@ -5,6 +5,10 @@
 	<link rel="stylesheet" href="/resources/header.css">
 	<title>IAH visual preview</title>
 	<style>
+		@font-face {
+			font-family: Beleren;
+			src: url('/resources/beleren.ttf');
+		}
 		body {
 			font-family: Arial, sans-serif;
 			margin: 0;
@@ -82,7 +86,7 @@
 		.banner {
 			width: 100%;
 			height: auto;
-			padding-top: 20px;
+			padding-top: 80px;
 			padding-bottom: 50px;
 		}
 		.logo {
@@ -118,36 +122,49 @@
 			background-size: contain;
 			background-position: center;
 		}
-		.icon-bar {
-			display: grid;
-			grid-template-columns: repeat(10, 3fr 2fr) 3fr;
-			gap: 1px;
-			padding-left: 5%;
-			padding-right: 5%;
-			padding-top: 2%;
-			padding-bottom: 1%;
-			justify-items: center;
+		.dropdown {
+			background: rgba(23, 23, 23, 0.8);
+			border-radius: 8px;
+			position: absolute;
+			left: 10%;
+			width: fit-content;
+			margin: 20px 0;
+			padding: 5px 0;
+			display: flex;
+			flex-direction: column;
+			z-index: 3;
+		}
+		.dropdown .set-bar {
+			font-family: Beleren;
+			font-size: 20px;
+			text-decoration: none;
+			color: #e3e3e3;
+			display: flex;
+			gap: 10px;
 			align-items: center;
+			padding: 0 12px;
+			margin: 5px;
 		}
-		.icon-bar .icon img {
-			width: 90%;
-			max-width: 80px;
-			height: auto;
-			display: block;
-			padding: 5%;
-			margin: auto;
-			text-align: center;
+		.dropdown .set-bar:hover {
+			background: rgba(163, 163, 163, 0.5);
+			color: #f3f3f3;
 		}
-		.icon-bar .dot img {
-			width: 50%;
-			max-width: 65px;
-			height: auto;
-			display: block;
-			margin: auto;
-			text-align: center;
+		.dropdown .set-bar img {
+			width: 32px;
+		}
+		.dropdown .inactive {
+			height: 0px;
+			overflow: hidden;
+			margin: 0px 5px;
 		}
 		.preload-hidden {
 			display: none;
+		}
+		.addenda-container {
+			text-align: center;
+			width: fit-content;
+			max-width: 1200px;
+			padding: 0 5%;
 		}
 		/* This is here to enable the stickiness in a Float environment. I don't know why it works but it does */
 		.footer {
@@ -185,381 +202,383 @@
 		</div>
 	</div>
 
-	<div class="icon-bar">
-			<div class="icon"><a href="HQZ"><img src="/sets/HQZ-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="LRH"><img src="/sets/LRH-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="INK"><img src="/sets/INK-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="ACA"><img src="/sets/ACA-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="BYK"><img src="/sets/BYK-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="BTJ"><img src="/sets/BTJ-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="ACR"><img src="/sets/ACR-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="HVF"><img src="/sets/HVF-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="MAC"><img src="/sets/MAC-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="CAC"><img src="/sets/CAC-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="PFP"><img src="/sets/PFP-files/icon.png"></img></a></div>
-		<div class="icon"><a href="TWR"><img src="/sets/TWR-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="MMC"><img src="/sets/MMC-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="MMT"><img src="/sets/MMT-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="IAH"><img src="/sets/IAH-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="CRC"><img src="/sets/CRC-files/icon.png"></img></a></div>
-
+	<div class="dropdown" onmouseenter="rolldown()" onmouseleave="rollup()">
+	
+		<a class="set-bar" href="IAH"><img src="/sets/IAH-files/icon.png">Intrigue</a>
+	
+		<a class="set-bar inactive" href="HQZ"><img src="/sets/HQZ-files/icon.png">Hunting Quiet Horizons</a>
+	
+		<a class="set-bar inactive" href="LRH"><img src="/sets/LRH-files/icon.png">The Long Road Home</a>
+	
+		<a class="set-bar inactive" href="INK"><img src="/sets/INK-files/icon.png">Across the Ink Sea</a>
+	
+		<a class="set-bar inactive" href="ACA"><img src="/sets/ACA-files/icon.png">Arcanum Academia</a>
+	
+		<a class="set-bar inactive" href="BYK"><img src="/sets/BYK-files/icon.png">Beyond Our Ken</a>
+	
+		<a class="set-bar inactive" href="BTJ"><img src="/sets/BTJ-files/icon.png">Barten’s Journal</a>
+	
+		<a class="set-bar inactive" href="ACR"><img src="/sets/ACR-files/icon.png">Arcanum: Reforged</a>
+	
+		<a class="set-bar inactive" href="HVF"><img src="/sets/HVF-files/icon.png">Harvest Festival</a>
+	
+		<a class="set-bar inactive" href="MAC"><img src="/sets/MAC-files/icon.png">Memorium Arcanum</a>
+	
+		<a class="set-bar inactive" href="CAC"><img src="/sets/CAC-files/icon.png">Carpe Arcanum</a>
+	
+		<a class="set-bar inactive" href="PFP"><img src="/sets/PFP-files/icon.png">Plagues of Fretport</a>
+	
+		<a class="set-bar inactive" href="TWR"><img src="/sets/TWR-files/icon.png">A Tourney at Whiterun</a>
+	
+		<a class="set-bar inactive" href="MMC"><img src="/sets/MMC-files/icon.png">Memory’s Collapse</a>
+	
+		<a class="set-bar inactive" href="MMT"><img src="/sets/MMT-files/icon.png">Memory’s Tyranny</a>
+	
+		<a class="set-bar inactive" href="CRC"><img src="/sets/CRC-files/icon.png">Cretio Created</a>
+	
 		</div>
 		<div class="banner">
 		<img class="logo" src="/sets/IAH-files/logo.png">
 		</div>
 		<div class="main-content" id="main-content">
 			<div class="grid-container">
-				<div class="container"><img alt="/sets\IAH-files\img\4_Call to War.png" id="4_Call to War" data-flag="@X" onclick="openSidebar('4_Call to War',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\64_Fivola, Deepsea Temptress.png" id="64_Fivola, Deepsea Temptress" data-flag="@X" onclick="openSidebar('64_Fivola, Deepsea Temptress',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\105_Encroaching Darkness.png" id="105_Encroaching Darkness" data-flag="@X" onclick="openSidebar('105_Encroaching Darkness',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\165_Lavascar Ritual.png" id="165_Lavascar Ritual" data-flag="@X" onclick="openSidebar('165_Lavascar Ritual',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\211_Jacky the Chipper.png" id="211_Jacky the Chipper" data-flag="@X" onclick="openSidebar('211_Jacky the Chipper',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\10_Decorated General.png" id="10_Decorated General" data-flag="@X" onclick="openSidebar('10_Decorated General',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\80_Return to Creation.png" id="80_Return to Creation" data-flag="@X" onclick="openSidebar('80_Return to Creation',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\121_Isolation.png" id="121_Isolation" data-flag="@X" onclick="openSidebar('121_Isolation',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\180_Rune-Etched Giant.png" id="180_Rune-Etched Giant" data-flag="@X" onclick="openSidebar('180_Rune-Etched Giant',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\219_Ooze Colossal.png" id="219_Ooze Colossal" data-flag="@X" onclick="openSidebar('219_Ooze Colossal',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\23_Knight of the Cast.png" id="23_Knight of the Cast" data-flag="@X" onclick="openSidebar('23_Knight of the Cast',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\94_Vivianne, Reality Adept.png" id="94_Vivianne, Reality Adept" data-flag="@X" onclick="openSidebar('94_Vivianne, Reality Adept',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\141_Unholy Liege.png" id="141_Unholy Liege" data-flag="@X" onclick="openSidebar('141_Unholy Liege',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\186_Tera, King Slayer.png" id="186_Tera, King Slayer" data-flag="@X" onclick="openSidebar('186_Tera, King Slayer',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\239_Ylvith, Fenleaf Sovereign.png" id="239_Ylvith, Fenleaf Sovereign" data-flag="@X" onclick="openSidebar('239_Ylvith, Fenleaf Sovereign',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\13_Elyss, Tamer of Legends.png" id="13_Elyss, Tamer of Legends" data-flag="@X" onclick="openSidebar('13_Elyss, Tamer of Legends',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\50_Ambitious Student.png" id="50_Ambitious Student" data-flag="@X" onclick="openSidebar('50_Ambitious Student',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\102_Dementia Fumes.png" id="102_Dementia Fumes" data-flag="@X" onclick="openSidebar('102_Dementia Fumes',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\143_All Must Burn.png" id="143_All Must Burn" data-flag="@X" onclick="openSidebar('143_All Must Burn',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\196_Dust Storm.png" id="196_Dust Storm" data-flag="@X" onclick="openSidebar('196_Dust Storm',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\14_Empress Wolf.png" id="14_Empress Wolf" data-flag="@X" onclick="openSidebar('14_Empress Wolf',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\55_Commandeered Thoughts.png" id="55_Commandeered Thoughts" data-flag="@X" onclick="openSidebar('55_Commandeered Thoughts',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\114_Gailith, Vampiric Inquisitor.png" id="114_Gailith, Vampiric Inquisitor" data-flag="@X" onclick="openSidebar('114_Gailith, Vampiric Inquisitor',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\148_Birth of Fire.png" id="148_Birth of Fire" data-flag="@X" onclick="openSidebar('148_Birth of Fire',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\197_Dyradic Mastery.png" id="197_Dyradic Mastery" data-flag="@X" onclick="openSidebar('197_Dyradic Mastery',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\17_Fey Commander.png" id="17_Fey Commander" data-flag="@X" onclick="openSidebar('17_Fey Commander',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\67_Greedy Mage.png" id="67_Greedy Mage" data-flag="@X" onclick="openSidebar('67_Greedy Mage',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\118_Gravechain Manipulator.png" id="118_Gravechain Manipulator" data-flag="@X" onclick="openSidebar('118_Gravechain Manipulator',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\151_Dawnscale Dragon.png" id="151_Dawnscale Dragon" data-flag="@X" onclick="openSidebar('151_Dawnscale Dragon',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\199_Elven Woodsinger.png" id="199_Elven Woodsinger" data-flag="@X" onclick="openSidebar('199_Elven Woodsinger',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\24_Knight of the Frozen North.png" id="24_Knight of the Frozen North" data-flag="@X" onclick="openSidebar('24_Knight of the Frozen North',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\69_Imagine.png" id="69_Imagine" data-flag="@X" onclick="openSidebar('69_Imagine',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\127_Necromonger.png" id="127_Necromonger" data-flag="@X" onclick="openSidebar('127_Necromonger',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\155_Emberwild Salamander.png" id="155_Emberwild Salamander" data-flag="@X" onclick="openSidebar('155_Emberwild Salamander',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\200_Elvish Training.png" id="200_Elvish Training" data-flag="@X" onclick="openSidebar('200_Elvish Training',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\27_Life of Peace.png" id="27_Life of Peace" data-flag="@X" onclick="openSidebar('27_Life of Peace',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\73_Manacharged Shrine.png" id="73_Manacharged Shrine" data-flag="@X" onclick="openSidebar('73_Manacharged Shrine',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\129_Path of Edification.png" id="129_Path of Edification" data-flag="@X" onclick="openSidebar('129_Path of Edification',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\162_Impale.png" id="162_Impale" data-flag="@X" onclick="openSidebar('162_Impale',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\212_Jungle Rampager.png" id="212_Jungle Rampager" data-flag="@X" onclick="openSidebar('212_Jungle Rampager',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\28_Lymphatic Growths.png" id="28_Lymphatic Growths" data-flag="@X" onclick="openSidebar('28_Lymphatic Growths',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\79_Pixie Guide.png" id="79_Pixie Guide" data-flag="@X" onclick="openSidebar('79_Pixie Guide',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\134_Providence of Anguish.png" id="134_Providence of Anguish" data-flag="@X" onclick="openSidebar('134_Providence of Anguish',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\167_Madcap Abandon.png" id="167_Madcap Abandon" data-flag="@X" onclick="openSidebar('167_Madcap Abandon',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\213_King's Warden.png" id="213_Kings Warden" data-flag="@X" onclick="openSidebar('213_Kings Warden',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\30_Militant Angel.png" id="30_Militant Angel" data-flag="@X" onclick="openSidebar('30_Militant Angel',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\84_Skybolt Elemental.png" id="84_Skybolt Elemental" data-flag="@X" onclick="openSidebar('84_Skybolt Elemental',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\135_Recruit from Death.png" id="135_Recruit from Death" data-flag="@X" onclick="openSidebar('135_Recruit from Death',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\173_Plague of Dragons.png" id="173_Plague of Dragons" data-flag="@X" onclick="openSidebar('173_Plague of Dragons',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\218_Nightcrawl Trickster.png" id="218_Nightcrawl Trickster" data-flag="@X" onclick="openSidebar('218_Nightcrawl Trickster',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\34_Protective Ward.png" id="34_Protective Ward" data-flag="@X" onclick="openSidebar('34_Protective Ward',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\85_Snapcharge.png" id="85_Snapcharge" data-flag="@X" onclick="openSidebar('85_Snapcharge',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\136_Screeching Dreams.png" id="136_Screeching Dreams" data-flag="@X" onclick="openSidebar('136_Screeching Dreams',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\176_Pyromantic Negotiations.png" id="176_Pyromantic Negotiations" data-flag="@X" onclick="openSidebar('176_Pyromantic Negotiations',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\221_Primitive Primordial.png" id="221_Primitive Primordial" data-flag="@X" onclick="openSidebar('221_Primitive Primordial',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\35_Rays of Light.png" id="35_Rays of Light" data-flag="@X" onclick="openSidebar('35_Rays of Light',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\87_Sphinx of the Towers.png" id="87_Sphinx of the Towers" data-flag="@X" onclick="openSidebar('87_Sphinx of the Towers',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\138_Spellweaver Necromancer.png" id="138_Spellweaver Necromancer" data-flag="@X" onclick="openSidebar('138_Spellweaver Necromancer',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\182_Scarred Initiate.png" id="182_Scarred Initiate" data-flag="@X" onclick="openSidebar('182_Scarred Initiate',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\223_Root Spirit.png" id="223_Root Spirit" data-flag="@X" onclick="openSidebar('223_Root Spirit',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\36_Road to Seriin.png" id="36_Road to Seriin" data-flag="@X" onclick="openSidebar('36_Road to Seriin',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\89_Storm Pirates.png" id="89_Storm Pirates" data-flag="@X" onclick="openSidebar('89_Storm Pirates',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\140_Unending Assault.png" id="140_Unending Assault" data-flag="@X" onclick="openSidebar('140_Unending Assault',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\184_Sparkliege Phoenix.png" id="184_Sparkliege Phoenix" data-flag="@X" onclick="openSidebar('184_Sparkliege Phoenix',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\235_Wild Taming.png" id="235_Wild Taming" data-flag="@X" onclick="openSidebar('235_Wild Taming',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\37_Serene Zealot.png" id="37_Serene Zealot" data-flag="@X" onclick="openSidebar('37_Serene Zealot',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\95_Witches Brew.png" id="95_Witches Brew" data-flag="@X" onclick="openSidebar('95_Witches Brew',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\142_Vampiric Assassin.png" id="142_Vampiric Assassin" data-flag="@X" onclick="openSidebar('142_Vampiric Assassin',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\145_Ascern Diplomat.png" id="145_Ascern Diplomat" data-flag="@X" onclick="openSidebar('145_Ascern Diplomat',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\237_Woodland Calling.png" id="237_Woodland Calling" data-flag="@X" onclick="openSidebar('237_Woodland Calling',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\44_Sunglare Invoker.png" id="44_Sunglare Invoker" data-flag="@X" onclick="openSidebar('44_Sunglare Invoker',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\52_Ascension of Tavrin.png" id="52_Ascension of Tavrin" data-flag="@X" onclick="openSidebar('52_Ascension of Tavrin',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\96_Abandoned Graves.png" id="96_Abandoned Graves" data-flag="@X" onclick="openSidebar('96_Abandoned Graves',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\147_Backstab.png" id="147_Backstab" data-flag="@X" onclick="openSidebar('147_Backstab',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\192_Culling Corrosion.png" id="192_Culling Corrosion" data-flag="@X" onclick="openSidebar('192_Culling Corrosion',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\45_Sunstrike.png" id="45_Sunstrike" data-flag="@X" onclick="openSidebar('45_Sunstrike',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\60_Dockyard Pickpocket.png" id="60_Dockyard Pickpocket" data-flag="@X" onclick="openSidebar('60_Dockyard Pickpocket',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\98_Bitter Betrayal.png" id="98_Bitter Betrayal" data-flag="@X" onclick="openSidebar('98_Bitter Betrayal',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\149_Burning Desolation.png" id="149_Burning Desolation" data-flag="@X" onclick="openSidebar('149_Burning Desolation',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\194_Delwood Ranger.png" id="194_Delwood Ranger" data-flag="@X" onclick="openSidebar('194_Delwood Ranger',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\1_Benevolent Shepherd.png" id="1_Benevolent Shepherd" data-flag="@X" onclick="openSidebar('1_Benevolent Shepherd',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\61_Draconic Tutelage.png" id="61_Draconic Tutelage" data-flag="@X" onclick="openSidebar('61_Draconic Tutelage',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\104_Elven Cultist.png" id="104_Elven Cultist" data-flag="@X" onclick="openSidebar('104_Elven Cultist',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\150_Colosseum Minotaur.png" id="150_Colosseum Minotaur" data-flag="@X" onclick="openSidebar('150_Colosseum Minotaur',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\198_Elven Beastmaster.png" id="198_Elven Beastmaster" data-flag="@X" onclick="openSidebar('198_Elven Beastmaster',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\2_Blessing of Dawn.png" id="2_Blessing of Dawn" data-flag="@X" onclick="openSidebar('2_Blessing of Dawn',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\62_Dreams of the Merfolk.png" id="62_Dreams of the Merfolk" data-flag="@X" onclick="openSidebar('62_Dreams of the Merfolk',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\109_Fenleaf Hungers.png" id="109_Fenleaf Hungers" data-flag="@X" onclick="openSidebar('109_Fenleaf Hungers',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\152_Devils Gift.png" id="152_Devils Gift" data-flag="@X" onclick="openSidebar('152_Devils Gift',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\204_Flee the Hunter.png" id="204_Flee the Hunter" data-flag="@X" onclick="openSidebar('204_Flee the Hunter',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\5_Captured Prince.png" id="5_Captured Prince" data-flag="@X" onclick="openSidebar('5_Captured Prince',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\65_Frost Heart.png" id="65_Frost Heart" data-flag="@X" onclick="openSidebar('65_Frost Heart',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\110_Flesh Curse.png" id="110_Flesh Curse" data-flag="@X" onclick="openSidebar('110_Flesh Curse',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\157_Flameburst Hellion.png" id="157_Flameburst Hellion" data-flag="@X" onclick="openSidebar('157_Flameburst Hellion',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\207_Gluttonous Hydra.png" id="207_Gluttonous Hydra" data-flag="@X" onclick="openSidebar('207_Gluttonous Hydra',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\6_Celestial Tiger.png" id="6_Celestial Tiger" data-flag="@X" onclick="openSidebar('6_Celestial Tiger',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\68_Ice Rain.png" id="68_Ice Rain" data-flag="@X" onclick="openSidebar('68_Ice Rain',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\111_Forsaken Hero.png" id="111_Forsaken Hero" data-flag="@X" onclick="openSidebar('111_Forsaken Hero',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\161_Hoard Tyrant.png" id="161_Hoard Tyrant" data-flag="@X" onclick="openSidebar('161_Hoard Tyrant',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\208_Haiya Diplomat.png" id="208_Haiya Diplomat" data-flag="@X" onclick="openSidebar('208_Haiya Diplomat',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\8_Dauntless Hero.png" id="8_Dauntless Hero" data-flag="@X" onclick="openSidebar('8_Dauntless Hero',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\71_Lighthouse Guardian.png" id="71_Lighthouse Guardian" data-flag="@X" onclick="openSidebar('71_Lighthouse Guardian',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\115_Gallisk Diplomat.png" id="115_Gallisk Diplomat" data-flag="@X" onclick="openSidebar('115_Gallisk Diplomat',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\169_Mining Excavation.png" id="169_Mining Excavation" data-flag="@X" onclick="openSidebar('169_Mining Excavation',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\210_Imbued Ruins.png" id="210_Imbued Ruins" data-flag="@X" onclick="openSidebar('210_Imbued Ruins',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\11_Disgrace.png" id="11_Disgrace" data-flag="@X" onclick="openSidebar('11_Disgrace',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\75_Manipulated Desires.png" id="75_Manipulated Desires" data-flag="@X" onclick="openSidebar('75_Manipulated Desires',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\119_Horned Barbarian.png" id="119_Horned Barbarian" data-flag="@X" onclick="openSidebar('119_Horned Barbarian',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\170_Pack of Trolls.png" id="170_Pack of Trolls" data-flag="@X" onclick="openSidebar('170_Pack of Trolls',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\214_Lotus Blessing.png" id="214_Lotus Blessing" data-flag="@X" onclick="openSidebar('214_Lotus Blessing',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\16_Fenleaf Militia.png" id="16_Fenleaf Militia" data-flag="@X" onclick="openSidebar('16_Fenleaf Militia',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\81_Scholarly Noble.png" id="81_Scholarly Noble" data-flag="@X" onclick="openSidebar('81_Scholarly Noble',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\126_Moltenmaw Striker.png" id="126_Moltenmaw Striker" data-flag="@X" onclick="openSidebar('126_Moltenmaw Striker',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\172_Pillages of War.png" id="172_Pillages of War" data-flag="@X" onclick="openSidebar('172_Pillages of War',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\215_Lumbering Troll.png" id="215_Lumbering Troll" data-flag="@X" onclick="openSidebar('215_Lumbering Troll',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\29_Might of Angels.png" id="29_Might of Angels" data-flag="@X" onclick="openSidebar('29_Might of Angels',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\82_Shipwreck.png" id="82_Shipwreck" data-flag="@X" onclick="openSidebar('82_Shipwreck',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\132_Poisonous Essence.png" id="132_Poisonous Essence" data-flag="@X" onclick="openSidebar('132_Poisonous Essence',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\174_Pyromancer Apprentice.png" id="174_Pyromancer Apprentice" data-flag="@X" onclick="openSidebar('174_Pyromancer Apprentice',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\226_Skullmask Druid.png" id="226_Skullmask Druid" data-flag="@X" onclick="openSidebar('226_Skullmask Druid',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\32_Noble Griffin.png" id="32_Noble Griffin" data-flag="@X" onclick="openSidebar('32_Noble Griffin',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\83_Silent Night.png" id="83_Silent Night" data-flag="@X" onclick="openSidebar('83_Silent Night',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\133_Profane Hellcaller.png" id="133_Profane Hellcaller" data-flag="@X" onclick="openSidebar('133_Profane Hellcaller',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\181_Sandstorm Invocation.png" id="181_Sandstorm Invocation" data-flag="@X" onclick="openSidebar('181_Sandstorm Invocation',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\230_Tribal Stalking.png" id="230_Tribal Stalking" data-flag="@X" onclick="openSidebar('230_Tribal Stalking',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\33_Peaceful Vista.png" id="33_Peaceful Vista" data-flag="@X" onclick="openSidebar('33_Peaceful Vista',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\86_Spectral Form.png" id="86_Spectral Form" data-flag="@X" onclick="openSidebar('86_Spectral Form',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\137_Sellsword Assassin.png" id="137_Sellsword Assassin" data-flag="@X" onclick="openSidebar('137_Sellsword Assassin',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\183_Solemn Arisen.png" id="183_Solemn Arisen" data-flag="@X" onclick="openSidebar('183_Solemn Arisen',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\236_Windborn Warning.png" id="236_Windborn Warning" data-flag="@X" onclick="openSidebar('236_Windborn Warning',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\38_Seriin Diplomat.png" id="38_Seriin Diplomat" data-flag="@X" onclick="openSidebar('38_Seriin Diplomat',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\90_Tavrin Diplomat.png" id="90_Tavrin Diplomat" data-flag="@X" onclick="openSidebar('90_Tavrin Diplomat',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\139_Starving Zombie.png" id="139_Starving Zombie" data-flag="@X" onclick="openSidebar('139_Starving Zombie',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\187_Tera's Raiders.png" id="187_Teras Raiders" data-flag="@X" onclick="openSidebar('187_Teras Raiders',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\238_Woodland Gift.png" id="238_Woodland Gift" data-flag="@X" onclick="openSidebar('238_Woodland Gift',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\43_Sunburst Guardian.png" id="43_Sunburst Guardian" data-flag="@X" onclick="openSidebar('43_Sunburst Guardian',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\51_Ancient Trickster.png" id="51_Ancient Trickster" data-flag="@X" onclick="openSidebar('51_Ancient Trickster',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\97_Acidweb Changeling.png" id="97_Acidweb Changeling" data-flag="@X" onclick="openSidebar('97_Acidweb Changeling',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\144_Ascern Barbarian.png" id="144_Ascern Barbarian" data-flag="@X" onclick="openSidebar('144_Ascern Barbarian',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\191_Blood Wolf.png" id="191_Blood Wolf" data-flag="@X" onclick="openSidebar('191_Blood Wolf',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\48_Wartime Conscription.png" id="48_Wartime Conscription" data-flag="@X" onclick="openSidebar('48_Wartime Conscription',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\53_Calming Waters.png" id="53_Calming Waters" data-flag="@X" onclick="openSidebar('53_Calming Waters',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\99_Caustic Noble.png" id="99_Caustic Noble" data-flag="@X" onclick="openSidebar('99_Caustic Noble',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\146_Ascern Mercenary.png" id="146_Ascern Mercenary" data-flag="@X" onclick="openSidebar('146_Ascern Mercenary',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\193_Delwood Dryad.png" id="193_Delwood Dryad" data-flag="@X" onclick="openSidebar('193_Delwood Dryad',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\3_Blissful Joy.png" id="3_Blissful Joy" data-flag="@X" onclick="openSidebar('3_Blissful Joy',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\54_Charm.png" id="54_Charm" data-flag="@X" onclick="openSidebar('54_Charm',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\100_Cursed Thoughts.png" id="100_Cursed Thoughts" data-flag="@X" onclick="openSidebar('100_Cursed Thoughts',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\153_Dragon Fire.png" id="153_Dragon Fire" data-flag="@X" onclick="openSidebar('153_Dragon Fire',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\195_Delwood Seer.png" id="195_Delwood Seer" data-flag="@X" onclick="openSidebar('195_Delwood Seer',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\7_Citadel Guardian.png" id="7_Citadel Guardian" data-flag="@X" onclick="openSidebar('7_Citadel Guardian',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\56_Depths Trickster.png" id="56_Depths Trickster" data-flag="@X" onclick="openSidebar('56_Depths Trickster',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\101_Deluge Sentinel.png" id="101_Deluge Sentinel" data-flag="@X" onclick="openSidebar('101_Deluge Sentinel',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\154_Emberseer Changeling.png" id="154_Emberseer Changeling" data-flag="@X" onclick="openSidebar('154_Emberseer Changeling',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\201_Fenleaf Explorer.png" id="201_Fenleaf Explorer" data-flag="@X" onclick="openSidebar('201_Fenleaf Explorer',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\9_Days of Dawn.png" id="9_Days of Dawn" data-flag="@X" onclick="openSidebar('9_Days of Dawn',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\57_Dismissive Aura.png" id="57_Dismissive Aura" data-flag="@X" onclick="openSidebar('57_Dismissive Aura',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\103_Elegant Banshee.png" id="103_Elegant Banshee" data-flag="@X" onclick="openSidebar('103_Elegant Banshee',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\156_Fiery Strike.png" id="156_Fiery Strike" data-flag="@X" onclick="openSidebar('156_Fiery Strike',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\202_Fenleaf Lurker.png" id="202_Fenleaf Lurker" data-flag="@X" onclick="openSidebar('202_Fenleaf Lurker',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\12_Dismissal.png" id="12_Dismissal" data-flag="@X" onclick="openSidebar('12_Dismissal',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\58_Disruption Storm.png" id="58_Disruption Storm" data-flag="@X" onclick="openSidebar('58_Disruption Storm',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\106_Enduring Sorrow.png" id="106_Enduring Sorrow" data-flag="@X" onclick="openSidebar('106_Enduring Sorrow',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\158_Goblin Spelunkers.png" id="158_Goblin Spelunkers" data-flag="@X" onclick="openSidebar('158_Goblin Spelunkers',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\203_Fey Nuisance.png" id="203_Fey Nuisance" data-flag="@X" onclick="openSidebar('203_Fey Nuisance',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\15_Explorer's Call.png" id="15_Explorers Call" data-flag="@X" onclick="openSidebar('15_Explorers Call',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\59_Dissipating Strike.png" id="59_Dissipating Strike" data-flag="@X" onclick="openSidebar('59_Dissipating Strike',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\107_Essence Warp.png" id="107_Essence Warp" data-flag="@X" onclick="openSidebar('107_Essence Warp',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\159_Goblin Warband.png" id="159_Goblin Warband" data-flag="@X" onclick="openSidebar('159_Goblin Warband',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\205_Form of Foliage.png" id="205_Form of Foliage" data-flag="@X" onclick="openSidebar('205_Form of Foliage',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\18_Feytouched Illuminator.png" id="18_Feytouched Illuminator" data-flag="@X" onclick="openSidebar('18_Feytouched Illuminator',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\63_Ethereal Blow.png" id="63_Ethereal Blow" data-flag="@X" onclick="openSidebar('63_Ethereal Blow',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\108_Fallen Guardian.png" id="108_Fallen Guardian" data-flag="@X" onclick="openSidebar('108_Fallen Guardian',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\160_Goblin Wolf Rider.png" id="160_Goblin Wolf Rider" data-flag="@X" onclick="openSidebar('160_Goblin Wolf Rider',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\206_Fungal Sprout.png" id="206_Fungal Sprout" data-flag="@X" onclick="openSidebar('206_Fungal Sprout',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\19_Goldheart Changeling.png" id="19_Goldheart Changeling" data-flag="@X" onclick="openSidebar('19_Goldheart Changeling',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\66_Glittergaze Changeling.png" id="66_Glittergaze Changeling" data-flag="@X" onclick="openSidebar('66_Glittergaze Changeling',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\112_From Beneath.png" id="112_From Beneath" data-flag="@X" onclick="openSidebar('112_From Beneath',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\163_Jealous Devil.png" id="163_Jealous Devil" data-flag="@X" onclick="openSidebar('163_Jealous Devil',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\209_Haiya Hunter.png" id="209_Haiya Hunter" data-flag="@X" onclick="openSidebar('209_Haiya Hunter',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\20_Imbue the Meek.png" id="20_Imbue the Meek" data-flag="@X" onclick="openSidebar('20_Imbue the Meek',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\70_Inquisitive Fey.png" id="70_Inquisitive Fey" data-flag="@X" onclick="openSidebar('70_Inquisitive Fey',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\113_Funeral Trade.png" id="113_Funeral Trade" data-flag="@X" onclick="openSidebar('113_Funeral Trade',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\164_Lavamaw Dragon.png" id="164_Lavamaw Dragon" data-flag="@X" onclick="openSidebar('164_Lavamaw Dragon',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\216_Mosstrap Changeling.png" id="216_Mosstrap Changeling" data-flag="@X" onclick="openSidebar('216_Mosstrap Changeling',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\21_Inner Healing.png" id="21_Inner Healing" data-flag="@X" onclick="openSidebar('21_Inner Healing',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\72_Lightning Matriarch.png" id="72_Lightning Matriarch" data-flag="@X" onclick="openSidebar('72_Lightning Matriarch',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\116_Gallisk Recruiter.png" id="116_Gallisk Recruiter" data-flag="@X" onclick="openSidebar('116_Gallisk Recruiter',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\166_Litany of Fire.png" id="166_Litany of Fire" data-flag="@X" onclick="openSidebar('166_Litany of Fire',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\217_Nature's Bounty.png" id="217_Natures Bounty" data-flag="@X" onclick="openSidebar('217_Natures Bounty',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\22_Interekt Leopard.png" id="22_Interekt Leopard" data-flag="@X" onclick="openSidebar('22_Interekt Leopard',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\74_Manaspark.png" id="74_Manaspark" data-flag="@X" onclick="openSidebar('74_Manaspark',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\117_Gluttony Cloud.png" id="117_Gluttony Cloud" data-flag="@X" onclick="openSidebar('117_Gluttony Cloud',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\168_Magmatic Armor.png" id="168_Magmatic Armor" data-flag="@X" onclick="openSidebar('168_Magmatic Armor',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\220_Overgrowth.png" id="220_Overgrowth" data-flag="@X" onclick="openSidebar('220_Overgrowth',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\25_Leonin Captain.png" id="25_Leonin Captain" data-flag="@X" onclick="openSidebar('25_Leonin Captain',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\76_Merfolk Scavenger.png" id="76_Merfolk Scavenger" data-flag="@X" onclick="openSidebar('76_Merfolk Scavenger',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\120_Insidious Offering.png" id="120_Insidious Offering" data-flag="@X" onclick="openSidebar('120_Insidious Offering',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\171_Pillage.png" id="171_Pillage" data-flag="@X" onclick="openSidebar('171_Pillage',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\222_Ranger of Fenleaf.png" id="222_Ranger of Fenleaf" data-flag="@X" onclick="openSidebar('222_Ranger of Fenleaf',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\26_Leonin Gladiator.png" id="26_Leonin Gladiator" data-flag="@X" onclick="openSidebar('26_Leonin Gladiator',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\77_Mirrored Self.png" id="77_Mirrored Self" data-flag="@X" onclick="openSidebar('77_Mirrored Self',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\122_Marketplace Killing.png" id="122_Marketplace Killing" data-flag="@X" onclick="openSidebar('122_Marketplace Killing',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\175_Pyromantic Embodiment.png" id="175_Pyromantic Embodiment" data-flag="@X" onclick="openSidebar('175_Pyromantic Embodiment',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\224_Seedling Bauble.png" id="224_Seedling Bauble" data-flag="@X" onclick="openSidebar('224_Seedling Bauble',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\31_Morning Mist.png" id="31_Morning Mist" data-flag="@X" onclick="openSidebar('31_Morning Mist',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\78_Noble Appointment.png" id="78_Noble Appointment" data-flag="@X" onclick="openSidebar('78_Noble Appointment',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\123_Midnight Raid.png" id="123_Midnight Raid" data-flag="@X" onclick="openSidebar('123_Midnight Raid',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\177_Rampant Seige.png" id="177_Rampant Seige" data-flag="@X" onclick="openSidebar('177_Rampant Seige',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\225_Seedling Vitality.png" id="225_Seedling Vitality" data-flag="@X" onclick="openSidebar('225_Seedling Vitality',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\39_Seriin Outrider.png" id="39_Seriin Outrider" data-flag="@X" onclick="openSidebar('39_Seriin Outrider',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\88_Spoiled Nobility.png" id="88_Spoiled Nobility" data-flag="@X" onclick="openSidebar('88_Spoiled Nobility',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\124_Mire Viper.png" id="124_Mire Viper" data-flag="@X" onclick="openSidebar('124_Mire Viper',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\178_Rite of Embers.png" id="178_Rite of Embers" data-flag="@X" onclick="openSidebar('178_Rite of Embers',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\227_Thickened Hide.png" id="227_Thickened Hide" data-flag="@X" onclick="openSidebar('227_Thickened Hide',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\40_Seriin Scout.png" id="40_Seriin Scout" data-flag="@X" onclick="openSidebar('40_Seriin Scout',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\91_Thought Scatter.png" id="91_Thought Scatter" data-flag="@X" onclick="openSidebar('91_Thought Scatter',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\125_Miststalker Vampire.png" id="125_Miststalker Vampire" data-flag="@X" onclick="openSidebar('125_Miststalker Vampire',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\179_Roasted Feast.png" id="179_Roasted Feast" data-flag="@X" onclick="openSidebar('179_Roasted Feast',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\228_Thickhide Troll.png" id="228_Thickhide Troll" data-flag="@X" onclick="openSidebar('228_Thickhide Troll',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\41_Sol Angel.png" id="41_Sol Angel" data-flag="@X" onclick="openSidebar('41_Sol Angel',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\92_Thoughtweft Tree.png" id="92_Thoughtweft Tree" data-flag="@X" onclick="openSidebar('92_Thoughtweft Tree',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\128_Nocturnal Summoning.png" id="128_Nocturnal Summoning" data-flag="@X" onclick="openSidebar('128_Nocturnal Summoning',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\185_Sunrise.png" id="185_Sunrise" data-flag="@X" onclick="openSidebar('185_Sunrise',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\229_Tracking Duo.png" id="229_Tracking Duo" data-flag="@X" onclick="openSidebar('229_Tracking Duo',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\42_Spellweaver Traveler.png" id="42_Spellweaver Traveler" data-flag="@X" onclick="openSidebar('42_Spellweaver Traveler',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\93_Tide Bender.png" id="93_Tide Bender" data-flag="@X" onclick="openSidebar('93_Tide Bender',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\130_Pay Tribute.png" id="130_Pay Tribute" data-flag="@X" onclick="openSidebar('130_Pay Tribute',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\188_Traitorous Plot.png" id="188_Traitorous Plot" data-flag="@X" onclick="openSidebar('188_Traitorous Plot',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\231_Tribal Vitality.png" id="231_Tribal Vitality" data-flag="@X" onclick="openSidebar('231_Tribal Vitality',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\46_Tribal Hunter.png" id="46_Tribal Hunter" data-flag="@X" onclick="openSidebar('46_Tribal Hunter',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\131_Pharasma Boon.png" id="131_Pharasma Boon" data-flag="@X" onclick="openSidebar('131_Pharasma Boon',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\189_Violent Bloodlust.png" id="189_Violent Bloodlust" data-flag="@X" onclick="openSidebar('189_Violent Bloodlust',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\232_Trickery of Delwood.png" id="232_Trickery of Delwood" data-flag="@X" onclick="openSidebar('232_Trickery of Delwood',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\47_Wandering Piker.png" id="47_Wandering Piker" data-flag="@X" onclick="openSidebar('47_Wandering Piker',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\190_Warmongering Noble.png" id="190_Warmongering Noble" data-flag="@X" onclick="openSidebar('190_Warmongering Noble',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\233_Untrodden Paths.png" id="233_Untrodden Paths" data-flag="@X" onclick="openSidebar('233_Untrodden Paths',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\49_Whirling Strike.png" id="49_Whirling Strike" data-flag="@X" onclick="openSidebar('49_Whirling Strike',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\234_Wild Summons.png" id="234_Wild Summons" data-flag="@X" onclick="openSidebar('234_Wild Summons',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-<div id="gold" class="anchor"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\241_Lightning Seraph.png" id="241_Lightning Seraph" data-flag="@X" onclick="openSidebar('241_Lightning Seraph',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\243_Mounted Dragon.png" id="243_Mounted Dragon" data-flag="@X" onclick="openSidebar('243_Mounted Dragon',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\242_Mounted Charge.png" id="242_Mounted Charge" data-flag="@X" onclick="openSidebar('242_Mounted Charge',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\245_Recreate Reality.png" id="245_Recreate Reality" data-flag="@X" onclick="openSidebar('245_Recreate Reality',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\240_Basilisk Ball.png" id="240_Basilisk Ball" data-flag="@X" onclick="openSidebar('240_Basilisk Ball',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\244_Paladin of Ascern.png" id="244_Paladin of Ascern" data-flag="@X" onclick="openSidebar('244_Paladin of Ascern',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\246_Reimagine.png" id="246_Reimagine" data-flag="@X" onclick="openSidebar('246_Reimagine',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\247_Soldiers of Fortune.png" id="247_Soldiers of Fortune" data-flag="@X" onclick="openSidebar('247_Soldiers of Fortune',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\248_Stinging Hallucinations.png" id="248_Stinging Hallucinations" data-flag="@X" onclick="openSidebar('248_Stinging Hallucinations',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-<div id="colorless" class="anchor"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\253_Mask of Domination.png" id="253_Mask of Domination" data-flag="@X" onclick="openSidebar('253_Mask of Domination',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\249_Bronze Bombshell.png" id="249_Bronze Bombshell" data-flag="@X" onclick="openSidebar('249_Bronze Bombshell',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\255_Moltencore Golem.png" id="255_Moltencore Golem" data-flag="@X" onclick="openSidebar('255_Moltencore Golem',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\256_Rotcore Throne.png" id="256_Rotcore Throne" data-flag="@X" onclick="openSidebar('256_Rotcore Throne',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\250_Coldsteel Blade.png" id="250_Coldsteel Blade" data-flag="@X" onclick="openSidebar('250_Coldsteel Blade',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\251_Dragon Gem.png" id="251_Dragon Gem" data-flag="@X" onclick="openSidebar('251_Dragon Gem',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\252_Living Gargoyle.png" id="252_Living Gargoyle" data-flag="@X" onclick="openSidebar('252_Living Gargoyle',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\254_Merchants Records.png" id="254_Merchants Records" data-flag="@X" onclick="openSidebar('254_Merchants Records',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\259_Vibration Orb.png" id="259_Vibration Orb" data-flag="@X" onclick="openSidebar('259_Vibration Orb',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\260_Wilting Lotus.png" id="260_Wilting Lotus" data-flag="@X" onclick="openSidebar('260_Wilting Lotus',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\257_Sacrificial Altar.png" id="257_Sacrificial Altar" data-flag="@X" onclick="openSidebar('257_Sacrificial Altar',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\258_Steelgrafted Duelist.png" id="258_Steelgrafted Duelist" data-flag="@X" onclick="openSidebar('258_Steelgrafted Duelist',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-<div id="land" class="anchor"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\266_Sentinels Pass.png" id="266_Sentinels Pass" data-flag="@X" onclick="openSidebar('266_Sentinels Pass',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\267_Spring Pool.png" id="267_Spring Pool" data-flag="@X" onclick="openSidebar('267_Spring Pool',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\265_Pillaged Temple.png" id="265_Pillaged Temple" data-flag="@X" onclick="openSidebar('265_Pillaged Temple',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\269_Wartorn Gates.png" id="269_Wartorn Gates" data-flag="@X" onclick="openSidebar('269_Wartorn Gates',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\261_Elven Homestead.png" id="261_Elven Homestead" data-flag="@X" onclick="openSidebar('261_Elven Homestead',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\263_Impassable Chasm.png" id="263_Impassable Chasm" data-flag="@X" onclick="openSidebar('263_Impassable Chasm',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\268_Transcendent Palace.png" id="268_Transcendent Palace" data-flag="@X" onclick="openSidebar('268_Transcendent Palace',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\262_Glacial Pass.png" id="262_Glacial Pass" data-flag="@X" onclick="openSidebar('262_Glacial Pass',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\264_Interekt, the Razor Edge.png" id="264_Interekt, the Razor Edge" data-flag="@X" onclick="openSidebar('264_Interekt, the Razor Edge',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-<div id="token" class="anchor"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\1t_Soldier.png" id="1t_Soldier" data-flag="@X" onclick="openSidebar('1t_Soldier',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\2t_Bird.png" id="2t_Bird" data-flag="@X" onclick="openSidebar('2t_Bird',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\3t_Unicorn.png" id="3t_Unicorn" data-flag="@X" onclick="openSidebar('3t_Unicorn',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\4t_Zombie.png" id="4t_Zombie" data-flag="@X" onclick="openSidebar('4t_Zombie',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\5t_Dragon.png" id="5t_Dragon" data-flag="@X" onclick="openSidebar('5t_Dragon',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\6t_Elemental.png" id="6t_Elemental" data-flag="@X" onclick="openSidebar('6t_Elemental',false)"></div>
-			<div class="container"><img alt="/sets\IAH-files\img\7t_Beast.png" id="7t_Beast" data-flag="@X" onclick="openSidebar('7t_Beast',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+					<div class="container"><img alt="/sets\IAH-files\img\4_Call to War.png" id="4_Call to War" data-flag="@X" onclick="openSidebar('4_Call to War',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\64_Fivola, Deepsea Temptress.png" id="64_Fivola, Deepsea Temptress" data-flag="@X" onclick="openSidebar('64_Fivola, Deepsea Temptress',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\105_Encroaching Darkness.png" id="105_Encroaching Darkness" data-flag="@X" onclick="openSidebar('105_Encroaching Darkness',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\165_Lavascar Ritual.png" id="165_Lavascar Ritual" data-flag="@X" onclick="openSidebar('165_Lavascar Ritual',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\211_Jacky the Chipper.png" id="211_Jacky the Chipper" data-flag="@X" onclick="openSidebar('211_Jacky the Chipper',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\10_Decorated General.png" id="10_Decorated General" data-flag="@X" onclick="openSidebar('10_Decorated General',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\80_Return to Creation.png" id="80_Return to Creation" data-flag="@X" onclick="openSidebar('80_Return to Creation',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\121_Isolation.png" id="121_Isolation" data-flag="@X" onclick="openSidebar('121_Isolation',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\180_Rune-Etched Giant.png" id="180_Rune-Etched Giant" data-flag="@X" onclick="openSidebar('180_Rune-Etched Giant',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\219_Ooze Colossal.png" id="219_Ooze Colossal" data-flag="@X" onclick="openSidebar('219_Ooze Colossal',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\23_Knight of the Cast.png" id="23_Knight of the Cast" data-flag="@X" onclick="openSidebar('23_Knight of the Cast',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\94_Vivianne, Reality Adept.png" id="94_Vivianne, Reality Adept" data-flag="@X" onclick="openSidebar('94_Vivianne, Reality Adept',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\141_Unholy Liege.png" id="141_Unholy Liege" data-flag="@X" onclick="openSidebar('141_Unholy Liege',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\186_Tera, King Slayer.png" id="186_Tera, King Slayer" data-flag="@X" onclick="openSidebar('186_Tera, King Slayer',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\239_Ylvith, Fenleaf Sovereign.png" id="239_Ylvith, Fenleaf Sovereign" data-flag="@X" onclick="openSidebar('239_Ylvith, Fenleaf Sovereign',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\13_Elyss, Tamer of Legends.png" id="13_Elyss, Tamer of Legends" data-flag="@X" onclick="openSidebar('13_Elyss, Tamer of Legends',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\50_Ambitious Student.png" id="50_Ambitious Student" data-flag="@X" onclick="openSidebar('50_Ambitious Student',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\102_Dementia Fumes.png" id="102_Dementia Fumes" data-flag="@X" onclick="openSidebar('102_Dementia Fumes',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\143_All Must Burn.png" id="143_All Must Burn" data-flag="@X" onclick="openSidebar('143_All Must Burn',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\196_Dust Storm.png" id="196_Dust Storm" data-flag="@X" onclick="openSidebar('196_Dust Storm',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\14_Empress Wolf.png" id="14_Empress Wolf" data-flag="@X" onclick="openSidebar('14_Empress Wolf',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\55_Commandeered Thoughts.png" id="55_Commandeered Thoughts" data-flag="@X" onclick="openSidebar('55_Commandeered Thoughts',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\114_Gailith, Vampiric Inquisitor.png" id="114_Gailith, Vampiric Inquisitor" data-flag="@X" onclick="openSidebar('114_Gailith, Vampiric Inquisitor',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\148_Birth of Fire.png" id="148_Birth of Fire" data-flag="@X" onclick="openSidebar('148_Birth of Fire',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\197_Dyradic Mastery.png" id="197_Dyradic Mastery" data-flag="@X" onclick="openSidebar('197_Dyradic Mastery',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\17_Fey Commander.png" id="17_Fey Commander" data-flag="@X" onclick="openSidebar('17_Fey Commander',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\67_Greedy Mage.png" id="67_Greedy Mage" data-flag="@X" onclick="openSidebar('67_Greedy Mage',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\118_Gravechain Manipulator.png" id="118_Gravechain Manipulator" data-flag="@X" onclick="openSidebar('118_Gravechain Manipulator',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\151_Dawnscale Dragon.png" id="151_Dawnscale Dragon" data-flag="@X" onclick="openSidebar('151_Dawnscale Dragon',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\199_Elven Woodsinger.png" id="199_Elven Woodsinger" data-flag="@X" onclick="openSidebar('199_Elven Woodsinger',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\24_Knight of the Frozen North.png" id="24_Knight of the Frozen North" data-flag="@X" onclick="openSidebar('24_Knight of the Frozen North',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\69_Imagine.png" id="69_Imagine" data-flag="@X" onclick="openSidebar('69_Imagine',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\127_Necromonger.png" id="127_Necromonger" data-flag="@X" onclick="openSidebar('127_Necromonger',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\155_Emberwild Salamander.png" id="155_Emberwild Salamander" data-flag="@X" onclick="openSidebar('155_Emberwild Salamander',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\200_Elvish Training.png" id="200_Elvish Training" data-flag="@X" onclick="openSidebar('200_Elvish Training',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\27_Life of Peace.png" id="27_Life of Peace" data-flag="@X" onclick="openSidebar('27_Life of Peace',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\73_Manacharged Shrine.png" id="73_Manacharged Shrine" data-flag="@X" onclick="openSidebar('73_Manacharged Shrine',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\129_Path of Edification.png" id="129_Path of Edification" data-flag="@X" onclick="openSidebar('129_Path of Edification',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\162_Impale.png" id="162_Impale" data-flag="@X" onclick="openSidebar('162_Impale',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\212_Jungle Rampager.png" id="212_Jungle Rampager" data-flag="@X" onclick="openSidebar('212_Jungle Rampager',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\28_Lymphatic Growths.png" id="28_Lymphatic Growths" data-flag="@X" onclick="openSidebar('28_Lymphatic Growths',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\79_Pixie Guide.png" id="79_Pixie Guide" data-flag="@X" onclick="openSidebar('79_Pixie Guide',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\134_Providence of Anguish.png" id="134_Providence of Anguish" data-flag="@X" onclick="openSidebar('134_Providence of Anguish',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\167_Madcap Abandon.png" id="167_Madcap Abandon" data-flag="@X" onclick="openSidebar('167_Madcap Abandon',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\213_King's Warden.png" id="213_Kings Warden" data-flag="@X" onclick="openSidebar('213_Kings Warden',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\30_Militant Angel.png" id="30_Militant Angel" data-flag="@X" onclick="openSidebar('30_Militant Angel',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\84_Skybolt Elemental.png" id="84_Skybolt Elemental" data-flag="@X" onclick="openSidebar('84_Skybolt Elemental',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\135_Recruit from Death.png" id="135_Recruit from Death" data-flag="@X" onclick="openSidebar('135_Recruit from Death',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\173_Plague of Dragons.png" id="173_Plague of Dragons" data-flag="@X" onclick="openSidebar('173_Plague of Dragons',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\218_Nightcrawl Trickster.png" id="218_Nightcrawl Trickster" data-flag="@X" onclick="openSidebar('218_Nightcrawl Trickster',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\34_Protective Ward.png" id="34_Protective Ward" data-flag="@X" onclick="openSidebar('34_Protective Ward',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\85_Snapcharge.png" id="85_Snapcharge" data-flag="@X" onclick="openSidebar('85_Snapcharge',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\136_Screeching Dreams.png" id="136_Screeching Dreams" data-flag="@X" onclick="openSidebar('136_Screeching Dreams',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\176_Pyromantic Negotiations.png" id="176_Pyromantic Negotiations" data-flag="@X" onclick="openSidebar('176_Pyromantic Negotiations',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\221_Primitive Primordial.png" id="221_Primitive Primordial" data-flag="@X" onclick="openSidebar('221_Primitive Primordial',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\35_Rays of Light.png" id="35_Rays of Light" data-flag="@X" onclick="openSidebar('35_Rays of Light',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\87_Sphinx of the Towers.png" id="87_Sphinx of the Towers" data-flag="@X" onclick="openSidebar('87_Sphinx of the Towers',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\138_Spellweaver Necromancer.png" id="138_Spellweaver Necromancer" data-flag="@X" onclick="openSidebar('138_Spellweaver Necromancer',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\182_Scarred Initiate.png" id="182_Scarred Initiate" data-flag="@X" onclick="openSidebar('182_Scarred Initiate',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\223_Root Spirit.png" id="223_Root Spirit" data-flag="@X" onclick="openSidebar('223_Root Spirit',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\36_Road to Seriin.png" id="36_Road to Seriin" data-flag="@X" onclick="openSidebar('36_Road to Seriin',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\89_Storm Pirates.png" id="89_Storm Pirates" data-flag="@X" onclick="openSidebar('89_Storm Pirates',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\140_Unending Assault.png" id="140_Unending Assault" data-flag="@X" onclick="openSidebar('140_Unending Assault',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\184_Sparkliege Phoenix.png" id="184_Sparkliege Phoenix" data-flag="@X" onclick="openSidebar('184_Sparkliege Phoenix',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\235_Wild Taming.png" id="235_Wild Taming" data-flag="@X" onclick="openSidebar('235_Wild Taming',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\37_Serene Zealot.png" id="37_Serene Zealot" data-flag="@X" onclick="openSidebar('37_Serene Zealot',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\95_Witches Brew.png" id="95_Witches Brew" data-flag="@X" onclick="openSidebar('95_Witches Brew',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\142_Vampiric Assassin.png" id="142_Vampiric Assassin" data-flag="@X" onclick="openSidebar('142_Vampiric Assassin',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\145_Ascern Diplomat.png" id="145_Ascern Diplomat" data-flag="@X" onclick="openSidebar('145_Ascern Diplomat',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\237_Woodland Calling.png" id="237_Woodland Calling" data-flag="@X" onclick="openSidebar('237_Woodland Calling',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\44_Sunglare Invoker.png" id="44_Sunglare Invoker" data-flag="@X" onclick="openSidebar('44_Sunglare Invoker',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\52_Ascension of Tavrin.png" id="52_Ascension of Tavrin" data-flag="@X" onclick="openSidebar('52_Ascension of Tavrin',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\96_Abandoned Graves.png" id="96_Abandoned Graves" data-flag="@X" onclick="openSidebar('96_Abandoned Graves',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\147_Backstab.png" id="147_Backstab" data-flag="@X" onclick="openSidebar('147_Backstab',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\192_Culling Corrosion.png" id="192_Culling Corrosion" data-flag="@X" onclick="openSidebar('192_Culling Corrosion',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\45_Sunstrike.png" id="45_Sunstrike" data-flag="@X" onclick="openSidebar('45_Sunstrike',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\60_Dockyard Pickpocket.png" id="60_Dockyard Pickpocket" data-flag="@X" onclick="openSidebar('60_Dockyard Pickpocket',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\98_Bitter Betrayal.png" id="98_Bitter Betrayal" data-flag="@X" onclick="openSidebar('98_Bitter Betrayal',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\149_Burning Desolation.png" id="149_Burning Desolation" data-flag="@X" onclick="openSidebar('149_Burning Desolation',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\194_Delwood Ranger.png" id="194_Delwood Ranger" data-flag="@X" onclick="openSidebar('194_Delwood Ranger',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\1_Benevolent Shepherd.png" id="1_Benevolent Shepherd" data-flag="@X" onclick="openSidebar('1_Benevolent Shepherd',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\61_Draconic Tutelage.png" id="61_Draconic Tutelage" data-flag="@X" onclick="openSidebar('61_Draconic Tutelage',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\104_Elven Cultist.png" id="104_Elven Cultist" data-flag="@X" onclick="openSidebar('104_Elven Cultist',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\150_Colosseum Minotaur.png" id="150_Colosseum Minotaur" data-flag="@X" onclick="openSidebar('150_Colosseum Minotaur',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\198_Elven Beastmaster.png" id="198_Elven Beastmaster" data-flag="@X" onclick="openSidebar('198_Elven Beastmaster',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\2_Blessing of Dawn.png" id="2_Blessing of Dawn" data-flag="@X" onclick="openSidebar('2_Blessing of Dawn',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\62_Dreams of the Merfolk.png" id="62_Dreams of the Merfolk" data-flag="@X" onclick="openSidebar('62_Dreams of the Merfolk',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\109_Fenleaf Hungers.png" id="109_Fenleaf Hungers" data-flag="@X" onclick="openSidebar('109_Fenleaf Hungers',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\152_Devils Gift.png" id="152_Devils Gift" data-flag="@X" onclick="openSidebar('152_Devils Gift',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\204_Flee the Hunter.png" id="204_Flee the Hunter" data-flag="@X" onclick="openSidebar('204_Flee the Hunter',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\5_Captured Prince.png" id="5_Captured Prince" data-flag="@X" onclick="openSidebar('5_Captured Prince',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\65_Frost Heart.png" id="65_Frost Heart" data-flag="@X" onclick="openSidebar('65_Frost Heart',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\110_Flesh Curse.png" id="110_Flesh Curse" data-flag="@X" onclick="openSidebar('110_Flesh Curse',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\157_Flameburst Hellion.png" id="157_Flameburst Hellion" data-flag="@X" onclick="openSidebar('157_Flameburst Hellion',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\207_Gluttonous Hydra.png" id="207_Gluttonous Hydra" data-flag="@X" onclick="openSidebar('207_Gluttonous Hydra',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\6_Celestial Tiger.png" id="6_Celestial Tiger" data-flag="@X" onclick="openSidebar('6_Celestial Tiger',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\68_Ice Rain.png" id="68_Ice Rain" data-flag="@X" onclick="openSidebar('68_Ice Rain',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\111_Forsaken Hero.png" id="111_Forsaken Hero" data-flag="@X" onclick="openSidebar('111_Forsaken Hero',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\161_Hoard Tyrant.png" id="161_Hoard Tyrant" data-flag="@X" onclick="openSidebar('161_Hoard Tyrant',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\208_Haiya Diplomat.png" id="208_Haiya Diplomat" data-flag="@X" onclick="openSidebar('208_Haiya Diplomat',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\8_Dauntless Hero.png" id="8_Dauntless Hero" data-flag="@X" onclick="openSidebar('8_Dauntless Hero',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\71_Lighthouse Guardian.png" id="71_Lighthouse Guardian" data-flag="@X" onclick="openSidebar('71_Lighthouse Guardian',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\115_Gallisk Diplomat.png" id="115_Gallisk Diplomat" data-flag="@X" onclick="openSidebar('115_Gallisk Diplomat',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\169_Mining Excavation.png" id="169_Mining Excavation" data-flag="@X" onclick="openSidebar('169_Mining Excavation',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\210_Imbued Ruins.png" id="210_Imbued Ruins" data-flag="@X" onclick="openSidebar('210_Imbued Ruins',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\11_Disgrace.png" id="11_Disgrace" data-flag="@X" onclick="openSidebar('11_Disgrace',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\75_Manipulated Desires.png" id="75_Manipulated Desires" data-flag="@X" onclick="openSidebar('75_Manipulated Desires',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\119_Horned Barbarian.png" id="119_Horned Barbarian" data-flag="@X" onclick="openSidebar('119_Horned Barbarian',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\170_Pack of Trolls.png" id="170_Pack of Trolls" data-flag="@X" onclick="openSidebar('170_Pack of Trolls',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\214_Lotus Blessing.png" id="214_Lotus Blessing" data-flag="@X" onclick="openSidebar('214_Lotus Blessing',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\16_Fenleaf Militia.png" id="16_Fenleaf Militia" data-flag="@X" onclick="openSidebar('16_Fenleaf Militia',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\81_Scholarly Noble.png" id="81_Scholarly Noble" data-flag="@X" onclick="openSidebar('81_Scholarly Noble',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\126_Moltenmaw Striker.png" id="126_Moltenmaw Striker" data-flag="@X" onclick="openSidebar('126_Moltenmaw Striker',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\172_Pillages of War.png" id="172_Pillages of War" data-flag="@X" onclick="openSidebar('172_Pillages of War',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\215_Lumbering Troll.png" id="215_Lumbering Troll" data-flag="@X" onclick="openSidebar('215_Lumbering Troll',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\29_Might of Angels.png" id="29_Might of Angels" data-flag="@X" onclick="openSidebar('29_Might of Angels',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\82_Shipwreck.png" id="82_Shipwreck" data-flag="@X" onclick="openSidebar('82_Shipwreck',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\132_Poisonous Essence.png" id="132_Poisonous Essence" data-flag="@X" onclick="openSidebar('132_Poisonous Essence',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\174_Pyromancer Apprentice.png" id="174_Pyromancer Apprentice" data-flag="@X" onclick="openSidebar('174_Pyromancer Apprentice',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\226_Skullmask Druid.png" id="226_Skullmask Druid" data-flag="@X" onclick="openSidebar('226_Skullmask Druid',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\32_Noble Griffin.png" id="32_Noble Griffin" data-flag="@X" onclick="openSidebar('32_Noble Griffin',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\83_Silent Night.png" id="83_Silent Night" data-flag="@X" onclick="openSidebar('83_Silent Night',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\133_Profane Hellcaller.png" id="133_Profane Hellcaller" data-flag="@X" onclick="openSidebar('133_Profane Hellcaller',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\181_Sandstorm Invocation.png" id="181_Sandstorm Invocation" data-flag="@X" onclick="openSidebar('181_Sandstorm Invocation',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\230_Tribal Stalking.png" id="230_Tribal Stalking" data-flag="@X" onclick="openSidebar('230_Tribal Stalking',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\33_Peaceful Vista.png" id="33_Peaceful Vista" data-flag="@X" onclick="openSidebar('33_Peaceful Vista',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\86_Spectral Form.png" id="86_Spectral Form" data-flag="@X" onclick="openSidebar('86_Spectral Form',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\137_Sellsword Assassin.png" id="137_Sellsword Assassin" data-flag="@X" onclick="openSidebar('137_Sellsword Assassin',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\183_Solemn Arisen.png" id="183_Solemn Arisen" data-flag="@X" onclick="openSidebar('183_Solemn Arisen',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\236_Windborn Warning.png" id="236_Windborn Warning" data-flag="@X" onclick="openSidebar('236_Windborn Warning',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\38_Seriin Diplomat.png" id="38_Seriin Diplomat" data-flag="@X" onclick="openSidebar('38_Seriin Diplomat',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\90_Tavrin Diplomat.png" id="90_Tavrin Diplomat" data-flag="@X" onclick="openSidebar('90_Tavrin Diplomat',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\139_Starving Zombie.png" id="139_Starving Zombie" data-flag="@X" onclick="openSidebar('139_Starving Zombie',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\187_Tera's Raiders.png" id="187_Teras Raiders" data-flag="@X" onclick="openSidebar('187_Teras Raiders',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\238_Woodland Gift.png" id="238_Woodland Gift" data-flag="@X" onclick="openSidebar('238_Woodland Gift',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\43_Sunburst Guardian.png" id="43_Sunburst Guardian" data-flag="@X" onclick="openSidebar('43_Sunburst Guardian',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\51_Ancient Trickster.png" id="51_Ancient Trickster" data-flag="@X" onclick="openSidebar('51_Ancient Trickster',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\97_Acidweb Changeling.png" id="97_Acidweb Changeling" data-flag="@X" onclick="openSidebar('97_Acidweb Changeling',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\144_Ascern Barbarian.png" id="144_Ascern Barbarian" data-flag="@X" onclick="openSidebar('144_Ascern Barbarian',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\191_Blood Wolf.png" id="191_Blood Wolf" data-flag="@X" onclick="openSidebar('191_Blood Wolf',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\48_Wartime Conscription.png" id="48_Wartime Conscription" data-flag="@X" onclick="openSidebar('48_Wartime Conscription',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\53_Calming Waters.png" id="53_Calming Waters" data-flag="@X" onclick="openSidebar('53_Calming Waters',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\99_Caustic Noble.png" id="99_Caustic Noble" data-flag="@X" onclick="openSidebar('99_Caustic Noble',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\146_Ascern Mercenary.png" id="146_Ascern Mercenary" data-flag="@X" onclick="openSidebar('146_Ascern Mercenary',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\193_Delwood Dryad.png" id="193_Delwood Dryad" data-flag="@X" onclick="openSidebar('193_Delwood Dryad',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\3_Blissful Joy.png" id="3_Blissful Joy" data-flag="@X" onclick="openSidebar('3_Blissful Joy',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\54_Charm.png" id="54_Charm" data-flag="@X" onclick="openSidebar('54_Charm',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\100_Cursed Thoughts.png" id="100_Cursed Thoughts" data-flag="@X" onclick="openSidebar('100_Cursed Thoughts',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\153_Dragon Fire.png" id="153_Dragon Fire" data-flag="@X" onclick="openSidebar('153_Dragon Fire',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\195_Delwood Seer.png" id="195_Delwood Seer" data-flag="@X" onclick="openSidebar('195_Delwood Seer',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\7_Citadel Guardian.png" id="7_Citadel Guardian" data-flag="@X" onclick="openSidebar('7_Citadel Guardian',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\56_Depths Trickster.png" id="56_Depths Trickster" data-flag="@X" onclick="openSidebar('56_Depths Trickster',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\101_Deluge Sentinel.png" id="101_Deluge Sentinel" data-flag="@X" onclick="openSidebar('101_Deluge Sentinel',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\154_Emberseer Changeling.png" id="154_Emberseer Changeling" data-flag="@X" onclick="openSidebar('154_Emberseer Changeling',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\201_Fenleaf Explorer.png" id="201_Fenleaf Explorer" data-flag="@X" onclick="openSidebar('201_Fenleaf Explorer',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\9_Days of Dawn.png" id="9_Days of Dawn" data-flag="@X" onclick="openSidebar('9_Days of Dawn',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\57_Dismissive Aura.png" id="57_Dismissive Aura" data-flag="@X" onclick="openSidebar('57_Dismissive Aura',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\103_Elegant Banshee.png" id="103_Elegant Banshee" data-flag="@X" onclick="openSidebar('103_Elegant Banshee',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\156_Fiery Strike.png" id="156_Fiery Strike" data-flag="@X" onclick="openSidebar('156_Fiery Strike',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\202_Fenleaf Lurker.png" id="202_Fenleaf Lurker" data-flag="@X" onclick="openSidebar('202_Fenleaf Lurker',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\12_Dismissal.png" id="12_Dismissal" data-flag="@X" onclick="openSidebar('12_Dismissal',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\58_Disruption Storm.png" id="58_Disruption Storm" data-flag="@X" onclick="openSidebar('58_Disruption Storm',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\106_Enduring Sorrow.png" id="106_Enduring Sorrow" data-flag="@X" onclick="openSidebar('106_Enduring Sorrow',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\158_Goblin Spelunkers.png" id="158_Goblin Spelunkers" data-flag="@X" onclick="openSidebar('158_Goblin Spelunkers',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\203_Fey Nuisance.png" id="203_Fey Nuisance" data-flag="@X" onclick="openSidebar('203_Fey Nuisance',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\15_Explorer's Call.png" id="15_Explorers Call" data-flag="@X" onclick="openSidebar('15_Explorers Call',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\59_Dissipating Strike.png" id="59_Dissipating Strike" data-flag="@X" onclick="openSidebar('59_Dissipating Strike',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\107_Essence Warp.png" id="107_Essence Warp" data-flag="@X" onclick="openSidebar('107_Essence Warp',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\159_Goblin Warband.png" id="159_Goblin Warband" data-flag="@X" onclick="openSidebar('159_Goblin Warband',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\205_Form of Foliage.png" id="205_Form of Foliage" data-flag="@X" onclick="openSidebar('205_Form of Foliage',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\18_Feytouched Illuminator.png" id="18_Feytouched Illuminator" data-flag="@X" onclick="openSidebar('18_Feytouched Illuminator',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\63_Ethereal Blow.png" id="63_Ethereal Blow" data-flag="@X" onclick="openSidebar('63_Ethereal Blow',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\108_Fallen Guardian.png" id="108_Fallen Guardian" data-flag="@X" onclick="openSidebar('108_Fallen Guardian',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\160_Goblin Wolf Rider.png" id="160_Goblin Wolf Rider" data-flag="@X" onclick="openSidebar('160_Goblin Wolf Rider',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\206_Fungal Sprout.png" id="206_Fungal Sprout" data-flag="@X" onclick="openSidebar('206_Fungal Sprout',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\19_Goldheart Changeling.png" id="19_Goldheart Changeling" data-flag="@X" onclick="openSidebar('19_Goldheart Changeling',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\66_Glittergaze Changeling.png" id="66_Glittergaze Changeling" data-flag="@X" onclick="openSidebar('66_Glittergaze Changeling',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\112_From Beneath.png" id="112_From Beneath" data-flag="@X" onclick="openSidebar('112_From Beneath',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\163_Jealous Devil.png" id="163_Jealous Devil" data-flag="@X" onclick="openSidebar('163_Jealous Devil',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\209_Haiya Hunter.png" id="209_Haiya Hunter" data-flag="@X" onclick="openSidebar('209_Haiya Hunter',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\20_Imbue the Meek.png" id="20_Imbue the Meek" data-flag="@X" onclick="openSidebar('20_Imbue the Meek',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\70_Inquisitive Fey.png" id="70_Inquisitive Fey" data-flag="@X" onclick="openSidebar('70_Inquisitive Fey',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\113_Funeral Trade.png" id="113_Funeral Trade" data-flag="@X" onclick="openSidebar('113_Funeral Trade',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\164_Lavamaw Dragon.png" id="164_Lavamaw Dragon" data-flag="@X" onclick="openSidebar('164_Lavamaw Dragon',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\216_Mosstrap Changeling.png" id="216_Mosstrap Changeling" data-flag="@X" onclick="openSidebar('216_Mosstrap Changeling',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\21_Inner Healing.png" id="21_Inner Healing" data-flag="@X" onclick="openSidebar('21_Inner Healing',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\72_Lightning Matriarch.png" id="72_Lightning Matriarch" data-flag="@X" onclick="openSidebar('72_Lightning Matriarch',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\116_Gallisk Recruiter.png" id="116_Gallisk Recruiter" data-flag="@X" onclick="openSidebar('116_Gallisk Recruiter',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\166_Litany of Fire.png" id="166_Litany of Fire" data-flag="@X" onclick="openSidebar('166_Litany of Fire',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\217_Nature's Bounty.png" id="217_Natures Bounty" data-flag="@X" onclick="openSidebar('217_Natures Bounty',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\22_Interekt Leopard.png" id="22_Interekt Leopard" data-flag="@X" onclick="openSidebar('22_Interekt Leopard',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\74_Manaspark.png" id="74_Manaspark" data-flag="@X" onclick="openSidebar('74_Manaspark',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\117_Gluttony Cloud.png" id="117_Gluttony Cloud" data-flag="@X" onclick="openSidebar('117_Gluttony Cloud',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\168_Magmatic Armor.png" id="168_Magmatic Armor" data-flag="@X" onclick="openSidebar('168_Magmatic Armor',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\220_Overgrowth.png" id="220_Overgrowth" data-flag="@X" onclick="openSidebar('220_Overgrowth',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\25_Leonin Captain.png" id="25_Leonin Captain" data-flag="@X" onclick="openSidebar('25_Leonin Captain',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\76_Merfolk Scavenger.png" id="76_Merfolk Scavenger" data-flag="@X" onclick="openSidebar('76_Merfolk Scavenger',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\120_Insidious Offering.png" id="120_Insidious Offering" data-flag="@X" onclick="openSidebar('120_Insidious Offering',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\171_Pillage.png" id="171_Pillage" data-flag="@X" onclick="openSidebar('171_Pillage',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\222_Ranger of Fenleaf.png" id="222_Ranger of Fenleaf" data-flag="@X" onclick="openSidebar('222_Ranger of Fenleaf',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\26_Leonin Gladiator.png" id="26_Leonin Gladiator" data-flag="@X" onclick="openSidebar('26_Leonin Gladiator',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\77_Mirrored Self.png" id="77_Mirrored Self" data-flag="@X" onclick="openSidebar('77_Mirrored Self',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\122_Marketplace Killing.png" id="122_Marketplace Killing" data-flag="@X" onclick="openSidebar('122_Marketplace Killing',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\175_Pyromantic Embodiment.png" id="175_Pyromantic Embodiment" data-flag="@X" onclick="openSidebar('175_Pyromantic Embodiment',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\224_Seedling Bauble.png" id="224_Seedling Bauble" data-flag="@X" onclick="openSidebar('224_Seedling Bauble',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\31_Morning Mist.png" id="31_Morning Mist" data-flag="@X" onclick="openSidebar('31_Morning Mist',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\78_Noble Appointment.png" id="78_Noble Appointment" data-flag="@X" onclick="openSidebar('78_Noble Appointment',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\123_Midnight Raid.png" id="123_Midnight Raid" data-flag="@X" onclick="openSidebar('123_Midnight Raid',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\177_Rampant Seige.png" id="177_Rampant Seige" data-flag="@X" onclick="openSidebar('177_Rampant Seige',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\225_Seedling Vitality.png" id="225_Seedling Vitality" data-flag="@X" onclick="openSidebar('225_Seedling Vitality',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\39_Seriin Outrider.png" id="39_Seriin Outrider" data-flag="@X" onclick="openSidebar('39_Seriin Outrider',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\88_Spoiled Nobility.png" id="88_Spoiled Nobility" data-flag="@X" onclick="openSidebar('88_Spoiled Nobility',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\124_Mire Viper.png" id="124_Mire Viper" data-flag="@X" onclick="openSidebar('124_Mire Viper',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\178_Rite of Embers.png" id="178_Rite of Embers" data-flag="@X" onclick="openSidebar('178_Rite of Embers',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\227_Thickened Hide.png" id="227_Thickened Hide" data-flag="@X" onclick="openSidebar('227_Thickened Hide',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\40_Seriin Scout.png" id="40_Seriin Scout" data-flag="@X" onclick="openSidebar('40_Seriin Scout',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\91_Thought Scatter.png" id="91_Thought Scatter" data-flag="@X" onclick="openSidebar('91_Thought Scatter',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\125_Miststalker Vampire.png" id="125_Miststalker Vampire" data-flag="@X" onclick="openSidebar('125_Miststalker Vampire',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\179_Roasted Feast.png" id="179_Roasted Feast" data-flag="@X" onclick="openSidebar('179_Roasted Feast',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\228_Thickhide Troll.png" id="228_Thickhide Troll" data-flag="@X" onclick="openSidebar('228_Thickhide Troll',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\41_Sol Angel.png" id="41_Sol Angel" data-flag="@X" onclick="openSidebar('41_Sol Angel',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\92_Thoughtweft Tree.png" id="92_Thoughtweft Tree" data-flag="@X" onclick="openSidebar('92_Thoughtweft Tree',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\128_Nocturnal Summoning.png" id="128_Nocturnal Summoning" data-flag="@X" onclick="openSidebar('128_Nocturnal Summoning',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\185_Sunrise.png" id="185_Sunrise" data-flag="@X" onclick="openSidebar('185_Sunrise',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\229_Tracking Duo.png" id="229_Tracking Duo" data-flag="@X" onclick="openSidebar('229_Tracking Duo',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\42_Spellweaver Traveler.png" id="42_Spellweaver Traveler" data-flag="@X" onclick="openSidebar('42_Spellweaver Traveler',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\93_Tide Bender.png" id="93_Tide Bender" data-flag="@X" onclick="openSidebar('93_Tide Bender',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\130_Pay Tribute.png" id="130_Pay Tribute" data-flag="@X" onclick="openSidebar('130_Pay Tribute',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\188_Traitorous Plot.png" id="188_Traitorous Plot" data-flag="@X" onclick="openSidebar('188_Traitorous Plot',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\231_Tribal Vitality.png" id="231_Tribal Vitality" data-flag="@X" onclick="openSidebar('231_Tribal Vitality',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\46_Tribal Hunter.png" id="46_Tribal Hunter" data-flag="@X" onclick="openSidebar('46_Tribal Hunter',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\131_Pharasma Boon.png" id="131_Pharasma Boon" data-flag="@X" onclick="openSidebar('131_Pharasma Boon',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\189_Violent Bloodlust.png" id="189_Violent Bloodlust" data-flag="@X" onclick="openSidebar('189_Violent Bloodlust',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\232_Trickery of Delwood.png" id="232_Trickery of Delwood" data-flag="@X" onclick="openSidebar('232_Trickery of Delwood',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\47_Wandering Piker.png" id="47_Wandering Piker" data-flag="@X" onclick="openSidebar('47_Wandering Piker',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\190_Warmongering Noble.png" id="190_Warmongering Noble" data-flag="@X" onclick="openSidebar('190_Warmongering Noble',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\233_Untrodden Paths.png" id="233_Untrodden Paths" data-flag="@X" onclick="openSidebar('233_Untrodden Paths',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\49_Whirling Strike.png" id="49_Whirling Strike" data-flag="@X" onclick="openSidebar('49_Whirling Strike',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\234_Wild Summons.png" id="234_Wild Summons" data-flag="@X" onclick="openSidebar('234_Wild Summons',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div id="gold" class="anchor"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\241_Lightning Seraph.png" id="241_Lightning Seraph" data-flag="@X" onclick="openSidebar('241_Lightning Seraph',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\243_Mounted Dragon.png" id="243_Mounted Dragon" data-flag="@X" onclick="openSidebar('243_Mounted Dragon',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\242_Mounted Charge.png" id="242_Mounted Charge" data-flag="@X" onclick="openSidebar('242_Mounted Charge',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\245_Recreate Reality.png" id="245_Recreate Reality" data-flag="@X" onclick="openSidebar('245_Recreate Reality',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\240_Basilisk Ball.png" id="240_Basilisk Ball" data-flag="@X" onclick="openSidebar('240_Basilisk Ball',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\244_Paladin of Ascern.png" id="244_Paladin of Ascern" data-flag="@X" onclick="openSidebar('244_Paladin of Ascern',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\246_Reimagine.png" id="246_Reimagine" data-flag="@X" onclick="openSidebar('246_Reimagine',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\247_Soldiers of Fortune.png" id="247_Soldiers of Fortune" data-flag="@X" onclick="openSidebar('247_Soldiers of Fortune',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\248_Stinging Hallucinations.png" id="248_Stinging Hallucinations" data-flag="@X" onclick="openSidebar('248_Stinging Hallucinations',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div id="colorless" class="anchor"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\253_Mask of Domination.png" id="253_Mask of Domination" data-flag="@X" onclick="openSidebar('253_Mask of Domination',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\249_Bronze Bombshell.png" id="249_Bronze Bombshell" data-flag="@X" onclick="openSidebar('249_Bronze Bombshell',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\255_Moltencore Golem.png" id="255_Moltencore Golem" data-flag="@X" onclick="openSidebar('255_Moltencore Golem',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\256_Rotcore Throne.png" id="256_Rotcore Throne" data-flag="@X" onclick="openSidebar('256_Rotcore Throne',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\250_Coldsteel Blade.png" id="250_Coldsteel Blade" data-flag="@X" onclick="openSidebar('250_Coldsteel Blade',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\251_Dragon Gem.png" id="251_Dragon Gem" data-flag="@X" onclick="openSidebar('251_Dragon Gem',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\252_Living Gargoyle.png" id="252_Living Gargoyle" data-flag="@X" onclick="openSidebar('252_Living Gargoyle',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\254_Merchants Records.png" id="254_Merchants Records" data-flag="@X" onclick="openSidebar('254_Merchants Records',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\259_Vibration Orb.png" id="259_Vibration Orb" data-flag="@X" onclick="openSidebar('259_Vibration Orb',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\260_Wilting Lotus.png" id="260_Wilting Lotus" data-flag="@X" onclick="openSidebar('260_Wilting Lotus',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\257_Sacrificial Altar.png" id="257_Sacrificial Altar" data-flag="@X" onclick="openSidebar('257_Sacrificial Altar',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\258_Steelgrafted Duelist.png" id="258_Steelgrafted Duelist" data-flag="@X" onclick="openSidebar('258_Steelgrafted Duelist',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div id="land" class="anchor"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\266_Sentinels Pass.png" id="266_Sentinels Pass" data-flag="@X" onclick="openSidebar('266_Sentinels Pass',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\267_Spring Pool.png" id="267_Spring Pool" data-flag="@X" onclick="openSidebar('267_Spring Pool',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\265_Pillaged Temple.png" id="265_Pillaged Temple" data-flag="@X" onclick="openSidebar('265_Pillaged Temple',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\269_Wartorn Gates.png" id="269_Wartorn Gates" data-flag="@X" onclick="openSidebar('269_Wartorn Gates',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\261_Elven Homestead.png" id="261_Elven Homestead" data-flag="@X" onclick="openSidebar('261_Elven Homestead',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\263_Impassable Chasm.png" id="263_Impassable Chasm" data-flag="@X" onclick="openSidebar('263_Impassable Chasm',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\268_Transcendent Palace.png" id="268_Transcendent Palace" data-flag="@X" onclick="openSidebar('268_Transcendent Palace',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\262_Glacial Pass.png" id="262_Glacial Pass" data-flag="@X" onclick="openSidebar('262_Glacial Pass',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\264_Interekt, the Razor Edge.png" id="264_Interekt, the Razor Edge" data-flag="@X" onclick="openSidebar('264_Interekt, the Razor Edge',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div id="token" class="anchor"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\1t_Soldier.png" id="1t_Soldier" data-flag="@X" onclick="openSidebar('1t_Soldier',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\2t_Bird.png" id="2t_Bird" data-flag="@X" onclick="openSidebar('2t_Bird',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\3t_Unicorn.png" id="3t_Unicorn" data-flag="@X" onclick="openSidebar('3t_Unicorn',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\4t_Zombie.png" id="4t_Zombie" data-flag="@X" onclick="openSidebar('4t_Zombie',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\5t_Dragon.png" id="5t_Dragon" data-flag="@X" onclick="openSidebar('5t_Dragon',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\6t_Elemental.png" id="6t_Elemental" data-flag="@X" onclick="openSidebar('6t_Elemental',false)"></div>
+				<div class="container"><img alt="/sets\IAH-files\img\7t_Beast.png" id="7t_Beast" data-flag="@X" onclick="openSidebar('7t_Beast',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
 	</div>
-</div>
+	</div>
 	<div class="sidebar" id="sidebar">
 		<div class="sidebar-container">
 			<img id="sidebar_img" class="sidebar-img" src="/img/er.png">
@@ -590,7 +609,7 @@
 				card_list_arrayified = card_list.cards;
 
 		preloadImgs = document.getElementsByClassName('preload-hidden');
-		
+
 		let images_loaded = [];
 
 		do {
@@ -680,7 +699,7 @@
 	function openSidebar(id, h = false) {
 		horizontal = h;
 		scroll_pct = window.scrollY / document.documentElement.scrollHeight;
-		
+
 		document.getElementById('sidebar').style.display = 'grid';
 
 		const rotated_img = document.getElementById('sidebar_h_img');
@@ -711,7 +730,7 @@
 			document.getElementById('sidebar-flip-btn').style.display = 'none';
 		}
 		document.getElementById('main-content').style.width = '60%';
-		
+
 		scroll_pos = scroll_pct * document.documentElement.scrollHeight;
 		window.scrollTo(window.scrollX, scroll_pos);
 		setSidebarTop();
@@ -722,10 +741,28 @@
 
 		document.getElementById('sidebar').style.display = 'none';
 		document.getElementById('main-content').style.width = '100%';
-		
+
 
 		scroll_pos = scroll_pct * document.documentElement.scrollHeight;
 		window.scrollTo(window.scrollX, scroll_pos);
+	}
+
+	function rolldown() {
+		var sets = document.querySelectorAll('.inactive');
+		for(const set of sets)
+		{
+			set.style.height = "auto";
+			set.style.margin = "5px";
+		}
+	}
+
+	function rollup() {
+		var sets = document.querySelectorAll('.inactive');
+		for(const set of sets)
+		{
+			set.style.height = "0px";
+			set.style.margin = "0px 5px";
+		}
 	}
 
 	document.getElementById("search").addEventListener("keypress", function(event) {

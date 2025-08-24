@@ -4,6 +4,7 @@
 	<link rel="icon" type="image/x-icon" href="/img/deck.png">
 	<link rel="stylesheet" href="resources/mana.css">
 	<link rel="stylesheet" href="/resources/header.css">
+	<link rel="stylesheet" href="/resources/card-text.css">
 </head>
 <style>
 	@font-face {
@@ -156,26 +157,16 @@
 		overflow-y: scroll;
 		scrollbar-width: none;
 		height: 50%;
+		padding: 10px 0;
 	}
 	.card-text div {
-		white-space: normal;
 		font-size: 13px;
-		padding-bottom: 10px;
-		padding-left: 12px;
-		padding-right: 12px;
-		line-height: 155%;
 	}
 	.card-text .name-cost {
-		font-weight: bold;
 		font-size: 16px;
-		white-space: pre-wrap;
-		padding-top: 10px;
 	}
 	.card-text .type {
 		font-size: 14px;
-	}
-	.card-text .pt {
-		font-weight: bold;
 	}
 	.card-text br {
 		content: "";
@@ -1029,7 +1020,7 @@
 				{
 					mv += 2;
 				}
-				else if (token != "x")
+				else if (token != "x" && token != "")
 				{
 					mv += 1;
 				}
@@ -1072,11 +1063,13 @@
 			let card_loyalty = card_stats.loyalty;
 			let card_notes = card_stats.notes;
 			let card_artist = card_stats.artist;
+			let card_alias = card_stats.alias ? card_stats.alias : ""; // do this so that we have backwards compatibility
+			let card_ft = card_stats.flavor_text ? card_stats.flavor_text : "";
 			let card_color_2 = "";
 			let card_cost_2 = "";
 			let card_power_2 = "";
 			let card_toughness_2 = "";
-			let card_loyalty_2 = ""
+			let card_loyalty_2 = "";
 
 			let color_map = new Map([
 				["azorius", "wu"],
@@ -1107,6 +1100,10 @@
 				card_name = card_name + "	" + card_stats.card_name2;
 				card_type = card_type + "	" + card_stats.type2;
 				card_oracle_text = card_oracle_text + "	" + (card_stats.rules_text2 != "" ? card_stats.rules_text2.replace(/\[(\/)?([ib])\]/g, "") : card_stats.special_text2.replace(/\[(\/)?([ib])\]/g, ""));
+				if (card_stats.flavor_text2)
+				{
+					card_ft = card_ft + "\n" + card_stats.flavor_text2;
+				}
 				card_color_2 = card_stats.color2;
 				card_cost_2 = card_stats.cost2;
 				card_power_2 = card_stats.pt2.substring(0,card_stats.pt2.indexOf('/'));
@@ -1116,7 +1113,7 @@
 
 			token = token.replaceAll("~", card_name).replaceAll("cardname", card_name).replaceAll('"','').replaceAll('“','').replaceAll('”','');
 
-			const modifierRegex = /[!:<>=]+/g;
+			const modifierRegex = /[!:<>=][=]*/g;
 			const match = token.match(modifierRegex);
 
 			if (match)
@@ -1124,20 +1121,6 @@
 				const modifier = match[0];
 				const term = token.substring(0, token.indexOf(modifier));
 				let check = token.substring(token.indexOf(modifier) + modifier.length);
-
-				if (check.charAt(0) == '/')
-				{
-					check = check.substring(1);
-				}
-				if (check.charAt(check.length - 1) == '/')
-				{
-					check = check.substring(0,check.length - 1);
-				}
-
-				if (color_map.has(check))
-				{
-					check = color_map.get(check);
-				}
 
 				// availableTokens = ["mv", "c", "ci", "t", "o", "pow", "tou", "r", "is"]
 
@@ -1190,6 +1173,10 @@
 				}
 				if (term == "c" || term == "color")
 				{
+					if (color_map.has(check))
+					{
+						check = color_map.get(check);
+					}
 					if (!isNaN(check))
 					{
 						if (modifier == "!" || modifier == "=")
@@ -1259,6 +1246,10 @@
 				}
 				if (term == "cost" || term == "mana")
 				{
+					if (color_map.has(check))
+					{
+						check = color_map.get(check);
+					}
 					if (modifier == "!" || modifier == "=" || modifier == ":")
 					{
 						card_cost_cleaned = card_cost.replaceAll('{', '').replaceAll('}', '');
@@ -1267,6 +1258,10 @@
 				}
 				if (term == "ci" || term == "id")
 				{
+					if (color_map.has(check))
+					{
+						check = color_map.get(check);
+					}
 					if (!isNaN(check))
 					{
 						card_ci = card_ci == "c" ? "" : card_ci;
@@ -1301,10 +1296,6 @@
 						{
 							return (card_ci.split("").sort().join("") == check.split("").sort().join(""));
 						}
-						else if (modifier == ":")
-						{
-							return hasAllChars(card_ci, check);
-						}
 						else if (modifier == "<")
 						{
 							return card_ci == "c" || (check.length > card_ci.length && hasAllChars(check, card_ci));
@@ -1313,7 +1304,7 @@
 						{
 							return card_ci.length > check.length && hasAllChars(card_ci, check);
 						}
-						else if (modifier == "<=")
+						else if (modifier == ":" || modifier == "<=")
 						{
 							return card_ci == "c" || hasAllChars(check, card_ci);
 						}
@@ -1348,8 +1339,17 @@
 				{
 					if (modifier == ":")
 					{
-						regex = new RegExp(check.replaceAll("+","\\+"));
-						return regex.test(card_oracle_text);
+						if (check.startsWith("/") && check.endsWith("/"))
+						{
+							check = check.substring(1, check.length - 1);
+
+							regex = new RegExp(check.replaceAll("+","\\+"));
+							return regex.test(card_oracle_text);
+						}
+						else
+						{
+							return card_oracle_text.includes(check);
+						}
 					}
 					/* unsupported flows
 					if (modifier == "!" || modifier == "=")
@@ -1512,6 +1512,13 @@
 					}
 					return false;
 				}
+				if (term == "lore")
+				{
+					if (modifier == ":")
+					{
+						return card_name.includes(check) || card_ft.includes(check);
+					}
+				}
 				if (term == "is")
 				{
 					if (modifier == ":" || modifier == "!" || modifier == "=")
@@ -1551,6 +1558,10 @@
 
 					} */
 				}
+				if (term == "not")
+				{
+					return !searchToken(card, token.replace("not:", "is:"));
+				}
 				if (term == "tag")
 				{
 					if (modifier == ":" || modifier == "=" || modifier == "!")
@@ -1566,6 +1577,35 @@
 						return card_artist.includes(check);
 					}
 				}
+				if (term == "ft" || term == "flavor" || term == "flavortext")
+				{
+					if (modifier == ":")
+					{
+						return card_ft.includes(check);
+					}
+				}
+				if (term == "godzilla" || term == "alias") {
+					if (modifier == "!" || modifier == "=")
+					{
+						return card_alias == check;
+					}
+					else if (modifier == ":")
+					{
+						return card_alias.includes(check);
+					}
+					else if (modifier == "<")
+					{
+						return card_alias < check;
+					}
+					else if (modifier == ">")
+					{
+						return card_alias > check;
+					}
+				}
+				if (modifier == ":" || modifier == "=" || modifier == "!") {
+                    let regex = new RegExp(`!tag<${term}> ${check}\\b`);
+                    return regex.test(card_notes);
+                }
 			}
 
 			return card_name.includes(token);
@@ -1658,11 +1698,9 @@
 			let card_effects = "";
 			if (card_stats.rules_text != "")
 			{
-				card_effects = card_stats.rules_text.split("\n");
-			}
-			else
-			{
-				card_effects = card_stats.special_text.split("\n");
+				card_effects = card_stats.rules_text + (card_stats.flavor_text != "[i][/i]" ? "\n" + "<hr class=\"ft-divider text-bg\">" + "\n" + card_stats.flavor_text.replace('\n','<br>') : ""); // this expression looks cursed but what it does is check if the ft is empty, and if it isn't, insert a divider + the ft
+			} else {
+				card_effects = "";
 			}
 			effect.innerHTML += prettifyEffects(card_effects);
 			text.appendChild(effect);
@@ -1709,11 +1747,9 @@
 				let card_effects_2 = "";
 				if (card_stats.rules_text2 != "")
 				{
-					card_effects_2 = card_stats.rules_text2.split("\n");
-				}
-				else
-				{
-					card_effects_2 = card_stats.special_text2.split("\n");
+					card_effects_2 = card_stats.rules_text2 + (card_stats.flavor_text2 != "[i][/i]" ? "\n" + "<hr class=\"ft-divider text-bg\">" + "\n" + card_stats.flavor_text2.replace('\n','<br>') : "");
+				} else {
+					card_effects_2 = "";
 				}
 				effect_2.innerHTML += prettifyEffects(card_effects_2);
 				text.appendChild(effect_2);
@@ -1798,51 +1834,58 @@
 			return imgContainer;
 		}
 
-		function imgFlip(id, rotate_card = false) {
-			img = document.getElementById(id);
-			rotated_img = document.getElementById("h-img");
+		function imgFlip(id, rotate_card = false) { // comments in here by aanginer
+            const img = document.getElementById(id);
+            const seconds = 0.2; // adjust this as needed, this is half of the animation time
 
-			cardName = img.src;
-			
-			if (cardName.includes("_front"))
-			{
-				img.src = cardName.replace("_front", "_back");
+            img.style.transition = seconds.toString() + "s";
+            img.style.transform = "rotateY(90deg)"; // rotate 90 degrees
 
-				if (rotate_card)
-				{
-					rotated_img.style.display = "none";
-					img.style.filter = "";
-				}
-			}
-			else
-			{
-				img.src = cardName.replace("_back", "_front");
+            setTimeout(function() { // wait for the rotation, then set the image's src correctly
+                const rotated_img = document.getElementById("h-img");
 
-				if (rotate_card)
-				{
-					rotated_img.style.display = "block";
-					img.style.filter = "blur(2px) brightness(0.7)";
-				}
-			}
-		}
+                const cardName = img.src;
+                
+                if (cardName.includes("_front"))
+                {
+                    img.src = cardName.replace("_front", "_back");
 
-		function prettifyEffects(card_effects) {
+                    if (rotate_card)
+                    {
+                        rotated_img.style.display = "none";
+                        img.style.filter = "";
+                    }
+                }
+                else
+                {
+                    img.src = cardName.replace("_back", "_front");
+
+                    if (rotate_card)
+                    {
+                        rotated_img.style.display = "block";
+                        img.style.filter = "blur(2px) brightness(0.7)";
+                    }
+                }
+
+                img.style.transition = (seconds * 2).toString() + "s"; // idk why we have to double the time but it works
+                img.style.transform = "rotateY(0deg)";
+            }, seconds * 1000);
+        }
+
+		function prettifyEffects(card_effect) {
 			let HTML = "";
+
+			let styled_effect = card_effect.replace(/(\[i\])+(.+?)(\[\/i\])+/gs, function(matched, _1, _2) {
+				return '<i>' + _2 + '</i>'
+			}).replaceAll(/(\[b\])+(.+?)(\[\/b\])+/gs, function(matched, _1, _2) {
+				return '<b>' + _2 + '</b>'
+			});
+
+			let card_effects = styled_effect.split("\n");
 
 			for (let i = 0; i < card_effects.length; i++)
 			{
-				let styled_effect = card_effects[i].replace(/\[i\]([^\]]+)\[\/i\]/g, function(matched, _1) {
-					return '<i>' + _1 + '</i>'
-				}).replace(/\[b\]([^\]]+)\[\/b\]/g, function(matched, _1) {
-					return '<b>' + _1 + '</b>'
-				})
-				
-				HTML += styled_effect;
-
-				if (i != card_effects.length - 1)
-				{
-					HTML += "<br>"
-				}
+				HTML += "<p>" + card_effects[i] + "</p>";
 			}
 			
 			let regexHTML = symbolize(HTML);

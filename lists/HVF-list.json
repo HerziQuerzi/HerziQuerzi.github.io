@@ -1,1 +1,1215 @@
-﻿[{"card_name": "Legendweaving", "number": 19, "shape": "normal"}, {"card_name": "Moonlit Hunter", "number": 39, "shape": "normal"}, {"card_name": "Birth of Whispers", "number": 47, "shape": "normal"}, {"card_name": "The Witch Queens", "number": 88, "shape": "planeswalker"}, {"card_name": "Charitable Wisdom", "number": 92, "shape": "normal"}, {"card_name": "Cybele, Mertle's Apprentice", "number": 8, "shape": "normal"}, {"card_name": "Buoyant Thoughts", "number": 28, "shape": "normal"}, {"card_name": "Legend of the Weary", "number": 56, "shape": "normal"}, {"card_name": "Advocate of the Hunt", "number": 68, "shape": "normal"}, {"card_name": "Edith Waunt", "number": 97, "shape": "planeswalker"}, {"card_name": "Furtive Witch", "number": 13, "shape": "normal"}, {"card_name": "Clever Rejoinder", "number": 30, "shape": "normal"}, {"card_name": "Siesa Tremund", "number": 62, "shape": "normal"}, {"card_name": "Latent Potential", "number": 80, "shape": "normal"}, {"card_name": "Cornucopia Crescendo", "number": 93, "shape": "normal"}, {"card_name": "Herd of Sheep", "number": 14, "shape": "normal"}, {"card_name": "Legend of the Wayward", "number": 38, "shape": "normal"}, {"card_name": "Small Luxuries", "number": 63, "shape": "normal"}, {"card_name": "Legend of the Brave", "number": 81, "shape": "normal"}, {"card_name": "Grayce Blaen", "number": 102, "shape": "normal"}, {"card_name": "Legend of the Devout", "number": 18, "shape": "normal"}, {"card_name": "Yuren Lappowen", "number": 44, "shape": "normal"}, {"card_name": "A Whisper's Touch", "number": 66, "shape": "normal"}, {"card_name": "Selma Lappowen", "number": 85, "shape": "normal"}, {"card_name": "The Last Hunt", "number": 105, "shape": "normal"}, {"card_name": "Ainok Caretaker", "number": 2, "shape": "normal"}, {"card_name": "Benign Whisper", "number": 24, "shape": "normal"}, {"card_name": "Forced Offering", "number": 51, "shape": "normal"}, {"card_name": "Ainok Alpha", "number": 69, "shape": "normal"}, {"card_name": "Legend of the Generous", "number": 106, "shape": "normal"}, {"card_name": "Charm Canary", "number": 4, "shape": "normal"}, {"card_name": "Clouded Mind", "number": 31, "shape": "normal"}, {"card_name": "Frailty", "number": 52, "shape": "normal"}, {"card_name": "Autumnal Watch", "number": 72, "shape": "normal"}, {"card_name": "Ainok Hunter", "number": 89, "shape": "normal"}, {"card_name": "Driven to Distraction", "number": 9, "shape": "normal"}, {"card_name": "Depths Stalker", "number": 33, "shape": "normal"}, {"card_name": "Incarcerate", "number": 54, "shape": "normal"}, {"card_name": "Crinster Tattooist", "number": 76, "shape": "normal"}, {"card_name": "Loyal Watchdog", "number": 107, "shape": "normal"}, {"card_name": "Lady's Master-of-Arms", "number": 17, "shape": "normal"}, {"card_name": "Edge of Adventure", "number": 34, "shape": "normal"}, {"card_name": "Lessons Learned", "number": 57, "shape": "normal"}, {"card_name": "Dance of Fire", "number": 77, "shape": "normal"}, {"card_name": "Roads Untraveled", "number": 108, "shape": "normal"}, {"card_name": "Lord's Handmaiden", "number": 20, "shape": "normal"}, {"card_name": "Thunder Shrike", "number": 41, "shape": "normal"}, {"card_name": "Maghbri Oracle", "number": 58, "shape": "normal"}, {"card_name": "Rush of Wonder", "number": 84, "shape": "normal"}, {"card_name": "Scion of the Wild", "number": 109, "shape": "normal"}, {"card_name": "Radiant Bonds", "number": 22, "shape": "normal"}, {"card_name": "Whisper Witch", "number": 42, "shape": "normal"}, {"card_name": "Rotwood Whisper", "number": 61, "shape": "normal"}, {"card_name": "Touch of Witchcraft", "number": 86, "shape": "normal"}, {"card_name": "Song of the Harvest", "number": 110, "shape": "normal"}, {"card_name": "Ainok Brushwacker", "number": 1, "shape": "normal"}, {"card_name": "Amateur Pilfering", "number": 23, "shape": "normal"}, {"card_name": "Beguiling Witch", "number": 45, "shape": "normal"}, {"card_name": "Ainok Lout", "number": 70, "shape": "normal"}, {"card_name": "Vestiges of Autumn", "number": 111, "shape": "normal"}, {"card_name": "Ainok Pack", "number": 3, "shape": "normal"}, {"card_name": "Bird", "number": 25, "shape": "normal"}, {"card_name": "Bellani Mystic", "number": 46, "shape": "normal"}, {"card_name": "Autumn Song", "number": 71, "shape": "normal"}, {"card_name": "Bauble Collector", "number": 90, "shape": "normal"}, {"card_name": "Citizen", "number": 5, "shape": "normal"}, {"card_name": "Bout of Boredom", "number": 26, "shape": "normal"}, {"card_name": "Crinster Blacksmith", "number": 48, "shape": "normal"}, {"card_name": "Borderland Garrison", "number": 73, "shape": "normal"}, {"card_name": "Beast", "number": 91, "shape": "normal"}, {"card_name": "Conjuring Minstrel", "number": 6, "shape": "normal"}, {"card_name": "Braenid Nomad", "number": 27, "shape": "normal"}, {"card_name": "Eyes of the Maghbri", "number": 49, "shape": "normal"}, {"card_name": "Cackling Jack", "number": 74, "shape": "normal"}, {"card_name": "Crinster Ranger", "number": 94, "shape": "normal"}, {"card_name": "Crinster Stitcher", "number": 7, "shape": "normal"}, {"card_name": "Chef's Apprentice", "number": 29, "shape": "normal"}, {"card_name": "Fate of the Weary", "number": 50, "shape": "normal"}, {"card_name": "Crinster Innocents", "number": 75, "shape": "normal"}, {"card_name": "Crinster Sheepdog", "number": 95, "shape": "normal"}, {"card_name": "Elder Roc", "number": 10, "shape": "normal"}, {"card_name": "Crinster Falconer", "number": 32, "shape": "normal"}, {"card_name": "Hound", "number": 53, "shape": "normal"}, {"card_name": "Fate of the Brave", "number": 78, "shape": "normal"}, {"card_name": "Crop Warden", "number": 96, "shape": "normal"}, {"card_name": "Fate of the Devout", "number": 11, "shape": "normal"}, {"card_name": "Fate of the Wayward", "number": 35, "shape": "normal"}, {"card_name": "Intoxicate", "number": 55, "shape": "normal"}, {"card_name": "Inviting Feast", "number": 79, "shape": "normal"}, {"card_name": "Familial Matriarch", "number": 98, "shape": "normal"}, {"card_name": "Feed the Eager", "number": 12, "shape": "normal"}, {"card_name": "Grinning Fox", "number": 36, "shape": "normal"}, {"card_name": "Maghbri Whisper", "number": 59, "shape": "normal"}, {"card_name": "Maghbri Hunter", "number": 82, "shape": "normal"}, {"card_name": "Fate of the Generous", "number": 99, "shape": "normal"}, {"card_name": "Hint of Exuberance", "number": 15, "shape": "normal"}, {"card_name": "Inspiring Journey", "number": 37, "shape": "normal"}, {"card_name": "Midnight Stalking", "number": 60, "shape": "normal"}, {"card_name": "Reminiscing Youth", "number": 83, "shape": "normal"}, {"card_name": "Fertile Fields", "number": 100, "shape": "normal"}, {"card_name": "Hunting Hound", "number": 16, "shape": "normal"}, {"card_name": "Peel from Reality", "number": 40, "shape": "normal"}, {"card_name": "Spirit", "number": 64, "shape": "normal"}, {"card_name": "Trinkets and Charms", "number": 87, "shape": "normal"}, {"card_name": "Gorgon's Gaze", "number": 101, "shape": "normal"}, {"card_name": "Playful Child", "number": 21, "shape": "normal"}, {"card_name": "Witch's Apprentice", "number": 43, "shape": "normal"}, {"card_name": "Steady Reminiscence", "number": 65, "shape": "normal"}, {"card_name": "e"}, {"card_name": "Homestead Watcher", "number": 103, "shape": "normal"}, {"card_name": "e"}, {"card_name": "e"}, {"card_name": "Winter's Whelp", "number": 67, "shape": "normal"}, {"card_name": "e"}, {"card_name": "Humored Outlaw", "number": 104, "shape": "normal"}, {"card_name": "er"}, {"card_name": "er"}, {"card_name": "er"}, {"card_name": "er"}, "a->gold", {"card_name": "Lady Heiffyd", "number": 114, "shape": "planeswalker"}, {"card_name": "Concord of Ravens", "number": 115, "shape": "normal"}, {"card_name": "Blood Harvest", "number": 117, "shape": "normal"}, {"card_name": "Spirit of Autumn", "number": 121, "shape": "normal"}, {"card_name": "Seasoned Packfather", "number": 123, "shape": "normal"}, {"card_name": "Desraen, Serpent's Will", "number": 113, "shape": "normal"}, {"card_name": "Scrollsnatcher", "number": 116, "shape": "normal"}, {"card_name": "Twinfire Dragon", "number": 119, "shape": "normal"}, {"card_name": "Embergourd Scarecrow", "number": 120, "shape": "normal"}, {"card_name": "Gallant Chevalier", "number": 122, "shape": "normal"}, {"card_name": "Autumnal Astrologer", "number": 112, "shape": "normal"}, {"card_name": "e"}, {"card_name": "Keeper of the Whispers", "number": 118, "shape": "normal"}, {"card_name": "Scarecrow", "number": 134, "shape": "normal"}, {"card_name": "e"}, {"card_name": "er"}, {"card_name": "er"}, {"card_name": "er"}, {"card_name": "er"}, {"card_name": "er"}, {"card_name": "Reflect on Serenity", "number": 124, "shape": "normal"}, {"card_name": "Trae, Serpent's Grasp", "number": 127, "shape": "normal"}, {"card_name": "Exhausted Farmhand", "number": 128, "shape": "normal"}, {"card_name": "Aelinn, Serpent's Voice", "number": 130, "shape": "normal"}, {"card_name": "Witch of Spring's Promise", "number": 133, "shape": "normal"}, {"card_name": "Traveling Thespians", "number": 125, "shape": "normal"}, {"card_name": "Stormchaser Mage", "number": 126, "shape": "normal"}, {"card_name": "Nomadic Patriarch", "number": 129, "shape": "normal"}, {"card_name": "Herald of the Hunt", "number": 131, "shape": "normal"}, {"card_name": "Ainok Scout", "number": 132, "shape": "normal"}, {"card_name": "er"}, {"card_name": "er"}, {"card_name": "er"}, {"card_name": "er"}, "a->colorless", {"card_name": "Tinkering Swarm", "number": 145, "shape": "normal"}, {"card_name": "Expedition Map", "number": 138, "shape": "normal"}, {"card_name": "Lumber Camp", "number": 142, "shape": "normal"}, {"card_name": "Rolling Homestead", "number": 144, "shape": "normal"}, {"card_name": "Wooden Toys", "number": 148, "shape": "normal"}, {"card_name": "Ancestral Zweihander", "number": 135, "shape": "normal"}, {"card_name": "Burnished Plate", "number": 136, "shape": "normal"}, {"card_name": "Climber's Gear", "number": 137, "shape": "normal"}, {"card_name": "Foraging Gear", "number": 139, "shape": "normal"}, {"card_name": "Glacial Buttress", "number": 140, "shape": "normal"}, {"card_name": "Honey Wagon", "number": 141, "shape": "normal"}, {"card_name": "Marked Coin", "number": 143, "shape": "normal"}, {"card_name": "Vibrant Balloon", "number": 146, "shape": "normal"}, {"card_name": "Witch's Abode", "number": 147, "shape": "normal"}, {"card_name": "e"}, {"card_name": "er"}, {"card_name": "er"}, {"card_name": "er"}, {"card_name": "er"}, "a->land", {"card_name": "Moon of the Final Dawn", "number": 160, "shape": "normal"}, {"card_name": "Moon of the Frozen Dusk", "number": 161, "shape": "normal"}, {"card_name": "Moon of the Encroaching Night", "number": 159, "shape": "normal"}, {"card_name": "Moon of the Lingering Day", "number": 162, "shape": "normal"}, {"card_name": "Moon of the Promised Day", "number": 163, "shape": "normal"}, {"card_name": "er"}, {"card_name": "er"}, {"card_name": "er"}, {"card_name": "er"}, {"card_name": "er"}, {"card_name": "Cumulus Horizon", "number": 154, "shape": "normal"}, {"card_name": "Crystal Grotto", "number": 153, "shape": "normal"}, {"card_name": "Ruined Precipice", "number": 164, "shape": "normal"}, {"card_name": "Verdant Bluff", "number": 166, "shape": "normal"}, {"card_name": "Frigid Thicket", "number": 157, "shape": "normal"}, {"card_name": "er"}, {"card_name": "er"}, {"card_name": "er"}, {"card_name": "er"}, {"card_name": "er"}, {"card_name": "Cloud Rock", "number": 152, "shape": "normal"}, {"card_name": "Canyon Creek", "number": 151, "shape": "normal"}, {"card_name": "Haunted Boughs", "number": 158, "shape": "normal"}, {"card_name": "Soaring Canyon", "number": 165, "shape": "normal"}, {"card_name": "Fey Grove", "number": 156, "shape": "normal"}, {"card_name": "er"}, {"card_name": "er"}, {"card_name": "er"}, {"card_name": "er"}, {"card_name": "er"}, {"card_name": "Blundering Clocktower", "number": 150, "shape": "normal"}, {"card_name": "Autumn Moon", "number": 149, "shape": "normal"}, {"card_name": "Evolving Wilds", "number": 155, "shape": "normal"}, {"card_name": "e"}, {"card_name": "e"}, {"card_name": "er"}, {"card_name": "er"}, {"card_name": "er"}, {"card_name": "er"}, {"card_name": "er"}, {"card_name": "Mountain", "number": 170, "shape": "normal"}, {"card_name": "Island", "number": 168, "shape": "normal"}, {"card_name": "Forest", "number": 171, "shape": "normal"}, {"card_name": "Plains", "number": 167, "shape": "normal"}, {"card_name": "Swamp", "number": 169, "shape": "normal"}, {"card_name": "er"}, {"card_name": "er"}, {"card_name": "er"}, {"card_name": "er"}, "a->token", {"card_name": "Tinkering Swarm", "number": 1, "shape": "token"}, {"card_name": "e"}, {"card_name": "e"}, {"card_name": "e"}, {"card_name": "e"}, {"card_name": "er"}, {"card_name": "er"}, {"card_name": "er"}, {"card_name": "er"}, {"card_name": "er"}]
+﻿[
+    {
+        "card_name": "Legendweaving",
+        "number": 19,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Moonlit Hunter",
+        "number": 39,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Birth of Whispers",
+        "number": 47,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "The Witch Queens",
+        "number": 88,
+        "shape": "planeswalker",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Charitable Wisdom",
+        "number": 92,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Cybele, Mertle's Apprentice",
+        "number": 8,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Buoyant Thoughts",
+        "number": 28,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Legend of the Weary",
+        "number": 56,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Advocate of the Hunt",
+        "number": 68,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Edith Waunt",
+        "number": 97,
+        "shape": "planeswalker",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Furtive Witch",
+        "number": 13,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Clever Rejoinder",
+        "number": 30,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Siesa Tremund",
+        "number": 62,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Latent Potential",
+        "number": 80,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Cornucopia Crescendo",
+        "number": 93,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Herd of Sheep",
+        "number": 14,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Legend of the Wayward",
+        "number": 38,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Small Luxuries",
+        "number": 63,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Legend of the Brave",
+        "number": 81,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Grayce Blaen",
+        "number": 102,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Legend of the Devout",
+        "number": 18,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Yuren Lappowen",
+        "number": 44,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "A Whisper's Touch",
+        "number": 66,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Selma Lappowen",
+        "number": 85,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "The Last Hunt",
+        "number": 105,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Ainok Caretaker",
+        "number": 2,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Benign Whisper",
+        "number": 24,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Forced Offering",
+        "number": 51,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Ainok Alpha",
+        "number": 69,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Legend of the Generous",
+        "number": 106,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Charm Canary",
+        "number": 4,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Clouded Mind",
+        "number": 31,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Frailty",
+        "number": 52,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Autumnal Watch",
+        "number": 72,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Ainok Hunter",
+        "number": 89,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Driven to Distraction",
+        "number": 9,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Depths Stalker",
+        "number": 33,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Incarcerate",
+        "number": 54,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Crinster Tattooist",
+        "number": 76,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Loyal Watchdog",
+        "number": 107,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Lady's Master-of-Arms",
+        "number": 17,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Edge of Adventure",
+        "number": 34,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Lessons Learned",
+        "number": 57,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Dance of Fire",
+        "number": 77,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Roads Untraveled",
+        "number": 108,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Lord's Handmaiden",
+        "number": 20,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Thunder Shrike",
+        "number": 41,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Maghbri Oracle",
+        "number": 58,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Rush of Wonder",
+        "number": 84,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Scion of the Wild",
+        "number": 109,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Radiant Bonds",
+        "number": 22,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Whisper Witch",
+        "number": 42,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Rotwood Whisper",
+        "number": 61,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Touch of Witchcraft",
+        "number": 86,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Song of the Harvest",
+        "number": 110,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Ainok Brushwacker",
+        "number": 1,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Amateur Pilfering",
+        "number": 23,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Beguiling Witch",
+        "number": 45,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Ainok Lout",
+        "number": 70,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Vestiges of Autumn",
+        "number": 111,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Ainok Pack",
+        "number": 3,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Bird",
+        "number": 25,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Bellani Mystic",
+        "number": 46,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Autumn Song",
+        "number": 71,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Bauble Collector",
+        "number": 90,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Citizen",
+        "number": 5,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Bout of Boredom",
+        "number": 26,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Crinster Blacksmith",
+        "number": 48,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Borderland Garrison",
+        "number": 73,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Beast",
+        "number": 91,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Conjuring Minstrel",
+        "number": 6,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Braenid Nomad",
+        "number": 27,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Eyes of the Maghbri",
+        "number": 49,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Cackling Jack",
+        "number": 74,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Crinster Ranger",
+        "number": 94,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Crinster Stitcher",
+        "number": 7,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Chef's Apprentice",
+        "number": 29,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Fate of the Weary",
+        "number": 50,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Crinster Innocents",
+        "number": 75,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Crinster Sheepdog",
+        "number": 95,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Elder Roc",
+        "number": 10,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Crinster Falconer",
+        "number": 32,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Hound",
+        "number": 53,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Fate of the Brave",
+        "number": 78,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Crop Warden",
+        "number": 96,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Fate of the Devout",
+        "number": 11,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Fate of the Wayward",
+        "number": 35,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Intoxicate",
+        "number": 55,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Inviting Feast",
+        "number": 79,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Familial Matriarch",
+        "number": 98,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Feed the Eager",
+        "number": 12,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Grinning Fox",
+        "number": 36,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Maghbri Whisper",
+        "number": 59,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Maghbri Hunter",
+        "number": 82,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Fate of the Generous",
+        "number": 99,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Hint of Exuberance",
+        "number": 15,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Inspiring Journey",
+        "number": 37,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Midnight Stalking",
+        "number": 60,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Reminiscing Youth",
+        "number": 83,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Fertile Fields",
+        "number": 100,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Hunting Hound",
+        "number": 16,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Peel from Reality",
+        "number": 40,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Spirit",
+        "number": 64,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Trinkets and Charms",
+        "number": 87,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Gorgon's Gaze",
+        "number": 101,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Playful Child",
+        "number": 21,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Witch's Apprentice",
+        "number": 43,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Steady Reminiscence",
+        "number": 65,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "e"
+    },
+    {
+        "card_name": "Homestead Watcher",
+        "number": 103,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "e"
+    },
+    {
+        "card_name": "e"
+    },
+    {
+        "card_name": "Winter's Whelp",
+        "number": 67,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "e"
+    },
+    {
+        "card_name": "Humored Outlaw",
+        "number": 104,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "er"
+    },
+    {
+        "card_name": "er"
+    },
+    {
+        "card_name": "er"
+    },
+    {
+        "card_name": "er"
+    },
+    "a->gold",
+    {
+        "card_name": "Lady Heiffyd",
+        "number": 114,
+        "shape": "planeswalker",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Concord of Ravens",
+        "number": 115,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Blood Harvest",
+        "number": 117,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Spirit of Autumn",
+        "number": 121,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Seasoned Packfather",
+        "number": 123,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Desraen, Serpent's Will",
+        "number": 113,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Scrollsnatcher",
+        "number": 116,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Twinfire Dragon",
+        "number": 119,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Embergourd Scarecrow",
+        "number": 120,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Gallant Chevalier",
+        "number": 122,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Autumnal Astrologer",
+        "number": 112,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "e"
+    },
+    {
+        "card_name": "Keeper of the Whispers",
+        "number": 118,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Scarecrow",
+        "number": 134,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "e"
+    },
+    {
+        "card_name": "er"
+    },
+    {
+        "card_name": "er"
+    },
+    {
+        "card_name": "er"
+    },
+    {
+        "card_name": "er"
+    },
+    {
+        "card_name": "er"
+    },
+    {
+        "card_name": "Reflect on Serenity",
+        "number": 124,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Trae, Serpent's Grasp",
+        "number": 127,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Exhausted Farmhand",
+        "number": 128,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Aelinn, Serpent's Voice",
+        "number": 130,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Witch of Spring's Promise",
+        "number": 133,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Traveling Thespians",
+        "number": 125,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Stormchaser Mage",
+        "number": 126,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Nomadic Patriarch",
+        "number": 129,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Herald of the Hunt",
+        "number": 131,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Ainok Scout",
+        "number": 132,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "er"
+    },
+    {
+        "card_name": "er"
+    },
+    {
+        "card_name": "er"
+    },
+    {
+        "card_name": "er"
+    },
+    "a->colorless",
+    {
+        "card_name": "Tinkering Swarm",
+        "number": 145,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Expedition Map",
+        "number": 138,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Lumber Camp",
+        "number": 142,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Rolling Homestead",
+        "number": 144,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Wooden Toys",
+        "number": 148,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Ancestral Zweihander",
+        "number": 135,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Burnished Plate",
+        "number": 136,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Climber's Gear",
+        "number": 137,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Foraging Gear",
+        "number": 139,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Glacial Buttress",
+        "number": 140,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Honey Wagon",
+        "number": 141,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Marked Coin",
+        "number": 143,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Vibrant Balloon",
+        "number": 146,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Witch's Abode",
+        "number": 147,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "e"
+    },
+    {
+        "card_name": "er"
+    },
+    {
+        "card_name": "er"
+    },
+    {
+        "card_name": "er"
+    },
+    {
+        "card_name": "er"
+    },
+    "a->land",
+    {
+        "card_name": "Moon of the Final Dawn",
+        "number": 160,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Moon of the Frozen Dusk",
+        "number": 161,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Moon of the Encroaching Night",
+        "number": 159,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Moon of the Lingering Day",
+        "number": 162,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Moon of the Promised Day",
+        "number": 163,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "er"
+    },
+    {
+        "card_name": "er"
+    },
+    {
+        "card_name": "er"
+    },
+    {
+        "card_name": "er"
+    },
+    {
+        "card_name": "er"
+    },
+    {
+        "card_name": "Cumulus Horizon",
+        "number": 154,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Crystal Grotto",
+        "number": 153,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Ruined Precipice",
+        "number": 164,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Verdant Bluff",
+        "number": 166,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Frigid Thicket",
+        "number": 157,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "er"
+    },
+    {
+        "card_name": "er"
+    },
+    {
+        "card_name": "er"
+    },
+    {
+        "card_name": "er"
+    },
+    {
+        "card_name": "er"
+    },
+    {
+        "card_name": "Cloud Rock",
+        "number": 152,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Canyon Creek",
+        "number": 151,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Haunted Boughs",
+        "number": 158,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Soaring Canyon",
+        "number": 165,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Fey Grove",
+        "number": 156,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "er"
+    },
+    {
+        "card_name": "er"
+    },
+    {
+        "card_name": "er"
+    },
+    {
+        "card_name": "er"
+    },
+    {
+        "card_name": "er"
+    },
+    {
+        "card_name": "Blundering Clocktower",
+        "number": 150,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Autumn Moon",
+        "number": 149,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Evolving Wilds",
+        "number": 155,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "e"
+    },
+    {
+        "card_name": "e"
+    },
+    {
+        "card_name": "er"
+    },
+    {
+        "card_name": "er"
+    },
+    {
+        "card_name": "er"
+    },
+    {
+        "card_name": "er"
+    },
+    {
+        "card_name": "er"
+    },
+    {
+        "card_name": "Mountain",
+        "number": 170,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Island",
+        "number": 168,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Forest",
+        "number": 171,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Plains",
+        "number": 167,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "Swamp",
+        "number": 169,
+        "shape": "normal",
+        "set": "HVF"
+    },
+    {
+        "card_name": "er"
+    },
+    {
+        "card_name": "er"
+    },
+    {
+        "card_name": "er"
+    },
+    {
+        "card_name": "er"
+    },
+    "a->token",
+    {
+        "card_name": "Tinkering Swarm",
+        "number": 1,
+        "shape": "token",
+        "set": "HVF"
+    },
+    {
+        "card_name": "e"
+    },
+    {
+        "card_name": "e"
+    },
+    {
+        "card_name": "e"
+    },
+    {
+        "card_name": "e"
+    },
+    {
+        "card_name": "er"
+    },
+    {
+        "card_name": "er"
+    },
+    {
+        "card_name": "er"
+    },
+    {
+        "card_name": "er"
+    },
+    {
+        "card_name": "er"
+    }
+]

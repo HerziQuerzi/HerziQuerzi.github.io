@@ -5,6 +5,10 @@
 	<link rel="stylesheet" href="/resources/header.css">
 	<title>PFP visual preview</title>
 	<style>
+		@font-face {
+			font-family: Beleren;
+			src: url('/resources/beleren.ttf');
+		}
 		body {
 			font-family: Arial, sans-serif;
 			margin: 0;
@@ -82,7 +86,7 @@
 		.banner {
 			width: 100%;
 			height: auto;
-			padding-top: 20px;
+			padding-top: 80px;
 			padding-bottom: 50px;
 		}
 		.logo {
@@ -118,36 +122,49 @@
 			background-size: contain;
 			background-position: center;
 		}
-		.icon-bar {
-			display: grid;
-			grid-template-columns: repeat(10, 3fr 2fr) 3fr;
-			gap: 1px;
-			padding-left: 5%;
-			padding-right: 5%;
-			padding-top: 2%;
-			padding-bottom: 1%;
-			justify-items: center;
+		.dropdown {
+			background: rgba(23, 23, 23, 0.8);
+			border-radius: 8px;
+			position: absolute;
+			left: 10%;
+			width: fit-content;
+			margin: 20px 0;
+			padding: 5px 0;
+			display: flex;
+			flex-direction: column;
+			z-index: 3;
+		}
+		.dropdown .set-bar {
+			font-family: Beleren;
+			font-size: 20px;
+			text-decoration: none;
+			color: #e3e3e3;
+			display: flex;
+			gap: 10px;
 			align-items: center;
+			padding: 0 12px;
+			margin: 5px;
 		}
-		.icon-bar .icon img {
-			width: 90%;
-			max-width: 80px;
-			height: auto;
-			display: block;
-			padding: 5%;
-			margin: auto;
-			text-align: center;
+		.dropdown .set-bar:hover {
+			background: rgba(163, 163, 163, 0.5);
+			color: #f3f3f3;
 		}
-		.icon-bar .dot img {
-			width: 50%;
-			max-width: 65px;
-			height: auto;
-			display: block;
-			margin: auto;
-			text-align: center;
+		.dropdown .set-bar img {
+			width: 32px;
+		}
+		.dropdown .inactive {
+			height: 0px;
+			overflow: hidden;
+			margin: 0px 5px;
 		}
 		.preload-hidden {
 			display: none;
+		}
+		.addenda-container {
+			text-align: center;
+			width: fit-content;
+			max-width: 1200px;
+			padding: 0 5%;
 		}
 		/* This is here to enable the stickiness in a Float environment. I don't know why it works but it does */
 		.footer {
@@ -185,341 +202,343 @@
 		</div>
 	</div>
 
-	<div class="icon-bar">
-			<div class="icon"><a href="HQZ"><img src="/sets/HQZ-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="LRH"><img src="/sets/LRH-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="INK"><img src="/sets/INK-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="ACA"><img src="/sets/ACA-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="BYK"><img src="/sets/BYK-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="BTJ"><img src="/sets/BTJ-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="ACR"><img src="/sets/ACR-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="HVF"><img src="/sets/HVF-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="MAC"><img src="/sets/MAC-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="CAC"><img src="/sets/CAC-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="PFP"><img src="/sets/PFP-files/icon.png"></img></a></div>
-		<div class="icon"><a href="TWR"><img src="/sets/TWR-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="MMC"><img src="/sets/MMC-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="MMT"><img src="/sets/MMT-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="IAH"><img src="/sets/IAH-files/icon.png"></img></a></div>
-		 <div class="dot"><img src="/img/dot.png"></img></div>
-		<div class="icon"><a href="CRC"><img src="/sets/CRC-files/icon.png"></img></a></div>
-
+	<div class="dropdown" onmouseenter="rolldown()" onmouseleave="rollup()">
+	
+		<a class="set-bar" href="PFP"><img src="/sets/PFP-files/icon.png">Plagues of Fretport</a>
+	
+		<a class="set-bar inactive" href="HQZ"><img src="/sets/HQZ-files/icon.png">Hunting Quiet Horizons</a>
+	
+		<a class="set-bar inactive" href="LRH"><img src="/sets/LRH-files/icon.png">The Long Road Home</a>
+	
+		<a class="set-bar inactive" href="INK"><img src="/sets/INK-files/icon.png">Across the Ink Sea</a>
+	
+		<a class="set-bar inactive" href="ACA"><img src="/sets/ACA-files/icon.png">Arcanum Academia</a>
+	
+		<a class="set-bar inactive" href="BYK"><img src="/sets/BYK-files/icon.png">Beyond Our Ken</a>
+	
+		<a class="set-bar inactive" href="BTJ"><img src="/sets/BTJ-files/icon.png">Barten’s Journal</a>
+	
+		<a class="set-bar inactive" href="ACR"><img src="/sets/ACR-files/icon.png">Arcanum: Reforged</a>
+	
+		<a class="set-bar inactive" href="HVF"><img src="/sets/HVF-files/icon.png">Harvest Festival</a>
+	
+		<a class="set-bar inactive" href="MAC"><img src="/sets/MAC-files/icon.png">Memorium Arcanum</a>
+	
+		<a class="set-bar inactive" href="CAC"><img src="/sets/CAC-files/icon.png">Carpe Arcanum</a>
+	
+		<a class="set-bar inactive" href="TWR"><img src="/sets/TWR-files/icon.png">A Tourney at Whiterun</a>
+	
+		<a class="set-bar inactive" href="MMC"><img src="/sets/MMC-files/icon.png">Memory’s Collapse</a>
+	
+		<a class="set-bar inactive" href="MMT"><img src="/sets/MMT-files/icon.png">Memory’s Tyranny</a>
+	
+		<a class="set-bar inactive" href="IAH"><img src="/sets/IAH-files/icon.png">Intrigue</a>
+	
+		<a class="set-bar inactive" href="CRC"><img src="/sets/CRC-files/icon.png">Cretio Created</a>
+	
 		</div>
 		<div class="banner">
 		<img class="logo" src="/sets/PFP-files/logo.png">
 		</div>
 		<div class="main-content" id="main-content">
 			<div class="grid-container">
-				<div class="container"><img alt="/sets\PFP-files\img\8_Dregs of Order.png" id="8_Dregs of Order" data-flag="@X" onclick="openSidebar('8_Dregs of Order',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\49_Scatter Riches.png" id="49_Scatter Riches" data-flag="@X" onclick="openSidebar('49_Scatter Riches',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\66_Flesh to Rot.png" id="66_Flesh to Rot" data-flag="@X" onclick="openSidebar('66_Flesh to Rot',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\87_Balanced Blade.png" id="87_Balanced Blade" data-flag="@X" onclick="openSidebar('87_Balanced Blade',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\123_Fretport's Lament.png" id="123_Fretports Lament" data-flag="@X" onclick="openSidebar('123_Fretports Lament',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\24_Seek Salvation.png" id="24_Seek Salvation" data-flag="@X" onclick="openSidebar('24_Seek Salvation',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\50_Selective Prophecies.png" id="50_Selective Prophecies" data-flag="@X" onclick="openSidebar('50_Selective Prophecies',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\73_Kalemn Weller.png" id="73_Kalemn Weller" data-flag="@X" onclick="openSidebar('73_Kalemn Weller',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\114_Worship in Vain.png" id="114_Worship in Vain" data-flag="@X" onclick="openSidebar('114_Worship in Vain',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\135_Shared Reminiscence.png" id="135_Shared Reminiscence" data-flag="@X" onclick="openSidebar('135_Shared Reminiscence',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\9_Fervent Arbiter.png" id="9_Fervent Arbiter" data-flag="@X" onclick="openSidebar('9_Fervent Arbiter',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\31_Compelling Pariah.png" id="31_Compelling Pariah" data-flag="@X" onclick="openSidebar('31_Compelling Pariah',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\68_Frenzied Watchkeeper.png" id="68_Frenzied Watchkeeper" data-flag="@X" onclick="openSidebar('68_Frenzied Watchkeeper',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\86_Alexei, Instigator of Terror.png" id="86_Alexei, Instigator of Terror" data-flag="@X" onclick="openSidebar('86_Alexei, Instigator of Terror',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\117_Canal Lurker.png" id="117_Canal Lurker" data-flag="@X" onclick="openSidebar('117_Canal Lurker',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\10_Flintlock Pioneer.png" id="10_Flintlock Pioneer" data-flag="@X" onclick="openSidebar('10_Flintlock Pioneer',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\35_Empty the Streets.png" id="35_Empty the Streets" data-flag="@X" onclick="openSidebar('35_Empty the Streets',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\69_Harriet, Liberated Wildborn.png" id="69_Harriet, Liberated Wildborn" data-flag="@X" onclick="openSidebar('69_Harriet, Liberated Wildborn',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\90_Carve a Path.png" id="90_Carve a Path" data-flag="@X" onclick="openSidebar('90_Carve a Path',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\119_Coppergild Mercenary.png" id="119_Coppergild Mercenary" data-flag="@X" onclick="openSidebar('119_Coppergild Mercenary',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\12_Gabryel's Devout.png" id="12_Gabryels Devout" data-flag="@X" onclick="openSidebar('12_Gabryels Devout',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\37_Exquisite Heist.png" id="37_Exquisite Heist" data-flag="@X" onclick="openSidebar('37_Exquisite Heist',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\71_Hide from Horrors.png" id="71_Hide from Horrors" data-flag="@X" onclick="openSidebar('71_Hide from Horrors',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\92_Cold Embrace of Steel.png" id="92_Cold Embrace of Steel" data-flag="@X" onclick="openSidebar('92_Cold Embrace of Steel',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\120_Fearful Observer.png" id="120_Fearful Observer" data-flag="@X" onclick="openSidebar('120_Fearful Observer',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\15_Honor's Refuge.png" id="15_Honors Refuge" data-flag="@X" onclick="openSidebar('15_Honors Refuge',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\41_Masquerading Bohemian.png" id="41_Masquerading Bohemian" data-flag="@X" onclick="openSidebar('41_Masquerading Bohemian',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\74_Left Bereft.png" id="74_Left Bereft" data-flag="@X" onclick="openSidebar('74_Left Bereft',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\96_Ill Fated Travels.png" id="96_Ill Fated Travels" data-flag="@X" onclick="openSidebar('96_Ill Fated Travels',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\129_Mob Rallier.png" id="129_Mob Rallier" data-flag="@X" onclick="openSidebar('129_Mob Rallier',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\16_Kasienka, Raven's Regarded.png" id="16_Kasienka, Ravens Regarded" data-flag="@X" onclick="openSidebar('16_Kasienka, Ravens Regarded',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\48_Resource Management.png" id="48_Resource Management" data-flag="@X" onclick="openSidebar('48_Resource Management',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\77_Prayers of Defiance.png" id="77_Prayers of Defiance" data-flag="@X" onclick="openSidebar('77_Prayers of Defiance',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\97_Keenheart Blade.png" id="97_Keenheart Blade" data-flag="@X" onclick="openSidebar('97_Keenheart Blade',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\133_Right to Challenge.png" id="133_Right to Challenge" data-flag="@X" onclick="openSidebar('133_Right to Challenge',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\25_Serene Prayer.png" id="25_Serene Prayer" data-flag="@X" onclick="openSidebar('25_Serene Prayer',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\52_Thespian's Finale.png" id="52_Thespians Finale" data-flag="@X" onclick="openSidebar('52_Thespians Finale',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\83_Vassal of Virulence.png" id="83_Vassal of Virulence" data-flag="@X" onclick="openSidebar('83_Vassal of Virulence',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\110_Watchkeeper Deserter.png" id="110_Watchkeeper Deserter" data-flag="@X" onclick="openSidebar('110_Watchkeeper Deserter',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\134_Sewer Pack.png" id="134_Sewer Pack" data-flag="@X" onclick="openSidebar('134_Sewer Pack',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\2_Bearer of the Lantern.png" id="2_Bearer of the Lantern" data-flag="@X" onclick="openSidebar('2_Bearer of the Lantern',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\32_Debt Dignitary.png" id="32_Debt Dignitary" data-flag="@X" onclick="openSidebar('32_Debt Dignitary',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\58_Conspiracy of Ravens.png" id="58_Conspiracy of Ravens" data-flag="@X" onclick="openSidebar('58_Conspiracy of Ravens',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\89_Burning Heels.png" id="89_Burning Heels" data-flag="@X" onclick="openSidebar('89_Burning Heels',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\116_Belligerent's Augur.png" id="116_Belligerents Augur" data-flag="@X" onclick="openSidebar('116_Belligerents Augur',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\3_Chapel Warden.png" id="3_Chapel Warden" data-flag="@X" onclick="openSidebar('3_Chapel Warden',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\34_Dwindling Peace.png" id="34_Dwindling Peace" data-flag="@X" onclick="openSidebar('34_Dwindling Peace',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\59_Crystal Puncture.png" id="59_Crystal Puncture" data-flag="@X" onclick="openSidebar('59_Crystal Puncture',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\93_Fretport Anarchists.png" id="93_Fretport Anarchists" data-flag="@X" onclick="openSidebar('93_Fretport Anarchists',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\121_Figures in the Mist.png" id="121_Figures in the Mist" data-flag="@X" onclick="openSidebar('121_Figures in the Mist',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\4_Comfort the Fallen.png" id="4_Comfort the Fallen" data-flag="@X" onclick="openSidebar('4_Comfort the Fallen',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\40_Fretport Gravetender.png" id="40_Fretport Gravetender" data-flag="@X" onclick="openSidebar('40_Fretport Gravetender',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\60_Cull the Citizenry.png" id="60_Cull the Citizenry" data-flag="@X" onclick="openSidebar('60_Cull the Citizenry',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\94_Fretport's Heedless.png" id="94_Fretports Heedless" data-flag="@X" onclick="openSidebar('94_Fretports Heedless',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\122_Fretport Froppers.png" id="122_Fretport Froppers" data-flag="@X" onclick="openSidebar('122_Fretport Froppers',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\5_Disassociate.png" id="5_Disassociate" data-flag="@X" onclick="openSidebar('5_Disassociate',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\45_Pale Flotsam.png" id="45_Pale Flotsam" data-flag="@X" onclick="openSidebar('45_Pale Flotsam',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\63_False-Cure Smuggler.png" id="63_False-Cure Smuggler" data-flag="@X" onclick="openSidebar('63_False-Cure Smuggler',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\95_Hired Blades.png" id="95_Hired Blades" data-flag="@X" onclick="openSidebar('95_Hired Blades',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\125_Grim Gravetender.png" id="125_Grim Gravetender" data-flag="@X" onclick="openSidebar('125_Grim Gravetender',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\19_Martyr's Sacrifice.png" id="19_Martyrs Sacrifice" data-flag="@X" onclick="openSidebar('19_Martyrs Sacrifice',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\46_Postulate.png" id="46_Postulate" data-flag="@X" onclick="openSidebar('46_Postulate',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\70_Hateful Gaze.png" id="70_Hateful Gaze" data-flag="@X" onclick="openSidebar('70_Hateful Gaze',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\98_Keeper of the Banner.png" id="98_Keeper of the Banner" data-flag="@X" onclick="openSidebar('98_Keeper of the Banner',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\131_Prophet of Pacifism.png" id="131_Prophet of Pacifism" data-flag="@X" onclick="openSidebar('131_Prophet of Pacifism',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\20_Morning Passages.png" id="20_Morning Passages" data-flag="@X" onclick="openSidebar('20_Morning Passages',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\47_Precarious Ledgers.png" id="47_Precarious Ledgers" data-flag="@X" onclick="openSidebar('47_Precarious Ledgers',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\72_Iron Warden.png" id="72_Iron Warden" data-flag="@X" onclick="openSidebar('72_Iron Warden',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\100_Resplendent Bearing.png" id="100_Resplendent Bearing" data-flag="@X" onclick="openSidebar('100_Resplendent Bearing',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\132_Ready for Battle.png" id="132_Ready for Battle" data-flag="@X" onclick="openSidebar('132_Ready for Battle',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\22_Purging Watchkeeper.png" id="22_Purging Watchkeeper" data-flag="@X" onclick="openSidebar('22_Purging Watchkeeper',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\51_Silverblood Aspirant.png" id="51_Silverblood Aspirant" data-flag="@X" onclick="openSidebar('51_Silverblood Aspirant',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\78_Prayers of Judgement.png" id="78_Prayers of Judgement" data-flag="@X" onclick="openSidebar('78_Prayers of Judgement',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\106_To Say Farewell.png" id="106_To Say Farewell" data-flag="@X" onclick="openSidebar('106_To Say Farewell',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\137_Track Prey.png" id="137_Track Prey" data-flag="@X" onclick="openSidebar('137_Track Prey',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\23_Riot Queller.png" id="23_Riot Queller" data-flag="@X" onclick="openSidebar('23_Riot Queller',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\53_Unassuming Waif.png" id="53_Unassuming Waif" data-flag="@X" onclick="openSidebar('53_Unassuming Waif',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\82_Silence Dissent.png" id="82_Silence Dissent" data-flag="@X" onclick="openSidebar('82_Silence Dissent',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\108_Untouched Duelist.png" id="108_Untouched Duelist" data-flag="@X" onclick="openSidebar('108_Untouched Duelist',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\140_Watchkeeper's Prerogative.png" id="140_Watchkeepers Prerogative" data-flag="@X" onclick="openSidebar('140_Watchkeepers Prerogative',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\28_Whiplash.png" id="28_Whiplash" data-flag="@X" onclick="openSidebar('28_Whiplash',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\54_Unbeholden to Death.png" id="54_Unbeholden to Death" data-flag="@X" onclick="openSidebar('54_Unbeholden to Death',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\85_Zealous Bloodletter.png" id="85_Zealous Bloodletter" data-flag="@X" onclick="openSidebar('85_Zealous Bloodletter',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\113_Weary Watchkeeper.png" id="113_Weary Watchkeeper" data-flag="@X" onclick="openSidebar('113_Weary Watchkeeper',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\143_Wildborn Courtesan.png" id="143_Wildborn Courtesan" data-flag="@X" onclick="openSidebar('143_Wildborn Courtesan',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\1_Arcor-Staff Adherent.png" id="1_Arcor-Staff Adherent" data-flag="@X" onclick="openSidebar('1_Arcor-Staff Adherent',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\29_Awash in Despair.png" id="29_Awash in Despair" data-flag="@X" onclick="openSidebar('29_Awash in Despair',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\57_Baneblade Stalker.png" id="57_Baneblade Stalker" data-flag="@X" onclick="openSidebar('57_Baneblade Stalker',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\88_Blade of Fretport.png" id="88_Blade of Fretport" data-flag="@X" onclick="openSidebar('88_Blade of Fretport',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\115_All Who Wander.png" id="115_All Who Wander" data-flag="@X" onclick="openSidebar('115_All Who Wander',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\6_Dockside Healer.png" id="6_Dockside Healer" data-flag="@X" onclick="openSidebar('6_Dockside Healer',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\30_Boneweary Warrior.png" id="30_Boneweary Warrior" data-flag="@X" onclick="openSidebar('30_Boneweary Warrior',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\61_Dockyard Stalker.png" id="61_Dockyard Stalker" data-flag="@X" onclick="openSidebar('61_Dockyard Stalker',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\91_Chained Wildborn.png" id="91_Chained Wildborn" data-flag="@X" onclick="openSidebar('91_Chained Wildborn',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\118_Chapel Defendant.png" id="118_Chapel Defendant" data-flag="@X" onclick="openSidebar('118_Chapel Defendant',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\7_Dockyard Swindling.png" id="7_Dockyard Swindling" data-flag="@X" onclick="openSidebar('7_Dockyard Swindling',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\33_Dispossessed Noble.png" id="33_Dispossessed Noble" data-flag="@X" onclick="openSidebar('33_Dispossessed Noble',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\62_Drown in Nightmares.png" id="62_Drown in Nightmares" data-flag="@X" onclick="openSidebar('62_Drown in Nightmares',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\99_Mettlesome Watchkeeper.png" id="99_Mettlesome Watchkeeper" data-flag="@X" onclick="openSidebar('99_Mettlesome Watchkeeper',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\124_Frog.png" id="124_Frog" data-flag="@X" onclick="openSidebar('124_Frog',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\11_Fretport Warden.png" id="11_Fretport Warden" data-flag="@X" onclick="openSidebar('11_Fretport Warden',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\36_Evade the Authorities.png" id="36_Evade the Authorities" data-flag="@X" onclick="openSidebar('36_Evade the Authorities',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\64_Festering Waif.png" id="64_Festering Waif" data-flag="@X" onclick="openSidebar('64_Festering Waif',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\101_Revelry Reverie.png" id="101_Revelry Reverie" data-flag="@X" onclick="openSidebar('101_Revelry Reverie',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\126_Indomitable Mercenary.png" id="126_Indomitable Mercenary" data-flag="@X" onclick="openSidebar('126_Indomitable Mercenary',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\13_Glimpse of Innocence.png" id="13_Glimpse of Innocence" data-flag="@X" onclick="openSidebar('13_Glimpse of Innocence',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\38_Flee the City.png" id="38_Flee the City" data-flag="@X" onclick="openSidebar('38_Flee the City',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\65_Feverish Noble.png" id="65_Feverish Noble" data-flag="@X" onclick="openSidebar('65_Feverish Noble',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\102_Rising Riots.png" id="102_Rising Riots" data-flag="@X" onclick="openSidebar('102_Rising Riots',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\127_Influential Wildborn.png" id="127_Influential Wildborn" data-flag="@X" onclick="openSidebar('127_Influential Wildborn',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\14_Grace of the Trinity.png" id="14_Grace of the Trinity" data-flag="@X" onclick="openSidebar('14_Grace of the Trinity',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\39_Fretport Bounty Hunter.png" id="39_Fretport Bounty Hunter" data-flag="@X" onclick="openSidebar('39_Fretport Bounty Hunter',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\67_Forgotten Sins.png" id="67_Forgotten Sins" data-flag="@X" onclick="openSidebar('67_Forgotten Sins',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\103_Soldier.png" id="103_Soldier" data-flag="@X" onclick="openSidebar('103_Soldier',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\128_Let Loose.png" id="128_Let Loose" data-flag="@X" onclick="openSidebar('128_Let Loose',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\17_Kasienka's Veteran.png" id="17_Kasienkas Veteran" data-flag="@X" onclick="openSidebar('17_Kasienkas Veteran',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\42_Mental Fracture.png" id="42_Mental Fracture" data-flag="@X" onclick="openSidebar('42_Mental Fracture',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\75_Lurking Terrors.png" id="75_Lurking Terrors" data-flag="@X" onclick="openSidebar('75_Lurking Terrors',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\104_Strength of the Devout.png" id="104_Strength of the Devout" data-flag="@X" onclick="openSidebar('104_Strength of the Devout',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\130_Naturalize.png" id="130_Naturalize" data-flag="@X" onclick="openSidebar('130_Naturalize',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\18_Loss of Focus.png" id="18_Loss of Focus" data-flag="@X" onclick="openSidebar('18_Loss of Focus',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\43_Merchant's Guile.png" id="43_Merchants Guile" data-flag="@X" onclick="openSidebar('43_Merchants Guile',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\76_Mutant Horror.png" id="76_Mutant Horror" data-flag="@X" onclick="openSidebar('76_Mutant Horror',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\105_Sycophantic Aristocrat.png" id="105_Sycophantic Aristocrat" data-flag="@X" onclick="openSidebar('105_Sycophantic Aristocrat',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\136_Stalwart Physicker.png" id="136_Stalwart Physicker" data-flag="@X" onclick="openSidebar('136_Stalwart Physicker',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\21_Mourn the Lost.png" id="21_Mourn the Lost" data-flag="@X" onclick="openSidebar('21_Mourn the Lost',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\44_Morose Bohemian.png" id="44_Morose Bohemian" data-flag="@X" onclick="openSidebar('44_Morose Bohemian',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\79_Prayers of Release.png" id="79_Prayers of Release" data-flag="@X" onclick="openSidebar('79_Prayers of Release',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\107_Traumatic Memories.png" id="107_Traumatic Memories" data-flag="@X" onclick="openSidebar('107_Traumatic Memories',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\138_Valor of the Desperate.png" id="138_Valor of the Desperate" data-flag="@X" onclick="openSidebar('138_Valor of the Desperate',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\26_Untested Recruit.png" id="26_Untested Recruit" data-flag="@X" onclick="openSidebar('26_Untested Recruit',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\55_Wary Watchkeeper.png" id="55_Wary Watchkeeper" data-flag="@X" onclick="openSidebar('55_Wary Watchkeeper',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\80_Sickening Madness.png" id="80_Sickening Madness" data-flag="@X" onclick="openSidebar('80_Sickening Madness',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\109_Voice of Warryn.png" id="109_Voice of Warryn" data-flag="@X" onclick="openSidebar('109_Voice of Warryn',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\139_Venomtongue Archer.png" id="139_Venomtongue Archer" data-flag="@X" onclick="openSidebar('139_Venomtongue Archer',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\27_Valeriya's Militant.png" id="27_Valeriyas Militant" data-flag="@X" onclick="openSidebar('27_Valeriyas Militant',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\56_Whisper Collector.png" id="56_Whisper Collector" data-flag="@X" onclick="openSidebar('56_Whisper Collector',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\81_Sign in Blood.png" id="81_Sign in Blood" data-flag="@X" onclick="openSidebar('81_Sign in Blood',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\111_Watchkeeper's Retort.png" id="111_Watchkeepers Retort" data-flag="@X" onclick="openSidebar('111_Watchkeepers Retort',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\141_Wayward Afflicted.png" id="141_Wayward Afflicted" data-flag="@X" onclick="openSidebar('141_Wayward Afflicted',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\84_Withering Beggar.png" id="84_Withering Beggar" data-flag="@X" onclick="openSidebar('84_Withering Beggar',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\112_Watchkeeper's Stand.png" id="112_Watchkeepers Stand" data-flag="@X" onclick="openSidebar('112_Watchkeepers Stand',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\142_Weathered Veteran.png" id="142_Weathered Veteran" data-flag="@X" onclick="openSidebar('142_Weathered Veteran',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-<div id="gold" class="anchor"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\145_Mass Executions.png" id="145_Mass Executions" data-flag="@X" onclick="openSidebar('145_Mass Executions',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\146_The Raven Queen of Fretport.png" id="146_The Raven Queen of Fretport" data-flag="@X" onclick="openSidebar('146_The Raven Queen of Fretport',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\147_All or Nothing.png" id="147_All or Nothing" data-flag="@X" onclick="openSidebar('147_All or Nothing',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\148_Lion's Vanguard.png" id="148_Lions Vanguard" data-flag="@X" onclick="openSidebar('148_Lions Vanguard',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\149_Flush With Arcor.png" id="149_Flush With Arcor" data-flag="@X" onclick="openSidebar('149_Flush With Arcor',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\144_Judge's Decree.png" id="144_Judges Decree" data-flag="@X" onclick="openSidebar('144_Judges Decree',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\161_Inkwell Daggers.png" id="161_Inkwell Daggers" data-flag="@X" onclick="openSidebar('161_Inkwell Daggers',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\162_Fretport's Fade.png" id="162_Fretports Fade" data-flag="@X" onclick="openSidebar('162_Fretports Fade',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\167_Inciting Bard.png" id="167_Inciting Bard" data-flag="@X" onclick="openSidebar('167_Inciting Bard',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\169_Haphazard Militia.png" id="169_Haphazard Militia" data-flag="@X" onclick="openSidebar('169_Haphazard Militia',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\158_Persecution Official.png" id="158_Persecution Official" data-flag="@X" onclick="openSidebar('158_Persecution Official',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\160_Fate Transfer.png" id="160_Fate Transfer" data-flag="@X" onclick="openSidebar('160_Fate Transfer',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\163_Purge the Harbor.png" id="163_Purge the Harbor" data-flag="@X" onclick="openSidebar('163_Purge the Harbor',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\165_Dwindling Stores.png" id="165_Dwindling Stores" data-flag="@X" onclick="openSidebar('165_Dwindling Stores',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\168_Callow Survivors.png" id="168_Callow Survivors" data-flag="@X" onclick="openSidebar('168_Callow Survivors',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\157_Invalidate.png" id="157_Invalidate" data-flag="@X" onclick="openSidebar('157_Invalidate',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\159_Assassin's Warning.png" id="159_Assassins Warning" data-flag="@X" onclick="openSidebar('159_Assassins Warning',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\164_Unjust Sentence.png" id="164_Unjust Sentence" data-flag="@X" onclick="openSidebar('164_Unjust Sentence',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\166_Fretport Mob.png" id="166_Fretport Mob" data-flag="@X" onclick="openSidebar('166_Fretport Mob',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\170_Steadfast Heart.png" id="170_Steadfast Heart" data-flag="@X" onclick="openSidebar('170_Steadfast Heart',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\156_Dashing Rogue.png" id="156_Dashing Rogue" data-flag="@X" onclick="openSidebar('156_Dashing Rogue',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\150_Nataila, Raven's Repented.png" id="150_Nataila, Ravens Repented" data-flag="@X" onclick="openSidebar('150_Nataila, Ravens Repented',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\151_Wildborn Merchant.png" id="151_Wildborn Merchant" data-flag="@X" onclick="openSidebar('151_Wildborn Merchant',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\152_Days of Decay.png" id="152_Days of Decay" data-flag="@X" onclick="openSidebar('152_Days of Decay',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\153_Valeriya, Watchkeeper Veteran.png" id="153_Valeriya, Watchkeeper Veteran" data-flag="@X" onclick="openSidebar('153_Valeriya, Watchkeeper Veteran',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\154_Helene Trant.png" id="154_Helene Trant" data-flag="@X" onclick="openSidebar('154_Helene Trant',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\172_Exhaustive Toil.png" id="172_Exhaustive Toil" data-flag="@X" onclick="openSidebar('172_Exhaustive Toil',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\174_Master of Disorientation.png" id="174_Master of Disorientation" data-flag="@X" onclick="openSidebar('174_Master of Disorientation',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\177_Cult of Trinity's Fall.png" id="177_Cult of Trinitys Fall" data-flag="@X" onclick="openSidebar('177_Cult of Trinitys Fall',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\181_Cleric of Fervor.png" id="181_Cleric of Fervor" data-flag="@X" onclick="openSidebar('181_Cleric of Fervor',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\155_Madelon, Merchant's Heir.png" id="155_Madelon, Merchants Heir" data-flag="@X" onclick="openSidebar('155_Madelon, Merchants Heir',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\171_Delusional Noble.png" id="171_Delusional Noble" data-flag="@X" onclick="openSidebar('171_Delusional Noble',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\176_Unquenched Greed.png" id="176_Unquenched Greed" data-flag="@X" onclick="openSidebar('176_Unquenched Greed',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\178_Heedless Lovers.png" id="178_Heedless Lovers" data-flag="@X" onclick="openSidebar('178_Heedless Lovers',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\180_Blade of the Long Night.png" id="180_Blade of the Long Night" data-flag="@X" onclick="openSidebar('180_Blade of the Long Night',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\183_Hollow Survivor.png" id="183_Hollow Survivor" data-flag="@X" onclick="openSidebar('183_Hollow Survivor',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\173_Harried Apothecary.png" id="173_Harried Apothecary" data-flag="@X" onclick="openSidebar('173_Harried Apothecary',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\175_Political Opportunist.png" id="175_Political Opportunist" data-flag="@X" onclick="openSidebar('175_Political Opportunist',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\179_Untested Initiates.png" id="179_Untested Initiates" data-flag="@X" onclick="openSidebar('179_Untested Initiates',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\182_Forgotten Consequences.png" id="182_Forgotten Consequences" data-flag="@X" onclick="openSidebar('182_Forgotten Consequences',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\185_Wisdom in Reflection.png" id="185_Wisdom in Reflection" data-flag="@X" onclick="openSidebar('185_Wisdom in Reflection',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\186_Citizen.png" id="186_Citizen" data-flag="@X" onclick="openSidebar('186_Citizen',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\184_Inspired Blade.png" id="184_Inspired Blade" data-flag="@X" onclick="openSidebar('184_Inspired Blade',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-<div id="colorless" class="anchor"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\187_Abandoned Memorial.png" id="187_Abandoned Memorial" data-flag="@X" onclick="openSidebar('187_Abandoned Memorial',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\196_Raven's Standard.png" id="196_Ravens Standard" data-flag="@X" onclick="openSidebar('196_Ravens Standard',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\188_Arcor Diamond.png" id="188_Arcor Diamond" data-flag="@X" onclick="openSidebar('188_Arcor Diamond',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\191_Discordant Bell.png" id="191_Discordant Bell" data-flag="@X" onclick="openSidebar('191_Discordant Bell',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\192_Elixir of Immortality.png" id="192_Elixir of Immortality" data-flag="@X" onclick="openSidebar('192_Elixir of Immortality',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\197_Vigilante's Cowl.png" id="197_Vigilantes Cowl" data-flag="@X" onclick="openSidebar('197_Vigilantes Cowl',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\198_Weight of Sin.png" id="198_Weight of Sin" data-flag="@X" onclick="openSidebar('198_Weight of Sin',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\189_Artisan's Masterpiece.png" id="189_Artisans Masterpiece" data-flag="@X" onclick="openSidebar('189_Artisans Masterpiece',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\190_Battered Steel.png" id="190_Battered Steel" data-flag="@X" onclick="openSidebar('190_Battered Steel',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\193_Gold.png" id="193_Gold" data-flag="@X" onclick="openSidebar('193_Gold',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\194_Plague Mask.png" id="194_Plague Mask" data-flag="@X" onclick="openSidebar('194_Plague Mask',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\195_Rallying Horn.png" id="195_Rallying Horn" data-flag="@X" onclick="openSidebar('195_Rallying Horn',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\216_Sedate Tundra.png" id="216_Sedate Tundra" data-flag="@X" onclick="openSidebar('216_Sedate Tundra',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\209_Murmuring Falls.png" id="209_Murmuring Falls" data-flag="@X" onclick="openSidebar('209_Murmuring Falls',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\200_Crumbling Precipice.png" id="200_Crumbling Precipice" data-flag="@X" onclick="openSidebar('200_Crumbling Precipice',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\212_Rampant Summit.png" id="212_Rampant Summit" data-flag="@X" onclick="openSidebar('212_Rampant Summit',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\213_Resplendent Substratum.png" id="213_Resplendent Substratum" data-flag="@X" onclick="openSidebar('213_Resplendent Substratum',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\199_Arctic Mine.png" id="199_Arctic Mine" data-flag="@X" onclick="openSidebar('199_Arctic Mine',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\201_Crystal Cavern.png" id="201_Crystal Cavern" data-flag="@X" onclick="openSidebar('201_Crystal Cavern',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\210_Nomad's Township.png" id="210_Nomads Township" data-flag="@X" onclick="openSidebar('210_Nomads Township',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\205_Forgotten Steppe.png" id="205_Forgotten Steppe" data-flag="@X" onclick="openSidebar('205_Forgotten Steppe',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\218_Shifting Glade.png" id="218_Shifting Glade" data-flag="@X" onclick="openSidebar('218_Shifting Glade',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\202_Daunting Skyline.png" id="202_Daunting Skyline" data-flag="@X" onclick="openSidebar('202_Daunting Skyline',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\203_Decrepit Crags.png" id="203_Decrepit Crags" data-flag="@X" onclick="openSidebar('203_Decrepit Crags',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\206_Grim Courtyard.png" id="206_Grim Courtyard" data-flag="@X" onclick="openSidebar('206_Grim Courtyard',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\207_Hazy Lagoon.png" id="207_Hazy Lagoon" data-flag="@X" onclick="openSidebar('207_Hazy Lagoon',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\208_Merchant's District.png" id="208_Merchants District" data-flag="@X" onclick="openSidebar('208_Merchants District',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\211_Phosphorescent Ravine.png" id="211_Phosphorescent Ravine" data-flag="@X" onclick="openSidebar('211_Phosphorescent Ravine',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\214_Rickety Guildhall.png" id="214_Rickety Guildhall" data-flag="@X" onclick="openSidebar('214_Rickety Guildhall',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\215_Ruined Citadel.png" id="215_Ruined Citadel" data-flag="@X" onclick="openSidebar('215_Ruined Citadel',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\217_Serene Trail.png" id="217_Serene Trail" data-flag="@X" onclick="openSidebar('217_Serene Trail',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\219_Vibrant Rainforest.png" id="219_Vibrant Rainforest" data-flag="@X" onclick="openSidebar('219_Vibrant Rainforest',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\204_Failing Port.png" id="204_Failing Port" data-flag="@X" onclick="openSidebar('204_Failing Port',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\222_Swamp.png" id="222_Swamp" data-flag="@X" onclick="openSidebar('222_Swamp',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\224_Forest.png" id="224_Forest" data-flag="@X" onclick="openSidebar('224_Forest',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\220_Plains.png" id="220_Plains" data-flag="@X" onclick="openSidebar('220_Plains',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\223_Mountain.png" id="223_Mountain" data-flag="@X" onclick="openSidebar('223_Mountain',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\221_Island.png" id="221_Island" data-flag="@X" onclick="openSidebar('221_Island',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\229_Plains.png" id="229_Plains" data-flag="@X" onclick="openSidebar('229_Plains',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\227_Island.png" id="227_Island" data-flag="@X" onclick="openSidebar('227_Island',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\230_Swamp.png" id="230_Swamp" data-flag="@X" onclick="openSidebar('230_Swamp',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\228_Mountain.png" id="228_Mountain" data-flag="@X" onclick="openSidebar('228_Mountain',false)"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\226_Forest.png" id="226_Forest" data-flag="@X" onclick="openSidebar('226_Forest',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-<div id="token" class="anchor"></div>
-			<div class="container"><img alt="/sets\PFP-files\img\1t_Emblem.png" id="1t_Emblem" data-flag="@N" onclick="openSidebar('1t_Emblem',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
-			<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+					<div class="container"><img alt="/sets\PFP-files\img\8_Dregs of Order.png" id="8_Dregs of Order" data-flag="@X" onclick="openSidebar('8_Dregs of Order',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\49_Scatter Riches.png" id="49_Scatter Riches" data-flag="@X" onclick="openSidebar('49_Scatter Riches',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\66_Flesh to Rot.png" id="66_Flesh to Rot" data-flag="@X" onclick="openSidebar('66_Flesh to Rot',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\87_Balanced Blade.png" id="87_Balanced Blade" data-flag="@X" onclick="openSidebar('87_Balanced Blade',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\123_Fretport's Lament.png" id="123_Fretports Lament" data-flag="@X" onclick="openSidebar('123_Fretports Lament',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\24_Seek Salvation.png" id="24_Seek Salvation" data-flag="@X" onclick="openSidebar('24_Seek Salvation',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\50_Selective Prophecies.png" id="50_Selective Prophecies" data-flag="@X" onclick="openSidebar('50_Selective Prophecies',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\73_Kalemn Weller.png" id="73_Kalemn Weller" data-flag="@X" onclick="openSidebar('73_Kalemn Weller',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\114_Worship in Vain.png" id="114_Worship in Vain" data-flag="@X" onclick="openSidebar('114_Worship in Vain',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\135_Shared Reminiscence.png" id="135_Shared Reminiscence" data-flag="@X" onclick="openSidebar('135_Shared Reminiscence',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\9_Fervent Arbiter.png" id="9_Fervent Arbiter" data-flag="@X" onclick="openSidebar('9_Fervent Arbiter',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\31_Compelling Pariah.png" id="31_Compelling Pariah" data-flag="@X" onclick="openSidebar('31_Compelling Pariah',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\68_Frenzied Watchkeeper.png" id="68_Frenzied Watchkeeper" data-flag="@X" onclick="openSidebar('68_Frenzied Watchkeeper',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\86_Alexei, Instigator of Terror.png" id="86_Alexei, Instigator of Terror" data-flag="@X" onclick="openSidebar('86_Alexei, Instigator of Terror',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\117_Canal Lurker.png" id="117_Canal Lurker" data-flag="@X" onclick="openSidebar('117_Canal Lurker',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\10_Flintlock Pioneer.png" id="10_Flintlock Pioneer" data-flag="@X" onclick="openSidebar('10_Flintlock Pioneer',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\35_Empty the Streets.png" id="35_Empty the Streets" data-flag="@X" onclick="openSidebar('35_Empty the Streets',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\69_Harriet, Liberated Wildborn.png" id="69_Harriet, Liberated Wildborn" data-flag="@X" onclick="openSidebar('69_Harriet, Liberated Wildborn',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\90_Carve a Path.png" id="90_Carve a Path" data-flag="@X" onclick="openSidebar('90_Carve a Path',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\119_Coppergild Mercenary.png" id="119_Coppergild Mercenary" data-flag="@X" onclick="openSidebar('119_Coppergild Mercenary',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\12_Gabryel's Devout.png" id="12_Gabryels Devout" data-flag="@X" onclick="openSidebar('12_Gabryels Devout',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\37_Exquisite Heist.png" id="37_Exquisite Heist" data-flag="@X" onclick="openSidebar('37_Exquisite Heist',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\71_Hide from Horrors.png" id="71_Hide from Horrors" data-flag="@X" onclick="openSidebar('71_Hide from Horrors',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\92_Cold Embrace of Steel.png" id="92_Cold Embrace of Steel" data-flag="@X" onclick="openSidebar('92_Cold Embrace of Steel',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\120_Fearful Observer.png" id="120_Fearful Observer" data-flag="@X" onclick="openSidebar('120_Fearful Observer',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\15_Honor's Refuge.png" id="15_Honors Refuge" data-flag="@X" onclick="openSidebar('15_Honors Refuge',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\41_Masquerading Bohemian.png" id="41_Masquerading Bohemian" data-flag="@X" onclick="openSidebar('41_Masquerading Bohemian',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\74_Left Bereft.png" id="74_Left Bereft" data-flag="@X" onclick="openSidebar('74_Left Bereft',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\96_Ill Fated Travels.png" id="96_Ill Fated Travels" data-flag="@X" onclick="openSidebar('96_Ill Fated Travels',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\129_Mob Rallier.png" id="129_Mob Rallier" data-flag="@X" onclick="openSidebar('129_Mob Rallier',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\16_Kasienka, Raven's Regarded.png" id="16_Kasienka, Ravens Regarded" data-flag="@X" onclick="openSidebar('16_Kasienka, Ravens Regarded',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\48_Resource Management.png" id="48_Resource Management" data-flag="@X" onclick="openSidebar('48_Resource Management',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\77_Prayers of Defiance.png" id="77_Prayers of Defiance" data-flag="@X" onclick="openSidebar('77_Prayers of Defiance',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\97_Keenheart Blade.png" id="97_Keenheart Blade" data-flag="@X" onclick="openSidebar('97_Keenheart Blade',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\133_Right to Challenge.png" id="133_Right to Challenge" data-flag="@X" onclick="openSidebar('133_Right to Challenge',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\25_Serene Prayer.png" id="25_Serene Prayer" data-flag="@X" onclick="openSidebar('25_Serene Prayer',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\52_Thespian's Finale.png" id="52_Thespians Finale" data-flag="@X" onclick="openSidebar('52_Thespians Finale',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\83_Vassal of Virulence.png" id="83_Vassal of Virulence" data-flag="@X" onclick="openSidebar('83_Vassal of Virulence',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\110_Watchkeeper Deserter.png" id="110_Watchkeeper Deserter" data-flag="@X" onclick="openSidebar('110_Watchkeeper Deserter',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\134_Sewer Pack.png" id="134_Sewer Pack" data-flag="@X" onclick="openSidebar('134_Sewer Pack',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\2_Bearer of the Lantern.png" id="2_Bearer of the Lantern" data-flag="@X" onclick="openSidebar('2_Bearer of the Lantern',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\32_Debt Dignitary.png" id="32_Debt Dignitary" data-flag="@X" onclick="openSidebar('32_Debt Dignitary',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\58_Conspiracy of Ravens.png" id="58_Conspiracy of Ravens" data-flag="@X" onclick="openSidebar('58_Conspiracy of Ravens',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\89_Burning Heels.png" id="89_Burning Heels" data-flag="@X" onclick="openSidebar('89_Burning Heels',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\116_Belligerent's Augur.png" id="116_Belligerents Augur" data-flag="@X" onclick="openSidebar('116_Belligerents Augur',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\3_Chapel Warden.png" id="3_Chapel Warden" data-flag="@X" onclick="openSidebar('3_Chapel Warden',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\34_Dwindling Peace.png" id="34_Dwindling Peace" data-flag="@X" onclick="openSidebar('34_Dwindling Peace',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\59_Crystal Puncture.png" id="59_Crystal Puncture" data-flag="@X" onclick="openSidebar('59_Crystal Puncture',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\93_Fretport Anarchists.png" id="93_Fretport Anarchists" data-flag="@X" onclick="openSidebar('93_Fretport Anarchists',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\121_Figures in the Mist.png" id="121_Figures in the Mist" data-flag="@X" onclick="openSidebar('121_Figures in the Mist',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\4_Comfort the Fallen.png" id="4_Comfort the Fallen" data-flag="@X" onclick="openSidebar('4_Comfort the Fallen',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\40_Fretport Gravetender.png" id="40_Fretport Gravetender" data-flag="@X" onclick="openSidebar('40_Fretport Gravetender',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\60_Cull the Citizenry.png" id="60_Cull the Citizenry" data-flag="@X" onclick="openSidebar('60_Cull the Citizenry',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\94_Fretport's Heedless.png" id="94_Fretports Heedless" data-flag="@X" onclick="openSidebar('94_Fretports Heedless',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\122_Fretport Froppers.png" id="122_Fretport Froppers" data-flag="@X" onclick="openSidebar('122_Fretport Froppers',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\5_Disassociate.png" id="5_Disassociate" data-flag="@X" onclick="openSidebar('5_Disassociate',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\45_Pale Flotsam.png" id="45_Pale Flotsam" data-flag="@X" onclick="openSidebar('45_Pale Flotsam',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\63_False-Cure Smuggler.png" id="63_False-Cure Smuggler" data-flag="@X" onclick="openSidebar('63_False-Cure Smuggler',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\95_Hired Blades.png" id="95_Hired Blades" data-flag="@X" onclick="openSidebar('95_Hired Blades',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\125_Grim Gravetender.png" id="125_Grim Gravetender" data-flag="@X" onclick="openSidebar('125_Grim Gravetender',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\19_Martyr's Sacrifice.png" id="19_Martyrs Sacrifice" data-flag="@X" onclick="openSidebar('19_Martyrs Sacrifice',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\46_Postulate.png" id="46_Postulate" data-flag="@X" onclick="openSidebar('46_Postulate',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\70_Hateful Gaze.png" id="70_Hateful Gaze" data-flag="@X" onclick="openSidebar('70_Hateful Gaze',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\98_Keeper of the Banner.png" id="98_Keeper of the Banner" data-flag="@X" onclick="openSidebar('98_Keeper of the Banner',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\131_Prophet of Pacifism.png" id="131_Prophet of Pacifism" data-flag="@X" onclick="openSidebar('131_Prophet of Pacifism',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\20_Morning Passages.png" id="20_Morning Passages" data-flag="@X" onclick="openSidebar('20_Morning Passages',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\47_Precarious Ledgers.png" id="47_Precarious Ledgers" data-flag="@X" onclick="openSidebar('47_Precarious Ledgers',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\72_Iron Warden.png" id="72_Iron Warden" data-flag="@X" onclick="openSidebar('72_Iron Warden',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\100_Resplendent Bearing.png" id="100_Resplendent Bearing" data-flag="@X" onclick="openSidebar('100_Resplendent Bearing',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\132_Ready for Battle.png" id="132_Ready for Battle" data-flag="@X" onclick="openSidebar('132_Ready for Battle',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\22_Purging Watchkeeper.png" id="22_Purging Watchkeeper" data-flag="@X" onclick="openSidebar('22_Purging Watchkeeper',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\51_Silverblood Aspirant.png" id="51_Silverblood Aspirant" data-flag="@X" onclick="openSidebar('51_Silverblood Aspirant',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\78_Prayers of Judgement.png" id="78_Prayers of Judgement" data-flag="@X" onclick="openSidebar('78_Prayers of Judgement',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\106_To Say Farewell.png" id="106_To Say Farewell" data-flag="@X" onclick="openSidebar('106_To Say Farewell',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\137_Track Prey.png" id="137_Track Prey" data-flag="@X" onclick="openSidebar('137_Track Prey',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\23_Riot Queller.png" id="23_Riot Queller" data-flag="@X" onclick="openSidebar('23_Riot Queller',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\53_Unassuming Waif.png" id="53_Unassuming Waif" data-flag="@X" onclick="openSidebar('53_Unassuming Waif',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\82_Silence Dissent.png" id="82_Silence Dissent" data-flag="@X" onclick="openSidebar('82_Silence Dissent',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\108_Untouched Duelist.png" id="108_Untouched Duelist" data-flag="@X" onclick="openSidebar('108_Untouched Duelist',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\140_Watchkeeper's Prerogative.png" id="140_Watchkeepers Prerogative" data-flag="@X" onclick="openSidebar('140_Watchkeepers Prerogative',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\28_Whiplash.png" id="28_Whiplash" data-flag="@X" onclick="openSidebar('28_Whiplash',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\54_Unbeholden to Death.png" id="54_Unbeholden to Death" data-flag="@X" onclick="openSidebar('54_Unbeholden to Death',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\85_Zealous Bloodletter.png" id="85_Zealous Bloodletter" data-flag="@X" onclick="openSidebar('85_Zealous Bloodletter',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\113_Weary Watchkeeper.png" id="113_Weary Watchkeeper" data-flag="@X" onclick="openSidebar('113_Weary Watchkeeper',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\143_Wildborn Courtesan.png" id="143_Wildborn Courtesan" data-flag="@X" onclick="openSidebar('143_Wildborn Courtesan',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\1_Arcor-Staff Adherent.png" id="1_Arcor-Staff Adherent" data-flag="@X" onclick="openSidebar('1_Arcor-Staff Adherent',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\29_Awash in Despair.png" id="29_Awash in Despair" data-flag="@X" onclick="openSidebar('29_Awash in Despair',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\57_Baneblade Stalker.png" id="57_Baneblade Stalker" data-flag="@X" onclick="openSidebar('57_Baneblade Stalker',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\88_Blade of Fretport.png" id="88_Blade of Fretport" data-flag="@X" onclick="openSidebar('88_Blade of Fretport',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\115_All Who Wander.png" id="115_All Who Wander" data-flag="@X" onclick="openSidebar('115_All Who Wander',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\6_Dockside Healer.png" id="6_Dockside Healer" data-flag="@X" onclick="openSidebar('6_Dockside Healer',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\30_Boneweary Warrior.png" id="30_Boneweary Warrior" data-flag="@X" onclick="openSidebar('30_Boneweary Warrior',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\61_Dockyard Stalker.png" id="61_Dockyard Stalker" data-flag="@X" onclick="openSidebar('61_Dockyard Stalker',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\91_Chained Wildborn.png" id="91_Chained Wildborn" data-flag="@X" onclick="openSidebar('91_Chained Wildborn',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\118_Chapel Defendant.png" id="118_Chapel Defendant" data-flag="@X" onclick="openSidebar('118_Chapel Defendant',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\7_Dockyard Swindling.png" id="7_Dockyard Swindling" data-flag="@X" onclick="openSidebar('7_Dockyard Swindling',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\33_Dispossessed Noble.png" id="33_Dispossessed Noble" data-flag="@X" onclick="openSidebar('33_Dispossessed Noble',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\62_Drown in Nightmares.png" id="62_Drown in Nightmares" data-flag="@X" onclick="openSidebar('62_Drown in Nightmares',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\99_Mettlesome Watchkeeper.png" id="99_Mettlesome Watchkeeper" data-flag="@X" onclick="openSidebar('99_Mettlesome Watchkeeper',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\124_Frog.png" id="124_Frog" data-flag="@X" onclick="openSidebar('124_Frog',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\11_Fretport Warden.png" id="11_Fretport Warden" data-flag="@X" onclick="openSidebar('11_Fretport Warden',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\36_Evade the Authorities.png" id="36_Evade the Authorities" data-flag="@X" onclick="openSidebar('36_Evade the Authorities',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\64_Festering Waif.png" id="64_Festering Waif" data-flag="@X" onclick="openSidebar('64_Festering Waif',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\101_Revelry Reverie.png" id="101_Revelry Reverie" data-flag="@X" onclick="openSidebar('101_Revelry Reverie',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\126_Indomitable Mercenary.png" id="126_Indomitable Mercenary" data-flag="@X" onclick="openSidebar('126_Indomitable Mercenary',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\13_Glimpse of Innocence.png" id="13_Glimpse of Innocence" data-flag="@X" onclick="openSidebar('13_Glimpse of Innocence',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\38_Flee the City.png" id="38_Flee the City" data-flag="@X" onclick="openSidebar('38_Flee the City',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\65_Feverish Noble.png" id="65_Feverish Noble" data-flag="@X" onclick="openSidebar('65_Feverish Noble',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\102_Rising Riots.png" id="102_Rising Riots" data-flag="@X" onclick="openSidebar('102_Rising Riots',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\127_Influential Wildborn.png" id="127_Influential Wildborn" data-flag="@X" onclick="openSidebar('127_Influential Wildborn',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\14_Grace of the Trinity.png" id="14_Grace of the Trinity" data-flag="@X" onclick="openSidebar('14_Grace of the Trinity',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\39_Fretport Bounty Hunter.png" id="39_Fretport Bounty Hunter" data-flag="@X" onclick="openSidebar('39_Fretport Bounty Hunter',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\67_Forgotten Sins.png" id="67_Forgotten Sins" data-flag="@X" onclick="openSidebar('67_Forgotten Sins',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\103_Soldier.png" id="103_Soldier" data-flag="@X" onclick="openSidebar('103_Soldier',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\128_Let Loose.png" id="128_Let Loose" data-flag="@X" onclick="openSidebar('128_Let Loose',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\17_Kasienka's Veteran.png" id="17_Kasienkas Veteran" data-flag="@X" onclick="openSidebar('17_Kasienkas Veteran',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\42_Mental Fracture.png" id="42_Mental Fracture" data-flag="@X" onclick="openSidebar('42_Mental Fracture',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\75_Lurking Terrors.png" id="75_Lurking Terrors" data-flag="@X" onclick="openSidebar('75_Lurking Terrors',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\104_Strength of the Devout.png" id="104_Strength of the Devout" data-flag="@X" onclick="openSidebar('104_Strength of the Devout',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\130_Naturalize.png" id="130_Naturalize" data-flag="@X" onclick="openSidebar('130_Naturalize',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\18_Loss of Focus.png" id="18_Loss of Focus" data-flag="@X" onclick="openSidebar('18_Loss of Focus',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\43_Merchant's Guile.png" id="43_Merchants Guile" data-flag="@X" onclick="openSidebar('43_Merchants Guile',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\76_Mutant Horror.png" id="76_Mutant Horror" data-flag="@X" onclick="openSidebar('76_Mutant Horror',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\105_Sycophantic Aristocrat.png" id="105_Sycophantic Aristocrat" data-flag="@X" onclick="openSidebar('105_Sycophantic Aristocrat',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\136_Stalwart Physicker.png" id="136_Stalwart Physicker" data-flag="@X" onclick="openSidebar('136_Stalwart Physicker',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\21_Mourn the Lost.png" id="21_Mourn the Lost" data-flag="@X" onclick="openSidebar('21_Mourn the Lost',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\44_Morose Bohemian.png" id="44_Morose Bohemian" data-flag="@X" onclick="openSidebar('44_Morose Bohemian',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\79_Prayers of Release.png" id="79_Prayers of Release" data-flag="@X" onclick="openSidebar('79_Prayers of Release',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\107_Traumatic Memories.png" id="107_Traumatic Memories" data-flag="@X" onclick="openSidebar('107_Traumatic Memories',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\138_Valor of the Desperate.png" id="138_Valor of the Desperate" data-flag="@X" onclick="openSidebar('138_Valor of the Desperate',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\26_Untested Recruit.png" id="26_Untested Recruit" data-flag="@X" onclick="openSidebar('26_Untested Recruit',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\55_Wary Watchkeeper.png" id="55_Wary Watchkeeper" data-flag="@X" onclick="openSidebar('55_Wary Watchkeeper',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\80_Sickening Madness.png" id="80_Sickening Madness" data-flag="@X" onclick="openSidebar('80_Sickening Madness',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\109_Voice of Warryn.png" id="109_Voice of Warryn" data-flag="@X" onclick="openSidebar('109_Voice of Warryn',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\139_Venomtongue Archer.png" id="139_Venomtongue Archer" data-flag="@X" onclick="openSidebar('139_Venomtongue Archer',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\27_Valeriya's Militant.png" id="27_Valeriyas Militant" data-flag="@X" onclick="openSidebar('27_Valeriyas Militant',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\56_Whisper Collector.png" id="56_Whisper Collector" data-flag="@X" onclick="openSidebar('56_Whisper Collector',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\81_Sign in Blood.png" id="81_Sign in Blood" data-flag="@X" onclick="openSidebar('81_Sign in Blood',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\111_Watchkeeper's Retort.png" id="111_Watchkeepers Retort" data-flag="@X" onclick="openSidebar('111_Watchkeepers Retort',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\141_Wayward Afflicted.png" id="141_Wayward Afflicted" data-flag="@X" onclick="openSidebar('141_Wayward Afflicted',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\84_Withering Beggar.png" id="84_Withering Beggar" data-flag="@X" onclick="openSidebar('84_Withering Beggar',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\112_Watchkeeper's Stand.png" id="112_Watchkeepers Stand" data-flag="@X" onclick="openSidebar('112_Watchkeepers Stand',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\142_Weathered Veteran.png" id="142_Weathered Veteran" data-flag="@X" onclick="openSidebar('142_Weathered Veteran',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div id="gold" class="anchor"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\145_Mass Executions.png" id="145_Mass Executions" data-flag="@X" onclick="openSidebar('145_Mass Executions',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\146_The Raven Queen of Fretport.png" id="146_The Raven Queen of Fretport" data-flag="@X" onclick="openSidebar('146_The Raven Queen of Fretport',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\147_All or Nothing.png" id="147_All or Nothing" data-flag="@X" onclick="openSidebar('147_All or Nothing',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\148_Lion's Vanguard.png" id="148_Lions Vanguard" data-flag="@X" onclick="openSidebar('148_Lions Vanguard',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\149_Flush With Arcor.png" id="149_Flush With Arcor" data-flag="@X" onclick="openSidebar('149_Flush With Arcor',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\144_Judge's Decree.png" id="144_Judges Decree" data-flag="@X" onclick="openSidebar('144_Judges Decree',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\161_Inkwell Daggers.png" id="161_Inkwell Daggers" data-flag="@X" onclick="openSidebar('161_Inkwell Daggers',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\162_Fretport's Fade.png" id="162_Fretports Fade" data-flag="@X" onclick="openSidebar('162_Fretports Fade',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\167_Inciting Bard.png" id="167_Inciting Bard" data-flag="@X" onclick="openSidebar('167_Inciting Bard',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\169_Haphazard Militia.png" id="169_Haphazard Militia" data-flag="@X" onclick="openSidebar('169_Haphazard Militia',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\158_Persecution Official.png" id="158_Persecution Official" data-flag="@X" onclick="openSidebar('158_Persecution Official',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\160_Fate Transfer.png" id="160_Fate Transfer" data-flag="@X" onclick="openSidebar('160_Fate Transfer',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\163_Purge the Harbor.png" id="163_Purge the Harbor" data-flag="@X" onclick="openSidebar('163_Purge the Harbor',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\165_Dwindling Stores.png" id="165_Dwindling Stores" data-flag="@X" onclick="openSidebar('165_Dwindling Stores',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\168_Callow Survivors.png" id="168_Callow Survivors" data-flag="@X" onclick="openSidebar('168_Callow Survivors',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\157_Invalidate.png" id="157_Invalidate" data-flag="@X" onclick="openSidebar('157_Invalidate',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\159_Assassin's Warning.png" id="159_Assassins Warning" data-flag="@X" onclick="openSidebar('159_Assassins Warning',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\164_Unjust Sentence.png" id="164_Unjust Sentence" data-flag="@X" onclick="openSidebar('164_Unjust Sentence',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\166_Fretport Mob.png" id="166_Fretport Mob" data-flag="@X" onclick="openSidebar('166_Fretport Mob',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\170_Steadfast Heart.png" id="170_Steadfast Heart" data-flag="@X" onclick="openSidebar('170_Steadfast Heart',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\156_Dashing Rogue.png" id="156_Dashing Rogue" data-flag="@X" onclick="openSidebar('156_Dashing Rogue',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\150_Nataila, Raven's Repented.png" id="150_Nataila, Ravens Repented" data-flag="@X" onclick="openSidebar('150_Nataila, Ravens Repented',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\151_Wildborn Merchant.png" id="151_Wildborn Merchant" data-flag="@X" onclick="openSidebar('151_Wildborn Merchant',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\152_Days of Decay.png" id="152_Days of Decay" data-flag="@X" onclick="openSidebar('152_Days of Decay',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\153_Valeriya, Watchkeeper Veteran.png" id="153_Valeriya, Watchkeeper Veteran" data-flag="@X" onclick="openSidebar('153_Valeriya, Watchkeeper Veteran',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\154_Helene Trant.png" id="154_Helene Trant" data-flag="@X" onclick="openSidebar('154_Helene Trant',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\172_Exhaustive Toil.png" id="172_Exhaustive Toil" data-flag="@X" onclick="openSidebar('172_Exhaustive Toil',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\174_Master of Disorientation.png" id="174_Master of Disorientation" data-flag="@X" onclick="openSidebar('174_Master of Disorientation',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\177_Cult of Trinity's Fall.png" id="177_Cult of Trinitys Fall" data-flag="@X" onclick="openSidebar('177_Cult of Trinitys Fall',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\181_Cleric of Fervor.png" id="181_Cleric of Fervor" data-flag="@X" onclick="openSidebar('181_Cleric of Fervor',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\155_Madelon, Merchant's Heir.png" id="155_Madelon, Merchants Heir" data-flag="@X" onclick="openSidebar('155_Madelon, Merchants Heir',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\171_Delusional Noble.png" id="171_Delusional Noble" data-flag="@X" onclick="openSidebar('171_Delusional Noble',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\176_Unquenched Greed.png" id="176_Unquenched Greed" data-flag="@X" onclick="openSidebar('176_Unquenched Greed',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\178_Heedless Lovers.png" id="178_Heedless Lovers" data-flag="@X" onclick="openSidebar('178_Heedless Lovers',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\180_Blade of the Long Night.png" id="180_Blade of the Long Night" data-flag="@X" onclick="openSidebar('180_Blade of the Long Night',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\183_Hollow Survivor.png" id="183_Hollow Survivor" data-flag="@X" onclick="openSidebar('183_Hollow Survivor',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\173_Harried Apothecary.png" id="173_Harried Apothecary" data-flag="@X" onclick="openSidebar('173_Harried Apothecary',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\175_Political Opportunist.png" id="175_Political Opportunist" data-flag="@X" onclick="openSidebar('175_Political Opportunist',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\179_Untested Initiates.png" id="179_Untested Initiates" data-flag="@X" onclick="openSidebar('179_Untested Initiates',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\182_Forgotten Consequences.png" id="182_Forgotten Consequences" data-flag="@X" onclick="openSidebar('182_Forgotten Consequences',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\185_Wisdom in Reflection.png" id="185_Wisdom in Reflection" data-flag="@X" onclick="openSidebar('185_Wisdom in Reflection',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\186_Citizen.png" id="186_Citizen" data-flag="@X" onclick="openSidebar('186_Citizen',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\184_Inspired Blade.png" id="184_Inspired Blade" data-flag="@X" onclick="openSidebar('184_Inspired Blade',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div id="colorless" class="anchor"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\187_Abandoned Memorial.png" id="187_Abandoned Memorial" data-flag="@X" onclick="openSidebar('187_Abandoned Memorial',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\196_Raven's Standard.png" id="196_Ravens Standard" data-flag="@X" onclick="openSidebar('196_Ravens Standard',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\188_Arcor Diamond.png" id="188_Arcor Diamond" data-flag="@X" onclick="openSidebar('188_Arcor Diamond',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\191_Discordant Bell.png" id="191_Discordant Bell" data-flag="@X" onclick="openSidebar('191_Discordant Bell',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\192_Elixir of Immortality.png" id="192_Elixir of Immortality" data-flag="@X" onclick="openSidebar('192_Elixir of Immortality',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\197_Vigilante's Cowl.png" id="197_Vigilantes Cowl" data-flag="@X" onclick="openSidebar('197_Vigilantes Cowl',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\198_Weight of Sin.png" id="198_Weight of Sin" data-flag="@X" onclick="openSidebar('198_Weight of Sin',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\189_Artisan's Masterpiece.png" id="189_Artisans Masterpiece" data-flag="@X" onclick="openSidebar('189_Artisans Masterpiece',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\190_Battered Steel.png" id="190_Battered Steel" data-flag="@X" onclick="openSidebar('190_Battered Steel',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\193_Gold.png" id="193_Gold" data-flag="@X" onclick="openSidebar('193_Gold',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\194_Plague Mask.png" id="194_Plague Mask" data-flag="@X" onclick="openSidebar('194_Plague Mask',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\195_Rallying Horn.png" id="195_Rallying Horn" data-flag="@X" onclick="openSidebar('195_Rallying Horn',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\216_Sedate Tundra.png" id="216_Sedate Tundra" data-flag="@X" onclick="openSidebar('216_Sedate Tundra',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\209_Murmuring Falls.png" id="209_Murmuring Falls" data-flag="@X" onclick="openSidebar('209_Murmuring Falls',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\200_Crumbling Precipice.png" id="200_Crumbling Precipice" data-flag="@X" onclick="openSidebar('200_Crumbling Precipice',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\212_Rampant Summit.png" id="212_Rampant Summit" data-flag="@X" onclick="openSidebar('212_Rampant Summit',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\213_Resplendent Substratum.png" id="213_Resplendent Substratum" data-flag="@X" onclick="openSidebar('213_Resplendent Substratum',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\199_Arctic Mine.png" id="199_Arctic Mine" data-flag="@X" onclick="openSidebar('199_Arctic Mine',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\201_Crystal Cavern.png" id="201_Crystal Cavern" data-flag="@X" onclick="openSidebar('201_Crystal Cavern',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\210_Nomad's Township.png" id="210_Nomads Township" data-flag="@X" onclick="openSidebar('210_Nomads Township',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\205_Forgotten Steppe.png" id="205_Forgotten Steppe" data-flag="@X" onclick="openSidebar('205_Forgotten Steppe',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\218_Shifting Glade.png" id="218_Shifting Glade" data-flag="@X" onclick="openSidebar('218_Shifting Glade',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\202_Daunting Skyline.png" id="202_Daunting Skyline" data-flag="@X" onclick="openSidebar('202_Daunting Skyline',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\203_Decrepit Crags.png" id="203_Decrepit Crags" data-flag="@X" onclick="openSidebar('203_Decrepit Crags',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\206_Grim Courtyard.png" id="206_Grim Courtyard" data-flag="@X" onclick="openSidebar('206_Grim Courtyard',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\207_Hazy Lagoon.png" id="207_Hazy Lagoon" data-flag="@X" onclick="openSidebar('207_Hazy Lagoon',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\208_Merchant's District.png" id="208_Merchants District" data-flag="@X" onclick="openSidebar('208_Merchants District',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\211_Phosphorescent Ravine.png" id="211_Phosphorescent Ravine" data-flag="@X" onclick="openSidebar('211_Phosphorescent Ravine',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\214_Rickety Guildhall.png" id="214_Rickety Guildhall" data-flag="@X" onclick="openSidebar('214_Rickety Guildhall',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\215_Ruined Citadel.png" id="215_Ruined Citadel" data-flag="@X" onclick="openSidebar('215_Ruined Citadel',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\217_Serene Trail.png" id="217_Serene Trail" data-flag="@X" onclick="openSidebar('217_Serene Trail',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\219_Vibrant Rainforest.png" id="219_Vibrant Rainforest" data-flag="@X" onclick="openSidebar('219_Vibrant Rainforest',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\204_Failing Port.png" id="204_Failing Port" data-flag="@X" onclick="openSidebar('204_Failing Port',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\222_Swamp.png" id="222_Swamp" data-flag="@X" onclick="openSidebar('222_Swamp',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\224_Forest.png" id="224_Forest" data-flag="@X" onclick="openSidebar('224_Forest',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\220_Plains.png" id="220_Plains" data-flag="@X" onclick="openSidebar('220_Plains',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\223_Mountain.png" id="223_Mountain" data-flag="@X" onclick="openSidebar('223_Mountain',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\221_Island.png" id="221_Island" data-flag="@X" onclick="openSidebar('221_Island',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\229_Plains.png" id="229_Plains" data-flag="@X" onclick="openSidebar('229_Plains',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\227_Island.png" id="227_Island" data-flag="@X" onclick="openSidebar('227_Island',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\230_Swamp.png" id="230_Swamp" data-flag="@X" onclick="openSidebar('230_Swamp',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\228_Mountain.png" id="228_Mountain" data-flag="@X" onclick="openSidebar('228_Mountain',false)"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\226_Forest.png" id="226_Forest" data-flag="@X" onclick="openSidebar('226_Forest',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div id="token" class="anchor"></div>
+				<div class="container"><img alt="/sets\PFP-files\img\1t_Emblem.png" id="1t_Emblem" data-flag="@X" onclick="openSidebar('1t_Emblem',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\e.png" id="e" data-flag="@E" onclick="openSidebar('e',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
+				<div class="container"><img alt="/img\er.png" id="er" data-flag="@E" onclick="openSidebar('er',false)"></div>
 	</div>
-</div>
+	</div>
 	<div class="sidebar" id="sidebar">
 		<div class="sidebar-container">
 			<img id="sidebar_img" class="sidebar-img" src="/img/er.png">
@@ -550,7 +569,7 @@
 				card_list_arrayified = card_list.cards;
 
 		preloadImgs = document.getElementsByClassName('preload-hidden');
-		
+
 		let images_loaded = [];
 
 		do {
@@ -640,7 +659,7 @@
 	function openSidebar(id, h = false) {
 		horizontal = h;
 		scroll_pct = window.scrollY / document.documentElement.scrollHeight;
-		
+
 		document.getElementById('sidebar').style.display = 'grid';
 
 		const rotated_img = document.getElementById('sidebar_h_img');
@@ -671,7 +690,7 @@
 			document.getElementById('sidebar-flip-btn').style.display = 'none';
 		}
 		document.getElementById('main-content').style.width = '60%';
-		
+
 		scroll_pos = scroll_pct * document.documentElement.scrollHeight;
 		window.scrollTo(window.scrollX, scroll_pos);
 		setSidebarTop();
@@ -682,10 +701,28 @@
 
 		document.getElementById('sidebar').style.display = 'none';
 		document.getElementById('main-content').style.width = '100%';
-		
+
 
 		scroll_pos = scroll_pct * document.documentElement.scrollHeight;
 		window.scrollTo(window.scrollX, scroll_pos);
+	}
+
+	function rolldown() {
+		var sets = document.querySelectorAll('.inactive');
+		for(const set of sets)
+		{
+			set.style.height = "auto";
+			set.style.margin = "5px";
+		}
+	}
+
+	function rollup() {
+		var sets = document.querySelectorAll('.inactive');
+		for(const set of sets)
+		{
+			set.style.height = "0px";
+			set.style.margin = "0px 5px";
+		}
 	}
 
 	document.getElementById("search").addEventListener("keypress", function(event) {
